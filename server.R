@@ -10,19 +10,25 @@ shinyServer(function(input, output, session) {
         
         pal <- colorBin("Reds", domain = br_mapa$SIR_prop, bins = bins)
         
-        leaflet(data = br_mapa) %>% 
+        leaflet(
+            data = br_mapa,
+            options = leafletOptions(
+                zoomControl=FALSE, doubleClickZoom =FALSE, bounceAtZoomLimits = FALSE,
+                dragging=FALSE
+            )
+        ) %>% 
             addTiles(options = providerTileOptions(opacity = 0.5)) %>% 
             setView(lng=-52.761,lat=-14.446,zoom=4
-                    ) %>% 
+            ) %>% 
             #setMaxBounds(lng1 = -72.173911, lat1 = -33.990118,
             #             lng2 = 5, lat2 = 10    
             #) %>% 
-            addPolygons(color = "#718075", layerId = ~state,
+            addPolygons(color = "#718075", layerId = ~sigla,
                         opacity = 1.0, fillOpacity = 0.9, weight = 1,
                         fillColor = ~pal(SIR_prop),
                         highlightOptions = highlightOptions(color = "#FFEE58", weight = 3,
                                                             bringToFront = FALSE),
-                        label = ~paste0(NM_ESTADO, ": ", round(SIR_prop, 3), " %")) %>%
+                        label = ~paste0(name, ": ", round(SIR_prop, 3), " %")) %>%
             addLegend(pal = pal, values = ~paste0(round(SIR_prop, 3), " %"), opacity = 0.8, title = "Proporção de infectados",
                       position = "bottomleft")
         
@@ -459,7 +465,7 @@ shinyServer(function(input, output, session) {
     #                    fillColor = ~pal(SIR_infec),
     #                    highlightOptions = highlightOptions(color = "#FFEE58", weight = 3,
     #                                                        bringToFront = FALSE),
-    #                    label = ~NM_ESTADO)  
+    #                    label = ~name)  
     #})
     #
     #proxy <- leafletProxy("brasil_mapa_beta")

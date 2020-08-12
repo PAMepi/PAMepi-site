@@ -56,25 +56,7 @@ SEIRHUD_data <- read_csv("data/SEIRHUD_estados.csv")
 
 TsRt <- read_csv("data/TsRt_estados.csv")
 
-br_mapa <- read_sf("data/mapa_br/map.geojson") %>% 
-  mutate(
-    state = 
-      case_when(
-        NM_ESTADO == "SÃO PAULO" ~ "SP", NM_ESTADO == "RONDÔNIA" ~ "RO", NM_ESTADO == "ACRE" ~ "AC",
-        NM_ESTADO == "AMAZONAS" ~ "AM", NM_ESTADO == "RIO DE JANEIRO" ~ "RJ",
-        NM_ESTADO == "BAHIA" ~ "BA", NM_ESTADO == "ALAGOAS" ~ "AL", NM_ESTADO == "AMAPÁ" ~ "AP",
-        NM_ESTADO == "CEARÁ" ~ "CE", NM_ESTADO == "DISTRITO FEDERAL" ~ "DF",
-        NM_ESTADO == "ESPIRITO SANTO" ~ "ES", NM_ESTADO == "GOIÁS" ~ "GO",
-        NM_ESTADO == "MARANHÃO" ~ "MA", NM_ESTADO == "MATO GROSSO" ~ "MT",
-        NM_ESTADO == "MATO GROSSO DO SUL" ~ "MS", NM_ESTADO == "MINAS GERAIS" ~ "MG",
-        NM_ESTADO == "PARÁ" ~ "PA", NM_ESTADO == "PARAÍBA" ~ "PB",
-        NM_ESTADO == "PARANÁ" ~ "PR", NM_ESTADO == "PERNAMBUCO" ~ "PE", NM_ESTADO == "PIAUÍ" ~ "PI",
-        NM_ESTADO == "RIO GRANDE DO NORTE" ~ "RN", NM_ESTADO == "RIO GRANDE DO SUL" ~ "RS",
-        NM_ESTADO == "RORAIMA" ~ "RR", NM_ESTADO == "SANTA CATARINA" ~ "SC", NM_ESTADO == "SERGIPE" ~ "SE",
-        NM_ESTADO == "TOCANTINS" ~ "TO",
-        TRUE ~ "TOTAL"
-      )
-  ) %>% 
+br_mapa <- read_sf("data/map.json") %>% 
   #inner_join(
   #  estados_SIR %>% 
   #    filter(!is.na(infectado)) %>% 
@@ -108,7 +90,9 @@ br_mapa <- read_sf("data/mapa_br/map.geojson") %>%
       dplyr::group_by(state) %>% 
       top_n(n = 1, date) %>% 
       mutate(prop = TOTAL*100/pop) %>% 
-      transmute(state, SIR_prop = prop)
+      ungroup() %>% 
+      transmute(state, SIR_prop = prop),
+    by = c("sigla" = "state")
   )
 
 SIR_state_sum <- read_csv(
