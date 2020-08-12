@@ -57,33 +57,6 @@ SEIRHUD_data <- read_csv("data/SEIRHUD_estados.csv")
 TsRt <- read_csv("data/TsRt_estados.csv")
 
 br_mapa <- read_sf("data/map.json") %>% 
-  #inner_join(
-  #  estados_SIR %>% 
-  #    filter(!is.na(infectado)) %>% 
-  #    mutate(infectado = round(infectado)) %>% 
-  #    group_by(state) %>%
-  #    filter(date == max(date)) %>% ungroup() %>% 
-  #    transmute(state, SIR_infec = infectado)
-  #) %>%
-  #inner_join( #preciso processar isso antes, dessa forma esta sendo muito custoso
-  #  estados_SEIR %>% 
-  #    filter(!is.na(infectado)) %>% 
-  #    mutate(infectado = round(infectado)) %>% 
-  #    group_by(state) %>%
-  #    filter(date == max(date)) %>% 
-  #    ungroup() %>% 
-  #    transmute(state, SEIR_infec = infectado)
-  #) %>% 
-  #inner_join(
-  #  SEIRHUD_data %>% 
-  #    filter(!is.na(Infectado_assintomatico)) %>% 
-  #    mutate(infectado = round(Infectado_assintomatico + 
-  #                               Infectado_sintomatico)) %>% 
-  #    group_by(state) %>%
-  #    filter(date == max(date)) %>% 
-  #    ungroup() %>% 
-  #    transmute(state, SEIRHUD_infec = infectado)
-  #) %>% 
   left_join(
     estados_SIR %>% 
       drop_na() %>% 
