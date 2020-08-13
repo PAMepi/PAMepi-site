@@ -21,8 +21,8 @@ shinyUI(shiny::bootstrapPage(
                                                             inputId = "viz_mod_bas",
                                                             label = "Selecione o modelo",
                                                             choices = c("SIR beta variante" = "SIR_base_model", 
-                                                                        "SIR sem beta variante" = "SEIR_base_model",
-                                                                        "SEIRHUD" = "SEIRHUD_base_model"),
+                                                                        "SIR sem beta variante" = "SEIR_base_model"
+                                                                        ),
                                                             selected = "SIR_base_model"
                                                 ),
                                                 conditionalPanel(
@@ -33,10 +33,6 @@ shinyUI(shiny::bootstrapPage(
                                                 conditionalPanel(
                                                   condition = "input.viz_mod_bas == 'SEIR_base_model'", 
                                                   highchartOutput("SIER_plot")
-                                                ),
-                                                conditionalPanel(
-                                                  condition = "input.viz_mod_bas == 'SEIRHUD_base_model'", 
-                                                  highchartOutput("SEIRUHD_plot")
                                                 )
                                        ),
                                        tabPanel("Compare os modelos",
@@ -73,8 +69,7 @@ shinyUI(shiny::bootstrapPage(
                                                            label = "Selecione o modelo",
                                                            choices = c(
                                                              "SIR beta variante" = "SIR_comp_model", 
-                                                             "SIR sem beta variante" = "SEIR_comp_model",
-                                                             "SEIRHUD" = "SEIRHUD_comp_model"),
+                                                             "SIR sem beta variante" = "SEIR_comp_model"),
                                                            selected = "SIR_comp_model"
                                                          ),
                                                          conditionalPanel(
@@ -87,11 +82,6 @@ shinyUI(shiny::bootstrapPage(
                                                          conditionalPanel(
                                                            condition = "input.fit_comp == 'SEIR_comp_model'",
                                                            highchartOutput("SEIR_comp_plot")
-                                                         ),
-                                                         conditionalPanel(
-                                                           condition = "input.fit_comp == 'SEIRHUD_comp_model'",
-                                                           highchartOutput("SEIRHUD_comp_plot_cas", height = "230px"),
-                                                           highchartOutput("SEIRHUD_comp_plot_mor", height = "230px")
                                                          )
                                                          
                                                 )

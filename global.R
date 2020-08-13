@@ -9,7 +9,7 @@ library(highcharter)
 library(lubridate)
 
 
-estados_SIR <- read_csv("data/SIR_estados.csv") %>% 
+estados_SIR <- read_csv("data/sir_bv_estados.csv") %>% 
   mutate(date = as_date(date))
 
 pops <- c(

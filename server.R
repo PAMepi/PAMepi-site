@@ -10,7 +10,7 @@ shinyServer(function(input, output, session) {
         
         pal <- colorBin("Reds", domain = br_mapa$SIR_prop, bins = bins)
         
-        leaflet(
+        mapa <- leaflet(
             data = br_mapa,
             options = leafletOptions(
                 zoomControl=FALSE, doubleClickZoom =FALSE, bounceAtZoomLimits = FALSE,
@@ -19,10 +19,9 @@ shinyServer(function(input, output, session) {
         ) %>% 
             addTiles(options = providerTileOptions(opacity = 0.5)) %>% 
             setView(lng=-52.761,lat=-14.446,zoom=4
-            ) %>% 
-            #setMaxBounds(lng1 = -72.173911, lat1 = -33.990118,
-            #             lng2 = 5, lat2 = 10    
-            #) %>% 
+            )
+        mapa
+        mapa %>% 
             addPolygons(color = "#718075", layerId = ~sigla,
                         opacity = 1.0, fillOpacity = 0.9, weight = 1,
                         fillColor = ~pal(SIR_prop),
