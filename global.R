@@ -9,7 +9,7 @@ library(highcharter)
 library(lubridate)
 
 
-estados_SIR <- read_csv("data/sir_bv_estados.csv") %>% 
+estados_sir_bv <- read_csv("data/sir_bv_estados.csv") %>% 
   mutate(date = as_date(date))
 
 pops <- c(
@@ -45,20 +45,23 @@ pops <- c(
   rownames_to_column("state") %>% 
   rename(pop = ".")
 
-estados_SIR <- estados_SIR %>% 
+estados_sir_bv <- estados_sir_bv %>% 
   left_join(
     pops,
     by = c('state')
   )
 
-estados_SEIR <- read_csv("data/SEIR_estados.csv")
-SEIRHUD_data <- read_csv("data/SEIRHUD_estados.csv")
-
+estados_sir <- read_csv("data/compartimentos_sir_estados.csv") %>% 
+  left_join(pops, by = 'state') %>% 
+  mutate_at(vars(suscetivel:recuperado), ~ .*pop) %>% 
+  mutate_if(is.numeric, round)
+estados_sir_comp <- read_csv("data/data_sir_estados.csv")
+  
 TsRt <- read_csv("data/TsRt_estados.csv")
 
 br_mapa <- read_sf("data/map.json") %>% 
   left_join(
-    estados_SIR %>% 
+    estados_sir_bv %>% 
       drop_na() %>% 
       dplyr::group_by(state) %>% 
       top_n(n = 1, date) %>% 
@@ -69,14 +72,10 @@ br_mapa <- read_sf("data/map.json") %>%
   )
 
 SIR_state_sum <- read_csv(
-  "data/SIR_estados_sum.csv"
+  "data/par_sir_estados.csv"
 )
-SEIR_state_sum <- read_csv(
-  "data/SEIR_estados_sum.csv"
-)
-SEIRHUD_state_sum <- read_csv(
-  "data/SEIRHUD_estados_sum.csv"
-)
+
+
 
 # Funcoes ----
 navbarPageWithText <- function(..., text) {

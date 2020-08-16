@@ -20,19 +20,19 @@ shinyUI(shiny::bootstrapPage(
                                                             
                                                             inputId = "viz_mod_bas",
                                                             label = "Selecione o modelo",
-                                                            choices = c("SIR beta variante" = "SIR_base_model", 
-                                                                        "SIR sem beta variante" = "SEIR_base_model"
+                                                            choices = c("SIR" = "SIR_base_model", 
+                                                                        "SIR beta variante" = "SIR_bv_base_model"
                                                                         ),
                                                             selected = "SIR_base_model"
                                                 ),
                                                 conditionalPanel(
                                                   condition = "input.viz_mod_bas == 'SIR_base_model'", 
-                                                  highcharter::highchartOutput("SIR_model_plot", height="220px"),
+                                                  highcharter::highchartOutput("SIR_model_plot", height="320px"),
                                                   highcharter::highchartOutput("SIR_TsRt", height="170px")
                                                 ),
                                                 conditionalPanel(
-                                                  condition = "input.viz_mod_bas == 'SEIR_base_model'", 
-                                                  highchartOutput("SIER_plot")
+                                                  condition = "input.viz_mod_bas == 'SIR_bv_base_model'", 
+                                                  highchartOutput("SIR_bv_plot")
                                                 )
                                        ),
                                        tabPanel("Compare os modelos",
@@ -68,8 +68,8 @@ shinyUI(shiny::bootstrapPage(
                                                            inputId = "fit_comp",
                                                            label = "Selecione o modelo",
                                                            choices = c(
-                                                             "SIR beta variante" = "SIR_comp_model", 
-                                                             "SIR sem beta variante" = "SEIR_comp_model"),
+                                                             "SIR" = "SIR_comp_model", 
+                                                             "SIR beta variante" = "SIR_bv_comp_model"),
                                                            selected = "SIR_comp_model"
                                                          ),
                                                          conditionalPanel(
@@ -80,14 +80,20 @@ shinyUI(shiny::bootstrapPage(
                                                            )
                                                          ),
                                                          conditionalPanel(
-                                                           condition = "input.fit_comp == 'SEIR_comp_model'",
-                                                           highchartOutput("SEIR_comp_plot")
+                                                           condition = "input.fit_comp == 'SIR_bv_comp_model'",
+                                                           splitLayout(
+                                                             highchartOutput("SIR_bv_comp_plot"),
+                                                             highchartOutput("SIR_bv_res")
+                                                           )
+                                                           
                                                          )
                                                          
                                                 )
                                                 
                                        ),
-                                       tabPanel("Simulação"#,
+                                       tabPanel("Simulação",
+                                                h1("Em construção"),
+                                                img(src="em_construcao.gif", align = "center",width='500px')
                                                 
                                        )
                                      )
