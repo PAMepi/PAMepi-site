@@ -2,6 +2,19 @@ library(shiny)
 
 shinyUI(shiny::bootstrapPage(
   
+  #titlePanel(windowTitle = "Painel Modelos Covid-19",
+  #           title =
+  #             div(
+  #               img(
+  #                 src = "CIDACS_logoBW.png",
+  #                 height = 100,
+  #                 width = 100,
+  #                 style = "margin:5px 5px"
+  #               ),
+  #               "Painel Modelos Covid-19"
+  #             )
+  #),
+  
   navbarPageWithText("Painel Modelos Covid-19",
                      
                      tabPanel( #Home ----

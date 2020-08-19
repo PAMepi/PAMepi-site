@@ -90,11 +90,10 @@ shinyServer(function(input, output, session) {
                 'Número de pessoas ' + this.series.name + ': ' + this.y +
                 ' <br> Data: ' + Highcharts.dateFormat('%e/%b/%y',
                 new Date(this.x)
-                ) + ", aux_text,"
-                                          )
-                            }")),
+                ) + ", aux_text,
+                           ")}")),
                 style = list(fontSize = '10px')
-            ) %>% 
+            ) %>%
             hc_exporting(enabled = TRUE)
         
     })
@@ -167,7 +166,7 @@ shinyServer(function(input, output, session) {
                            "<br>Beta3: ", round(estado_s_p$beta3, 3),
                            "<br>Gamma: ", round(estado_s_p$gamma, 3),
                            "<br>Pico no dia ", pico_date, "<br>com ",
-                           pico_val, " infectados<br>", "'"
+                           pico_val, " infectados", "'"
         )
         
         highchart() %>% 
@@ -176,18 +175,16 @@ shinyServer(function(input, output, session) {
                      style = list(color = "#05091A", useHTML = TRUE)) %>% 
             hc_xAxis(type = "datetime", dateTimeLabelFormats = list(day = '%d of %b')) %>%
             hc_add_series(df, hcaes(day, round(valor), group = SIR_beta_variante), type = "line") %>%
-            #hc_tooltip(
-            #    formatter = JS(
-            #        paste0("function(){
-            #    return (
-            #    'Número de pessoas ' + this.series.name + ': ' + this.y +
-            #    ' <br> Data: ' + Highcharts.dateFormat('%b-%Y',
-            #    new Date(this.x)
-            #    ) + ", aux_text,"
-            #                              )
-            #                }")),
-            #    style = list(fontSize = '10px')
-            #) %>%  
+            hc_tooltip(
+                formatter = JS(
+                    paste0("function(){
+                return (
+                'Número de pessoas ' + this.series.name + ': ' + this.y +
+                ' <br> Data: ' + Highcharts.dateFormat('%e/%b/%y',
+                new Date(this.x)
+                ) + ", aux_text,")}")),
+                style = list(fontSize = '10px')
+            ) %>%  
             hc_exporting(enabled = TRUE)
     })
     
@@ -271,10 +268,12 @@ shinyServer(function(input, output, session) {
                                    "<b>",state_proxy()[1], "</b>"),
                      margin = 20, align = "left",
                      style = list(color = "#05091A", useHTML = TRUE, fontSize = "15px")) %>% 
-            hc_xAxis(title = list(text = "Casos reportados")) %>% 
-            hc_yAxis(title = list(text = "Casos preditos")) %>% 
-            hc_add_series(showInLegend = FALSE, 0:max(df$totalCases),
+            hc_xAxis(title = list(text = "Casos reportados"), min = 0, max = max(df$totalCasesPred)) %>% 
+            hc_yAxis(title = list(text = "Casos preditos"), min = 0, max = max(df$totalCasesPred)) %>% 
+            hc_add_series(showInLegend = FALSE,
                           color = "#A9A9A9",
+                          data = list(list(0, 0), list(max(df$totalCases),
+                                                       max(df$totalCases))),
                           enableMouseTracking = FALSE) %>% 
             hc_plotOptions(line = list(color = "#4471EB",
                                        marker = list(enabled = FALSE)),
@@ -300,8 +299,10 @@ shinyServer(function(input, output, session) {
                      style = list(color = "#05091A", useHTML = TRUE, fontSize = "15px")) %>% 
             hc_xAxis(title = list(text = "Casos reportados")) %>% 
             hc_yAxis(title = list(text = "Casos preditos")) %>% 
-            hc_add_series(showInLegend = FALSE, 0:max(df$totalCases),
+            hc_add_series(showInLegend = FALSE,
                           color = "#A9A9A9",
+                          data = list(list(0, 0), list(max(df$totalCases),
+                                                       max(df$totalCases))),
                           enableMouseTracking = FALSE) %>% 
             hc_plotOptions(line = list(color = "#4471EB",
                                        marker = list(enabled = FALSE)),
