@@ -28,8 +28,8 @@ shinyServer(function(input, output, session) {
                         fillColor = ~pal(SIR_prop),
                         highlightOptions = highlightOptions(color = "#FFEE58", weight = 3,
                                                             bringToFront = FALSE),
-                        label = ~paste0(name, ": ", round(SIR_prop, 3), " %")) %>%
-            addLegend(pal = pal, values = ~paste0(round(SIR_prop, 3), " %"), opacity = 0.8, title = "Proporção de infectados",
+                        label = ~paste0(name, ": ", round(SIR_prop, 2), " %")) %>%
+            addLegend(pal = pal, values = ~paste0(round(SIR_prop, 2), " %"), opacity = 0.8, title = "Casos de COVID-19<br>(% população)",
                       position = "bottomleft")
         
         
@@ -76,7 +76,11 @@ shinyServer(function(input, output, session) {
             hc_add_series(
                 data = df %>% 
                     select(day, suscetivel, infectado, recuperado) %>% 
-                    pivot_longer(- day, names_to = "SIR", values_to = "valor"),
+                    pivot_longer(- day, names_to = "SIR", values_to = "valor") %>% 
+                    mutate(SIR = SIR %>% 
+                               str_to_title() %>% 
+                               factor(levels = c("Suscetivel", "Infectado", "Recuperado"))
+                    ),
                 hcaes(x = day, y = valor, group = SIR), type = "line"
             ) %>% 
             hc_tooltip(
@@ -84,7 +88,7 @@ shinyServer(function(input, output, session) {
                     paste0("function(){
                 return (
                 'Número de pessoas ' + this.series.name + ': ' + this.y +
-                ' <br> Data: ' + Highcharts.dateFormat('%b-%Y',
+                ' <br> Data: ' + Highcharts.dateFormat('%e/%b/%y',
                 new Date(this.x)
                 ) + ", aux_text,"
                                           )
@@ -140,47 +144,63 @@ shinyServer(function(input, output, session) {
     
     output$SIR_bv_plot <- renderHighchart({
         
-        df <- estados_sir_bv %>% filter(state == state_proxy()[1])
-        pico_date <- df %>% filter(infectado == max(df$infectado)) %>% pull(date)
+        state_update <- state_proxy()[1] %>% unlist() %>% unique()
+        
+        df <- estados_sir_bv %>% filter(state %in% state_update)
+        pico_date <- df %>% filter(infectado == max(df$infectado)) %>% pull(day)
+        pico_val <- max(df$infectado) 
         
         df <- df %>% 
-            select(date, suscetivel, infectado, recuperado) %>% 
-            pivot_longer(- date, names_to = "SIR_beta_variante", values_to = "valor") %>% 
-            mutate(date_aux = paste0(month(date, label = TRUE), "-", year(date)))
+            select(day, suscetivel, infectado, recuperado) %>% 
+            pivot_longer(- day, names_to = "SIR_beta_variante", values_to = "valor") %>% 
+            mutate(SIR_beta_variante = SIR_beta_variante %>% 
+                       str_to_title() %>% 
+                       factor(levels = c("Suscetivel", "Infectado", "Recuperado"))
+            )
         
-       # aux_text <- paste0("'",
-       #                    "<br>R0: ", round(estado_s_p$beta/estado_s_p$gamma, 3),
-       #                    "<br>Beta: ", round(estado_s_p$beta, 3),
-       #                    "<br>Gamma: ", round(estado_s_p$gamma, 3),
-       #                    "<br>Pico no dia ", pico_date, "<br>com ",
-       #                    round(max(df$infectado)), " infectados<br>", "'"
-       # )
+        estado_s_p <- SIR_bv_state_sum %>% filter( state %in% state_update ) %>% 
+            transmute(beta1,beta2,beta3, gamma)
+        aux_text <- paste0("'",
+                           "<br>R0: ", round(estado_s_p$beta1/estado_s_p$gamma, 3),
+                           "<br>Beta1: ", round(estado_s_p$beta1, 3),
+                           "<br>Beta2: ", round(estado_s_p$beta2, 3),
+                           "<br>Beta3: ", round(estado_s_p$beta3, 3),
+                           "<br>Gamma: ", round(estado_s_p$gamma, 3),
+                           "<br>Pico no dia ", pico_date, "<br>com ",
+                           pico_val, " infectados<br>", "'"
+        )
         
         highchart() %>% 
-            hc_title(text = paste0("Modelo SIR beta variante ","<b>",state_proxy()[1], "</b>"),
+            hc_title(text = paste0("Modelo SIR beta variante ","<b>",state_update, "</b>"),
                      margin = 20, align = "left",
                      style = list(color = "#05091A", useHTML = TRUE)) %>% 
             hc_xAxis(type = "datetime", dateTimeLabelFormats = list(day = '%d of %b')) %>%
-            hc_add_series(df, hcaes(date, round(valor), group = SIR_beta_variante), type = "line") %>% 
+            hc_add_series(df, hcaes(day, round(valor), group = SIR_beta_variante), type = "line") %>%
             #hc_tooltip(
-            #    formatter = JS("function(){
-            #                return ('Número de pessoas ' + this.series.name + ': ' + this.y + 
-            #                ' <br> Data: ' + this.x)
-            #                }")
-            #) %>% 
+            #    formatter = JS(
+            #        paste0("function(){
+            #    return (
+            #    'Número de pessoas ' + this.series.name + ': ' + this.y +
+            #    ' <br> Data: ' + Highcharts.dateFormat('%b-%Y',
+            #    new Date(this.x)
+            #    ) + ", aux_text,"
+            #                              )
+            #                }")),
+            #    style = list(fontSize = '10px')
+            #) %>%  
             hc_exporting(enabled = TRUE)
     })
     
     output$suc_comp_plot <- renderHighchart({
         
-        new_data <- estados_sir_bv %>% dplyr::transmute(date, state, SIR_beta_variante = suscetivel) %>% 
+        new_data <- estados_sir_bv %>% dplyr::transmute(day, state, SIR_beta_variante = suscetivel) %>% 
             left_join(
                 estados_sir %>% dplyr::transmute(day, state, SIR = suscetivel),
-                by = c("date" = "day", "state")
+                by = c("day", "state")
             ) %>% 
             filter(state == state_proxy()[1]) %>% 
             select(-state) %>% 
-            pivot_longer(- date, names_to = "Modelo", values_to = "Valor")
+            pivot_longer(- day, names_to = "Modelo", values_to = "Valor")
         
         
         highchart() %>% 
@@ -188,7 +208,7 @@ shinyServer(function(input, output, session) {
                      margin = 20, align = "left",
                      style = list(color = "#05091A", useHTML = TRUE)) %>% 
             hc_xAxis(type = "datetime", dateTimeLabelFormats = list(day = '%d of %b')) %>% 
-            hc_add_series(new_data, hcaes(x = date, y = round(Valor), group = Modelo),
+            hc_add_series(new_data, hcaes(x = day, y = round(Valor), group = Modelo),
                           type = "line") %>% 
             hc_exporting(enabled = TRUE)
         
@@ -196,14 +216,14 @@ shinyServer(function(input, output, session) {
     
     output$rec_comp_plot <- renderHighchart({
         
-        new_data <- estados_sir_bv %>% dplyr::transmute(date, state, SIR_beta_variante = recuperado) %>% 
+        new_data <- estados_sir_bv %>% dplyr::transmute(day, state, SIR_beta_variante = recuperado) %>% 
             left_join(
                 estados_sir %>% dplyr::transmute(day, state, SIR = recuperado),
-                by = c("date" = "day", "state")
+                by = c("day", "state")
             ) %>% 
             filter(state == state_proxy()[1]) %>% 
             select(-state) %>% 
-            pivot_longer(- date, names_to = "Modelo", values_to = "Valor")
+            pivot_longer(- day, names_to = "Modelo", values_to = "Valor")
         
         
         highchart() %>% 
@@ -211,7 +231,7 @@ shinyServer(function(input, output, session) {
                      margin = 20, align = "left",
                      style = list(color = "#05091A", useHTML = TRUE)) %>% 
             hc_xAxis(type = "datetime", dateTimeLabelFormats = list(day = '%d of %b')) %>% 
-            hc_add_series(new_data, hcaes(x = date, y = round(Valor), group = Modelo),
+            hc_add_series(new_data, hcaes(x = day, y = round(Valor), group = Modelo),
                           type = "line") %>% 
             hc_exporting(enabled = TRUE)
         
@@ -219,14 +239,14 @@ shinyServer(function(input, output, session) {
     
     output$inf_comp_plot <- renderHighchart({
         
-        new_data <- estados_sir_bv %>% dplyr::transmute(date, state, SIR_beta_variante = infectado) %>% 
+        new_data <- estados_sir_bv %>% dplyr::transmute(day, state, SIR_beta_variante = infectado) %>% 
             left_join(
                 estados_sir %>% dplyr::transmute(day, state, SIR = infectado),
-                by = c("date" = "day", "state")
+                by = c("day", "state")
             ) %>% 
             filter(state == state_proxy()[1]) %>% 
             select(-state) %>% 
-            pivot_longer(- date, names_to = "Modelo", values_to = "Valor")
+            pivot_longer(- day, names_to = "Modelo", values_to = "Valor")
         
         
         highchart() %>% 
@@ -234,7 +254,7 @@ shinyServer(function(input, output, session) {
                      margin = 20, align = "left",
                      style = list(color = "#05091A", useHTML = TRUE)) %>% 
             hc_xAxis(type = "datetime", dateTimeLabelFormats = list(day = '%d of %b')) %>% 
-            hc_add_series(new_data, hcaes(x = date, y = round(Valor), group = Modelo),
+            hc_add_series(new_data, hcaes(x = day, y = round(Valor), group = Modelo),
                           type = "line") %>% 
             hc_exporting(enabled = TRUE)
         
@@ -242,47 +262,53 @@ shinyServer(function(input, output, session) {
     
     output$SIR_comp_plot <- renderHighchart({
         
-        df <- estados_sir_bv %>% 
+        df <- estados_sir_comp %>% 
             drop_na() %>% 
             filter(state == state_proxy()[1])
         
         highchart() %>%
-            hc_title(text = paste0("Relação de casos preditos e observados modelo SIR ",
+            hc_title(text = paste0("Casos preditos e observados modelo SIR ",
                                    "<b>",state_proxy()[1], "</b>"),
                      margin = 20, align = "left",
                      style = list(color = "#05091A", useHTML = TRUE, fontSize = "15px")) %>% 
-            hc_xAxis(type = "datetime", dateTimeLabelFormats = list(day = '%d of %b')) %>% 
-            hc_add_series(data = df, hcaes(x = date, y = round(totalCasesPred)), 
-                          type = "line", name = "Casos Preditos") %>% 
-            hc_add_series(data = df, hcaes(x = date, y = TOTAL), 
-                          tooltip = list(pointFormat = "Data: {point.date}",
-                                         headerFormat = "<b>{point.y} Casos</b><br>"),
-                          type = "scatter", name = "Casos Reportados") %>% 
+            hc_xAxis(title = list(text = "Casos reportados")) %>% 
+            hc_yAxis(title = list(text = "Casos preditos")) %>% 
+            hc_add_series(showInLegend = FALSE, 0:max(df$totalCases),
+                          color = "#A9A9A9",
+                          enableMouseTracking = FALSE) %>% 
             hc_plotOptions(line = list(color = "#4471EB",
                                        marker = list(enabled = FALSE)),
                            scatter = list(color = "black")) %>% 
+            hc_add_series(data = df, hcaes(x = totalCases, y = round(totalCasesPred)),
+                          tooltip = list(pointFormat = "<b>Casos Preditos<b>: {point.y}<br>",
+                                         headerFormat = "<b>Casos Observados<b>: {point.x}<br>"),
+                          type = "scatter", showInLegend = FALSE) %>% 
             hc_exporting(enabled = TRUE)
         
     })
     
     output$SIR_bv_comp_plot <- renderHighchart({
         
-        df <- estados_sir_bv %>% 
+        df <- estados_sir_bv_comp %>% 
             drop_na() %>% 
-            filter(state == state_proxy()[1])
+            filter(state == state_proxy()[1]) 
         
         highchart() %>%
-            hc_title(text = paste0("Casos acumulados modelo SIR beta variante ",
+            hc_title(text = paste0("Casos preditos e observados modelo SIR beta variante ",
                                    "<b>",state_proxy()[1], "</b>"),
                      margin = 20, align = "left",
                      style = list(color = "#05091A", useHTML = TRUE, fontSize = "15px")) %>% 
             hc_xAxis(title = list(text = "Casos reportados")) %>% 
             hc_yAxis(title = list(text = "Casos preditos")) %>% 
-            hc_add_series(showInLegend = FALSE, 0:max(df$TOTAL, na.rm = TRUE)) %>% 
+            hc_add_series(showInLegend = FALSE, 0:max(df$totalCases),
+                          color = "#A9A9A9",
+                          enableMouseTracking = FALSE) %>% 
             hc_plotOptions(line = list(color = "#4471EB",
                                        marker = list(enabled = FALSE)),
                            scatter = list(color = "black")) %>% 
-            hc_add_series(data = df, hcaes(x = TOTAL, y = round(totalCasesPred)), 
+            hc_add_series(data = df, hcaes(x = totalCases, y = round(totalCasesPred)), 
+                          tooltip = list(pointFormat = "<b>Casos Preditos<b>: {point.y}<br>",
+                                         headerFormat = "<b>Casos Observados<b>: {point.x}<br>"),
                           type = "scatter", showInLegend = FALSE) %>% 
             hc_exporting(enabled = TRUE)
     })
@@ -294,14 +320,14 @@ shinyServer(function(input, output, session) {
             filter(state == state_proxy()[1])
         
         highchart() %>%
-            hc_title(text = paste0("Relação de casos preditos e observados modelo SIR ",
+            hc_title(text = paste0("Casos acumulados modelo SIR ",
                                    "<b>",state_proxy()[1], "</b>"),
                      margin = 20, align = "left",
                      style = list(color = "#05091A", useHTML = TRUE, fontSize = "15px")) %>% 
             hc_xAxis(type = "datetime", dateTimeLabelFormats = list(day = '%d of %b')) %>% 
-            hc_add_series(data = df, hcaes(x = day, y = round(totalCasesPred)), 
+            hc_add_series(data = df, hcaes(x = date, y = round(totalCasesPred)), 
                           type = "line", name = "Casos Preditos") %>% 
-            hc_add_series(data = df, hcaes(x = day, y = totalCases), 
+            hc_add_series(data = df, hcaes(x = date, y = totalCases), 
                           tooltip = list(pointFormat = "Data: {point.date}",
                                          headerFormat = "<b>{point.y} Casos</b><br>"),
                           type = "scatter", name = "Casos Reportados") %>% 
@@ -314,19 +340,19 @@ shinyServer(function(input, output, session) {
     
     output$SIR_bv_res <- renderHighchart({
         
-        df <- estados_sir_bv %>% 
+        df <- estados_sir_bv_comp %>% 
             drop_na() %>% 
             filter(state == state_proxy()[1])
         
         highchart() %>%
-            hc_title(text = paste0("Casos preditos e observados modelo SIR beta variante ",
+            hc_title(text = paste0("Casos acumulados do modelo SIR beta variante ",
                                    "<b>",state_proxy()[1], "</b>"),
                      margin = 20, align = "left",
                      style = list(color = "#05091A", useHTML = TRUE, fontSize = "15px")) %>% 
             hc_xAxis(type = "datetime", dateTimeLabelFormats = list(day = '%d of %b')) %>% 
             hc_add_series(data = df, hcaes(x = date, y = round(totalCasesPred)), 
                           type = "line", name = "Casos Preditos") %>% 
-            hc_add_series(data = df, hcaes(x = date, y = TOTAL), 
+            hc_add_series(data = df, hcaes(x = date, y = totalCases), 
                           tooltip = list(pointFormat = "Data: {point.date}",
                                          headerFormat = "<b>{point.y} Casos</b><br>"),
                           type = "scatter", name = "Casos Reportados") %>% 
