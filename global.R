@@ -78,7 +78,8 @@ SIR_state_sum <- read_csv(
 )
 states_names <- br_mapa %>%
   as.data.frame() %>% 
-  select(name,sigla)
+  select(name,sigla) %>% 
+  bind_rows(tibble(name = "Brasil", sigla = "TOTAL"))
 
 #Plot options ----
 lang <- getOption("highcharter.lang")
@@ -97,6 +98,7 @@ navbarPageWithText <- function(..., text) {
     navbar[[3]][[1]]$children[[1]], textEl)
   navbar
 }
+
 jscode <- '
 shinyjs.init = function() {
   $(".nav").on("click", ".disabled", function (e) {

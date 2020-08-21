@@ -3,6 +3,7 @@ library(shiny)
 
 shinyServer(function(input, output, session) {
     
+    
     output$brasil_mapa <- renderLeaflet({
         
         bins <- quantile(br_mapa$SIR_prop, 
@@ -32,7 +33,8 @@ shinyServer(function(input, output, session) {
                                                             bringToFront = FALSE),
                         label = ~paste0(name, ": ", round(SIR_prop, 2), " %")) %>%
             addLegend(pal = pal, values = ~paste0(round(SIR_prop, 2), " %"), opacity = 0.8, title = "Casos de COVID-19<br>(% população)",
-                      position = "bottomleft")
+                      position = "bottomleft",
+                      labFormat = labelFormat(suffix = "%",digits = 2))
         
     })
     
@@ -381,7 +383,7 @@ shinyServer(function(input, output, session) {
             filter(state == state_proxy()[1]) 
         
         highchart() %>%
-            hc_title(text = paste0("Dados vs. Ajustados",
+            hc_title(text = paste0("Dados vs. Ajustados ",
                                    "<b>",
                                    states_names %>% filter(sigla %in% state_proxy()[1]) %>% 
                                        pull(name),
