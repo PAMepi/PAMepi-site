@@ -2,9 +2,9 @@ library(shiny)
 
 shinyUI(shiny::bootstrapPage(
   
-  navbarPage(div(h3("Painel Modelos Covid-19", 
+  navbarPage(title = div(h3("Painel Modelos Covid-19", 
                     style = "position: relative; top: 45px; left: -1000px;"), 
-                 HTML("&emsp;&emsp;"),
+                 #HTML("&emsp;&emsp;"),
                  a(href= "https://cidacs.bahia.fiocruz.br/", img(src="CIDACS_Bw.png", 
                                                                  width = 100), 
                    target="_blank"),
@@ -13,6 +13,7 @@ shinyUI(shiny::bootstrapPage(
                    target="_blank"), 
                  style = "position: relative; top: -70px; right: -1000px;"),
              id = "home",
+             windowTitle = "Painel Modelos Covid-19",
              
              tabPanel( #Home ----
                        "Estados",# icon = icon("home"),
