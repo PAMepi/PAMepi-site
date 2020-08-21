@@ -76,6 +76,9 @@ br_mapa <- read_sf("data/map.json") %>%
 SIR_state_sum <- read_csv(
   "data/par_sir_estados.csv"
 )
+states_names <- br_mapa %>%
+  as.data.frame() %>% 
+  select(name,sigla)
 
 #Plot options ----
 lang <- getOption("highcharter.lang")

@@ -127,8 +127,8 @@ shinyUI(shiny::bootstrapPage(
   ),
   tags$footer(#foot####
               HTML("<hr>"),HTML("&emsp;&emsp;"),
-              a(href= "https://cidacs.bahia.fiocruz.br/", img(src="CIDACS_logoBW.png", 
-                                                              width = 150), 
+              a(href= "https://cidacs.bahia.fiocruz.br/", img(src="CIDACS_Bw.png", 
+                                                              width = 180), 
                 target="_blank"),
               HTML("&emsp;&emsp;"),
               a(href= "https://www.rondonia.fiocruz.br/", img(src="fio_rond_bw.png", width = 150),
