@@ -15,7 +15,7 @@ shinyServer(function(input, output, session) {
             data = br_mapa,
             options = leafletOptions(
                 zoomControl=FALSE, doubleClickZoom =FALSE, bounceAtZoomLimits = FALSE,
-                dragging = FALSE, scrollWheelZoom = FALSE,
+                dragging = FALSE, scrollWheelZoom = FALSE, closePopupOnClick = FALSE,
                 minZoom = 4, maxZoom = 4
             )
         ) %>% 
@@ -41,8 +41,9 @@ shinyServer(function(input, output, session) {
     state_proxy <- reactive(
         {
             click <- input$brasil_mapa_shape_click
-            
-            if(is.null(click))
+            #reset <- input$reset
+            if(is.null(click) #| isTruthy(reset)
+               )
                 return(
                     "TOTAL"
                 )
@@ -191,6 +192,8 @@ shinyServer(function(input, output, session) {
                 style = list(fontSize = '10px')
             ) %>%  
             hc_exporting(enabled = TRUE)
+        # Quando adiconar a linha vertical do beta V. usar:
+        # https://stackoverflow.com/questions/46953400/r-highcharter-tooltip-customization
     })
     
     output$suc_comp_plot <- renderHighchart({
