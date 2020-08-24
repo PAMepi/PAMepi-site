@@ -8,7 +8,7 @@ library(htmlwidgets)
 library(highcharter)
 library(lubridate)
 
-
+# Base data ----
 estados_sir_bv <- read_csv("data/compartimentos_sir_bv_estados.csv")
 
 SIR_bv_state_sum <- read_csv("data/par_sir_bv_estados.csv")
@@ -80,7 +80,14 @@ states_names <- br_mapa %>%
   as.data.frame() %>% 
   select(name,sigla) %>% 
   bind_rows(tibble(name = "Brasil", sigla = "TOTAL"))
-
+# City tab ----
+cidades_sir <- read_csv("data/compartimentos_sir_cidades.csv") %>% 
+  select(- city) %>% mutate(ibgeID = as.character(ibgeID)) %>% 
+  group_by(ibgeID) %>% top_n(1, date) %>% ungroup()
+city_map <- sf::read_sf("data/malha_mun.json") %>% 
+  right_join(
+    cidades_sir, by = c("id" = "ibgeID")
+  )
 #Plot options ----
 lang <- getOption("highcharter.lang")
 lang$months <- c('Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho',

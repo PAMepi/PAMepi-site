@@ -3,6 +3,8 @@ library(shiny)
 
 shinyServer(function(input, output, session) {
     
+    # FIRST TAB -----
+    
     
     output$brasil_mapa <- renderLeaflet({
         
@@ -467,7 +469,17 @@ shinyServer(function(input, output, session) {
             hc_exporting(enabled = TRUE)
         
     })
-    
+    # SECOND TAB ----
+    output$br_muni_map <- renderLeaflet({
+        leaflet(data = city_map) %>% 
+            addTiles(options = providerTileOptions(opacity = 0.5)) %>% 
+            addPolygons(color = "#718075", layerId = ~id,
+                        opacity = 1.0, fillOpacity = 0.9, weight = 1,
+                        fillColor = "red",
+                        highlightOptions = highlightOptions(color = "#FFEE58", weight = 3,
+                                                            bringToFront = FALSE),
+                        label = ~id) 
+    })
     #output$brasil_mapa_beta <- renderLeaflet({
     #    bins <- quantile(br_mapa$SIR_infec, 
     #                     probs = c(seq(0, 100, by = 15), 100)/100) %>% 

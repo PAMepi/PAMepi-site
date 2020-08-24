@@ -115,8 +115,7 @@ shinyUI(shiny::bootstrapPage(
                        )
              ),
              tabPanel("Municípios", value = "muni",
-                      h1("Em construção"),
-                      img(src="em_construcao.gif", align = "center",width='500px')
+                      leafletOutput("br_muni_map")
              ), 
              tabPanel("Regiões de Saúde", value = "reg_sau",
                       h1("Em construção"),
