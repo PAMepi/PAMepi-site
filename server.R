@@ -469,6 +469,23 @@ shinyServer(function(input, output, session) {
         
     })
     
+    datavalues <- reactiveValues(data = data.frame(user = rep("", 15)))
+    
+    output$tab_interativa <- renderRHandsontable({
+        
+        rhandsontable(datavalues$data, width = 550, height = 300)
+    })
+    
+    observeEvent(input$TRD,{
+        
+        datavalues$data <- hot_to_r(input$tab_interativa)
+        
+        output$simple_series <- renderPlot({
+            plot(
+                as.numeric(datavalues$data$user)
+            )
+        })
+    })
     #output$brasil_mapa_beta <- renderLeaflet({
     #    bins <- quantile(br_mapa$SIR_infec, 
     #                     probs = c(seq(0, 100, by = 15), 100)/100) %>% 

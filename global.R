@@ -7,7 +7,7 @@ library(htmltools)
 library(htmlwidgets)
 library(highcharter)
 library(lubridate)
-
+library(rhandsontable)
 
 estados_sir_bv <- read_csv("data/compartimentos_sir_bv_estados.csv")
 

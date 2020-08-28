@@ -127,6 +127,21 @@ shinyUI(shiny::bootstrapPage(
                       h1("Em construção"),
                       img(src="em_construcao.gif", align = "center",width='500px')
              ),
+             tabPanel("Traga seus dados", value = "tsd",
+                      splitLayout(actionButton("TRD", "Rode o modelo"),
+                      radioButtons("series_info", "Indique o perfil da serie",
+                                   choices = c("Acumulada"= "a", "Diaria" = "d"),
+                                   inline = TRUE),  
+                      dateInput("date_input", "Data do primeiro caso",
+                                value = today(), min = "2020-01-01",
+                                max = "2020-11-20", format = "dd--mm--yyyy",
+                                language = "pt-BR")), 
+                      br(""),
+                      shiny::splitLayout(
+                        rHandsontableOutput("tab_interativa", 700, 500),
+                        plotOutput("simple_series",width = 500, height = 500) 
+                      )
+             ),
              tabPanel("Apoio e Equipe",
                       
                       fluidPage(
