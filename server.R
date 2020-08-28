@@ -124,6 +124,7 @@ shinyServer(function(input, output, session) {
             hc_add_series(
                 data = TsRt_df, hcaes(x = date, low = reproductionNumberLow,
                                       high = reproductionNumberHigh),
+                showInLegend = FALSE,  enableMouseTracking = FALSE, 
                 type = "errorbar",color = "black",
                 stemWidth = 1.5,  whiskerLength = 5
             ) %>% 
