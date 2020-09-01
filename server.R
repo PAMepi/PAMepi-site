@@ -471,58 +471,37 @@ shinyServer(function(input, output, session) {
     })
     # SECOND TAB ----
     output$br_muni_map <- renderLeaflet({
-        leaflet(data = city_map) %>% 
-            addTiles(options = providerTileOptions(opacity = 0.5)) %>% 
-            addPolygons(color = "#718075", layerId = ~id,
+        mapa <- leaflet(data = br_mapa) %>% 
+            addTiles(options = providerTileOptions(opacity = 0.5))
+        mapa
+        mapa %>% 
+            addPolygons(color = "#718075", layerId = ~sigla,
+                        opacity = 1.0, fillOpacity = 0.5, weight = 1,
+                        fillColor = "red",
+                        highlightOptions = highlightOptions(color = "#FFEE58", weight = 3,
+                                                            bringToFront = FALSE),
+                        label = ~name) 
+            
+    })
+    
+    proxy <- leafletProxy("br_muni_map")
+    
+    observe({
+        click <- input$br_muni_map_shape_click
+        
+        if(is.null(click))
+            return()
+        else
+            proxy %>% clearShapes() %>% clearControls() %>% 
+            setView(lng = click$lng, lat = click$lat, zoom = 6) %>% 
+            #clearShapes() %>% 
+            addPolygons(data = city_map,
+                        color = "#718075", layerId = ~id,
                         opacity = 1.0, fillOpacity = 0.9, weight = 1,
                         fillColor = "red",
                         highlightOptions = highlightOptions(color = "#FFEE58", weight = 3,
                                                             bringToFront = FALSE),
-                        label = ~id) 
+                        label = ~id)  
     })
-    #output$brasil_mapa_beta <- renderLeaflet({
-    #    bins <- quantile(br_mapa$SIR_infec, 
-    #                     probs = c(seq(0, 100, by = 15), 100)/100) %>% 
-    #        round()
-    #    pal <- colorBin("Reds", domain = br_mapa$SIR_infec, bins = bins)
-    #    
-    #    leaflet(data = br_mapa) %>% 
-    #        addTiles(options = providerTileOptions(opacity = 0.5)) %>% 
-    #        setView(lng=-52.761,lat=-14.446,zoom=4) %>% 
-    #        addPolygons(color = "#718075", layerId = ~state,
-    #                    opacity = 1.0, fillOpacity = 0.9, weight = 1,
-    #                    fillColor = ~pal(SIR_infec),
-    #                    highlightOptions = highlightOptions(color = "#FFEE58", weight = 3,
-    #                                                        bringToFront = FALSE),
-    #                    label = ~name)  
-    #})
-    #
-    #proxy <- leafletProxy("brasil_mapa_beta")
-    
-    #observe({
-    #    click <- input$brasil_mapa_beta_shape_click
-    #    bins <- quantile(reg_saud$rt, na.rm = TRUE,
-    #                     probs = c(seq(0, 100, by = 15), 100)/100) 
-    #    pal <- colorBin("Reds", domain = reg_saud$rt, bins = bins)
-    #    
-    #    if(is.null(click))
-    #        return()
-    #    else
-    #        proxy %>% clearShapes() %>% clearControls() %>% 
-    #        setView(lng = click$lng, lat = click$lat, zoom = 6) %>% 
-    #        #clearShapes() %>% 
-    #        addPolygons(data = reg_saud %>% 
-    #                        dplyr::filter(startsWith(CO_REGSAUD, "29")), #so BA por enquanto
-    #                    color = "white",
-    #                    layerId = ~CO_REGSAUD,
-    #                    opacity = 1.0, fillOpacity = 0.9, weight = 1,
-    #                    fillColor = ~pal(rt),
-    #                    highlightOptions = highlightOptions(color = "#FFEE58", weight = 3,
-    #                                                        bringToFront = TRUE),
-    #                    label = ~CO_REGSAUD
-    #                    
-    #                    
-    #        ) 
-    #})
     
 })

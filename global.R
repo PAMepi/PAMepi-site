@@ -84,9 +84,13 @@ states_names <- br_mapa %>%
 cidades_sir <- read_csv("data/compartimentos_sir_cidades.csv") %>% 
   select(- city) %>% mutate(ibgeID = as.character(ibgeID)) %>% 
   group_by(ibgeID) %>% top_n(1, date) %>% ungroup()
+cidades_tsrt <- read_csv("data/TsRt_cidades.csv") %>% 
+  select(- city) %>% mutate(ibgeID = as.character(ibgeID)) %>% 
+  group_by(ibgeID) %>% top_n(1, date) %>% ungroup()
+
 city_map <- sf::read_sf("data/malha_mun.json") %>% 
   right_join(
-    cidades_sir, by = c("id" = "ibgeID")
+    cidades_tsrt, by = c("id" = "ibgeID")
   )
 #Plot options ----
 lang <- getOption("highcharter.lang")
