@@ -91,6 +91,25 @@ cidades_tsrt <- read_csv("data/TsRt_cidades.csv") %>%
 city_map <- sf::read_sf("data/malha_mun.json") %>% 
   right_join(
     cidades_tsrt, by = c("id" = "ibgeID")
+  ) %>% 
+  mutate(
+    state_code = str_sub(id, 1, 2),
+    state = 
+      case_when(
+        state_code == "35" ~ "SP", state_code == "11" ~ "RO", state_code == "12" ~ "AC",
+        state_code == "13" ~ "AM", state_code == "33" ~ "RJ",
+        state_code == "29" ~ "BA", state_code == "27" ~ "AL", state_code == "16" ~ "AP",
+        state_code == "CEARÁ" ~ "CE", state_code == "DISTRITO FEDERAL" ~ "DF",
+        state_code == "32" ~ "ES", state_code == "52" ~ "GO",
+        state_code == "21" ~ "MA", state_code == "51" ~ "MT",
+        state_code == "50" ~ "MS", state_code == "31" ~ "MG",
+        state_code == "15" ~ "PA", state_code == "25" ~ "PB",
+        state_code == "41" ~ "PR", state_code == "26" ~ "PE", state_code == "22" ~ "PI",
+        state_code == "24" ~ "RN", state_code == "43" ~ "RS",
+        state_code == "14" ~ "RR", state_code == "42" ~ "SC", state_code == "28" ~ "SE",
+        state_code == "17" ~ "TO",
+        TRUE ~ "TOTAL"
+      )
   )
 #Plot options ----
 lang <- getOption("highcharter.lang")

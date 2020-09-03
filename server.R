@@ -495,7 +495,7 @@ shinyServer(function(input, output, session) {
             proxy %>% clearShapes() %>% clearControls() %>% 
             setView(lng = click$lng, lat = click$lat, zoom = 6) %>% 
             #clearShapes() %>% 
-            addPolygons(data = city_map,
+            addPolygons(data = city_map %>% filter(state %in% click$id),
                         color = "#718075", layerId = ~id,
                         opacity = 1.0, fillOpacity = 0.9, weight = 1,
                         fillColor = "red",
