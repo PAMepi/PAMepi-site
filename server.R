@@ -469,11 +469,20 @@ shinyServer(function(input, output, session) {
         
     })
     
-    datavalues <- reactiveValues(data = data.frame(user = rep("", 15)))
+    datavalues <- reactiveValues(data = data.frame(
+        user = rep("", 15)
+    )
+    )
     
     output$tab_interativa <- renderRHandsontable({
         
-        rhandsontable(datavalues$data, width = 550, height = 300)
+        rhandsontable(datavalues$data %>% 
+                          transmute(
+                              data = seq(input$date_input, by = "days", length.out = 15),
+                              user
+                          ), 
+                      rowHeaders = NULL,
+                      width = 550, height = 300)
     })
     
     observeEvent(input$TRD,{
