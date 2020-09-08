@@ -124,8 +124,25 @@ shinyUI(shiny::bootstrapPage(
              ),
              
              tabPanel("Metodologia", value = "meto",
-                      h1("Em construção"),
-                      img(src="em_construcao.gif", align = "center",width='500px')
+                      
+                      fluidPage(
+                        navlistPanel(
+                          tabPanel(
+                            "PDF",
+                            tags$iframe(src="Divulga__o_cient_fica_plataforma_de_modelos__Newsletter_Template.pdf",
+                                        style="height:600px; width:100%")
+                          ),
+                          tabPanel(
+                            "HTML",
+                            tags$iframe(src="N1.html", style="height:600px; width:100%")
+                          ),
+                          tabPanel(
+                            "Ensino",
+                            h1("Em construção"),
+                            img(src="em_construcao.gif", align = "center",width='500px')
+                          )
+                        )
+                      )
              ),
              tabPanel("Apoio e Equipe",
                       
