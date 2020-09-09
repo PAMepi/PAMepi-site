@@ -144,6 +144,7 @@ shinyUI(shiny::bootstrapPage(
                       br(""),
                       shiny::splitLayout(
                         rHandsontableOutput("tab_interativa", 700, 500),
+                        textOutput("mostre_soma"),
                         plotOutput("simple_series",width = 500, height = 500) 
                       )
              ),

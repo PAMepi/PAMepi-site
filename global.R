@@ -9,6 +9,9 @@ library(highcharter)
 library(lubridate)
 library(rhandsontable)
 
+library(reticulate)
+source_python("test.py")
+
 estados_sir_bv <- read_csv("data/compartimentos_sir_bv_estados.csv")
 
 SIR_bv_state_sum <- read_csv("data/par_sir_bv_estados.csv")

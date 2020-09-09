@@ -494,6 +494,11 @@ shinyServer(function(input, output, session) {
                 as.numeric(datavalues$data$user)
             )
         })
+        output$mostre_soma <- renderText({
+            paste("aqui a resposta ",
+                  soma_teste(as.numeric(datavalues$data$user))
+                  )
+        })
     })
     #output$brasil_mapa_beta <- renderLeaflet({
     #    bins <- quantile(br_mapa$SIR_infec, 
