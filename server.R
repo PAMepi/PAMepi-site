@@ -487,17 +487,21 @@ shinyServer(function(input, output, session) {
     
     observeEvent(input$TRD,{
         
+        class(datavalues$data)
         datavalues$data <- hot_to_r(input$tab_interativa)
         
         output$simple_series <- renderPlot({
             plot(
-                as.numeric(datavalues$data$user)
+                as.numeric(run_sir(
+                    vector = as.numeric(datavalues$data$user),
+                    pop = as.numeric(1e6)
+                ))
             )
         })
         output$mostre_soma <- renderText({
             paste("aqui a resposta ",
-                  soma_teste(as.numeric(datavalues$data$user))
-                  )
+                  soma_teste(as.numeric(datavalues$data$user)))
+                  
         })
     })
     #output$brasil_mapa_beta <- renderLeaflet({
