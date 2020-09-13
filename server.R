@@ -469,38 +469,35 @@ shinyServer(function(input, output, session) {
         
     })
     
-    datavalues <- reactiveValues(data = data.frame(
-        user = rep("", 15)
-    )
-    )
+    datavalues <- reactive({
+        df = data.frame(
+            date = seq(input$date_input, by = "days", length.out = input$n_days),
+            user = rep("", input$n_days)
+        )
+    })
     
     output$tab_interativa <- renderRHandsontable({
         
-        rhandsontable(datavalues$data %>% 
-                          transmute(
-                              data = seq(input$date_input, by = "days", length.out = 15),
-                              user
-                          ), 
+        rhandsontable(datavalues(), 
                       rowHeaders = NULL,
-                      width = 550, height = 300)
+                      width = 400, height = 300)
     })
     
     observeEvent(input$TRD,{
         
-        class(datavalues$data)
-        datavalues$data <- hot_to_r(input$tab_interativa)
+        user_data <- hot_to_r(input$tab_interativa)
         
         output$simple_series <- renderPlot({
             plot(
                 as.numeric(run_sir(
-                    vector = as.numeric(datavalues$data$user),
+                    vector = as.numeric(user_data$user),
                     pop = as.numeric(1e6)
                 ))
             )
         })
         output$mostre_soma <- renderText({
             paste("aqui a resposta ",
-                  soma_teste(as.numeric(datavalues$data$user)))
+                  soma_teste(as.numeric(user_data$user)))
                   
         })
     })
