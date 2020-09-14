@@ -129,11 +129,22 @@ shinyUI(shiny::bootstrapPage(
                         navlistPanel(
                           tabPanel(
                             "Newsletter",
-                            tags$iframe(src="Divulga__o_cient_fica_plataforma_de_modelos__Newsletter_Template.pdf",
-                                        style="height:600px; width:100%")
+                            navbarPage(title = "Newsletter",
+                                       tabPanel("1", 
+                                                tags$iframe(src="N1.pdf",
+                                                            style="height:600px; width:100%")),
+                                       tabPanel("2", 
+                                                tags$iframe(src="N2.pdf",
+                                                            style="height:600px; width:100%"))
+                            )
                           ),
                           tabPanel(
                             "Ensino",
+                            h1("Em construção"),
+                            img(src="em_construcao.gif", align = "center",width='500px')
+                          ),
+                          tabPanel(
+                            "Artigo",
                             h1("Em construção"),
                             img(src="em_construcao.gif", align = "center",width='500px')
                           )
