@@ -470,6 +470,14 @@ shinyServer(function(input, output, session) {
     })
     
     datavalues <- reactive({
+        
+        validate(
+            need(input$n_days >= 5,
+                 "Por favor, informe um número de dias maior ou igual a 5"),
+            need(input$n_days <= 400,
+                 "Por favor, informe um número de dias menor ou igual a 400")
+        )
+        
         df = data.frame(
             date = seq(input$date_input, by = "days", length.out = input$n_days),
             user = rep("", input$n_days)
@@ -478,28 +486,46 @@ shinyServer(function(input, output, session) {
     
     output$tab_interativa <- renderRHandsontable({
         
+        
         rhandsontable(datavalues(), 
                       rowHeaders = NULL,
-                      width = 400, height = 300)
+                      width = 400, height = 300) %>% 
+            hot_col("user", type = "numeric")
     })
     
     observeEvent(input$TRD,{
         
-        user_data <- hot_to_r(input$tab_interativa)
+        withProgress(
+            
+            message='Please wait',
+            detail='Running Model...',
+            value=0, {
+                n <- 2
+                # Some code lines
+                
+                # Some function that takes really long time to run
+                incProgress(1/n, detail = paste("Finished section 1"))
+                
+                user_data <- hot_to_r(input$tab_interativa)
+                
+                output$simple_series <- renderPlot({
+                    plot(
+                        as.numeric(run_sir(
+                            vector = as.numeric(user_data$user),
+                            pop = as.numeric(1e6)
+                        ))
+                    )
+                })
+                #Sys.sleep(3)
+                output$mostre_soma <- renderText({
+                    paste("aqui a resposta ",
+                          soma_teste(as.numeric(user_data$user)))
+                    
+                })
+                
+                incProgress(1/n, detail = paste("Finished section 2"))
+            })
         
-        output$simple_series <- renderPlot({
-            plot(
-                as.numeric(run_sir(
-                    vector = as.numeric(user_data$user),
-                    pop = as.numeric(1e6)
-                ))
-            )
-        })
-        output$mostre_soma <- renderText({
-            paste("aqui a resposta ",
-                  soma_teste(as.numeric(user_data$user)))
-                  
-        })
     })
     #output$brasil_mapa_beta <- renderLeaflet({
     #    bins <- quantile(br_mapa$SIR_infec, 

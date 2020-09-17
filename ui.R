@@ -132,8 +132,10 @@ shinyUI(shiny::bootstrapPage(
                         radioButtons("series_info", "Indique o perfil da serie",
                                      choices = c("Acumulada"= "a", "Diaria" = "d"),
                                      inline = TRUE),  
-                        sliderInput(inputId = "n_days",min = 5, max = 400,
-                                    label = "# linhas", value = 5),
+                        
+                        numericInput(inputId = "n_days",min = 5, max = 400,
+                                    label = "# linhas", value = 5, step = 5),
+                        
                         dateInput("date_input", "Data do primeiro caso",
                                   value = today(), min = "2020-01-01",
                                   max = "2020-11-20", format = "dd--mm--yyyy",
