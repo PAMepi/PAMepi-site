@@ -10,6 +10,7 @@ library(lubridate)
 
 library(rhandsontable)
 library(reticulate)
+#reticulate::use_python(python = "/usr/bin/python3")
 source_python("sir.py")
 source_python("test.py")
 # reticulate::use_python(python = "dir_do_py")
