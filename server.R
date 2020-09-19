@@ -483,7 +483,15 @@ shinyServer(function(input, output, session) {
             user = rep("", input$n_days)
         )
     })
-    
+    population_model <- reactive({
+        
+        validate(
+            need(input$pop_input >= 1e6, 
+                 "Por favorm informe um número para população maior que 1 milhão")
+        )
+        
+        pop_model <- input$pop_input
+    })
     output$tab_interativa <- renderRHandsontable({
         
         
@@ -497,79 +505,36 @@ shinyServer(function(input, output, session) {
         
         withProgress(
             
-            message='Please wait',
+            message='Por favor aguarde',
             detail='Running Model...',
             value=0, {
                 n <- 2
-                # Some code lines
                 
-                # Some function that takes really long time to run
-                incProgress(1/n, detail = paste("Finished section 1"))
+                incProgress(1/n, detail = paste("Rodando o modelo..."))
                 
                 user_data <- hot_to_r(input$tab_interativa)
                 
-                output$simple_series <- renderPlot({
-                    plot(
-                        as.numeric(run_sir(
-                            vector = as.numeric(user_data$user),
-                            pop = as.numeric(1e6)
-                        ))
-                    )
-                })
-                #Sys.sleep(3)
-                output$mostre_soma <- renderText({
-                    paste("aqui a resposta ",
-                          soma_teste(as.numeric(user_data$user)))
-                    
+                model_output <- run_sir(
+                    vector = as.numeric(user_data$user),
+                    pop = population_model()
+                )
+                
+                df_model <- tibble(date = user_data$date,
+                                   Input = as.numeric(user_data$user),
+                                   Modelo = as.numeric(model_output)) %>% 
+                    pivot_longer(- date, names_to = "serie", values_to = "valor")
+                
+                output$sim_pred <- renderHighchart({
+                    highchart() %>%
+                        hc_xAxis(type = "datetime", dateTimeLabelFormats = list(day = '%d of %b')) %>% 
+                        hc_add_series(df_model, hcaes(x = date, y = round(valor), group = serie),
+                                      type = "line")
                 })
                 
-                incProgress(1/n, detail = paste("Finished section 2"))
+                
+                incProgress(1/n, detail = paste("Encerrando..."))
             })
         
     })
-    #output$brasil_mapa_beta <- renderLeaflet({
-    #    bins <- quantile(br_mapa$SIR_infec, 
-    #                     probs = c(seq(0, 100, by = 15), 100)/100) %>% 
-    #        round()
-    #    pal <- colorBin("Reds", domain = br_mapa$SIR_infec, bins = bins)
-    #    
-    #    leaflet(data = br_mapa) %>% 
-    #        addTiles(options = providerTileOptions(opacity = 0.5)) %>% 
-    #        setView(lng=-52.761,lat=-14.446,zoom=4) %>% 
-    #        addPolygons(color = "#718075", layerId = ~state,
-    #                    opacity = 1.0, fillOpacity = 0.9, weight = 1,
-    #                    fillColor = ~pal(SIR_infec),
-    #                    highlightOptions = highlightOptions(color = "#FFEE58", weight = 3,
-    #                                                        bringToFront = FALSE),
-    #                    label = ~name)  
-    #})
-    #
-    #proxy <- leafletProxy("brasil_mapa_beta")
-    
-    #observe({
-    #    click <- input$brasil_mapa_beta_shape_click
-    #    bins <- quantile(reg_saud$rt, na.rm = TRUE,
-    #                     probs = c(seq(0, 100, by = 15), 100)/100) 
-    #    pal <- colorBin("Reds", domain = reg_saud$rt, bins = bins)
-    #    
-    #    if(is.null(click))
-    #        return()
-    #    else
-    #        proxy %>% clearShapes() %>% clearControls() %>% 
-    #        setView(lng = click$lng, lat = click$lat, zoom = 6) %>% 
-    #        #clearShapes() %>% 
-    #        addPolygons(data = reg_saud %>% 
-    #                        dplyr::filter(startsWith(CO_REGSAUD, "29")), #so BA por enquanto
-    #                    color = "white",
-    #                    layerId = ~CO_REGSAUD,
-    #                    opacity = 1.0, fillOpacity = 0.9, weight = 1,
-    #                    fillColor = ~pal(rt),
-    #                    highlightOptions = highlightOptions(color = "#FFEE58", weight = 3,
-    #                                                        bringToFront = TRUE),
-    #                    label = ~CO_REGSAUD
-    #                    
-    #                    
-    #        ) 
-    #})
     
 })

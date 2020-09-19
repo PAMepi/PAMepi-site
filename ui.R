@@ -129,13 +129,14 @@ shinyUI(shiny::bootstrapPage(
              ),
              tabPanel("Traga seus dados", value = "tsd",
                       splitLayout(
-                        radioButtons("series_info", "Indique o perfil da serie",
-                                     choices = c("Acumulada"= "a", "Diaria" = "d"),
-                                     inline = TRUE),  
+                        #radioButtons("series_info", "Indique o perfil da serie",
+                        #             choices = c("Acumulada"= "a", "Diaria" = "d"),
+                        #             inline = TRUE),  
                         
                         numericInput(inputId = "n_days",min = 5, max = 400,
-                                    label = "# linhas", value = 5, step = 5),
-                        
+                                    label = "# linhas", value = 5),
+                        numericInput(inputId = "pop_input",min = 1e6, max = 1e10,
+                                     label = "População", value = 1e6),
                         dateInput("date_input", "Data do primeiro caso",
                                   value = today(), min = "2020-01-01",
                                   max = "2020-11-20", format = "dd--mm--yyyy",
@@ -148,7 +149,7 @@ shinyUI(shiny::bootstrapPage(
                       br(""),
                       shiny::splitLayout(
                         rHandsontableOutput("tab_interativa", 700, 500),
-                        textOutput("mostre_soma"),
+                        highchartOutput("sim_pred"),
                         plotOutput("simple_series",width = 500, height = 500) 
                       )
              ),
