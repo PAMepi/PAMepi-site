@@ -139,6 +139,13 @@ shinyUI(shiny::bootstrapPage(
                             )
                           ),
                           tabPanel(
+                            "Divulgação audiovisual",
+                            tags$iframe(width="720", height="480", src="https://www.youtube.com/embed/8gHu7-eDlNQ",
+                                        frameborder="0",
+                                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", 
+                                        allowfullscreen=NA)
+                          ),
+                          tabPanel(
                             "Ensino",
                             h1("Em construção"),
                             img(src="em_construcao.gif", align = "center",width='500px')
