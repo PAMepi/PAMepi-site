@@ -2,6 +2,9 @@ library(shiny)
 
 shinyUI(shiny::bootstrapPage(
   
+  useShinydashboard(),
+  
+  
   navbarPage(title = div(h3("Painel Modelos Covid-19", 
                     style = "position: relative; top: 45px; left: -1000px;"), 
                  #HTML("&emsp;&emsp;"),
@@ -147,10 +150,23 @@ shinyUI(shiny::bootstrapPage(
                         actionButton("TRD", "Rode o modelo")
                         ), 
                       br(""),
-                      shiny::splitLayout(
-                        rHandsontableOutput("tab_interativa", 700, 500),
-                        highchartOutput("sim_pred"),
-                        plotOutput("simple_series",width = 500, height = 500) 
+                      fluidRow(
+                        column(
+                          width = 2,
+                          rHandsontableOutput("tab_interativa", 100, 120)
+                        ),
+                        column(
+                          width = 5, offset = 4,
+                          highchartOutput("sim_pred", height = "50%") 
+                        )
+                      ),
+                      column(
+                        width = 5, offset = 3,
+                        box(
+                          title = "TsRt", solidHeader = TRUE,
+                          collapsible = TRUE, collapsed = TRUE,
+                          plotOutput("simple_series",width = 400, height = 280) 
+                        )
                       )
              ),
              tabPanel("Apoio e Equipe",

@@ -17,6 +17,9 @@ source_python("test.py")
 # conda_install("scipy")
 # conda_install("numpy")
 
+library(shinydashboard)
+library(shinyWidgets)
+
 estados_sir_bv <- read_csv("data/compartimentos_sir_bv_estados.csv")
 
 SIR_bv_state_sum <- read_csv("data/par_sir_bv_estados.csv")

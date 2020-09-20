@@ -531,6 +531,10 @@ shinyServer(function(input, output, session) {
                                       type = "line")
                 })
                 
+                output$simple_series <- renderPlot({
+                    plot(1:10)
+                })
+                
                 
                 incProgress(1/n, detail = paste("Encerrando..."))
             })
