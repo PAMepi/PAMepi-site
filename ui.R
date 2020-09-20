@@ -156,12 +156,12 @@ shinyUI(shiny::bootstrapPage(
                           rHandsontableOutput("tab_interativa", 100, 120)
                         ),
                         column(
-                          width = 5, offset = 4,
+                          width = 5, offset = 5,
                           highchartOutput("sim_pred", height = "50%") 
                         )
                       ),
                       column(
-                        width = 5, offset = 3,
+                        width = 7, offset = 3,
                         box(
                           title = "TsRt", solidHeader = TRUE,
                           collapsible = TRUE, collapsed = TRUE,
