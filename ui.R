@@ -124,8 +124,43 @@ shinyUI(shiny::bootstrapPage(
              ),
              
              tabPanel("Metodologia", value = "meto",
-                      h1("Em construção"),
-                      img(src="em_construcao.gif", align = "center",width='500px')
+                      
+                      fluidPage(
+                        navlistPanel(
+                          tabPanel(
+                            "Newsletter",
+                            navbarPage(title = "Newsletter",
+                                       tabPanel("1", 
+                                                tags$iframe(src="N1.pdf",
+                                                            style="height:600px; width:100%")),
+                                       tabPanel("2", 
+                                                tags$iframe(src="N2.pdf",
+                                                            style="height:600px; width:100%"))
+                            )
+                          ),
+                          tabPanel(
+                            "Divulgação audiovisual",
+                            a(href = "https://youtu.be/8gHu7-eDlNQ",
+                              img(src="video_1_thumb.jpg", width = 720),
+                              target="_blank")
+                            # Outra opção: video dentro da pagina
+                            #tags$iframe(width="720", height="480", src="https://www.youtube.com/embed/8gHu7-eDlNQ",
+                            #            frameborder="0",
+                            #            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", 
+                            #            allowfullscreen=NA)
+                          ),
+                          tabPanel(
+                            "Ensino",
+                            h1("Em construção"),
+                            img(src="em_construcao.gif", align = "center",width='500px')
+                          ),
+                          tabPanel(
+                            "Artigo",
+                            h1("Em construção"),
+                            img(src="em_construcao.gif", align = "center",width='500px')
+                          )
+                        )
+                      )
              ),
              tabPanel("Apoio e Equipe",
                       
@@ -176,14 +211,6 @@ shinyUI(shiny::bootstrapPage(
                         
                       )
              )
-             #text = "Municípios"
-             #tabPanel("Site da rede Covida", icon = icon("globe-americas"))
-             #tabPanel(
-             #  "Beta reg saude", h3("Apenas BA"),
-             #  splitLayout(
-             #  leafletOutput("brasil_mapa_beta", height = "550px")
-             #  )
-             #)
   ),
   tags$style(type = "text/css", 
              HTML('img {
@@ -247,6 +274,11 @@ shinyUI(shiny::bootstrapPage(
     border: 1px solid #ddd;
     border-bottom-color: transparent;
 }'), HTML('footer{ background-color: #17a2b8; text-align: center; } '),
+             HTML('
+              .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+                color:#fff;
+                background-color:#17a2b8;
+    }'),
              HTML('
                   .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
     color: #BDBDBD !important;
