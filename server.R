@@ -483,15 +483,7 @@ shinyServer(function(input, output, session) {
             user = rep("", input$n_days)
         )
     })
-    population_model <- reactive({
-        
-        validate(
-            need(input$pop_input >= 1e6, 
-                 "Por favorm informe um número para população maior que 1 milhão")
-        )
-        
-        pop_model <- input$pop_input
-    })
+    
     output$tab_interativa <- renderRHandsontable({
         
         
@@ -499,6 +491,23 @@ shinyServer(function(input, output, session) {
                       rowHeaders = NULL,
                       width = 400, height = 300) %>% 
             hot_col("user", type = "numeric")
+    })
+    
+    population_model <- reactive({
+        
+        validate(
+            need(input$pop_input >= 1e6, 
+                 "Por favor informe um número para população maior que 1 milhão")
+        )
+        
+        validate(
+            need(
+                all(diff(as.numeric(hot_to_r(input$tab_interativa)$user)) >= 0),
+                "Por favor adicione uma serie monotonica"
+            )
+        )
+        
+        pop_model <- input$pop_input
     })
     
     observeEvent(input$TRD,{
