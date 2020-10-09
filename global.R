@@ -1,3 +1,4 @@
+library(shiny)
 library(shinythemes)
 library(tidyverse)
 library(leaflet)
@@ -8,16 +9,11 @@ library(htmlwidgets)
 library(highcharter)
 library(lubridate)
 
-
-estados_sir_bv <- read_csv("data/compartimentos_sir_bv_estados.csv")
-
-SIR_bv_state_sum <- read_csv("data/par_sir_bv_estados.csv")
-
 pops <- c(
   'RO'=	1777225,
   'AC'=	881935,
   'AM'=	4144597,
-  'RR'= 	605761,
+  'RR'= 605761,
   'PA'=	8602865,
   'AP'=	845731,
   'TO'=	1572866,
@@ -25,43 +21,71 @@ pops <- c(
   'PI'=	3273227,
   'CE'=	9132078,
   'RN'=	3506853,
-  'PB'=   4018127,
+  'PB'= 4018127,
   'PE'=	9557071,
-  'AL'=   3337357,
-  'SE'=   2298696,
-  'BA'=   14873064,
-  'MG'=   21168791,
+  'AL'= 3337357,
+  'SE'= 2298696,
+  'BA'= 14873064,
+  'MG'= 21168791,
   'ES'=	4018650,
-  'RJ'=   17264943,
-  'SP'=   45919049,
-  'PR'=   11433957,
-  'SC'=   	7164788,
+  'RJ'= 17264943,
+  'SP'= 45919049,
+  'PR'= 11433957,
+  'SC'= 7164788,
   'RS'=	11377239,
   'MS'=	2778986,
-  'MT'=   3484466,
-  'GO'=   7018354,
+  'MT'= 3484466,
+  'GO'= 7018354,
   'DF'=	3015268,
   'TOTAL'= 210147125) %>% 
   as.data.frame() %>% 
   rownames_to_column("state") %>% 
   rename(pop = ".")
 
-estados_sir_bv <- estados_sir_bv %>% 
-  left_join( pops, by = c('state') ) %>% 
-  mutate_at(vars(suscetivel:recuperado), ~ .*pop) %>% 
-  mutate_if(is.numeric, round)
-estados_sir_bv_comp <- read_csv("data/data_sir_bv_estados.csv") %>% 
-  left_join(pops, by = 'state')
+read_compartimentos <- function(model = "sir"){
+  dir_loc <- paste0("data/model_comp/compartimentos_", model, "_estados.csv")
+  return(
+    read_csv(dir_loc) %>% 
+      left_join( pops, by = c('state') ) %>% 
+      mutate_at(vars(suscetivel:recuperado), ~ .*pop) %>% 
+      mutate_if(is.numeric, round)
+    )
+}
+read_par <- function(model = "sir"){
+  dir_loc <- paste0("data/model_par/par_", model, "_estados.csv")
+  return(read_csv(dir_loc))
+}
+read_data <- function(model = "sir"){
+  dir_loc <- paste0("data/model_data/data_", model, "_estados.csv")
+  return(
+    read_csv(dir_loc) %>% 
+      left_join(pops, by = 'state')
+  )
+}
+estados_sir <- read_compartimentos("sir")
+estados_sir_bv <- read_compartimentos("sir_bv")
+estados_seir <- read_compartimentos("seir")
+estados_seir_bv <- read_compartimentos("seir_bv")
 
-estados_sir <- read_csv("data/compartimentos_sir_estados.csv") %>% 
-  left_join(pops, by = 'state') %>% 
-  mutate_at(vars(suscetivel:recuperado), ~ .*pop) %>% 
-  mutate_if(is.numeric, round)
-estados_sir_comp <- read_csv("data/data_sir_estados.csv")
-  
-TsRt <- read_csv("data/TsRt_estados.csv")
+SIR_state_sum <- read_par("sir")
+SIR_bv_state_sum <- read_par("sir_bv")
+SEIR_state_sum <- read_par("seir")
+SEIR_bv_state_sum <- read_par("seir_bv")
 
-br_mapa <- read_sf("data/map.json") %>% 
+estados_sir_comp <- read_data("sir")
+estados_sir_bv_comp <- read_data("sir_bv")
+estados_seir_comp <- read_data("seir")
+estados_seir_bv_comp <- read_data("seir_bv")
+
+#estados_seir <- read_csv("data/compartimentos_seir_estados.csv") %>% 
+#  left_join(pops, by = 'state') %>% 
+#  mutate_at(vars(suscetivel:recuperado), ~ .*pop) %>% 
+#  mutate_if(is.numeric, round)
+#estados_seir_comp <- read_csv("data/data_seir_estados.csv")
+
+TsRt <- read_csv("data/misc/TsRt_estados.csv")
+
+br_mapa <- read_sf("data/misc/map.json") %>% 
   left_join(
     estados_sir_bv_comp %>% 
       drop_na() %>% 
@@ -73,9 +97,6 @@ br_mapa <- read_sf("data/map.json") %>%
     by = c("sigla" = "state")
   )
 
-SIR_state_sum <- read_csv(
-  "data/par_sir_estados.csv"
-)
 states_names <- br_mapa %>%
   as.data.frame() %>% 
   select(name,sigla) %>% 
