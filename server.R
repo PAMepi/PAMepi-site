@@ -58,11 +58,11 @@ shinyServer(function(input, output, session) {
         df <- df %>% mutate(pico = pico_date) %>% distinct()
         
         estado_s_p <- SIR_state_sum %>% filter( state == state_update ) %>% 
-            transmute(beta, gamma)
+            transmute(beta1, gamma)
         
         aux_text <- paste0("'",
-                           "<br>R0: ", round(estado_s_p$beta/estado_s_p$gamma, 3),
-                           "<br>Beta: ", round(estado_s_p$beta, 3),
+                           "<br>R0: ", round(estado_s_p$beta1/estado_s_p$gamma, 3),
+                           "<br>Beta: ", round(estado_s_p$beta1, 3),
                            "<br>Gamma: ", round(estado_s_p$gamma, 3),
                            "<br>Pico no dia ", pico_date, "<br>com ",
                            round(max(df$infectado)), " infectados<br>", "'"
@@ -330,7 +330,7 @@ shinyServer(function(input, output, session) {
             
         aux_text <- paste0(
             "'",
-            "<br>SIR R0: ", round(df_aux_text$sir_beta/df_aux_text$sir_gamma, 3),
+            "<br>SIR R0: ", round(df_aux_text$sir_beta1/df_aux_text$sir_gamma, 3),
             "<br>SIR B.V. R0: ", round(df_aux_text$sir_bv_beta1/df_aux_text$sir_bv_gamma, 3),
             "<br>SEIR R.0: ", round(df_aux_text$seir_beta/df_aux_text$seir_gamma, 3),
             "<br>SEIR B.V. R.0: ", round(df_aux_text$seir_bv_beta1/df_aux_text$seir_bv_gamma, 3),
@@ -404,7 +404,7 @@ shinyServer(function(input, output, session) {
         
         aux_text <- paste0(
             "'",
-            "<br>SIR R0: ", round(df_aux_text$sir_beta/df_aux_text$sir_gamma, 3),
+            "<br>SIR R0: ", round(df_aux_text$sir_beta1/df_aux_text$sir_gamma, 3),
             "<br>SIR B.V. R0: ", round(df_aux_text$sir_bv_beta1/df_aux_text$sir_bv_gamma, 3),
             "<br>SEIR R.0: ", round(df_aux_text$seir_beta/df_aux_text$seir_gamma, 3),
             "<br>SEIR B.V. R.0: ", round(df_aux_text$seir_bv_beta1/df_aux_text$seir_bv_gamma, 3),
@@ -477,7 +477,7 @@ shinyServer(function(input, output, session) {
         
         aux_text <- paste0(
             "'",
-            "<br>SIR R0: ", round(df_aux_text$sir_beta/df_aux_text$sir_gamma, 3),
+            "<br>SIR R0: ", round(df_aux_text$sir_beta1/df_aux_text$sir_gamma, 3),
             "<br>SIR B.V. R0: ", round(df_aux_text$sir_bv_beta1/df_aux_text$sir_bv_gamma, 3),
             "<br>SEIR R.0: ", round(df_aux_text$seir_beta/df_aux_text$seir_gamma, 3),
             "<br>SEIR B.V. R.0: ", round(df_aux_text$seir_bv_beta1/df_aux_text$seir_bv_gamma, 3),
