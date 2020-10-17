@@ -62,20 +62,88 @@ read_data <- function(model = "sir"){
       left_join(pops, by = 'state')
   )
 }
+comp_plot <- function(compart, state_proxy){
+  df <- compart %>% 
+    drop_na() %>% 
+    filter(state %in% state_proxy)
+  return(
+    highchart() %>%
+      hc_title(text = paste0("Dados vs. Ajustados ",
+                             "<b>",
+                             states_names %>% filter(sigla %in% state_proxy) %>% 
+                               pull(name),
+                             "</b>"),
+               margin = 20, align = "left",
+               style = list(color = "#05091A", useHTML = TRUE, fontSize = "15px")) %>% 
+      hc_xAxis(title = list(text = "Dados"), min = 0, max = max(df$totalCasesPred)) %>% 
+      hc_yAxis(title = list(text = "Ajustados"), min = 0, max = max(df$totalCasesPred)) %>% 
+      hc_add_series(showInLegend = FALSE,
+                    color = "#A9A9A9", dashStyle = 'ShortDot',
+                    data = list(list(0, 0), list(max(df$totalCases),
+                                                 max(df$totalCases))),
+                    enableMouseTracking = FALSE) %>% 
+      hc_plotOptions(line = list(color = "#4471EB",
+                                 marker = list(enabled = FALSE)),
+                     scatter = list(color = "black")) %>% 
+      hc_add_series(data = df, hcaes(x = totalCases, y = round(totalCasesPred)),
+                    tooltip = list(pointFormat = "<b>Casos Preditos<b>: {point.y}<br>",
+                                   headerFormat = "<b>Casos Observados<b>: {point.x}<br>"),
+                    type = "scatter", showInLegend = FALSE) %>% 
+      hc_exporting(enabled = TRUE)
+  )
+}
+res_plot <- function(compart, state_proxy){
+  df <- compart %>% 
+    drop_na() %>% 
+    filter(state %in% state_proxy)
+  return(
+    highchart() %>%
+      hc_title(text = paste0("Casos acumulados ",
+                             "<b>",
+                             states_names %>% filter(sigla %in% state_proxy) %>% 
+                               pull(name),
+                             "</b>"),
+               margin = 20, align = "left",
+               style = list(color = "#05091A", useHTML = TRUE, fontSize = "15px")) %>% 
+      hc_xAxis(type = "datetime", dateTimeLabelFormats = list(day = '%d of %b')) %>% 
+      hc_yAxis(title = list(text = "Casos acumulados")) %>% 
+      hc_add_series(data = df, hcaes(x = date, y = round(totalCasesPred)), 
+                    type = "line", name = "Casos Preditos") %>% 
+      hc_add_series(data = df, hcaes(x = date, y = totalCases), 
+                    tooltip = list(pointFormat = "Data: {point.date}",
+                                   headerFormat = "<b>{point.y} Casos</b><br>"),
+                    type = "scatter", name = "Casos Reportados") %>% 
+      hc_plotOptions(line = list(color = "#4471EB",
+                                 marker = list(enabled = FALSE)),
+                     scatter = list(color = "black")) %>% 
+      hc_exporting(enabled = TRUE)
+  )
+}
+
+
 estados_sir <- read_compartimentos("sir")
 estados_sir_bv <- read_compartimentos("sir_bv")
 estados_seir <- read_compartimentos("seir")
 estados_seir_bv <- read_compartimentos("seir_bv")
+estados_seiir <- read_compartimentos("seiir")
+estados_seiir_bv <- read_compartimentos("seiir_bv") 
+
 
 SIR_state_sum <- read_par("sir")
 SIR_bv_state_sum <- read_par("sir_bv")
 SEIR_state_sum <- read_par("seir")
 SEIR_bv_state_sum <- read_par("seir_bv")
+SEIIR_state_sum <- read_par("seiir")
+SEIIR_bv_state_sum <- read_par("seiir_bv")
+
 
 estados_sir_comp <- read_data("sir")
 estados_sir_bv_comp <- read_data("sir_bv")
 estados_seir_comp <- read_data("seir")
 estados_seir_bv_comp <- read_data("seir_bv")
+estados_seiir_comp <- read_data("seiir")
+estados_seiir_bv_comp <- read_data("seiir_bv")
+
 
 #estados_seir <- read_csv("data/compartimentos_seir_estados.csv") %>% 
 #  left_join(pops, by = 'state') %>% 

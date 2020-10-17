@@ -32,7 +32,8 @@ shinyUI(shiny::bootstrapPage(
                                                                     inputId = "viz_mod_bas",
                                                                     label = "Selecione o modelo",
                                                                     choices = c("SIR" = "SIR_base_model", 
-                                                                                "SEIR" = "SEIR_base_model"
+                                                                                "SEIR" = "SEIR_base_model",
+                                                                                "SEIIR" = "SEIIR_base_model"
                                                                     ),
                                                                     selected = "SIR_base_model"
                                                         )
@@ -63,6 +64,14 @@ shinyUI(shiny::bootstrapPage(
                                                conditionalPanel(
                                                  condition = "input.viz_mod_bas == 'SEIR_base_model' & input.is_bv == 'bv'",
                                                  highchartOutput("SEIR_bv_model_plot")
+                                               ),
+                                               conditionalPanel(
+                                                 condition = "input.viz_mod_bas == 'SEIIR_base_model' & input.is_bv == 'std'",
+                                                 highchartOutput("SEIIR_model_plot")
+                                               ),
+                                               conditionalPanel(
+                                                 condition = "input.viz_mod_bas == 'SEIIR_base_model' & input.is_bv == 'bv'",
+                                                 highchartOutput("SEIIR_bv_model_plot")
                                                )
                                       ),
                                       tabPanel("Compare os modelos",
@@ -100,7 +109,8 @@ shinyUI(shiny::bootstrapPage(
                                                           label = "Selecione o modelo",
                                                           choices = c(
                                                             "SIR" = "SIR_comp_model",
-                                                            "SEIR" = "SEIR_comp_model"),
+                                                            "SEIR" = "SEIR_comp_model",
+                                                            "SEIIR" = "SEIIR_comp_model"),
                                                           selected = "SIR_comp_model"
                                                         )
                                                  ),
@@ -139,6 +149,20 @@ shinyUI(shiny::bootstrapPage(
                                                  splitLayout(
                                                    highchartOutput("SEIR_bv_comp_plot"),
                                                    highchartOutput("SEIR_bv_res")
+                                                 )
+                                               ),
+                                               conditionalPanel(
+                                                 condition = "input.fit_comp == 'SEIIR_comp_model' & input.is_bv_val == 'std'",
+                                                 splitLayout(
+                                                   highchartOutput("SEIIR_comp_plot"),
+                                                   highchartOutput("SEIIR_res")
+                                                 )
+                                               ),
+                                               conditionalPanel(
+                                                 condition = "input.fit_comp == 'SEIIR_comp_model' & input.is_bv_val == 'bv'",
+                                                 splitLayout(
+                                                   highchartOutput("SEIIR_bv_comp_plot"),
+                                                   highchartOutput("SEIIR_bv_res")
                                                  )
                                                )
                                                
