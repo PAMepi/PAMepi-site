@@ -477,7 +477,7 @@ shinyServer(function(input, output, session) {
         mapa %>% 
             addPolygons(color = "#718075", layerId = ~sigla,
                         opacity = 1.0, fillOpacity = 0.5, weight = 1,
-                        fillColor = "red",
+                        fillColor = "green3",
                         highlightOptions = highlightOptions(color = "#FFEE58", weight = 3,
                                                             bringToFront = FALSE),
                         label = ~name) 
@@ -486,22 +486,38 @@ shinyServer(function(input, output, session) {
     
     proxy <- leafletProxy("br_muni_map")
     
+    state_proxy_mun <- reactive(
+        {
+            click <- input$br_muni_map_shape_click
+            #reset <- input$reset
+            if(is.null(click) #| isTruthy(reset)
+            )
+                return(
+                    
+                )
+            else
+                leafletProxy("br_muni_map");click
+        }
+    ) 
+    
     observe({
         click <- input$br_muni_map_shape_click
         
         if(is.null(click))
             return()
         else
-            proxy %>% clearShapes() %>% clearControls() %>% 
+            only_mun_map <- proxy %>% clearShapes() %>% clearControls() %>% 
             setView(lng = click$lng, lat = click$lat, zoom = 6) %>% 
             #clearShapes() %>% 
             addPolygons(data = city_map %>% filter(state %in% click$id),
                         color = "#718075", layerId = ~id,
                         opacity = 1.0, fillOpacity = 0.9, weight = 1,
-                        fillColor = "red",
+                        fillColor = "green",
                         highlightOptions = highlightOptions(color = "#FFEE58", weight = 3,
                                                             bringToFront = FALSE),
-                        label = ~id)  
+                        label = ~id)
+        only_mun_map
+        
     })
     
 })
