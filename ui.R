@@ -209,6 +209,10 @@ shinyUI(shiny::bootstrapPage(
                             "Divulgação audiovisual",
                             a(href = "https://youtu.be/8gHu7-eDlNQ",
                               img(src="video_1_thumb.jpg", width = 720),
+                              target="_blank"),
+                            br(),
+                            a(href = "https://www.youtube.com/watch?v=bZ0CqyDZyj0&t=2387s",
+                              img(src="video_2_thumb.jpg", width = 720),
                               target="_blank")
                             # Outra opção: video dentro da pagina
                             #tags$iframe(width="720", height="480", src="https://www.youtube.com/embed/8gHu7-eDlNQ",
