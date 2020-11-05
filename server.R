@@ -711,49 +711,5 @@ shinyServer(function(input, output, session) {
     output$SEIIR_bv_res <- renderHighchart({
         res_plot(estados_seiir_comp, state_proxy()[1])
     })
-    #output$brasil_mapa_beta <- renderLeaflet({
-    #    bins <- quantile(br_mapa$SIR_infec, 
-    #                     probs = c(seq(0, 100, by = 15), 100)/100) %>% 
-    #        round()
-    #    pal <- colorBin("Reds", domain = br_mapa$SIR_infec, bins = bins)
-    #    
-    #    leaflet(data = br_mapa) %>% 
-    #        addTiles(options = providerTileOptions(opacity = 0.5)) %>% 
-    #        setView(lng=-52.761,lat=-14.446,zoom=4) %>% 
-    #        addPolygons(color = "#718075", layerId = ~state,
-    #                    opacity = 1.0, fillOpacity = 0.9, weight = 1,
-    #                    fillColor = ~pal(SIR_infec),
-    #                    highlightOptions = highlightOptions(color = "#FFEE58", weight = 3,
-    #                                                        bringToFront = FALSE),
-    #                    label = ~name)  
-    #})
-    #
-    #proxy <- leafletProxy("brasil_mapa_beta")
-    
-    #observe({
-    #    click <- input$brasil_mapa_beta_shape_click
-    #    bins <- quantile(reg_saud$rt, na.rm = TRUE,
-    #                     probs = c(seq(0, 100, by = 15), 100)/100) 
-    #    pal <- colorBin("Reds", domain = reg_saud$rt, bins = bins)
-    #    
-    #    if(is.null(click))
-    #        return()
-    #    else
-    #        proxy %>% clearShapes() %>% clearControls() %>% 
-    #        setView(lng = click$lng, lat = click$lat, zoom = 6) %>% 
-    #        #clearShapes() %>% 
-    #        addPolygons(data = reg_saud %>% 
-    #                        dplyr::filter(startsWith(CO_REGSAUD, "29")), #so BA por enquanto
-    #                    color = "white",
-    #                    layerId = ~CO_REGSAUD,
-    #                    opacity = 1.0, fillOpacity = 0.9, weight = 1,
-    #                    fillColor = ~pal(rt),
-    #                    highlightOptions = highlightOptions(color = "#FFEE58", weight = 3,
-    #                                                        bringToFront = TRUE),
-    #                    label = ~CO_REGSAUD
-    #                    
-    #                    
-    #        ) 
-    #})
     
 })

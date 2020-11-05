@@ -45,7 +45,7 @@ pops <- c(
 read_compartimentos <- function(model = "sir"){
   dir_loc <- paste0("data/model_comp/compartimentos_", model, "_estados.csv")
   return(
-    read_csv(dir_loc) %>% 
+    read_csv(dir_loc, col_types = cols()) %>% 
       left_join( pops, by = c('state') ) %>% 
       mutate_at(vars(suscetivel:recuperado), ~ .*pop) %>% 
       mutate_if(is.numeric, round)
@@ -53,12 +53,12 @@ read_compartimentos <- function(model = "sir"){
 }
 read_par <- function(model = "sir"){
   dir_loc <- paste0("data/model_par/par_", model, "_estados.csv")
-  return(read_csv(dir_loc))
+  return(read_csv(dir_loc,col_types = cols()))
 }
 read_data <- function(model = "sir"){
   dir_loc <- paste0("data/model_data/data_", model, "_estados.csv")
   return(
-    read_csv(dir_loc) %>% 
+    read_csv(dir_loc, col_types = cols()) %>% 
       left_join(pops, by = 'state')
   )
 }
@@ -151,7 +151,7 @@ estados_seiir_bv_comp <- read_data("seiir_bv")
 #  mutate_if(is.numeric, round)
 #estados_seir_comp <- read_csv("data/data_seir_estados.csv")
 
-TsRt <- read_csv("data/misc/TsRt_estados.csv")
+TsRt <- read_csv("data/misc/TsRt_estados.csv", col_types = cols())
 
 br_mapa <- read_sf("data/misc/map.json") %>% 
   left_join(
