@@ -3,7 +3,7 @@
 # -*- coding: utf-8 -*-
 
 """
-Created on Tue Aug 20 2020
+Created on Tue Oct 07 2020
 @author: Juliane Oliveira julianlanzin@gmail.com 
 @author: Moreno rodrigues rodriguesmsb@gmail.com
 
@@ -21,6 +21,9 @@ warnings.filterwarnings('ignore')
 
 
 
+
+
+ 
 class start_model:
     def __init__(self, pop):
         self.pop = pop
@@ -46,56 +49,55 @@ class start_model:
 
         n_betas = self.n_betas
         #variables
-        S, I, R, Tt = f
+        S, E, I, R, Tt = f
     
     
         #create a block that leads with number of betas
         if n_betas == 3:
         
             #define paramters for model with 3 betas
-            beta, beta1, beta2, gamma, t1, t2 = parametros
+            beta, beta1, beta2, kappa, gamma, t1, t2 = parametros
         
             #define derivatives for 3 betas
             dS_dt = - self.__beta_t2(t, t1, t2, beta, beta1, beta2) * S * I
-            dTt_dt = self.__beta_t2(t, t1, t2, beta, beta1, beta2) * S * I
-            dI_dt = self.__beta_t2(t, t1, t2, beta, beta1, beta2) * S * I - gamma * I
+            dE_dt = self.__beta_t2(t, t1, t2, beta, beta1, beta2) * S * I - kappa * E
     
         #Change here to lead with more betas
         elif n_betas == 2:
         
             #define parameters for two betas
-            beta, beta1, gamma, t1 = parametros
+            beta, beta1, kappa, gamma, t1 = parametros
         
             #define derivatives for two betas
             dS_dt = - self.__beta_t(t, t1, beta, beta1) * S * I
-            dTt_dt = self.__beta_t(t, t1, beta, beta1) * S * I
-            dI_dt = self.__beta_t(t, t1, beta, beta1) * S * I - gamma * I
-    
+            dE_dt = self.__beta_t(t, t1, beta, beta1) * S * I - kappa * E
         
         else:
             #define parameters for one beta
-            beta, gamma = parametros
+            beta, kappa, gamma = parametros
         
             #define derivatives for single beta
             dS_dt = - beta * S * I
-            dTt_dt = beta * S * I
-            dI_dt = beta * S * I - gamma * I
+            dE_dt = beta * S * I - kappa * E
     
     
     
         #return to derivatives that are common to all models
+        dTt_dt = kappa * E
+        dI_dt = kappa * E - gamma * I
         dR_dt = gamma*I 
         
-        return dS_dt, dI_dt, dR_dt, dTt_dt
+        return dS_dt, dE_dt, dI_dt, dR_dt, dTt_dt
 
     #Define the minimizer function
  
-    def fit(self, x, y, n_tries, n_betas, fit_by = "cummulative_cases", bounds = {"beta":  [0,2.0], 
-                                                                                  "beta1": [0,2.0],
-                                                                                  "beta2": [0,2.0],
-                                                                                  "gamma": [1/14,1/7],
-                                                                                  "t1": [0,45],
-                                                                                  "t2": [50,100]}):
+    def fit(self, x, y, n_tries, n_betas, fit_by = "cs", bounds = {"beta":  [0,2.0], 
+                                                                   "beta1": [0,2.0],
+                                                                   "beta2": [0,2.0],
+                                                                   "kappa": [1/6, 1/3],
+                                                                   "gamma": [1/14,1/7],
+                                                                   "t1": [0,45],
+                                                                   "t2": [50,100]}):
 
         self.n_betas = n_betas
         self.y = y
@@ -106,27 +108,25 @@ class start_model:
         
             #Define the number of parameters that will be used to pars according to the number of betas
             if self.n_betas == 3:
-                beta, beta1, beta2, gamma, t1, t2,  i0 = pars
-                parode = beta, beta1, beta2, gamma, t1, t2
+                beta, beta1, beta2, kappa, gamma, t1, t2, e0, i0 = pars
+                parode = beta, beta1, beta2, kappa, gamma, t1, t2
             
             elif self.n_betas == 2:
-                beta, beta1, gamma, t1,  i0 = pars
-                parode = beta, beta1, gamma, t1
+                beta, beta1, kappa, gamma, t1, e0, i0 = pars
+                parode = beta, beta1, kappa, gamma, t1
             
             else:
-                beta, gamma,  i0 = pars
-                parode = beta, gamma
+                beta, kappa, gamma, e0, i0 = pars
+                parode = beta, kappa, gamma
             
             
             #define initial conditions
-            q0 = [1-i0,i0,0,i0]
+            q0 = [1-i0,e0,i0,0,i0]
     
     
             #Integrating
             qs = odeint(self.__seir, q0, ts0, args = (parode, ), mxstep = 1000000)
         
-            
-
             #define the standardized residuals
             if self.fit_by == "cs":
                 #get the series of cummulative cases to minimize error
@@ -136,6 +136,8 @@ class start_model:
                 #get the series of daily cases to minimize error
                 sinf = np.r_[qs[:,-1][0], np.diff(qs[:,-1])]
 
+
+            #define the standardized residuals
             erri = (self.pop * sinf - self.y) / np.sqrt(self.pop * sinf + 1.0)
     
             return np.r_[erri]
@@ -158,7 +160,8 @@ class start_model:
     
     
         #Add bounds that are common to all models
-        bounds.append([0,50/self.pop]) #i0
+        bounds.append([0,50/self.pop])
+        bounds.append([0,50/self.pop])
         bounds = np.array(bounds)
     
         #start to variables to track best results during optmization process
@@ -187,60 +190,65 @@ class start_model:
             self.beta = best_res.x[0]
             self.beta1 = best_res.x[1]
             self.beta2 = best_res.x[2] 
-            self.gamma = best_res.x[3] 
-            self.t1 = best_res.x[4]
-            self.t2 = best_res.x[5] 
-            self.i0  = best_res.x[6]
-            
+            self.kappa = best_res.x[3] 
+            self.gamma = best_res.x[4] 
+            self.t1 = best_res.x[5] 
+            self.t2 = best_res.x[6] 
+            self.e0 = best_res.x[7] 
+            self.i0 = best_res.x[8]
 
         elif self.n_betas == 2:
             self.beta = best_res.x[0] 
             self.beta1 = best_res.x[1] 
-            self.gamma  = best_res.x[2]
-            self.t1 = best_res.x[3]
-            self.i0 = best_res.x[4]
+            self.kappa = best_res.x[2] 
+            self.gamma = best_res.x[3] 
+            self.t1 = best_res.x[4] 
+            self.e0 = best_res.x[5] 
+            self.i0 = best_res.x[6]
            
         else:
-            self.beta = best_res.x[0]
-            self.gamma = best_res.x[1]
-            self.i0 = best_res.x[2]
+            self.beta =  best_res.x[0]
+            self.kappa = best_res.x[1]
+            self.gamma = best_res.x[2] 
+            self.e0 = best_res.x[3] 
+            self.i0 = best_res.x[4]
 
     def get_parameters(self):
         if self.n_betas == 3:
-            return({"beta": self.beta, "beta1": self.beta1, "beta2": self.beta2,
-                   "gamma": self.gamma, "t1": self.t1, "t2": self.t2, "i0": self.i0})
+            return({"beta": self.beta, "beta1": self.beta1, "beta2": self.beta2, "kappa": self.kappa, 
+                   "gamma": self.gamma, "t1": self.t1, "t2": self.t2, "e0": self.e0, "i0": self.i0})
 
         elif self.n_betas == 2:
-            return({"beta": self.beta, "beta1": self.beta1, "gamma": self.gamma, "t1": self.t1, "i0": self.i0})
+            return({"beta": self.beta, "beta1": self.beta1, "kappa": self.kappa, "gamma": self.gamma, "t1": self.t1, "e0": self.e0, "i0": self.i0})
            
         else:
-            return({"beta": self.beta, "gamma": self.gamma, "i0": self.i0})
+            return({"beta": self.beta, "kappa": self.kappa, "gamma": self.gamma, "e0": self.e0, "i0": self.i0})
     
     def predict(self, time):
-        q0 = [1 - self.i0, self.i0, 0, self.i0]
+        q0 = [1 - self.i0, self.e0, self.i0, 0, self.i0]
         if self.n_betas == 3:
-            parode = self.beta, self.beta1, self.beta2, self.gamma, self.t1, self.t2
+            parode = self.beta, self.beta1, self.beta2, self.kappa, self.gamma, self.t1, self.t2
         elif self.n_betas == 2:
-            parode = self.beta, self.beta1, self.gamma, self.t1
+            parode = self.beta, self.beta1,  self.kappa, self.gamma, self.t1
         else:
-            parode = self.beta, self.gamma
+            parode = self.beta, self.kappa, self.gamma
 
         predicted = odeint(self.__seir, q0, np.arange(1, len(time) + 1), args = (parode,), mxstep = 1000000)
         self.S = predicted[:,0]
-        self.I = predicted[:,1]
-        self.R = predicted[:,2]
+        self.E = predicted[:,1]
+        self.I = predicted[:,2]
+        self.R = predicted[:,3]
 
-      
         if self.fit_by == "cs":
 
             #predict the series for cummulative cases
-            self.Tt = predicted[:,3]
+            self.Tt = predicted[:,4]
 
         elif self.fit_by == "ts":
             #predict the series for daily cases
-            self.Tt = np.r_[predicted[:,3][0], np.diff(predicted[:,3])]
-        
-        return {"S": self.S, "I": self.I, "R": self.R, "Tt": self.Tt * self.pop}
+            self.Tt = np.r_[predicted[:,4][0], np.diff(predicted[:,4])]
+
+        return {"S": self.S, "E":self.E, "I": self.I, "R": self.R, "Tt": self.Tt * self.pop}
 
 
 
