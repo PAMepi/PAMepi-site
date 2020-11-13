@@ -1,27 +1,29 @@
-from JAS.models.gradient_optmization import sir, seir, seiir
+#from JAS.models.gradient_optmization import sir, seir, seiir
+import sir, seir, seiir
 import numpy as np 
 
 def run_sir(vector, pop, n_betas):
     model = sir.start_model(pop = pop)
     time = np.arange(1, len(vector) + 1)
     model.fit(x = time,
-              y = vector,
+              y = np.array(vector), # OLHA AQUI
               n_tries = 10,
               n_betas = n_betas)
-    results = model.predict(np.arange(1, len(vector) + 10))
+    results = model.predict(np.arange(1, len(vector) + 1))
     
     return  results["Tt"]
 
 
 
 def run_seir(vector, pop, n_betas):
+    #print(vector)
     model = seir.start_model(pop = pop)
     time = np.arange(1, len(vector) + 1)
     model.fit(x = time,
-              y = vector,
+              y = np.array(vector),
               n_tries = 10,
               n_betas = n_betas)
-    results = model.predict(np.arange(1, len(vector) + 10))
+    results = model.predict(np.arange(1, len(vector) + 1))
     
     return  results["Tt"]
 
@@ -33,7 +35,7 @@ def run_seiir(vector, pop, n_betas):
               y = vector,
               n_tries = 10,
               n_betas = n_betas)
-    results = model.predict(np.arange(1, len(vector) + 10))
+    results = model.predict(np.arange(1, len(vector)))
     
     return  results["Tt"]
 

@@ -144,12 +144,14 @@ shinyUI(shiny::bootstrapPage(
                                   value = today(), min = "2020-01-01",
                                   max = "2020-11-20", format = "dd--mm--yyyy",
                                   language = "pt-BR"),
-                        selectInput("model_ui_data", "Selecione o modelo",
-                                    choices = c("SIR" = "SIR", "SIR beta variante" = "SIR_bv")
+                        selectInput("model_ui_data", "Selecione o modelo",size = 3,selectize=FALSE,
+                                    choices = c("SIR" = "SIR", "SEIR" = "SEIR",
+                                                "SEIIR" = "SEIIR")
                                     ),
+                        numericInput(inputId = "n_beta", label = "Número de betas", value = 1,
+                                     min = 1, max = 3, step = 1), 
                         actionButton("TRD", "Rode o modelo")
                         ), 
-                      br(""),
                       fluidRow(
                         column(
                           width = 2,
@@ -158,14 +160,6 @@ shinyUI(shiny::bootstrapPage(
                         column(
                           width = 5, offset = 5,
                           highchartOutput("sim_pred", height = "50%") 
-                        )
-                      ),
-                      column(
-                        width = 7, offset = 3,
-                        box(
-                          title = "TsRt", solidHeader = TRUE,
-                          collapsible = TRUE, collapsed = TRUE,
-                          plotOutput("simple_series",width = 400, height = 280) 
                         )
                       )
              ),

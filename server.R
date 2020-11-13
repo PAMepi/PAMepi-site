@@ -523,10 +523,34 @@ shinyServer(function(input, output, session) {
                 
                 user_data <- hot_to_r(input$tab_interativa)
                 
-                model_output <- run_sir(
+                # AQUI É PARA TESTE
+                model_output <- run_seir( # CUIDADO
                     vector = as.numeric(user_data$user),
-                    pop = population_model()
+                    pop = population_model(),
+                    n_betas = input$n_beta # USUARIO QUE DEVE ESCOLHER(TESTE)
                 )
+                
+                # Quando estiver funcionando vai ficar assim
+                
+                #model_output <- switch(
+                #    input$model_ui_data,
+                #    "SIR" = run_sir(
+                #        vector = as.numeric(user_data$user),
+                #        pop = population_model(),
+                #        n_betas = input$n_beta 
+                #    ),
+                #    "SEIR" = run_seir(
+                #        vector = as.numeric(user_data$user),
+                #        pop = population_model(),
+                #        n_betas = input$n_beta 
+                #    ),
+                #    "SEIIR" = run_seiir(
+                #        vector = as.numeric(user_data$user),
+                #        pop = population_model(),
+                #        n_betas = input$n_beta 
+                #    )
+                #)
+                
                 
                 df_model <- tibble(date = user_data$date,
                                    Input = as.numeric(user_data$user),
