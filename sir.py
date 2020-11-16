@@ -41,8 +41,8 @@ class start_model:
         beta = b * self.__h(t1 - t) + b1 * self.__h(t2 - t) * self.__h(t - t1) + b2 * self.__h(t - t2)
         return beta
 
-    #defing SEIR model
-    def __seir(self, f, t, parametros):
+    #defing SIR model
+    def __sir(self, f, t, parametros):
 
         n_betas = self.n_betas
         #variables
@@ -72,7 +72,7 @@ class start_model:
             dI_dt = self.__beta_t(t, t1, beta, beta1) * S * I - gamma * I
     
         
-        else:
+        elif n_betas == 1:
             #define parameters for one beta
             beta, gamma = parametros
         
@@ -90,7 +90,7 @@ class start_model:
 
     #Define the minimizer function
  
-    def fit(self, x, y, n_tries, n_betas, fit_by = "cummulative_cases", bounds = {"beta":  [0,2.0], 
+    def fit(self, x, y, n_tries, n_betas, fit_by = "cs", bounds = {"beta":  [0,2.0], 
                                                                                   "beta1": [0,2.0],
                                                                                   "beta2": [0,2.0],
                                                                                   "gamma": [1/14,1/7],
@@ -123,7 +123,7 @@ class start_model:
     
     
             #Integrating
-            qs = odeint(self.__seir, q0, ts0, args = (parode, ), mxstep = 1000000)
+            qs = odeint(self.__sir, q0, ts0, args = (parode, ), mxstep = 1000000)
         
             
 
@@ -154,7 +154,7 @@ class start_model:
             #remove parameters that will note be used for the model
             for parameter in ["beta1", "beta2", "t1", "t2"]:
                 del(bounds[parameter])
-            bounds = list(bounds.values())
+            bounds = list(bounds.values()) 
     
     
         #Add bounds that are common to all models
@@ -225,7 +225,7 @@ class start_model:
         else:
             parode = self.beta, self.gamma
 
-        predicted = odeint(self.__seir, q0, np.arange(1, len(time) + 1), args = (parode,), mxstep = 1000000)
+        predicted = odeint(self.__sir, q0, np.arange(1, len(time) + 1), args = (parode,), mxstep = 1000000)
         self.S = predicted[:,0]
         self.I = predicted[:,1]
         self.R = predicted[:,2]

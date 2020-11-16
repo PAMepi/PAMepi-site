@@ -1,4 +1,8 @@
 library(shiny)
+library(reticulate)
+source_python("run_models.py")
+#reticulate::use_python(python = "/usr/bin/python3")
+#source_python("sir.py")
 
 
 shinyServer(function(input, output, session) {
@@ -524,10 +528,11 @@ shinyServer(function(input, output, session) {
                 user_data <- hot_to_r(input$tab_interativa)
                 
                 # AQUI É PARA TESTE
-                model_output <- run_seir( # CUIDADO
-                    vector = as.numeric(user_data$user),
+                
+                model_output <- run_sir( # CUIDADO
+                    vector = as.numeric(as.character(user_data$user)), #add as.character to transform
                     pop = population_model(),
-                    n_betas = input$n_beta # USUARIO QUE DEVE ESCOLHER(TESTE)
+                    n_betas = as.numeric(as.character(input$n_beta)) # USUARIO QUE DEVE ESCOLHER(TESTE)
                 )
                 
                 # Quando estiver funcionando vai ficar assim
@@ -553,10 +558,12 @@ shinyServer(function(input, output, session) {
                 
                 
                 df_model <- tibble(date = user_data$date,
-                                   Input = as.numeric(user_data$user),
-                                   Modelo = as.numeric(model_output)) %>% 
+                                   Input = as.numeric(as.character(user_data$user)), #add as.character
+                                   Modelo = model_output) %>% 
                     pivot_longer(- date, names_to = "serie", values_to = "valor")
                 
+                
+               
                 output$sim_pred <- renderHighchart({
                     highchart() %>%
                         hc_xAxis(type = "datetime", dateTimeLabelFormats = list(day = '%d of %b')) %>% 
