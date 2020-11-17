@@ -712,4 +712,8 @@ shinyServer(function(input, output, session) {
         res_plot(estados_seiir_comp, state_proxy()[1])
     })
     
+    output$repository <- renderUI({
+        includeHTML("www/README.html")
+    })
+    
 })

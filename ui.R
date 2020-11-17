@@ -274,8 +274,7 @@ shinyUI(shiny::bootstrapPage(
                                    
                           ),
                           tabPanel("Repositório",
-                                   h1("Em construção"),
-                                   img(src="em_construcao.gif", align = "center",width='500px')
+                                   htmlOutput("repository")
                           )
                           
                         )
