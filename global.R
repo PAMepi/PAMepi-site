@@ -8,6 +8,16 @@ library(htmltools)
 library(htmlwidgets)
 library(highcharter)
 library(lubridate)
+library(rhandsontable)
+library(shinydashboard)
+library(shinyWidgets)
+library(reticulate)
+
+source_python("run_models.py")
+
+estados_sir_bv <- read_csv("data/compartimentos_sir_bv_estados.csv")
+
+SIR_bv_state_sum <- read_csv("data/par_sir_bv_estados.csv")
 
 pops <- c(
   'RO'=	1777225,
