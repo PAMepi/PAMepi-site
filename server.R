@@ -1,9 +1,4 @@
 library(shiny)
-library(reticulate)
-source_python("run_models.py")
-#reticulate::use_python(python = "/usr/bin/python3")
-#source_python("sir.py")
-
 
 shinyServer(function(input, output, session) {
     

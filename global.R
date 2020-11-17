@@ -8,11 +8,11 @@ library(htmlwidgets)
 library(highcharter)
 library(lubridate)
 library(rhandsontable)
-# reticulate::use_python(python = "dir_do_py")
-# conda_install("scipy")
-# conda_install("numpy")
 library(shinydashboard)
 library(shinyWidgets)
+library(reticulate)
+
+source_python("run_models.py")
 
 estados_sir_bv <- read_csv("data/compartimentos_sir_bv_estados.csv")
 
