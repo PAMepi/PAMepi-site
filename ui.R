@@ -1,20 +1,18 @@
-library(shiny)
-
 shinyUI(shiny::bootstrapPage(
   
   useShinydashboard(),
   
   
   navbarPage(title = div(h3("Painel Modelos Covid-19", 
-                    style = "position: relative; top: 45px; left: -1000px;"), 
-                 #HTML("&emsp;&emsp;"),
-                 a(href= "https://cidacs.bahia.fiocruz.br/", img(src="CIDACS_Bw.png", 
-                                                                 width = 100), 
-                   target="_blank"),
-                 HTML("&emsp;&emsp;"),
-                 a(href= "https://www.rondonia.fiocruz.br/", img(src="fio_rond_bw.png", width = 80),
-                   target="_blank"), 
-                 style = "position: relative; top: -70px; right: -1000px;"),
+                            style = "position: relative; top: 45px; left: -1000px;"), 
+                         #HTML("&emsp;&emsp;"),
+                         a(href= "https://cidacs.bahia.fiocruz.br/", img(src="CIDACS_Bw.png", 
+                                                                         width = 100), 
+                           target="_blank"),
+                         HTML("&emsp;&emsp;"),
+                         a(href= "https://www.rondonia.fiocruz.br/", img(src="fio_rond_bw.png", width = 80),
+                           target="_blank"), 
+                         style = "position: relative; top: -70px; right: -1000px;"),
              id = "home",
              windowTitle = "Painel Modelos Covid-19",
              
@@ -30,23 +28,53 @@ shinyUI(shiny::bootstrapPage(
                                     tabsetPanel(
                                       
                                       tabPanel("Modelos implementados",
-                                               selectInput(width = "45%",
-                                                           
-                                                           inputId = "viz_mod_bas",
-                                                           label = "Selecione o modelo",
-                                                           choices = c("SIR" = "SIR_base_model", 
-                                                                       "SIR beta variante" = "SIR_bv_base_model"
-                                                           ),
-                                                           selected = "SIR_base_model"
-                                               ),
+                                               fluidRow(
+                                                 column(width = 5,
+                                                        selectInput(width = "100%",
+                                                                    
+                                                                    inputId = "viz_mod_bas",
+                                                                    label = "Selecione o modelo",
+                                                                    choices = c("SIR" = "SIR_base_model", 
+                                                                                "SEIR" = "SEIR_base_model",
+                                                                                "SEIIR" = "SEIIR_base_model"
+                                                                    ),
+                                                                    selected = "SIR_base_model"
+                                                        )
+                                                 ),
+                                                 column(width = 4,
+                                                        radioButtons(
+                                                          inputId = "is_bv",
+                                                          label = "",
+                                                          choices = c("Padrão" = "std", 
+                                                                      "Beta Variante" = "bv")
+                                                        )
+                                                        
+                                                 )
+                                               ), 
                                                conditionalPanel(
-                                                 condition = "input.viz_mod_bas == 'SIR_base_model'", 
+                                                 condition = "input.viz_mod_bas == 'SIR_base_model' & input.is_bv == 'std'", 
                                                  highcharter::highchartOutput("SIR_model_plot", height="320px"),
                                                  highcharter::highchartOutput("SIR_TsRt", height="170px")
                                                ),
                                                conditionalPanel(
-                                                 condition = "input.viz_mod_bas == 'SIR_bv_base_model'", 
+                                                 condition = "input.viz_mod_bas == 'SIR_base_model' & input.is_bv == 'bv'", 
                                                  highchartOutput("SIR_bv_plot")
+                                               ),
+                                               conditionalPanel(
+                                                 condition = "input.viz_mod_bas == 'SEIR_base_model' & input.is_bv == 'std'",
+                                                 highchartOutput("SEIR_model_plot")
+                                               ),
+                                               conditionalPanel(
+                                                 condition = "input.viz_mod_bas == 'SEIR_base_model' & input.is_bv == 'bv'",
+                                                 highchartOutput("SEIR_bv_model_plot")
+                                               ),
+                                               conditionalPanel(
+                                                 condition = "input.viz_mod_bas == 'SEIIR_base_model' & input.is_bv == 'std'",
+                                                 highchartOutput("SEIIR_model_plot")
+                                               ),
+                                               conditionalPanel(
+                                                 condition = "input.viz_mod_bas == 'SEIIR_base_model' & input.is_bv == 'bv'",
+                                                 highchartOutput("SEIIR_bv_model_plot")
                                                )
                                       ),
                                       tabPanel("Compare os modelos",
@@ -77,32 +105,71 @@ shinyUI(shiny::bootstrapPage(
                                                
                                       ),
                                       tabPanel("Validação",
-                                               tabPanel("Fit do modelo ao dado",
+                                               fluidRow(
+                                                 column(width = 5,
                                                         selectInput(
                                                           inputId = "fit_comp",
                                                           label = "Selecione o modelo",
                                                           choices = c(
-                                                            "SIR" = "SIR_comp_model", 
-                                                            "SIR beta variante" = "SIR_bv_comp_model"),
+                                                            "SIR" = "SIR_comp_model",
+                                                            "SEIR" = "SEIR_comp_model",
+                                                            "SEIIR" = "SEIIR_comp_model"),
                                                           selected = "SIR_comp_model"
-                                                        ),
-                                                        conditionalPanel(
-                                                          condition = "input.fit_comp == 'SIR_comp_model'",
-                                                          splitLayout(
-                                                            highchartOutput("SIR_comp_plot"),
-                                                            highchartOutput("SIR_res")
-                                                          )
-                                                        ),
-                                                        conditionalPanel(
-                                                          condition = "input.fit_comp == 'SIR_bv_comp_model'",
-                                                          splitLayout(
-                                                            highchartOutput("SIR_bv_comp_plot"),
-                                                            highchartOutput("SIR_bv_res")
-                                                          )
-                                                          
                                                         )
-                                                        
+                                                 ),
+                                                 column(width = 4,
+                                                        radioButtons(
+                                                          inputId = "is_bv_val",
+                                                          label = "",
+                                                          choices = c("Padrão" = "std", 
+                                                                      "Beta Variante" = "bv")
+                                                        )
+                                                 )
+                                               ),
+                                               conditionalPanel(
+                                                 condition = "input.fit_comp == 'SIR_comp_model' & input.is_bv_val == 'std'",
+                                                 splitLayout(
+                                                   highchartOutput("SIR_comp_plot"),
+                                                   highchartOutput("SIR_res")
+                                                 )
+                                               ),
+                                               conditionalPanel(
+                                                 condition = "input.fit_comp == 'SIR_comp_model' & input.is_bv_val == 'bv'",
+                                                 splitLayout(
+                                                   highchartOutput("SIR_bv_comp_plot"),
+                                                   highchartOutput("SIR_bv_res")
+                                                 )
+                                               ),
+                                               conditionalPanel(
+                                                 condition = "input.fit_comp == 'SEIR_comp_model' & input.is_bv_val == 'std'",
+                                                 splitLayout(
+                                                   highchartOutput("SEIR_comp_plot"),
+                                                   highchartOutput("SEIR_res")
+                                                 )
+                                               ),
+                                               conditionalPanel(
+                                                 condition = "input.fit_comp == 'SEIR_comp_model' & input.is_bv_val == 'bv'",
+                                                 splitLayout(
+                                                   highchartOutput("SEIR_bv_comp_plot"),
+                                                   highchartOutput("SEIR_bv_res")
+                                                 )
+                                               ),
+                                               conditionalPanel(
+                                                 condition = "input.fit_comp == 'SEIIR_comp_model' & input.is_bv_val == 'std'",
+                                                 splitLayout(
+                                                   highchartOutput("SEIIR_comp_plot"),
+                                                   highchartOutput("SEIIR_res")
+                                                 )
+                                               ),
+                                               conditionalPanel(
+                                                 condition = "input.fit_comp == 'SEIIR_comp_model' & input.is_bv_val == 'bv'",
+                                                 splitLayout(
+                                                   highchartOutput("SEIIR_bv_comp_plot"),
+                                                   highchartOutput("SEIIR_bv_res")
+                                                 )
                                                )
+                                               
+                                               
                                                
                                       ),
                                       tabPanel("Simulação",
@@ -127,8 +194,48 @@ shinyUI(shiny::bootstrapPage(
              ),
              
              tabPanel("Metodologia", value = "meto",
-                      h1("Em construção"),
-                      img(src="em_construcao.gif", align = "center",width='500px')
+                      
+                      fluidPage(
+                        navlistPanel(
+                          tabPanel(
+                            "Newsletter",
+                            navbarPage(title = "Newsletter",
+                                       tabPanel("1", 
+                                                tags$iframe(src="newsletter/N1.pdf",
+                                                            style='height:575px;width:100%')),
+                                       tabPanel("2", 
+                                                tags$iframe(src="newsletter/N2.pdf",
+                                                            style="height:575px; width:100%"))
+                            )
+                          ),
+                          tabPanel(
+                            "Divulgação audiovisual",
+                            br(""),
+                            splitLayout(a(href = "https://youtu.be/8gHu7-eDlNQ",
+                                          img(src="video_1_thumb.jpg", width = 480),
+                                          target="_blank"),
+                                        a(href = "https://www.youtube.com/watch?v=bZ0CqyDZyj0&t=2387s",
+                                          img(src="video_2_thumb.jpg", width = 480),
+                                          target="_blank"))
+                            
+                            # Outra opção: video dentro da pagina
+                            #tags$iframe(width="720", height="480", src="https://www.youtube.com/embed/8gHu7-eDlNQ",
+                            #            frameborder="0",
+                            #            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", 
+                            #            allowfullscreen=NA)
+                          ),
+                          tabPanel(
+                            "Ensino",
+                            h1("Em construção"),
+                            img(src="em_construcao.gif", align = "center",width='500px')
+                          ),
+                          tabPanel(
+                            "Artigo",
+                            h1("Em construção"),
+                            img(src="em_construcao.gif", align = "center",width='500px')
+                          )
+                        )
+                      )
              ),
              tabPanel("Traga seus dados", value = "tsd",
                       splitLayout(
@@ -189,23 +296,22 @@ shinyUI(shiny::bootstrapPage(
                                      column(
                                        width = 4,
                                        h3("Moreno S. Rodrigues"),
-                                       img(src="e_1.jpg", align = "center",width=120),
+                                       img(src="equipe/e_1.jpg", align = "center",width=120),
                                        h3("Pablo I. P. Ramos"),
-                                       img(src="e_3.jpg", align = "center",width=120)
+                                       img(src="equipe/e_3.jpg", align = "center",width=120)
                                      ),
                                      column(
                                        width = 4,
                                        h3("Juliane F. Oliveira"),
-                                       img(src="e_2.jpg", align = "center",width=120),
+                                       img(src="equipe/e_2.jpg", align = "center",width=120),
                                        h3("Arthur Rios"),
-                                       img(src="e_4.jpg", align = "center",width=120)
+                                       img(src="equipe/e_4.jpg", align = "center",width=120)
                                      )
                                    )
                                    
                           ),
                           tabPanel("Repositório",
-                                   h1("Em construção"),
-                                   img(src="em_construcao.gif", align = "center",width='500px')
+                                   htmlOutput("repository")
                           )
                           
                         )
@@ -213,14 +319,6 @@ shinyUI(shiny::bootstrapPage(
                         
                       )
              )
-             #text = "Municípios"
-             #tabPanel("Site da rede Covida", icon = icon("globe-americas"))
-             #tabPanel(
-             #  "Beta reg saude", h3("Apenas BA"),
-             #  splitLayout(
-             #  leafletOutput("brasil_mapa_beta", height = "550px")
-             #  )
-             #)
   ),
   tags$style(type = "text/css", 
              HTML('img {
@@ -284,6 +382,11 @@ shinyUI(shiny::bootstrapPage(
     border: 1px solid #ddd;
     border-bottom-color: transparent;
 }'), HTML('footer{ background-color: #17a2b8; text-align: center; } '),
+             HTML('
+              .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+                color:#fff;
+                background-color:#17a2b8;
+    }'),
              HTML('
                   .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
     color: #BDBDBD !important;
