@@ -241,35 +241,38 @@ shinyUI(shiny::bootstrapPage(
                       )
              ),
              tabPanel("Traga seus dados", value = "tsd",
-                      splitLayout(
-                        #radioButtons("series_info", "Indique o perfil da serie",
-                        #             choices = c("Acumulada"= "a", "Diaria" = "d"),
-                        #             inline = TRUE),  
-                        
-                        numericInput(inputId = "n_days",min = 5, max = 400,
-                                    label = "Quantidade de dias", value = 5),
-                        numericInput(inputId = "pop_input",min = 1e6, max = 1e10,
-                                     label = "População", value = 1e6),
-                        dateInput("date_input", "Data do primeiro caso",
-                                  value = today(), min = "2020-01-01",
-                                  max = "2020-11-20", format = "dd--mm--yyyy",
-                                  language = "pt-BR"),
-                        selectInput("model_ui_data", "Selecione o modelo",size = 3,selectize=FALSE,
-                                    choices = c("SIR" = "SIR", "SEIR" = "SEIR",
-                                                "SEIIR" = "SEIIR")
-                                    ),
-                        numericInput(inputId = "n_beta", label = "Número de betas", value = 1,
-                                     min = 1, max = 3, step = 1), 
-                        actionButton("TRD", "Rode o modelo")
-                        ), 
                       fluidRow(
-                        column(width = 1),
+                        column(
+                          width = 2,
+                          verticalLayout(
+                            #radioButtons("series_info", "Indique o perfil da serie",
+                            #             choices = c("Acumulada"= "a", "Diaria" = "d"),
+                            #             inline = TRUE),  
+                            
+                            numericInput(inputId = "n_days",min = 5, max = 400,
+                                         label = "Quantidade de dias", value = 5),
+                            numericInput(inputId = "pop_input",min = 1e6, max = 1e10,
+                                         label = "População", value = 1e6),
+                            dateInput("date_input", "Data do primeiro caso",
+                                      value = today(), min = "2020-01-01",
+                                      max = "2020-11-20", format = "dd--mm--yyyy",
+                                      language = "pt-BR"),
+                            selectInput("model_ui_data", "Selecione o modelo",#size = 3,selectize=FALSE,
+                                        choices = c("SIR" = "SIR", "SEIR" = "SEIR",
+                                                    "SEIIR" = "SEIIR")
+                            ),
+                            numericInput(inputId = "n_beta", label = "Número de betas", value = 1,
+                                         min = 1, max = 3, step = 1), 
+                            actionButton("TRD", "Rode o modelo")
+                          )
+                          
+                        ),
                         column(
                           width = 2, 
                           rHandsontableOutput("tab_interativa", 100, 120)
                         ),
                         column(
-                          width = 7, offset = 1,
+                          width = 7, 
                           highchartOutput("sim_pred", height = "50%") 
                         )
                       )
