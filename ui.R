@@ -199,10 +199,10 @@ shinyUI(shiny::bootstrapPage(
                             navbarPage(title = "Newsletter",
                                        tabPanel("1", 
                                                 tags$iframe(src="newsletter/N1.pdf",
-                                                            style="height:600px; width:100%")),
+                                                            style='height:575px;width:100%')),
                                        tabPanel("2", 
                                                 tags$iframe(src="newsletter/N2.pdf",
-                                                            style="height:600px; width:100%"))
+                                                            style="height:575px; width:100%"))
                             )
                           ),
                           tabPanel(
