@@ -137,7 +137,7 @@ shinyUI(shiny::bootstrapPage(
                         #             inline = TRUE),  
                         
                         numericInput(inputId = "n_days",min = 5, max = 400,
-                                    label = "# linhas", value = 5),
+                                    label = "Quantidade de dias", value = 5),
                         numericInput(inputId = "pop_input",min = 1e6, max = 1e10,
                                      label = "População", value = 1e6),
                         dateInput("date_input", "Data do primeiro caso",
@@ -153,12 +153,13 @@ shinyUI(shiny::bootstrapPage(
                         actionButton("TRD", "Rode o modelo")
                         ), 
                       fluidRow(
+                        column(width = 1),
                         column(
-                          width = 2,
+                          width = 2, 
                           rHandsontableOutput("tab_interativa", 100, 120)
                         ),
                         column(
-                          width = 5, offset = 5,
+                          width = 7, offset = 1,
                           highchartOutput("sim_pred", height = "50%") 
                         )
                       )
