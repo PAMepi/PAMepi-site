@@ -1,5 +1,5 @@
-#from JAS.models.gradient_optmization import sir, seir, seiir
-import sir, seir, seiir
+from JAS.models.gradient_optmization import sir, seir, seiir
+#import sir, seir, seiir
 import numpy as np 
 
 def run_sir(vector, pop, n_betas):
