@@ -199,8 +199,8 @@ class start_model:
             self.t1 = best_res.x[8]  
             self.t2 = best_res.x[9]  
             self.e0 = best_res.x[10]  
-            self.ia0 = best_res.x[12] 
-            self.is0 = best_res.x[13]
+            self.ia0 = best_res.x[11] 
+            self.is0 = best_res.x[12]
 
         elif self.n_betas == 2:
             self.beta = best_res.x[0] 
