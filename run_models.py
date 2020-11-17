@@ -47,7 +47,7 @@ def run_seiir(vector, pop, n_betas):
                         "delta": [0., 0.75], "rho": [0.13,0.5], "kappa": [1/6, 1/3],
                         "gammaA": [1/3.7,1/3.24], "gammaS": [1/5,1/3], "t1": [0,45],
                         "t2": [50,100]})
-    results = model.predict(np.arange(1, len(vector)))
+    results = model.predict(np.arange(1, len(vector) + 1))
     
     return  results["Tt"]
 

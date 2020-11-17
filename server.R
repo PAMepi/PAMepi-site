@@ -558,11 +558,13 @@ shinyServer(function(input, output, session) {
                     highchart() %>%
                         hc_xAxis(type = "datetime", dateTimeLabelFormats = list(day = '%d of %b')) %>% 
                         hc_add_series(df_model, hcaes(x = date, y = round(valor), group = serie),
-                                      type = "line")
-                })
-                
-                output$simple_series <- renderPlot({
-                    plot(1:10)
+                                      type = "line") %>% 
+                        hc_yAxis(title = list(text = "Casos acumulados")) %>% 
+                        hc_title(text = paste0("Modelo ","<b>", isolate(input$model_ui_data),"</b>",
+                                               " com ", "<b>", isolate(input$n_beta),"</b>",
+                                               " beta variando"),
+                                 margin = 20, align = "left",
+                                 style = list(color = "#05091A", useHTML = TRUE))
                 })
                 
                 
