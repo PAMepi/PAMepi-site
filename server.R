@@ -42,7 +42,7 @@ shinyServer(function(input, output, session) {
             click <- input$brasil_mapa_shape_click
             #reset <- input$reset
             if(is.null(click) #| isTruthy(reset)
-               )
+            )
                 return(
                     "TOTAL"
                 )
@@ -331,7 +331,7 @@ shinyServer(function(input, output, session) {
                     pivot_longer(- day, names_to = "SEIIR", values_to = "valor") %>% 
                     mutate(SEIIR = SEIIR %>% 
                                str_to_title() %>% 
-                           factor(levels = c("Suscetivel","Exposto", "Infectados","Infectadoa", "Recuperado"))
+                               factor(levels = c("Suscetivel","Exposto", "Infectados","Infectadoa", "Recuperado"))
                     ),
                 hcaes(day, valor, group = SEIIR), type = "line") %>%
             hc_tooltip(
@@ -431,16 +431,16 @@ shinyServer(function(input, output, session) {
             bind_cols(
                 SIR_bv_state_sum %>% filter(state %in% state_proxy()[1]) %>% 
                     select_all(~paste0("sir_bv_",.))
-                ) %>% 
+            ) %>% 
             bind_cols(
                 SEIR_state_sum %>% filter(state %in% state_proxy()[1]) %>% 
                     select_all(~paste0("seir_",.))
-                ) %>% 
+            ) %>% 
             bind_cols(
                 SEIR_bv_state_sum %>% filter(state %in% state_proxy()[1]) %>% 
                     select_all(~paste0("seir_bv_",.))
-                )
-            
+            )
+        
         aux_text <- paste0(
             "'",
             "<br>SIR R0: ", round(df_aux_text$sir_beta1/df_aux_text$sir_gamma, 3),
@@ -449,7 +449,7 @@ shinyServer(function(input, output, session) {
             "<br>SEIR B.V. R.0: ", round(df_aux_text$seir_bv_beta1/df_aux_text$seir_bv_gamma, 3),
             "'"
         )
-         
+        
         
         highchart() %>% 
             hc_title(text = paste0("Comparação de Suscetíveis ","<b>",
@@ -464,7 +464,7 @@ shinyServer(function(input, output, session) {
             hc_colors(colors = c("gray", "black", "#E0B373", "#946128","#a6cee3", "#377eb8")) %>% 
             hc_exporting(enabled = TRUE) %>% 
             hc_tooltip(
-                 shared = TRUE,
+                shared = TRUE,
                 formatter = JS(
                     paste0(
                         "function(){
@@ -713,8 +713,8 @@ shinyServer(function(input, output, session) {
     output$SEIIR_bv_res <- renderHighchart({
         res_plot(estados_seiir_comp, state_proxy()[1])
     })
-  
-      datavalues <- reactive({
+    
+    datavalues <- reactive({
         
         validate(
             need(input$n_days >= 5,
@@ -794,7 +794,7 @@ shinyServer(function(input, output, session) {
                     pivot_longer(- date, names_to = "serie", values_to = "valor")
                 
                 
-               
+                
                 output$sim_pred <- renderHighchart({
                     highchart() %>%
                         hc_xAxis(type = "datetime", dateTimeLabelFormats = list(day = '%d of %b')) %>% 
@@ -812,11 +812,15 @@ shinyServer(function(input, output, session) {
                 incProgress(1/n, detail = paste("Encerrando..."))
             })
         
-
+        
+        
+        
+        
+    })
     
     output$repository <- renderUI({
         includeHTML("www/README.html")
-
+        
     })
     
 })
