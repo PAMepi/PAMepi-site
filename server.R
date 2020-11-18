@@ -735,7 +735,8 @@ shinyServer(function(input, output, session) {
         rhandsontable(datavalues(), 
                       rowHeaders = NULL,
                       width = 400, height = 300) %>% 
-            hot_col("user", type = "numeric")
+            hot_col("user", type = "numeric") %>% 
+            hot_cell(1, 2, "Por favor, lembre-se de confirmar o número de linhas de sua série")
     })
     
     population_model <- reactive({
