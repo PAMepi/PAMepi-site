@@ -56,7 +56,7 @@ shinyServer(function(input, output, session) {
         state_update <- state_proxy()[1] %>% unlist() %>% unique()
         
         df <- estados_sir %>% filter( state %in% state_update ) 
-        pico_date <- df %>% filter(infectado == max(df$infectado)) %>% pull(day)
+        pico_date <- df %>% filter(infectado == max(df$infectado)) %>% pull(day) %>% .[1]
         df <- df %>% mutate(pico = pico_date) %>% distinct()
         
         estado_s_p <- SIR_state_sum %>% filter( state == state_update ) %>% 
