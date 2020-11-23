@@ -254,7 +254,7 @@ shinyUI(shiny::bootstrapPage(
                                          label = "População", value = 1e6),
                             dateInput("date_input", "Data do primeiro caso",
                                       value = today(), min = "2020-01-01",
-                                      max = "2020-11-20", format = "dd--mm--yyyy",
+                                      max = today() + 5, format = "dd--mm--yyyy",
                                       language = "pt-BR"),
                             selectInput("model_ui_data", "Selecione o modelo",
                                         choices = c("SIR" = "SIR", "SEIR" = "SEIR",
