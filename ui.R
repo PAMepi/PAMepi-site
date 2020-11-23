@@ -30,7 +30,7 @@ shinyUI(shiny::bootstrapPage(
                                   verticalLayout(
                                     tabsetPanel(
                                       
-                                      tabPanel("Modelos implementados",
+                                      tabPanel("Cenário longo prazo",
                                                fluidRow(
                                                  column(width = 5,
                                                         selectInput(width = "100%",
@@ -56,8 +56,7 @@ shinyUI(shiny::bootstrapPage(
                                                ), 
                                                conditionalPanel(
                                                  condition = "input.viz_mod_bas == 'SIR_base_model' & input.is_bv == 'std'", 
-                                                 highcharter::highchartOutput("SIR_model_plot", height="320px"),
-                                                 highcharter::highchartOutput("SIR_TsRt", height="170px")
+                                                 highcharter::highchartOutput("SIR_model_plot", height="320px")
                                                ),
                                                conditionalPanel(
                                                  condition = "input.viz_mod_bas == 'SIR_base_model' & input.is_bv == 'bv'", 
