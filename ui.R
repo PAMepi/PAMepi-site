@@ -56,7 +56,7 @@ shinyUI(shiny::bootstrapPage(
                                                ), 
                                                conditionalPanel(
                                                  condition = "input.viz_mod_bas == 'SIR_base_model' & input.is_bv == 'std'", 
-                                                 highcharter::highchartOutput("SIR_model_plot", height="320px")
+                                                 highcharter::highchartOutput("SIR_model_plot")
                                                ),
                                                conditionalPanel(
                                                  condition = "input.viz_mod_bas == 'SIR_base_model' & input.is_bv == 'bv'", 
