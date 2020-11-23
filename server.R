@@ -824,4 +824,26 @@ shinyServer(function(input, output, session) {
         
     })
     
+    output$APENAS_UM_BONEC <- renderHighchart({
+        
+        state_update <- state_proxy()[1] %>% unlist() %>% unique()
+        
+        df_cum <- estados_sir_bv %>% filter(state %in% state_update) %>% 
+            select(day, infectado) %>%
+            mutate(
+                boneco = case_when(
+                    day >= today() ~ "Projeção",
+                    TRUE           ~ "Observado"
+                )
+            )
+        
+        highchart() %>%
+            hc_xAxis(type = "datetime", dateTimeLabelFormats = list(day = '%d of %b')) %>%
+            hc_add_series(
+                data = df_cum,
+                hcaes(day, infectado, group = boneco), type = "line") %>% 
+            hc_exporting(enabled = TRUE)
+        
+    })
+    
 })

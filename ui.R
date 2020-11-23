@@ -178,6 +178,34 @@ shinyUI(shiny::bootstrapPage(
                                                h1("Em construção"),
                                                img(src="em_construcao.gif", align = "center",width='500px')
                                                
+                                      ),
+                                      tabPanel("Predicões curto prazo",
+                                               fluidRow(
+                                                 column(width = 5,
+                                                        selectInput(width = "100%",
+                                                                    
+                                                                    inputId = "model_short",
+                                                                    label = "Selecione o modelo",
+                                                                    choices = c("SIR" = "SIR_base_model", 
+                                                                                "SEIR" = "SEIR_base_model",
+                                                                                "SEIIR" = "SEIIR_base_model"
+                                                                    ),
+                                                                    selected = "SIR_base_model"
+                                                        )
+                                                 ),
+                                                 column(width = 4,
+                                                        radioButtons(
+                                                          inputId = "is_cum",
+                                                          label = "Selecione o perfil da série",
+                                                          choices = c("Acumulada" = "acu", 
+                                                                      "Dia-adia" = "dad")
+                                                        )
+                                                        
+                                                 )
+                                               ),
+                                               highcharter::highchartOutput("APENAS_UM_BONEC", height="200"),
+                                               highcharter::highchartOutput("SIR_TsRt", height="200px")
+                                        
                                       )
                                     )
                                     
