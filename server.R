@@ -828,7 +828,27 @@ shinyServer(function(input, output, session) {
         
         state_update <- state_proxy()[1] %>% unlist() %>% unique()
         
-        df_cum <- estados_sir_bv %>% filter(state %in% state_update) %>% 
+        df_cum <- switch(
+            input$model_short,
+            "SIR_base_model" = switch(
+                input$is_bv_cum,
+                "std" = estados_sir,
+                "bv" = estados_sir_bv
+            ),
+            "SEIR_base_model" = switch(
+                input$is_bv_cum,
+                "std" = estados_seir,
+                "bv" = estados_seir_bv
+            ),
+            "SEIIR_base_model" = switch(
+                input$is_bv_cum,
+                "std" = estados_seiir,
+                "bv" = estados_seiir_bv
+            )
+        )
+        
+        df_cum <- df_cum %>% 
+            filter(state %in% state_update) %>% 
             select(day, infectado) %>%
             mutate(
                 boneco = case_when(

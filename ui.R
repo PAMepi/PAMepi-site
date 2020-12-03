@@ -201,6 +201,15 @@ shinyUI(shiny::bootstrapPage(
                                                                       "Dia-adia" = "dad")
                                                         )
                                                         
+                                                 ),
+                                                 column(width = 2,
+                                                        radioButtons(
+                                                          inputId = "is_bv_cum",
+                                                          label = "",
+                                                          selected = "bv",
+                                                          choices = c("Padrão" = "std",
+                                                                      "Beta Variante" = "bv")
+                                                        )
                                                  )
                                                ),
                                                highcharter::highchartOutput("APENAS_UM_BONEC", height="200"),
