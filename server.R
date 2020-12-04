@@ -832,28 +832,38 @@ shinyServer(function(input, output, session) {
             input$model_short,
             "SIR_base_model" = switch(
                 input$is_bv_cum,
-                "std" = estados_sir,
-                "bv" = estados_sir_bv
+                "std" = estados_sir_comp,
+                "bv" = estados_sir_bv_comp
             ),
             "SEIR_base_model" = switch(
                 input$is_bv_cum,
-                "std" = estados_seir,
-                "bv" = estados_seir_bv
+                "std" = estados_seir_comp,
+                "bv" = estados_seir_bv_comp
             ),
             "SEIIR_base_model" = switch(
                 input$is_bv_cum,
-                "std" = estados_seiir,
-                "bv" = estados_seiir_bv
+                "std" = estados_seiir_comp,
+                "bv" = estados_seiir_bv_comp
             )
         )
         
+        df_cum <- df_cum %>% filter(state %in% state_update)
+        cut_date <- df_cum %>% top_n(10, date) %>% pull(date) %>% min()
+        
         df_cum <- df_cum %>% 
-            filter(state %in% state_update) %>% 
-            select(day, infectado) %>%
+            select(date, totalCases, totalCasesPred) %>%
             mutate(
-                boneco = case_when(
-                    day >= today() ~ "Projeção",
-                    TRUE           ~ "Observado"
+                Obs = case_when(
+                    date >= cut_date ~ NA_real_,
+                    TRUE             ~ totalCases
+                ),
+                Pred = case_when(
+                    date >= cut_date ~ round(totalCasesPred),
+                    TRUE             ~ NA_real_
+                ),
+                is_pred = case_when(
+                    date >= cut_date ~ "Projeção",
+                    TRUE             ~ "Observado"
                 )
             )
         
@@ -861,8 +871,12 @@ shinyServer(function(input, output, session) {
             hc_xAxis(type = "datetime", dateTimeLabelFormats = list(day = '%d of %b')) %>%
             hc_add_series(
                 data = df_cum,
-                hcaes(day, infectado, group = boneco), type = "line") %>% 
-            hc_exporting(enabled = TRUE)
+                hcaes(date, Obs, group = is_pred), type = "point") %>% 
+            hc_add_series(
+                data = df_cum,
+                hcaes(date, Pred, group = is_pred), type = "line") %>% 
+            hc_exporting(enabled = TRUE) %>% hc_legend(enabled = FALSE)
+        
         
     })
     
