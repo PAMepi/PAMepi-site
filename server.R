@@ -704,16 +704,16 @@ shinyServer(function(input, output, session) {
         comp_plot(estados_seiir_comp, state_proxy()[1])
     })
     output$SEIIR_bv_comp_plot <- renderHighchart({
-        comp_plot(estados_seiir_comp, state_proxy()[1])
+        comp_plot(estados_seiir_bv_comp, state_proxy()[1])
     })
     
     output$SEIIR_res <- renderHighchart({
         res_plot(estados_seiir_comp, state_proxy()[1])
     })
     output$SEIIR_bv_res <- renderHighchart({
-        res_plot(estados_seiir_comp, state_proxy()[1])
+        res_plot(estados_seiir_bv_comp, state_proxy()[1])
     })
-    
+    estados_seiir_comp
     datavalues <- reactive({
         
         validate(
