@@ -196,7 +196,7 @@ shinyUI(shiny::bootstrapPage(
                                                  column(width = 4,
                                                         radioButtons(
                                                           inputId = "is_cum",
-                                                          label = "Selecione o perfil da série",
+                                                          label = "Selecione série de dados",
                                                           choices = c("Acumulada" = "acu", 
                                                                       "Dia-adia" = "dad")
                                                         )
