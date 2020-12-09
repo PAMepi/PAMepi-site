@@ -70,8 +70,9 @@ read_data <- function(model = "sir"){
 }
 comp_plot <- function(compart, state_proxy){
   df <- compart %>% 
-    drop_na() %>% 
-    filter(state %in% state_proxy)
+    filter(state %in% state_proxy)# %>% 
+    #drop_na()
+    
   return(
     highchart() %>%
       hc_title(text = paste0("Dados vs. Ajustados ",
@@ -100,8 +101,8 @@ comp_plot <- function(compart, state_proxy){
 }
 res_plot <- function(compart, state_proxy){
   df <- compart %>% 
-    drop_na() %>% 
-    filter(state %in% state_proxy)
+    filter(state %in% state_proxy)# %>% 
+    #drop_na()
   return(
     highchart() %>%
       hc_title(text = paste0("Casos acumulados ",
