@@ -48,6 +48,7 @@ pops <- c(
   rownames_to_column("state") %>% 
   rename(pop = ".")
 
+# Functions ----
 read_compartimentos <- function(model = "sir"){
   dir_loc <- paste0("data/model_comp/compartimentos_", model, "_estados.csv")
   return(
@@ -55,7 +56,7 @@ read_compartimentos <- function(model = "sir"){
       left_join( pops, by = c('state') ) %>% 
       mutate_at(vars(suscetivel:recuperado), ~ .*pop) %>% 
       mutate_if(is.numeric, round)
-    )
+  )
 }
 read_par <- function(model = "sir"){
   dir_loc <- paste0("data/model_par/par_", model, "_estados.csv")
@@ -68,11 +69,12 @@ read_data <- function(model = "sir"){
       left_join(pops, by = 'state')
   )
 }
+
 comp_plot <- function(compart, state_proxy){
   df <- compart %>% 
     filter(state %in% state_proxy)# %>% 
-    #drop_na()
-    
+  #drop_na()
+  
   return(
     highchart() %>%
       hc_title(text = paste0("Dados vs. Ajustados ",
@@ -102,7 +104,7 @@ comp_plot <- function(compart, state_proxy){
 res_plot <- function(compart, state_proxy){
   df <- compart %>% 
     filter(state %in% state_proxy)# %>% 
-    #drop_na()
+  #drop_na()
   return(
     highchart() %>%
       hc_title(text = paste0("Casos acumulados ",
@@ -127,7 +129,390 @@ res_plot <- function(compart, state_proxy){
   )
 }
 
+long_praz_sir <- function(state){
+  state_update <- state %>% unlist() %>% unique()
+  
+  state_update <- state_proxy()[1] %>% unlist() %>% unique()
+  
+  df <- estados_sir %>% filter( state %in% state_update ) 
+  pico_date <- df %>% filter(infectado == max(df$infectado)) %>% pull(day) %>% .[1]
+  df <- df %>% mutate(pico = pico_date) %>% distinct()
+  
+  estado_s_p <- SIR_state_sum %>% filter( state == state_update ) %>% 
+    transmute(beta1, gamma)
+  
+  aux_text <- paste0("'",
+                     "<br>R0: ", round(estado_s_p$beta1/estado_s_p$gamma, 3),
+                     "<br>Beta: ", round(estado_s_p$beta1, 3),
+                     "<br>Gamma: ", round(estado_s_p$gamma, 3),
+                     "<br>Pico no dia ", pico_date, "<br>com ",
+                     round(max(df$infectado)), " infectados<br>", "'"
+  )
+  
+  highchart() %>% 
+    hc_title(text = paste0("Modelo SIR ","<b>",
+                           states_names %>% filter(sigla %in% state_update) %>% 
+                             pull(name),
+                           "</b>"),
+             margin = 20, align = "left",
+             style = list(color = "#05091A", useHTML = TRUE)) %>% 
+    hc_xAxis(type = "datetime", dateTimeLabelFormats = list(day = '%d of %b')
+    ) %>% 
+    hc_colors(colors = c("#377eb8", "#e41a1c", "#4daf4a")) %>% 
+    hc_add_series(
+      data = df %>% 
+        select(day, suscetivel, infectado, recuperado) %>% 
+        pivot_longer(- day, names_to = "SIR", values_to = "valor") %>% 
+        mutate(SIR = SIR %>% 
+                 str_to_title() %>% 
+                 factor(levels = c("Suscetivel", "Infectado", "Recuperado"))
+        ),
+      hcaes(x = day, y = valor, group = SIR), type = "line"
+    ) %>% 
+    hc_tooltip(
+      formatter = JS(
+        paste0("function(){
+                return (
+                this.series.name + ': ' + this.y +
+                ' <br> Data: ' + Highcharts.dateFormat('%e/%b/%y',
+                new Date(this.x)
+                ) + ", aux_text,
+               ")}")),
+      style = list(fontSize = '10px')
+    ) %>%
+    hc_exporting(enabled = TRUE)
+}
+long_praz_sir_bv <- function(state){
+  
+  state_update <- state %>% unlist() %>% unique()
+  
+  df <- estados_sir_bv %>% filter(state %in% state_update)
+  pico_date <- df %>% filter(infectado == max(df$infectado)) %>% pull(day)
+  
+  
+  estado_s_p <- SIR_bv_state_sum %>% filter( state %in% state_update ) %>% 
+    transmute(beta1,beta2,beta3, gamma)
+  aux_text <- paste0("'",
+                     "<br>R0: ", round(estado_s_p$beta1/estado_s_p$gamma, 3),
+                     "<br>Beta1: ", round(estado_s_p$beta1, 3),
+                     "<br>Beta2: ", round(estado_s_p$beta2, 3),
+                     "<br>Beta3: ", round(estado_s_p$beta3, 3),
+                     "<br>Gamma: ", round(estado_s_p$gamma, 3),
+                     "<br>Pico no dia ", pico_date, "<br>com ",
+                     round(max(df$infectado)), " infectados", "'"
+  )
+  
+  highchart() %>% 
+    hc_title(text = paste0("Modelo SIR beta variante ",
+                           "<b>",
+                           states_names %>% filter(sigla %in% state_update) %>% 
+                             pull(name),
+                           "</b>"),
+             margin = 20, align = "left",
+             style = list(color = "#05091A", useHTML = TRUE)) %>% 
+    hc_xAxis(type = "datetime", dateTimeLabelFormats = list(day = '%d of %b')) %>%
+    hc_colors(colors = c("#377eb8", "#e41a1c", "#4daf4a")) %>% 
+    hc_add_series(
+      data = df %>% 
+        select(day, suscetivel, infectado, recuperado) %>% 
+        pivot_longer(- day, names_to = "SIR_beta_variante", values_to = "valor") %>% 
+        mutate(SIR_beta_variante = SIR_beta_variante %>% 
+                 str_to_title() %>% 
+                 factor(levels = c("Suscetivel", "Infectado", "Recuperado"))
+        ),
+      hcaes(day, valor, group = SIR_beta_variante), type = "line") %>%
+    hc_tooltip(
+      formatter = JS(
+        paste0("function(){
+                return (
+                this.series.name + ': ' + this.y +
+                ' <br> Data: ' + Highcharts.dateFormat('%e/%b/%y',
+                new Date(this.x)
+                ) + ", aux_text[1],")}")),
+      style = list(fontSize = '10px')
+    ) %>%  
+    hc_exporting(enabled = TRUE)
+}
+long_praz_seir <- function(state){
+  state_update <- state %>% unlist() %>% unique()
+  
+  df <- estados_seir %>% filter(state %in% state_update)
+  pico_date <- df %>% filter(infectado == max(df$infectado)) %>% pull(day)
+  
+  
+  estado_s_p <- SEIR_state_sum %>% filter( state %in% state_update ) %>% 
+    transmute(beta, gamma)
+  aux_text <- paste0("'",
+                     "<br>R0: ", round(estado_s_p$beta/estado_s_p$gamma, 3),
+                     "<br>Beta: ", round(estado_s_p$beta, 3),
+                     "<br>Gamma: ", round(estado_s_p$gamma, 3),
+                     "<br>Pico no dia ", pico_date, "<br>com ",
+                     round(max(df$infectado)), " infectados", "'"
+  )
+  
+  highchart() %>% 
+    hc_title(text = paste0("Modelo SEIR ",
+                           "<b>",
+                           states_names %>% filter(sigla %in% state_update) %>% 
+                             pull(name),
+                           "</b>"),
+             margin = 20, align = "left",
+             style = list(color = "#05091A", useHTML = TRUE)) %>% 
+    hc_xAxis(type = "datetime", dateTimeLabelFormats = list(day = '%d of %b')) %>%
+    hc_colors(colors = c("#377eb8","#E6681C", "#e41a1c", "#4daf4a")) %>% 
+    hc_add_series(
+      data = df %>% 
+        select(day, suscetivel, exposto, infectado, recuperado) %>% 
+        pivot_longer(- day, names_to = "SEIR", values_to = "valor") %>% 
+        mutate(SEIR = SEIR %>% 
+                 str_to_title() %>% 
+                 factor(levels = c("Suscetivel","Exposto", "Infectado", "Recuperado"))
+        ),
+      hcaes(day, valor, group = SEIR), type = "line") %>%
+    hc_tooltip(
+      formatter = JS(
+        paste0("function(){
+                return (
+                this.series.name + ': ' + this.y +
+                ' <br> Data: ' + Highcharts.dateFormat('%e/%b/%y',
+                new Date(this.x)
+                ) + ", aux_text[1],")}")),
+      style = list(fontSize = '10px')
+    ) %>%  
+    hc_exporting(enabled = TRUE)
+}
+long_praz_seir_bv <- function(state){
+  state_update <- state_proxy()[1] %>% unlist() %>% unique()
+  
+  df <- estados_seir_bv %>% filter(state %in% state_update)
+  pico_date <- df %>% filter(infectado == max(df$infectado)) %>% pull(day)
+  
+  
+  estado_s_p <- SEIR_bv_state_sum %>% filter( state %in% state_update ) %>% 
+    transmute(beta1,beta2,beta3, gamma)
+  aux_text <- paste0("'",
+                     "<br>R0: ", round(estado_s_p$beta1/estado_s_p$gamma, 3),
+                     "<br>Beta1: ", round(estado_s_p$beta1, 3),
+                     "<br>Beta2: ", round(estado_s_p$beta2, 3),
+                     "<br>Beta3: ", round(estado_s_p$beta3, 3),
+                     "<br>Gamma: ", round(estado_s_p$gamma, 3),
+                     "<br>Pico no dia ", pico_date, "<br>com ",
+                     round(max(df$infectado)), " infectados", "'"
+  )
+  
+  highchart() %>% 
+    hc_title(text = paste0("Modelo SEIR beta variante ",
+                           "<b>",
+                           states_names %>% filter(sigla %in% state_update) %>% 
+                             pull(name),
+                           "</b>"),
+             margin = 20, align = "left",
+             style = list(color = "#05091A", useHTML = TRUE)) %>% 
+    hc_xAxis(type = "datetime", dateTimeLabelFormats = list(day = '%d of %b')) %>%
+    hc_colors(colors = c("#377eb8","#E6681C", "#e41a1c", "#4daf4a")) %>% 
+    hc_add_series(
+      data = df %>% 
+        select(day, suscetivel, exposto, infectado, recuperado) %>% 
+        pivot_longer(- day, names_to = "SEIR", values_to = "valor") %>% 
+        mutate(SEIR = SEIR %>% 
+                 str_to_title() %>% 
+                 factor(levels = c("Suscetivel","Exposto", "Infectado", "Recuperado"))
+        ),
+      hcaes(day, valor, group = SEIR), type = "line") %>%
+    hc_tooltip(
+      formatter = JS(
+        paste0("function(){
+                return (
+                this.series.name + ': ' + this.y +
+                ' <br> Data: ' + Highcharts.dateFormat('%e/%b/%y',
+                new Date(this.x)
+                ) + ", aux_text[1],")}")),
+      style = list(fontSize = '10px')
+    ) %>%  
+    hc_exporting(enabled = TRUE)
+}
+long_praz_seiir <- function(state){
+  state_update <- state %>% unlist() %>% unique()
+  
+  df <- estados_seiir %>% filter(state %in% state_update)
+  pico_date <- df %>% filter(infectadoS == max(df$infectadoS)) %>% pull(day)
+  
+  
+  estado_s_p <- SEIIR_state_sum %>% filter( state %in% state_update ) %>% 
+    transmute(beta, gammaA, gammaS)
+  aux_text <- paste0("'",
+                     "<br>R0: ", round(estado_s_p$beta/estado_s_p$gammaA, 3),
+                     "<br>Beta: ", round(estado_s_p$beta, 3),
+                     "<br>GammaA: ", round(estado_s_p$gammaA, 3),
+                     "<br>GammaS: ", round(estado_s_p$gammaS, 3),
+                     "<br>Pico no dia ", pico_date, "<br>com ",
+                     round(max(df$infectadoS)), " infectados", "'"
+  )
+  
+  highchart() %>% 
+    hc_title(text = paste0("Modelo SEIIR ",
+                           "<b>",
+                           states_names %>% filter(sigla %in% state_update) %>% 
+                             pull(name),
+                           "</b>"),
+             margin = 20, align = "left",
+             style = list(color = "#05091A", useHTML = TRUE)) %>% 
+    hc_xAxis(type = "datetime", dateTimeLabelFormats = list(day = '%d of %b')) %>%
+    hc_colors(colors = c("#377eb8","#E6681C", "#e41a1c","black", "#4daf4a")) %>% 
+    hc_add_series(
+      data = df %>% 
+        select(day, suscetivel, exposto, infectadoS, infectadoA, recuperado) %>% 
+        pivot_longer(- day, names_to = "SEIIR", values_to = "valor") %>% 
+        mutate(SEIIR = SEIIR %>% 
+                 str_to_title() %>% 
+                 factor(levels = c("Suscetivel","Exposto", "Infectados","Infectadoa", "Recuperado"))
+        ),
+      hcaes(day, valor, group = SEIIR), type = "line") %>%
+    hc_tooltip(
+      formatter = JS(
+        paste0("function(){
+                return (
+                this.series.name + ': ' + this.y +
+                ' <br> Data: ' + Highcharts.dateFormat('%e/%b/%y',
+                new Date(this.x)
+                ) + ", aux_text[1],")}")),
+      style = list(fontSize = '10px')
+    ) %>%  
+    hc_exporting(enabled = TRUE)
+}
+long_praz_seiir_bv <- function(state){
+  
+  state_update <- state %>% unlist() %>% unique()
+  
+  df <- estados_seiir_bv %>% filter(state %in% state_update)
+  pico_date <- df %>% filter(infectadoS == max(df$infectadoS)) %>% pull(day)
+  
+  
+  estado_s_p <- SEIIR_bv_state_sum %>% filter( state %in% state_update ) %>% 
+    transmute(beta1, gammaA, gammaS)
+  aux_text <- paste0("'",
+                     "<br>R0: ", round(estado_s_p$beta1/estado_s_p$gammaA, 3),
+                     "<br>Beta: ", round(estado_s_p$beta1, 3),
+                     "<br>GammaA: ", round(estado_s_p$gammaA, 3),
+                     "<br>GammaS: ", round(estado_s_p$gammaS, 3),
+                     "<br>Pico no dia ", pico_date, "<br>com ",
+                     round(max(df$infectadoS)), " infectados", "'"
+  )
+  
+  highchart() %>% 
+    hc_title(text = paste0("Modelo SEIIR beta variante ",
+                           "<b>",
+                           states_names %>% filter(sigla %in% state_update) %>% 
+                             pull(name),
+                           "</b>"),
+             margin = 20, align = "left",
+             style = list(color = "#05091A", useHTML = TRUE)) %>% 
+    hc_xAxis(type = "datetime", dateTimeLabelFormats = list(day = '%d of %b')) %>%
+    hc_colors(colors = c("#377eb8","#E6681C", "#e41a1c","black", "#4daf4a")) %>% 
+    hc_add_series(
+      data = df %>% 
+        select(day, suscetivel, exposto, infectadoS, infectadoA, recuperado) %>% 
+        pivot_longer(- day, names_to = "SEIIR", values_to = "valor") %>% 
+        mutate(SEIIR = SEIIR %>% 
+                 str_to_title() %>% 
+                 factor(levels = c("Suscetivel","Exposto", "Infectados","Infectadoa", "Recuperado"))
+        ),
+      hcaes(day, valor, group = SEIIR), type = "line") %>%
+    hc_tooltip(
+      formatter = JS(
+        paste0("function(){
+                return (
+                this.series.name + ': ' + this.y +
+                ' <br> Data: ' + Highcharts.dateFormat('%e/%b/%y',
+                new Date(this.x)
+                ) + ", aux_text[1],")}")),
+      style = list(fontSize = '10px')
+    ) %>%  
+    hc_exporting(enabled = TRUE)
+}
 
+suc_plot <- function(state_p){
+  new_data <- estados_sir_bv %>% dplyr::transmute(day, state, SIR_beta_variante = suscetivel) %>% 
+    left_join(
+      estados_sir %>% dplyr::transmute(day, state, SIR = suscetivel),
+      by = c("day", "state")
+    ) %>% 
+    left_join(
+      estados_seir %>% dplyr::transmute(day, state, SEIR = suscetivel),
+      by = c("day", "state")
+    ) %>% 
+    left_join(
+      estados_seir_bv %>% dplyr::transmute(day, state, SEIR_beta_variante = suscetivel),
+      by = c("day", "state")
+    ) %>% 
+    left_join(
+      estados_seiir %>% dplyr::transmute(day, state, SEIIR = suscetivel),
+      by = c("day", "state")
+    ) %>% 
+    left_join(
+      estados_seiir_bv %>% dplyr::transmute(day, state, SEIIR_beta_variante = suscetivel),
+      by = c("day", "state")
+    ) %>% 
+    filter(state == state_p) %>% 
+    select(-state) %>% 
+    pivot_longer(- day, names_to = "Modelo", values_to = "Valor")
+  
+  df_aux_text <- SIR_state_sum %>% filter(state %in% state_p) %>%
+    select_all(~paste0("sir_",.)) %>% 
+    bind_cols(
+      SIR_bv_state_sum %>% filter(state %in% state_p) %>% 
+        select_all(~paste0("sir_bv_",.))
+    ) %>% 
+    bind_cols(
+      SEIR_state_sum %>% filter(state %in% state_p) %>% 
+        select_all(~paste0("seir_",.))
+    ) %>% 
+    bind_cols(
+      SEIR_bv_state_sum %>% filter(state %in% state_p) %>% 
+        select_all(~paste0("seir_bv_",.))
+    )
+  
+  aux_text <- paste0(
+    "'",
+    "<br>SIR R0: ", round(df_aux_text$sir_beta1/df_aux_text$sir_gamma, 3),
+    "<br>SIR B.V. R0: ", round(df_aux_text$sir_bv_beta1/df_aux_text$sir_bv_gamma, 3),
+    "<br>SEIR R.0: ", round(df_aux_text$seir_beta/df_aux_text$seir_gamma, 3),
+    "<br>SEIR B.V. R.0: ", round(df_aux_text$seir_bv_beta1/df_aux_text$seir_bv_gamma, 3),
+    "'"
+  )
+  
+  
+  highchart() %>% 
+    hc_title(text = paste0("Comparação de Suscetíveis ","<b>",
+                           states_names %>% filter(sigla %in% state_p) %>% 
+                             pull(name),
+                           "</b>"),
+             margin = 20, align = "left",
+             style = list(color = "#05091A", useHTML = TRUE)) %>% 
+    hc_xAxis(type = "datetime", dateTimeLabelFormats = list(day = '%d of %b')) %>% 
+    hc_add_series(new_data, hcaes(x = day, y = round(Valor), group = Modelo),
+                  type = "line") %>% 
+    hc_colors(colors = c("gray", "black", "#E0B373", "#946128","#a6cee3", "#377eb8")) %>% 
+    hc_exporting(enabled = TRUE) %>% 
+    hc_tooltip(
+      shared = TRUE,
+      formatter = JS(
+        paste0(
+          "function(){
+                         return this.points.reduce(function (s, point) {
+                            return s + '<br/>' + point.series.name + ': ' +
+                            point.y }, '<b>' + Highcharts.dateFormat('%e/%b/%y',
+                            new Date(this.x)) + '</b>' +
+                            ",aux_text, "
+                        )}"
+        )
+      )
+      
+    )
+  
+}
+
+# Read data ----
 estados_sir <- read_compartimentos("sir")
 estados_sir_bv <- read_compartimentos("sir_bv")
 estados_seir <- read_compartimentos("seir")
