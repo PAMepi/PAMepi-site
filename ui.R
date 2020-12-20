@@ -30,6 +30,47 @@ shinyUI(shiny::bootstrapPage(
                                   verticalLayout(
                                     tabsetPanel(
                                       
+                                      tabPanel("Predicões curto prazo",
+                                               fluidRow(
+                                                 column(width = 5,
+                                                        selectInput(width = "100%",
+                                                                    
+                                                                    inputId = "model_short",
+                                                                    label = "Selecione o modelo",
+                                                                    choices = c("SIR" = "SIR_base_model", 
+                                                                                "SEIR" = "SEIR_base_model",
+                                                                                "SEIIR" = "SEIIR_base_model"
+                                                                    ),
+                                                                    selected = "SIR_base_model"
+                                                        )
+                                                 ),
+                                                 column(width = 4,
+                                                        radioButtons(
+                                                          inputId = "is_cum",
+                                                          label = "Selecione série de dados",
+                                                          choices = c("Acumulada" = "acu", 
+                                                                      "Dia-adia" = "dad")
+                                                        )
+                                                        
+                                                 ),
+                                                 column(width = 2,
+                                                        radioButtons(
+                                                          inputId = "is_bv_cum",
+                                                          label = "",
+                                                          selected = "bv",
+                                                          choices = c("Padrão" = "std",
+                                                                      "Beta Variante" = "bv")
+                                                        )
+                                                 )
+                                               ),
+                                               highcharter::highchartOutput("APENAS_UM_BONEC", height="200"),
+                                               conditionalPanel(
+                                                 condition = "input.model_short == 'SIR_base_model''",
+                                                 highcharter::highchartOutput("SIR_TsRt", height="200px")
+                                               )
+                                               
+                                      ),
+                                      
                                       tabPanel("Cenário longo prazo",
                                                fluidRow(
                                                  column(width = 5,
@@ -178,47 +219,8 @@ shinyUI(shiny::bootstrapPage(
                                                h1("Em construção"),
                                                img(src="em_construcao.gif", align = "center",width='500px')
                                                
-                                      ),
-                                      tabPanel("Predicões curto prazo",
-                                               fluidRow(
-                                                 column(width = 5,
-                                                        selectInput(width = "100%",
-                                                                    
-                                                                    inputId = "model_short",
-                                                                    label = "Selecione o modelo",
-                                                                    choices = c("SIR" = "SIR_base_model", 
-                                                                                "SEIR" = "SEIR_base_model",
-                                                                                "SEIIR" = "SEIIR_base_model"
-                                                                    ),
-                                                                    selected = "SIR_base_model"
-                                                        )
-                                                 ),
-                                                 column(width = 4,
-                                                        radioButtons(
-                                                          inputId = "is_cum",
-                                                          label = "Selecione série de dados",
-                                                          choices = c("Acumulada" = "acu", 
-                                                                      "Dia-adia" = "dad")
-                                                        )
-                                                        
-                                                 ),
-                                                 column(width = 2,
-                                                        radioButtons(
-                                                          inputId = "is_bv_cum",
-                                                          label = "",
-                                                          selected = "bv",
-                                                          choices = c("Padrão" = "std",
-                                                                      "Beta Variante" = "bv")
-                                                        )
-                                                 )
-                                               ),
-                                               highcharter::highchartOutput("APENAS_UM_BONEC", height="200"),
-                                               conditionalPanel(
-                                                 condition = "input.model_short == 'SIR_base_model''",
-                                                 highcharter::highchartOutput("SIR_TsRt", height="200px")
-                                               )
-                                        
                                       )
+                                      
                                     )
                                     
                                   )
