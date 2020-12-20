@@ -71,18 +71,7 @@ shinyUI(shiny::bootstrapPage(
                                                              "Infectados" = "inf"),
                                                  selected = "suc"
                                                ),
-                                               conditionalPanel(
-                                                 condition = "input.var_sel == 'suc'",
-                                                 highchartOutput("suc_plot")
-                                               ),
-                                               conditionalPanel(
-                                                 condition = "input.var_sel == 'rec'",
-                                                 highchartOutput("rec_plot")
-                                               ),
-                                               conditionalPanel(
-                                                 condition = "input.var_sel == 'inf'",
-                                                 highchartOutput("inf_plot")
-                                               )
+                                               highchartOutput("compare_plots")
                                                
                                                
                                                

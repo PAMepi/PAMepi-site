@@ -75,16 +75,14 @@ shinyServer(function(input, output, session) {
     
     # Models comparison plots ----
     
-    output$suc_plot <- renderHighchart({
-        suc_plot(state_proxy()[1])
-    })
     
-    output$rec_plot <- renderHighchart({
-        rec_plot(state_proxy()[1])
-    })
-    
-    output$inf_plot <- renderHighchart({
-        inf_plot(state_proxy()[1])
+    output$compare_plots <- renderHighchart({
+        switch(
+            input$var_sel,
+            "suc" = suc_plot(state_proxy()[1]),
+            "rec" = rec_plot(state_proxy()[1]),
+            "inf" = inf_plot(state_proxy()[1])
+        )
     })
     
     # Validation plots ----
