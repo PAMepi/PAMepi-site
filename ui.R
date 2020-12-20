@@ -77,11 +77,11 @@ shinyUI(shiny::bootstrapPage(
                                                ),
                                                conditionalPanel(
                                                  condition = "input.var_sel == 'rec'",
-                                                 highchartOutput("rec_comp_plot")
+                                                 highchartOutput("rec_plot")
                                                ),
                                                conditionalPanel(
                                                  condition = "input.var_sel == 'inf'",
-                                                 highchartOutput("inf_comp_plot")
+                                                 highchartOutput("inf_plot")
                                                )
                                                
                                                
