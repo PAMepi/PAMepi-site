@@ -54,30 +54,11 @@ shinyUI(shiny::bootstrapPage(
                                                         
                                                  )
                                                ), 
+                                               highcharter::highchartOutput("model_longo", height="320px"),
                                                conditionalPanel(
                                                  condition = "input.viz_mod_bas == 'SIR_base_model' & input.is_bv == 'std'", 
-                                                 highcharter::highchartOutput("SIR_model_plot", height="320px"),
+                                                 #highcharter::highchartOutput("SIR_model_plot", height="320px"),
                                                  highcharter::highchartOutput("SIR_TsRt", height="170px")
-                                               ),
-                                               conditionalPanel(
-                                                 condition = "input.viz_mod_bas == 'SIR_base_model' & input.is_bv == 'bv'", 
-                                                 highchartOutput("SIR_bv_plot")
-                                               ),
-                                               conditionalPanel(
-                                                 condition = "input.viz_mod_bas == 'SEIR_base_model' & input.is_bv == 'std'",
-                                                 highchartOutput("SEIR_model_plot")
-                                               ),
-                                               conditionalPanel(
-                                                 condition = "input.viz_mod_bas == 'SEIR_base_model' & input.is_bv == 'bv'",
-                                                 highchartOutput("SEIR_bv_model_plot")
-                                               ),
-                                               conditionalPanel(
-                                                 condition = "input.viz_mod_bas == 'SEIIR_base_model' & input.is_bv == 'std'",
-                                                 highchartOutput("SEIIR_model_plot")
-                                               ),
-                                               conditionalPanel(
-                                                 condition = "input.viz_mod_bas == 'SEIIR_base_model' & input.is_bv == 'bv'",
-                                                 highchartOutput("SEIIR_bv_model_plot")
                                                )
                                       ),
                                       tabPanel("Compare os modelos",
@@ -90,18 +71,7 @@ shinyUI(shiny::bootstrapPage(
                                                              "Infectados" = "inf"),
                                                  selected = "suc"
                                                ),
-                                               conditionalPanel(
-                                                 condition = "input.var_sel == 'suc'",
-                                                 highchartOutput("suc_comp_plot")
-                                               ),
-                                               conditionalPanel(
-                                                 condition = "input.var_sel == 'rec'",
-                                                 highchartOutput("rec_comp_plot")
-                                               ),
-                                               conditionalPanel(
-                                                 condition = "input.var_sel == 'inf'",
-                                                 highchartOutput("inf_comp_plot")
-                                               )
+                                               highchartOutput("compare_plots")
                                                
                                                
                                                
@@ -129,49 +99,10 @@ shinyUI(shiny::bootstrapPage(
                                                         )
                                                  )
                                                ),
-                                               conditionalPanel(
-                                                 condition = "input.fit_comp == 'SIR_comp_model' & input.is_bv_val == 'std'",
-                                                 splitLayout(
-                                                   highchartOutput("SIR_comp_plot"),
-                                                   highchartOutput("SIR_res")
-                                                 )
-                                               ),
-                                               conditionalPanel(
-                                                 condition = "input.fit_comp == 'SIR_comp_model' & input.is_bv_val == 'bv'",
-                                                 splitLayout(
-                                                   highchartOutput("SIR_bv_comp_plot"),
-                                                   highchartOutput("SIR_bv_res")
-                                                 )
-                                               ),
-                                               conditionalPanel(
-                                                 condition = "input.fit_comp == 'SEIR_comp_model' & input.is_bv_val == 'std'",
-                                                 splitLayout(
-                                                   highchartOutput("SEIR_comp_plot"),
-                                                   highchartOutput("SEIR_res")
-                                                 )
-                                               ),
-                                               conditionalPanel(
-                                                 condition = "input.fit_comp == 'SEIR_comp_model' & input.is_bv_val == 'bv'",
-                                                 splitLayout(
-                                                   highchartOutput("SEIR_bv_comp_plot"),
-                                                   highchartOutput("SEIR_bv_res")
-                                                 )
-                                               ),
-                                               conditionalPanel(
-                                                 condition = "input.fit_comp == 'SEIIR_comp_model' & input.is_bv_val == 'std'",
-                                                 splitLayout(
-                                                   highchartOutput("SEIIR_comp_plot"),
-                                                   highchartOutput("SEIIR_res")
-                                                 )
-                                               ),
-                                               conditionalPanel(
-                                                 condition = "input.fit_comp == 'SEIIR_comp_model' & input.is_bv_val == 'bv'",
-                                                 splitLayout(
-                                                   highchartOutput("SEIIR_bv_comp_plot"),
-                                                   highchartOutput("SEIIR_bv_res")
-                                                 )
+                                               splitLayout(
+                                                 highchartOutput("comp_plot"),
+                                                 highchartOutput("res_plot")
                                                )
-                                               
                                                
                                                
                                       ),
@@ -349,11 +280,11 @@ shinyUI(shiny::bootstrapPage(
           border-radius: 8px;
           border: none;
           color: white; }'),
-             HTML('.nav-tabs>li>a {
+          HTML('.nav-tabs>li>a {
                    border: 1px solid #17a2b8;
                    border-radius: 4px 4px 0 0;
                    }'),
-             HTML('.selectize-input, .selectize-control.single .selectize-input.input-active {
+          HTML('.selectize-input, .selectize-control.single .selectize-input.input-active {
                    background: #17a2b8;}
                   .selectize-input.full {
                    background-color: #17a2b8; color: white;}
@@ -361,7 +292,7 @@ shinyUI(shiny::bootstrapPage(
                   border-color: white transparent transparent transparent;}
                   .selectize-control.single .selectize-input:after {
                   border-color: white transparent transparent transparent;}'),
-             HTML('.tab {
+          HTML('.tab {
                    border: 1px solid #17a2b8;
                    background-color: white;}
                    .tab button {
@@ -377,39 +308,39 @@ shinyUI(shiny::bootstrapPage(
                    color: white;
                    }
                   '),
-             HTML('electize-input.full {
+          HTML('electize-input.full {
                    background-color: #17a2b8;
                    color: white;}
                   '), 
-             HTML('.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+          HTML('.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
     color: white;
     cursor: default;
     background-color: #17a2b8;
     border: 1px solid #ddd;
     border-bottom-color: transparent;
 }'), HTML('footer{ background-color: #17a2b8; text-align: center; } '),
-             HTML('
+HTML('
               .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
                 color:#fff;
                 background-color:#17a2b8;
     }'),
-             HTML('
+HTML('
                   .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
     color: #BDBDBD !important;
     background-color: #660000 !important;
 }
                   ')
-             #      , HTML('.col-sm-4 { background-color: #00A800;
-             #                   color: white;}
-             #           .col-sm-4-default .col-sm-4-brand{color: white;}
-             #.col-sm-4-default .col-sm-4 > .active > a, 
-             #.col-sm-4-default .col-sm-4 > .active > a:focus, 
-             #.col-sm-4-default .col-sm-4 > .active > a:hover {
-             #         background-color: #3F9142;
-             #        color: white;
-             #       }
-             #      '), HTML('.well { background-color: #00A800;
-             #            color: white}')
+#      , HTML('.col-sm-4 { background-color: #00A800;
+#                   color: white;}
+#           .col-sm-4-default .col-sm-4-brand{color: white;}
+#.col-sm-4-default .col-sm-4 > .active > a, 
+#.col-sm-4-default .col-sm-4 > .active > a:focus, 
+#.col-sm-4-default .col-sm-4 > .active > a:hover {
+#         background-color: #3F9142;
+#        color: white;
+#       }
+#      '), HTML('.well { background-color: #00A800;
+#            color: white}')
   )
 )
 )
