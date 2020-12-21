@@ -15,38 +15,7 @@ library(reticulate)
 
 source_python("run_models.py")
 
-pops <- c(
-  'RO'=	1777225,
-  'AC'=	881935,
-  'AM'=	4144597,
-  'RR'= 605761,
-  'PA'=	8602865,
-  'AP'=	845731,
-  'TO'=	1572866,
-  'MA'=	7075181,
-  'PI'=	3273227,
-  'CE'=	9132078,
-  'RN'=	3506853,
-  'PB'= 4018127,
-  'PE'=	9557071,
-  'AL'= 3337357,
-  'SE'= 2298696,
-  'BA'= 14873064,
-  'MG'= 21168791,
-  'ES'=	4018650,
-  'RJ'= 17264943,
-  'SP'= 45919049,
-  'PR'= 11433957,
-  'SC'= 7164788,
-  'RS'=	11377239,
-  'MS'=	2778986,
-  'MT'= 3484466,
-  'GO'= 7018354,
-  'DF'=	3015268,
-  'TOTAL'= 210147125) %>% 
-  as.data.frame() %>% 
-  rownames_to_column("state") %>% 
-  rename(pop = ".")
+pops <- read_csv("data/misc/states_population.csv")
 
 # Functions ----
 read_compartimentos <- function(model = "sir"){
@@ -698,12 +667,6 @@ estados_seir_bv_comp <- read_data("seir_bv")
 estados_seiir_comp <- read_data("seiir")
 estados_seiir_bv_comp <- read_data("seiir_bv")
 
-
-#estados_seir <- read_csv("data/compartimentos_seir_estados.csv") %>% 
-#  left_join(pops, by = 'state') %>% 
-#  mutate_at(vars(suscetivel:recuperado), ~ .*pop) %>% 
-#  mutate_if(is.numeric, round)
-#estados_seir_comp <- read_csv("data/data_seir_estados.csv")
 
 TsRt <- read_csv("data/misc/TsRt_estados.csv", col_types = cols())
 
