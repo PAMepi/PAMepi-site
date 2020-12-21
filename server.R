@@ -73,6 +73,43 @@ shinyServer(function(input, output, session) {
         )
     })
     
+    output$SIR_TsRt <- renderHighchart({
+        
+        state_update <- state_proxy()[1] %>% unlist() %>% unique()
+        
+        TsRt_df <- TsRt %>% filter( state %in% state_update ) %>% 
+            mutate(infec = ifelse(reproductionNumber < 1, "green", "red"),
+                   date_aux = paste0(
+                       month(date, label = TRUE), "-", year(date))
+            )
+        
+        highchart() %>%
+            hc_yAxis(plotLines = list(list(color = "#ACB6FF", value = 1, 
+                                           width = 1.5, dashStyle = "ShortDash")),
+                     min = 0, max = max(TsRt_df$reproductionNumberHigh) + .1
+            ) %>% 
+            hc_add_series(
+                data = TsRt_df, hcaes(x = date, low = reproductionNumberLow,
+                                      high = reproductionNumberHigh),
+                showInLegend = FALSE,  enableMouseTracking = FALSE, 
+                type = "errorbar",color = "black",
+                stemWidth = 1.5,  whiskerLength = 5
+            ) %>% 
+            hc_add_series(TsRt_df, type = "scatter", hcaes(x = date, y = reproductionNumber,
+                                                           group = infec#, group = infec
+            ),
+            color = c("#36B36D", "#B33024"),
+            name = c("Rt < 1", "Rt >= 1")) %>%
+            hc_xAxis(type = "datetime", dateTimeLabelFormats = list(day = '%d %b')) %>% 
+            hc_tooltip(formatter = JS("function(){
+                                                return (
+                                                        'Rt : ' + this.y +
+                                                ' <br> Data: ' + Highcharts.dateFormat('%e. %b', new Date(this.x))
+                                                        )
+                                }")) %>% 
+            hc_exporting(enabled = TRUE)
+    })
+    
     # Models comparison plots ----
     
     
