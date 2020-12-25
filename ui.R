@@ -7,7 +7,7 @@ shinyUI(shiny::bootstrapPage(
   
   
   navbarPage(title = div(h3("Painel Modelos Covid-19", 
-                            style = "position: relative; top: 45px; left: -1000px;"), 
+                            style = "position: relative; top: 45px; left: -1200px;"), 
                          #HTML("&emsp;&emsp;"),
                          a(href= "https://cidacs.bahia.fiocruz.br/", img(src="CIDACS_Bw.png", 
                                                                          width = 100), 
@@ -15,7 +15,7 @@ shinyUI(shiny::bootstrapPage(
                          HTML("&emsp;&emsp;"),
                          a(href= "https://www.rondonia.fiocruz.br/", img(src="fio_rond_bw.png", width = 80),
                            target="_blank"), 
-                         style = "position: relative; top: -70px; right: -1000px;"),
+                         style = "position: relative; top: -70px; right: -1200px;"),
              id = "home",
              windowTitle = "Painel Modelos Covid-19",
              
@@ -255,7 +255,8 @@ shinyUI(shiny::bootstrapPage(
                         
                         
                       )
-             )
+             ),
+             tabPanel("teste de modulo", histogramUI("hist1"))
   ),
   tags$style(type = "text/css", 
              HTML('img {

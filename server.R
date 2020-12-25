@@ -278,4 +278,6 @@ shinyServer(function(input, output, session) {
         
     })
     
+    histogramServer("hist1")
+    
 })

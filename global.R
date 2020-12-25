@@ -13,7 +13,7 @@ library(shinydashboard)
 library(shinyWidgets)
 library(reticulate)
 
-source_python("run_models.py")
+#source_python("run_models.py")
 
 pops <- read_csv("data/misc/states_population.csv")
 
@@ -721,3 +721,32 @@ css <- '
   color: black !important;
 }
 '
+
+
+data_boneco <- tibble(SIR_comp_model = 0:15,
+                      SEIR_comp_model = 100:115,
+                      SEIIR_comp_model = 250:265
+                      )
+
+histogramUI <- function(id) {
+  tagList(
+    selectInput(NS(id, "var"), 
+                label = "teste",
+                choices = c(
+                  "SIR" = "SIR_comp_model",
+                  "SEIR" = "SEIR_comp_model",
+                  "SEIIR" = "SEIIR_comp_model"),
+                selected = "SIR_comp_model"
+    ),
+    plotOutput(NS(id, "hist"))
+  )
+}
+histogramServer <- function(id) {
+  moduleServer(id, function(input, output, session) {
+    data <- reactive(data_boneco[[input$var]])
+    output$hist <- renderPlot({
+      plot(data(), main = input$var
+           )
+    }, res = 96)
+  })
+}
