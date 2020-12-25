@@ -6,18 +6,80 @@ shinyUI(shiny::bootstrapPage(
   useShinydashboard(),
   
   
-  navbarPage(title = div(h3("Painel Modelos Covid-19", 
-                            style = "position: relative; top: 45px; left: -1000px;"), 
-                         #HTML("&emsp;&emsp;"),
+  navbarPage(title = div(h3(""), 
                          a(href= "https://cidacs.bahia.fiocruz.br/", img(src="CIDACS_Bw.png", 
                                                                          width = 100), 
                            target="_blank"),
                          HTML("&emsp;&emsp;"),
                          a(href= "https://www.rondonia.fiocruz.br/", img(src="fio_rond_bw.png", width = 80),
                            target="_blank"), 
-                         style = "position: relative; top: -70px; right: -1000px;"),
-             id = "home",
+                         style = "position: relative; top: -30px; right: -1000px;"),
+             id = "header_img",
              windowTitle = "Painel Modelos Covid-19",
+             
+             tabPanel(#HomePage ----
+               title = "Home",
+               fluidPage(
+                 fluidRow(
+                   column(width = 8, offset = 2,
+                          h1("Plataforma de Modelos", align = "center"),
+                          br(),
+                          p("A epidemia do novo Covid-19 trouxe, sem sombra de dúvidas,
+                            um cenário curioso. Graças à diversidade de iniciativas, 
+                            temos acesso ao conjunto de dados diariamente atualizados contendo 
+                            informações sobre casos confirmados, descartados, testes, ocupação de
+                            leitos hospitalares entre outros. Essas informações são disponibilizadas
+                            em uma escala de tempo e espaço, proporcionando análises no acompanhamento
+                            da pandemia a níveis agregados por estado ou município.", align = "justify"),
+                          p("Toda a estrutura desenvolvida se baseia na linguagem",
+                            a("Shiny", href = "http://www.rstudio.com/shiny"),
+                            ", um framework em linguagem R desenvolvido para aplicações web.
+                            Por meio desse sistema o usuário pode interagir instantaneamente
+                            com o portal e aplicar os conceitos teóricos visualizados."
+                            , align = "justify"),
+                          br(),
+                          hr(),
+                          br(),
+                          h1("Objetivos", align = "center"),
+                          br(),
+                          p("Oferecer, de maneira robusta, uma ferramenta que possa ser
+                            utilizada por pesquisadores, gestores, entre outros, de forma 
+                            que consigam manipular e trabalhar com modelagem matemática e
+                            obter estimativas e cenários para questões epidemiológicas de 
+                            vigilância e controle da COVID-19.", align = "justify"),
+                          
+                          br(),
+                          hr(),
+                          br(),
+                          h1("Conteúdo", align = "center"),
+                          br(),
+                          fixedRow(
+                            column(width = 4,
+                                   div(h4("imagem com link para mais informações aqui")),
+                                   div(
+                                     p("Series tempoprais dos casos dia a dia")
+                                     , align = "center")
+                            ),
+                            column(width = 4,
+                                   div(h4("imagem com link para mais informações aqui")),
+                                   div(
+                                     p("Rode o nosso modelo com seus dados!")
+                                     , align = "center")
+                            ),
+                            column(width = 4,
+                                   div(h4("imagem com link para mais informações aqui")),
+                                   div(
+                                     p("Metodologia: Como fizemos nossos modelos")
+                                     , align = "center")
+                            )
+                          ),
+                          br(),
+                          h3("Adicionar footer e firulas"),
+                          br()
+                   )
+                 )
+               )
+             ),
              
              tabPanel( #Home ----
                        "Estados",# icon = icon("home"),
