@@ -738,15 +738,72 @@ histogramUI <- function(id) {
                   "SEIIR" = "SEIIR_comp_model"),
                 selected = "SIR_comp_model"
     ),
-    plotOutput(NS(id, "hist"))
+    highchartOutput(NS(id, "hist"))
   )
 }
 histogramServer <- function(id) {
   moduleServer(id, function(input, output, session) {
-    data <- reactive(data_boneco[[input$var]])
-    output$hist <- renderPlot({
-      plot(data(), main = input$var
-           )
-    }, res = 96)
+    state_proxy <- reactive(
+      {
+        click <- input$brasil_mapa_shape_click
+        #reset <- input$reset
+        if(is.null(click) #| isTruthy(reset)
+        )
+          return(
+            "TOTAL"
+          )
+        else
+          leafletProxy("brasil_mapa");click
+      }
+    )
+    output$hist <- renderHighchart({
+      switch(
+        input$var,
+        "SIR_comp_model" = long_praz_sir_bv(state_proxy()[1]),
+        "SEIR_comp_model" = long_praz_seir(state_proxy()[1]),
+        "SEIIR_comp_model" = long_praz_seiir(state_proxy()[1])
+        )
+      
+    })
+  })
+}
+
+compareModelUi <- function(id){
+  tagList(
+    selectInput(NS(id, "variable_selection"), 
+                label = "Selecione a variavel de comparação",
+                choices = c("Suscetiveis" = "suc", 
+                            "Recuperados " = "rec",
+                            "Infectados" = "inf"),
+                selected = "suc"
+    ),
+    highchartOutput(NS(id, "compare_models_var"))
+  )
+}
+
+compare_modelServer <- function(id){
+  moduleServer(id, function(input, output, session){
+    state_proxy <- reactive(
+      {
+        click <- input$brasil_mapa_shape_click
+        #reset <- input$reset
+        if(is.null(click) #| isTruthy(reset)
+        )
+          return(
+            "TOTAL"
+          )
+        else
+          leafletProxy("brasil_mapa");click
+      }
+    )
+    output$compare_models_var <- renderHighchart({
+      switch(
+        input$variable_selection,
+        "suc" = suc_plot(state_proxy()[1]),
+        "rec" = rec_plot(state_proxy()[1]),
+        "inf" = inf_plot(state_proxy()[1])
+      )
+      
+    })
   })
 }

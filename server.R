@@ -279,5 +279,6 @@ shinyServer(function(input, output, session) {
     })
     
     histogramServer("hist1")
+    compare_modelServer("compare_models_variables")
     
 })

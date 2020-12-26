@@ -62,16 +62,7 @@ shinyUI(shiny::bootstrapPage(
                                                )
                                       ),
                                       tabPanel("Compare os modelos",
-                                               selectInput(
-                                                 
-                                                 inputId = "var_sel",
-                                                 label = "Selecione a variavel de comparação",
-                                                 choices = c("Suscetiveis" = "suc", 
-                                                             "Recuperados " = "rec",
-                                                             "Infectados" = "inf"),
-                                                 selected = "suc"
-                                               ),
-                                               highchartOutput("compare_plots")
+                                               compareModelUi("compare_models_variables")
                                                
                                                
                                                
