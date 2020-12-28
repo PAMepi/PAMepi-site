@@ -13,7 +13,10 @@ library(shinydashboard)
 library(shinyWidgets)
 library(reticulate)
 
-source_python("run_models.py")
+library(rintrojs)
+library(shinyhelper)
+
+#source_python("run_models.py")
 
 pops <- read_csv("data/misc/states_population.csv")
 

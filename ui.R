@@ -4,6 +4,7 @@ library(shiny)
 shinyUI(shiny::bootstrapPage(
   
   useShinydashboard(),
+  introjsUI(),
   
   
   navbarPage(title = div(h3(""), 
@@ -104,7 +105,15 @@ shinyUI(shiny::bootstrapPage(
                                                                                 "SEIIR" = "SEIIR_base_model"
                                                                     ),
                                                                     selected = "SIR_base_model"
-                                                        )
+                                                        ) %>% 
+                                                          helper(type = "inline",fade = TRUE,colour = "#17a2b8",
+                                                                 icon = "info", buttonLabel = "Entendi !", 
+                                                                 title = "Selecione o modelo a long prazo",
+                                                                 content = c("Existem duas Versões de todos os modelos.",
+                                                                             "<b>Padrão</b>: resumo",
+                                                                             "<b>Beta variante</b>: resumo <u>link para expliucação mehor</u>",
+                                                                             "Você pode também clicar nas variáveis para visualizar a serie de cada uma...."),
+                                                                 size = "m")
                                                  ),
                                                  column(width = 4,
                                                         radioButtons(
@@ -124,21 +133,31 @@ shinyUI(shiny::bootstrapPage(
                                                )
                                       ),
                                       tabPanel("Compare os modelos",
-                                               selectInput(
+                                                 introBox(
+                                                   selectInput(
+                                                     
+                                                     inputId = "var_sel",
+                                                     label = "Selecione a variavel de comparação",
+                                                     choices = c("Suscetiveis" = "suc", 
+                                                                 "Recuperados " = "rec",
+                                                                 "Infectados" = "inf"),
+                                                     selected = "suc"
+                                                   ),
+                                                   data.step = 1,
+                                                   data.intro = "This is a button",
+                                                   data.hint = "You can press me"
+                                                 ),
                                                  
-                                                 inputId = "var_sel",
-                                                 label = "Selecione a variavel de comparação",
-                                                 choices = c("Suscetiveis" = "suc", 
-                                                             "Recuperados " = "rec",
-                                                             "Infectados" = "inf"),
-                                                 selected = "suc"
-                                               ),
-                                               highchartOutput("compare_plots")
-                                               
-                                               
-                                               
-                                               
-                                      ),
+                                                 introBox(
+                                                   highchartOutput("compare_plots"),
+                                                   data.step = 2,
+                                                   data.intro = "This is a button",
+                                                   data.hint = "You can press me"
+                                                 ),
+                                                 actionButton(inputId = "boneco_tour",icon = icon("info"),
+                                                              label = "")    
+                                        ),
+                                      
                                       tabPanel("Validação",
                                                fluidRow(
                                                  column(width = 5,
