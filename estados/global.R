@@ -11,7 +11,6 @@ library(lubridate)
 library(rhandsontable)
 library(shinydashboard)
 library(shinyWidgets)
-
 pops <- read_csv("data/misc/states_population.csv")
 
 # Functions ----
@@ -656,7 +655,13 @@ SEIR_bv_state_sum <- read_par("seir_bv")
 SEIIR_state_sum <- read_par("seiir")
 SEIIR_bv_state_sum <- read_par("seiir_bv")
 
+
+estados_sir_comp <- read_data("sir")
 estados_sir_bv_comp <- read_data("sir_bv")
+estados_seir_comp <- read_data("seir")
+estados_seir_bv_comp <- read_data("seir_bv")
+estados_seiir_comp <- read_data("seiir")
+estados_seiir_bv_comp <- read_data("seiir_bv")
 
 
 TsRt <- read_csv("data/misc/TsRt_estados.csv", col_types = cols())

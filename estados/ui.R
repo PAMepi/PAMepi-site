@@ -4,15 +4,17 @@ library(shiny)
 shinyUI(shiny::bootstrapPage(
   
   useShinydashboard(),
-  
-  
-  fluidPage(
+ 
+                       fluidPage(
                          fluidRow(
                            column(width = 5,
                                   leafletOutput("brasil_mapa", height = "500px")
                            ),
                            column(width = 7,
                                   verticalLayout(
+                                    tabsetPanel(
+                                      
+                                      tabPanel("Cenário longo prazo",
                                                fluidRow(
                                                  column(width = 5,
                                                         selectInput(width = "100%",
@@ -42,12 +44,61 @@ shinyUI(shiny::bootstrapPage(
                                                  #highcharter::highchartOutput("SIR_model_plot", height="320px"),
                                                  highcharter::highchartOutput("SIR_TsRt", height="170px")
                                                )
+                                      ),
+                                      tabPanel("Compare os modelos",
+                                               selectInput("variable_selection", 
+                                                           label = "Selecione a variavel de comparação",
+                                                           choices = c("Suscetiveis" = "suc", 
+                                                                       "Recuperados " = "rec",
+                                                                       "Infectados" = "inf"),
+                                                           selected = "suc"
+                                               ),
+                                               highchartOutput("compare_plots")
+                                               
+                                               
+                                               
+                                               
+                                      ),
+                                      tabPanel("Validação",
+                                               fluidRow(
+                                                 column(width = 5,
+                                                        selectInput(
+                                                          inputId = "fit_comp",
+                                                          label = "Selecione o modelo",
+                                                          choices = c(
+                                                            "SIR" = "SIR_comp_model",
+                                                            "SEIR" = "SEIR_comp_model",
+                                                            "SEIIR" = "SEIIR_comp_model"),
+                                                          selected = "SIR_comp_model"
+                                                        )
+                                                 ),
+                                                 column(width = 4,
+                                                        radioButtons(
+                                                          inputId = "is_bv_val",
+                                                          label = "",
+                                                          choices = c("Padrão" = "std", 
+                                                                      "Beta Variante" = "bv")
+                                                        )
+                                                 )
+                                               ),
+                                               splitLayout(
+                                                 highchartOutput("comp_plot"),
+                                                 highchartOutput("res_plot")
+                                               )
+                                               
+                                               
+                                      ),
+                                      tabPanel("Simulação",
+                                               h1("Em construção"),
+                                               img(src="em_construcao.gif", align = "center",width='500px')
+                                               
+                                      )
+                                    )
+                                    
                                   )
-                           
+                           )
                          )
-                       )
-             
-  ),
+                       ),
   tags$style(type = "text/css", 
              HTML('img {
                       vertical-align: middle;

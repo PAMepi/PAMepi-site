@@ -110,5 +110,60 @@ shinyServer(function(input, output, session) {
             hc_exporting(enabled = TRUE)
     })
     
+    # Models comparison plots ----
+    
+    
+    output$compare_plots <- renderHighchart({
+        switch(
+            input$variable_selection,
+            "suc" = suc_plot(state_proxy()[1]),
+            "rec" = rec_plot(state_proxy()[1]),
+            "inf" = inf_plot(state_proxy()[1])
+        )
+    })
+    
+    # Validation plots ----
+    output$comp_plot <- renderHighchart({
+        switch(
+            input$fit_comp,
+            "SIR_comp_model" = switch(
+                input$is_bv_val,
+                "std" = comp_plot(estados_sir_comp, state_proxy()[1]),
+                "bv" = comp_plot(estados_sir_bv_comp, state_proxy()[1])
+            ),
+            "SEIR_comp_model" = switch(
+                input$is_bv_val,
+                "std" = comp_plot(estados_seir_comp, state_proxy()[1]),
+                "bv" = comp_plot(estados_seir_bv_comp, state_proxy()[1])
+            ),
+            "SEIIR_comp_model" = switch(
+                input$is_bv_val,
+                "std" = comp_plot(estados_seiir_comp, state_proxy()[1]),
+                "bv" = comp_plot(estados_seiir_bv_comp, state_proxy()[1])
+            )
+        )
+    })
+    
+    output$res_plot <- renderHighchart({
+        switch(
+            input$fit_comp,
+            "SIR_comp_model" = switch(
+                input$is_bv_val,
+                "std" = res_plot(estados_sir_comp, state_proxy()[1]),
+                "bv" = res_plot(estados_sir_bv_comp, state_proxy()[1])
+            ),
+            "SEIR_comp_model" = switch(
+                input$is_bv_val,
+                "std" = res_plot(estados_seir_comp, state_proxy()[1]),
+                "bv" = res_plot(estados_seir_bv_comp, state_proxy()[1])
+            ),
+            "SEIIR_comp_model" = switch(
+                input$is_bv_val,
+                "std" = res_plot(estados_seiir_comp, state_proxy()[1]),
+                "bv" = res_plot(estados_seiir_bv_comp, state_proxy()[1])
+            )
+        )
+    })
+    
     
 })
