@@ -4,6 +4,7 @@ library(shiny)
 shinyUI(shiny::bootstrapPage(
   
   useShinydashboard(),
+  introjsUI(),
  
                        fluidPage(
                          fluidRow(
@@ -46,17 +47,34 @@ shinyUI(shiny::bootstrapPage(
                                                )
                                       ),
                                       tabPanel("Compare os modelos",
-                                               selectInput("variable_selection", 
-                                                           label = "Selecione a variavel de comparação",
-                                                           choices = c("Suscetiveis" = "suc", 
-                                                                       "Recuperados " = "rec",
-                                                                       "Infectados" = "inf"),
-                                                           selected = "suc"
+                                               splitLayout(
+                                                 introBox(
+                                                   selectInput(
+                                                     
+                                                     inputId = "var_sel",
+                                                     label = "Selecione a variavel de comparação",
+                                                     choices = c("Suscetiveis" = "suc", 
+                                                                 "Recuperados " = "rec",
+                                                                 "Infectados" = "inf"),
+                                                     selected = "suc"
+                                                   ),
+                                                   data.step = 1,
+                                                   data.intro = "Selecione qual aspecto da você deseja comparar entre os modelos",
+                                                   data.hint = "click e selecione"
+                                                 ),
+                                                 fluidPage(
+                                                   br(),
+                                                   actionButton(inputId = "boneco_tour",
+                                                                icon = icon("info"),
+                                                                label = "")
+                                                 )
                                                ),
-                                               highchartOutput("compare_plots")
-                                               
-                                               
-                                               
+                                               introBox(
+                                                 highchartOutput("compare_plots"),
+                                                 data.step = 2,
+                                                 data.intro = "Você pode explorar os modelos individualmente ou em qualquer combinação que quiser. Basta clicar nos modelos que deseja omitir",
+                                                 data.hint = "You can press me"
+                                               )
                                                
                                       ),
                                       tabPanel("Validação",

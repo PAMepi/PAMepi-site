@@ -2,6 +2,14 @@ library(shiny)
 
 shinyServer(function(input, output, session) {
     
+    observe_helpers(withMathJax = TRUE)
+    observeEvent(input$boneco_tour,
+                 introjs(session, options = list("nextLabel"="Próximo",
+                                                 "prevLabel"="Anterior",
+                                                 "skipLabel"="Pule o tour"),
+                         events = list("oncomplete"=I('alert("Você está pronto para usar essa tab.")')))
+    )
+    
     # Map ----
     output$brasil_mapa <- renderLeaflet({
         
@@ -115,7 +123,7 @@ shinyServer(function(input, output, session) {
     
     output$compare_plots <- renderHighchart({
         switch(
-            input$variable_selection,
+            input$var_sel,
             "suc" = suc_plot(state_proxy()[1]),
             "rec" = rec_plot(state_proxy()[1]),
             "inf" = inf_plot(state_proxy()[1])
