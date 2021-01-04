@@ -395,27 +395,7 @@ long_praz_seiir_bv <- function(state){
 }
 
 suc_plot <- function(state_p){
-  new_data <- estados_sir_bv %>% dplyr::transmute(day, state, SIR_beta_variante = suscetivel) %>% 
-    left_join(
-      estados_sir %>% dplyr::transmute(day, state, SIR = suscetivel),
-      by = c("day", "state")
-    ) %>% 
-    left_join(
-      estados_seir %>% dplyr::transmute(day, state, SEIR = suscetivel),
-      by = c("day", "state")
-    ) %>% 
-    left_join(
-      estados_seir_bv %>% dplyr::transmute(day, state, SEIR_beta_variante = suscetivel),
-      by = c("day", "state")
-    ) %>% 
-    left_join(
-      estados_seiir %>% dplyr::transmute(day, state, SEIIR = suscetivel),
-      by = c("day", "state")
-    ) %>% 
-    left_join(
-      estados_seiir_bv %>% dplyr::transmute(day, state, SEIIR_beta_variante = suscetivel),
-      by = c("day", "state")
-    ) %>% 
+  new_data <- read_csv("data/model_comp/estados_full_join_comp_susc.csv") %>% 
     filter(state == state_p) %>% 
     select(-state) %>% 
     pivot_longer(- day, names_to = "Modelo", values_to = "Valor")
@@ -475,27 +455,7 @@ suc_plot <- function(state_p){
   
 }
 rec_plot <- function(state_p){
-  new_data <- estados_sir_bv %>% dplyr::transmute(day, state, SIR_beta_variante = recuperado) %>% 
-    left_join(
-      estados_sir %>% dplyr::transmute(day, state, SIR = recuperado),
-      by = c("day", "state")
-    ) %>% 
-    left_join(
-      estados_seir %>% dplyr::transmute(day, state, SEIR = recuperado),
-      by = c("day", "state")
-    ) %>% 
-    left_join(
-      estados_seir_bv %>% dplyr::transmute(day, state, SEIR_beta_variante = recuperado),
-      by = c("day", "state")
-    ) %>% 
-    left_join(
-      estados_seiir %>% dplyr::transmute(day, state, SEIIR = recuperado),
-      by = c("day", "state")
-    ) %>% 
-    left_join(
-      estados_seiir_bv %>% dplyr::transmute(day, state, SEIIR_beta_variante = recuperado),
-      by = c("day", "state")
-    ) %>% 
+  new_data <- read_csv("data/model_comp/estados_full_join_comp_rec.csv") %>% 
     filter(state == state_p) %>% 
     select(-state) %>% 
     pivot_longer(- day, names_to = "Modelo", values_to = "Valor")
@@ -553,35 +513,7 @@ rec_plot <- function(state_p){
     )
 }
 inf_plot <- function(state_p){
-  new_data <- estados_sir_bv %>% dplyr::transmute(day, state, SIR_beta_variante = infectado) %>% 
-    left_join(
-      estados_sir %>% dplyr::transmute(day, state, SIR = infectado),
-      by = c("day", "state")
-    ) %>% 
-    left_join(
-      estados_seir %>% dplyr::transmute(day, state, SEIR = infectado),
-      by = c("day", "state")
-    ) %>% 
-    left_join(
-      estados_seir_bv %>% dplyr::transmute(day, state, SEIR_beta_variante = infectado),
-      by = c("day", "state")
-    ) %>% 
-    left_join(
-      estados_seiir %>% dplyr::transmute(day, state, SEIIR_sin = infectadoS),
-      by = c("day", "state")
-    ) %>% 
-    left_join(
-      estados_seiir_bv %>% dplyr::transmute(day, state, SEIIR_sin_beta_variante = infectadoS),
-      by = c("day", "state")
-    ) %>% 
-    left_join(
-      estados_seiir %>% dplyr::transmute(day, state, SEIIR_asin = infectadoA),
-      by = c("day", "state")
-    ) %>% 
-    left_join(
-      estados_seiir_bv %>% dplyr::transmute(day, state, SEIIR_asin_beta_variante = infectadoA),
-      by = c("day", "state")
-    ) %>%
+  new_data <- read_csv("data/model_comp/estados_full_join_comp_inf.csv") %>%
     filter(state == state_p) %>% 
     select(-state) %>% 
     pivot_longer(- day, names_to = "Modelo", values_to = "Valor")
