@@ -133,6 +133,7 @@ shinyUI(shiny::bootstrapPage(
                                                )
                                       ),
                                       tabPanel("Compare os modelos",
+                                               splitLayout(
                                                  introBox(
                                                    selectInput(
                                                      
@@ -144,18 +145,23 @@ shinyUI(shiny::bootstrapPage(
                                                      selected = "suc"
                                                    ),
                                                    data.step = 1,
-                                                   data.intro = "This is a button",
-                                                   data.hint = "You can press me"
+                                                   data.intro = "Selecione qual aspecto da você deseja comparar entre os modelos",
+                                                   data.hint = "click e selecione"
                                                  ),
-                                                 
+                                                 fluidPage(
+                                                   br(),
+                                                   actionButton(inputId = "boneco_tour",
+                                                                icon = icon("info"),
+                                                              label = "")
+                                                   )
+                                               ),
                                                  introBox(
                                                    highchartOutput("compare_plots"),
                                                    data.step = 2,
-                                                   data.intro = "This is a button",
+                                                   data.intro = "Você pode explorar os modelos individualmente ou em qualquer combinação que quiser. Basta clicar nos modelos que deseja omitir",
                                                    data.hint = "You can press me"
-                                                 ),
-                                                 actionButton(inputId = "boneco_tour",icon = icon("info"),
-                                                              label = "")    
+                                                 )
+                                                  
                                         ),
                                       
                                       tabPanel("Validação",
