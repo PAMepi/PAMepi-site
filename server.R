@@ -67,7 +67,7 @@ shinyServer(function(input, output, session) {
             ),
             "SEIIR_base_model" = switch(
                 input$is_bv,
-                "bv" = long_praz_seir_bv(state_proxy()[1]),
+                "bv" = long_praz_seiir_bv(state_proxy()[1]),
                 "std" = long_praz_seiir(state_proxy()[1])
             )
         )
