@@ -869,9 +869,15 @@ shinyServer(function(input, output, session) {
         
         highchart() %>%
             hc_xAxis(type = "datetime", dateTimeLabelFormats = list(day = '%d of %b')) %>%
+            hc_yAxis(title = list(text = "Casos acumulados")) %>% 
+            hc_title(text = paste0("Modelo ","<b>", isolate(input$model_short) %>% 
+                                       str_replace("_.*", ""),
+                                   "</b>", " ", state_update),
+                     margin = 20, align = "left",
+                     style = list(color = "#05091A", useHTML = TRUE)) %>% 
             hc_add_series(
                 data = df_cum,
-                hcaes(date, Obs, group = is_pred), type = "point") %>% 
+                hcaes(date, Obs, group = is_pred), type = "line") %>% 
             hc_add_series(
                 data = df_cum,
                 hcaes(date, Pred, group = is_pred), type = "line") %>% 
