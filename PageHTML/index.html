@@ -14,9 +14,9 @@
     rel="stylesheet">
 
 
-  <link rel="stylesheet" type="text/css" href="css/mystyle.css" />
-  <link rel="stylesheet" href="css/carousel.css" />
-  <link rel="icon" href="img/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="mystyle.css" />
+  <link rel="stylesheet" href="carousel.css" />
+  <link rel="icon" href="favicon.ico">
 
 </head>
 
@@ -28,10 +28,11 @@
       <span class="navbar-toggler-icon "></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
+
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active">
           <div class="dropdown">
-            <a class="nav-link active" href="index.html">Sobre</a>
+            <span class="nav-link active" >Sobre</span>
             <div class="dropdown-content">
               <div class="dropdown-item">
                 <a href="index.html" class="nav-link">Quem somos</a>
@@ -49,12 +50,11 @@
             </div>
           </div>
         </li>
+
         <li class="nav-item">
-
           <div class="dropdown">
-            <a class="nav-link" href="#">Plataforma</a>
+            <span class="nav-link" >Plataforma</span>
             <div class="dropdown-content">
-
               <div class="dropdown-item">
                 <a href="meto.html#projeto" class="nav-link">Projeto</a>
               </div>
@@ -64,15 +64,14 @@
               <div class="dropdown-item">
                 <a href="meto.html#github" class="nav-link">Código fonte</a>
               </div>
-
             </div>
           </div>
         </li>
+
         <li class="nav-item">
           <div class="dropdown">
-            <a class="nav-link" href="#">Modelos</a>
+            <span class="nav-link" >Modelos</span>
             <div class="dropdown-content">
-
               <div class="dropdown-item">
                 <a href="estados.html" class="nav-link">Estados</a>
               </div>
@@ -85,17 +84,14 @@
               <div class="dropdown-item">
                 <a href="tsd.html" class="nav-link">Traga seus dados</a>
               </div>
-
             </div>
           </div>
         </li>
 
         <li class="nav-item">
-
           <div class="dropdown">
-            <a class="nav-link" href="#">Comunicação</a>
+            <span class="nav-link" >Comunicação</span>
             <div class="dropdown-content">
-
               <div class="dropdown-item">
                 <a href="news.html#midia" class="nav-link">Notícias</a>
               </div>
@@ -111,17 +107,34 @@
               <div class="dropdown-item">
                 <a href="contato.html#faleconosco" class="nav-link">Fale conosco</a>
               </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <div class="dropdown">
+            <img src="language.png" class="language"/>
+            <div class="dropdown-content">
+              <div class="dropdown-item">
+                <a href="index.html" class="nav-link active">Português</a>
+              </div>
+              <div class="dropdown-item">
+                <a href="index_en.html" class="nav-link">English</a>
+              </div>
+
 
             </div>
           </div>
         </li>
+
       </ul>
+
     </div>
   </nav>
 
   <div class="media title">
     <div class="media-left media-middle">
-      <img src="img/data-analysis.png" alt="" class="media-object img-title">
+      <img src="data-analysis.png" alt="" class="media-object img-title">
     </div>
     <div class="media-body">
       <h1>Plataforma interativa para avaliação de cenários e modelos matemáticos aplicados a SarsCoV-2 </h1>
@@ -146,7 +159,7 @@
       Nesta linha, a modelagem matemática na epidemiologia destaca-se como protagonista na avaliação da dinâmica da doença e reprodução de cenários que vislumbre alternativas de controle.
     </p>
     <p>
-      Acompanhe nossa <a href="#news" class="destaque">newsletter</a> onde apresentamos os motivos sobre a importância do desenvolvimento de uma Plataforma Interativa para avaliação de cenários e modelos matemáticos aplicados ao novo coronavírus
+      Acompanhe nossa <a href="news.html#newsletter" class="destaque">newsletter</a> onde apresentamos os motivos sobre a importância do desenvolvimento de uma Plataforma Interativa para avaliação de cenários e modelos matemáticos aplicados ao novo coronavírus
       Sars-CoV2.
     </p>
 
@@ -156,7 +169,7 @@
     <h2 class="h2-titles">Newsletter</h2>
 
     <div class="container-fluid">
-      <div id="carousel-example" class="carousel slide" data-ride="carousel" data-interval="10000"">
+      <div id="carousel-example" class="carousel slide" data-ride="carousel" data-interval="10000">
         <div class="carousel-inner row w-100 mx-auto listbox" role="listbox" >
           <div class="carousel-item col-md-6 col-lg-4 active">
             <div class="columns">
@@ -165,6 +178,15 @@
                   panorama histórico e papel na pandemia</li>
                 <li class="grey body-news"> A definição mais simples para o termo "modelagem computacional" corresponde a descrição de um fenômeno através de uma linguagem de programação...</li>
                 <li class="grey"><a href="news.html#collapseMod" class="button">Ver artigo</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="carousel-item col-md-6 col-lg-4">
+            <div class="columns">
+              <ul class="price">
+                <li class="header">Uma ponte para o futuro: <br> comparação entre inoculação e políticas de imunidade coletiva contra COVID-19 em um cenário ainda sem a vacina</li>
+                <li class="grey body-news"> A estratégia de inoculação se assemelha às estratégias de imunidade natural por considerarem a exposição ao agente infeccioso como método preventivo da doença em questão...</li>
+                <li class="grey"><a href="news.html#collapseUma" class="button">Ver artigo</a></li>
               </ul>
             </div>
           </div>
@@ -186,15 +208,7 @@
               </ul>
             </div>
           </div>
-          <div class="carousel-item col-md-6 col-lg-4">
-            <div class="columns">
-              <ul class="price">
-                <li class="header">Uma ponte para o futuro: <br> comparação entre inoculação e políticas de imunidade coletiva contra COVID-19 em um cenário ainda sem a vacina</li>
-                <li class="grey body-news"> A estratégia de inoculação se assemelha às estratégias de imunidade natural por considerarem a exposição ao agente infeccioso como método preventivo da doença em questão...</li>
-                <li class="grey"><a href="news.html#collapseUma" class="button">Ver artigo</a></li>
-              </ul>
-            </div>
-          </div>
+
           <div class="carousel-item col-md-6 col-lg-4">
             <div class="columns">
               <ul class="price">
@@ -209,10 +223,10 @@
         </div>
         <div class="carousel-controls">
           <a class="carousel-control-prev" href="#carousel-example" role="button" data-slide="prev">
-            <img src="img/left-arrow.png" class="control-img" />
+            <img src="left-arrow.png" class="control-img" />
           </a>
           <a class="carousel-control-next" href="#carousel-example" role="button" data-slide="next">
-            <img src="img/right-arrow.png" class="control-img" />
+            <img src="right-arrow.png" class="control-img" />
           </a>
         </div>
 
@@ -287,10 +301,10 @@
         <div class="col-md-3 mb-md-0 mb-3">
           <ul class="list-unstyled">
             <li>
-              <a href="https://cidacs.bahia.fiocruz.br/" target="_blank"><img src="img/CIDACS_Bw.png" class="img-cidacs" /></a>
+              <a href="https://cidacs.bahia.fiocruz.br/" target="_blank"><img src="CIDACS_Bw.png" class="img-cidacs" /></a>
             </li>
             <li>
-              <a class="nav-link" href="https://www.rondonia.fiocruz.br/" target="_blank"> <img src="img/fio_rond_bw.png" class="img-fiocruz" /></a>
+              <a class="nav-link" href="https://www.rondonia.fiocruz.br/" target="_blank"> <img src="fio_rond_bw.png" class="img-fiocruz" /></a>
             </li>
           </ul>
         </div>
@@ -300,13 +314,13 @@
   </footer>
 
 
-  <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="js/jquery-migrate-3.0.0.min.js"></script>
+  <script src="jquery-3.3.1.min.js"></script>
+  <script src="jquery-migrate-3.0.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-  <script src="js/jquery.backstretch.min.js"></script>
-  <script src="js/wow.min.js"></script>
-  <script src="js/scripts.js"></script>
+  <script src="jquery.backstretch.min.js"></script>
+  <script src="wow.min.js"></script>
+  <script src="scripts.js"></script>
 </body>
 
 </html>
