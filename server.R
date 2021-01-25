@@ -10,6 +10,11 @@ shinyServer(function(input, output, session) {
         
         pal <- colorBin("Reds", domain = br_mapa$SIR_prop, bins = bins)
         
+        labels <- paste0(
+            "<strong>",br_mapa$name,"</strong><br/>",
+            "Casos de COVID-19 <strong>", round(br_mapa$SIR_prop, 2),"%</strong>") %>%
+            lapply(htmltools::HTML)
+        
         mapa <- leaflet(
             data = br_mapa,
             options = leafletOptions(
@@ -28,6 +33,10 @@ shinyServer(function(input, output, session) {
             addPolygons(color = "#718075", layerId = ~sigla,
                         opacity = 1.0, fillOpacity = 0.9, weight = 1,
                         fillColor = ~pal(SIR_prop),
+                        popup = labels,
+                        dashArray = "3",
+                        popupOptions = popupOptions(autoClose = TRUE, closeOnClick = TRUE ,
+                                                    closeButton = FALSE),
                         highlightOptions = highlightOptions(color = "#FFEE58", weight = 3,
                                                             bringToFront = FALSE),
                         label = ~paste0(name, ": ", round(SIR_prop, 2), " %")) %>%
