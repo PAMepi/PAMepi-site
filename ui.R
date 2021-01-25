@@ -44,15 +44,15 @@ shinyUI(shiny::bootstrapPage(
                                                                     selected = "SIR_base_model"
                                                         )
                                                  ),
-                                                 column(width = 4,
-                                                        radioButtons(
-                                                          inputId = "is_cum",
-                                                          label = "Selecione série de dados",
-                                                          choices = c("Acumulada" = "acu", 
-                                                                      "Dia-adia" = "dad")
-                                                        )
-                                                        
-                                                 ),
+                                                 #column(width = 4,
+                                                 #       radioButtons(
+                                                 #         inputId = "is_cum",
+                                                 #         label = "Selecione série de dados",
+                                                 #         choices = c("Acumulada" = "acu", 
+                                                 #                     "Dia-adia" = "dad")
+                                                 #       )
+                                                 #       
+                                                 #),
                                                  column(width = 2,
                                                         radioButtons(
                                                           inputId = "is_bv_cum",

@@ -826,62 +826,34 @@ shinyServer(function(input, output, session) {
     
     output$APENAS_UM_BONEC <- renderHighchart({
         
-        state_update <- state_proxy()[1] %>% unlist() %>% unique()
-        
-        df_cum <- switch(
+        switch(
             input$model_short,
-            "SIR_base_model" = switch(
-                input$is_bv_cum,
-                "std" = estados_sir_comp,
-                "bv" = estados_sir_bv_comp
-            ),
-            "SEIR_base_model" = switch(
-                input$is_bv_cum,
-                "std" = estados_seir_comp,
-                "bv" = estados_seir_bv_comp
-            ),
-            "SEIIR_base_model" = switch(
-                input$is_bv_cum,
-                "std" = estados_seiir_comp,
-                "bv" = estados_seiir_bv_comp
-            )
+            "SIR_base_model" = 
+                switch(
+                    input$is_bv_cum,
+                    "bv" = pred_curt(estados_sir_bv_comp, state_proxy()[1],
+                                     "SIR Beta variante"),
+                    "std" = pred_curt(estados_sir_comp, state_proxy()[1],
+                                      "SIR")
+                ),
+            "SEIR_base_model" = 
+                switch(
+                    input$is_bv_cum,
+                    "bv" = pred_curt(estados_seir_bv_comp, state_proxy()[1],
+                                     "SEIR Beta variante"),
+                    "std" = pred_curt(estados_seir_comp, state_proxy()[1],
+                                      "SEIR")
+                ),
+            "SEIIR_base_model" = 
+                switch(
+                    input$is_bv_cum,
+                    "bv" = pred_curt(estados_seiir_bv_comp, state_proxy()[1],
+                                     "SEIIR Beta variante"),
+                    "std"  = pred_curt(estados_seiir_comp, state_proxy()[1],
+                                       "SEIIR")
+                )
         )
         
-        df_cum <- df_cum %>% filter(state %in% state_update)
-        cut_date <- df_cum %>% top_n(10, date) %>% pull(date) %>% min()
-        
-        df_cum <- df_cum %>% 
-            select(date, totalCases, totalCasesPred) %>%
-            mutate(
-                Obs = case_when(
-                    date >= cut_date ~ NA_real_,
-                    TRUE             ~ totalCases
-                ),
-                Pred = case_when(
-                    date >= cut_date ~ round(totalCasesPred),
-                    TRUE             ~ NA_real_
-                ),
-                is_pred = case_when(
-                    date >= cut_date ~ "Projeção",
-                    TRUE             ~ "Observado"
-                )
-            )
-        
-        highchart() %>%
-            hc_xAxis(type = "datetime", dateTimeLabelFormats = list(day = '%d of %b')) %>%
-            hc_yAxis(title = list(text = "Casos acumulados")) %>% 
-            hc_title(text = paste0("Modelo ","<b>", isolate(input$model_short) %>% 
-                                       str_replace("_.*", ""),
-                                   "</b>", " ", state_update),
-                     margin = 20, align = "left",
-                     style = list(color = "#05091A", useHTML = TRUE)) %>% 
-            hc_add_series(
-                data = df_cum,
-                hcaes(date, Obs, group = is_pred), type = "line") %>% 
-            hc_add_series(
-                data = df_cum,
-                hcaes(date, Pred, group = is_pred), type = "line") %>% 
-            hc_exporting(enabled = TRUE) %>% hc_legend(enabled = FALSE)
         
         
     })

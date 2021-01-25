@@ -13,7 +13,7 @@ library(shinydashboard)
 library(shinyWidgets)
 library(reticulate)
 
-source_python("run_models.py")
+#source_python("run_models.py")
 
 pops <- c(
   'RO'=	1777225,
@@ -67,6 +67,48 @@ read_data <- function(model = "sir"){
     read_csv(dir_loc, col_types = cols()) %>% 
       left_join(pops, by = 'state')
   )
+}
+
+pred_curt <- function(data, state_proxy, model_name){
+  
+  state_update <- state_proxy %>% unlist() %>% unique()
+  
+  df_cum <- data
+  
+  df_cum <- df_cum %>% filter(state %in% state_update)
+  cut_date <- df_cum %>% top_n(10, date) %>% pull(date) %>% min()
+  
+  df_cum <- df_cum %>% 
+    select(date, totalCases, totalCasesPred) %>%
+    mutate(
+      Obs = case_when(
+        date >= cut_date ~ NA_real_,
+        TRUE             ~ totalCases
+      ),
+      Pred = case_when(
+        date >= cut_date ~ round(totalCasesPred),
+        TRUE             ~ NA_real_
+      ),
+      is_pred = case_when(
+        date >= cut_date ~ "Projeção",
+        TRUE             ~ "Observado"
+      )
+    )
+  
+  highchart() %>%
+    hc_xAxis(type = "datetime", dateTimeLabelFormats = list(day = '%d of %b')) %>%
+    hc_yAxis(title = list(text = "Casos acumulados")) %>% 
+    hc_title(text = paste0("Modelo ","<b>", model_name,
+                           "</b>", " ", state_update),
+             margin = 20, align = "left",
+             style = list(color = "#05091A", useHTML = TRUE)) %>% 
+    hc_add_series(
+      data = df_cum,
+      hcaes(date, Obs, group = is_pred), type = "line") %>% 
+    hc_add_series(
+      data = df_cum,
+      hcaes(date, Pred, group = is_pred), type = "line") %>% 
+    hc_exporting(enabled = TRUE) %>% hc_legend(enabled = FALSE)
 }
 comp_plot <- function(compart, state_proxy){
   df <- compart %>% 
