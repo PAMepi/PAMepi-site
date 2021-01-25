@@ -115,12 +115,11 @@ shinyUI(shiny::bootstrapPage(
                                                                              "Você pode também clicar nas variáveis para visualizar a serie de cada uma...."),
                                                                  size = "m")
                                                  ),
-                                                 column(width = 4,
-                                                        radioButtons(
-                                                          inputId = "is_bv",
-                                                          label = "",
-                                                          choices = c("Padrão" = "std", 
-                                                                      "Beta Variante" = "bv")
+                                                 column(width = 5, br(),
+                                                        switchInput(
+                                                          inputId = "Id_new_switch",
+                                                          onLabel = "Beta variante",
+                                                          offLabel = "Padrão"
                                                         )
                                                         
                                                  )

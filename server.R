@@ -61,22 +61,24 @@ shinyServer(function(input, output, session) {
     # Time series plots ----
     
     output$model_longo <- renderHighchart({
+        
+        is_beta_variante <- ifelse(isTRUE(input$Id_new_switch), "beta", "padrao")
         switch(
             input$viz_mod_bas,
             "SIR_base_model" = switch(
-                input$is_bv,
-                "bv" = long_praz_sir_bv(state_proxy()[1]),
-                "std" = long_praz_sir(state_proxy()[1])
+                is_beta_variante,
+                "beta" = long_praz_sir_bv(state_proxy()[1]),
+                "padrao" = long_praz_sir(state_proxy()[1])
             ),
             "SEIR_base_model" = switch(
-                input$is_bv,
-                "bv" = long_praz_seir_bv(state_proxy()[1]),
-                "std" = long_praz_seir(state_proxy()[1])
+                input$Id_new_switch,
+                "beta" = long_praz_seir_bv(state_proxy()[1]),
+                "padrao" = long_praz_seir(state_proxy()[1])
             ),
             "SEIIR_base_model" = switch(
-                input$is_bv,
-                "bv" = long_praz_seir_bv(state_proxy()[1]),
-                "std" = long_praz_seiir(state_proxy()[1])
+                input$Id_new_switch,
+                "beta" = long_praz_seir_bv(state_proxy()[1]),
+                "padrao" = long_praz_seiir(state_proxy()[1])
             )
         )
     })
