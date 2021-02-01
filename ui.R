@@ -63,7 +63,7 @@ shinyUI(shiny::bootstrapPage(
                                                         )
                                                  )
                                                ),
-                                               highcharter::highchartOutput("APENAS_UM_BONEC", height="250"),
+                                               highcharter::highchartOutput("pred_curto_plot", height="250"),
                                                conditionalPanel(
                                                  condition = "input.model_short == 'SIR_base_model'",
                                                  highcharter::highchartOutput("SIR_TsRt", height="200px")

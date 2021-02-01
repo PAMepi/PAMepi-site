@@ -824,7 +824,7 @@ shinyServer(function(input, output, session) {
         
     })
     
-    output$APENAS_UM_BONEC <- renderHighchart({
+    output$pred_curto_plot <- renderHighchart({
         
         switch(
             input$model_short,
