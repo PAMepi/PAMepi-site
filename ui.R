@@ -119,14 +119,15 @@ shinyUI(shiny::bootstrapPage(
                                                         switchInput(
                                                           inputId = "Id_new_switch",
                                                           onLabel = "Beta variante",
-                                                          offLabel = "Padrão"
+                                                          offLabel = "Padrão",
+                                                          width = "70%"
                                                         )
                                                         
                                                  )
                                                ), 
                                                highcharter::highchartOutput("model_longo", height="320px"),
                                                conditionalPanel(
-                                                 condition = "input.viz_mod_bas == 'SIR_base_model' & input.is_bv == 'std'", 
+                                                 condition = "input.viz_mod_bas == 'SIR_base_model' & input.Id_new_switch == 'FALSE'", 
                                                  #highcharter::highchartOutput("SIR_model_plot", height="320px"),
                                                  highcharter::highchartOutput("SIR_TsRt", height="170px")
                                                )

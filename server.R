@@ -71,12 +71,12 @@ shinyServer(function(input, output, session) {
                 "padrao" = long_praz_sir(state_proxy()[1])
             ),
             "SEIR_base_model" = switch(
-                input$Id_new_switch,
+                is_beta_variante,
                 "beta" = long_praz_seir_bv(state_proxy()[1]),
                 "padrao" = long_praz_seir(state_proxy()[1])
             ),
             "SEIIR_base_model" = switch(
-                input$Id_new_switch,
+                is_beta_variante,
                 "beta" = long_praz_seir_bv(state_proxy()[1]),
                 "padrao" = long_praz_seiir(state_proxy()[1])
             )
@@ -124,7 +124,7 @@ shinyServer(function(input, output, session) {
     
     
     output$compare_plots <- renderHighchart({
-        print(input$boneco_tour)
+        
         switch(
             input$var_sel,
             "suc" = suc_plot(state_proxy()[1]),
