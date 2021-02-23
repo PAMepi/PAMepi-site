@@ -2,12 +2,20 @@ library(shiny)
 
 shinyServer(function(input, output, session) {
     
+    # UI config ----
     observe_helpers(withMathJax = TRUE)
     observeEvent(input$boneco_tour,
                  introjs(session, options = list("nextLabel"="Próximo",
                                                  "prevLabel"="Anterior",
                                                  "skipLabel"="Pule o tour"),
                          events = list("oncomplete"=I('alert("Você está pronto para usar essa tab.")')))
+    )
+    
+    w <- Waiter$new(
+        id = c("model_longo", "SIR_TsRt", "compare_plots",
+               "comp_plot", "res_plot"),
+        html = spin_3(), 
+        color = transparent(.5)
     )
     
     # Map ----
@@ -17,6 +25,10 @@ shinyServer(function(input, output, session) {
                          probs = c(seq(0, 100, by = 30), 100)/100)
         
         pal <- colorBin("Reds", domain = br_mapa$SIR_prop, bins = bins)
+        labels <- paste0(
+            "<strong>",br_mapa$name,"</strong><br/>",
+            "Casos de COVID-19 <strong>", round(br_mapa$SIR_prop, 2),"%</strong>") %>%
+            lapply(htmltools::HTML)
         
         mapa <- leaflet(
             data = br_mapa,
@@ -36,6 +48,10 @@ shinyServer(function(input, output, session) {
             addPolygons(color = "#718075", layerId = ~sigla,
                         opacity = 1.0, fillOpacity = 0.9, weight = 1,
                         fillColor = ~pal(SIR_prop),
+                        popup = labels,
+                        dashArray = "3",
+                        popupOptions = popupOptions(autoClose = TRUE, closeOnClick = TRUE ,
+                                                    closeButton = FALSE),
                         highlightOptions = highlightOptions(color = "#FFEE58", weight = 3,
                                                             bringToFront = FALSE),
                         label = ~paste0(name, ": ", round(SIR_prop, 2), " %")) %>%
@@ -48,6 +64,9 @@ shinyServer(function(input, output, session) {
     state_proxy <- reactive(
         {
             click <- input$brasil_mapa_shape_click
+            
+            w$show()
+            
             #reset <- input$reset
             if(is.null(click) #| isTruthy(reset)
             )
@@ -55,10 +74,48 @@ shinyServer(function(input, output, session) {
                     "TOTAL"
                 )
             else
-                leafletProxy("brasil_mapa");click
+                leafletProxy("brasil_mapa")
+            
+            click
+            
+            
         }
     ) 
     # Time series plots ----
+    
+    output$pred_curto_plot <- renderHighchart({
+        
+        switch(
+            input$model_short,
+            "SIR_base_model" = 
+                switch(
+                    input$is_bv_cum,
+                    "bv" = pred_curt(estados_sir_bv_comp, state_proxy()[1],
+                                     "SIR Beta variante"),
+                    "std" = pred_curt(estados_sir_comp, state_proxy()[1],
+                                      "SIR")
+                ),
+            "SEIR_base_model" = 
+                switch(
+                    input$is_bv_cum,
+                    "bv" = pred_curt(estados_seir_bv_comp, state_proxy()[1],
+                                     "SEIR Beta variante"),
+                    "std" = pred_curt(estados_seir_comp, state_proxy()[1],
+                                      "SEIR")
+                ),
+            "SEIIR_base_model" = 
+                switch(
+                    input$is_bv_cum,
+                    "bv" = pred_curt(estados_seiir_bv_comp, state_proxy()[1],
+                                     "SEIIR Beta variante"),
+                    "std"  = pred_curt(estados_seiir_comp, state_proxy()[1],
+                                       "SEIIR")
+                )
+        )
+        
+        
+        
+    })
     
     output$model_longo <- renderHighchart({
         switch(
@@ -75,7 +132,7 @@ shinyServer(function(input, output, session) {
             ),
             "SEIIR_base_model" = switch(
                 input$is_bv,
-                "bv" = long_praz_seir_bv(state_proxy()[1]),
+                "bv" = long_praz_seiir_bv(state_proxy()[1]),
                 "std" = long_praz_seiir(state_proxy()[1])
             )
         )
