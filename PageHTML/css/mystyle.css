@@ -10,13 +10,13 @@ html {
 /* Track */
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px grey;
-  border-radius: 10px;
+
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #900d0d;
-  border-radius: 10px;
+
 }
 
 /* Handle on hover */
@@ -26,6 +26,7 @@ html {
 
 .navbar {
   background-color: #900d0d;
+
 }
 
 .arrow {
@@ -135,9 +136,10 @@ html {
 }
 
 .team {
-  width: 70%;
+  width: 16rem;
   border-radius: 100%;
   margin: 1rem auto;
+  padding-right: 2rem;
 }
 
 .team-txt {
@@ -145,10 +147,11 @@ html {
 }
 
 .columns-team {
-  padding: 2.5rem 3rem;
+  padding: 2rem 1.5rem;
   text-align: center;
   margin: 0;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 32px;
 }
 
 .middle {
@@ -278,6 +281,7 @@ h1 {
 .img-background {
   margin-bottom: 3rem;
   padding: 5rem 0;
+  border-radius: 32px;
 }
 
 .img1 {
@@ -381,6 +385,8 @@ h2 {
   box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.2);
   background-color: #ddd;
 }
+
+
 
 .newssub {
   font-size: 1.3rem;
@@ -568,11 +574,17 @@ a:hover {
   color: white;
   font-size: 1.2rem;
   margin: 0;
+  border-radius: 32px     32px      0           0;
+  padding: 1.7rem;
+  display: flex;
+  /*justify-content: center;*/
+  align-items: center;
+
 }
 
 .price li {
   /* border-bottom: 1px solid #eee; */
-  padding: 1.7rem;
+
   text-align: left;
   line-height: 1.5;
 }
@@ -580,22 +592,54 @@ a:hover {
 .grey {
   background-color: #fff;
   font-size: 1.rem;
+
 }
 
 .button {
   background-color: #900d0d;
   border: none;
   color: white;
-  padding: 1rem 3rem;
+  padding: 1rem;
+  margin: 0;
+  width: 100%;
+  border-radius: 0 0 32px 32px;
+}
+.cvbutton {
+  background-color: #900d0d;
+  border: none;
+  color: white;
+  padding: 1rem;
+  margin: 0;
+  width: 100%;
+  border-radius: 32px;
+}
+
+.abutton {
+  color: white;
   text-align: center;
+  margin: 0;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.abutton:hover {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 900;
 }
 
 .button:hover {
   text-decoration: none;
   color: #fff;
   background-color: #423144;
+}
+
+.body-news{
+  padding: 1.7rem;
+  border-width: 0 1px;
+  border-style: solid;
+  border-color: #cccccc;
 }
 
 @media screen and (max-width: 650px) {
