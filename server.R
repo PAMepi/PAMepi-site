@@ -61,6 +61,40 @@ shinyServer(function(input, output, session) {
     ) 
     # Time series plots ----
     
+    output$pred_curto_plot <- renderHighchart({
+        
+        switch(
+            input$model_short,
+            "SIR_base_model" = 
+                switch(
+                    input$is_bv_cum,
+                    "bv" = pred_curt(estados_sir_bv_comp, state_proxy()[1],
+                                     "SIR Beta variante"),
+                    "std" = pred_curt(estados_sir_comp, state_proxy()[1],
+                                      "SIR")
+                ),
+            "SEIR_base_model" = 
+                switch(
+                    input$is_bv_cum,
+                    "bv" = pred_curt(estados_seir_bv_comp, state_proxy()[1],
+                                     "SEIR Beta variante"),
+                    "std" = pred_curt(estados_seir_comp, state_proxy()[1],
+                                      "SEIR")
+                ),
+            "SEIIR_base_model" = 
+                switch(
+                    input$is_bv_cum,
+                    "bv" = pred_curt(estados_seiir_bv_comp, state_proxy()[1],
+                                     "SEIIR Beta variante"),
+                    "std"  = pred_curt(estados_seiir_comp, state_proxy()[1],
+                                       "SEIIR")
+                )
+        )
+        
+        
+        
+    })
+    
     output$model_longo <- renderHighchart({
         switch(
             input$viz_mod_bas,

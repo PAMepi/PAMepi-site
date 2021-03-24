@@ -30,6 +30,47 @@ shinyUI(shiny::bootstrapPage(
                                   verticalLayout(
                                     tabsetPanel(
                                       
+                                      tabPanel("Predicões curto prazo",
+                                               fluidRow(
+                                                 column(width = 5,
+                                                        selectInput(width = "100%",
+                                                                    
+                                                                    inputId = "model_short",
+                                                                    label = "Selecione o modelo",
+                                                                    choices = c("SIR" = "SIR_base_model", 
+                                                                                "SEIR" = "SEIR_base_model",
+                                                                                "SEIIR" = "SEIIR_base_model"
+                                                                    ),
+                                                                    selected = "SIR_base_model"
+                                                        )
+                                                 ),
+                                                 #column(width = 4,
+                                                 #       radioButtons(
+                                                 #         inputId = "is_cum",
+                                                 #         label = "Selecione série de dados",
+                                                 #         choices = c("Acumulada" = "acu", 
+                                                 #                     "Dia-adia" = "dad")
+                                                 #       )
+                                                 #       
+                                                 #),
+                                                 column(width = 2,
+                                                        radioButtons(
+                                                          inputId = "is_bv_cum",
+                                                          label = "",
+                                                          selected = "bv",
+                                                          choices = c("Padrão" = "std",
+                                                                      "Beta Variante" = "bv")
+                                                        )
+                                                 )
+                                               ),
+                                               highcharter::highchartOutput("pred_curto_plot", height="250"),
+                                               conditionalPanel(
+                                                 condition = "input.model_short == 'SIR_base_model' & input.is_bv == 'std'",
+                                                 highcharter::highchartOutput("SIR_TsRt", height="200px")
+                                               )
+                                               
+                                      ),
+                                      
                                       tabPanel("Cenário longo prazo",
                                                fluidRow(
                                                  column(width = 5,
@@ -54,12 +95,12 @@ shinyUI(shiny::bootstrapPage(
                                                         
                                                  )
                                                ), 
-                                               highcharter::highchartOutput("model_longo", height="320px"),
-                                               conditionalPanel(
-                                                 condition = "input.viz_mod_bas == 'SIR_base_model' & input.is_bv == 'std'", 
-                                                 #highcharter::highchartOutput("SIR_model_plot", height="320px"),
-                                                 highcharter::highchartOutput("SIR_TsRt", height="170px")
-                                               )
+                                               highcharter::highchartOutput("model_longo", height="320px")#,
+                                               #conditionalPanel(
+                                               #  condition = "input.viz_mod_bas == 'SIR_base_model' & input.is_bv == 'std'", 
+                                               #  #highcharter::highchartOutput("SIR_model_plot", height="320px"),
+                                               #  highcharter::highchartOutput("SIR_TsRt", height="170px")
+                                               #)
                                       ),
                                       tabPanel("Compare os modelos",
                                                selectInput(
