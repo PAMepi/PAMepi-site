@@ -718,10 +718,5 @@ a:hover {
   padding: 2rem 0;
 }
 
-.iframe-conf{
-  display: grid;
-  grid-template-rows: 1fr;
-  height: 70vh;
-  max-width: 100%
-}
+
 
