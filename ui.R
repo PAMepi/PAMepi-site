@@ -6,8 +6,11 @@ shinyUI(shiny::bootstrapPage(
   useShinydashboard(),
   
   
-  navbarPage(title = div(h3("Painel Modelos Covid-19", 
-                            style = "position: relative; top: 45px; left: -1000px;"), 
+  navbarPage(title = div(h3(a(href="/index.html", "Painel Modelos Covid-19",
+                              style="color:white"), 
+                            style = "position: relative; 
+                                     top: 45px; 
+                                     left: -1000px;"), 
                          #HTML("&emsp;&emsp;"),
                          a(href= "https://cidacs.bahia.fiocruz.br/", img(src="CIDACS_Bw.png", 
                                                                          width = 100), 
