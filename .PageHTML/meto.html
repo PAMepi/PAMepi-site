@@ -2,6 +2,7 @@
 <html>
 
 <head>
+
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <!-- CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
@@ -19,6 +20,7 @@
 </head>
 
 <body>
+
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <a href="index.html" class="navbar-brand active">Plataforma de Modelos Covid-19</a>
     <button class="navbar-toggler" autofocus type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -49,7 +51,7 @@
         <li class="nav-item">
 
           <div class="dropdown">
-            <span class="nav-link" >Plataforma</span>
+            <span class="nav-link active">Plataforma</span>
             <div class="dropdown-content">
 
               <div class="dropdown-item">
@@ -67,7 +69,7 @@
         </li>
         <li class="nav-item">
           <div class="dropdown">
-            <span class="nav-link active" >Modelos</span>
+            <span class="nav-link " >Modelos</span>
             <div class="dropdown-content">
 
               <div class="dropdown-item">
@@ -114,15 +116,16 @@
             </div>
           </div>
         </li>
+
         <li class="nav-item">
           <div class="dropdown">
             <img src="img/language.png" class="language"/>
             <div class="dropdown-content">
               <div class="dropdown-item">
-                <a href="estados.html" class="nav-link active">Português</a>
+                <a href="meto.html" class="nav-link active">Português</a>
               </div>
               <div class="dropdown-item">
-                <a href="en/estados_en.html" class="nav-link ">English</a>
+                <a href="en/meto_en.html" class="nav-link ">English</a>
               </div>
 
 
@@ -133,12 +136,75 @@
       </ul>
     </div>
   </nav>
+  <div class="intro top" id="projeto">
 
+    <h2 class="h2-titles">O projeto</h2>
+    <H3 class="authors">por A. RIOS, J. OLIVEIRA, M. RODRIGUES, P. RAMOS</H3>
 
+    <p>
+      A epidemia do novo Covid-19 trouxe, sem sombra de dúvidas, um cenário curioso. Graças à diversidade de iniciativas, temos acesso ao conjunto de dados diariamente atualizados contendo informações sobre casos confirmados, descartados, testes,
+      ocupação de leitos hospitalares entre outros. Essas informações são disponibilizadas em uma escala de tempo e espaço, proporcionando análises no acompanhamento da pandemia a níveis agregados por estado ou município. Isso permite que um número
+      elevado de pessoas utilizem essas informações em modelos, muitas vezes não adequados, construam gráficos e, de acordo com seu interesse, divulguem um determinado cenário.
+    </p>
+    <p>
 
-  <div id="iframe-conf">
-   <!--Changed here to try to force iframe -->
-      <iframe id="short_time_pred" src="https://modelacovid19.rondonia.fiocruz.br/shiny/short_prediction/" style="border: none; width: 100%; height: 600px; margin-top: 100px; margin-bottom: -25px"></iframe>
+      Neste contexto, a proposta de desenvolvimento de uma Plataforma Interativa para avaliação de cenários e modelos matemáticos pretende criar um ambiente que permita explorar esses dados bem como seu uso em diferentes modelos, ajustados em tempo
+      real aos dados, de modo que:
+    </p>
+
+    <ol>
+      <li> o usuário entenda as limitações do modelo, </li>
+      <li> faça o seu uso correto para avaliação de cenários, e </li>
+      <li> consiga comparar o impacto do modelo escolhido no cenário predito.
+      </li>
+    </ol>
+
+    <p>
+
+      A proposta em questão pretende oferecer, de maneira robusta, uma ferramenta que possa ser utilizada por pesquisadores, gestores e afins de maneira que consigam: interagir com os diferentes dados disponíveis no Brasil; avaliar o efeito de
+      medidas tomadas na curva epidêmica de interesse; realizar projeções em curtas escalas de tempo (i.e 7 – 10 dias); verificar o comportamento de cenários
+      da epidemia em escalas de tempo longo (ie. > 100 dias); e acessar métricas que auxiliem no processo de tomadas de decisões como, por exemplo, o número reprodutivo efetivo usualmente denotado por <b>Rt</b> o qual estima o número médio de
+      infecções secundárias que um indivíduo, infectado no momento t, é capaz de gerar.
+
+    </p>
+    <p>
+
+      Para o sucesso do projeto uma plataforma em shinny contendo os modelos mais frequentes utilizados durante a pandemia da covid-19 será
+      construída. Concomitantemente uma base de dados contendo a série temporal para cada município do Brasil será mantida a partir de dados divulgados no: <a href="https://brasil.io/dataset/covid19/caso/" target="_blank">
+        https://brasil.io/dataset/covid19/caso/</a> - Ministério da Saúde e Secretarias Estaduais.
+
+    </p>
+    <p>
+
+      Antes do processo de modelagem, um conjunto de regras será criado e o modelo só será ajustado às regiões de interesse que atenderem a esses pressupostos. Os resultados obtidos para cada modelo serão disponibilizados na forma de painel
+      interativo com poup-up de caixas de diálogos, explicando como a informação deve ser utilizada bem como as principais limitações ou erros inerentes ao processo. A Plataforma será construída de maneira que mais modelos possam ser incorporados.
+
+    </p>
+  </div>
+
+  <hr />
+
+  <div class="intro" id="tutorial">
+    <h2>Tutorial</h2>
+    <p>
+      Como usar a nossa plataforma de modelos Covid-19?</p>Em desenvolvimento...
+    </p>
+    <img src="img/em_construcao.gif" class="img-contruction" />
+  </div>
+
+  <div class="top-content" id="github">
+    <h2>Código fonte</h2>
+    <div class="media">
+      <div class="media-left">
+        <a href="https://github.com/ModelingTaskForce/covidApp" target="_blank"><img src="img/logotipo-do-github.png" class="github-img" /></a>
+      </div>
+      <div class="media-body text">
+        <p class="">
+          Disponibilizamos o código fonte dos modelos no nosso <a href="https://github.com/ModelingTaskForce/covidApp" target="_blank">Github</a>.
+        </p>
+
+      </div>
+    </div>
   </div>
 
   <footer class="page-footer font-small footer">
@@ -219,6 +285,7 @@
       </div>
     </div>
   </footer>
+
 </body>
 
 </html>
