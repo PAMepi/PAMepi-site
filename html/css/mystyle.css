@@ -207,7 +207,7 @@ html {
 
 .middle-white {
   margin-top: 2rem;
-  padding: 4rem 10rem 5rem;
+  padding: 4rem 10rem 0rem;
 }
 
 hr {
@@ -326,6 +326,18 @@ h1 {
   border: 1px solid #990000;
 }
 
+.img3 {
+  background-image: url("../img/boletim.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+    margin-bottom: 3rem;
+    padding: 2rem 0;
+    border-radius: 32px;
+
+}
+
 .destaque:hover {
   text-decoration: none;
   color: #900d0d;
@@ -428,6 +440,16 @@ color: #fff;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   text-shadow: 2px 2px 5px #000000;
+}
+
+.boletim{
+color: #fff;
+  padding: 0 1rem;
+  font-size: 1.5rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  text-shadow: 2px 2px 5px #000000;
+  text-align: center;
 }
 
 .container-video {
