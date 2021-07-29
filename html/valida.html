@@ -19,224 +19,225 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <a href="index.html" class="navbar-brand active">Plataforma de Modelos Covid-19</a>
-    <button class="navbar-toggler" autofocus type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon "></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
+  <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
+      <div class="container-fluid">
 
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item dropdown">
+        <a href="index.html" class="navbar-brand">
+          <div class="home"></div>
+        </a>
+        <img src="img/right-arrow.svg" class="nav-arrow">
+        <a class="navbar-brand logo" href="covid.html">Plataforma de Modelos Covid-19 </a>
+        <button class="navbar-toggler custom-toggler" autofocus type="button" data-toggle="collapse"
+          data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon "></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
 
-          <span class="nav-link">Sobre</span>
-          <div class="dropdown-content">
-            <div class="dropdown-item">
-              <a href="index.html" class="nav-link">Quem somos</a>
-            </div>
-            <div class="dropdown-item">
-              <a href="equipe.html" class="nav-link">Equipe</a>
-            </div>
-            <div class="dropdown-item">
-              <a href="equipe.html#agradecimentos" class="nav-link">Agradecimentos</a>
-            </div>
-            <div class="dropdown-item">
-              <a href="equipe.html#apoio" class="nav-link">Apoio</a>
-            </div>
+          <ul class="navbar-nav ml-auto">
 
-          </div>
+            <li class="navbar-brand dropdown ">
 
-        </li>
+              <span class="nav-link dropdown-toggle ">Plataforma</span>
+              <div class="dropdown-content">
+                <div class="dropdown-item ">
+                  <a href="covid.html#projeto" class="nav-link">Projeto</a>
+                </div>
+                <div class="dropdown-item">
+                  <a href="covid.html#tutorial" class="nav-link">Tutorial</a>
+                </div>
+                <div class="dropdown-item">
+                  <a href="covid.html#github" class="nav-link">Código fonte</a>
+                </div>
+              </div>
 
-        <li class="nav-item dropdown">
+            </li>
 
-          <span class="nav-link">Plataforma</span>
-          <div class="dropdown-content">
-            <div class="dropdown-item">
-              <a href="meto.html#projeto" class="nav-link">Projeto</a>
-            </div>
-            <div class="dropdown-item">
-              <a href="meto.html#tutorial" class="nav-link">Tutorial</a>
-            </div>
-            <div class="dropdown-item">
-              <a href="meto.html#github" class="nav-link">Código fonte</a>
-            </div>
-          </div>
+            <li class="navbar-brand dropdown">
 
-        </li>
+              <span class="nav-link dropdown-toggle active">Modelos</span>
+              <div class="dropdown-content dropright">
 
-        <li class="nav-item dropdown">
+                <div class="nav-link dropdown-item dropdown-toggle" id="navbarDropdown" role="button"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Estados
+                </div>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <div class="dropdown-item">
+                    <a href="curto.html" class="nav-link">Curto prazo</a>
+                  </div>
+                  <div class="dropdown-item">
+                    <a href="longo.html" class="nav-link">Longo prazo</a>
+                  </div>
+                  <div class="dropdown-item">
+                    <a href="compara.html" class="nav-link">Comparação</a>
+                  </div>
+                  <div class="dropdown-item">
+                    <a href="valida.html" class="nav-link">Validação</a>
+                  </div>
+                  <div class="dropdown-item">
+                    <a href="simula.html" class="nav-link">Simulação</a>
+                  </div>
+                </div>
 
-          <span class="nav-link active">Modelos</span>
-          <div class="dropdown-content dropright">
+                <div class="dropdown-item">
+                  <a href="municipios.html" class="nav-link">Municipios</a>
+                </div>
+                <div class="dropdown-item">
+                  <a href="reg_sau.html" class="nav-link">Regiões de saúde</a>
+                </div>
+                <div class="dropdown-item">
+                  <a href="tsd.html" class="nav-link">Traga seus dados</a>
+                </div>
 
-            <div class="nav-link dropdown-item dropdown-toggle active" id="navbarDropdown" role="button"
-            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Estados
-                    </div>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <div class="dropdown-item">
-                        <a href="curto.html" class="nav-link">Curto prazo</a>
-                      </div>
-                      <div class="dropdown-item">
-                        <a href="longo.html" class="nav-link">Longo prazo</a>
-                      </div>
-                      <div class="dropdown-item">
-                        <a href="compara.html" class="nav-link">Comparação</a>
-                      </div>
-                      <div class="dropdown-item active">
-                        <a href="valida.html" class="nav-link ">Validação</a>
-                      </div>
-                      <div class="dropdown-item">
-                        <a href="simula.html" class="nav-link">Simulação</a>
-                      </div>
-                    </div>
+              </div>
 
-          <div class="dropdown-item">
-            <a href="municipios.html" class="nav-link">Municipios</a>
-          </div>
-          <div class="dropdown-item">
-            <a href="reg_sau.html" class="nav-link">Regiões de saúde</a>
-          </div>
-          <div class="dropdown-item">
-            <a href="tsd.html" class="nav-link">Traga seus dados</a>
-          </div>
+            </li>
 
-    </div>
+            <li class="navbar-brand dropdown">
 
-    </li>
+              <span class="nav-link dropdown-toggle">Comunicação</span>
+              <div class="round">
+                <div class="dropdown-content">
+                  <div class="dropdown-item">
+                    <a href="news.html#newsletter" class="nav-link">Newsletter</a>
+                  </div>
+                  <div class="dropdown-item">
+                    <a href="news.html#midia" class="nav-link">Notícias</a>
+                  </div>
+                  <div class="dropdown-item">
+                    <a href="news.html#galeria-videos" class="nav-link">Galeria de vídeos</a>
+                  </div>
+                  <div class="dropdown-item">
+                    <a href="news.html#artigos" class="nav-link">Artigos</a>
+                  </div>
+                  <div class="dropdown-item">
+                    <a href="contato.html#faq" class="nav-link">Perguntas frequentes</a>
+                  </div>
+                  <div class="dropdown-item">
+                    <a href="contato.html#faleconosco" class="nav-link">Fale conosco</a>
+                  </div>
+                </div>
+              </div>
+            </li>
 
-    <li class="nav-item dropdown">
+            <li class="nav-item dropdown">
+              <img src="img/language.png" class="language" />
+              <div class="dropdown-content">
+                <div class="dropdown-item">
+                  <a href="valida.html" class="nav-link active">Português</a>
+                </div>
+                <div class="dropdown-item">
+                  <a href="" class="nav-link">English</a>
+                </div>
+              </div>
+            </li>
 
-      <span class="nav-link">Comunicação</span>
-      <div class="dropdown-content">
-        <div class="dropdown-item">
-          <a href="news.html#newsletter" class="nav-link">Newsletter</a>
-        </div>
-        <div class="dropdown-item">
-          <a href="news.html#midia" class="nav-link">Notícias</a>
-        </div>
-        <div class="dropdown-item">
-          <a href="news.html#galeria-videos" class="nav-link">Galeria de vídeos</a>
-        </div>
-        <div class="dropdown-item">
-          <a href="news.html#artigos" class="nav-link">Artigos</a>
-        </div>
-        <div class="dropdown-item">
-          <a href="contato.html#faq" class="nav-link">Perguntas frequentes</a>
-        </div>
-        <div class="dropdown-item">
-          <a href="contato.html#faleconosco" class="nav-link">Fale conosco</a>
-        </div>
-      </div>
-    </li>
+          </ul>
 
-    <li class="nav-item dropdown">
-      <img src="img/language.png" class="language" />
-      <div class="dropdown-content">
-        <div class="dropdown-item">
-          <a href="valida.html" class="nav-link active">Português</a>
-        </div>
-        <div class="dropdown-item">
-          <a href="en/valida_en.html" class="nav-link">English</a>
         </div>
       </div>
-    </li>
+    </nav>
 
-    </ul>
-
+<div class="top margin-bottom" id="">
+      <h1>Validação</h1>
+      <div class="div-media">
+        <div class="media">
+          <div class="media-left  construction">
+            <img src="img/construction.svg" class="media-object" style="width:80px">
+          </div>
+          <div class="media-body">
+            <h3 class="media-heading">
+              <center>Em desenvolvimento...</center>
+            </h3>
+          </div>
+        </div>
+      </div>
     </div>
-  </nav>
-
-
-
-  <div class="construction title">
-    <h2>Em construção</h2>
-    <img src="img/em_construcao.gif" class="img-contruction" />
-  </div>
 
   <footer class="page-footer font-small footer">
-    <div class="container-fluid text-center text-md-left">
+      <div class="container-fluid text-center text-md-left">
 
-      <div class="row">
-        <div class="col-md-3 mb-md-0 mb-3">
-          <h5 class="text-uppercase">A plataforma</h5>
-          <ul class="list-unstyled">
-            <li>
-              <a href="meto.html#projeto" class="foot-link">O projeto</a>
-            </li>
-            <li>
-              <a href="meto.html#tutorial" class="foot-link">Tutorial</a>
-              <!-- explicar o que cada coisa significa -->
-            </li>
-            <li>
-              <a href="meto.html#github" class="foot-link">Código fonte</a>
-              <!-- repositorio do github -->
-            </li>
-            <li>
-              <a href="equipe.html#equipe" class="foot-link">Equipe</a>
-            </li>
-            <li>
-              <a href="equipe.html#agradecimentos" class="foot-link">Agradecimentos</a>
-            </li>
-            <li>
-              <a href="equipe.html#apoio" class="foot-link">Apoio</a>
-            </li>
+        <div class="row">
+          <div class="col-md-3 mb-md-0 mb-3">
+            <h5 class="text-uppercase">A plataforma</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="covid.html#projeto" class="foot-link">O projeto</a>
+              </li>
+              <li>
+                <a href="covid.html#tutorial" class="foot-link">Tutorial</a>
+                <!-- explicar o que cada coisa significa -->
+              </li>
+              <li>
+                <a href="covid.html#github" class="foot-link">Código fonte</a>
+                <!-- repositorio do github -->
+              </li>
+              <li>
+                <a href="team.html#team" class="foot-link">Equipe</a>
+              </li>
+              <li>
+                <a href="team.html#acknowledge" class="foot-link">Agradecimentos</a>
+              </li>
+              <li>
+                <a href="team.html#support" class="foot-link">Apoio</a>
+              </li>
 
-          </ul>
-        </div>
+            </ul>
+          </div>
 
-        <div class="col-md-3 mb-md-0 mb-3">
-          <h5 class="text-uppercase">Comunicação</h5>
-          <ul class="list-unstyled">
-            <li>
-              <a href="news.html#midia" class="foot-link">Notícias</a>
-            </li>
-            <li>
-              <a href="news.html#galeria-videos" class="foot-link">Galeria de vídeos</a>
-            </li>
-            <!-- <li>
+          <div class="col-md-3 mb-md-0 mb-3">
+            <h5 class="text-uppercase">Comunicação</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="news.html#midia" class="foot-link">Notícias</a>
+              </li>
+              <li>
+                <a href="news.html#galeria-videos" class="foot-link">Galeria de vídeos</a>
+              </li>
+              <!-- <li>
               <a href="" class="foot-link">Ensino</a>
             </li> -->
-            <li>
-              <a href="news.html#newsletter" class="foot-link">Newsletter</a>
-            </li>
-            <li>
-              <a href="news.html#artigos" class="foot-link">Artigos</a>
-            </li>
-          </ul>
-        </div>
+              <li>
+                <a href="news.html#newsletter" class="foot-link">Newsletter</a>
+              </li>
+              <li>
+                <a href="news.html#artigos" class="foot-link">Artigos</a>
+              </li>
+            </ul>
+          </div>
 
-        <div class="col-md-3 mb-md-0 mb-3">
-          <h5 class="text-uppercase">Contato</h5>
-          <ul class="list-unstyled">
-            <li>
-              <a href="contato.html#faq" class="foot-link">FAQ</a>
-            </li>
-            <li>
-              <a href="contato.html#faleconosco" class="foot-link">Fale conosco</a>
-            </li>
-          </ul>
-        </div>
+          <div class="col-md-3 mb-md-0 mb-3">
+            <h5 class="text-uppercase">Contato</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="contato.html#faq" class="foot-link">FAQ</a>
+              </li>
+              <li>
+                <a href="contato.html#faleconosco" class="foot-link">Fale conosco</a>
+              </li>
+            </ul>
+          </div>
 
-        <div class="col-md-3 mb-md-0 mb-3">
-          <ul class="list-unstyled">
-            <li>
-              <a href="https://cidacs.bahia.fiocruz.br/" target="_blank"><img src="img/CIDACS_Bw.png" class="img-cidacs" /></a>
-            </li>
-            <li>
-              <a class="nav-link" href="https://www.rondonia.fiocruz.br/" target="_blank"> <img src="img/fio_rond_bw.png" class="img-fiocruz" /></a>
-            </li>
-          </ul>
-        </div>
+          <div class="col-md-3 mb-md-0 mb-3">
+            <ul class="list-unstyled">
+              <li>
+                <a href="https://cidacs.bahia.fiocruz.br/" target="_blank"><img src="img/CIDACS_Bw.png"
+                    class="img-cidacs" /></a>
+              </li>
+              <li>
+                <a class="nav-link" href="https://www.rondonia.fiocruz.br/" target="_blank"> <img
+                    src="img/fio_rond_bw.png" class="img-fiocruz" /></a>
+              </li>
+            </ul>
+          </div>
 
+        </div>
       </div>
-    </div>
-  </footer>
+    </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"> </script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"> </script>
-
+ <script src="js/scripts.js"></script>
 
 </body>
 

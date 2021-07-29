@@ -1,242 +1,334 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <!-- CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-  <title>Modelos Covid-19</title>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <title>Modeling Task Force</title>
 
-  <!-- Google fonts -->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ruda:wght@400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ruda:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet">
 
 
-  <link rel="stylesheet" type="text/css" href="css/mystyle.css" />
-  <link rel="icon" href="img/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/mystyle.css" />
+    <link rel="icon" href="img/favicon.ico">
 
-</head>
+    <style>
+      /* Center the loader */
+      #loader {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: 1;
+        width: 120px;
+        height: 120px;
+        margin: -76px 0 0 -76px;
+        border: 16px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 16px solid #3498db;
+        -webkit-animation: spin 2s linear infinite;
+        animation: spin 2s linear infinite;
+      }
 
-<body>
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <a href="index.html" class="navbar-brand active">Plataforma de Modelos Covid-19</a>
-    <button class="navbar-toggler" autofocus type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon "></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
+      @-webkit-keyframes spin {
+        0% {
+          -webkit-transform: rotate(0deg);
+        }
 
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item dropdown">
+        100% {
+          -webkit-transform: rotate(360deg);
+        }
+      }
 
-          <span class="nav-link">Sobre</span>
-          <div class="dropdown-content">
-            <div class="dropdown-item">
-              <a href="index.html" class="nav-link">Quem somos</a>
-            </div>
-            <div class="dropdown-item">
-              <a href="equipe.html" class="nav-link">Equipe</a>
-            </div>
-            <div class="dropdown-item">
-              <a href="equipe.html#agradecimentos" class="nav-link">Agradecimentos</a>
-            </div>
-            <div class="dropdown-item">
-              <a href="equipe.html#apoio" class="nav-link">Apoio</a>
-            </div>
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
 
-          </div>
+        100% {
+          transform: rotate(360deg);
+        }
+      }
 
-        </li>
+      /* Add animation to "page content" */
+      .animate-bottom {
+        position: relative;
+        -webkit-animation-name: animatebottom;
+        -webkit-animation-duration: 1s;
+        animation-name: animatebottom;
+        animation-duration: 1s
+      }
 
-        <li class="nav-item dropdown">
+      @-webkit-keyframes animatebottom {
+        from {
+          bottom: -100px;
+          opacity: 0
+        }
 
-          <span class="nav-link">Plataforma</span>
-          <div class="dropdown-content">
-            <div class="dropdown-item">
-              <a href="meto.html#projeto" class="nav-link">Projeto</a>
-            </div>
-            <div class="dropdown-item">
-              <a href="meto.html#tutorial" class="nav-link">Tutorial</a>
-            </div>
-            <div class="dropdown-item">
-              <a href="meto.html#github" class="nav-link">Código fonte</a>
-            </div>
-          </div>
+        to {
+          bottom: 0px;
+          opacity: 1
+        }
+      }
 
-        </li>
+      @keyframes animatebottom {
+        from {
+          bottom: -100px;
+          opacity: 0
+        }
 
-        <li class="nav-item dropdown">
+        to {
+          bottom: 0;
+          opacity: 1
+        }
+      }
 
-          <span class="nav-link active">Modelos</span>
-          <div class="dropdown-content dropright">
+      #myDiv {
+        display: none;
+        text-align: center;
+      }
+    </style>
 
-            <div class="nav-link dropdown-item dropdown-toggle active" id="navbarDropdown" role="button"
-            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Estados
+  </head>
+
+  <body onload="myFunction()" style="margin:0;">
+    <div id="loader"></div>
+
+    <div style="display:none;" id="myDiv" class="animate-bottom">
+      <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+
+          <a href="index.html" class="navbar-brand">
+            <div class="home"></div>
+          </a>
+          <img src="img/right-arrow.svg" class="nav-arrow">
+          <a class="navbar-brand logo" href="covid.html">Plataforma de Modelos Covid-19 </a>
+          <button class="navbar-toggler custom-toggler" autofocus type="button" data-toggle="collapse"
+            data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon "></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+
+            <ul class="navbar-nav ml-auto">
+
+              <li class="navbar-brand dropdown ">
+
+                <span class="nav-link dropdown-toggle ">Plataforma</span>
+                <div class="dropdown-content">
+                  <div class="dropdown-item ">
+                    <a href="covid.html#projeto" class="nav-link">Projeto</a>
+                  </div>
+                  <div class="dropdown-item">
+                    <a href="covid.html#tutorial" class="nav-link">Tutorial</a>
+                  </div>
+                  <div class="dropdown-item">
+                    <a href="covid.html#github" class="nav-link">Código fonte</a>
+                  </div>
+                </div>
+
+              </li>
+
+              <li class="navbar-brand dropdown">
+
+                <span class="nav-link dropdown-toggle active">Modelos</span>
+                <div class="dropdown-content dropright">
+
+                  <div class="nav-link dropdown-item dropdown-toggle" id="navbarDropdown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Estados
+                  </div>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <div class="dropdown-item">
+                      <a href="curto.html" class="nav-link">Curto prazo</a>
                     </div>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <div class="dropdown-item">
-                        <a href="curto.html" class="nav-link">Curto prazo</a>
-                      </div>
-                      <div class="dropdown-item active">
-                        <a href="longo.html" class="nav-link">Longo prazo</a>
-                      </div>
-                      <div class="dropdown-item">
-                        <a href="compara.html" class="nav-link">Comparação</a>
-                      </div>
-                      <div class="dropdown-item">
-                        <a href="valida.html" class="nav-link">Validação</a>
-                      </div>
-                      <div class="dropdown-item">
-                        <a href="simula.html" class="nav-link">Simulação</a>
-                      </div>
+                    <div class="dropdown-item">
+                      <a href="longo.html" class="nav-link">Longo prazo</a>
                     </div>
+                    <div class="dropdown-item">
+                      <a href="compara.html" class="nav-link">Comparação</a>
+                    </div>
+                    <div class="dropdown-item">
+                      <a href="valida.html" class="nav-link">Validação</a>
+                    </div>
+                    <div class="dropdown-item">
+                      <a href="simula.html" class="nav-link">Simulação</a>
+                    </div>
+                  </div>
 
-          <div class="dropdown-item">
-            <a href="municipios.html" class="nav-link">Municipios</a>
+                  <div class="dropdown-item">
+                    <a href="municipios.html" class="nav-link">Municipios</a>
+                  </div>
+                  <div class="dropdown-item">
+                    <a href="reg_sau.html" class="nav-link">Regiões de saúde</a>
+                  </div>
+                  <div class="dropdown-item">
+                    <a href="tsd.html" class="nav-link">Traga seus dados</a>
+                  </div>
+
+                </div>
+
+              </li>
+
+              <li class="navbar-brand dropdown">
+
+                <span class="nav-link dropdown-toggle">Comunicação</span>
+                <div class="round">
+                  <div class="dropdown-content">
+                    <div class="dropdown-item">
+                      <a href="news.html#newsletter" class="nav-link">Newsletter</a>
+                    </div>
+                    <div class="dropdown-item">
+                      <a href="news.html#midia" class="nav-link">Notícias</a>
+                    </div>
+                    <div class="dropdown-item">
+                      <a href="news.html#galeria-videos" class="nav-link">Galeria de vídeos</a>
+                    </div>
+                    <div class="dropdown-item">
+                      <a href="news.html#artigos" class="nav-link">Artigos</a>
+                    </div>
+                    <div class="dropdown-item">
+                      <a href="contato.html#faq" class="nav-link">Perguntas frequentes</a>
+                    </div>
+                    <div class="dropdown-item">
+                      <a href="contato.html#faleconosco" class="nav-link">Fale conosco</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="nav-item dropdown">
+                <img src="img/language.png" class="language" />
+                <div class="dropdown-content">
+                  <div class="dropdown-item">
+                    <a href="longo.html" class="nav-link active">Português</a>
+                  </div>
+                  <div class="dropdown-item">
+                    <a href="" class="nav-link">English</a>
+                  </div>
+                </div>
+              </li>
+
+            </ul>
+
           </div>
-          <div class="dropdown-item">
-            <a href="reg_sau.html" class="nav-link">Regiões de saúde</a>
-          </div>
-          <div class="dropdown-item">
-            <a href="tsd.html" class="nav-link">Traga seus dados</a>
-          </div>
+        </div>
+      </nav>
 
-    </div>
-
-    </li>
-
-    <li class="nav-item dropdown">
-
-      <span class="nav-link">Comunicação</span>
-      <div class="dropdown-content">
-        <div class="dropdown-item">
-          <a href="news.html#newsletter" class="nav-link">Newsletter</a>
-        </div>
-        <div class="dropdown-item">
-          <a href="news.html#midia" class="nav-link">Notícias</a>
-        </div>
-        <div class="dropdown-item">
-          <a href="news.html#galeria-videos" class="nav-link">Galeria de vídeos</a>
-        </div>
-        <div class="dropdown-item">
-          <a href="news.html#artigos" class="nav-link">Artigos</a>
-        </div>
-        <div class="dropdown-item">
-          <a href="contato.html#faq" class="nav-link">Perguntas frequentes</a>
-        </div>
-        <div class="dropdown-item">
-          <a href="contato.html#faleconosco" class="nav-link">Fale conosco</a>
-        </div>
+    <div style="margin-top: 10rem;"> <h1>Modelos de longo prazo</h1></div>
+      <div id="iframe-conf" style="margin: 0;">
+       
+        <!--Changed here to try to force iframe -->
+        <iframe id="long_time_pred" src="https://modelacovid19.rondonia.fiocruz.br/shiny/long_pred/"
+          style="border: none; width: 100%; height: 800px; margin-top: 2rem; margin-bottom: -25px"></iframe>
       </div>
-    </li>
-
-    <li class="nav-item dropdown">
-      <img src="img/language.png" class="language" />
-      <div class="dropdown-content">
-        <div class="dropdown-item">
-          <a href="longo.html" class="nav-link active">Português</a>
-        </div>
-        <div class="dropdown-item">
-          <a href="en/longo_en.html" class="nav-link">English</a>
-        </div>
-      </div>
-    </li>
-
-    </ul>
-
-    </div>
-  </nav>
 
 
+      <footer class="page-footer font-small footer">
+        <div class="container-fluid text-center text-md-left">
 
-  <div id="iframe-conf">
-       <iframe id="long_time_pred" src="https://modelacovid19.rondonia.fiocruz.br/shiny/long_term_prediction/" style="border: none; width: 100%; height: 600px; margin-top: 100px; margin-bottom: -25px"></iframe>
-  </div>
+          <div class="row">
+            <div class="col-md-3 mb-md-0 mb-3">
+              <h5 class="text-uppercase">A plataforma</h5>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="covid.html#projeto" class="foot-link">O projeto</a>
+                </li>
+                <li>
+                  <a href="covid.html#tutorial" class="foot-link">Tutorial</a>
+                  <!-- explicar o que cada coisa significa -->
+                </li>
+                <li>
+                  <a href="covid.html#github" class="foot-link">Código fonte</a>
+                  <!-- repositorio do github -->
+                </li>
+                <li>
+                  <a href="team.html#team" class="foot-link">Equipe</a>
+                </li>
+                <li>
+                  <a href="team.html#acknowledge" class="foot-link">Agradecimentos</a>
+                </li>
+                <li>
+                  <a href="team.html#support" class="foot-link">Apoio</a>
+                </li>
 
-  <footer class="page-footer font-small footer">
-    <div class="container-fluid text-center text-md-left">
+              </ul>
+            </div>
 
-      <div class="row">
-        <div class="col-md-3 mb-md-0 mb-3">
-          <h5 class="text-uppercase">A plataforma</h5>
-          <ul class="list-unstyled">
-            <li>
-              <a href="meto.html#projeto" class="foot-link">O projeto</a>
-            </li>
-            <li>
-              <a href="meto.html#tutorial" class="foot-link">Tutorial</a>
-              <!-- explicar o que cada coisa significa -->
-            </li>
-            <li>
-              <a href="meto.html#github" class="foot-link">Código fonte</a>
-              <!-- repositorio do github -->
-            </li>
-            <li>
-              <a href="equipe.html#equipe" class="foot-link">Equipe</a>
-            </li>
-            <li>
-              <a href="equipe.html#agradecimentos" class="foot-link">Agradecimentos</a>
-            </li>
-            <li>
-              <a href="equipe.html#apoio" class="foot-link">Apoio</a>
-            </li>
-
-          </ul>
-        </div>
-
-        <div class="col-md-3 mb-md-0 mb-3">
-          <h5 class="text-uppercase">Comunicação</h5>
-          <ul class="list-unstyled">
-            <li>
-              <a href="news.html#midia" class="foot-link">Notícias</a>
-            </li>
-            <li>
-              <a href="news.html#galeria-videos" class="foot-link">Galeria de vídeos</a>
-            </li>
-            <!-- <li>
+            <div class="col-md-3 mb-md-0 mb-3">
+              <h5 class="text-uppercase">Comunicação</h5>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="news.html#midia" class="foot-link">Notícias</a>
+                </li>
+                <li>
+                  <a href="news.html#galeria-videos" class="foot-link">Galeria de vídeos</a>
+                </li>
+                <!-- <li>
               <a href="" class="foot-link">Ensino</a>
             </li> -->
-            <li>
-              <a href="news.html#newsletter" class="foot-link">Newsletter</a>
-            </li>
-            <li>
-              <a href="news.html#artigos" class="foot-link">Artigos</a>
-            </li>
-          </ul>
-        </div>
+                <li>
+                  <a href="news.html#newsletter" class="foot-link">Newsletter</a>
+                </li>
+                <li>
+                  <a href="news.html#artigos" class="foot-link">Artigos</a>
+                </li>
+              </ul>
+            </div>
 
-        <div class="col-md-3 mb-md-0 mb-3">
-          <h5 class="text-uppercase">Contato</h5>
-          <ul class="list-unstyled">
-            <li>
-              <a href="contato.html#faq" class="foot-link">FAQ</a>
-            </li>
-            <li>
-              <a href="contato.html#faleconosco" class="foot-link">Fale conosco</a>
-            </li>
-          </ul>
-        </div>
+            <div class="col-md-3 mb-md-0 mb-3">
+              <h5 class="text-uppercase">Contato</h5>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="contato.html#faq" class="foot-link">FAQ</a>
+                </li>
+                <li>
+                  <a href="contato.html#faleconosco" class="foot-link">Fale conosco</a>
+                </li>
+              </ul>
+            </div>
 
-        <div class="col-md-3 mb-md-0 mb-3">
-          <ul class="list-unstyled">
-            <li>
-              <a href="https://cidacs.bahia.fiocruz.br/" target="_blank"><img src="img/CIDACS_Bw.png" class="img-cidacs" /></a>
-            </li>
-            <li>
-              <a class="nav-link" href="https://www.rondonia.fiocruz.br/" target="_blank"> <img src="img/fio_rond_bw.png" class="img-fiocruz" /></a>
-            </li>
-          </ul>
-        </div>
+            <div class="col-md-3 mb-md-0 mb-3">
+              <ul class="list-unstyled">
+                <li>
+                  <a href="https://cidacs.bahia.fiocruz.br/" target="_blank"><img src="img/CIDACS_Bw.png"
+                      class="img-cidacs" /></a>
+                </li>
+                <li>
+                  <a class="nav-link" href="https://www.rondonia.fiocruz.br/" target="_blank"> <img
+                      src="img/fio_rond_bw.png" class="img-fiocruz" /></a>
+                </li>
+              </ul>
+            </div>
 
-      </div>
+          </div>
+        </div>
+      </footer>
     </div>
-  </footer>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"> </script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"> </script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"> </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"> </script>
+    <script>
+      var myVar;
 
+      function myFunction() {
+        myVar = setTimeout(showPage, 3000);
+      }
 
-</body>
+      function showPage() {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("myDiv").style.display = "block";
+      }
+
+    
+    </script>
+
+  </body>
 
 </html>
