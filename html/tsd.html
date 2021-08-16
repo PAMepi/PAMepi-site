@@ -19,118 +19,147 @@
 </head>
 
 <body>
-  <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
+   <nav id="navbar" class="navbar navbar-expand-lg fixed-top justify-content-center">
       <div class="container-fluid">
+        <div class="w-100 navbar-header">
 
-        <a href="index.html" class="navbar-brand">
-          <div class="home"></div>
-        </a>
-        <img src="img/right-arrow.svg" class="nav-arrow">
-        <a class="navbar-brand " href="covid.html">Plataforma de Modelos Covid-19 </a>
-        <button class="navbar-toggler custom-toggler" autofocus type="button" data-toggle="collapse"
-          data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon "></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
+          <a href="index.html" class="navbar-brand active">
+            <img src="img/home.svg" class="home"></a>
 
-          <ul class="navbar-nav ml-auto">
+          <img src="img/right-arrow.svg" class="nav-arrow">
 
-            <li class="navbar-brand dropdown ">
+          <a class="navbar-brand" href="covid.html">PAMEpi -  Covid-19 </a>
+          <button class="navbar-toggler navbar-light  ml-auto hidden-sm-up  float-right custom-toggler" autofocus
+            type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon "></span>
+          </button></div>
+        <div class="collapse navbar-collapse w-100" id="navbarNav">
 
-              <span class="nav-link dropdown-toggle ">Plataforma</span>
-              <div class="dropdown-content">
-                <div class="dropdown-item ">
-                  <a href="covid.html#projeto" class="nav-link">Projeto</a>
+          <ul class="nav navbar-nav ml-auto dropdown-menu-right ">
+
+            <li class="navbar-item dropdown">
+              <div class=" dropdown-item dropdown-toggle " id="navbarDropdown1" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" tabindex="0">Plataforma</div>
+              <div class="dropdown-menu dropdown" aria-labelledby="navbarDropdown1">
+                <div class="dropdown-item drop-item">
+                  <a href="covid.html#projeto" class="nav-link submenu ">
+                    Projeto</a>
                 </div>
-                <div class="dropdown-item">
-                  <a href="covid.html#tutorial" class="nav-link">Tutorial</a>
+                <div class="dropdown-item drop-item">
+                  <a href="covid.html#tutorial" class="nav-link submenu ">Tutorial</a>
                 </div>
-                <div class="dropdown-item">
-                  <a href="covid.html#github" class="nav-link">Código fonte</a>
+                <div class="dropdown-item drop-item">
+                  <a href="covid.html#github" class="nav-link submenu ">Código fonte</a>
                 </div>
               </div>
 
             </li>
 
-            <li class="navbar-brand dropdown">
+            <li class="navbar-item dropdown">
 
-              <span class="nav-link dropdown-toggle active">Modelos</span>
-              <div class="dropdown-content dropright">
+              <div class="dropdown-item dropdown-toggle active" id="navbarDropdown2" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" tabindex="0">Modelos</div>
 
-                <div class="nav-link dropdown-item dropdown-toggle" id="navbarDropdown" role="button"
-                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Estados
-                </div>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <div class="dropdown-item">
-                    <a href="curto.html" class="nav-link">Curto prazo</a>
-                  </div>
-                  <div class="dropdown-item">
-                    <a href="longo.html" class="nav-link">Longo prazo</a>
-                  </div>
-                  <div class="dropdown-item">
-                    <a href="compara.html" class="nav-link">Comparação</a>
-                  </div>
-                  <div class="dropdown-item">
-                    <a href="valida.html" class="nav-link">Validação</a>
-                  </div>
-                  <div class="dropdown-item">
-                    <a href="simula.html" class="nav-link">Simulação</a>
-                  </div>
-                </div>
+              <div class="dropdown-menu dropdown " aria-labelledby="navbarDropdown2">
+                <div class="dropdown-item drop-item  dropdown dropright dropdown-submenu">
 
-                <div class="dropdown-item">
-                  <a href="municipios.html" class="nav-link">Municipios</a>
+
+
+                  <a class=" btn dropdown-toggle  nav-link  submenu " href="#" data-toggle="dropdown" data-flip="false"
+                    style="text-align: left;">
+                    Estados
+                  </a>
+
+                  <ul class="dropdown-menu sub-drop">
+                    <li class="dropdown-item drop-item sub-drop">
+                      <a href="curto.html" class="nav-link  submenu ">Curto prazo</a>
+                    </li>
+                    <li class="dropdown-item drop-item sub-drop">
+                      <a href="longo.html" class="nav-link submenu ">Longo prazo</a>
+                    </li>
+                    <li class="dropdown-item drop-item sub-drop">
+                      <a href="compara.html" class="nav-link submenu ">Comparação</a>
+                    </li>
+                    <li class="dropdown-item drop-item sub-drop">
+                      <a href="valida.html" class="nav-link submenu ">Validação</a>
+                    </li>
+                    <li class="dropdown-item drop-item sub-drop">
+                      <a href="simula.html" class="nav-link submenu ">Simulação</a>
+                    </li>
+                  </ul>
                 </div>
-                <div class="dropdown-item">
-                  <a href="reg_sau.html" class="nav-link">Regiões de saúde</a>
+                <div class="dropdown-item drop-item">
+                  <a href="municipios.html" class="nav-link submenu ">Municipios</a>
                 </div>
-                <div class="dropdown-item">
-                  <a href="tsd.html" class="nav-link">Traga seus dados</a>
+                <div class="dropdown-item drop-item">
+                  <a href="reg_sau.html" class="nav-link submenu ">Regiões de saúde</a>
+                </div>
+                <div class="dropdown-item drop-item">
+                  <a href="tsd.html" class="nav-link submenu ">Traga seus dados</a>
                 </div>
 
               </div>
 
             </li>
+<li class="navbar-item dropdown">
+              <div class=" dropdown-item dropdown-toggle " id="navbarDropdown5" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" tabindex="0">Dados</div>
+              <div class="dropdown-menu dropdown" aria-labelledby="navbarDropdown3">
+                <div class="dropdown-item drop-item">
+                  <a href="data.html" class="nav-link submenu ">
+                    Base de dados</a>
+                </div>
+                <div class="dropdown-item drop-item" >
+                  <a href="#" class="nav-link submenu " >Decretos e mobilidade</a>
+                </div>
 
-            <li class="navbar-brand dropdown">
+              </div>
 
-              <span class="nav-link dropdown-toggle">Comunicação</span>
-              <div class="round">
-                <div class="dropdown-content">
-                  <div class="dropdown-item">
-                    <a href="news.html#newsletter" class="nav-link">Newsletter</a>
-                  </div>
-                  <div class="dropdown-item">
-                    <a href="news.html#midia" class="nav-link">Notícias</a>
-                  </div>
-                  <div class="dropdown-item">
-                    <a href="news.html#galeria-videos" class="nav-link">Galeria de vídeos</a>
-                  </div>
-                  <div class="dropdown-item">
-                    <a href="news.html#artigos" class="nav-link">Artigos</a>
-                  </div>
-                  <div class="dropdown-item">
-                    <a href="contato.html#faq" class="nav-link">Perguntas frequentes</a>
-                  </div>
-                  <div class="dropdown-item">
-                    <a href="contato.html#faleconosco" class="nav-link">Fale conosco</a>
-                  </div>
+            </li>
+            <li class="navbar-item dropdown">
+              <div class=" dropdown-item dropdown-toggle" id="navbarDropdown1" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" tabindex="0">Comunicação</div>
+              <div class="dropdown-menu dropdown" aria-labelledby="navbarDropdown1">
+                <div class="dropdown-item drop-item">
+                  <a href="news.html#newsletter" class="nav-link submenu ">
+                    Newsletter</a>
+                </div>
+                <div class="dropdown-item drop-item">
+                  <a href="news.html#midia" class="nav-link submenu ">Notícias</a>
+                </div>
+                <div class="dropdown-item drop-item">
+                  <a href="news.html#galeria-videos" class="nav-link submenu ">Galeria de vídeos</a>
+                </div>
+                <div class="dropdown-item drop-item">
+                  <a href="news.html#artigos" class="nav-link submenu ">Artigos</a>
+                </div>
+                <div class="dropdown-item drop-item">
+                  <a href="contato.html#faq" class="nav-link submenu ">Perguntas frequentes</a>
+                </div>
+                <div class="dropdown-item drop-item">
+                  <a href="contato.html#faleconosco" class="nav-link submenu ">Fale conosco</a>
                 </div>
               </div>
-            </li>
 
-            <li class="nav-item dropdown">
-              <img src="img/language.png" class="language" />
-              <div class="dropdown-content">
-                <div class="dropdown-item">
-                  <a href="tsd.html" class="nav-link active">Português</a>
+            </li>
+            <li class="navbar-item dropdown">
+              <div class=" dropdown-item dropdown-toggle " id="navbarDropdown1" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" tabindex="0"><img src="img/language.png" class="language" />
+              </div>
+              <div class="dropdown-menu dropdown dropdown-menu-right" aria-labelledby="navbarDropdown1">
+
+                <div class="dropdown-item drop-item">
+                  <a href="tsd.html" class="nav-link active submenu">Português</a>
                 </div>
-                <div class="dropdown-item">
-                  <a href="" class="nav-link">English</a>
+                <div class="dropdown-item drop-item">
+                  <a href="en/tsd_en.html" class="nav-link submenu">English</a>
                 </div>
               </div>
+
             </li>
+
+
 
           </ul>
 
@@ -154,7 +183,7 @@
       </div>
     </div>
 
-  <footer class="page-footer font-small footer">
+  <footer class="page-footer font-small footer"  id="footer">
       <div class="container-fluid text-center text-md-left">
 
         <div class="row">
