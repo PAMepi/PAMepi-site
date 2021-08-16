@@ -27,7 +27,7 @@ escolhido no cenário predito.
 
 </div>
 
-### Você pode encontrar a plataforma [aqui](http://modelacovid19.rondonia.fiocruz.br/shiny/covidApp/).
+### Você pode encontrar a plataforma [aqui](http://modelacovid19.rondonia.fiocruz.br/).
 
   - Sujestões são bem vindas\!
       - Você pode enviar um email para <modeling.taskforce@gmail.com>  
