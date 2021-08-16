@@ -14,13 +14,12 @@
 
 
   <link rel="stylesheet" type="text/css" href="../css/mystyle.css" />
-   <link rel="stylesheet" type="text/css" href="../css/spin.css" />
   <link rel="icon" href="../img/favicon.ico">
 
 </head>
 
-<body onload="myFunction()" style="margin:0;">
-   <nav id="navbar" class="navbar navbar-expand-lg fixed-top justify-content-center">
+<body>
+  <nav id="navbar" class="navbar navbar-expand-lg fixed-top justify-content-center">
       <div class="container-fluid">
         <div class="w-100 navbar-header">
 
@@ -59,7 +58,7 @@
 
             <li class="navbar-item dropdown">
 
-              <div class="dropdown-item dropdown-toggle active" id="navbarDropdown2" role="button" data-toggle="dropdown"
+              <div class="dropdown-item dropdown-toggle " id="navbarDropdown2" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false" tabindex="0">Models</div>
 
               <div class="dropdown-menu dropdown " aria-labelledby="navbarDropdown2">
@@ -104,7 +103,7 @@
 
             </li>
 <li class="navbar-item dropdown">
-              <div class=" dropdown-item dropdown-toggle " id="navbarDropdown5" role="button" data-toggle="dropdown"
+              <div class=" dropdown-item dropdown-toggle active" id="navbarDropdown5" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false" tabindex="0">Data</div>
               <div class="dropdown-menu dropdown" aria-labelledby="navbarDropdown3">
                 <div class="dropdown-item drop-item">
@@ -151,10 +150,10 @@
               <div class="dropdown-menu dropdown dropdown-menu-right" aria-labelledby="navbarDropdown1">
 
                 <div class="dropdown-item drop-item">
-                  <a href="../longo.html" class="nav-link  submenu">Português</a>
+                  <a href="../data.html" class="nav-link  submenu">Português</a>
                 </div>
                 <div class="dropdown-item drop-item">
-                  <a href="longo_en.html" class="nav-link active submenu">English</a>
+                  <a href="data_en.html" class="nav-link active submenu">English</a>
                 </div>
               </div>
 
@@ -168,16 +167,23 @@
       </div>
     </nav>
 
-    <div class="top-model"> <h1>Long term models</h1></div>
-    <div id="myDiv" class="animate-bottom">
-    <div id="iframe-conf" style="margin: 0;">
-       
-        <!--Changed here to try to force iframe -->
-        <iframe id="long_time_pred" src="https://modelacovid19.rondonia.fiocruz.br/shiny/long_pred/"
-          style="border: none; width: 100%; height: 800px; margin-top: 2rem; margin-bottom: -25px"></iframe>
-      </div></div>
+<div class="top margin-bottom" id="">
+      <h1>Data base </h1>
+      <div class="div-media">
+        <div class="media">
+          <div class="media-left  construction">
+            <img src="../img/construction.svg" class="media-object" style="width:80px">
+          </div>
+          <div class="media-body">
+            <h3 class="media-heading">
+              <center>Under construction...</center>
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<footer class="page-footer font-small footer" id="footer">
+  <footer class="page-footer font-small footer" id="footer">
     <div class="container-fluid text-center text-md-left">
 
       <div class="row">
@@ -255,29 +261,12 @@
       </div>
     </div>
   </footer>
-
-
-<div id="loader"></div>
+ 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"> </script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"> </script>
-   <script src="../js/scripts.js"> </script>
-<script>
-      var myVar;
-
-      function myFunction() {
-        myVar = setTimeout(showPage, 3000);
-      }
-
-      function showPage() {
-        document.getElementById("loader").style.display = "none";
-        document.getElementById("myDiv").style.display = "block";
-      }
-
-    
-    </script>
-
+ <script src="../js/scripts.js"></script>
 </body>
 
 </html>

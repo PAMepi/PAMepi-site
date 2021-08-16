@@ -2,6 +2,7 @@
 <html>
 
 <head>
+
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <!-- CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
@@ -14,11 +15,13 @@
 
 
   <link rel="stylesheet" type="text/css" href="../css/mystyle.css" />
+  <link rel="stylesheet" href="../css/carousel.css" />
   <link rel="icon" href="../img/favicon.ico">
 
 </head>
 
 <body>
+
   <nav id="navbar" class="navbar navbar-expand-lg fixed-top justify-content-center">
       <div class="container-fluid">
         <div class="w-100 navbar-header">
@@ -39,7 +42,7 @@
           <ul class="nav navbar-nav ml-auto dropdown-menu-right ">
 
             <li class="navbar-item dropdown">
-              <div class=" dropdown-item dropdown-toggle " id="navbarDropdown1" role="button" data-toggle="dropdown"
+              <div class=" dropdown-item dropdown-toggle active" id="navbarDropdown1" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false" tabindex="0">Plataform</div>
               <div class="dropdown-menu dropdown" aria-labelledby="navbarDropdown1">
                 <div class="dropdown-item drop-item">
@@ -58,7 +61,7 @@
 
             <li class="navbar-item dropdown">
 
-              <div class="dropdown-item dropdown-toggle active" id="navbarDropdown2" role="button" data-toggle="dropdown"
+              <div class="dropdown-item dropdown-toggle " id="navbarDropdown2" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false" tabindex="0">Models</div>
 
               <div class="dropdown-menu dropdown " aria-labelledby="navbarDropdown2">
@@ -150,10 +153,10 @@
               <div class="dropdown-menu dropdown dropdown-menu-right" aria-labelledby="navbarDropdown1">
 
                 <div class="dropdown-item drop-item">
-                  <a href="../valida.html" class="nav-link  submenu">Português</a>
+                  <a href="../covid.html" class="nav-link  submenu">Português</a>
                 </div>
                 <div class="dropdown-item drop-item">
-                  <a href="valida_en.html" class="nav-link active submenu">English</a>
+                  <a href="covid_en.html" class="nav-link active submenu">English</a>
                 </div>
               </div>
 
@@ -167,11 +170,141 @@
       </div>
     </nav>
 
+    <div class="title">
 
 
 
-<div class="top margin-bottom" id="">
-      <h1>Validation of models</h1>
+      <div class="div-media">
+        <div class="media ">
+
+          <div class=" media-left construction" style="margin-right: 4rem;">
+            <img src="../img/data-analysis.png" class="media-object img-title">
+          </div>
+          <div class="media-body">
+      <h1>Interactive platform for evaluating scenarios and mathematical models applied to SarsCoV-2</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <hr />
+
+  <div class="intro" id="projeto">
+
+    <h1 >About the project</h1>
+ <H3 class="authors">by A. RIOS, J. OLIVEIRA, M. RODRIGUES, P. RAMOS</H3>
+   <p>
+                The epidemic of the new Covid-19 brought, without a doubt, a curious scenario. Thanks to the diversity of initiatives, we have access to a daily updated set of data containing information on confirmed and discarded cases, tests,
+                occupation of hospital beds, and others. This information is made available on a time and space scale, providing analysis in monitoring the pandemic at aggregate levels by states or municipalities. This allows a large number of people
+                to use this information in models, often not adequate, to build plots and, according to their interest, to disclose a certain scenario. </p>
+              <p>
+                In this context, the proposal to develop an Interactive Platform for evaluating scenarios and mathematical models aims to create an environment that allows exploring these data as well as their use in different models, adjusted
+                in real time to the data, such: </p>
+              <ol>
+                <li> the user understands the limitations of the model, </li>
+                <li> use it correctly for scenario assessment, and </li>
+                <li> be able to compare the impact of the chosen model in the predicted scenario.
+                </li>
+              </ol>
+              <p>
+                The proposal in question intends to offer, in a robust way, a tool that can be used by researchers, managers and others in such a way that they can:
+              <ul>
+                <li>
+
+
+                  interact with the different type of data available in Brazil;
+                </li>
+                <li>evaluate the effect of measures taken on the epidemic curve of interest;
+                </li>
+                <li> making projections on short time scales (i.e. 7 - 10 days);
+                </li>
+                <li>verify the behavior of epidemic scenarios on long time scales (ie.> 100 days);
+                </li>
+                <li>and access metrics that assist in the decision-making process, such as the effective reproductive number, usually denoted by <b> Rt </b>, which estimates the average number of secondary infections that an individual, infected at
+                  time <b>t</b>, is able to generate.
+                </li>
+              </ul>
+              </p>
+              <p>
+                For the project's success, a <a href="https://shiny.rstudio.com/" target="_blank">Shinny</a> platform containing the most frequent models used during the Covid-19 pandemic will be built. Concomitantly, a database containing the time
+                series for each municipality in Brazil will be maintained based on data released at: <a href="https://brasil.io/dataset/covid19/caso/" target="_blank"> https://brasil.io/dataset/covid19/caso/ </a> - Ministry of Health and State
+                Departments. </p>
+              <p>
+                Before the modeling process, a set of rules will be created and the model will only be adjusted to the regions of interest that meet these assumptions. The results obtained for each model will be made available in the form of an
+                interactive panel with a saving of dialog boxes, explaining how the information should be used as well as the main limitations or errors inherent to the process. The Platform will be built so that more models can be incorporated.
+
+              </p>
+
+  </div>
+
+  <div class="top-content" id="news">
+    <h1 >Newsletter</h1>
+    <div class="container-fluid">
+      <div id="carousel-example" class="carousel slide" data-ride="carousel" data-interval="10000">
+        <div class="carousel-inner row w-100 mx-auto listbox" role="listbox">
+
+          <div class="carousel-item col-md-6 col-lg-4 active">
+            <div class="columns">
+              <ul class="price">
+                <li class="box-header">Computational modeling:<br />historical overview and role in the pandemic</li>
+                <li class="grey body-news"> The simplest definition for the term "computational modeling" corresponds to the description of a phenomenon using a programming language...</li>
+                <a href="news_en.html#collapseMod" class="abutton"><li class="grey box-footer"><span >Read more</span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="carousel-item col-md-6 col-lg-4">
+            <div class="columns">
+              <ul class="price">
+                <li class="box-header">A bridge to the future:<br /> comparison between inoculation and collective immunity policies against COVID-19 in a scenario still without the vaccine</li>
+                <li class="grey body-news"> The inoculation strategy is similar to natural immunity strategies where it considers exposure to the infectious agent as a preventive method for the disease in question...</li>
+               <a href="news_en.html#collapseUma" class="abutton"><li class="grey box-footer"><span >Read more</span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="carousel-item col-md-6 col-lg-4">
+            <div class="columns">
+              <ul class="price">
+                <li class="box-header">Statistical modeling</li>
+                <li class="grey body-news"> “Statistics” is a word derived from the Latin status, originally means “the study of the state”...</li>
+                <a href="news_en.html#collapseEst" class="abutton"><li class="grey box-footer"><span >Read more</span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="carousel-item col-md-6 col-lg-4">
+            <div class="columns">
+              <ul class="price">
+                <li class="box-header">Mathematical modeling processes:<br />compartment models</li>
+                <li class="grey body-news"> The mathematical modeling of infectious diseases (IDs) started in the late 19th century, when part of the studies presented were developed by public health professionals...</li>
+              <a href="news_en.html#collapsePro" class="abutton"><li class="grey box-footer"><span >Read more</span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="carousel-item col-md-6 col-lg-4">
+            <div class="columns">
+              <ul class="price">
+                <li class="box-header">Brief history of infectious diseases</li>
+                <li class="grey body-news"> Infectious diseases (IDs) are caused by pathogens such as bacteria, viruses, parasites, fungi or prions...</li>
+                <a href="news_en.html#collapseBreve" class="abutton"><li class="grey box-footer"><span >Read more</span></a></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+        <div class="carousel-controls">
+          <a class="carousel-control-prev" href="#carousel-example" role="button" data-slide="prev">
+            <img src="../img/left-arrow.png" class="control-img" />
+          </a>
+          <a class="carousel-control-next" href="#carousel-example" role="button" data-slide="next">
+            <img src="../img/right-arrow.png" class="control-img" />
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+    <div class="middle-white" id="tutorial">
+      <h1>Tutorial</h1>
       <div class="div-media">
         <div class="media">
           <div class="media-left  construction">
@@ -179,14 +312,33 @@
           </div>
           <div class="media-body">
             <h3 class="media-heading">
-              <center>Under construction...</center>
+              <center>How to use our Covid-19 modeling platform?<br>Under construction...</center>
             </h3>
           </div>
         </div>
       </div>
     </div>
 
-    <footer class="page-footer font-small footer" id="footer">
+    <div class="top-content" id="github">
+      <h1>Source code</h1>
+      <div class="div-media">
+        <div class="media">
+          <div class="media-left git">
+            <a href="https://github.com/ModelingTaskForce/covidApp" target="_blank"><img
+                src="../img/logotipo-do-github.png" class="github-img media-object" style="width:80px" /></a>
+          </div>
+          <div class="media-body">
+            <h3 class="media-heading">
+              <center>We provide the source code of the models in our <a
+                  href="https://github.com/ModelingTaskForce/covidApp" target="_blank"> Github</a>.</center>
+            </h3>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <footer class="page-footer font-small footer"  id="footer">
     <div class="container-fluid text-center text-md-left">
 
       <div class="row">
@@ -265,12 +417,14 @@
     </div>
   </footer>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"> </script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"> </script>
-<script src="../js/scripts.js"></script>
 
-
+  <script src="../js/jquery-3.3.1.min.js"></script>
+  <script src="../js/jquery-migrate-3.0.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  <script src="../js/jquery.backstretch.min.js"></script>
+  <script src="../js/wow.min.js"></script>
+  <script src="../js/scripts.js"></script>
 </body>
 
 </html>
