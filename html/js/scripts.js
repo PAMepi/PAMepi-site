@@ -99,6 +99,7 @@ $(window).on(
     normalizeSlideHeights);
 
 
+// change size of navbar when scroll down the page
 window.onscroll = function() {
     if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
         document.getElementById("navbar").style.padding = "0";
@@ -107,4 +108,64 @@ window.onscroll = function() {
         document.getElementById("navbar").style.padding = "1.5rem 0";
         document.getElementById("logo").style.fontSize = "1.1rem";
     }
+}
+
+// change position of the footer to be always on tjhe bottom
+    $(document).ready(function() {
+        setInterval(function() {
+            var docHeight = $(window).height();
+            var footerHeight = $('#footer').height();
+            var footerTop = $('#footer').position().top + footerHeight;
+            var marginTop = (docHeight - footerTop + 10);
+
+            if (footerTop < docHeight)
+                $('#footer').css('margin-top', marginTop + 'px'); // padding of 30 on footer
+            else
+                $('#footer').css('margin-top', '0px');
+            // console.log("docheight: " + docHeight + "\n" + "footerheight: " + footerHeight + "\n" + "footertop: " + footerTop + "\n" + "new docheight: " + $(window).height() + "\n" + "margintop: " + marginTop);
+        }, 250);
+    });
+
+    
+// keep dropdown open
+    $(document).ready(function() {
+  $('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
+    if (!$(this).next().hasClass('show')) {
+      $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
+    }
+    var $subMenu = $(this).next(".dropdown-menu");
+    $subMenu.toggleClass('show');
+
+
+    $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
+      $('.dropdown-submenu .show').removeClass("show");
+    });
+
+    return false;
+  });
+    });
+
+    function hasTouch() {
+  return 'ontouchstart' in document.documentElement
+         || navigator.maxTouchPoints > 0
+         || navigator.msMaxTouchPoints > 0;
+}
+
+
+// remove all the :hover on touchscreens devices
+if (hasTouch()) { 
+  try { // prevent exception on browsers not supporting DOM styleSheets properly
+    for (var si in document.styleSheets) {
+      var styleSheet = document.styleSheets[si];
+      if (!styleSheet.rules) continue;
+
+      for (var ri = styleSheet.rules.length - 1; ri >= 0; ri--) {
+        if (!styleSheet.rules[ri].selectorText) continue;
+
+        if (styleSheet.rules[ri].selectorText.match(':hover')) {
+          styleSheet.deleteRule(ri);
+        }
+      }
+    }
+  } catch (ex) {}
 }
