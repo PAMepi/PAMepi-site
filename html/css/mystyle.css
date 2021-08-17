@@ -32,8 +32,9 @@ html {
 
 .navbar {
   background-color: #900d0d;
-  padding: 1rem 0;
+  padding: 1.2rem 0;
   color: #f2f2f2;
+
 
 }
 
@@ -59,6 +60,7 @@ html {
   position: relative;
   display: inline-block;
   border-radius: 8px;
+  padding: 0;
 
 }
 
@@ -114,8 +116,10 @@ html {
   text-align: left;
   background-color: #900d0d;
   font-weight: 700;
+  font-size: 0.9rem;
   color: #ddd;
   border-radius: 8px;
+  padding: 0.1rem .8rem;
 }
 
 .dropdown-item:active,
@@ -140,9 +144,9 @@ nav {
 .nav-item {
   margin: 0;
   text-align: left;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-family: 'Ruda', sans-serif;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .nav-link:active,
@@ -166,6 +170,7 @@ nav {
 .navbar-item {
   text-transform: uppercase;
   padding: 0;
+  margin: 0;
 }
 
 .nav-link:hover {
@@ -192,12 +197,12 @@ nav {
 .home {
   filter: invert(99%) sepia(6%) saturate(893%) hue-rotate(248deg) brightness(120%) contrast(100%);
   background: url("../img/home.svg") no-repeat;
-  width: 1.4rem;
-  height: 1.3rem;
+  width: 1.3rem;
+  height: 1.2rem;
   background-position: center;
   background-size: cover;
   padding: 0;
-  margin-left: 1rem;
+  margin: 0 0rem 0 1rem;
 }
 
 .home:hover {
@@ -212,14 +217,16 @@ nav {
 }
 
 .nav-arrow {
-  width: 1.1rem;
+  width: 1rem;
   filter: invert(99%) sepia(6%) saturate(893%) hue-rotate(248deg) brightness(120%) contrast(100%);
-  margin: 0;
+  margin: 0 0.2rem .1rem 0;
   padding: 0;
+
+
 }
 
 .navbar-brand {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-family: 'Ruda', sans-serif;
   padding: 0.5rem;
   color: #ddd;
@@ -248,7 +255,7 @@ nav {
 }
 
 .language {
-  width: 1.5rem;
+  width: 1rem;
   padding: 0rem;
 }
 
@@ -558,8 +565,8 @@ body {
 
 h2 {
   color: #900d0d;
-  font-weight: 400;
-  font-size: 1.9rem;
+  font-weight: 600;
+  font-size: 1.7rem;
   margin: 1rem 0;
   column-span: all;
 }
@@ -614,22 +621,37 @@ h2 {
 
 .data-card {
   margin-bottom: 3rem;
+  border-radius: 16px;
+  overflow: hidden;
 }
 
-.card-header:hover {
+.data-header {
+  padding: 0.2rem 1rem;
+  background-color: #423144;
+  border-radius: 16px 16px 0 0;
+  color: #fff;
+}
+
+.card-header {
+  border-radius: 16px 16px 0 0;
+}
+
+.data-button:hover {
   box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.1);
   background-color: #ddd;
-  border-radius: 16px 16px 0 0;
+  border-radius: 0 0 16px 16px;
+  color: #222;
 }
 
 .card-title {
   text-align: left;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   align-items: center;
   margin: 0;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
   padding: 0.8rem 0 0.8rem 1rem;
+  border-radius: 16px 16px 0 0;
 }
 
 .data-footer {
@@ -637,7 +659,7 @@ h2 {
 }
 
 .data-body {
-  padding: 2rem;
+  padding: 1rem 2rem;
 }
 
 .list-group-item {
@@ -841,9 +863,8 @@ a:hover {
   font-weight: bold;
 }
 
-@media only screen and (max-width: 1320px) {}
 
-@media only screen and (max-width: 1065px) {
+@media only screen and (max-width: 992px) {
   .dropdown-content {
     padding: 0;
     margin: 0;
@@ -854,7 +875,20 @@ a:hover {
   }
 
   .dropdown-item {
-    padding-left: 1rem;
+    padding: 0.2rem 0 0.2rem 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+
+  }
+
+  .nav-link {
+    padding: 0.2rem 0 0.2rem 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .dropdown-submenu:hover {
+    background-color: #900d0d;
+
   }
 
   .submenu {
@@ -880,6 +914,10 @@ a:hover {
 
   h1 {
     font-size: 1.5rem;
+  }
+
+  .navbar-brand {
+    font-size: 0.9rem;
   }
 }
 
@@ -982,10 +1020,12 @@ a:hover {
   background-color: #eee;
   border: none;
   color: #000;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
   margin: 0;
   width: 100%;
   border-radius: 0 0 16px 16px;
+  display: block;
+  text-align: center;
 }
 
 .button {
@@ -1048,4 +1088,19 @@ a:hover {
 .top-model {
   margin-top: 10rem;
   text-align: center;
+}
+
+.truncate {
+
+
+  /**Major Properties**/
+  line-height: 1.8rem;
+  max-height: 4rem;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+
 }
