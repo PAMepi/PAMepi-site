@@ -102,11 +102,11 @@ $(window).on(
 // change size of navbar when scroll down the page
 window.onscroll = function() {
     if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-        document.getElementById("navbar").style.padding = "0";
-        document.getElementById("logo").style.fontSize = "1rem";
+        document.getElementById("navbar").style.padding = "0.2rem 0";
+        document.getElementById("logo").style.fontSize = "0.8rem";
     } else {
-        document.getElementById("navbar").style.padding = "1.5rem 0";
-        document.getElementById("logo").style.fontSize = "1.1rem";
+        document.getElementById("navbar").style.padding = "1.2rem 0";
+        document.getElementById("logo").style.fontSize = "1rem";
     }
 }
 
