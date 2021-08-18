@@ -345,34 +345,32 @@ svg:hover {
 
 .fiocruz:hover,
 .inova:hover,
-.icoda:hover,
-.hdruk:hover,
-.gates:hover,
 .agradecimentos-img:hover {
     filter: invert(26%) sepia(77%) saturate(659%) hue-rotate(299deg) brightness(88%) contrast(86%);
 }
 
 
 .icoda {
-    width: 6rem;
-
+    width: 9rem;
+    height: 4rem;
     padding: 0;
-    margin: 1rem 2rem 2rem 0;
+    margin: 1rem 1.5rem 1rem;
 }
 
 .hdruk {
-    width: 7rem;
+    width: 9rem;
     height: 3rem;
-    object-fit: cover;
     padding: 0;
-    margin: 1.5rem 2rem 2rem 0;
+    margin: 2rem 0 0 0;
+    /* 160*57 */
+
 }
 
 .gates {
-    width: 10rem;
-
+    width: 9rem;
+    height: 2rem;
     padding: 0;
-    margin: 0 2rem 2rem 0;
+    margin: 1rem 1.5rem 2rem;
 }
 
 .flaticon-img {
