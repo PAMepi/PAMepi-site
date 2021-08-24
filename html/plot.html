@@ -121,7 +121,9 @@
                         <h6 class="dropdown-header">Descritiva</h6>
                       </li>
                       <li class="dropdown-item drop-item">
-                        <a href="plot.html" class="itemcol nav-link submenu"
+                        <a
+                          href="plot.html"
+                          class="itemcol nav-link submenu active"
                           >Panorama</a
                         >
                       </li>
@@ -134,7 +136,7 @@
                   </div>
                   <div class="col-sm-6">
                     <ul class="multi-column-dropdown">
-                      <li class="active">
+                      <li>
                         <h6 class="dropdown-header">Modelos</h6>
                       </li>
                       <li
@@ -147,14 +149,7 @@
                         "
                       >
                         <a
-                          class="
-                            btn
-                            dropdown-toggle
-                            nav-link
-                            submenu
-                            itemcol
-                            active
-                          "
+                          class="btn dropdown-toggle nav-link submenu itemcol"
                           href="#"
                           data-toggle="dropdown"
                           data-flip="false"
@@ -170,7 +165,7 @@
                             >
                           </li>
                           <li class="dropdown-item drop-item sub-drop">
-                            <a href="longo.html" class="nav-link submenu active"
+                            <a href="longo.html" class="nav-link submenu"
                               >Longo prazo</a
                             >
                           </li>
@@ -382,14 +377,12 @@
                 aria-labelledby="navbarDropdown1"
               >
                 <div class="dropdown-item drop-item">
-                  <a href="longo.html" class="nav-link active submenu"
+                  <a href="plot.html" class="nav-link active submenu"
                     >Português</a
                   >
                 </div>
                 <div class="dropdown-item drop-item">
-                  <a href="en/longo_en.html" class="nav-link submenu"
-                    >English</a
-                  >
+                  <a href="" class="nav-link submenu">English</a>
                 </div>
               </div>
             </li>
@@ -398,17 +391,18 @@
       </div>
     </nav>
 
-    <div class="top-model"><h1>Modelos de longo prazo</h1></div>
+    <div class="top-model">
+      <h1>Situação do Covid no Brasil</h1>
+    </div>
     <div id="myDiv" class="animate-bottom">
       <div id="iframe-conf" style="margin: 0">
-        <!--Changed here to try to force iframe -->
         <iframe
-          id="long_time_pred"
-          src="https://modelacovid19.rondonia.fiocruz.br/shiny/long_pred/"
+          id="plot"
+          src="https://modelingtaskforce.shinyapps.io/new_AED/"
           style="
             border: none;
             width: 100%;
-            height: 800px;
+            height: 1600px;
             margin-top: 2rem;
             margin-bottom: -25px;
           "
@@ -459,8 +453,8 @@
                 >
               </li>
               <!-- <li>
-              <a href="" class="foot-link">Ensino</a>
-            </li> -->
+      <a href="" class="foot-link">Ensino</a>
+    </li> -->
               <li>
                 <a href="news.html#newsletter" class="foot-link">Newsletter</a>
               </li>
@@ -505,8 +499,8 @@
         </div>
       </div>
     </footer>
-    <div id="loader"></div>
 
+    <div id="loader"></div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

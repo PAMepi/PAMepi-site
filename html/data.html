@@ -1,191 +1,605 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <title>PAMEpi</title>
 
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <!-- CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-  <title>PAMEpi</title>
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ruda:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Google fonts -->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ruda:wght@400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/mystyle.css" />
+    <link rel="icon" href="img/favicon.ico" />
+  </head>
 
-
-  <link rel="stylesheet" type="text/css" href="css/mystyle.css" />
-  <link rel="icon" href="img/favicon.ico">
-
-</head>
-
-<body>
-  <nav id="navbar" class="navbar navbar-expand-lg fixed-top justify-content-center">
+  <body>
+    <nav
+      id="navbar"
+      class="navbar navbar-expand-lg fixed-top justify-content-center"
+    >
       <div class="container-fluid">
-        <div class="w-100 navbar-header">
-
+        <div class="navbar-header">
           <a href="index.html" class="navbar-brand active">
-            <img src="img/home.svg" class="home"></a>
+            <img src="img/home.svg" class="home"
+          /></a>
 
-          <img src="img/right-arrow.svg" class="nav-arrow">
+          <img src="img/right-arrow.svg" class="nav-arrow" />
 
-          <a class="navbar-brand" href="covid.html">PAMEpi -  Covid-19 </a>
-          <button class="navbar-toggler navbar-light  ml-auto hidden-sm-up  float-right custom-toggler" autofocus
-            type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
-            aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon "></span>
-          </button></div>
+          <a class="navbar-brand" href="covid.html">PAMEpi - Covid-19 </a>
+        </div>
+        <button
+          class="
+            navbar-toggler navbar-light
+            ml-auto
+            hidden-sm-up
+            float-xs-right
+            custom-toggler
+          "
+          autofocus
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
         <div class="collapse navbar-collapse w-100" id="navbarNav">
-
-          <ul class="nav navbar-nav ml-auto dropdown-menu-right ">
-
+          <ul class="nav navbar-nav ml-auto dropdown-menu-right">
             <li class="navbar-item dropdown">
-              <div class=" dropdown-item dropdown-toggle " id="navbarDropdown1" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false" tabindex="0">Plataforma</div>
-              <div class="dropdown-menu dropdown" aria-labelledby="navbarDropdown1">
+              <div
+                class="dropdown-item dropdown-toggle"
+                id="navbarDropdown1"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                tabindex="0"
+              >
+                Projeto
+              </div>
+              <div
+                class="dropdown-menu dropdown"
+                aria-labelledby="navbarDropdown1"
+              >
                 <div class="dropdown-item drop-item">
-                  <a href="covid.html#projeto" class="nav-link submenu ">
-                    Projeto</a>
+                  <a href="covid.html#projeto" class="nav-link submenu">
+                    Objetivos</a
+                  >
                 </div>
                 <div class="dropdown-item drop-item">
-                  <a href="covid.html#tutorial" class="nav-link submenu ">Tutorial</a>
+                  <a href="covid.html#tutorial" class="nav-link submenu"
+                    >Tutorial</a
+                  >
                 </div>
                 <div class="dropdown-item drop-item">
-                  <a href="covid.html#github" class="nav-link submenu ">Código fonte</a>
+                  <a href="covid.html#github" class="nav-link submenu"
+                    >Código fonte</a
+                  >
                 </div>
               </div>
-
             </li>
 
             <li class="navbar-item dropdown">
-
-              <div class="dropdown-item dropdown-toggle " id="navbarDropdown2" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false" tabindex="0">Modelos</div>
-
-              <div class="dropdown-menu dropdown " aria-labelledby="navbarDropdown2">
-                <div class="dropdown-item drop-item  dropdown dropright dropdown-submenu">
-
-
-
-                  <a class=" btn dropdown-toggle  nav-link  submenu " href="#" data-toggle="dropdown" data-flip="false"
-                    style="text-align: left;">
-                    Estados
-                  </a>
-
-                  <ul class="dropdown-menu sub-drop">
-                    <li class="dropdown-item drop-item sub-drop">
-                      <a href="curto.html" class="nav-link  submenu ">Curto prazo</a>
-                    </li>
-                    <li class="dropdown-item drop-item sub-drop">
-                      <a href="longo.html" class="nav-link submenu ">Longo prazo</a>
-                    </li>
-                    <li class="dropdown-item drop-item sub-drop">
-                      <a href="compara.html" class="nav-link submenu ">Comparação</a>
-                    </li>
-                    <li class="dropdown-item drop-item sub-drop">
-                      <a href="valida.html" class="nav-link submenu ">Validação</a>
-                    </li>
-                    <li class="dropdown-item drop-item sub-drop">
-                      <a href="simula.html" class="nav-link submenu ">Simulação</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="dropdown-item drop-item">
-                  <a href="municipios.html" class="nav-link submenu ">Municipios</a>
-                </div>
-                <div class="dropdown-item drop-item">
-                  <a href="reg_sau.html" class="nav-link submenu ">Regiões de saúde</a>
-                </div>
-                <div class="dropdown-item drop-item">
-                  <a href="tsd.html" class="nav-link submenu ">Traga seus dados</a>
-                </div>
-
+              <div
+                class="dropdown-item dropdown-toggle"
+                id="navbarDropdown2"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                tabindex="0"
+              >
+                Vizualização
               </div>
 
+              <div
+                class="
+                  dropdown-menu dropdown
+                  multi-column
+                  columns-2
+                  dropdown-menu-right
+                "
+                aria-labelledby="navbarDropdown2"
+              >
+                <div class="row">
+                  <div class="col-sm-6">
+                    <ul class="multi-column-dropdown">
+                      <li>
+                        <h6 class="dropdown-header">Descritiva</h6>
+                      </li>
+                      <li class="dropdown-item drop-item">
+                        <a href="plot.html" class="itemcol nav-link submenu"
+                          >Panorama</a
+                        >
+                      </li>
+                      <li class="dropdown-item drop-item disabled">
+                        <a href="#" class="itemcol nav-link submenu isDisabled"
+                          >Decretos e Mobilidade</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-6">
+                    <ul class="multi-column-dropdown">
+                      <li>
+                        <h6 class="dropdown-header">Modelos</h6>
+                      </li>
+                      <li
+                        class="
+                          dropdown-item
+                          drop-item
+                          dropdown
+                          dropright
+                          dropdown-submenu
+                        "
+                      >
+                        <a
+                          class="btn dropdown-toggle nav-link submenu itemcol"
+                          href="#"
+                          data-toggle="dropdown"
+                          data-flip="false"
+                          style="text-align: left"
+                        >
+                          Estados
+                        </a>
+
+                        <ul class="dropdown-menu sub-drop">
+                          <li class="dropdown-item drop-item sub-drop">
+                            <a href="curto.html" class="nav-link submenu"
+                              >Curto prazo</a
+                            >
+                          </li>
+                          <li class="dropdown-item drop-item sub-drop">
+                            <a href="longo.html" class="nav-link submenu"
+                              >Longo prazo</a
+                            >
+                          </li>
+                          <li class="dropdown-item drop-item sub-drop disabled">
+                            <a
+                              href="compara.html"
+                              class="nav-link submenu isDisabled"
+                              >Comparação</a
+                            >
+                          </li>
+                          <li class="dropdown-item drop-item sub-drop disabled">
+                            <a
+                              href="valida.html"
+                              class="nav-link submenu isDisabled"
+                              >Validação</a
+                            >
+                          </li>
+                          <li class="dropdown-item drop-item sub-drop disabled">
+                            <a
+                              href="simula.html"
+                              class="nav-link submenu isDisabled"
+                              >Simulação</a
+                            >
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="dropdown-item drop-item disabled">
+                        <a
+                          href="municipios.html"
+                          class="itemcol nav-link submenu isDisabled"
+                          >Municipios</a
+                        >
+                      </li>
+                      <li class="dropdown-item drop-item disabled">
+                        <a
+                          href="reg_sau.html"
+                          class="itemcol nav-link submenu isDisabled"
+                          >Regiões de saúde</a
+                        >
+                      </li>
+                      <li class="dropdown-item drop-item disabled">
+                        <a
+                          href="tsd.html"
+                          class="itemcol nav-link submenu isDisabled"
+                          >Traga seus dados</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </li>
-<li class="navbar-item dropdown">
-              <div class=" dropdown-item dropdown-toggle active" id="navbarDropdown5" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false" tabindex="0">Dados</div>
-              <div class="dropdown-menu dropdown" aria-labelledby="navbarDropdown3">
-                <div class="dropdown-item drop-item">
-                  <a href="data.html" class="nav-link submenu ">
-                    Base de dados</a>
-                </div>
-                <div class="dropdown-item drop-item" >
-                  <a href="#" class="nav-link submenu " >Decretos e mobilidade</a>
-                </div>
 
+            <li class="navbar-item dropdown">
+              <div
+                class="dropdown-item dropdown-toggle active"
+                id="navbarDropdown2"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                tabindex="0"
+              >
+                Dados
               </div>
 
+              <div
+                class="
+                  dropdown-menu dropdown
+                  multi-column
+                  columns-2
+                  dropdown-menu-right
+                "
+                aria-labelledby="navbarDropdown2"
+              >
+                <div class="row">
+                  <div class="col-sm-6">
+                    <ul class="multi-column-dropdown">
+                      <li>
+                        <h6 class="dropdown-header">Arquitetura</h6>
+                      </li>
+                      <li class="dropdown-item drop-item">
+                        <a
+                          href="data.html"
+                          class="itemcol nav-link submenu active"
+                          >Visão geral</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-6 secondcol">
+                    <ul class="multi-column-dropdown">
+                      <li>
+                        <h6 class="dropdown-header">Saúde</h6>
+                      </li>
+
+                      <li class="dropdown-item drop-item disabled">
+                        <a href="#" class="nav-link submenu itemcol isDisabled"
+                          >SIVEP</a
+                        >
+                      </li>
+                      <li class="dropdown-item drop-item disabled">
+                        <a href="#" class="nav-link submenu itemcol isDisabled"
+                          >SRAG</a
+                        >
+                      </li>
+                      <li class="dropdown-item drop-item disabled">
+                        <a href="#" class="nav-link submenu itemcol isDisabled"
+                          >Brasil IO</a
+                        >
+                      </li>
+                      <li class="dropdown-item drop-item disabled">
+                        <a href="#" class="nav-link submenu itemcol isDisabled"
+                          >Vacinação</a
+                        >
+                      </li>
+                      <li class="dropdown-item drop-item disabled">
+                        <a href="#" class="nav-link submenu itemcol isDisabled"
+                          >Ocupação Hospitalar</a
+                        >
+                      </li>
+                      <li>
+                        <h6 class="dropdown-header">Mobilidade</h6>
+                      </li>
+                      <li class="dropdown-item drop-item disabled">
+                        <a href="#" class="nav-link submenu itemcol isDisabled"
+                          >Google</a
+                        >
+                      </li>
+                      <li class="dropdown-item drop-item disabled">
+                        <a href="#" class="nav-link submenu itemcol isDisabled"
+                          >Intercidade</a
+                        >
+                      </li>
+                      <li>
+                        <h6 class="dropdown-header">Inequalidade</h6>
+                      </li>
+                      <li class="dropdown-item drop-item disabled">
+                        <a href="#" class="itemcol nav-link submenu isDisabled"
+                          >IBP</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="navbar-item dropdown">
+              <div
+                class="dropdown-item dropdown-toggle"
+                id="navbarDropdown1"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                tabindex="0"
+              >
+                Comunicação
+              </div>
+              <div
+                class="dropdown-menu dropdown dropdown-menu-right"
+                aria-labelledby="navbarDropdown1"
+              >
+                <div class="dropdown-item drop-item">
+                  <a href="news.html#newsletter" class="nav-link submenu">
+                    Newsletter</a
+                  >
+                </div>
+                <div class="dropdown-item drop-item">
+                  <a href="news.html#midia" class="nav-link submenu"
+                    >Notícias</a
+                  >
+                </div>
+                <div class="dropdown-item drop-item">
+                  <a href="news.html#galeria-videos" class="nav-link submenu"
+                    >Galeria de vídeos</a
+                  >
+                </div>
+                <div class="dropdown-item drop-item">
+                  <a href="news.html#artigos" class="nav-link submenu"
+                    >Artigos</a
+                  >
+                </div>
+                <div class="dropdown-item drop-item">
+                  <a href="contato.html#faq" class="nav-link submenu"
+                    >Perguntas frequentes</a
+                  >
+                </div>
+                <div class="dropdown-item drop-item">
+                  <a href="contato.html#faleconosco" class="nav-link submenu"
+                    >Fale conosco</a
+                  >
+                </div>
+              </div>
             </li>
             <li class="navbar-item dropdown">
-              <div class=" dropdown-item dropdown-toggle" id="navbarDropdown1" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false" tabindex="0">Comunicação</div>
-              <div class="dropdown-menu dropdown" aria-labelledby="navbarDropdown1">
-                <div class="dropdown-item drop-item">
-                  <a href="news.html#newsletter" class="nav-link submenu ">
-                    Newsletter</a>
-                </div>
-                <div class="dropdown-item drop-item">
-                  <a href="news.html#midia" class="nav-link submenu ">Notícias</a>
-                </div>
-                <div class="dropdown-item drop-item">
-                  <a href="news.html#galeria-videos" class="nav-link submenu ">Galeria de vídeos</a>
-                </div>
-                <div class="dropdown-item drop-item">
-                  <a href="news.html#artigos" class="nav-link submenu ">Artigos</a>
-                </div>
-                <div class="dropdown-item drop-item">
-                  <a href="contato.html#faq" class="nav-link submenu ">Perguntas frequentes</a>
-                </div>
-                <div class="dropdown-item drop-item">
-                  <a href="contato.html#faleconosco" class="nav-link submenu ">Fale conosco</a>
-                </div>
+              <div
+                class="dropdown-item dropdown-toggle"
+                id="navbarDropdown1"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                tabindex="0"
+              >
+                <img src="img/language.png" class="language" />
               </div>
-
-            </li>
-            <li class="navbar-item dropdown">
-              <div class=" dropdown-item dropdown-toggle " id="navbarDropdown1" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false" tabindex="0"><img src="img/language.png" class="language" />
-              </div>
-              <div class="dropdown-menu dropdown dropdown-menu-right" aria-labelledby="navbarDropdown1">
-
+              <div
+                class="dropdown-menu dropdown dropdown-menu-right"
+                aria-labelledby="navbarDropdown1"
+              >
                 <div class="dropdown-item drop-item">
-                  <a href="data.html" class="nav-link active submenu">Português</a>
+                  <a href="data.html" class="nav-link active submenu"
+                    >Português</a
+                  >
                 </div>
                 <div class="dropdown-item drop-item">
                   <a href="en/data_en.html" class="nav-link submenu">English</a>
                 </div>
               </div>
-
             </li>
-
-
-
           </ul>
-
         </div>
       </div>
     </nav>
 
-<div class="top margin-bottom" id="">
-      <h1>Base de dados </h1>
-      <div class="div-media">
-        <div class="media">
-          <div class="media-left  construction">
-            <img src="img/construction.svg" class="media-object" style="width:80px">
+    <section class="top" id="overview">
+      <h1 style="padding: 2rem 0 2rem">Base de dados</h1>
+      <h2>Visão geral do conjunto de dados</h2>
+
+      <div class="intro" style="padding: 2rem 0rem 5rem">
+        <p>
+          Os dados utilizados nessa plataforma foram coletamos de maneira a
+          incluir diversos estados infecciosos, comportamento socioeconômico e
+          humano.
+        </p>
+        <p>
+          Integraremos os dados de determinantes socioeconômicos e de saúde
+          disponíveis para cada uma das 5.570 cidades brasileiras.
+        </p>
+        <p>
+          Além disso, avaliaremos em conjunto as informações sobre as
+          intervenções implementadas e os padrões de mobilidade social.
+        </p>
+        <p>
+          Os dados harmonizados em nível municipal serão um recurso fundamental
+          que permitirá a aplicação e desenvolvimento de análises estatísticas,
+          modelagem matemática não linear, visualização de dados e divulgação
+          científica sobre a pandemia COVID-19.
+        </p>
+      </div>
+    </section>
+
+    <hr />
+    <section>
+      <div class="middle-white">
+        <h2 style="margin-bottom: 4rem">Nossos arquivos de dados</h2>
+
+        <div class="card data-card" id="srag">
+          <div class="card-header data-header">
+            <h5 class="card-title">Síndrome Respiratória Aguda Grave (SRAG)</h5>
           </div>
-          <div class="media-body">
-            <h3 class="media-heading">
-              <center>Em desenvolvimento...</center>
-            </h3>
+
+          <div class="card-body data-body">
+            <p class="card-text truncate">
+              O conjunto de dados da Síndrome Respiratória Aguda Grave são dados
+              de saúde obtidos do Ministério da Saúde do Brasil. Os dados
+              relatam indivíduos na população brasileira afetados por síndrome
+              respiratória aguda grave, particularmente infecções causadas por
+              SARS-COV-2. Além disso, o conjunto de dados possui informações
+              individuais, não identificáveis, do local de residência (como a
+              cidade), idade, sexo e estado infeccioso, se a pessoa necessitou
+              de hospitalização ou faleceu. Portanto, pode ser agregado para
+              realizar análises de risco e estudos da evolução dinâmica de casos
+              graves de COVID-19 em nível municipal e também pode ser explorado
+              para outras questões. Além disso, o conjunto de dados contém
+              notificações desde 1º de janeiro de 2020, até a data atual. Os
+              dados são atualizados semanalmente em nosso projeto.
+            </p>
+          </div>
+          <div class="card-footer data-footer">
+            <a class="data-button isDisabled" href="srag.html">Acessar</a>
+          </div>
+        </div>
+
+        <div class="card data-card" id="brio">
+          <div class="card-header data-header">
+            <h5 class="card-title">Brasil IO</h5>
+          </div>
+          <div class="card-body data-body">
+            <p class="card-text truncate">
+              O conjunto de dados Brasil IO corresponde a casos confirmados de
+              COVID-19 agregados em nível municipal, a partir de 1º de fevereiro
+              de 2020, que também é fornecido pelo Ministério da Saúde do
+              Brasil.
+            </p>
+          </div>
+
+          <div class="card-footer data-footer">
+            <a class="data-button isDisabled" href="brio.html">Acessar</a>
+          </div>
+        </div>
+
+        <div class="card data-card" id="sivep">
+          <div class="card-header data-header">
+            <h5 class="card-title">
+              Sistema de Informação de Vigilância Epidemiológica da Gripe
+              (SIVEP)
+            </h5>
+          </div>
+          <div class="card-body data-body">
+            <p class="card-text truncate">Em desenvolvimento.</p>
+          </div>
+          <div class="card-footer data-footer">
+            <a class="data-button isDisabled" href="sivep.html">Acessar</a>
+          </div>
+        </div>
+
+        <div class="card data-card" id="vac">
+          <div class="card-header data-header">
+            <h5 class="card-title">Vacinação</h5>
+          </div>
+          <div class="card-body data-body">
+            <p class="card-text truncate">Em desenvolvimento.</p>
+          </div>
+
+          <div class="card-footer data-footer">
+            <a class="data-button isDisabled" href="vac.html">Acessar</a>
+          </div>
+        </div>
+
+        <div class="card data-card" id="hosp">
+          <div class="card-header data-header">
+            <h5 class="card-title">Ocupação hospitalar</h5>
+          </div>
+          <div class="card-body data-body">
+            <p class="card-text truncate">Em desenvolvimento.</p>
+          </div>
+
+          <div class="card-footer data-footer">
+            <a class="data-button isDisabled" href="hosp.html">Acessar</a>
+          </div>
+        </div>
+
+        <div class="card data-card" id="mobgoogle">
+          <div class="card-header data-header">
+            <h5 class="card-title">Mobilidade Google</h5>
+          </div>
+          <div class="card-body data-body">
+            <p class="card-text truncate">
+              O conjunto de dados de mobilidade Google representa a mobilidade
+              humana fornecida pelas tendências do
+              <a href="https://www.google.com/covid19/mobility/" target="_blank"
+                >Google</a
+              >, que relata como a mobilidade humana é afetada pela propagação
+              do COVID-19 desde 15 de fevereiro de 2020.
+            </p>
+          </div>
+
+          <div class="card-footer data-footer">
+            <a class="data-button isDisabled" href="mobgoogle.html">Acessar</a>
+          </div>
+        </div>
+
+        <div class="card data-card" id="ibp">
+          <div class="card-header data-header">
+            <h5 class="card-title">Índice de privação brasileiro (IBP)</h5>
+          </div>
+          <div class="card-body data-body">
+            <p class="card-text truncate">
+              O conjunto de dados Índice de privação Brasileiro fornece medidas
+              de privação para cada município brasileiro e setor censitário e é
+              usado para avaliar as desigualdades em saúde em todo o país. O
+              Censo Demográfico Brasileiro de 2010 é a base de cálculo da medida
+              de privação, disponível no
+              <a
+                href="https://cidacs.bahia.fiocruz.br/ibp/base-de-dados-do-ibp-municipal-esta-disponivel-para-download"
+                target="_blank"
+                >CIDACS</a
+              >. Esses dados não precisam ser atualizados.
+            </p>
+          </div>
+          <div class="card-footer data-footer">
+            <a class="data-button isDisabled" href="ibp.html">Acessar</a>
+          </div>
+        </div>
+
+        <div class="card data-card" id="mobcity">
+          <div class="card-header data-header">
+            <h5 class="card-title">Mobilidade intermunicipal Brasileira</h5>
+          </div>
+          <div class="card-body data-body">
+            <p class="card-text truncate">
+              O conjunto de dados Mobilidade intermunicipal Brasileira são os
+              dados históricos de fluxo médio diário em todo o país usando redes
+              rodoviárias, aéreas e fluviais. Os dados estão disponíveis no
+              Instituto Brasileiro de Geografia e Estatística e medidos pelo
+              Censo Demográfico Brasileiro de 2010.
+            </p>
+          </div>
+
+          <div class="card-footer data-footer">
+            <a class="data-button isDisabled" href="mobcity.html">Acessar</a>
+          </div>
+        </div>
+
+        <div class="card data-card" id="jusbr">
+          <div class="card-header data-header">
+            <h5 class="card-title">Índice de estringência</h5>
+          </div>
+          <div class="card-body data-body">
+            <p class="card-text truncate">
+              O conjunto de dados Índice de estringência é uma métrica que
+              resume o nível de medidas governamentais promulgadas pelos estados
+              locais a partir de Março de 2020. O conjunto de dados é dividido
+              em dois arquivos. O primeiro contém informações textuais das
+              medidas aplicadas em ordem cronológica e para cada estado. O
+              segundo arquivo inclui a métrica global de rigor calculada, uma
+              combinação de subíndices de diferentes tipos de fiscalização, como
+              restrições a eventos, fechamento de escolas, etc. Os dados podem
+              ser obtidos pelo
+              <a href="https://www.jusbrasil.com.br/" target="_blank"
+                >JusBrasil</a
+              >.
+            </p>
+          </div>
+
+          <div class="card-footer data-footer">
+            <a class="data-button isDisabled" href="jusbr.html">Acessar</a>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-  <footer class="page-footer font-small footer" id="footer">
+    <footer class="page-footer font-small footer" id="footer">
       <div class="container-fluid text-center text-md-left">
-
         <div class="row">
           <div class="col-md-3 mb-md-0 mb-3">
             <h5 class="text-uppercase">A plataforma</h5>
@@ -205,12 +619,13 @@
                 <a href="team.html#team" class="foot-link">Equipe</a>
               </li>
               <li>
-                <a href="team.html#acknowledge" class="foot-link">Agradecimentos</a>
+                <a href="team.html#acknowledge" class="foot-link"
+                  >Agradecimentos</a
+                >
               </li>
               <li>
                 <a href="team.html#support" class="foot-link">Apoio</a>
               </li>
-
             </ul>
           </div>
 
@@ -221,7 +636,9 @@
                 <a href="news.html#midia" class="foot-link">Notícias</a>
               </li>
               <li>
-                <a href="news.html#galeria-videos" class="foot-link">Galeria de vídeos</a>
+                <a href="news.html#galeria-videos" class="foot-link"
+                  >Galeria de vídeos</a
+                >
               </li>
               <!-- <li>
               <a href="" class="foot-link">Ensino</a>
@@ -242,7 +659,9 @@
                 <a href="contato.html#faq" class="foot-link">FAQ</a>
               </li>
               <li>
-                <a href="contato.html#faleconosco" class="foot-link">Fale conosco</a>
+                <a href="contato.html#faleconosco" class="foot-link"
+                  >Fale conosco</a
+                >
               </li>
             </ul>
           </div>
@@ -250,24 +669,27 @@
           <div class="col-md-3 mb-md-0 mb-3">
             <ul class="list-unstyled">
               <li>
-                <a href="https://cidacs.bahia.fiocruz.br/" target="_blank"><img src="img/CIDACS_Bw.png"
-                    class="img-cidacs" /></a>
+                <a href="https://cidacs.bahia.fiocruz.br/" target="_blank"
+                  ><img src="img/CIDACS_Bw.png" class="img-cidacs"
+                /></a>
               </li>
               <li>
-                <a class="" href="https://www.rondonia.fiocruz.br/" target="_blank"> <img
-                    src="img/fio_rond_bw.png" class="img-fiocruz" /></a>
+                <a
+                  class=""
+                  href="https://www.rondonia.fiocruz.br/"
+                  target="_blank"
+                >
+                  <img src="img/fio_rond_bw.png" class="img-fiocruz"
+                /></a>
               </li>
             </ul>
           </div>
-
         </div>
       </div>
     </footer>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"> </script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"> </script>
- <script src="js/scripts.js"></script>
-
-</body>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
 </html>
