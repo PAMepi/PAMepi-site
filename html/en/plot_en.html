@@ -121,7 +121,9 @@
                         <h6 class="dropdown-header">Description</h6>
                       </li>
                       <li class="dropdown-item drop-item">
-                        <a href="plot_en.html" class="itemcol nav-link submenu"
+                        <a
+                          href="plot.html"
+                          class="itemcol nav-link submenu active"
                           >Outlook</a
                         >
                       </li>
@@ -148,14 +150,7 @@
                         "
                       >
                         <a
-                          class="
-                            btn
-                            dropdown-toggle
-                            nav-link
-                            submenu
-                            itemcol
-                            active
-                          "
+                          class="btn dropdown-toggle nav-link submenu itemcol"
                           href="#"
                           data-toggle="dropdown"
                           data-flip="false"
@@ -171,9 +166,7 @@
                             >
                           </li>
                           <li class="dropdown-item drop-item sub-drop">
-                            <a
-                              href="longo_en.html"
-                              class="nav-link submenu active"
+                            <a href="longo_en.html" class="nav-link submenu"
                               >Long term</a
                             >
                           </li>
@@ -255,7 +248,7 @@
                         <h6 class="dropdown-header">Architecture</h6>
                       </li>
                       <li class="dropdown-item drop-item">
-                        <a href="data_en.html" class="itemcol nav-link submenu"
+                        <a href="data.html" class="itemcol nav-link submenu"
                           >Overview</a
                         >
                       </li>
@@ -380,10 +373,10 @@
                 aria-labelledby="navbarDropdown1"
               >
                 <div class="dropdown-item drop-item">
-                  <a href="../longo.html" class="nav-link submenu">Português</a>
+                  <a href="../plot.html" class="nav-link submenu">Português</a>
                 </div>
                 <div class="dropdown-item drop-item">
-                  <a href="longo_en.html" class="nav-link active submenu"
+                  <a href="plot_en.html" class="nav-link active submenu"
                     >English</a
                   >
                 </div>
@@ -394,17 +387,18 @@
       </div>
     </nav>
 
-    <div class="top-model"><h1>Long term models</h1></div>
+    <div class="top-model">
+      <h1>Covid situation in Brazil</h1>
+    </div>
     <div id="myDiv" class="animate-bottom">
       <div id="iframe-conf" style="margin: 0">
-        <!--Changed here to try to force iframe -->
         <iframe
-          id="long_time_pred"
-          src="https://modelacovid19.rondonia.fiocruz.br/shiny/long_pred/"
+          id="plot"
+          src="https://modelingtaskforce.shinyapps.io/new_AED/"
           style="
             border: none;
             width: 100%;
-            height: 800px;
+            height: 1600px;
             margin-top: 2rem;
             margin-bottom: -25px;
           "
