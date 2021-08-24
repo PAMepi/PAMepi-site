@@ -16,13 +16,11 @@ html {
 /* Track */
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px grey;
-
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #900d0d;
-
 }
 
 /* Handle on hover */
@@ -34,8 +32,6 @@ html {
   background-color: #900d0d;
   padding: 1.2rem 0;
   color: #f2f2f2;
-
-
 }
 
 #navbarDropdown {
@@ -55,13 +51,11 @@ html {
   transition: 0.4s;
 }
 
-
 .dropdown {
   position: relative;
   display: inline-block;
   border-radius: 8px;
   padding: 0;
-
 }
 
 .dropdown-content {
@@ -72,7 +66,48 @@ html {
   padding: 0px;
   margin: 0px;
   right: -1rem;
+}
 
+.dropdown-header {
+  font-size: 1rem;
+  font-weight: 900;
+  color: #eee;
+  text-transform: uppercase;
+}
+
+.dropdown-menu.columns-2 {
+  width: max-content;
+}
+
+.multi-column-dropdown {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  display: inline-block;
+  width: 100%;
+}
+
+.firstcol {
+  width: 8rem;
+  margin: 0;
+  padding-right: 0px;
+}
+
+.secondcol {
+  margin: 0;
+  padding-right: 1rem;
+}
+
+.multi-column-dropdown li a {
+  display: block;
+  clear: both;
+  line-height: 1.428571429;
+
+  white-space: normal;
+}
+
+li.drop-item > a.itemcol {
+  margin-left: 1.5rem;
 }
 
 .dropdown-menu {
@@ -80,14 +115,14 @@ html {
   position: absolute;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
   z-index: 1;
   padding: 0px;
   width: auto;
-  top: 3rem;
+  top: 2rem;
   margin: 0px;
   border-radius: 8px;
   background-color: #900d0d;
-
 }
 
 .dropdown-content a {
@@ -102,11 +137,9 @@ html {
 
 .submenu {
   font-weight: 700;
-
 }
 
 .dropdown-item:hover {
-
   background-color: #740b0b;
   color: #fff;
   border-radius: 8px;
@@ -119,7 +152,7 @@ html {
   font-size: 0.9rem;
   color: #ddd;
   border-radius: 8px;
-  padding: 0.1rem .8rem;
+  padding: 0.2rem 1rem;
 }
 
 .dropdown-item:active,
@@ -145,7 +178,7 @@ nav {
   margin: 0;
   text-align: left;
   font-size: 0.9rem;
-  font-family: 'Ruda', sans-serif;
+  font-family: "Ruda", sans-serif;
   font-weight: 600;
 }
 
@@ -158,13 +191,16 @@ nav {
 
 .nav-link {
   text-transform: none;
-  font-family: 'Ruda', sans-serif;
+  font-family: "Ruda", sans-serif;
   font-weight: 700;
   font-size: 1rem;
   align-items: center;
   color: #ccc;
   margin: 0;
+}
 
+.navbar-header {
+  width: 40%;
 }
 
 .navbar-item {
@@ -178,12 +214,18 @@ nav {
   background-color: #740b0b;
 }
 
-
 .active {
   /* color: #ECEFA4; */
   color: #fff;
   font-weight: 900;
+}
 
+.isDisabled {
+  color: #999;
+  cursor: not-allowed;
+  opacity: 0.5;
+  text-decoration: none;
+  pointer-events: none;
 }
 
 .dropdown-item.active {
@@ -195,7 +237,8 @@ nav {
 }
 
 .home {
-  filter: invert(99%) sepia(6%) saturate(893%) hue-rotate(248deg) brightness(120%) contrast(100%);
+  filter: invert(99%) sepia(6%) saturate(893%) hue-rotate(248deg)
+    brightness(120%) contrast(100%);
   background: url("../img/home.svg") no-repeat;
   width: 1.3rem;
   height: 1.2rem;
@@ -207,7 +250,8 @@ nav {
 
 .home:hover {
   background: url("../img/homefill.svg") no-repeat;
-  filter: invert(99%) sepia(6%) saturate(893%) hue-rotate(248deg) brightness(120%) contrast(100%);
+  filter: invert(99%) sepia(6%) saturate(893%) hue-rotate(248deg)
+    brightness(120%) contrast(100%);
   width: 1.4rem;
   height: 1.3rem;
   background-position: center;
@@ -218,16 +262,15 @@ nav {
 
 .nav-arrow {
   width: 1rem;
-  filter: invert(99%) sepia(6%) saturate(893%) hue-rotate(248deg) brightness(120%) contrast(100%);
-  margin: 0 0.2rem .1rem 0;
+  filter: invert(99%) sepia(6%) saturate(893%) hue-rotate(248deg)
+    brightness(120%) contrast(100%);
+  margin: 0 0.2rem 0.1rem 0;
   padding: 0;
-
-
 }
 
 .navbar-brand {
   font-size: 1.1rem;
-  font-family: 'Ruda', sans-serif;
+  font-family: "Ruda", sans-serif;
   padding: 0.5rem;
   color: #ddd;
   font-style: normal;
@@ -236,7 +279,6 @@ nav {
 
 .navbar-brand:hover {
   color: #fff;
-
 }
 
 .arrow {
@@ -264,23 +306,17 @@ nav {
   padding: 5rem 10rem 0;
 }
 
-
-
 .container {
   padding: 1rem;
 }
-
-
 
 .text {
   padding: 2rem;
 }
 
-
-
 .pesquisadores {
   font-size: 1rem;
-  font-family: 'Ruda', sans-serif;
+  font-family: "Ruda", sans-serif;
   font-weight: 700;
 }
 
@@ -296,7 +332,8 @@ nav {
 }
 
 .img-fiocruz:hover {
-  filter: invert(99%) sepia(6%) saturate(893%) hue-rotate(248deg) brightness(120%) contrast(100%);
+  filter: invert(99%) sepia(6%) saturate(893%) hue-rotate(248deg)
+    brightness(120%) contrast(100%);
 }
 
 .img-cidacs {
@@ -306,7 +343,8 @@ nav {
 }
 
 .img-cidacs:hover {
-  filter: invert(99%) sepia(6%) saturate(893%) hue-rotate(248deg) brightness(120%) contrast(100%);
+  filter: invert(99%) sepia(6%) saturate(893%) hue-rotate(248deg)
+    brightness(120%) contrast(100%);
 }
 
 .title {
@@ -347,7 +385,7 @@ hr {
 .artigos {
   font-weight: 900;
   font-size: 1.4rem;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   padding-top: 2rem;
 }
 
@@ -361,7 +399,7 @@ hr {
   font-weight: 400;
   column-span: all;
   font-size: 1.4rem;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   padding-bottom: 3rem;
 }
 
@@ -371,14 +409,12 @@ hr {
   column-span: all;
   font-size: 1.2rem;
   color: #423144;
-  font-family: 'Raleway', sans-serif;
-
+  font-family: "Raleway", sans-serif;
 }
 
 .bottom {
   padding: 5rem 10rem;
 }
-
 
 .intro {
   padding: 5rem 10rem;
@@ -397,17 +433,14 @@ hr {
   width: 12rem;
   height: 7rem;
   filter: grayscale(80%);
-
 }
 
 h1 {
   font-size: 2.2rem;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 900;
   color: #900d0d;
   column-span: all;
-
-
 }
 
 .intro h1,
@@ -418,7 +451,6 @@ h1 {
 .top-content h1 {
   margin-bottom: 4rem;
 }
-
 
 /* #007bff */
 .destaque {
@@ -459,17 +491,15 @@ h1 {
   margin-bottom: 3rem;
   padding: 2rem 0;
   border-radius: 16px;
-
 }
-
-
 
 .github-img {
   width: 6rem;
 }
 
 .github-img:hover {
-  filter: invert(0%) sepia(0%) saturate(5807%) hue-rotate(242deg) brightness(85%) contrast(105%);
+  filter: invert(0%) sepia(0%) saturate(5807%) hue-rotate(242deg)
+    brightness(85%) contrast(105%);
 }
 
 .bgselect {
@@ -521,12 +551,10 @@ h1 {
 
 body {
   line-height: 1.8;
-  font-family: 'Ruda', sans-serif;
+  font-family: "Ruda", sans-serif;
   text-align: justify;
   font-size: 1rem;
 }
-
-
 
 .construction {
   margin: 2rem auto;
@@ -577,7 +605,6 @@ h2 {
 }
 
 .col-video {
-
   padding: 2rem 3rem;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -588,7 +615,7 @@ h2 {
 .edition {
   text-align: center;
   font-size: 1.5rem;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 700;
 }
 
@@ -668,7 +695,7 @@ h2 {
 
 .newssub {
   font-size: 1.3rem;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 700;
   padding: 2rem 0;
   color: #900d0d;
@@ -678,7 +705,7 @@ h2 {
   color: #fff;
   padding: 0 1rem;
   font-size: 2rem;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 700;
   text-shadow: 2px 2px 5px #000000;
 }
@@ -687,7 +714,7 @@ h2 {
   color: #fff;
   padding: 0 1rem;
   font-size: 1.5rem;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 700;
   text-shadow: 2px 2px 5px #000000;
   text-align: center;
@@ -700,7 +727,7 @@ h2 {
 
 .doi {
   padding: 0rem;
-  margin: .5rem 0 2rem;
+  margin: 0.5rem 0 2rem;
   box-shadow: 0 0 5px #ffffff;
 }
 
@@ -750,8 +777,6 @@ h2 {
   border-bottom: 1px solid #740b0b;
 }
 
-
-
 .custom-toggler.navbar-toggler {
   border-color: #fff;
 }
@@ -788,14 +813,13 @@ h2 {
   top: 50%;
   transform: translate(-50%, -50%);
   cursor: pointer;
-  filter: invert(99%) sepia(6%) saturate(893%) hue-rotate(248deg) brightness(120%) contrast(100%);
-
+  filter: invert(99%) sepia(6%) saturate(893%) hue-rotate(248deg)
+    brightness(120%) contrast(100%);
 }
 
 .play-btn:hover {
   -webkit-filter: drop-shadow(5px 5px 5px #888);
   filter: drop-shadow(5px 5px 5px #888);
-
 }
 
 .close-btn {
@@ -822,7 +846,7 @@ h2 {
 
 .h2-titles {
   font-size: 1.9rem;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   margin-bottom: 5rem;
   font-weight: 900;
   color: #900d0d;
@@ -832,7 +856,7 @@ h2 {
 h3 {
   font-size: 1.4rem;
   padding-bottom: 1rem;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 900;
   column-span: all;
 }
@@ -840,7 +864,7 @@ h3 {
 .h3-videos {
   font-size: 1.6rem;
   padding: 2rem 0;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 900;
   column-span: all;
   color: #423144;
@@ -863,7 +887,6 @@ a:hover {
   font-weight: bold;
 }
 
-
 @media only screen and (max-width: 992px) {
   .dropdown-content {
     padding: 0;
@@ -878,7 +901,6 @@ a:hover {
     padding: 0.2rem 0 0.2rem 0.5rem;
     font-size: 0.8rem;
     font-weight: 700;
-
   }
 
   .nav-link {
@@ -888,23 +910,18 @@ a:hover {
 
   .dropdown-submenu:hover {
     background-color: #900d0d;
-
   }
 
   .submenu {
     margin-left: 2rem;
-
   }
 
   .sub-drop {
-
     padding: 0;
     background-color: #900d0d;
-
   }
 
   .dropdown-submenu .dropdown-menu {
-
     margin-left: 5rem;
   }
 
@@ -918,6 +935,18 @@ a:hover {
 
   .navbar-brand {
     font-size: 0.9rem;
+  }
+
+  .dropdown-menu.multi-column {
+    min-width: 240px !important;
+    overflow-x: hidden;
+  }
+  .dropdown-menu {
+    box-shadow: 0;
+    border: 0;
+  }
+  .rowmulticol {
+    width: 100%;
   }
 }
 
@@ -947,7 +976,7 @@ a:hover {
 }
 
 .columns:hover {
-  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2)
+  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
 }
 
 .box-header {
@@ -978,7 +1007,6 @@ a:hover {
   font-weight: 400;
   padding: 1rem;
   color: #000;
-
 }
 
 .body-news {
@@ -1040,9 +1068,7 @@ a:hover {
 
 .button:hover {
   background-color: #740b0b;
-
 }
-
 
 .abutton {
   color: white;
@@ -1066,13 +1092,12 @@ a:hover {
 }
 
 .team-txt {
-  padding: .1rem 0 1.2rem;
+  padding: 0.1rem 0 1.2rem;
 }
 
 .margin-bottom {
   margin-bottom: 4rem;
 }
-
 
 @media screen and (max-width: 650px) {
   .column {
@@ -1091,8 +1116,6 @@ a:hover {
 }
 
 .truncate {
-
-
   /**Major Properties**/
   line-height: 1.8rem;
   max-height: 4rem;
@@ -1102,5 +1125,4 @@ a:hover {
 
   overflow: hidden;
   text-overflow: ellipsis;
-
 }
