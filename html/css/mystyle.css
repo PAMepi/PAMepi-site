@@ -10,7 +10,8 @@ html {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 15px;
+  height: 20px;
 }
 
 /* Track */
@@ -26,6 +27,10 @@ html {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #423144;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+  width: 150px;
 }
 
 .navbar {
@@ -363,6 +368,7 @@ nav {
   margin-top: 4rem;
   background-color: #f2f2f2;
   padding: 4rem 10rem 5rem;
+  border: 1px solid #ddd;
 }
 
 .middle-white {
@@ -806,6 +812,25 @@ h2 {
   align-items: center;
 }
 
+.download {
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 16px 16px 0 0;
+  justify-content: space-between;
+}
+
+.media-left h3 {
+  padding: 0;
+  margin: 0;
+}
+
+.dado-subitem {
+  margin: 2rem 0;
+  border: 1px solid #bbb;
+  border-radius: 16px;
+}
+
 .play-btn {
   width: 5rem;
   position: absolute;
@@ -884,7 +909,7 @@ a {
 
 a:hover {
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 @media only screen and (max-width: 992px) {
@@ -1125,4 +1150,103 @@ a:hover {
 
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+table {
+  padding: 0;
+  font-size: 0.9rem;
+  display: block;
+  overflow-x: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  border: 0;
+  margin-bottom: 4rem;
+}
+
+table.data {
+  white-space: nowrap;
+}
+
+table.dic {
+  //table-layout: fixed;
+  //width: 100%;
+  white-space: normal;
+}
+.table-div {
+  margin: 2rem 1rem 4rem;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+td,
+th {
+  border: 1px solid #ddd;
+  padding: 0.3rem 1.1rem;
+  text-align: left;
+}
+#tableDic th {
+  white-space: nowrap;
+}
+#tableDic td {
+  min-width: 250px;
+  //word-wrap: break-all;
+  //word-break: break-word;
+  //overflow: hidden;
+  //text-overflow: ellipsis;
+  padding: 0rem 1.1rem;
+}
+
+#tableDic td:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table.data tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table.data tr:hover {
+  background-color: #ddd;
+}
+
+.table-data th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+  background-color: #423144;
+  color: white;
+}
+
+.headcol {
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0px;
+}
+
+h4.data {
+  margin: 4rem 0 1rem 1rem;
+  font-size: 1.3rem;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
+}
+
+h2.data {
+  color: #740b0b;
+  font-size: 2rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
+  padding-bottom: 2rem;
+}
+
+h3.data {
+  color: #212529;
+  font-size: 1.6rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
+  padding: 0;
+  margin-left: 1rem;
+}
+
+.data-in {
+  margin: 1rem;
 }
