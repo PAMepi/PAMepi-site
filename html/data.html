@@ -259,28 +259,34 @@
                         <h6 class="dropdown-header">Saúde</h6>
                       </li>
 
-                      <li class="dropdown-item drop-item disabled">
-                        <a href="#" class="nav-link submenu itemcol isDisabled"
+                      <li class="dropdown-item drop-item">
+                        <a href="sivep.html" class="nav-link submenu itemcol"
                           >SIVEP</a
                         >
                       </li>
-                      <li class="dropdown-item drop-item disabled">
-                        <a href="#" class="nav-link submenu itemcol isDisabled"
+                      <li class="dropdown-item drop-item">
+                        <a href="srag.html" class="nav-link submenu itemcol"
                           >SRAG</a
                         >
                       </li>
                       <li class="dropdown-item drop-item disabled">
-                        <a href="#" class="nav-link submenu itemcol isDisabled"
+                        <a
+                          href="brio.html"
+                          class="nav-link submenu itemcol isDisabled"
                           >Brasil IO</a
                         >
                       </li>
                       <li class="dropdown-item drop-item disabled">
-                        <a href="#" class="nav-link submenu itemcol isDisabled"
+                        <a
+                          href="vacina.html"
+                          class="nav-link submenu itemcol isDisabled"
                           >Vacinação</a
                         >
                       </li>
                       <li class="dropdown-item drop-item disabled">
-                        <a href="#" class="nav-link submenu itemcol isDisabled"
+                        <a
+                          href="hospital.html"
+                          class="nav-link submenu itemcol isDisabled"
                           >Ocupação Hospitalar</a
                         >
                       </li>
@@ -288,7 +294,9 @@
                         <h6 class="dropdown-header">Mobilidade</h6>
                       </li>
                       <li class="dropdown-item drop-item disabled">
-                        <a href="#" class="nav-link submenu itemcol isDisabled"
+                        <a
+                          href="googlemob.html"
+                          class="nav-link submenu itemcol isDisabled"
                           >Google</a
                         >
                       </li>
@@ -301,7 +309,9 @@
                         <h6 class="dropdown-header">Inequalidade</h6>
                       </li>
                       <li class="dropdown-item drop-item disabled">
-                        <a href="#" class="itemcol nav-link submenu isDisabled"
+                        <a
+                          href="ibp.html"
+                          class="itemcol nav-link submenu isDisabled"
                           >IBP</a
                         >
                       </li>
@@ -396,23 +406,48 @@
 
       <div class="intro" style="padding: 2rem 0rem 5rem">
         <p>
-          Os dados utilizados nessa plataforma foram coletamos de maneira a
-          incluir diversos estados infecciosos, comportamento socioeconômico e
-          humano.
+          Reunimos dados sobre uma série de status infecciosos individuais
+          relacionados à pandemia de COVID-19, comportamento socioeconômico e
+          humano. Integraremos os dados de determinantes socioeconômicos e de
+          saúde disponíveis para cada uma das 5.570 cidades brasileiras.
         </p>
         <p>
-          Integraremos os dados de determinantes socioeconômicos e de saúde
-          disponíveis para cada uma das 5.570 cidades brasileiras.
+          Além disso, acessaremos em conjunto informações sobre as intervenções
+          implementadas e os padrões de mobilidade social. Os dados harmonizados
+          em nível municipal serão um recurso fundamental para a aplicação /
+          desenvolvimento de análises estatísticas, modelagem matemática não
+          linear, modelagem computacional, visualização de dados e divulgação
+          científica sobre a pandemia COVID-19 no Brasil.
         </p>
         <p>
-          Além disso, avaliaremos em conjunto as informações sobre as
-          intervenções implementadas e os padrões de mobilidade social.
+          Podemos coletar os dados de plataformas de acesso aberto como Google
+          Mobility, Brasil IO, OpenDatasus, JusBrasil e IPB Cidacs Bahia. Além
+          disso, um script em linguagem python foi desenvolvido para automatizar
+          o processo de organização, download e atualização de arquivos,
+          facilitando o ajuste do período de atualização do datalake conforme o
+          sistema da plataforma original recebe suas atualizações.
         </p>
         <p>
-          Os dados harmonizados em nível municipal serão um recurso fundamental
-          que permitirá a aplicação e desenvolvimento de análises estatísticas,
-          modelagem matemática não linear, visualização de dados e divulgação
-          científica sobre a pandemia COVID-19.
+          Atualmente, configuramos nosso datalake para atualizar semanalmente em
+          nosso projeto. Observe que os dados do projeto podem ser baixados por
+          meio do código python mencionado acima ou por meio do Google Drive.
+          Vale ressaltar que um aplicativo está sendo desenvolvido para dar aos
+          usuários o poder de gerenciar quais informações eles desejam obter
+          para suas pesquisas.
+        </p>
+        <p>
+          Os dados de vacinação têm 63 gigabytes, SG tem 14 gigabytes, SRAG tem
+          694 megabytes, Google Mobilidade 593 megabytes, ocupação hospitalar
+          192 megabytes, Brasil IO 285 megabytes e os setores censitários CIDACS
+          42 megabytes.
+        </p>
+        <p>
+          Dessa forma, o banco de dados soma aproximadamente 80 gigabytes para a
+          versão atualizada em 4 de agosto de 2021. Todos os arquivos estão
+          inicialmente disponíveis no formato .csv, exceto os dados dos setores
+          censitários e Brasil IO, respectivamente em .xlsx (excel 2007) e
+          extensões gzip. No entanto, adicionamos um formulário de conversão e
+          extração para distribuir todos os arquivos na extensão .csv.
         </p>
       </div>
     </section>
@@ -422,6 +457,25 @@
       <div class="middle-white">
         <h2 style="margin-bottom: 4rem">Nossos arquivos de dados</h2>
 
+        <div class="card data-card" id="sivep">
+          <div class="card-header data-header">
+            <h5 class="card-title">
+              Sistema de Informação de Vigilância Epidemiológica da Gripe
+              (SIVEP)
+            </h5>
+          </div>
+          <div class="card-body data-body">
+            <p class="card-text truncate">
+              Com o surgimento da pandemia causada pelo SARS-COV-2, o Ministério
+              da Saúde implantou um sistema de vigilância para registro da
+              Síndrome da Gripe (SG, também denominado e-SUS VE) de casos leves
+              a moderados com suspeita de COVID-19.
+            </p>
+          </div>
+          <div class="card-footer data-footer">
+            <a class="data-button" href="sivep.html">Acessar</a>
+          </div>
+        </div>
         <div class="card data-card" id="srag">
           <div class="card-header data-header">
             <h5 class="card-title">Síndrome Respiratória Aguda Grave (SRAG)</h5>
@@ -429,23 +483,19 @@
 
           <div class="card-body data-body">
             <p class="card-text truncate">
-              O conjunto de dados da Síndrome Respiratória Aguda Grave são dados
-              de saúde obtidos do Ministério da Saúde do Brasil. Os dados
-              relatam indivíduos na população brasileira afetados por síndrome
-              respiratória aguda grave, particularmente infecções causadas por
-              SARS-COV-2. Além disso, o conjunto de dados possui informações
-              individuais, não identificáveis, do local de residência (como a
-              cidade), idade, sexo e estado infeccioso, se a pessoa necessitou
-              de hospitalização ou faleceu. Portanto, pode ser agregado para
-              realizar análises de risco e estudos da evolução dinâmica de casos
-              graves de COVID-19 em nível municipal e também pode ser explorado
-              para outras questões. Além disso, o conjunto de dados contém
-              notificações desde 1º de janeiro de 2020, até a data atual. Os
-              dados são atualizados semanalmente em nosso projeto.
+              O conjunto de dados da Síndrome Respiratória Aguda Grave (SRAG) é
+              um conjunto de dados de saúde obtido junto ao Ministério da Saúde
+              do Brasil por meio da Secretaria de Vigilância em Saúde
+              (Ministério da Saúde, 2020). A vigilância SRAG começou com a
+              pandemia de Influenza A (H1N1) em 2009. Desde então, SRAG também é
+              usado para relatar Influenza e outros vírus respiratórios, que
+              anteriormente eram relatados apenas com a vigilância sentinela da
+              síndrome da gripe. Além disso, em 2020, as infecções humanas
+              causadas por SARS-COV-2 foram incorporadas à vigilância SRAG.
             </p>
           </div>
           <div class="card-footer data-footer">
-            <a class="data-button isDisabled" href="srag.html">Acessar</a>
+            <a class="data-button" href="srag.html">Acessar</a>
           </div>
         </div>
 
@@ -455,10 +505,14 @@
           </div>
           <div class="card-body data-body">
             <p class="card-text truncate">
-              O conjunto de dados Brasil IO corresponde a casos confirmados de
-              COVID-19 agregados em nível municipal, a partir de 1º de fevereiro
-              de 2020, que também é fornecido pelo Ministério da Saúde do
-              Brasil.
+              O conjunto de dados Brasil io é extraído de um projeto não
+              governamental chamado Brasil io que realiza trabalho voluntário
+              para coletar informações sobre o número de casos confirmados e
+              óbitos causados por infecções por SARS-COV-2 agregados em nível
+              estadual e municipal (Brasil io, 2020). Os autores reúnem os dados
+              dos relatórios das secretarias estaduais e municipais disponíveis
+              publicamente antes do registro no banco de dados do Ministério da
+              Saúde do Brasil.
             </p>
           </div>
 
@@ -467,31 +521,22 @@
           </div>
         </div>
 
-        <div class="card data-card" id="sivep">
-          <div class="card-header data-header">
-            <h5 class="card-title">
-              Sistema de Informação de Vigilância Epidemiológica da Gripe
-              (SIVEP)
-            </h5>
-          </div>
-          <div class="card-body data-body">
-            <p class="card-text truncate">Em desenvolvimento.</p>
-          </div>
-          <div class="card-footer data-footer">
-            <a class="data-button isDisabled" href="sivep.html">Acessar</a>
-          </div>
-        </div>
-
         <div class="card data-card" id="vac">
           <div class="card-header data-header">
             <h5 class="card-title">Vacinação</h5>
           </div>
           <div class="card-body data-body">
-            <p class="card-text truncate">Em desenvolvimento.</p>
+            <p class="card-text truncate">
+              Os dados de vacinação da Covid-19 estão relacionados à Campanha
+              Nacional de Vacinação contra a Covid-19. O Ministério da Saúde
+              disponibiliza por meio do Sistema de Informações do Programa
+              Nacional de Imunizações (SI-PNI) e está disponível no OpenDatasus
+              para download.
+            </p>
           </div>
 
           <div class="card-footer data-footer">
-            <a class="data-button isDisabled" href="vac.html">Acessar</a>
+            <a class="data-button isDisabled" href="vacina.html">Acessar</a>
           </div>
         </div>
 
@@ -500,31 +545,19 @@
             <h5 class="card-title">Ocupação hospitalar</h5>
           </div>
           <div class="card-body data-body">
-            <p class="card-text truncate">Em desenvolvimento.</p>
-          </div>
-
-          <div class="card-footer data-footer">
-            <a class="data-button isDisabled" href="hosp.html">Acessar</a>
-          </div>
-        </div>
-
-        <div class="card data-card" id="mobgoogle">
-          <div class="card-header data-header">
-            <h5 class="card-title">Mobilidade Google</h5>
-          </div>
-          <div class="card-body data-body">
             <p class="card-text truncate">
-              O conjunto de dados de mobilidade Google representa a mobilidade
-              humana fornecida pelas tendências do
-              <a href="https://www.google.com/covid19/mobility/" target="_blank"
-                >Google</a
-              >, que relata como a mobilidade humana é afetada pela propagação
-              do COVID-19 desde 15 de fevereiro de 2020.
+              O Ministério da Saúde, por meio da Secretaria de Atenção
+              Especializada em Saúde (SAES), implementou, devido à pandemia, o
+              registro das internações por meio do Sistema ESUS Notifica-Módulo
+              Internações SUS. Esta página tem como finalidade disponibilizar o
+              banco de dados da ocupação dos leitos, a partir da incorporação do
+              sistema e-SUS Notifica- Módulo internações SUS, em vigor a partir
+              de abril de 2020.
             </p>
           </div>
 
           <div class="card-footer data-footer">
-            <a class="data-button isDisabled" href="mobgoogle.html">Acessar</a>
+            <a class="data-button isDisabled" href="hospital.html">Acessar</a>
           </div>
         </div>
 
@@ -548,6 +581,26 @@
           </div>
           <div class="card-footer data-footer">
             <a class="data-button isDisabled" href="ibp.html">Acessar</a>
+          </div>
+        </div>
+
+        <div class="card data-card" id="mobgoogle">
+          <div class="card-header data-header">
+            <h5 class="card-title">Mobilidade Google</h5>
+          </div>
+          <div class="card-body data-body">
+            <p class="card-text truncate">
+              O conjunto de dados de mobilidade Google representa a mobilidade
+              humana fornecida pelas tendências do
+              <a href="https://www.google.com/covid19/mobility/" target="_blank"
+                >Google</a
+              >, que relata como a mobilidade humana é afetada pela propagação
+              do COVID-19 desde 15 de fevereiro de 2020.
+            </p>
+          </div>
+
+          <div class="card-footer data-footer">
+            <a class="data-button isDisabled" href="googlemob.html">Acessar</a>
           </div>
         </div>
 

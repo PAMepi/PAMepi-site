@@ -17,13 +17,12 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ruda:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-
+    <script type="text/javascript" src="js/data.js"></script>
     <link rel="stylesheet" type="text/css" href="css/mystyle.css" />
-    <link rel="stylesheet" type="text/css" href="css/spin.css" />
     <link rel="icon" href="img/favicon.ico" />
   </head>
 
-  <body onload="myFunction()" style="margin: 0">
+  <body>
     <nav
       id="navbar"
       class="navbar navbar-expand-lg fixed-top justify-content-center"
@@ -94,7 +93,7 @@
 
             <li class="navbar-item dropdown">
               <div
-                class="dropdown-item dropdown-toggle active"
+                class="dropdown-item dropdown-toggle"
                 id="navbarDropdown2"
                 role="button"
                 data-toggle="dropdown"
@@ -147,14 +146,7 @@
                         "
                       >
                         <a
-                          class="
-                            btn
-                            dropdown-toggle
-                            nav-link
-                            submenu
-                            itemcol
-                            active
-                          "
+                          class="btn dropdown-toggle nav-link submenu itemcol"
                           href="#"
                           data-toggle="dropdown"
                           data-flip="false"
@@ -165,7 +157,7 @@
 
                         <ul class="dropdown-menu sub-drop">
                           <li class="dropdown-item drop-item sub-drop">
-                            <a href="curto.html" class="nav-link submenu active"
+                            <a href="curto.html" class="nav-link submenu"
                               >Curto prazo</a
                             >
                           </li>
@@ -226,7 +218,7 @@
 
             <li class="navbar-item dropdown">
               <div
-                class="dropdown-item dropdown-toggle"
+                class="dropdown-item dropdown-toggle active"
                 id="navbarDropdown2"
                 role="button"
                 data-toggle="dropdown"
@@ -266,7 +258,9 @@
                       </li>
 
                       <li class="dropdown-item drop-item">
-                        <a href="sivep.html" class="nav-link submenu itemcol"
+                        <a
+                          href="sivep.html"
+                          class="nav-link submenu itemcol active"
                           >SIVEP</a
                         >
                       </li>
@@ -276,17 +270,23 @@
                         >
                       </li>
                       <li class="dropdown-item drop-item disabled">
-                        <a href="#" class="nav-link submenu itemcol isDisabled"
+                        <a
+                          href="brio.html"
+                          class="nav-link submenu itemcol isDisabled"
                           >Brasil IO</a
                         >
                       </li>
                       <li class="dropdown-item drop-item disabled">
-                        <a href="#" class="nav-link submenu itemcol isDisabled"
+                        <a
+                          href="vacina.html"
+                          class="nav-link submenu itemcol isDisabled"
                           >Vacinação</a
                         >
                       </li>
                       <li class="dropdown-item drop-item disabled">
-                        <a href="#" class="nav-link submenu itemcol isDisabled"
+                        <a
+                          href="hospital.html"
+                          class="nav-link submenu itemcol isDisabled"
                           >Ocupação Hospitalar</a
                         >
                       </li>
@@ -294,12 +294,16 @@
                         <h6 class="dropdown-header">Mobilidade</h6>
                       </li>
                       <li class="dropdown-item drop-item disabled">
-                        <a href="#" class="nav-link submenu itemcol isDisabled"
+                        <a
+                          href="googlemob.html"
+                          class="nav-link submenu itemcol isDisabled"
                           >Google</a
                         >
                       </li>
                       <li class="dropdown-item drop-item disabled">
-                        <a href="#" class="nav-link submenu itemcol isDisabled"
+                        <a
+                          href="intercid.html"
+                          class="nav-link submenu itemcol isDisabled"
                           >Intercidade</a
                         >
                       </li>
@@ -307,7 +311,9 @@
                         <h6 class="dropdown-header">Inequalidade</h6>
                       </li>
                       <li class="dropdown-item drop-item disabled">
-                        <a href="#" class="itemcol nav-link submenu isDisabled"
+                        <a
+                          href="ibp.html"
+                          class="itemcol nav-link submenu isDisabled"
                           >IBP</a
                         >
                       </li>
@@ -365,7 +371,6 @@
                 </div>
               </div>
             </li>
-
             <li class="navbar-item dropdown">
               <div
                 class="dropdown-item dropdown-toggle"
@@ -383,12 +388,12 @@
                 aria-labelledby="navbarDropdown1"
               >
                 <div class="dropdown-item drop-item">
-                  <a href="curto.html" class="nav-link active submenu"
+                  <a href="sivep.html" class="nav-link active submenu"
                     >Português</a
                   >
                 </div>
-                <div class="dropdown-item drop-item">
-                  <a href="en/curto_en.html" class="nav-link submenu"
+                <div class="dropdown-item drop-item" disabled>
+                  <a href="en/sivep_en.html" class="nav-link submenu"
                     >English</a
                   >
                 </div>
@@ -399,22 +404,169 @@
       </div>
     </nav>
 
-    <div class="top-model"><h1>Modelos de curto prazo</h1></div>
-    <div id="myDiv" class="animate-bottom">
-      <div id="iframe-conf" style="margin: 0">
-        <iframe
-          id="short_time_pred"
-          src="https://modelacovid19.rondonia.fiocruz.br/shiny/short_pred/"
-          style="
-            border: none;
-            width: 100%;
-            height: 600px;
-            margin-top: 2rem;
-            margin-bottom: -25px;
+    <section class="top">
+      <h1>
+        Sistema de Informação de Vigilância Epidemiológica da Gripe (SIVEP)
+      </h1>
+      <div class="intro" style="padding: 2rem 0rem 5rem">
+        <h2 class="mb-5">Descrição</h2>
+        <p>
+          Com o surgimento da pandemia causada pelo SARS-COV-2, o Ministério da
+          Saúde implantou um sistema de vigilância para registro da Síndrome da
+          Gripe (SG, também denominado e-SUS VE) de casos leves a moderados com
+          suspeita de COVID-19.
+        </p>
+        <p>
+          O conjunto de dados é proveniente do sistema e-SUS NOTIFICA, que é
+          preenchido por unidades públicas ou privadas como unidades básicas de
+          saúde, consultórios, clínicas, postos de atendimento, pronto
+          atendimento, entre outros de baixa complexidade.
+        </p>
+        <p>
+          Os dados incluem informações referentes ao local de residência do
+          paciente (campos: estado, município), independentemente de ter sido
+          notificado em outro estado ou município (Campos: Notificação estado,
+          Notificação município), além de questões demográficas e
+          clínico-epidemiológicas, (<a
+            href="https://opendatasus.saude.gov.br/dataset/casos-nacionais"
+            target="_blank"
+            >Ministério da Saúde, 2020</a
+          >), (<a
+            href="https://portal.fiocruz.br/sites/portal.fiocruz.br/files/documentos/nota_tecnica_13.pdf 
           "
-        ></iframe>
+            target="_blank"
+            >Observatório COVID-19, 2020</a
+          >).
+        </p>
+        <p>
+          Links para publicações que usam os dados do SG ou fornecem outros
+          locais de acesso público dos dados podem ser encontrados em (<a
+            href="https://portal.fiocruz.br/sites/portal.fiocruz.br/files/documentos/nota_tecnica_13.pdf 
+        "
+            target="_blank"
+            >Observatório COVID-19, 2020</a
+          >).
+        </p>
+        <h2 class="mb-5 mt-5 pt-5 pb-2">Informação de acesso a dados</h2>
+
+        <p>
+          Os dados SG são licenciados sob a Creative Commons Attribution License
+          cc-by (versão 4.0), ver (<a
+            href="https://opendatasus.saude.gov.br/dataset/casos-nacionais"
+            target="_blank"
+            >Ministério da Saúde, 2020</a
+          >). Além disso, o conjunto de dados SG está disponível ao público e
+          publicado pelo Ministério da Saúde do Brasil. Portanto, não é
+          necessária a aprovação de um comitê de ética para o uso desses dados,
+          de acordo com as Resoluções 466/2012 e 510/2016 (artigo 1º, incisos
+          III e V) do Conselho Nacional de Saúde (CNS), Brasil.
+        </p>
+
+        <h2 class="mb-5 mt-5 pt-5 pb-2">Métodos de coleta de dados</h2>
+        <p>
+          Um código python está disponível em nosso diretório GitHub para baixar
+          os dados SG do OpenDatasus, veja detalhes em
+          <a
+            href="https://github.com/ModelingTaskForce/covidApp"
+            target="_blank"
+            >Github</a
+          >. Estamos extraindo os dados SG de 2019 em diante. A base de dados é
+          atualizada semanalmente no nosso projeto, sendo uma versão associada à
+          sua data de atualização.
+        </p>
+
+        <h2 class="mb-5 mt-5 pt-5 pb-2">
+          Informações específicas de dados para SG
+        </h2>
+        <p>
+          O conjunto de dados SG tem um total de 30 colunas e mostrou um total
+          de 48.288.827 registros (linhas) e um tamanho de 14 GB na última
+          atualização de 19 de agosto de 2021. Um código com mais detalhes sobre
+          as variáveis, processamento de dados e métodos de análise é
+          apresentado em nosso diretório
+          <a
+            href="https://github.com/ModelingTaskForce/covidApp"
+            target="_blank"
+            >Github</a
+          >
+          .
+        </p>
+        <h2 class="mb-5 mt-5 pt-5 pb-2">Limitações do conjunto de dados SG</h2>
+        <p>
+          Vários casos no conjunto de dados SG não possuem classificação final.
+          Todos os casos do SG terão uma classificação final dada pelas equipes
+          de vigilância epidemiológica da Secretaria de Saúde. Porém, dado o
+          número de pacientes cadastrados, eles podem não ser classificados a
+          tempo (alguns até encerrados e não mais analisados).
+        </p>
+        <p>
+          Para contornar tal dificuldade, nossa equipe aplicará um algoritmo de
+          classificação para dar um pré-diagnóstico dos casos no SG que não
+          possuem classificação final. O algoritmo é aplicado às informações de
+          sintomas disponíveis no conjunto de dados.
+        </p>
       </div>
-    </div>
+    </section>
+    <hr />
+    <section class="middle-white">
+      <h2 class="data">Dados e recursos</h2>
+      <div class="dado-subitem">
+        <div class="media download">
+          <div class="media-left">
+            <h3 class="data">Dados e dicionário de variáveis</h3>
+          </div>
+          <div class="media-right">
+            <a
+              href="https://github.com/PAMepi/scripts-datalake"
+              class="btn btn-info"
+              target="_blank"
+              >Download</a
+            >
+          </div>
+        </div>
+
+        <div class="data-in">
+          <h4 class="data">Explorador de dados</h4>
+          <div class="table-div">
+            <table
+              id="tableExp"
+              cellpadding="2"
+              cellspacing="2"
+              border="1"
+              class="table-data data"
+            ></table>
+          </div>
+
+          <h4 class="data">Dicionário de Dados</h4>
+          <div class="table-div">
+            <table
+              id="tableDic"
+              cellpadding="2"
+              cellspacing="2"
+              border="1"
+              class="table-data dic"
+            ></table>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="dado-subitem">
+        <div class="media download">
+          <h3 class="data">Documentação do processo</h3>
+        </div>
+      </div>
+      <div class="dado-subitem">
+        <div class="media download">
+          <h3 class="data">Análise Visual</h3>
+        </div>
+      </div>
+      <div class="dado-subitem">
+        <div class="media download">
+
+            <h3 class="data">Mineração de Dados e Análise Preditiva</h3>
+        
+         </div> -->
+    </section>
 
     <footer class="page-footer font-small footer" id="footer">
       <div class="container-fluid text-center text-md-left">
@@ -459,8 +611,8 @@
                 >
               </li>
               <!-- <li>
-      <a href="" class="foot-link">Ensino</a>
-    </li> -->
+              <a href="" class="foot-link">Ensino</a>
+            </li> -->
               <li>
                 <a href="news.html#newsletter" class="foot-link">Newsletter</a>
               </li>
@@ -506,22 +658,97 @@
       </div>
     </footer>
 
-    <div id="loader"></div>
+    <script>
+      console.log(sampleSIVEP);
+      let cell;
+      let nlines = sampleSIVEP.length;
+      let ncols = Object.keys(sampleSIVEP["0"]).length;
+      let tableExp = document.getElementById("tableExp");
+      let row;
+
+      function cellValue(lin, col) {
+        if (Object.keys(sampleSIVEP[lin.toString()])[col]) {
+          return `${Object.values(sampleSIVEP[lin.toString()])[col]}`;
+        }
+        return "-";
+      }
+
+      function colValue(col) {
+        if (Object.keys(sampleSIVEP["0"])[col]) {
+          return `<th>${Object.keys(sampleSIVEP["0"])[col]}</th>`;
+        }
+        return "&nbsp;";
+      }
+      // fill
+      row = tableExp.insertRow(0);
+      for (var col = 0; col < ncols; col++) {
+        cell = row.insertCell(col);
+        cell.outerHTML = colValue(col);
+      }
+      // fill table with data
+      for (var lin = 0; lin < nlines; lin++) {
+        row = tableExp.insertRow(lin + 1);
+        for (var col = 0; col < ncols; col++) {
+          cell = row.insertCell(col);
+          cell.innerHTML = cellValue(lin, col);
+        }
+      }
+
+      lines = [2, 0, 1];
+      ncols = dicSIVEP.length;
+
+      tableDic = document.getElementById("tableDic");
+
+      function dicValue(lin, col) {
+        if (Object.keys(dicSIVEP[col.toString()])[lin]) {
+          return `<td >${Object.values(dicSIVEP[col.toString()])[lin]} </td>`;
+        }
+        return "-";
+      }
+      let col_name = "";
+      // fill table with data
+      for (let [i, lin] of lines.entries()) {
+        row = tableDic.insertRow(i);
+        cell = row.insertCell(row);
+        cell.outerHTML = `<th class="headcol">${
+          Object.keys(dicSIVEP["0"])[lin]
+        }</th>`;
+        ncol = 1;
+        for (let col = 0; col < ncols; col++) {
+          col_name = Object.values(dicSIVEP[col.toString()])[5];
+          //only add column if field is in our data
+
+          cell = row.insertCell(ncol);
+          cell.outerHTML = dicValue(lin, col);
+          ncol++;
+        }
+      }
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
-    <script>
-      var myVar;
-
-      function myFunction() {
-        myVar = setTimeout(showPage, 3000);
-      }
-
-      function showPage() {
-        document.getElementById("loader").style.display = "none";
-        document.getElementById("myDiv").style.display = "block";
-      }
-    </script>
   </body>
 </html>
+
+<!-- 
+"síndrome gripal": {
+  "arquivo": "dados-*.csv",
+  "link": "https://modellingtask.slack.com/files/U027NHJHC6Q/F028Q6K66MT/2021_07_12_decretos.csv",
+  "espacialidade": "municipio",
+  "temporalidade": "dia",
+  "informação": "Notificação de síndrome gripal",
+  "n_colunas": 30,
+  "colunas": [
+      "cbo", "classificacaoFinal", "cnes", "condicoes",
+      "dataEncerramento", "dataInicioSintomas",
+      "dataNascimento", "dataNotificacao", "dataTeste",
+      "estado", "estadoIBGE", "estadoNotificacao",
+      "estadoNotificacaoIBGE", "estadoTeste", "evolucaoCaso",
+      "excluido", "idade", "municipio", "municipioIBGE",
+      "municipioNotificacao", "municipioNotificacaoIBGE",
+      "origem", "paisOrigem", "profissionalSaude",
+      "resultadoTeste", "sexo", "sintomas", "tipoTeste",
+      "validado", "id"
+  ]
+}, -->
