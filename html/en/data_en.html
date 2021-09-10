@@ -101,7 +101,7 @@
                 aria-expanded="false"
                 tabindex="0"
               >
-                Vizualization
+                Visualization
               </div>
 
               <div
@@ -386,25 +386,244 @@
       </div>
     </nav>
 
-    <div class="top margin-bottom" id="">
-      <h1>Data base</h1>
-      <div class="div-media">
-        <div class="media">
-          <div class="media-left construction">
-            <img
-              src="../img/construction.svg"
-              class="media-object"
-              style="width: 80px"
-            />
+    <section class="top" id="overview">
+      <h1 style="padding: 2rem 0 2rem">Data base</h1>
+      <h2>Data set overview</h2>
+
+      <div class="intro" style="padding: 2rem 0rem 5rem">
+        <p>
+          We gathered data over a range of individual infectious status related
+          to the COVID-19 pandemic, socio-economic and human behaviour. We will
+          integrate health and social-economic determinants data that are
+          available for each of the 5570 Brazilian cities.
+        </p>
+        <p>
+          Additionally, we will jointly access information about the implemented
+          interventions and social mobility patterns. The harmonised data at the
+          municipal level will be a foundational resource enabling the
+          application/development of statistical analysis, nonlinear
+          mathematical modelling, computational modelling, data visualisation
+          and scientific dissemination about the COVID-19 pandemic in Brazil.
+        </p>
+        <p>
+          We can collect the data from open access platforms such as Google
+          Mobility, Brasil IO, OpenDatasus, JusBrasil, and IPB Cidacs Bahia.
+          Furthermore, a script in python language was developed to automate the
+          process of organizing, downloading, and updating files, making it
+          easier to adjust the datalake update period as the original platform's
+          system receives its updates.
+        </p>
+        <p>
+          Currently, we set up our datalake to update weekly in our project.
+          Note that the project's data can be downloaded via the python code
+          mentioned above or via Google Drive. It is noteworthy that an
+          application is being developed to give users the power to manage what
+          information they want to pull for their research.
+        </p>
+        <p>
+          The vaccination data has 63 gigabytes, SG has 14 gigabytes, SRAG has
+          694 megabytes, Google mobility 593 megabytes, hospital occupancy 192
+          megabytes, Brazil IO 285 megabytes and the CIDACS census sectors 42
+          megabytes.
+        </p>
+        <p>
+          Thus, the database has a total sum of approximately 80 gigabytes for
+          the version updated on August 4th, 2021. All files are initially
+          available in .csv format, except for data from census sectors and
+          Brasil IO, respectively in .xlsx (excel 2007) and gzip extensions.
+          However, we added a conversion and extraction form to distribute all
+          files in the .csv extension.
+        </p>
+      </div>
+    </section>
+
+    <hr />
+    <section>
+      <div class="middle-white">
+        <h2 style="margin-bottom: 4rem">Our data files</h2>
+
+        <div class="card data-card" id="sivep">
+          <div class="card-header data-header">
+            <h5 class="card-title">Flu syndrome (SG/SIVEP)</h5>
           </div>
-          <div class="media-body">
-            <h3 class="media-heading">
-              <center>Under construction...</center>
-            </h3>
+          <div class="card-body data-body">
+            <p class="card-text truncate">
+              With the emergence of the pandemic caused by SARS-COV-2, the
+              Ministry of Health implemented a surveillance system to record Flu
+              Syndrome (SG, also denoted by e-SUS VE) of mild to moderate cases
+              suspected of COVID-19. The dataset comes from the e-SUS NOTIFICA
+              system, which is filled by public or private units as the primary
+              care units, offices, clinics, service centres, emergency care,
+              among others of low complexity.
+            </p>
+          </div>
+          <div class="card-footer data-footer">
+            <a class="data-button" href="sivep_en.html">Access</a>
+          </div>
+        </div>
+        <div class="card data-card" id="srag">
+          <div class="card-header data-header">
+            <h5 class="card-title">Severe Acute Respiratory Syndrome (SRAG)</h5>
+          </div>
+
+          <div class="card-body data-body">
+            <p class="card-text truncate">
+              The Severe Acute Respiratory Syndrome (SRAG) dataset is a health
+              data obtained from the Ministry of Health of Brazil through the
+              Secretariat of Health Surveillance, (Ministério da Saúde, 2020).
+              The SRAG surveillance started with the Influenza A(H1N1) pandemic
+              in 2009. Since then, SRAG is also used to report Influenza and
+              other respiratory viruses, which previously were reported only
+              with the flu-syndrome sentinel surveillance.
+            </p>
+          </div>
+          <div class="card-footer data-footer">
+            <a class="data-button" href="srag_en.html">Access</a>
+          </div>
+        </div>
+
+        <div class="card data-card" id="brio">
+          <div class="card-header data-header">
+            <h5 class="card-title">Brasil IO</h5>
+          </div>
+          <div class="card-body data-body">
+            <p class="card-text truncate">
+              The Brasil io dataset is extracted from a non-governmental project
+              called Brasil io that performs volunteer work to collect
+              information on the number of confirmed cases and deaths caused by
+              infections of SARS-COV-2 aggregated at state and municipal level,
+              (Brasil io, 2020). The authors gather the data from the state and
+              municipalities secretaries publicly available reports before
+              registration in the Brazilian Ministry of health database.
+            </p>
+          </div>
+
+          <div class="card-footer data-footer">
+            <a class="data-button isDisabled" href="brio_en.html">Access</a>
+          </div>
+        </div>
+
+        <div class="card data-card" id="vac">
+          <div class="card-header data-header">
+            <h5 class="card-title">Vaccination</h5>
+          </div>
+          <div class="card-body data-body">
+            <p class="card-text truncate">
+              The Covid-19 vaccination data is related to the National
+              Vaccination Campaign against Covid-19. The Ministry of Health
+              provides it through the National Immunization Program (SI-PNI)
+              Information System and is available in the OpenDatasus for
+              download.
+            </p>
+          </div>
+
+          <div class="card-footer data-footer">
+            <a class="data-button isDisabled" href="vacina_en.html">Access</a>
+          </div>
+        </div>
+
+        <div class="card data-card" id="hosp">
+          <div class="card-header data-header">
+            <h5 class="card-title">Hospital occupancy</h5>
+          </div>
+          <div class="card-body data-body">
+            <p class="card-text truncate">
+              The Ministry of Health, through the Department of Specialized
+              Health Care (SAES), implemented, due to the pandemic, the
+              registration of admissions through the ESUS Notifica-SUS
+              Hospitalization Module. The purpose of this page is to make
+              available the bed occupancy database, from the incorporation of
+              the e-SUS Notifica- module SUS admissions module, effective from
+              April 2020.
+            </p>
+          </div>
+
+          <div class="card-footer data-footer">
+            <a class="data-button isDisabled" href="hospital_en.html">Access</a>
+          </div>
+        </div>
+
+        <div class="card data-card" id="ibp">
+          <div class="card-header data-header">
+            <h5 class="card-title">Brazilian deprivation index (IBP)</h5>
+          </div>
+          <div class="card-body data-body">
+            <p class="card-text truncate">
+              It provides deprivation measures for each Brazilian municipality
+              and census sector and is used to evaluate health inequalities
+              across the country. The 2010 Brazilian Population Census is the
+              basis for calculating the deprivation measure, available from
+              CIDACS.
+            </p>
+          </div>
+          <div class="card-footer data-footer">
+            <a class="data-button isDisabled" href="ibp_en.html">Access</a>
+          </div>
+        </div>
+
+        <div class="card data-card" id="mobgoogle">
+          <div class="card-header data-header">
+            <h5 class="card-title">Google mobility</h5>
+          </div>
+          <div class="card-body data-body">
+            <p class="card-text truncate">
+              The dataset from Google mobility represents human mobility given
+              by the Google trends
+              <!-- [https://www.gstatic.com/covid19/mobility/Global_Mobility_Report.csv], -->
+              which reports how human mobility is affected by the COVID-19
+              spread since February 15th, 2020.
+            </p>
+          </div>
+
+          <div class="card-footer data-footer">
+            <a class="data-button isDisabled" href="mobgoogle_en.html"
+              >Access</a
+            >
+          </div>
+        </div>
+
+        <div class="card data-card" id="mobcity">
+          <div class="card-header data-header">
+            <h5 class="card-title">Intercity Brazilian mobility</h5>
+          </div>
+          <div class="card-body data-body">
+            <p class="card-text truncate">
+              It is the historical average daily flux data throughout the
+              country using road/air/fluvial networks. The data is available in
+              the Brazilian Institute of Geography and Statistics and measured
+              using the 2010 Brazilian Population Census.
+            </p>
+          </div>
+
+          <div class="card-footer data-footer">
+            <a class="data-button isDisabled" href="mobcity_en.html">Access</a>
+          </div>
+        </div>
+
+        <div class="card data-card" id="jusbr">
+          <div class="card-header data-header">
+            <h5 class="card-title">Stringency index</h5>
+          </div>
+          <div class="card-body data-body">
+            <p class="card-text truncate">
+              The last data is a metric that summarizes the level of
+              governmental measures enacted by the local states from March of
+              2020 and onward. The dataset is divided into two files. The first
+              contains textual information of the measures applied in
+              chronological order and for each state. The second file includes
+              the calculated global metric of stringency, a combination of
+              sub-indexes of different enforcement types, such as restrictions
+              to events, closure of schools, etc. The data can be obtained by
+              the JusBrasil
+            </p>
+          </div>
+
+          <div class="card-footer data-footer">
+            <a class="data-button isDisabled" href="jusbr_en.html">Access</a>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <footer class="page-footer font-small footer" id="footer">
       <div class="container-fluid text-center text-md-left">

@@ -19,11 +19,10 @@
     />
 
     <link rel="stylesheet" type="text/css" href="../css/mystyle.css" />
-    <link rel="stylesheet" type="text/css" href="../css/spin.css" />
     <link rel="icon" href="../img/favicon.ico" />
   </head>
 
-  <body onload="myFunction()" style="margin: 0">
+  <body>
     <nav
       id="navbar"
       class="navbar navbar-expand-lg fixed-top justify-content-center"
@@ -94,7 +93,7 @@
 
             <li class="navbar-item dropdown">
               <div
-                class="dropdown-item dropdown-toggle active"
+                class="dropdown-item dropdown-toggle"
                 id="navbarDropdown2"
                 role="button"
                 data-toggle="dropdown"
@@ -121,9 +120,7 @@
                         <h6 class="dropdown-header">Description</h6>
                       </li>
                       <li class="dropdown-item drop-item">
-                        <a
-                          href="plot.html"
-                          class="itemcol nav-link submenu active"
+                        <a href="plot_en.html" class="itemcol nav-link submenu"
                           >Outlook</a
                         >
                       </li>
@@ -222,7 +219,7 @@
             </li>
             <li class="navbar-item dropdown">
               <div
-                class="dropdown-item dropdown-toggle"
+                class="dropdown-item dropdown-toggle active"
                 id="navbarDropdown5"
                 role="button"
                 data-toggle="dropdown"
@@ -248,7 +245,9 @@
                         <h6 class="dropdown-header">Architecture</h6>
                       </li>
                       <li class="dropdown-item drop-item">
-                        <a href="data.html" class="itemcol nav-link submenu"
+                        <a
+                          href="data_en.html"
+                          class="itemcol nav-link submenu active"
                           >Overview</a
                         >
                       </li>
@@ -266,22 +265,30 @@
                         >
                       </li>
                       <li class="dropdown-item drop-item">
-                        <a href="srag_en.html" class="nav-link submenu itemcol"
+                        <a
+                          href="srag_en.html"
+                          class="nav-link submenu itemcol active"
                           >SRAG</a
                         >
                       </li>
                       <li class="dropdown-item drop-item disabled">
-                        <a href="#" class="nav-link submenu itemcol isDisabled"
+                        <a
+                          href="brio_en.html"
+                          class="nav-link submenu itemcol isDisabled"
                           >Brasil IO</a
                         >
                       </li>
                       <li class="dropdown-item drop-item disabled">
-                        <a href="#" class="nav-link submenu itemcol isDisabled"
+                        <a
+                          href="vacina_en.html"
+                          class="nav-link submenu itemcol isDisabled"
                           >Vaccination</a
                         >
                       </li>
                       <li class="dropdown-item drop-item disabled">
-                        <a href="#" class="nav-link submenu itemcol isDisabled"
+                        <a
+                          href="hospital_en.html"
+                          class="nav-link submenu itemcol isDisabled"
                           >Hospital Occupancy</a
                         >
                       </li>
@@ -289,12 +296,16 @@
                         <h6 class="dropdown-header">Mobility</h6>
                       </li>
                       <li class="dropdown-item drop-item disabled">
-                        <a href="#" class="nav-link submenu itemcol isDisabled"
+                        <a
+                          href="googlemob_en.html"
+                          class="nav-link submenu itemcol isDisabled"
                           >Google</a
                         >
                       </li>
                       <li class="dropdown-item drop-item disabled">
-                        <a href="#" class="nav-link submenu itemcol isDisabled"
+                        <a
+                          href="intercid_en.html"
+                          class="nav-link submenu itemcol isDisabled"
                           >Intercity</a
                         >
                       </li>
@@ -302,7 +313,9 @@
                         <h6 class="dropdown-header">Inequality</h6>
                       </li>
                       <li class="dropdown-item drop-item disabled">
-                        <a href="#" class="itemcol nav-link submenu isDisabled"
+                        <a
+                          href="ibp_en.html"
+                          class="itemcol nav-link submenu isDisabled"
                           >IBP</a
                         >
                       </li>
@@ -373,10 +386,10 @@
                 aria-labelledby="navbarDropdown1"
               >
                 <div class="dropdown-item drop-item">
-                  <a href="../plot.html" class="nav-link submenu">Português</a>
+                  <a href="../srag.html" class="nav-link submenu">Português</a>
                 </div>
                 <div class="dropdown-item drop-item">
-                  <a href="plot_en.html" class="nav-link active submenu"
+                  <a href="srag_en.html" class="nav-link active submenu"
                     >English</a
                   >
                 </div>
@@ -387,24 +400,182 @@
       </div>
     </nav>
 
-    <div class="top-model">
-      <h1>Covid situation in Brazil (Only Portuguese)</h1>
-    </div>
-    <div id="myDiv" class="animate-bottom">
-      <div id="iframe-conf" style="margin: 0">
-        <iframe
-          id="plot"
-          src="https://modelingtaskforce.shinyapps.io/new_AED/"
-          style="
-            border: none;
-            width: 100%;
-            height: 1600px;
-            margin-top: 2rem;
-            margin-bottom: -25px;
-          "
-        ></iframe>
+    <section class="top">
+      <h1>Severe Acute Respiratory Syndrome (SRAG)</h1>
+      <div class="intro" style="padding: 2rem 0rem 5rem">
+        <h2 class="mb-5">Description</h2>
+        <p class="card-text">
+          The Severe Acute Respiratory Syndrome (SRAG) dataset is a health data
+          obtained from the Ministry of Health of Brazil through the Secretariat
+          of Health Surveillance, (<a
+            href="https://opendatasus.saude.gov.br/dataset/casos-nacionais"
+            target="_blank"
+            >Ministério da Saúde, 2020</a
+          >).
+        </p>
+        <p>
+          The SRAG surveillance started with the Influenza A (H1N1) pandemic in
+          2009. Since then, SRAG is also used to report Influenza and other
+          respiratory viruses, which previously were reported only with the
+          flu-syndrome sentinel surveillance.
+        </p>
+        <p>
+          Furthermore, in 2020, human infections caused by SARS-COV-2 were
+          incorporated into SRAG surveillance. Given the severity of the
+          disease, all individuals in SRAG require hospitalisations.
+        </p>
+        <p>
+          The dataset has individual, not identifiable, information such as the
+          residence location (city), age, gender, infectious status when the
+          person requires hospitalisation (clinical beds or ICU) or if it had a
+          deadly outcome, among others, (Ministério da Saúde, 2021).
+        </p>
+        <p>
+          Therefore, the data can be aggregated to perform risk analysis and
+          studies of the dynamic evolution of severe cases of COVID-19 at a
+          municipal level and can also be explored for other issues.
+        </p>
+        <p>
+          Furthermore, the dataset contains notifications since January 1st 2020
+          up to date and is weekly updated since then in our project.
+        </p>
+        <p>
+          In addition, the dataset contains notifications from January 1st, 2020
+          to the current date. Data is updated weekly in our project.
+        </p>
+        <h2 class="mb-5 mt-5 pt-5 pb-2">Data access information</h2>
+        <p>
+          The SRAG data is licensed under a Creative Commons Attribution License
+          cc-by (version 4.0), see (<a
+            href="https://opendatasus.saude.gov.br/dataset/casos-nacionais"
+            target="_blank"
+            >Ministério da Saúde, 2020</a
+          >).
+        </p>
+        <p>
+          Additionally, the SRAG dataset is publicly available and published by
+          the Ministry of Health of Brazil. Therefore, no approval by an ethics
+          committee is required to use this data, according to Resolutions
+          466/2012 and 510/2016 (article 1, sections III and V) from the
+          National Health Council (CNS), Brazil.
+        </p>
+        <h2 class="mb-5 mt-5 pt-5 pb-2">Methods of data collection</h2>
+        <p>
+          A python code is available on our
+          <a
+            href="https://github.com/ModelingTaskForce/covidApp"
+            target="_blank"
+            >Github</a
+          >
+          directory to download the SRAG data from the OpenDatasus
+          <!-- , see details in (Ministério da Saúde,          2021), (PAMEpi, 2020) -->
+          . We are pulling the SRAG data from 2019 and on. When running the
+          code, the data is downloaded all again once the OpenDatasus does not
+          have an API token for SRAG.
+        </p>
+        <p>
+          The database is updated weekly in our project, being a version
+          associated with its date of update. Additional information on data
+          collection methods can be found in (<a
+            href="https://portal.fiocruz.br/sites/portal.fiocruz.br/files/documentos/nota_tecnica_13.pdf 
+    "
+            target="_blank"
+            >Observatório COVID-19, 2020</a
+          >).
+        </p>
+        <h2 class="mb-5 mt-5 pt-5 pb-2">Data-specific information for SRAG</h2>
+        <p>
+          The SRAG dataset has a total of 162 columns and showed a total of
+          1,264,480 registries (rows) and a size of 694 MB in the last update of
+          August 19th, 2021.
+        </p>
+        <p>
+          A code with more details about the variables, data processing and
+          analysis methods is presented in our
+          <a
+            href="https://github.com/ModelingTaskForce/covidApp"
+            target="_blank"
+            >Github</a
+          >
+          directory .
+        </p>
+        <h2 class="mb-5 mt-5 pt-5 pb-2">Limitations of SRAG dataset</h2>
+        <p>
+          Every case in SRAG will have a final classification given by the
+          epidemiological surveillance teams of the Secretariat of Health.
+          However, given the number of registered patients, they may not be
+          classified on time (some even closed and not analysed anymore).
+        </p>
+        <p>
+          To overcome such a difficulty, our team will apply a classification
+          algorithm to give a pre-diagnosis of the cases in SRAG that have no
+          final classification. The algorithm is applied to the information of
+          symptoms that is available in the dataset.
+        </p>
       </div>
-    </div>
+    </section>
+    <hr />
+    <section class="middle-white">
+      <h2 class="data">Data and Resources</h2>
+      <div class="dado-subitem">
+        <div class="media download">
+          <div class="media-left">
+            <h3 class="data">
+              Data and variable dictionary (Only in Portuguese)
+            </h3>
+          </div>
+          <div class="media-right">
+            <a
+              href="https://github.com/PAMepi/scripts-datalake"
+              class="btn btn-info"
+              target="_blank"
+              >Download</a
+            >
+          </div>
+        </div>
+
+        <div class="data-in">
+          <h4 class="data">Data explorer</h4>
+          <div class="table-div">
+            <table
+              id="tableExp"
+              cellpadding="2"
+              cellspacing="2"
+              border="1"
+              class="table-data data"
+            ></table>
+          </div>
+
+          <h4 class="data">Data dictionary</h4>
+          <div class="table-div">
+            <table
+              id="tableDic"
+              cellpadding="2"
+              cellspacing="2"
+              border="1"
+              class="table-data dic"
+            ></table>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="dado-subitem">
+        <div class="media download">
+          <h3 class="data">Documentação do processo</h3>
+        </div>
+      </div>
+      <div class="dado-subitem">
+        <div class="media download">
+          <h3 class="data">Análise Visual</h3>
+        </div>
+      </div>
+      <div class="dado-subitem">
+        <div class="media download">
+
+            <h3 class="data">Mineração de Dados e Análise Preditiva</h3>
+        
+         </div> -->
+    </section>
 
     <footer class="page-footer font-small footer" id="footer">
       <div class="container-fluid text-center text-md-left">
@@ -499,24 +670,243 @@
         </div>
       </div>
     </footer>
+    <script type="text/javascript" src="../js/data.js"></script>
+    <script>
+      console.log(sampleSRAG);
+      let cell;
+      let nlines = sampleSRAG.length;
+      let ncols = Object.keys(sampleSRAG["0"]).length;
+      let tableExp = document.getElementById("tableExp");
+      let row;
 
-    <div id="loader"></div>
+      function cellValue(lin, col) {
+        if (Object.keys(sampleSRAG[lin.toString()])[col]) {
+          return `${Object.values(sampleSRAG[lin.toString()])[col]}`;
+        }
+        return "-";
+      }
 
+      function colValue(col) {
+        if (Object.keys(sampleSRAG["0"])[col]) {
+          return `<th>${Object.keys(sampleSRAG["0"])[col]}</th>`;
+        }
+        return "&nbsp;";
+      }
+      // fill
+      row = tableExp.insertRow(0);
+      for (var col = 0; col < ncols; col++) {
+        cell = row.insertCell(col);
+        cell.outerHTML = colValue(col);
+      }
+      // fill table with data
+      for (var lin = 0; lin < nlines; lin++) {
+        row = tableExp.insertRow(lin + 1);
+        for (var col = 0; col < ncols; col++) {
+          cell = row.insertCell(col);
+          cell.innerHTML = cellValue(lin, col);
+        }
+      }
+
+      // Dicionário table
+      const fields = [
+        "DT_NOTIFIC",
+        "SEM_NOT",
+        "DT_SIN_PRI",
+        "SEM_PRI",
+        "SG_UF_NOT",
+        "ID_REGIONA",
+        "CO_REGIONA",
+        "ID_MUNICIP",
+        "CO_MUN_NOT",
+        "ID_UNIDADE",
+        "CO_UNI_NOT",
+        "CS_SEXO",
+        "DT_NASC",
+        "NU_IDADE_N",
+        "TP_IDADE",
+        "COD_IDADE",
+        "CS_GESTANT",
+        "CS_RACA",
+        "CS_ETINIA",
+        "CS_ESCOL_N",
+        "ID_PAIS",
+        "CO_PAIS",
+        "SG_UF",
+        "ID_RG_RESI",
+        "CO_RG_RESI",
+        "ID_MN_RESI",
+        "CO_MUN_RES",
+        "CS_ZONA",
+        "SURTO_SG",
+        "NOSOCOMIAL",
+        "AVE_SUINO",
+        "FEBRE",
+        "TOSSE",
+        "GARGANTA",
+        "DISPNEIA",
+        "DESC_RESP",
+        "SATURACAO",
+        "DIARREIA",
+        "VOMITO",
+        "OUTRO_SIN",
+        "OUTRO_DES",
+        "PUERPERA",
+        "FATOR_RISC",
+        "CARDIOPATI",
+        "HEMATOLOGI",
+        "SIND_DOWN",
+        "HEPATICA",
+        "ASMA",
+        "DIABETES",
+        "NEUROLOGIC",
+        "PNEUMOPATI",
+        "IMUNODEPRE",
+        "RENAL",
+        "OBESIDADE",
+        "OBES_IMC",
+        "OUT_MORBI",
+        "MORB_DESC",
+        "VACINA",
+        "DT_UT_DOSE",
+        "MAE_VAC",
+        "DT_VAC_MAE",
+        "M_AMAMENTA",
+        "DT_DOSEUNI",
+        "DT_1_DOSE",
+        "DT_2_DOSE",
+        "ANTIVIRAL",
+        "TP_ANTIVIR",
+        "OUT_ANTIV",
+        "DT_ANTIVIR",
+        "HOSPITAL",
+        "DT_INTERNA",
+        "SG_UF_INTE",
+        "ID_RG_INTE",
+        "CO_RG_INTE",
+        "ID_MN_INTE",
+        "CO_MU_INTE",
+        "UTI",
+        "DT_ENTUTI",
+        "DT_SAIDUTI",
+        "SUPORT_VEN",
+        "RAIOX_RES",
+        "RAIOX_OUT",
+        "DT_RAIOX",
+        "AMOSTRA",
+        "DT_COLETA",
+        "TP_AMOSTRA",
+        "OUT_AMOST",
+        "PCR_RESUL",
+        "DT_PCR",
+        "POS_PCRFLU",
+        "TP_FLU_PCR",
+        "PCR_FLUASU",
+        "FLUASU_OUT",
+        "PCR_FLUBLI",
+        "FLUBLI_OUT",
+        "POS_PCROUT",
+        "PCR_VSR",
+        "PCR_PARA1",
+        "PCR_PARA2",
+        "PCR_PARA3",
+        "PCR_PARA4",
+        "PCR_ADENO",
+        "PCR_METAP",
+        "PCR_BOCA",
+        "PCR_RINO",
+        "PCR_OUTRO",
+        "DS_PCR_OUT",
+        "CLASSI_FIN",
+        "CLASSI_OUT",
+        "CRITERIO",
+        "EVOLUCAO",
+        "DT_EVOLUCA",
+        "DT_ENCERRA",
+        "DT_DIGITA",
+        "HISTO_VGM",
+        "PAIS_VGM",
+        "CO_PS_VGM",
+        "LO_PS_VGM",
+        "DT_VGM",
+        "DT_RT_VGM",
+        "PCR_SARS2",
+        "PAC_COCBO",
+        "PAC_DSCBO",
+        "OUT_ANIM",
+        "DOR_ABD",
+        "FADIGA",
+        "PERD_OLFT",
+        "PERD_PALA",
+        "TOMO_RES",
+        "TOMO_OUT",
+        "DT_TOMO",
+        "TP_TES_AN",
+        "DT_RES_AN",
+        "RES_AN",
+        "POS_AN_FLU",
+        "TP_FLU_AN",
+        "POS_AN_OUT",
+        "AN_SARS2",
+        "AN_VSR",
+        "AN_PARA1",
+        "AN_PARA2",
+        "AN_PARA3",
+        "AN_ADENO",
+        "AN_OUTRO",
+        "DS_AN_OUT",
+        "TP_AM_SOR",
+        "SOR_OUT",
+        "DT_CO_SOR",
+        "TP_SOR",
+        "OUT_SOR",
+        "DT_RES",
+        "RES_IGG",
+        "RES_IGM",
+        "RES_IGA",
+        "ESTRANG",
+        "VACINA_COV",
+        "DOSE_1_COV",
+        "DOSE_2_COV",
+        "LAB_PR_COV",
+        "LOTE_1_COV",
+        "LOTE_2_COV",
+        "FNT_IN_COV",
+      ];
+
+      lines = [5, 3, 1];
+      ncols = dicSRAG.length;
+
+      tableDic = document.getElementById("tableDic");
+
+      function dicValue(lin, col) {
+        if (Object.keys(dicSRAG[col.toString()])[lin]) {
+          return `<td >${Object.values(dicSRAG[col.toString()])[lin]} </td>`;
+        }
+        return "-";
+      }
+      let col_name = "";
+      // fill table with data
+      for (let [i, lin] of lines.entries()) {
+        row = tableDic.insertRow(i);
+        cell = row.insertCell(row);
+        cell.outerHTML = `<th class="headcol">${
+          Object.keys(dicSRAG["0"])[lin]
+        }</th>`;
+        ncol = 1;
+        for (let col = 0; col < ncols; col++) {
+          col_name = Object.values(dicSRAG[col.toString()])[5];
+          //only add column if field is in our data
+          if (fields.find((fields) => fields === col_name)) {
+            cell = row.insertCell(ncol);
+            cell.outerHTML = dicValue(lin, col);
+            ncol++;
+          }
+        }
+      }
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="../js/scripts.js"></script>
-    <script>
-      var myVar;
-
-      function myFunction() {
-        myVar = setTimeout(showPage, 3000);
-      }
-
-      function showPage() {
-        document.getElementById("loader").style.display = "none";
-        document.getElementById("myDiv").style.display = "block";
-      }
-    </script>
   </body>
 </html>
