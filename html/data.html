@@ -19,7 +19,7 @@
     />
 
     <link rel="stylesheet" type="text/css" href="css/mystyle.css" />
-    <link rel="icon" href="img/favicon.ico" />
+    <link rel="icon" href="img/pamepi.ico" />
   </head>
 
   <body>
@@ -28,33 +28,47 @@
       class="navbar navbar-expand-lg fixed-top justify-content-center"
     >
       <div class="container-fluid">
-        <div class="navbar-header">
-          <a href="index.html" class="navbar-brand active">
-            <img src="img/home.svg" class="home"
-          /></a>
+        <div class="navbar-header w-100 row align-items-center">
+          <div>
+            <a href="index.html" class="navbar-brand active"
+              ><img id="img-logo" src="img/logo.jpeg" />PAMEpi</a
+            >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-chevron-right"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+              />
+            </svg>
+            <a href="covid.html" class="navbar-brand active">Covid-19</a>
+          </div>
 
-          <img src="img/right-arrow.svg" class="nav-arrow" />
-
-          <a class="navbar-brand" href="covid.html">PAMEpi - Covid-19 </a>
+          <button
+            class="
+              navbar-toggler
+              custom-toggler
+              navbar-light
+              ml-auto
+              hidden-sm-up
+              float-right
+            "
+            autofocus
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
         </div>
-        <button
-          class="
-            navbar-toggler navbar-light
-            ml-auto
-            hidden-sm-up
-            float-xs-right
-            custom-toggler
-          "
-          autofocus
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
         <div class="collapse navbar-collapse w-100" id="navbarNav">
           <ul class="nav navbar-nav ml-auto dropdown-menu-right">
             <li class="navbar-item dropdown">
@@ -78,11 +92,7 @@
                     Objetivos</a
                   >
                 </div>
-                <div class="dropdown-item drop-item">
-                  <a href="covid.html#tutorial" class="nav-link submenu"
-                    >Tutorial</a
-                  >
-                </div>
+
                 <div class="dropdown-item drop-item">
                   <a href="covid.html#github" class="nav-link submenu"
                     >Código fonte</a
@@ -261,7 +271,7 @@
 
                       <li class="dropdown-item drop-item">
                         <a href="sivep.html" class="nav-link submenu itemcol"
-                          >SIVEP</a
+                          >SG</a
                         >
                       </li>
                       <li class="dropdown-item drop-item">
@@ -269,17 +279,13 @@
                           >SRAG</a
                         >
                       </li>
-                      <li class="dropdown-item drop-item disabled">
-                        <a
-                          href="brio.html"
-                          class="nav-link submenu itemcol isDisabled"
+                      <li class="dropdown-item drop-item">
+                        <a href="brio.html" class="nav-link submenu itemcol"
                           >Brasil IO</a
                         >
                       </li>
-                      <li class="dropdown-item drop-item disabled">
-                        <a
-                          href="vacina.html"
-                          class="nav-link submenu itemcol isDisabled"
+                      <li class="dropdown-item drop-item">
+                        <a href="vacina.html" class="nav-link submenu itemcol"
                           >Vacinação</a
                         >
                       </li>
@@ -360,6 +366,11 @@
                 <div class="dropdown-item drop-item">
                   <a href="contato.html#faq" class="nav-link submenu"
                     >Perguntas frequentes</a
+                  >
+                </div>
+                <div class="dropdown-item drop-item">
+                  <a href="contato.html#tutorial" class="nav-link submenu"
+                    >Tutorial</a
                   >
                 </div>
                 <div class="dropdown-item drop-item">
@@ -459,10 +470,7 @@
 
         <div class="card data-card" id="sivep">
           <div class="card-header data-header">
-            <h5 class="card-title">
-              Sistema de Informação de Vigilância Epidemiológica da Gripe
-              (SIVEP)
-            </h5>
+            <h5 class="card-title">Síndrome Gripal (SG)</h5>
           </div>
           <div class="card-body data-body">
             <p class="card-text truncate">
@@ -517,7 +525,7 @@
           </div>
 
           <div class="card-footer data-footer">
-            <a class="data-button isDisabled" href="brio.html">Acessar</a>
+            <a class="data-button" href="brio.html">Acessar</a>
           </div>
         </div>
 
@@ -536,7 +544,7 @@
           </div>
 
           <div class="card-footer data-footer">
-            <a class="data-button isDisabled" href="vacina.html">Acessar</a>
+            <a class="data-button" href="vacina.html">Acessar</a>
           </div>
         </div>
 
@@ -652,92 +660,37 @@
     </section>
 
     <footer class="page-footer font-small footer" id="footer">
-      <div class="container-fluid text-center text-md-left">
-        <div class="row">
-          <div class="col-md-3 mb-md-0 mb-3">
-            <h5 class="text-uppercase">A plataforma</h5>
-            <ul class="list-unstyled">
-              <li>
-                <a href="covid.html#projeto" class="foot-link">O projeto</a>
-              </li>
-              <li>
-                <a href="covid.html#tutorial" class="foot-link">Tutorial</a>
-                <!-- explicar o que cada coisa significa -->
-              </li>
-              <li>
-                <a href="covid.html#github" class="foot-link">Código fonte</a>
-                <!-- repositorio do github -->
-              </li>
-              <li>
-                <a href="team.html#team" class="foot-link">Equipe</a>
-              </li>
-              <li>
-                <a href="team.html#acknowledge" class="foot-link"
-                  >Agradecimentos</a
-                >
-              </li>
-              <li>
-                <a href="team.html#support" class="foot-link">Apoio</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="col-md-3 mb-md-0 mb-3">
-            <h5 class="text-uppercase">Comunicação</h5>
-            <ul class="list-unstyled">
-              <li>
-                <a href="news.html#midia" class="foot-link">Notícias</a>
-              </li>
-              <li>
-                <a href="news.html#galeria-videos" class="foot-link"
-                  >Galeria de vídeos</a
-                >
-              </li>
-              <!-- <li>
-              <a href="" class="foot-link">Ensino</a>
-            </li> -->
-              <li>
-                <a href="news.html#newsletter" class="foot-link">Newsletter</a>
-              </li>
-              <li>
-                <a href="news.html#artigos" class="foot-link">Artigos</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="col-md-3 mb-md-0 mb-3">
-            <h5 class="text-uppercase">Contato</h5>
-            <ul class="list-unstyled">
-              <li>
-                <a href="contato.html#faq" class="foot-link">FAQ</a>
-              </li>
-              <li>
-                <a href="contato.html#faleconosco" class="foot-link"
-                  >Fale conosco</a
-                >
-              </li>
-            </ul>
-          </div>
-
-          <div class="col-md-3 mb-md-0 mb-3">
-            <ul class="list-unstyled">
-              <li>
-                <a href="https://cidacs.bahia.fiocruz.br/" target="_blank"
-                  ><img src="img/CIDACS_Bw.png" class="img-cidacs"
-                /></a>
-              </li>
-              <li>
-                <a
-                  class=""
-                  href="https://www.rondonia.fiocruz.br/"
-                  target="_blank"
-                >
-                  <img src="img/fio_rond_bw.png" class="img-fiocruz"
-                /></a>
-              </li>
-            </ul>
-          </div>
+      <div class="row justify-content-center align-items-center copyrights">
+        <div class="icons col-1">
+          <a href="mailto:modeling.taskforce@gmail.com">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              class="bi bi-envelope-fill icons-color"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"
+              /></svg
+          ></a>
         </div>
+        <div class="icons col-1">
+          <a href="https://github.com/PAMepi" target="_blank"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              class="bi bi-github icons-color"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+              /></svg
+          ></a>
+        </div>
+      </div>
+
+      <div class="copyrights row align-items-center justify-content-center">
+        PAMEpi <img src="img/no-virus.svg" class="filter-virus" />2021
       </div>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

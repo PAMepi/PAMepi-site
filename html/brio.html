@@ -17,13 +17,12 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ruda:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-
+    <script type="text/javascript" src="js/data.js"></script>
     <link rel="stylesheet" type="text/css" href="css/mystyle.css" />
-    <link rel="stylesheet" type="text/css" href="css/spin.css" />
     <link rel="icon" href="img/pamepi.ico" />
   </head>
 
-  <body onload="myFunction()" style="margin: 0">
+  <body>
     <nav
       id="navbar"
       class="navbar navbar-expand-lg fixed-top justify-content-center"
@@ -104,7 +103,7 @@
 
             <li class="navbar-item dropdown">
               <div
-                class="dropdown-item dropdown-toggle active"
+                class="dropdown-item dropdown-toggle"
                 id="navbarDropdown2"
                 role="button"
                 data-toggle="dropdown"
@@ -131,9 +130,7 @@
                         <h6 class="dropdown-header">Descritiva</h6>
                       </li>
                       <li class="dropdown-item drop-item">
-                        <a
-                          href="plot.html"
-                          class="itemcol nav-link submenu active"
+                        <a href="plot.html" class="itemcol nav-link submenu"
                           >Panorama</a
                         >
                       </li>
@@ -231,7 +228,7 @@
 
             <li class="navbar-item dropdown">
               <div
-                class="dropdown-item dropdown-toggle"
+                class="dropdown-item dropdown-toggle active"
                 id="navbarDropdown2"
                 role="button"
                 data-toggle="dropdown"
@@ -281,7 +278,9 @@
                         >
                       </li>
                       <li class="dropdown-item drop-item">
-                        <a href="brio.html" class="nav-link submenu itemcol"
+                        <a
+                          href="brio.html"
+                          class="nav-link submenu itemcol active"
                           >Brasil IO</a
                         >
                       </li>
@@ -291,7 +290,9 @@
                         >
                       </li>
                       <li class="dropdown-item drop-item disabled">
-                        <a href="#" class="nav-link submenu itemcol isDisabled"
+                        <a
+                          href="hospital.html"
+                          class="nav-link submenu itemcol isDisabled"
                           >Ocupação Hospitalar</a
                         >
                       </li>
@@ -299,12 +300,16 @@
                         <h6 class="dropdown-header">Mobilidade</h6>
                       </li>
                       <li class="dropdown-item drop-item disabled">
-                        <a href="#" class="nav-link submenu itemcol isDisabled"
+                        <a
+                          href="googlemob.html"
+                          class="nav-link submenu itemcol isDisabled"
                           >Google</a
                         >
                       </li>
                       <li class="dropdown-item drop-item disabled">
-                        <a href="#" class="nav-link submenu itemcol isDisabled"
+                        <a
+                          href="intercid.html"
+                          class="nav-link submenu itemcol isDisabled"
                           >Intercidade</a
                         >
                       </li>
@@ -312,7 +317,9 @@
                         <h6 class="dropdown-header">Inequalidade</h6>
                       </li>
                       <li class="dropdown-item drop-item disabled">
-                        <a href="#" class="itemcol nav-link submenu isDisabled"
+                        <a
+                          href="ibp.html"
+                          class="itemcol nav-link submenu isDisabled"
                           >IBP</a
                         >
                       </li>
@@ -392,12 +399,12 @@
                 aria-labelledby="navbarDropdown1"
               >
                 <div class="dropdown-item drop-item">
-                  <a href="plot.html" class="nav-link active submenu"
+                  <a href="brio.html" class="nav-link active submenu"
                     >Português</a
                   >
                 </div>
-                <div class="dropdown-item drop-item">
-                  <a href="en/plot_en.html" class="nav-link submenu">English</a>
+                <div class="dropdown-item drop-item" disabled>
+                  <a href="en/brio_en.html" class="nav-link submenu">English</a>
                 </div>
               </div>
             </li>
@@ -406,24 +413,156 @@
       </div>
     </nav>
 
-    <div class="top-model">
-      <h1>Situação do Covid no Brasil</h1>
-    </div>
-    <div id="myDiv" class="animate-bottom">
-      <div id="iframe-conf" style="margin: 0">
-        <iframe
-          id="plot"
-          src="https://modelingtaskforce.shinyapps.io/new_AED/"
-          style="
-            border: none;
-            width: 100%;
-            height: 1600px;
-            margin-top: 2rem;
-            margin-bottom: -25px;
-          "
-        ></iframe>
+    <section class="top">
+      <h1>Brasil io</h1>
+      <div class="intro" style="padding: 2rem 0rem 5rem">
+        <h2 class="mb-5">Descrição</h2>
+        <p class="card-text">
+          O conjunto de dados Brasil io é extraído de um projeto não
+          governamental chamado Brasil io que realiza trabalho voluntário para
+          coletar informações sobre o número de casos confirmados e óbitos
+          causados ​​por infecções por SARS-COV-2 agregados em nível estadual e
+          municipal (<a
+            href="https://brasil.io/dataset/covid19/"
+            target="_blank"
+            >Brasil io, 2020</a
+          >).
+        </p>
+        <p>
+          Os autores reúnem os dados dos relatórios das secretarias estaduais e
+          municipais disponíveis publicamente antes do registro no banco de
+          dados do Ministério da Saúde do Brasil. Esse processo ajuda a
+          disponibilizar dados sobre o COVID-19 em tempo real, uma vez que
+          demora muito para registrar os casos das secretarias estaduais e
+          municipais no sistema único brasileiro.
+        </p>
+        <p>
+          Além disso, os dados fornecidos pelo Ministério da Saúde têm um
+          processo de atualização raro e lento, o site fica fora do ar com
+          frequência e os dados são desestruturados. O conjunto de dados Brasil
+          io corresponde a casos confirmados e óbitos causados ​​por infecções
+          por SARS-COV-2, agregados nos níveis estadual e municipal (<a
+            href="https://brasil.io/dataset/covid19/"
+            target="_blank"
+            >Brasil io, 2020</a
+          >).
+        </p>
+        <p>
+          Coletamos os dados de 1º de fevereiro de 2020 em diante. Os dados
+          podem ser atualizados diariamente. Links para publicações que usam os
+          dados do Brasil io ou fornecem outros locais de acesso público dos
+          dados podem ser encontrados em (<a
+            href="https://www.sciencedirect.com/science/article/pii/S1755436521000232?via%3Dihub"
+            target="_blank"
+          >
+            Jorge et al., 2021, 35</a
+          >
+          ).
+        </p>
+        <h2 class="mb-5 mt-5 pt-5 pb-2">Informação de acesso a dados</h2>
+        <p>
+          Os dados coletados, limpos e formatados disponíveis gratuitamente no
+          Brasil io podem ser acessados e baixados em (<a
+            href="https://brasil.io/dataset/covid19/"
+            target="_blank"
+            >Brasil io, 2020</a
+          >), sob a licença Creative Commons Attribution ShareAlike (CC-BY-SA).
+        </p>
+        <h2 class="mb-5 mt-5 pt-5 pb-2">Métodos de coleta de dados</h2>
+        <p>
+          Um código python está disponível em nosso diretório
+          <a
+            href="https://github.com/ModelingTaskForce/covidApp"
+            target="_blank"
+            >Github</a
+          >
+          para baixar dados do projeto Brasil Io, veja detalhes em
+          <a
+            href="https://github.com/ModelingTaskForce/covidApp"
+            target="_blank"
+            >Github</a
+          >.
+        </p>
+        <h2 class="mb-5 mt-5 pt-5 pb-2">
+          Informações específicas de dados para Brasil io
+        </h2>
+        <p>
+          O conjunto de dados do Brasil tem um total de 18 colunas e mostrou um
+          total de 2.606.897 registros (linhas) e um tamanho de 285 MB na última
+          atualização de 19 de agosto de 2021. Um código com mais detalhes sobre
+          as variáveis, processamento de dados e métodos de análise é
+          apresentado em nosso diretório
+          <a
+            href="https://github.com/ModelingTaskForce/covidApp"
+            target="_blank"
+            >Github</a
+          >.
+        </p>
+        <h2 class="mb-5 mt-5 pt-5 pb-2">
+          Limitações do conjunto de dados Brasil io
+        </h2>
+        <p>
+          O conjunto de dados Brasil io depende da qualidade das informações
+          divulgadas pelas secretarias estaduais e municipais de saúde. Quando
+          os arquivos são fornecidos em pdf ou imagens, isso pode comprometer a
+          tabulação dos dados em tempo real. Além disso, os óbitos e casos de
+          COVID-19 são tabulados de acordo com a data de coleta dos dados.
+        </p>
+        <p>
+          Portanto, a curva epidemiológica construída pode mostrar um atraso de
+          uma a até 7 semanas em relação à data dos primeiros sintomas ou à data
+          do exame laboratorial do caso (<a
+            href="https://portal.fiocruz.br/sites/portal.fiocruz.br/files/documentos/nota_tecnica_13.pdf"
+            target="_blank"
+            >Observatório COVID-19, 2020</a
+          >). Ainda assim, o conjunto de dados é considerado uma excelente fonte
+          para medir o curso da pandemia em tempo real.
+        </p>
       </div>
-    </div>
+    </section>
+    <hr />
+    <section class="middle-white">
+      <h2 class="data">Dados e recursos</h2>
+      <div class="dado-subitem">
+        <div class="media download">
+          <div class="media-left">
+            <h3 class="data">Dados e dicionário de variáveis</h3>
+          </div>
+          <div class="media-right">
+            <a
+              href="https://github.com/PAMepi/scripts-datalake"
+              class="btn btn-info"
+              target="_blank"
+              >Download</a
+            >
+          </div>
+        </div>
+
+        <div class="data-in">
+          <h4 class="data">Explorador de dados</h4>
+          <div class="table-div">
+            <table
+              id="tableExp"
+              cellpadding="2"
+              cellspacing="2"
+              border="1"
+              class="table-data data"
+            ></table>
+          </div>
+
+          <h4 class="data">Dicionário de Dados</h4>
+          <div class="table-div">
+            <table
+              id="tableDic"
+              cellpadding="2"
+              cellspacing="2"
+              border="1"
+              class="table-data dic"
+            ></table>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <footer class="page-footer font-small footer" id="footer">
       <div class="row justify-content-center align-items-center copyrights">
@@ -460,22 +599,75 @@
       </div>
     </footer>
 
-    <div id="loader"></div>
+    <script>
+      let cell;
+      let nlines = sampleBRio.length;
+      let ncols = Object.keys(sampleBRio["0"]).length;
+      let tableExp = document.getElementById("tableExp");
+      let row;
+
+      function cellValue(lin, col) {
+        if (Object.keys(sampleBRio[lin.toString()])[col]) {
+          return `${Object.values(sampleBRio[lin.toString()])[col]}`;
+        }
+        return "-";
+      }
+
+      function colValue(col) {
+        if (Object.keys(sampleBRio["0"])[col]) {
+          return `<th>${Object.keys(sampleBRio["0"])[col]}</th>`;
+        }
+        return "&nbsp;";
+      }
+      // fill
+      row = tableExp.insertRow(0);
+      for (var col = 0; col < ncols; col++) {
+        cell = row.insertCell(col);
+        cell.outerHTML = colValue(col);
+      }
+      // fill table with data
+      for (var lin = 0; lin < nlines; lin++) {
+        row = tableExp.insertRow(lin + 1);
+        for (var col = 0; col < ncols; col++) {
+          cell = row.insertCell(col);
+          cell.innerHTML = cellValue(lin, col);
+        }
+      }
+
+      lines = [0, 1, 2];
+      ncols = dicBrasilio.length;
+
+      tableDic = document.getElementById("tableDic");
+
+      function dicValue(lin, col) {
+        if (Object.keys(dicBrasilio[col.toString()])[lin]) {
+          return `<td >${
+            Object.values(dicBrasilio[col.toString()])[lin]
+          } </td>`;
+        }
+        return "-";
+      }
+      let col_name = "";
+      // fill table with data
+      for (let [i, lin] of lines.entries()) {
+        row = tableDic.insertRow(i);
+        cell = row.insertCell(row);
+        cell.outerHTML = `<th class="headcol">${
+          Object.keys(dicBrasilio["0"])[lin]
+        }</th>`;
+        ncol = 1;
+        for (let col = 0; col < ncols; col++) {
+          col_name = Object.values(dicBrasilio[col.toString()])[5];
+
+          cell = row.insertCell(ncol);
+          cell.outerHTML = dicValue(lin, col);
+          ncol++;
+        }
+      }
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
-    <script>
-      var myVar;
-
-      function myFunction() {
-        myVar = setTimeout(showPage, 3000);
-      }
-
-      function showPage() {
-        document.getElementById("loader").style.display = "none";
-        document.getElementById("myDiv").style.display = "block";
-      }
-    </script>
   </body>
 </html>

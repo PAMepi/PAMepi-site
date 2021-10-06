@@ -17,13 +17,12 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ruda:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-
+    <script type="text/javascript" src="js/data.js"></script>
     <link rel="stylesheet" type="text/css" href="css/mystyle.css" />
-    <link rel="stylesheet" type="text/css" href="css/spin.css" />
     <link rel="icon" href="img/pamepi.ico" />
   </head>
 
-  <body onload="myFunction()" style="margin: 0">
+  <body>
     <nav
       id="navbar"
       class="navbar navbar-expand-lg fixed-top justify-content-center"
@@ -104,7 +103,7 @@
 
             <li class="navbar-item dropdown">
               <div
-                class="dropdown-item dropdown-toggle active"
+                class="dropdown-item dropdown-toggle"
                 id="navbarDropdown2"
                 role="button"
                 data-toggle="dropdown"
@@ -131,9 +130,7 @@
                         <h6 class="dropdown-header">Descritiva</h6>
                       </li>
                       <li class="dropdown-item drop-item">
-                        <a
-                          href="plot.html"
-                          class="itemcol nav-link submenu active"
+                        <a href="plot.html" class="itemcol nav-link submenu"
                           >Panorama</a
                         >
                       </li>
@@ -231,7 +228,7 @@
 
             <li class="navbar-item dropdown">
               <div
-                class="dropdown-item dropdown-toggle"
+                class="dropdown-item dropdown-toggle active"
                 id="navbarDropdown2"
                 role="button"
                 data-toggle="dropdown"
@@ -286,12 +283,16 @@
                         >
                       </li>
                       <li class="dropdown-item drop-item">
-                        <a href="vacina.html" class="nav-link submenu itemcol"
+                        <a
+                          href="vacina.html"
+                          class="nav-link submenu itemcol active"
                           >Vacinação</a
                         >
                       </li>
                       <li class="dropdown-item drop-item disabled">
-                        <a href="#" class="nav-link submenu itemcol isDisabled"
+                        <a
+                          href="hospital.html"
+                          class="nav-link submenu itemcol isDisabled"
                           >Ocupação Hospitalar</a
                         >
                       </li>
@@ -299,12 +300,16 @@
                         <h6 class="dropdown-header">Mobilidade</h6>
                       </li>
                       <li class="dropdown-item drop-item disabled">
-                        <a href="#" class="nav-link submenu itemcol isDisabled"
+                        <a
+                          href="googlemob.html"
+                          class="nav-link submenu itemcol isDisabled"
                           >Google</a
                         >
                       </li>
                       <li class="dropdown-item drop-item disabled">
-                        <a href="#" class="nav-link submenu itemcol isDisabled"
+                        <a
+                          href="intercid.html"
+                          class="nav-link submenu itemcol isDisabled"
                           >Intercidade</a
                         >
                       </li>
@@ -312,7 +317,9 @@
                         <h6 class="dropdown-header">Inequalidade</h6>
                       </li>
                       <li class="dropdown-item drop-item disabled">
-                        <a href="#" class="itemcol nav-link submenu isDisabled"
+                        <a
+                          href="ibp.html"
+                          class="itemcol nav-link submenu isDisabled"
                           >IBP</a
                         >
                       </li>
@@ -358,6 +365,7 @@
                     >Artigos</a
                   >
                 </div>
+
                 <div class="dropdown-item drop-item">
                   <a href="contato.html#faq" class="nav-link submenu"
                     >Perguntas frequentes</a
@@ -392,12 +400,14 @@
                 aria-labelledby="navbarDropdown1"
               >
                 <div class="dropdown-item drop-item">
-                  <a href="plot.html" class="nav-link active submenu"
+                  <a href="vacina.html" class="nav-link active submenu"
                     >Português</a
                   >
                 </div>
-                <div class="dropdown-item drop-item">
-                  <a href="en/plot_en.html" class="nav-link submenu">English</a>
+                <div class="dropdown-item drop-item" disabled>
+                  <a href="en/vacina_en.html" class="nav-link submenu"
+                    >English</a
+                  >
                 </div>
               </div>
             </li>
@@ -406,32 +416,138 @@
       </div>
     </nav>
 
-    <div class="top-model">
-      <h1>Situação do Covid no Brasil</h1>
-    </div>
-    <div id="myDiv" class="animate-bottom">
-      <div id="iframe-conf" style="margin: 0">
-        <iframe
-          id="plot"
-          src="https://modelingtaskforce.shinyapps.io/new_AED/"
-          style="
-            border: none;
-            width: 100%;
-            height: 1600px;
-            margin-top: 2rem;
-            margin-bottom: -25px;
-          "
-        ></iframe>
+    <section class="top">
+      <h1>Vacinação Covid-19</h1>
+      <div class="intro" style="padding: 2rem 0rem 5rem">
+        <h2 class="mb-5">Descrição</h2>
+        <p class="card-text">
+          Os dados de vacinação da Covid-19 estão relacionados à Campanha
+          Nacional de Vacinação contra a Covid-19. O Ministério da Saúde
+          disponibiliza por meio do Sistema de Informações do Programa Nacional
+          de Imunizações (SI-PNI) e está disponível no OpenDatasus para
+          download.
+        </p>
+        <p>
+          Os dados são individualizados e desidentificados e incluem informações
+          sobre o número de doses aplicadas nos estados e municípios, o tipo de
+          vacina utilizada e informações sobre sexo e faixa etária do paciente
+          (<a
+            href="https://opendatasus.saude.gov.br/dataset/covid-19-vacinacao"
+            target="_blank"
+            >Ministério da Saúde, 2021</a
+          >) .
+        </p>
+        <h2 class="mb-5 mt-5 pt-5 pb-2">Informação de acesso a dados</h2>
+
+        <p>
+          Os dados da vacina são licenciados sob uma Licença de Atribuição
+          Creative Commons cc-by (versão 4.0), consulte (<a
+            href="https://opendatasus.saude.gov.br/dataset/covid-19-vacinacao"
+            target="_ blank"
+            >Ministério da Saúde, 2021</a
+          >). Além disso, o conjunto de dados da vacina está disponível ao
+          público e publicado pelo Ministério da Saúde do Brasil.
+        </p>
+        <p>
+          Portanto, não é necessária a aprovação de um comitê de ética para o
+          uso desses dados, de acordo com as Resoluções 466/2012 e 510/2016
+          (artigo 1º, incisos III e V) do Conselho Nacional de Saúde (CNS),
+          Brasil.
+        </p>
+        <h2 class="mb-5 mt-5 pt-5 pb-2">Métodos de coleta de dados</h2>
+        <p>
+          Um código python está disponível em nosso diretório
+          <a
+            href="https://github.com/ModelingTaskForce/covidApp"
+            target="_blank"
+          >
+            Github
+          </a>
+          para baixar os dados da vacina do OpenDatasus, veja os detalhes em (<a
+            href="https://opendatasus.saude.gov.br/dataset/covid-19-vacinacao"
+            target="_ blank"
+          >
+            Ministério da Saúde, 2021 </a
+          >) e
+          <a
+            href="https : //github.com/ModelingTaskForce/covidApp "
+            target=" _ blank "
+          >
+            Github </a
+          >.
+        </p>
+
+        <h2 class="mb-5 mt-5 pt-5 pb-2">
+          Informações específicas de dados para vacinação
+        </h2>
+        <p>
+          O conjunto de dados da vacina tem um total de 34 colunas e mostrou um
+          total de 159.710.042 registros (linhas) e um tamanho de 79 GB na
+          última atualização de 19 de agosto de 2021. Um código com mais
+          detalhes sobre as variáveis, processamento de dados e métodos de
+          análise é apresentado em nosso diretório
+          <a
+            href="https : //github.com/ModelingTaskForce/covidApp "
+            target=" _ blank "
+          >
+            Github </a
+          >.
+        </p>
       </div>
-    </div>
+    </section>
+    <hr />
+    <section class="middle-white">
+      <h2 class="data">Dados e recursos</h2>
+      <div class="dado-subitem">
+        <div class="media download">
+          <div class="media-left">
+            <h3 class="data">Dados e dicionário de variáveis</h3>
+          </div>
+          <div class="media-right">
+            <a
+              href="https://github.com/PAMepi/scripts-datalake"
+              class="btn btn-info"
+              target="_blank"
+              >Download</a
+            >
+          </div>
+        </div>
+
+        <div class="data-in">
+          <h4 class="data">Explorador de dados</h4>
+          <div class="table-div">
+            <table
+              id="tableExp"
+              cellpadding="2"
+              cellspacing="2"
+              border="1"
+              class="table-data data"
+            ></table>
+          </div>
+
+          <h4 class="data">Dicionário de Dados</h4>
+          <div class="table-div">
+            <table
+              id="tableDic"
+              cellpadding="2"
+              cellspacing="2"
+              border="1"
+              class="table-data dic"
+            ></table>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <footer class="page-footer font-small footer" id="footer">
-      <div class="row justify-content-center align-items-center copyrights">
+      <div
+        class="row justify-content-center align-items-center mb-4 copyrights"
+      >
         <div class="icons col-1">
           <a href="mailto:modeling.taskforce@gmail.com">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
+              fill="white"
               class="bi bi-envelope-fill icons-color"
               viewBox="0 0 16 16"
             >
@@ -444,7 +560,7 @@
           <a href="https://github.com/PAMepi" target="_blank"
             ><svg
               xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
+              fill="white"
               class="bi bi-github icons-color"
               viewBox="0 0 16 16"
             >
@@ -460,22 +576,73 @@
       </div>
     </footer>
 
-    <div id="loader"></div>
+    <script>
+      let cell;
+      let nlines = sampleVac.length;
+      let ncols = Object.keys(sampleVac["0"]).length;
+      let tableExp = document.getElementById("tableExp");
+      let row;
+
+      function cellValue(lin, col) {
+        if (Object.keys(sampleVac[lin.toString()])[col]) {
+          return `${Object.values(sampleVac[lin.toString()])[col]}`;
+        }
+        return "-";
+      }
+
+      function colValue(col) {
+        if (Object.keys(sampleVac["0"])[col]) {
+          return `<th>${Object.keys(sampleVac["0"])[col]}</th>`;
+        }
+        return "&nbsp;";
+      }
+      // fill
+      row = tableExp.insertRow(0);
+      for (var col = 0; col < ncols; col++) {
+        cell = row.insertCell(col);
+        cell.outerHTML = colValue(col);
+      }
+      // fill table with data
+      for (var lin = 0; lin < nlines; lin++) {
+        row = tableExp.insertRow(lin + 1);
+        for (var col = 0; col < ncols; col++) {
+          cell = row.insertCell(col);
+          cell.innerHTML = cellValue(lin, col);
+        }
+      }
+
+      lines = [1, 2, 3];
+      ncols = dicVacina.length;
+
+      tableDic = document.getElementById("tableDic");
+
+      function dicValue(lin, col) {
+        if (Object.keys(dicVacina[col.toString()])[lin]) {
+          return `<td >${Object.values(dicVacina[col.toString()])[lin]} </td>`;
+        }
+        return "-";
+      }
+      let col_name = "";
+      // fill table with data
+      for (let [i, lin] of lines.entries()) {
+        row = tableDic.insertRow(i);
+        cell = row.insertCell(row);
+        cell.outerHTML = `<th class="headcol">${
+          Object.keys(dicVacina["0"])[lin]
+        }</th>`;
+        ncol = 1;
+        for (let col = 0; col < ncols; col++) {
+          col_name = Object.values(dicVacina[col.toString()])[5];
+
+          cell = row.insertCell(ncol);
+          cell.outerHTML = dicValue(lin, col);
+          ncol++;
+        }
+      }
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
-    <script>
-      var myVar;
-
-      function myFunction() {
-        myVar = setTimeout(showPage, 3000);
-      }
-
-      function showPage() {
-        document.getElementById("loader").style.display = "none";
-        document.getElementById("myDiv").style.display = "block";
-      }
-    </script>
   </body>
 </html>
