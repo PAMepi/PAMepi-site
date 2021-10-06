@@ -44,7 +44,7 @@ html {
   background-color: #eee;
 
   color: #222831;
-  padding: 1.5rem 0;
+  padding: 0.8rem 0;
   border: 1px solid #ddd;
 }
 
@@ -89,14 +89,12 @@ html {
   /* z-index: 99; */
 }
 
-#txt-logo {
-  transition: 0.4s;
-}
-
 #img-logo {
   transition: 0.4s;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 1rem;
 }
 
 .submenu {
@@ -104,18 +102,18 @@ html {
 }
 
 .navbar-brand {
-  font-size: 1.1rem;
   font-family: "Ruda", sans-serif;
-  font-weight: 900;
+  font-weight: 800;
   color: #222831;
   padding: 0 0.5rem;
+  transition: 0.4s;
+  font-size: 1.2rem;
 }
 
 .navbar-brand:hover {
   color: #bb3b0e;
-  font-size: 1.1rem;
   font-family: "Ruda", sans-serif;
-  font-weight: 900;
+  font-weight: 800;
 }
 
 .dropdown-menu {
@@ -268,32 +266,11 @@ a:hover {
   padding: 0;
 }
 
-.home {
-  filter: invert(13%) sepia(3%) saturate(3458%) hue-rotate(177deg)
-    brightness(95%) contrast(93%);
-  background: url("../img/home.svg") no-repeat;
-  width: 1.4rem;
-  height: 1.3rem;
-  background-position: center;
-  background-size: cover;
-  padding: 0;
-  margin-left: 1rem;
-}
-
-.home:hover {
-  filter: invert(25%) sepia(30%) saturate(4463%) hue-rotate(356deg)
-    brightness(100%) contrast(94%);
-  background: url("../img/homefill.svg") no-repeat;
-  width: 1.4rem;
-  height: 1.3rem;
-  background-position: center;
-  background-size: cover;
-  padding: 0;
-  margin-left: 1rem;
-}
 .navbar-header {
   vertical-align: middle;
-  line-height: 60px;
+  line-height: 50px;
+  transition: 0.4s;
+  width: 40% !important;
 }
 .bi-chevron-right {
   padding: 0;
@@ -364,7 +341,7 @@ a:hover {
 .hdruk:hover,
 .icoda:hover,
 .flaticon-img:hover {
-  //filter: invert(26%) sepia(77%) saturate(659%) hue-rotate(299deg) brightness(88%) contrast(86%);
+  //filter: invert(26%) sepia(77%) saturate(659%) hue-rotate(299deg) brightness(88%) contrast(86%); rosa
   transform: scale(1.1);
   transition: transform 0.3s ease;
 }
@@ -431,11 +408,14 @@ a:hover {
   text-align: left;
   padding: 1rem 0;
 }
+.navbar .container-fluid {
+  padding: 0 2rem;
+}
 
 .footer {
   background-color: #eee;
   color: #222831;
-  padding: 2rem 5rem;
+  padding: 2rem 10rem;
   border: 1px solid #ddd;
 }
 
@@ -638,10 +618,12 @@ a:hover {
   width: 100%;
   border-radius: 16px;
 }
-.cvbutton:hover {
+.cvbutton:hover,
+.cvbutton:focus,
+.cvbutton:target {
   box-shadow: 0px 0px 0px 2px #f6a688;
+  border: none;
 
-  //  box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.5);
   font-weight: 500;
 }
 
@@ -733,6 +715,9 @@ a:hover {
 
   .dropdown:hover .dropdown-menu {
     border: 0;
+  }
+  .navbar-header {
+    width: 100% !important;
   }
 }
 
