@@ -104,13 +104,23 @@ $(window).on("load resize orientationchange", normalizeSlideHeights);
 // change size of navbar when scroll down the page
 window.onscroll = function () {
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    document.getElementById("navbar").style.padding = "0.2rem 0";
+    document.getElementById("navbar").style.padding = "0";
+    logos = document.getElementsByClassName("navbar-brand");
+    for (logo of logos) {
+      logo.style.fontSize = "1rem";
+    }
+    document.getElementsByClassName("navbar-brand")[1].style.fontSize = "1rem";
+    document.getElementById("img-logo").style.width = "30px";
+    document.getElementById("img-logo").style.height = "30px";
+  } else {
+    logos = document.getElementsByClassName("navbar-brand");
+    for (logo of logos) {
+      logo.style.fontSize = "1.2rem";
+    }
+    document.getElementById("navbar").style.padding = "0.8rem 0";
+
     document.getElementById("img-logo").style.width = "40px";
     document.getElementById("img-logo").style.height = "40px";
-  } else {
-    document.getElementById("navbar").style.padding = "1.2rem 0";
-    document.getElementById("img-logo").style.width = "50px";
-    document.getElementById("img-logo").style.height = "50px";
   }
 };
 
