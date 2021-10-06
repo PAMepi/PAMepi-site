@@ -16,7 +16,7 @@
 
   <link rel="stylesheet" type="text/css" href="../css/mystyle.css" />
   <link rel="stylesheet" href="../css/carousel.css" />
-  <link rel="icon" href="../img/favicon.ico">
+  <link rel="icon" href="../img/pamepi.ico">
 
 </head>
 
@@ -24,20 +24,55 @@
 
   <nav id="navbar" class="navbar navbar-expand-lg fixed-top justify-content-center">
     <div class="container-fluid">
-      <div class=" navbar-header">
+      <div class="navbar-header w-100 row align-items-center">
+        <div>
+          <a
+            href="index_en.html"
+            class="navbar-brand active"
+            id="navbar-header"
+            ><img id="img-logo" src="../img/logo.jpeg" />PAMEpi</a
+          >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-chevron-right"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+            />
+          </svg>
+          <a
+            href="covid_en.html"
+            class="navbar-brand active"
+            id="navbar-header"
+            >Covid-19</a
+          >
+        </div>
 
-        <a href="index_en.html" class="navbar-brand active">
-          <img src="../img/home.svg" class="home"></a>
-
-        <img src="../img/right-arrow.svg" class="nav-arrow">
-
-        <a class="navbar-brand" href="covid_en.html">PAMEpi -  Covid-19 </a>
+        <button
+          class="
+            navbar-toggler
+            custom-toggler
+            navbar-light
+            ml-auto
+            hidden-sm-up
+            float-right
+          "
+          autofocus
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
       </div>
-      <button class="navbar-toggler navbar-light ml-auto hidden-sm-up float-xs-right custom-toggler" autofocus
-      type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-      aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon "></span>
-    </button>
   <div class="collapse navbar-collapse w-100" id="navbarNav">
 
     <ul class="nav navbar-nav ml-auto dropdown-menu-right ">
@@ -50,9 +85,7 @@
                 <a href="covid_en.html#projeto" class="nav-link submenu ">
                   Goals</a>
               </div>
-              <div class="dropdown-item drop-item">
-                <a href="covid_en.html#tutorial" class="nav-link submenu ">Tutorial</a>
-              </div>
+          
               <div class="dropdown-item drop-item">
                 <a href="covid_en.html#github" class="nav-link submenu ">Source code</a>
               </div>
@@ -155,7 +188,7 @@
   
                       <li  class="dropdown-item drop-item ">
                        
-                          <a href="sivep_en.html" class="nav-link submenu itemcol ">SIVEP</a>
+                          <a href="sivep_en.html" class="nav-link submenu itemcol ">SG</a>
                        
                       </li>
                       <li class="dropdown-item drop-item ">
@@ -163,14 +196,14 @@
                           <a href="srag_en.html" class="nav-link submenu itemcol ">SRAG</a>
                         
                       </li>
-                      <li  class="dropdown-item drop-item disabled">
+                      <li  class="dropdown-item drop-item ">
                       
-                          <a href="#" class="nav-link submenu itemcol isDisabled">Brasil IO</a>
+                          <a href="brio_en.html" class="nav-link submenu itemcol ">Brasil IO</a>
                     
                       </li>
-                      <li  class="dropdown-item drop-item disabled">
+                      <li  class="dropdown-item drop-item ">
                     
-                          <a href="#" class="nav-link submenu itemcol isDisabled">Vaccination</a>
+                          <a href="vacina_en.html" class="nav-link submenu itemcol ">Vaccination</a>
                       
                       </li>
                       <li  class="dropdown-item drop-item disabled">
@@ -224,6 +257,9 @@
               </div>
               <div class="dropdown-item drop-item">
                 <a href="contato_en.html#faq" class="nav-link submenu ">FAQ</a>
+              </div>
+              <div class="dropdown-item drop-item">
+                <a href="contato_en.html#tutorial" class="nav-link submenu ">Tutorial</a>
               </div>
               <div class="dropdown-item drop-item">
                 <a href="contato_en.html#faleconosco" class="nav-link submenu ">Contact us</a>
@@ -322,89 +358,7 @@
 
   </div>
 
-  <div class="top-content" id="news">
-    <h1 >Newsletter</h1>
-    <div class="container-fluid">
-      <div id="carousel-example" class="carousel slide" data-ride="carousel" data-interval="10000">
-        <div class="carousel-inner row w-100 mx-auto listbox" role="listbox">
-
-          <div class="carousel-item col-md-6 col-lg-4 active">
-            <div class="columns">
-              <ul class="price">
-                <li class="box-header">Computational modeling:<br />historical overview and role in the pandemic</li>
-                <li class="grey body-news"> The simplest definition for the term "computational modeling" corresponds to the description of a phenomenon using a programming language...</li>
-                <a href="news_en.html#collapseMod" class="abutton"><li class="grey box-footer"><span >Read more</span></a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="carousel-item col-md-6 col-lg-4">
-            <div class="columns">
-              <ul class="price">
-                <li class="box-header">A bridge to the future:<br /> comparison between inoculation and collective immunity policies against COVID-19 in a scenario still without the vaccine</li>
-                <li class="grey body-news"> The inoculation strategy is similar to natural immunity strategies where it considers exposure to the infectious agent as a preventive method for the disease in question...</li>
-               <a href="news_en.html#collapseUma" class="abutton"><li class="grey box-footer"><span >Read more</span></a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="carousel-item col-md-6 col-lg-4">
-            <div class="columns">
-              <ul class="price">
-                <li class="box-header">Statistical modeling</li>
-                <li class="grey body-news"> “Statistics” is a word derived from the Latin status, originally means “the study of the state”...</li>
-                <a href="news_en.html#collapseEst" class="abutton"><li class="grey box-footer"><span >Read more</span></a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="carousel-item col-md-6 col-lg-4">
-            <div class="columns">
-              <ul class="price">
-                <li class="box-header">Mathematical modeling processes:<br />compartment models</li>
-                <li class="grey body-news"> The mathematical modeling of infectious diseases (IDs) started in the late 19th century, when part of the studies presented were developed by public health professionals...</li>
-              <a href="news_en.html#collapsePro" class="abutton"><li class="grey box-footer"><span >Read more</span></a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="carousel-item col-md-6 col-lg-4">
-            <div class="columns">
-              <ul class="price">
-                <li class="box-header">Brief history of infectious diseases</li>
-                <li class="grey body-news"> Infectious diseases (IDs) are caused by pathogens such as bacteria, viruses, parasites, fungi or prions...</li>
-                <a href="news_en.html#collapseBreve" class="abutton"><li class="grey box-footer"><span >Read more</span></a></li>
-              </ul>
-            </div>
-          </div>
-
-        </div>
-        <div class="carousel-controls">
-          <a class="carousel-control-prev" href="#carousel-example" role="button" data-slide="prev">
-            <img src="../img/left-arrow.png" class="control-img" />
-          </a>
-          <a class="carousel-control-next" href="#carousel-example" role="button" data-slide="next">
-            <img src="../img/right-arrow.png" class="control-img" />
-          </a>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-    <div class="middle-white" id="tutorial">
-      <h1>Tutorial</h1>
-      <div class="div-media">
-        <div class="media">
-          <div class="media-left  construction">
-            <img src="../img/construction.svg" class="media-object" style="width:80px">
-          </div>
-          <div class="media-body">
-            <h3 class="media-heading">
-              <center>How to use our Covid-19 modeling platform?<br>Under construction...</center>
-            </h3>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="top-content" id="github">
+     <div class="top-content" id="github">
       <h1>Source code</h1>
       <div class="div-media">
         <div class="media">
@@ -423,84 +377,40 @@
       </div>
     </div>
 
-  <footer class="page-footer font-small footer"  id="footer">
-    <div class="container-fluid text-center text-md-left">
-
-      <div class="row">
-        <div class="col-md-3 mb-md-0 mb-3">
-          <h5 class="text-uppercase">THE PLATFORM</h5>
-          <ul class="list-unstyled">
-            <li>
-              <a href="covid_en.html#projeto" class="foot-link">The project</a>
-            </li>
-            <li>
-              <a href="covid_en.html#tutorial" class="foot-link">Tutorial</a>
-              <!-- explicar o que cada coisa significa -->
-            </li>
-            <li>
-              <a href="covid_en.html#github" class="foot-link">Source code</a>
-              <!-- repositorio do github -->
-            </li>
-            <li>
-              <a href="team_en.html#team" class="foot-link">Team</a>
-            </li>
-            <li>
-              <a href="team_en.html#acknowledge" class="foot-link">Acknowledgment</a>
-            </li>
-            <li>
-              <a href="team_en.html#support" class="foot-link">Support</a>
-            </li>
-
-          </ul>
+    <footer class="page-footer font-small footer" id="footer">
+      <div class="row justify-content-center align-items-center copyrights">
+        <div class="icons col-1">
+          <a href="mailto:modeling.taskforce@gmail.com">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              class="bi bi-envelope-fill icons-color"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"
+              /></svg
+          ></a>
         </div>
-
-        <div class="col-md-3 mb-md-0 mb-3">
-          <h5 class="text-uppercase">Comunication</h5>
-          <ul class="list-unstyled">
-            <li>
-              <a href="news_en.html#midia" class="foot-link">News</a>
-            </li>
-            <li>
-              <a href="news_en.html#galeria-videos" class="foot-link">Video gallery</a>
-            </li>
-            <!-- <li>
-              <a href="" class="foot-link">Ensino</a>
-            </li> -->
-            <li>
-              <a href="news_en.html#newsletter" class="foot-link">Newsletter</a>
-            </li>
-            <li>
-              <a href="news_en.html#artigos" class="foot-link">Papers</a>
-            </li>
-          </ul>
+        <div class="icons col-1">
+          <a href="https://github.com/PAMepi" target="_blank"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              class="bi bi-github icons-color"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+              /></svg
+          ></a>
         </div>
-
-        <div class="col-md-3 mb-md-0 mb-3">
-          <h5 class="text-uppercase">Contact</h5>
-          <ul class="list-unstyled">
-            <li>
-              <a href="contato_en.html#faq" class="foot-link">FAQ</a>
-            </li>
-            <li>
-              <a href="contato_en.html#faleconosco" class="foot-link">Contact us</a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="col-md-3 mb-md-0 mb-3">
-          <ul class="list-unstyled">
-            <li>
-              <a href="https://cidacs.bahia.fiocruz.br/" target="_blank"><img src="../img/CIDACS_Bw.png" class="img-cidacs" /></a>
-            </li>
-            <li>
-              <a class="" href="https://www.rondonia.fiocruz.br/" target="_blank"> <img src="../img/fio_rond_bw.png" class="img-fiocruz" /></a>
-            </li>
-          </ul>
-        </div>
-
       </div>
-    </div>
-  </footer>
+
+      <div class="copyrights row align-items-center justify-content-center">
+        PAMEpi <img src="../img/no-virus.svg" class="filter-virus" />2021
+      </div>
+    </footer>
 
 
   <script src="../js/jquery-3.3.1.min.js"></script>
