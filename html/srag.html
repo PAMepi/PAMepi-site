@@ -291,10 +291,8 @@
                           >Vacinação</a
                         >
                       </li>
-                      <li class="dropdown-item drop-item disabled">
-                        <a
-                          href="hospital.html"
-                          class="nav-link submenu itemcol isDisabled"
+                      <li class="dropdown-item drop-item">
+                        <a href="hospital.html" class="nav-link submenu itemcol"
                           >Ocupação Hospitalar</a
                         >
                       </li>
@@ -318,10 +316,8 @@
                       <li>
                         <h6 class="dropdown-header">Inequalidade</h6>
                       </li>
-                      <li class="dropdown-item drop-item disabled">
-                        <a
-                          href="ibp.html"
-                          class="itemcol nav-link submenu isDisabled"
+                      <li class="dropdown-item drop-item">
+                        <a href="ibp.html" class="itemcol nav-link submenu"
                           >IBP</a
                         >
                       </li>
@@ -423,9 +419,9 @@
           O conjunto de dados da Síndrome Respiratória Aguda Grave (SRAG) é um
           dado de saúde obtido do Ministério da Saúde do Brasil por meio da
           Secretaria de Vigilância em Saúde (<a
-            href="https://opendatasus.saude.gov.br/dataset/casos-nacionais"
+            href="https://opendatasus.saude.gov.br/dataset/bd-srag-2021"
             target="_blank"
-            >Ministério da Saúde, 2020</a
+            >Ministério da Saúde, 2021a</a
           >). A vigilância SRAG começou com a pandemia de Influenza A (H1N1) em
           2009.
         </p>
@@ -442,9 +438,9 @@
           não identificáveis, como local de residência (cidade), idade, sexo,
           estado infeccioso quando a pessoa necessita de internação (leitos
           clínicos ou UTI) ou se teve desfecho mortal, entre outros, (<a
-            href="https://opendatasus.saude.gov.br/dataset/covid-19-vacinacao"
+            href="https://opendatasus.saude.gov.br/dataset/bd-srag-2021"
             target="_blank"
-            >Ministério da Saúde, 2021</a
+            >Ministério da Saúde, 2021a</a
           >).
         </p>
         <p>
@@ -459,9 +455,9 @@
         <p>
           Os dados do SRAG estão licenciados sob a Creative Commons Attribution
           License cc-by (versão 4.0), ver (<a
-            href="https://opendatasus.saude.gov.br/dataset/casos-nacionais"
+            href="https://opendatasus.saude.gov.br/dataset/bd-srag-2021"
             target="_blank"
-            >Ministério da Saúde, 2020</a
+            >Ministério da Saúde, 2021a</a
           >). Além disso, o conjunto de dados SRAG está disponível ao público e
           publicado pelo Ministério da Saúde do Brasil. Portanto, não é
           necessária a aprovação de um comitê de ética para o uso desses dados,
@@ -470,15 +466,15 @@
         </p>
         <h2 class="mb-5 mt-5 pt-5 pb-2">Métodos de coleta de dados</h2>
         Um código python está disponível em nosso diretório
-        <a href="https://github.com/ModelingTaskForce/covidApp" target="_blank">
+        <a href="https://github.com/PAMepi/scripts-datalake" target="_blank">
           Github
         </a>
         para baixar os dados SRAG do OpenDatasus, veja detalhes em (<a
-          href="https://opendatasus.saude.gov.br/dataset/covid-19-vacinacao"
+          href="https://opendatasus.saude.gov.br/dataset/bd-srag-2021"
           target="_blank"
-          >Ministério da Saúde, 2021</a
+          >Ministério da Saúde, 2021a</a
         >) e
-        <a href="https://github.com/ModelingTaskForce/covidApp" target="_blank">
+        <a href="https://github.com/PAMepi/scripts-datalake" target="_blank">
           Github</a
         >. Estamos extraindo os dados SRAG de 2019 em diante. Ao executar o
         código, os dados são baixados novamente, uma vez que o OpenDatasus não
@@ -499,9 +495,7 @@
           atualização de 19 de agosto de 2021. Um código com mais detalhes sobre
           as variáveis, processamento de dados e métodos de análise é
           apresentado em nosso diretório
-          <a
-            href="https://github.com/ModelingTaskForce/covidApp"
-            target="_blank"
+          <a href="https://github.com/PAMepi/scripts-datalake" target="_blank"
             >Github</a
           >.
         </p>
@@ -562,23 +556,6 @@
           </div>
         </div>
       </div>
-
-      <!-- <div class="dado-subitem">
- <div class="media download">
- <h3 class="data">Documentação do processo</h3>
- </div>
- </div>
- <div class="dado-subitem">
- <div class="media download">
- <h3 class="data">Análise Visual</h3>
- </div>
- </div>
- <div class="dado-subitem">
- <div class="media download">
-
- <h3 class="data">Mineração de Dados e Análise Preditiva</h3>
- 
- </div> -->
     </section>
 
     <footer class="page-footer font-small footer" id="footer">
