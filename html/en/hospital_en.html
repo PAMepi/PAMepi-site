@@ -288,9 +288,7 @@
                         >
                       </li>
                       <li class="dropdown-item drop-item">
-                        <a
-                          href="brio_en.html"
-                          class="nav-link submenu itemcol active"
+                        <a href="brio_en.html" class="nav-link submenu itemcol"
                           >Brasil IO</a
                         >
                       </li>
@@ -304,7 +302,7 @@
                       <li class="dropdown-item drop-item">
                         <a
                           href="hospital_en.html"
-                          class="nav-link submenu itemcol"
+                          class="nav-link submenu itemcol active"
                           >Hospital Occupancy</a
                         >
                       </li>
@@ -329,8 +327,8 @@
                         <h6 class="dropdown-header">Inequality</h6>
                       </li>
                       <li class="dropdown-item drop-item">
-                        <a href="ibp_en.html" class="itemcol nav-link submenu"
-                          >IBP</a
+                        <a href="ibp_en.html" class="itemcol nav-link submenu">
+                          IBP</a
                         >
                       </li>
                     </ul>
@@ -405,10 +403,12 @@
                 aria-labelledby="navbarDropdown1"
               >
                 <div class="dropdown-item drop-item">
-                  <a href="../brio.html" class="nav-link submenu">Português</a>
+                  <a href="../hospital.html" class="nav-link submenu"
+                    >Português</a
+                  >
                 </div>
                 <div class="dropdown-item drop-item">
-                  <a href="brio_en.html" class="nav-link active submenu"
+                  <a href="hospital_en.html" class="nav-link active submenu"
                     >English</a
                   >
                 </div>
@@ -420,111 +420,71 @@
     </nav>
 
     <section class="top">
-      <h1>Brasil io</h1>
+      <h1>Hospital occupancy</h1>
       <div class="intro" style="padding: 2rem 0rem 5rem">
         <h2 class="mb-5">Description</h2>
         <p class="card-text">
-          The Brasil io dataset is extracted from a non-governmental project
-          called Brasil io that performs volunteer work to collect information
-          on the number of confirmed cases and deaths caused by infections of
-          SARS-COV-2 aggregated at state and municipal level (<a
-            href="https://brasil.io/dataset/covid19/"
+          The Hospital occupancy dataset is a health data obtained from the
+          Ministry of Health of Brazil through the Department of Specialized
+          Health Care (SAES), (<a
+            href="https://opendatasus.saude.gov.br/dataset/registro-de-ocupacao-hospitalar"
             target="_blank"
-            >Brasil io, 2020</a
-          >).
+            >Ministério da Saúde, 2020b</a
+          >). This database started in April 2020 due to the COVID-19 pandemic.
+          Since then was implemented the registration of admissions and bed
+          occupancy through the ESUS System Notifica-SUS Admissions Module.The
+          database includes the number of beds available for each health
+          facility, how many were occupied by patients with suspected or
+          confirmed cases of COVID-19 (SRAG occupation/COVID-19) and how many
+          were occupied by patients for another medical specialization.
         </p>
-        <p>
-          The authors gather the data from the state and municipalities
-          secretaries publicly available reports before registration in the
-          Brazilian Ministry of health database. This process helps provide data
-          about the COVID-19 in real-time, once it takes a long time to register
-          the cases from the state and municipal secretaries in the unified
-          Brazilian system.
-        </p>
-        <p>
-          Also, the data provided by the Ministry of Health has an infrequent,
-          slow process of update, the site goes down frequently, and the data is
-          unstructured. Brasil io dataset corresponds to confirmed cases and
-          deaths caused by SARS-COV-2 infections, aggregate at the state and
-          municipal levels (<a
-            href="https://brasil.io/dataset/covid19/"
-            target="_blank"
-            >Brasil io, 2020</a
-          >).
-        </p>
-        <p>
-          We collected the data from February 1st 2020, and onward. The data can
-          be daily updated. Links to publications that use the Brasio io data or
-          provide other publicly accessible locations of the data can be found
-          in (<a
-            href="https://www.sciencedirect.com/science/article/pii/S1755436521000232?via%3Dihub"
-            target="_blank"
-          >
-            Jorge et al., 2021, 35</a
-          >
-          ).
-        </p>
+
         <h2 class="mb-5 mt-5 pt-5 pb-2">Data access information</h2>
         <p>
-          The collected, clean and formatted data freely available from Brasil
-          io can be accessed and downloaded in (<a
-            href="https://brasil.io/dataset/covid19/"
+          The data is licensed under a Creative Commons Attribution License
+          cc-by (version 4.0), see (<a
+            href="https://opendatasus.saude.gov.br/dataset/registro-de-ocupacao-hospitalar"
             target="_blank"
-            >Brasil io, 2020</a
-          >), under the Creative Commons Attribution ShareAlike (CC-BY-SA)
-          licence.
+            >Ministério da Saúde, 2020b</a
+          >). Additionally, the dataset is publicly available and published by
+          the Ministry of Health of Brazil. Therefore, no approval by an ethics
+          committee is required to use this data, according to Resolutions
+          466/2012 and 510/2016 (article 1, sections III and V) from the
+          National Health Council (CNS), Brazil.
         </p>
 
         <h2 class="mb-5 mt-5 pt-5 pb-2">Methods of data collection</h2>
         <p>
           A python code is available on our
-          <a
-            href="https://github.com/ModelingTaskForce/covidApp"
-            target="_blank"
+          <a href="https://github.com/PAMepi/scripts-datalake" target="_blank"
+            >Github</a
           >
-            Github
-          </a>
-          directory to download data from the Brasil io project, see details in
-          <a
-            href="https://github.com/ModelingTaskForce/covidApp"
+          directory to download the data from the OpenDatasus, see details in
+          <a href="https://github.com/PAMepi/scripts-datalake" target="_blank"
+            >Github</a
+          >. The database is updated weekly in our project, being a version
+          associated with its date of update. Additional information on data
+          collection methods can be found in (<a
+            href="https://opendatasus.saude.gov.br/dataset/registro-de-ocupacao-hospitalar"
             target="_blank"
-          >
-            Github </a
+            >Ministério da Saúde, 2020b</a
+          >) and
+          <a href="https://github.com/PAMepi/scripts-datalake" target="_blank"
+            >Github</a
           >.
         </p>
         <h2 class="mb-5 mt-5 pt-5 pb-2">
-          Data-specific information for Brasil io
+          Data-specific information for Hospital occupancy
         </h2>
         <p>
-          The Brasil dataset has a total of 18 columns and showed a total of
-          2,606,897 registries (rows) and a size of 285 MB in the last update of
-          August 19th, 2021. A code with more details about the variables, data
-          processing and analysis methods is presented in our
-          <a
-            href="https://github.com/ModelingTaskForce/covidApp"
-            target="_blank"
+          The Hospital occupancy dataset has a total of 21 columns and showed a
+          total of 1,164,623 registries (rows) and a size of 219Mb in the last
+          update of October 11th, 2021. A code with more details about the
+          variables, data processing and analysis methods is presented in our
+          <a href="https://github.com/PAMepi/scripts-datalake" target="_blank"
+            >Github</a
           >
-            Github
-          </a>
           directory.
-        </p>
-        <h2 class="mb-5 mt-5 pt-5 pb-2">Limitations of Brasil io dataset</h2>
-        <p>
-          Brasil io dataset depends on the quality of the reported information
-          given by the state and municipal health secretaries. When files are
-          provided in pdf or images, it can compromise the tabulation of the
-          data in real-time. Additionally, the deaths and cases of COVID-19 are
-          tabulated according to the date when the data was collected.
-        </p>
-        <p>
-          Therefore, the epidemiological curve constructed can show a delay of
-          one to up to 7 weeks in relation to the date of the first symptoms or
-          the date of the laboratory test of the case (<a
-            href="https://portal.fiocruz.br/sites/portal.fiocruz.br/files/documentos/nota_tecnica_13.pdf"
-            target="_blank"
-            >Observatório COVID-19, 2020</a
-          >). Still, the dataset is considered an excellent source to measure
-          the course of the pandemic in real-time.
         </p>
       </div>
     </section>
@@ -575,12 +535,14 @@
     </section>
 
     <footer class="page-footer font-small footer" id="footer">
-      <div class="row justify-content-center align-items-center copyrights">
+      <div
+        class="row justify-content-center align-items-center mb-4 copyrights"
+      >
         <div class="icons col-1">
           <a href="mailto:modeling.taskforce@gmail.com">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
+              fill="white"
               class="bi bi-envelope-fill icons-color"
               viewBox="0 0 16 16"
             >
@@ -593,7 +555,7 @@
           <a href="https://github.com/PAMepi" target="_blank"
             ><svg
               xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
+              fill="white"
               class="bi bi-github icons-color"
               viewBox="0 0 16 16"
             >
@@ -605,27 +567,28 @@
       </div>
 
       <div class="copyrights row align-items-center justify-content-center">
-        PAMEpi <img src="../img/no-virus.svg" class="filter-virus" />2021
+        PAMEpi <img src="img/no-virus.svg" class="filter-virus" />2021
       </div>
     </footer>
+
     <script type="text/javascript" src="../js/data.js"></script>
     <script>
       let cell;
-      let nlines = sampleBRio.length;
-      let ncols = Object.keys(sampleBRio["0"]).length;
+      let nlines = sampleHosp.length;
+      let ncols = Object.keys(sampleHosp["0"]).length;
       let tableExp = document.getElementById("tableExp");
       let row;
 
       function cellValue(lin, col) {
-        if (Object.keys(sampleBRio[lin.toString()])[col]) {
-          return `${Object.values(sampleBRio[lin.toString()])[col]}`;
+        if (Object.keys(sampleHosp[lin.toString()])[col]) {
+          return `${Object.values(sampleHosp[lin.toString()])[col]}`;
         }
         return "-";
       }
 
       function colValue(col) {
-        if (Object.keys(sampleBRio["0"])[col]) {
-          return `<th>${Object.keys(sampleBRio["0"])[col]}</th>`;
+        if (Object.keys(sampleHosp["0"])[col]) {
+          return `<th>${Object.keys(sampleHosp["0"])[col]}</th>`;
         }
         return "&nbsp;";
       }
@@ -645,15 +608,13 @@
       }
 
       lines = [0, 1, 2];
-      ncols = dicBrasilio.length;
+      ncols = dicHosp.length;
 
       tableDic = document.getElementById("tableDic");
 
       function dicValue(lin, col) {
-        if (Object.keys(dicBrasilio[col.toString()])[lin]) {
-          return `<td >${
-            Object.values(dicBrasilio[col.toString()])[lin]
-          } </td>`;
+        if (Object.keys(dicHosp[col.toString()])[lin]) {
+          return `<td >${Object.values(dicHosp[col.toString()])[lin]} </td>`;
         }
         return "-";
       }
@@ -663,11 +624,11 @@
         row = tableDic.insertRow(i);
         cell = row.insertCell(row);
         cell.outerHTML = `<th class="headcol">${
-          Object.keys(dicBrasilio["0"])[lin]
+          Object.keys(dicHosp["0"])[lin]
         }</th>`;
         ncol = 1;
         for (let col = 0; col < ncols; col++) {
-          col_name = Object.values(dicBrasilio[col.toString()])[5];
+          col_name = Object.values(dicHosp[col.toString()])[5];
 
           cell = row.insertCell(ncol);
           cell.outerHTML = dicValue(lin, col);

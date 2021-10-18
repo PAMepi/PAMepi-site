@@ -301,10 +301,10 @@
                           >Vaccination</a
                         >
                       </li>
-                      <li class="dropdown-item drop-item disabled">
+                      <li class="dropdown-item drop-item">
                         <a
                           href="hospital_en.html"
-                          class="nav-link submenu itemcol isDisabled"
+                          class="nav-link submenu itemcol"
                           >Hospital Occupancy</a
                         >
                       </li>
@@ -328,10 +328,8 @@
                       <li>
                         <h6 class="dropdown-header">Inequality</h6>
                       </li>
-                      <li class="dropdown-item drop-item disabled">
-                        <a
-                          href="ibp_en.html"
-                          class="itemcol nav-link submenu isDisabled"
+                      <li class="dropdown-item drop-item">
+                        <a href="ibp_en.html" class="itemcol nav-link submenu"
                           >IBP</a
                         >
                       </li>
@@ -429,9 +427,9 @@
           The Severe Acute Respiratory Syndrome (SRAG) dataset is a health data
           obtained from the Ministry of Health of Brazil through the Secretariat
           of Health Surveillance, (<a
-            href="https://opendatasus.saude.gov.br/dataset/casos-nacionais"
+            href="https://opendatasus.saude.gov.br/dataset/bd-srag-2021"
             target="_blank"
-            >Ministério da Saúde, 2020</a
+            >Ministério da Saúde, 2021a</a
           >).
         </p>
         <p>
@@ -450,9 +448,9 @@
           residence location (city), age, gender, infectious status when the
           person requires hospitalisation (clinical beds or ICU) or if it had a
           deadly outcome, among others, (<a
-            href="https://opendatasus.saude.gov.br/dataset/covid-19-vacinacao"
+            href="https://opendatasus.saude.gov.br/dataset/bd-srag-2021"
             target="_blank"
-            >Ministério da Saúde, 2021</a
+            >Ministério da Saúde, 2021a</a
           >).
         </p>
         <p>
@@ -472,9 +470,9 @@
         <p>
           The SRAG data is licensed under a Creative Commons Attribution License
           cc-by (version 4.0), see (<a
-            href="https://opendatasus.saude.gov.br/dataset/casos-nacionais"
+            href="https://opendatasus.saude.gov.br/dataset/bd-srag-2021"
             target="_blank"
-            >Ministério da Saúde, 2020</a
+            >Ministério da Saúde, 2021a</a
           >).
         </p>
         <p>
@@ -487,22 +485,16 @@
         <h2 class="mb-5 mt-5 pt-5 pb-2">Methods of data collection</h2>
         <p>
           A python code is available on our
-          <a
-            href="https://github.com/ModelingTaskForce/covidApp"
-            target="_blank"
-          >
+          <a href="https://github.com/PAMepi/scripts-datalake" target="_blank">
             Github
           </a>
           directory to download the SRAG data from the OpenDatasus , see details
           in (<a
-            href="https://opendatasus.saude.gov.br/dataset/covid-19-vacinacao"
+            href="https://opendatasus.saude.gov.br/dataset/bd-srag-2021"
             target="_blank"
-            >Ministério da Saúde, 2021</a
+            >Ministério da Saúde, 2021a</a
           >) and
-          <a
-            href="https://github.com/ModelingTaskForce/covidApp"
-            target="_blank"
-          >
+          <a href="https://github.com/PAMepi/scripts-datalake" target="_blank">
             Github</a
           >. We are pulling the SRAG data from 2019 and on. When running the
           code, the data is downloaded all again once the OpenDatasus does not
@@ -527,9 +519,7 @@
         <p>
           A code with more details about the variables, data processing and
           analysis methods is presented in our
-          <a
-            href="https://github.com/ModelingTaskForce/covidApp"
-            target="_blank"
+          <a href="https://github.com/PAMepi/scripts-datalake" target="_blank"
             >Github</a
           >
           directory .

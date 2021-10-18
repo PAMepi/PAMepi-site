@@ -288,9 +288,7 @@
                         >
                       </li>
                       <li class="dropdown-item drop-item">
-                        <a
-                          href="brio_en.html"
-                          class="nav-link submenu itemcol active"
+                        <a href="brio_en.html" class="nav-link submenu itemcol"
                           >Brasil IO</a
                         >
                       </li>
@@ -328,8 +326,10 @@
                       <li>
                         <h6 class="dropdown-header">Inequality</h6>
                       </li>
-                      <li class="dropdown-item drop-item">
-                        <a href="ibp_en.html" class="itemcol nav-link submenu"
+                      <li class="dropdown-item drop-item disabled">
+                        <a
+                          href="ibp_en.html"
+                          class="itemcol nav-link submenu active"
                           >IBP</a
                         >
                       </li>
@@ -405,10 +405,10 @@
                 aria-labelledby="navbarDropdown1"
               >
                 <div class="dropdown-item drop-item">
-                  <a href="../brio.html" class="nav-link submenu">Português</a>
+                  <a href="../ibp.html" class="nav-link submenu">Português</a>
                 </div>
                 <div class="dropdown-item drop-item">
-                  <a href="brio_en.html" class="nav-link active submenu"
+                  <a href="ibp_en.html" class="nav-link active submenu"
                     >English</a
                   >
                 </div>
@@ -420,111 +420,97 @@
     </nav>
 
     <section class="top">
-      <h1>Brasil io</h1>
+      <h1>Brazilian deprivation index (IBP)</h1>
       <div class="intro" style="padding: 2rem 0rem 5rem">
         <h2 class="mb-5">Description</h2>
         <p class="card-text">
-          The Brasil io dataset is extracted from a non-governmental project
-          called Brasil io that performs volunteer work to collect information
-          on the number of confirmed cases and deaths caused by infections of
-          SARS-COV-2 aggregated at state and municipal level (<a
-            href="https://brasil.io/dataset/covid19/"
-            target="_blank"
-            >Brasil io, 2020</a
-          >).
+          It provides deprivation measures for each Brazilian municipality and
+          census sector and is used to evaluate health inequalities across the
+          country. The 2010 Brazilian Population Census is the basis for
+          calculating the deprivation measure, available from
+          <a href="https://cidacs.bahia.fiocruz.br/ibp/" target="_blank"
+            >CIDACS</a
+          >. The IBP index combines three factors:
         </p>
+        <ol>
+          <li>
+            the percentage of families with income per capita below half of the
+            minimum wage;
+          </li>
+          <li>the percentage of illiterate people older than 7 years old;</li>
+          <li>
+            the percentage of people without adequate access to drinkable water,
+            sewage, garbage collection, bathroom, or shower;
+          </li>
+        </ol>
         <p>
-          The authors gather the data from the state and municipalities
-          secretaries publicly available reports before registration in the
-          Brazilian Ministry of health database. This process helps provide data
-          about the COVID-19 in real-time, once it takes a long time to register
-          the cases from the state and municipal secretaries in the unified
-          Brazilian system.
-        </p>
-        <p>
-          Also, the data provided by the Ministry of Health has an infrequent,
-          slow process of update, the site goes down frequently, and the data is
-          unstructured. Brasil io dataset corresponds to confirmed cases and
-          deaths caused by SARS-COV-2 infections, aggregate at the state and
-          municipal levels (<a
-            href="https://brasil.io/dataset/covid19/"
+          This data does not need to be updated and the complete documentation
+          about the construction of the index is presented in
+          <a href="http://eprints.gla.ac.uk/215898/1/215898.pdf"
+            >Developing a small-area deprivation measure for Brazil: Technical
+            report</a
+          >. The original data source and visualization can be found in
+          <a
+            href="https://cidacs.bahia.fiocruz.br/ibp/base-de-dados-do-ibp-municipal-esta-disponivel-para-download/"
             target="_blank"
-            >Brasil io, 2020</a
-          >).
+            >Cidacs</a
+          >.
         </p>
-        <p>
-          We collected the data from February 1st 2020, and onward. The data can
-          be daily updated. Links to publications that use the Brasio io data or
-          provide other publicly accessible locations of the data can be found
-          in (<a
-            href="https://www.sciencedirect.com/science/article/pii/S1755436521000232?via%3Dihub"
-            target="_blank"
-          >
-            Jorge et al., 2021, 35</a
-          >
-          ).
-        </p>
+
         <h2 class="mb-5 mt-5 pt-5 pb-2">Data access information</h2>
         <p>
-          The collected, clean and formatted data freely available from Brasil
-          io can be accessed and downloaded in (<a
-            href="https://brasil.io/dataset/covid19/"
+          The data and documentation are available at the
+          <a
+            href="http://dx.doi.org/10.5525/gla.researchdata.980"
             target="_blank"
-            >Brasil io, 2020</a
-          >), under the Creative Commons Attribution ShareAlike (CC-BY-SA)
-          licence.
+            >University of Glasgow</a
+          >. The data and this report are distributed under the Creative Commons
+          Share-Alike license (CC BY-SA 4.0) and can be freely used by
+          researchers, policymakers, or members of the public.
         </p>
 
         <h2 class="mb-5 mt-5 pt-5 pb-2">Methods of data collection</h2>
         <p>
-          A python code is available on our
-          <a
-            href="https://github.com/ModelingTaskForce/covidApp"
-            target="_blank"
+          A Python code is available on our
+          <a href="https://github.com/PAMepi/scripts-datalake" target="_blank"
+            >Github</a
           >
-            Github
-          </a>
-          directory to download data from the Brasil io project, see details in
+          directory to download the data from
           <a
-            href="https://github.com/ModelingTaskForce/covidApp"
+            href="https://cidacs.bahia.fiocruz.br/ibp/base-de-dados-do-ibp-municipal-esta-disponivel-para-download/"
             target="_blank"
+            >Cidacs</a
+          >. The database doesn’t need an update. Additional information on data
+          collection methods can be found in
+          <a href="http://eprints.gla.ac.uk/215898/1/215898.pdf"
+            >Developing a small-area deprivation measure for Brazil: Technical
+            report</a
           >
-            Github </a
+          and
+          <a href="https://github.com/PAMepi/scripts-datalake" target="_blank"
+            >Github</a
           >.
         </p>
-        <h2 class="mb-5 mt-5 pt-5 pb-2">
-          Data-specific information for Brasil io
-        </h2>
+        <h2 class="mb-5 mt-5 pt-5 pb-2">Data-specific information for IBP</h2>
         <p>
-          The Brasil dataset has a total of 18 columns and showed a total of
-          2,606,897 registries (rows) and a size of 285 MB in the last update of
-          August 19th, 2021. A code with more details about the variables, data
-          processing and analysis methods is presented in our
-          <a
-            href="https://github.com/ModelingTaskForce/covidApp"
-            target="_blank"
+          The IBP dataset has a total of 15 columns and shows a total of 5566
+          registries (rows) and a size of 734 KB. A code with more details about
+          the variables, data processing, and analysis methods is presented in
+          our
+          <a href="https://github.com/PAMepi/scripts-datalake" target="_blank"
+            >Github</a
           >
-            Github
-          </a>
           directory.
         </p>
-        <h2 class="mb-5 mt-5 pt-5 pb-2">Limitations of Brasil io dataset</h2>
+        <h2 class="mb-5 mt-5 pt-5 pb-2">Limitations of IBP dataset</h2>
         <p>
-          Brasil io dataset depends on the quality of the reported information
-          given by the state and municipal health secretaries. When files are
-          provided in pdf or images, it can compromise the tabulation of the
-          data in real-time. Additionally, the deaths and cases of COVID-19 are
-          tabulated according to the date when the data was collected.
-        </p>
-        <p>
-          Therefore, the epidemiological curve constructed can show a delay of
-          one to up to 7 weeks in relation to the date of the first symptoms or
-          the date of the laboratory test of the case (<a
-            href="https://portal.fiocruz.br/sites/portal.fiocruz.br/files/documentos/nota_tecnica_13.pdf"
-            target="_blank"
-            >Observatório COVID-19, 2020</a
-          >). Still, the dataset is considered an excellent source to measure
-          the course of the pandemic in real-time.
+          The IBP dataset includes only 3 measures of deprivation excluding
+          others like employment, crime, health, education, and access to public
+          services. It is also exclusively related to the year 2010 making
+          comparison along time impracticable. The different population and
+          ethnic groups (eg, indigenous peoples, quilombolas, riverside
+          populations) are also not considered and there are some biases
+          inherent to rural areas.
         </p>
       </div>
     </section>
@@ -575,12 +561,14 @@
     </section>
 
     <footer class="page-footer font-small footer" id="footer">
-      <div class="row justify-content-center align-items-center copyrights">
+      <div
+        class="row justify-content-center align-items-center mb-4 copyrights"
+      >
         <div class="icons col-1">
           <a href="mailto:modeling.taskforce@gmail.com">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
+              fill="white"
               class="bi bi-envelope-fill icons-color"
               viewBox="0 0 16 16"
             >
@@ -593,7 +581,7 @@
           <a href="https://github.com/PAMepi" target="_blank"
             ><svg
               xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
+              fill="white"
               class="bi bi-github icons-color"
               viewBox="0 0 16 16"
             >
@@ -605,27 +593,28 @@
       </div>
 
       <div class="copyrights row align-items-center justify-content-center">
-        PAMEpi <img src="../img/no-virus.svg" class="filter-virus" />2021
+        PAMEpi <img src="img/no-virus.svg" class="filter-virus" />2021
       </div>
     </footer>
+
     <script type="text/javascript" src="../js/data.js"></script>
     <script>
       let cell;
-      let nlines = sampleBRio.length;
-      let ncols = Object.keys(sampleBRio["0"]).length;
+      let nlines = sampleIBP.length;
+      let ncols = Object.keys(sampleIBP["0"]).length;
       let tableExp = document.getElementById("tableExp");
       let row;
 
       function cellValue(lin, col) {
-        if (Object.keys(sampleBRio[lin.toString()])[col]) {
-          return `${Object.values(sampleBRio[lin.toString()])[col]}`;
+        if (Object.keys(sampleIBP[lin.toString()])[col]) {
+          return `${Object.values(sampleIBP[lin.toString()])[col]}`;
         }
         return "-";
       }
 
       function colValue(col) {
-        if (Object.keys(sampleBRio["0"])[col]) {
-          return `<th>${Object.keys(sampleBRio["0"])[col]}</th>`;
+        if (Object.keys(sampleIBP["0"])[col]) {
+          return `<th>${Object.keys(sampleIBP["0"])[col]}</th>`;
         }
         return "&nbsp;";
       }
@@ -645,15 +634,13 @@
       }
 
       lines = [0, 1, 2];
-      ncols = dicBrasilio.length;
+      ncols = dicIBP.length;
 
       tableDic = document.getElementById("tableDic");
 
       function dicValue(lin, col) {
-        if (Object.keys(dicBrasilio[col.toString()])[lin]) {
-          return `<td >${
-            Object.values(dicBrasilio[col.toString()])[lin]
-          } </td>`;
+        if (Object.keys(dicIBP[col.toString()])[lin]) {
+          return `<td >${Object.values(dicIBP[col.toString()])[lin]} </td>`;
         }
         return "-";
       }
@@ -663,11 +650,11 @@
         row = tableDic.insertRow(i);
         cell = row.insertCell(row);
         cell.outerHTML = `<th class="headcol">${
-          Object.keys(dicBrasilio["0"])[lin]
+          Object.keys(dicIBP["0"])[lin]
         }</th>`;
         ncol = 1;
         for (let col = 0; col < ncols; col++) {
-          col_name = Object.values(dicBrasilio[col.toString()])[5];
+          col_name = Object.values(dicIBP[col.toString()])[5];
 
           cell = row.insertCell(ncol);
           cell.outerHTML = dicValue(lin, col);
