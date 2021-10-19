@@ -296,7 +296,9 @@
                         <h6 class="dropdown-header">Mobilidade</h6>
                       </li>
                       <li class="dropdown-item drop-item">
-                        <a href="mobgoo.html" class="nav-link submenu itemcol"
+                        <a
+                          href="mobgoo.html"
+                          class="nav-link submenu itemcol active"
                           >Google</a
                         >
                       </li>
@@ -311,9 +313,7 @@
                         <h6 class="dropdown-header">Inequalidade</h6>
                       </li>
                       <li class="dropdown-item drop-item">
-                        <a
-                          href="ibp.html"
-                          class="itemcol nav-link submenu active"
+                        <a href="ibp.html" class="itemcol nav-link submenu"
                           >IBP</a
                         >
                       </li>
@@ -393,12 +393,14 @@
                 aria-labelledby="navbarDropdown1"
               >
                 <div class="dropdown-item drop-item">
-                  <a href="ibp.html" class="nav-link active submenu"
+                  <a href="mobgoo.html" class="nav-link active submenu"
                     >Português</a
                   >
                 </div>
                 <div class="dropdown-item drop-item" disabled>
-                  <a href="en/ibp_en.html" class="nav-link submenu">English</a>
+                  <a href="en/mobgoo_en.html" class="nav-link submenu"
+                    >English</a
+                  >
                 </div>
               </div>
             </li>
@@ -408,54 +410,50 @@
     </nav>
 
     <section class="top">
-      <h1>Índice de privação brasileiro (IBP)</h1>
+      <h1>Google Mobility</h1>
       <div class="intro" style="padding: 2rem 0rem 5rem">
         <h2 class="mb-5">Descrição</h2>
-        <p class="card-text">
-          Ele fornece medidas de privação para cada município brasileiro e setor
-          censitário e é usado para avaliar as desigualdades em saúde em todo o
-          país. O Censo Demográfico Brasileiro de 2010 é a base de cálculo da
-          medida de privação, disponível no
-          <a href="https://cidacs.bahia.fiocruz.br/ibp/" target="_blank"
-            >CIDACS</a
-          >. O índice IBP combina três fatores:
-        </p>
-        <ol>
-          <li>
-            percentual de famílias com renda per capita inferior a meio salário
-            mínimo;
-          </li>
-          <li>percentual de analfabetos maiores de 7 anos;</li>
-          <li>
-            percentual de pessoas sem acesso adequado a água potável, esgoto,
-            coleta de lixo, banheiro ou chuveiro;
-          </li>
-        </ol>
         <p>
-          Esses dados não precisam ser atualizados e a documentação completa
-          sobre a construção do índice é apresentada em
-          <a href="http://eprints.gla.ac.uk/215898/1/215898.pdf"
-            >Developing a small-area deprivation measure for Brazil: Technical
-            report</a
-          >. A fonte de dados original e a visualização podem ser encontradas em
-          <a
-            href="https://cidacs.bahia.fiocruz.br/ibp/base-de-dados-do-ibp-municipal-esta-disponivel-para-download/"
-            target="_blank"
-            >Cidacs</a
+          O banco de dados de mobilidade do Google representa a mobilidade
+          humana fornecida pelas tendências do Google, que relata como a
+          mobilidade humana é afetada pela propagação COVID-19 desde 15 de
+          fevereiro de 2020.
+        </p>
+        <p>
+          Os dados comparam as visitas a lugares, como supermercados e parques,
+          com uma linha de base calculado antes do início da pandemia. É medida
+          a porcentagem de pessoas que visitaram um local em relação ao mesmo
+          dia da semana durante o período de 3 de janeiro a 6 de fevereiro de
+          2020.
+        </p>
+        <p>Os locais considerados no banco de dados são:</p>
+        <ul>
+          <li>
+            Mercearia e farmácia: mercearias, armazéns de alimentos, mercados de
+            fazendeiros, lojas de alimentos especializados, drogarias e
+            farmácias;
+          </li>
+          <li>
+            Parques: parques locais, parques nacionais, praias públicas,
+            marinas, parques para cães, praças e jardins públicos;
+          </li>
+          <li>Estações de trânsito: metrô, ônibus e estações de trem;</li>
+          <li>
+            Varejo e recreação: restaurantes, cafés, shopping centers, parques
+            temáticos, museus, bibliotecas e cinemas;
+          </li>
+          <li>Residencial: locais de residência;</li>
+          <li>Locais de trabalho: locais de trabalho;</li>
+        </ul>
+        <h2 class="mb-5 mt-5 pt-5 pb-2">Informação de acesso a dados</h2>
+
+        <p>
+          Os dados e a documentação estão disponíveis em
+          <a href="https://www.google.com/covid19/mobility/" target="_blank"
+            >Google Mobility</a
           >.
         </p>
 
-        <h2 class="mb-5 mt-5 pt-5 pb-2">Informação de acesso a dados</h2>
-        <p>
-          Os dados e documentação estão disponíveis na
-          <a
-            href="http://dx.doi.org/10.5525/gla.researchdata.980"
-            target="_blank"
-            >Universidade de Glasgow</a
-          >. Os dados e este relatório são distribuídos sob a licença Creative
-          Commons Share-Alike (CC BY-SA 4.0) e podem ser usados livremente por
-          pesquisadores, legisladores ou público.
-        </p>
         <h2 class="mb-5 mt-5 pt-5 pb-2">Métodos de coleta de dados</h2>
         <p>
           Um código Python está disponível em nosso diretório
@@ -463,42 +461,46 @@
             >Github</a
           >
           para baixar os dados do
+          <a href="https://www.google.com/covid19/mobility/" target="_blank"
+            >Google Mobility</a
+          >. O banco de dados é atualizado todos os dias contendo dados tão
+          recentes quanto 2 dias atrás. Informações adicionais sobre métodos de
+          coleta de dados podem ser encontradas na
           <a
-            href="https://cidacs.bahia.fiocruz.br/ibp/base-de-dados-do-ibp-municipal-esta-disponivel-para-download/"
+            href="https://www.google.com/covid19/mobility/data_documentation.html?hl=en"
             target="_blank"
-            >Cidacs</a
-          >. O banco de dados não precisa de atualização. Informações adicionais
-          sobre métodos de coleta de dados podem ser encontradas em
-          <a href="http://eprints.gla.ac.uk/215898/1/215898.pdf"
-            >Developing a small-area deprivation measure for Brazil: Technical
-            report</a
+            >Documentação do Google Mobility</a
           >
           e
           <a href="https://github.com/PAMepi/scripts-datalake" target="_blank"
             >Github</a
           >.
         </p>
+
         <h2 class="mb-5 mt-5 pt-5 pb-2">
-          Informações específicas dos dados IBP
+          Informações específicas de dados do Google Mobility
         </h2>
         <p>
-          O conjunto de dados IBP tem um total de 15 colunas e mostrou um total
-          de 5566 registros (linhas) e um tamanho de 734Kb. Um código com mais
+          O conjunto de dados do Google Mobility para o Brasil tem um total de
+          15 colunas e mostra um total de 590.690 registros (linhas) e um
+          tamanho de 57Mb, acessado em 19 de outubro de 2021. Um código com mais
           detalhes sobre as variáveis, processamento de dados e métodos de
           análise é apresentado em nosso diretório
           <a href="https://github.com/PAMepi/scripts-datalake" target="_blank"
             >Github</a
           >.
         </p>
-        <h2 class="mb-5 mt-5 pt-5 pb-2">Limitações do conjunto de dados IBP</h2>
+        <h2 class="mb-5 mt-5 pt-5 pb-2">
+          Limitações do conjunto de dados so Google Mobility
+        </h2>
         <p>
-          O conjunto de dados IBP inclui apenas 3 medidas de privação, excluindo
-          outras, como por exemplo: emprego, crime, saúde, educação e acesso a
-          serviços públicos. Também está relacionado exclusivamente ao ano de
-          2010, tornando impraticável a comparação ao longo do tempo. As
-          diferentes populações e etnias (por exemplo, povos indígenas,
-          quilombolas, ribeirinhos) também não são consideradas e existem alguns
-          vieses inerentes ao meio rural.
+          Os resultados foram calculados com base em uma amostra de usuários que
+          permitiu ao histórico de localização rastrear sua posição, o que pode
+          criar vieses. As categorias de lugares também podem variar dependendo
+          da localização. Não é recomendado comparar regiões muito diferentes,
+          por exemplo, rural versus urbano. Quando os níveis estatisticamente
+          significativos não são suficientes para um determinado local e data, o
+          campo ficará sem dados.
         </p>
       </div>
     </section>
@@ -582,22 +584,23 @@
     </footer>
 
     <script>
+      console.log(sampleMobGoo);
       let cell;
-      let nlines = sampleIBP.length;
-      let ncols = Object.keys(sampleIBP['0']).length;
+      let nlines = sampleMobGoo.length;
+      let ncols = Object.keys(sampleMobGoo['0']).length;
       let tableExp = document.getElementById('tableExp');
       let row;
 
       function cellValue(lin, col) {
-        if (Object.keys(sampleIBP[lin.toString()])[col]) {
-          return `${Object.values(sampleIBP[lin.toString()])[col]}`;
+        if (Object.keys(sampleMobGoo[lin.toString()])[col]) {
+          return `${Object.values(sampleMobGoo[lin.toString()])[col]}`;
         }
         return '-';
       }
 
       function colValue(col) {
-        if (Object.keys(sampleIBP['0'])[col]) {
-          return `<th>${Object.keys(sampleIBP['0'])[col]}</th>`;
+        if (Object.keys(sampleMobGoo['0'])[col]) {
+          return `<th>${Object.keys(sampleMobGoo['0'])[col]}</th>`;
         }
         return '&nbsp;';
       }
@@ -617,13 +620,15 @@
       }
 
       lines = [0, 1, 2];
-      ncols = dicIBP.length;
+      ncols = dicMobGooBR.length;
 
       tableDic = document.getElementById('tableDic');
 
       function dicValue(lin, col) {
-        if (Object.keys(dicIBP[col.toString()])[lin]) {
-          return `<td >${Object.values(dicIBP[col.toString()])[lin]} </td>`;
+        if (Object.keys(dicMobGooBR[col.toString()])[lin]) {
+          return `<td >${
+            Object.values(dicMobGooBR[col.toString()])[lin]
+          } </td>`;
         }
         return '-';
       }
@@ -633,11 +638,12 @@
         row = tableDic.insertRow(i);
         cell = row.insertCell(row);
         cell.outerHTML = `<th class="headcol">${
-          Object.keys(dicIBP['0'])[lin]
+          Object.keys(dicMobGooBR['0'])[lin]
         }</th>`;
         ncol = 1;
         for (let col = 0; col < ncols; col++) {
-          col_name = Object.values(dicIBP[col.toString()])[5];
+          col_name = Object.values(dicMobGooBR[col.toString()])[5];
+          //only add column if field is in our data
 
           cell = row.insertCell(ncol);
           cell.outerHTML = dicValue(lin, col);

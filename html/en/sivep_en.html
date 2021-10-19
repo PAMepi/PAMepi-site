@@ -263,9 +263,7 @@
                         <h6 class="dropdown-header">Architecture</h6>
                       </li>
                       <li class="dropdown-item drop-item">
-                        <a
-                          href="data_en.html"
-                          class="itemcol nav-link submenu active"
+                        <a href="data_en.html" class="itemcol nav-link submenu"
                           >Overview</a
                         >
                       </li>
@@ -311,10 +309,10 @@
                       <li>
                         <h6 class="dropdown-header">Mobility</h6>
                       </li>
-                      <li class="dropdown-item drop-item disabled">
+                      <li class="dropdown-item drop-item">
                         <a
-                          href="googlemob_en.html"
-                          class="nav-link submenu itemcol isDisabled"
+                          href="mobgoo_en.html"
+                          class="nav-link submenu itemcol"
                           >Google</a
                         >
                       </li>
@@ -420,7 +418,7 @@
     </nav>
 
     <section class="top">
-      <h1>Influenza Epidemiological Surveillance Information System (SIVEP)</h1>
+      <h1>Flu Syndrome (SG)</h1>
       <div class="intro" style="padding: 2rem 0rem 5rem">
         <h2 class="mb-5">Description</h2>
         <p>
@@ -604,22 +602,22 @@
       console.log(sampleSIVEP);
       let cell;
       let nlines = sampleSIVEP.length;
-      let ncols = Object.keys(sampleSIVEP["0"]).length;
-      let tableExp = document.getElementById("tableExp");
+      let ncols = Object.keys(sampleSIVEP['0']).length;
+      let tableExp = document.getElementById('tableExp');
       let row;
 
       function cellValue(lin, col) {
         if (Object.keys(sampleSIVEP[lin.toString()])[col]) {
           return `${Object.values(sampleSIVEP[lin.toString()])[col]}`;
         }
-        return "-";
+        return '-';
       }
 
       function colValue(col) {
-        if (Object.keys(sampleSIVEP["0"])[col]) {
-          return `<th>${Object.keys(sampleSIVEP["0"])[col]}</th>`;
+        if (Object.keys(sampleSIVEP['0'])[col]) {
+          return `<th>${Object.keys(sampleSIVEP['0'])[col]}</th>`;
         }
-        return "&nbsp;";
+        return '&nbsp;';
       }
       // fill
       row = tableExp.insertRow(0);
@@ -639,21 +637,21 @@
       lines = [2, 0, 1];
       ncols = dicSIVEP.length;
 
-      tableDic = document.getElementById("tableDic");
+      tableDic = document.getElementById('tableDic');
 
       function dicValue(lin, col) {
         if (Object.keys(dicSIVEP[col.toString()])[lin]) {
           return `<td >${Object.values(dicSIVEP[col.toString()])[lin]} </td>`;
         }
-        return "-";
+        return '-';
       }
-      let col_name = "";
+      let col_name = '';
       // fill table with data
       for (let [i, lin] of lines.entries()) {
         row = tableDic.insertRow(i);
         cell = row.insertCell(row);
         cell.outerHTML = `<th class="headcol">${
-          Object.keys(dicSIVEP["0"])[lin]
+          Object.keys(dicSIVEP['0'])[lin]
         }</th>`;
         ncol = 1;
         for (let col = 0; col < ncols; col++) {

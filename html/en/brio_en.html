@@ -263,9 +263,7 @@
                         <h6 class="dropdown-header">Architecture</h6>
                       </li>
                       <li class="dropdown-item drop-item">
-                        <a
-                          href="data_en.html"
-                          class="itemcol nav-link submenu active"
+                        <a href="data_en.html" class="itemcol nav-link submenu"
                           >Overview</a
                         >
                       </li>
@@ -311,10 +309,10 @@
                       <li>
                         <h6 class="dropdown-header">Mobility</h6>
                       </li>
-                      <li class="dropdown-item drop-item disabled">
+                      <li class="dropdown-item drop-item">
                         <a
-                          href="googlemob_en.html"
-                          class="nav-link submenu itemcol isDisabled"
+                          href="mobgoo_en.html"
+                          class="nav-link submenu itemcol"
                           >Google</a
                         >
                       </li>
@@ -612,22 +610,22 @@
     <script>
       let cell;
       let nlines = sampleBRio.length;
-      let ncols = Object.keys(sampleBRio["0"]).length;
-      let tableExp = document.getElementById("tableExp");
+      let ncols = Object.keys(sampleBRio['0']).length;
+      let tableExp = document.getElementById('tableExp');
       let row;
 
       function cellValue(lin, col) {
         if (Object.keys(sampleBRio[lin.toString()])[col]) {
           return `${Object.values(sampleBRio[lin.toString()])[col]}`;
         }
-        return "-";
+        return '-';
       }
 
       function colValue(col) {
-        if (Object.keys(sampleBRio["0"])[col]) {
-          return `<th>${Object.keys(sampleBRio["0"])[col]}</th>`;
+        if (Object.keys(sampleBRio['0'])[col]) {
+          return `<th>${Object.keys(sampleBRio['0'])[col]}</th>`;
         }
-        return "&nbsp;";
+        return '&nbsp;';
       }
       // fill
       row = tableExp.insertRow(0);
@@ -647,7 +645,7 @@
       lines = [0, 1, 2];
       ncols = dicBrasilio.length;
 
-      tableDic = document.getElementById("tableDic");
+      tableDic = document.getElementById('tableDic');
 
       function dicValue(lin, col) {
         if (Object.keys(dicBrasilio[col.toString()])[lin]) {
@@ -655,15 +653,15 @@
             Object.values(dicBrasilio[col.toString()])[lin]
           } </td>`;
         }
-        return "-";
+        return '-';
       }
-      let col_name = "";
+      let col_name = '';
       // fill table with data
       for (let [i, lin] of lines.entries()) {
         row = tableDic.insertRow(i);
         cell = row.insertCell(row);
         cell.outerHTML = `<th class="headcol">${
-          Object.keys(dicBrasilio["0"])[lin]
+          Object.keys(dicBrasilio['0'])[lin]
         }</th>`;
         ncol = 1;
         for (let col = 0; col < ncols; col++) {
