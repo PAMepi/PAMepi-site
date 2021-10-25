@@ -208,7 +208,7 @@ nav {
   margin: 0;
   text-align: left;
   font-size: 0.9rem;
-  font-family: "Ruda", sans-serif;
+  font-family: 'Ruda', sans-serif;
   font-weight: 500;
 }
 
@@ -221,7 +221,7 @@ nav {
 
 .nav-link {
   text-transform: none;
-  font-family: "Ruda", sans-serif;
+  font-family: 'Ruda', sans-serif;
   font-weight: 500;
   font-size: 1rem;
   align-items: center;
@@ -240,10 +240,11 @@ nav {
   background-color: #740b0b;
 }
 
-.active {
+.dropdown-item .active {
   /* color: #ECEFA4; */
   color: #fff;
   font-weight: 900;
+  text-decoration: underline;
 }
 
 .isDisabled {
@@ -271,7 +272,7 @@ nav {
 }
 
 .navbar-brand {
-  font-family: "Ruda", sans-serif;
+  font-family: 'Ruda', sans-serif;
   padding: 0 0.5rem;
   color: #ddd;
   font-weight: 800;
@@ -325,7 +326,7 @@ nav {
 
 .pesquisadores {
   font-size: 1rem;
-  font-family: "Ruda", sans-serif;
+  font-family: 'Ruda', sans-serif;
   font-weight: 700;
 }
 
@@ -395,7 +396,7 @@ hr {
 .artigos {
   font-weight: 900;
   font-size: 1.4rem;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   padding-top: 2rem;
 }
 
@@ -409,7 +410,7 @@ hr {
   font-weight: 400;
   column-span: all;
   font-size: 1.4rem;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   padding-bottom: 3rem;
 }
 
@@ -419,7 +420,7 @@ hr {
   column-span: all;
   font-size: 1.2rem;
   color: #423144;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 .bottom {
@@ -447,7 +448,7 @@ hr {
 
 h1 {
   font-size: 2.2rem;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 900;
   color: #900d0d;
   column-span: all;
@@ -476,7 +477,7 @@ h1 {
 }
 
 .img1 {
-  background-image: url("../img/virus.jpeg");
+  background-image: url('../img/virus.jpeg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -484,7 +485,7 @@ h1 {
 }
 
 .img2 {
-  background-image: url("../img/platform.jpeg");
+  background-image: url('../img/platform.jpeg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -493,7 +494,7 @@ h1 {
 }
 
 .img3 {
-  background-image: url("../img/boletim.png");
+  background-image: url('../img/boletim.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -513,7 +514,7 @@ h1 {
 }
 
 .bgselect {
-  background-image: url("../img/layers.png");
+  background-image: url('../img/layers.png');
   background-repeat: space;
 }
 .bggray {
@@ -564,7 +565,7 @@ h1 {
 
 body {
   line-height: 1.8;
-  font-family: "Ruda", sans-serif;
+  font-family: 'Ruda', sans-serif;
   text-align: justify;
   font-size: 1rem;
 }
@@ -628,7 +629,7 @@ h2 {
 .edition {
   text-align: center;
   font-size: 1.5rem;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 700;
 }
 
@@ -708,7 +709,7 @@ h2 {
 
 .newssub {
   font-size: 1.3rem;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 700;
   padding: 2rem 0;
   color: #900d0d;
@@ -718,7 +719,7 @@ h2 {
   color: #fff;
   padding: 0 1rem;
   font-size: 2rem;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 700;
   text-shadow: 2px 2px 5px #000000;
 }
@@ -727,7 +728,7 @@ h2 {
   color: #fff;
   padding: 0 1rem;
   font-size: 1.5rem;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 700;
   text-shadow: 2px 2px 5px #000000;
   text-align: center;
@@ -755,6 +756,17 @@ h2 {
 .img-video {
   width: 100%;
   border-radius: 16px;
+}
+
+.img-evt {
+  width: 50%;
+  border-radius: 16px;
+}
+
+.video-evt {
+  align-items: center;
+  width: 80%;
+  height: 75vh;
 }
 
 .videoTitle {
@@ -843,14 +855,13 @@ h2 {
 }
 
 .play-btn {
-  width: 5rem;
+  width: 20%;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   cursor: pointer;
-  filter: invert(99%) sepia(6%) saturate(893%) hue-rotate(248deg)
-    brightness(120%) contrast(100%);
+  fill: #17a2b8;
 }
 
 .play-btn:hover {
@@ -865,6 +876,7 @@ h2 {
   top: 5%;
   transform: translate(-50%, -50%);
   cursor: pointer;
+  fill: #17a2b8;
 }
 
 .close-btn:hover {
@@ -872,7 +884,8 @@ h2 {
   filter: drop-shadow(5px 5px 5px #000);
 }
 
-#videoPlayer {
+#videoPlayer,
+#videoPlayer1 {
   display: none;
 }
 
@@ -882,7 +895,7 @@ h2 {
 
 .h2-titles {
   font-size: 1.9rem;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   margin-bottom: 5rem;
   font-weight: 900;
   color: #900d0d;
@@ -892,7 +905,7 @@ h2 {
 h3 {
   font-size: 1.4rem;
   padding-bottom: 1rem;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 900;
   column-span: all;
 }
@@ -900,7 +913,7 @@ h3 {
 .h3-videos {
   font-size: 1.6rem;
   padding: 2rem 0;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 900;
   column-span: all;
   color: #423144;
@@ -1301,14 +1314,14 @@ h4.data {
   margin: 4rem 0 1rem 1rem;
   font-size: 1.3rem;
   text-align: center;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 900;
 }
 
 h2.data {
   color: #740b0b;
   font-size: 2rem;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 900;
   padding-bottom: 2rem;
 }
@@ -1316,7 +1329,7 @@ h2.data {
 h3.data {
   color: #212529;
   font-size: 1.6rem;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 900;
   padding: 0;
   margin-left: 1rem;

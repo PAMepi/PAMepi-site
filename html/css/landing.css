@@ -3,7 +3,7 @@
 #581C0C #BB3B0E #DD7631 #708160 #B2B8A3 #D8C593 #E7D4B5
 #290001 #87431D #C87941 #DBCBBD #FDFAF6 #F9F1BF #FFF8B6 #FFF8D9 #D5DBB3 #EFEFEF #FDFCE5 #F9F3DF
 #5E454B #C7B198 #E29C68 #E0BB20 #343434 #957541 #8f384d
-#2D2424 #5C3D2E #B85C38 #E0C097 #222831 #30475e 
+#2D2424 #5C3D2E #B85C38 #E0C097 #222831 #30475e #17a2b8
 #f9f3eb #ccc    #ddd    #cfa263 #331a00
                 #e7d1b1 #eddcc4 #4d1f00
                         #f3e8d8 #1a0a00
@@ -52,7 +52,7 @@ html {
   margin: 0;
   text-align: left;
   font-size: 1.1rem;
-  font-family: "Ruda", sans-serif;
+  font-family: 'Ruda', sans-serif;
   padding-left: 1rem;
   color: #222831;
   font-weight: 700;
@@ -61,7 +61,7 @@ html {
 .nav-link {
   color: #222831;
   text-transform: uppercase;
-  font-family: "Ruda", sans-serif;
+  font-family: 'Ruda', sans-serif;
   font-weight: 900;
   font-size: 0.9rem;
 }
@@ -102,7 +102,7 @@ html {
 }
 
 .navbar-brand {
-  font-family: "Ruda", sans-serif;
+  font-family: 'Ruda', sans-serif;
   font-weight: 800;
   color: #222831;
   padding: 0 0.5rem;
@@ -112,7 +112,7 @@ html {
 
 .navbar-brand:hover {
   color: #bb3b0e;
-  font-family: "Ruda", sans-serif;
+  font-family: 'Ruda', sans-serif;
   font-weight: 800;
 }
 
@@ -206,7 +206,7 @@ html {
   text-align: center;
   margin-top: 2rem;
   padding: 3rem 0 1rem 0;
-  font-family: "Ruda", sans-serif;
+  font-family: 'Ruda', sans-serif;
 }
 
 .isDisabled {
@@ -241,7 +241,7 @@ html {
 
 .main-subtitle {
   font-size: 1.5rem;
-  font-family: "Ruda", sans-serif;
+  font-family: 'Ruda', sans-serif;
   color: #222831;
   padding: 1rem 2rem;
   display: block;
@@ -427,14 +427,14 @@ hr {
 
 h1 {
   font-size: 2rem;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 900;
   color: #222831;
 }
 
 body {
   line-height: 1.8;
-  font-family: "Ruda", sans-serif;
+  font-family: 'Ruda', sans-serif;
   text-align: justify;
   font-size: 1rem;
 }
@@ -448,7 +448,7 @@ h2 {
 
 h3 {
   font-size: 1.7rem;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 900;
   column-span: all;
 }
