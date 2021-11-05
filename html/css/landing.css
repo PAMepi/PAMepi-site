@@ -67,7 +67,7 @@ html {
 }
 
 .nav-link:hover {
-  color: #bb3b0e;
+  color: #a66b0c;
 }
 
 .nav-link:active,
@@ -111,7 +111,7 @@ html {
 }
 
 .navbar-brand:hover {
-  color: #bb3b0e;
+  color: #a66b0c;
   font-family: 'Ruda', sans-serif;
   font-weight: 800;
 }
@@ -139,7 +139,7 @@ html {
 }
 
 .dropdown:hover .dropdown-menu {
-  color: #bb3b0e;
+  color: #a66b0c;
   background-color: #eee;
 }
 
@@ -167,15 +167,15 @@ html {
 }
 
 .dropdown-item:hover {
-  color: #bb3b0e;
+  color: #a66b0c;
   background-color: #eee;
   border-radius: 8px;
   border: 1px solid #ccc;
-  fill: #bb3b0e;
+  fill: #a66b0c;
 }
 
 .dropdown-item .active {
-  color: #bb3b0e;
+  color: #a66b0c;
   font-weight: 900;
   border-radius: 8px;
 }
@@ -218,7 +218,7 @@ html {
 }
 
 .titles {
-  color: #bb3b0e;
+  color: #974634;
 
   margin-bottom: 2rem;
 }
@@ -253,11 +253,11 @@ svg {
 }
 
 svg:hover {
-  fill: #bb3b0e;
+  fill: #a66b0c;
 }
 
 a:hover {
-  color: #bb3b0e;
+  color: #a66b0c;
 }
 
 .icon-language {
@@ -610,7 +610,7 @@ a:hover {
   margin-bottom: 4rem;
 }
 .cvbutton {
-  background-color: #bb3b0e;
+  background-color: #723527;
   border: none;
   color: white;
   padding: 0.4rem;
@@ -635,7 +635,7 @@ a:hover {
 .destaque {
   text-transform: uppercase;
   font-weight: bold;
-  color: #bb3b0e;
+  color: #a66b0c;
 }
 
 .destaque:hover {
@@ -654,7 +654,8 @@ a:hover {
   padding: 0.2rem 1rem;
   width: 100%;
   margin-bottom: 1rem;
-  background-color: #59674c;
+  //background-color: #774d09;
+  background-color: #a66b0c;
   border: none;
   color: white;
   padding: 0.4rem;
@@ -664,15 +665,15 @@ a:hover {
 }
 
 .btn-about:hover {
-  background-color: #333b2b;
+  background-color: #472e05;
   color: white;
 }
 
 .btn-about:active,
 .btn-about:focus,
 .btn-about:target {
-  background-color: #333b2b;
-  box-shadow: 0px 0px 0px 3px #b2bea7;
+  background-color: #5f3d07;
+  box-shadow: 0px 0px 0px 3px #fae0b8;
 }
 
 /* .row .columns-team:not(:first-child) {

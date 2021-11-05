@@ -2,7 +2,7 @@
 filter to get color #900d0d
   filter: invert(11%) sepia(43%) saturate(6923%) hue-rotate(357deg) brightness(100%) contrast(93%); */
 
-/* #007bff azul */
+/* #007bff azul #423144 */
 
 /* #8D240F #F7A621 #E74507 #FFDB10 #501400 #752D00 #984C09 cidacs */
 
@@ -23,16 +23,17 @@ html {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #900d0d;
+  background: #974634;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #423144;
+  background: #be7a0e;
 }
 
 ::-webkit-scrollbar-thumb:horizontal {
   width: 150px;
+  overflow: scroll;
 }
 #txt-logo {
   transition: 0.4s;
@@ -49,10 +50,11 @@ html {
 .bi-chevron-right {
   padding: 0;
   margin: 0 0 0.2rem -1rem;
+  fill: white;
 }
 
 .navbar {
-  background-color: #900d0d;
+  background-color: #974634;
   padding: 0.8rem 0;
   color: #f2f2f2;
 }
@@ -139,6 +141,12 @@ html {
 li.drop-item > a.itemcol {
   margin-left: 1.5rem;
 }
+.btn:focus {
+  box-shadow: none;
+}
+.btn {
+  text-decoration: none;
+}
 
 .dropdown-menu {
   display: none;
@@ -152,7 +160,7 @@ li.drop-item > a.itemcol {
   top: 2rem;
   margin: 0px;
   border-radius: 8px;
-  background-color: #900d0d;
+  background-color: #974634;
 }
 
 .dropdown-content a {
@@ -170,14 +178,14 @@ li.drop-item > a.itemcol {
 }
 
 .dropdown-item:hover {
-  background-color: #740b0b;
+  background-color: #5f2c21;
   color: #fff;
   border-radius: 8px;
 }
 
 .dropdown-item {
   text-align: left;
-  background-color: #900d0d;
+  background-color: #974634;
   font-weight: 500;
   font-size: 0.9rem;
   color: #ddd;
@@ -187,15 +195,15 @@ li.drop-item > a.itemcol {
 
 .dropdown-item:active,
 .dropdown-item:focus {
-  background-color: #740b0b;
+  background-color: #5f2c21;
   color: #fff;
   border-radius: 8px;
-  border: 2px solid #5d0909;
+  border: 2px solid #723527;
 }
 
 .dropdown:active,
 .dropdown:focus {
-  border: 2px solid #5d0909;
+  border: 2px solid #723527;
 }
 
 nav {
@@ -214,7 +222,7 @@ nav {
 
 .nav-link:active,
 .nav-link:focus {
-  background-color: #740b0b;
+  background-color: #5f2c21;
   color: #fff;
   border-radius: 8px;
 }
@@ -227,6 +235,7 @@ nav {
   align-items: center;
   color: #ccc;
   margin: 0;
+  text-decoration: none;
 }
 
 .navbar-item {
@@ -237,7 +246,7 @@ nav {
 
 .nav-link:hover {
   color: #fff;
-  background-color: #740b0b;
+  background-color: #5f2c21;
 }
 
 .dropdown-item .active {
@@ -259,8 +268,8 @@ nav {
   /* color: #ECEFA4; */
   color: #fff;
   font-weight: 900;
-  background-color: #900d0d;
-  border: 1px solid #740b0b;
+  background-color: #974634;
+  border: 1px solid #723527;
 }
 
 .nav-arrow {
@@ -278,6 +287,7 @@ nav {
   font-weight: 800;
   transition: 0.4s;
   font-size: 1.2rem;
+  text-decoration: none;
 }
 
 .navbar .container-fluid {
@@ -419,7 +429,7 @@ hr {
   font-weight: 900;
   column-span: all;
   font-size: 1.2rem;
-  color: #423144;
+  color: #be7a0e;
   font-family: 'Raleway', sans-serif;
 }
 
@@ -450,7 +460,7 @@ h1 {
   font-size: 2.2rem;
   font-family: 'Raleway', sans-serif;
   font-weight: 900;
-  color: #900d0d;
+  color: #974634;
   column-span: all;
 }
 
@@ -467,7 +477,7 @@ h1 {
 .destaque {
   text-transform: uppercase;
   font-weight: bold;
-  color: #900d0d;
+  color: #974634;
 }
 
 .img-background {
@@ -550,13 +560,14 @@ h1 {
 
 .destaque:hover {
   text-decoration: none;
-  color: #900d0d;
+  color: #974634;
 }
 
 .footer {
-  background-color: #423144;
-  color: #fff;
+  background-color: #eee;
+  color: #222831;
   padding: 2rem 10rem;
+  border: 1px solid #ddd;
 }
 
 .foot-link {
@@ -606,7 +617,7 @@ body {
 }
 
 h2 {
-  color: #900d0d;
+  color: #974634;
   font-weight: 600;
   font-size: 1.7rem;
   margin: 1rem 0;
@@ -668,7 +679,7 @@ h2 {
 
 .data-header {
   padding: 0.2rem 1rem;
-  background-color: #423144;
+  background-color: #be7a0e;
   border-radius: 16px 16px 0 0;
   color: #fff;
 }
@@ -712,7 +723,7 @@ h2 {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   padding: 2rem 0;
-  color: #900d0d;
+  color: #974634;
 }
 
 .img-text {
@@ -721,7 +732,7 @@ h2 {
   font-size: 2rem;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
-  text-shadow: 2px 2px 5px #000000;
+  text-shadow: 2px 2px 5px #222831;
 }
 
 .boletim {
@@ -730,7 +741,7 @@ h2 {
   font-size: 1.5rem;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
-  text-shadow: 2px 2px 5px #000000;
+  text-shadow: 2px 2px 5px #222831;
   text-align: center;
 }
 
@@ -799,7 +810,7 @@ h2 {
 .drop-item {
   margin: 0;
   padding: 0 0.8rem;
-  border-bottom: 1px solid #740b0b;
+  border-bottom: 1px solid #5f2c21;
 }
 
 .custom-toggler.navbar-toggler {
@@ -880,8 +891,8 @@ h2 {
 }
 
 .close-btn:hover {
-  -webkit-filter: drop-shadow(5px 5px 5px #000);
-  filter: drop-shadow(5px 5px 5px #000);
+  -webkit-filter: drop-shadow(5px 5px 5px #222831);
+  filter: drop-shadow(5px 5px 5px #222831);
 }
 
 #videoPlayer,
@@ -898,7 +909,7 @@ h2 {
   font-family: 'Raleway', sans-serif;
   margin-bottom: 5rem;
   font-weight: 900;
-  color: #900d0d;
+  color: #974634;
   column-span: all;
 }
 
@@ -916,7 +927,7 @@ h3 {
   font-family: 'Raleway', sans-serif;
   font-weight: 900;
   column-span: all;
-  color: #423144;
+  color: #be7a0e;
 }
 
 h4 {
@@ -928,12 +939,13 @@ iframe {
 }
 
 a {
-  text-decoration: none;
+  color: #dd6731;
+  text-decoration: underline;
 }
 
 a:hover {
   text-decoration: none;
-  font-weight: 500;
+  color: #9a4219;
 }
 
 @media only screen and (max-width: 992px) {
@@ -958,7 +970,7 @@ a:hover {
   }
 
   .dropdown-submenu:hover {
-    background-color: #900d0d;
+    background-color: #974634;
   }
 
   .submenu {
@@ -967,7 +979,7 @@ a:hover {
 
   .sub-drop {
     padding: 0;
-    background-color: #900d0d;
+    background-color: #974634;
   }
 
   .dropdown-submenu .dropdown-menu {
@@ -1032,7 +1044,7 @@ a:hover {
 }
 
 .box-header {
-  background-color: #423144;
+  background-color: #be7a0e;
   color: white;
   font-size: 1rem;
   margin: 0;
@@ -1058,7 +1070,7 @@ a:hover {
   font-size: 1rem;
   font-weight: 400;
   padding: 1rem;
-  color: #000;
+  color: #222831;
 }
 
 .body-news {
@@ -1095,7 +1107,7 @@ a:hover {
 }
 
 .box-footer {
-  background-color: #900d0d;
+  background-color: #974634;
   border: none;
   color: #fff;
   font-weight: 700;
@@ -1107,7 +1119,7 @@ a:hover {
 
 .box-footer:hover {
   text-decoration: none;
-  background-color: #423144;
+  background-color: #be7a0e;
 }
 
 .div-icons {
@@ -1129,27 +1141,27 @@ a:hover {
   margin: 0 0.5rem;
   color: gray;
   text-align: center;
-  filter: invert(99%) sepia(0%) saturate(2850%) hue-rotate(147deg)
-    brightness(116%) contrast(73%);
+  /* filter: invert(99%) sepia(0%) saturate(2850%) hue-rotate(147deg)
+    brightness(116%) contrast(73%); */
 }
 .copyrights {
   font-weight: 300;
   font-size: 1rem;
-  color: #777;
+  color: #222831;
   padding: 1rem 0;
   text-align: center;
 }
 
 svg {
-  color: #eee;
+  fill: #222831;
 }
 
 svg:hover {
-  fill: #900d0d;
+  fill: #974634;
 }
 
 .cvbutton {
-  background-color: #900d0d;
+  background-color: #974634;
   border: none;
   color: white;
   padding: 1rem;
@@ -1161,7 +1173,7 @@ svg:hover {
 .data-button {
   background-color: #eee;
   border: none;
-  color: #000;
+  color: #222831;
   padding: 0.5rem 1rem;
   margin: 0;
   width: 100%;
@@ -1171,7 +1183,7 @@ svg:hover {
 }
 
 .button {
-  background-color: #900d0d;
+  background-color: #974634;
   border: none;
   color: white;
   padding: 1rem;
@@ -1181,7 +1193,7 @@ svg:hover {
 }
 
 .button:hover {
-  background-color: #740b0b;
+  background-color: #5f2c21;
 }
 
 .abutton {
@@ -1271,6 +1283,7 @@ th {
   border: 1px solid #ddd;
   padding: 0.3rem 1.1rem;
   text-align: left;
+  line-height: 1;
 }
 #tableDic th {
   white-space: nowrap;
@@ -1300,7 +1313,7 @@ table.data tr:hover {
   padding-top: 12px;
   padding-bottom: 12px;
 
-  background-color: #423144;
+  background-color: #be7a0e;
   color: white;
 }
 
@@ -1316,10 +1329,11 @@ h4.data {
   text-align: center;
   font-family: 'Raleway', sans-serif;
   font-weight: 900;
+  color: #212529;
 }
 
 h2.data {
-  color: #740b0b;
+  color: #5f2c21;
   font-size: 2rem;
   font-family: 'Raleway', sans-serif;
   font-weight: 900;
@@ -1343,4 +1357,5 @@ h3.data {
   width: 1rem;
   height: 1rem;
   padding: 0;
+  fill: white;
 }

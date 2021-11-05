@@ -17,9 +17,9 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ruda:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <script type="text/javascript" src="js/data.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/mystyle.css" />
-    <link rel="icon" href="img/pamepi.ico" />
+
+    <link rel="stylesheet" type="text/css" href="../css/mystyle.css" />
+    <link rel="icon" href="../img/pamepi.ico" />
   </head>
 
   <body>
@@ -30,8 +30,11 @@
       <div class="container-fluid">
         <div class="navbar-header w-100 row align-items-center">
           <div>
-            <a href="index.html" class="navbar-brand active"
-              ><img id="img-logo" src="img/logo.jpeg" />PAMEpi</a
+            <a
+              href="index_en.html"
+              class="navbar-brand active"
+              id="navbar-header"
+              ><img id="img-logo" src="../img/logo.jpeg" />PAMEpi</a
             >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -46,7 +49,12 @@
                 d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
               />
             </svg>
-            <a href="covid.html" class="navbar-brand active">Covid-19</a>
+            <a
+              href="covid_en.html"
+              class="navbar-brand active"
+              id="navbar-header"
+              >Covid-19</a
+            >
           </div>
 
           <button
@@ -81,21 +89,21 @@
                 aria-expanded="false"
                 tabindex="0"
               >
-                Projeto
+                Project
               </div>
               <div
                 class="dropdown-menu dropdown"
                 aria-labelledby="navbarDropdown1"
               >
                 <div class="dropdown-item drop-item">
-                  <a href="covid.html#projeto" class="nav-link submenu">
-                    Objetivos</a
+                  <a href="covid_en.html#projeto" class="nav-link submenu">
+                    Goals</a
                   >
                 </div>
 
                 <div class="dropdown-item drop-item">
-                  <a href="covid.html#github" class="nav-link submenu"
-                    >Código fonte</a
+                  <a href="covid_en.html#github" class="nav-link submenu"
+                    >Source code</a
                   >
                 </div>
               </div>
@@ -111,14 +119,14 @@
                 aria-expanded="false"
                 tabindex="0"
               >
-                Dados
+                Data
               </div>
               <div
                 class="dropdown-menu dropdown dropdown-menu-right"
                 aria-labelledby="navbarDropdown5"
               >
                 <div class="dropdown-item drop-item">
-                  <a href="data.html" class="nav-link submenu">Visão geral</a>
+                  <a href="data_en.html" class="nav-link submenu">Overview</a>
                 </div>
                 <div
                   class="
@@ -136,58 +144,30 @@
                     data-flip="false"
                     style="text-align: left"
                   >
-                    Saúde</a
+                    Health</a
                   >
 
                   <ul class="dropdown-menu sub-drop">
                     <li class="dropdown-item drop-item">
-                      <a href="sivep.html" class="nav-link submenu">SG</a>
+                      <a href="sivep_en.html" class="nav-link submenu">SG</a>
                     </li>
                     <li class="dropdown-item drop-item">
-                      <a href="srag.html" class="nav-link submenu">SRAG</a>
+                      <a href="srag_en.html" class="nav-link submenu">SRAG</a>
                     </li>
                     <li class="dropdown-item drop-item">
-                      <a href="brio.html" class="nav-link submenu">Brasil IO</a>
-                    </li>
-                    <li class="dropdown-item drop-item">
-                      <a href="vacina.html" class="nav-link submenu"
-                        >Vacinação</a
+                      <a href="brio_en.html" class="nav-link submenu"
+                        >Brasil IO</a
                       >
                     </li>
                     <li class="dropdown-item drop-item">
-                      <a href="hospital.html" class="nav-link submenu">
-                        Ocupação Hospitalar
+                      <a href="vacina_en.html" class="nav-link submenu"
+                        >Vaccination</a
+                      >
+                    </li>
+                    <li class="dropdown-item drop-item">
+                      <a href="hospital_en.html" class="nav-link submenu">
+                        Hospital Occupancy
                       </a>
-                    </li>
-                  </ul>
-                </div>
-                <div
-                  class="
-                    dropdown-item
-                    drop-item
-                    dropdown
-                    dropright
-                    dropdown-submenu
-                  "
-                >
-                  <a
-                    class="btn dropdown-toggle nav-link submenu"
-                    href="#"
-                    data-toggle="dropdown"
-                    data-flip="false"
-                    style="text-align: left"
-                  >
-                    Mobilidade
-                  </a>
-
-                  <ul class="dropdown-menu sub-drop">
-                    <li class="dropdown-item drop-item">
-                      <a href="mobgoo.html" class="nav-link submenu">Google</a>
-                    </li>
-                    <li class="dropdown-item drop-item">
-                      <a href="ibge.html" class="nav-link submenu"
-                        >Intercidade</a
-                      >
                     </li>
                   </ul>
                 </div>
@@ -206,12 +186,44 @@
                     data-toggle="dropdown"
                     data-flip="false"
                     style="text-align: left"
-                    >Inequalidade</a
+                  >
+                    Mobility
+                  </a>
+
+                  <ul class="dropdown-menu sub-drop">
+                    <li class="dropdown-item drop-item">
+                      <a href="mobgoo_en.html" class="nav-link submenu"
+                        >Google</a
+                      >
+                    </li>
+                    <li class="dropdown-item drop-item">
+                      <a href="ibge_en.html" class="nav-link submenu active"
+                        >Intercity</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  class="
+                    dropdown-item
+                    drop-item
+                    dropdown
+                    dropright
+                    dropdown-submenu
+                  "
+                >
+                  <a
+                    class="btn dropdown-toggle nav-link submenu"
+                    href="#"
+                    data-toggle="dropdown"
+                    data-flip="false"
+                    style="text-align: left"
+                    >Inequality</a
                   >
 
                   <ul class="dropdown-menu sub-drop">
                     <li class="dropdown-item drop-item">
-                      <a href="ibp.html" class="nav-link submenu active">IBP</a>
+                      <a href="ibp_en.html" class="nav-link submenu">IBP</a>
                     </li>
                   </ul>
                 </div>
@@ -232,13 +244,13 @@
                     style="text-align: left; width: 100%; margin: 0"
                     role="button"
                   >
-                    Medida não farmacêutica
+                    Non-pharmaceutical measure
                   </a>
 
                   <ul class="dropdown-menu sub-drop">
                     <li class="dropdown-item drop-item">
-                      <a href="estringe.html" class="nav-link submenu"
-                        >Índice de estringência</a
+                      <a href="estringe_en.html" class="nav-link submenu"
+                        >Stringency index</a
                       >
                     </li>
                   </ul>
@@ -256,7 +268,7 @@
                 aria-expanded="false"
                 tabindex="0"
               >
-                Visualização
+                Visualization
               </div>
 
               <div
@@ -268,20 +280,20 @@
                 "
                 aria-labelledby="navbarDropdown2"
               >
-                <div class="row rowmulticol">
+                <div class="row">
                   <div class="col-sm-6">
                     <ul class="multi-column-dropdown">
                       <li>
-                        <h6 class="dropdown-header">Descritiva</h6>
+                        <h6 class="dropdown-header">Description</h6>
                       </li>
                       <li class="dropdown-item drop-item">
-                        <a href="plot.html" class="itemcol nav-link submenu"
-                          >Panorama</a
+                        <a href="plot_en.html" class="itemcol nav-link submenu"
+                          >Outlook</a
                         >
                       </li>
                       <li class="dropdown-item drop-item disabled">
                         <a href="#" class="itemcol nav-link submenu isDisabled"
-                          >Decretos e Mobilidade</a
+                          >Decrees and Mobility</a
                         >
                       </li>
                     </ul>
@@ -289,8 +301,9 @@
                   <div class="col-sm-6">
                     <ul class="multi-column-dropdown">
                       <li>
-                        <h6 class="dropdown-header">Modelos</h6>
+                        <h6 class="dropdown-header">Models</h6>
                       </li>
+
                       <li
                         class="
                           dropdown-item
@@ -307,62 +320,63 @@
                           data-flip="false"
                           style="text-align: left"
                         >
-                          Estados
+                          States
                         </a>
 
                         <ul class="dropdown-menu sub-drop">
                           <li class="dropdown-item drop-item sub-drop">
-                            <a href="curto.html" class="nav-link submenu"
-                              >Curto prazo</a
+                            <a href="curto_en.html" class="nav-link submenu"
+                              >Short term</a
                             >
                           </li>
                           <li class="dropdown-item drop-item sub-drop">
-                            <a href="longo.html" class="nav-link submenu"
-                              >Longo prazo</a
+                            <a href="longo_en.html" class="nav-link submenu"
+                              >Long term</a
                             >
                           </li>
                           <li class="dropdown-item drop-item sub-drop disabled">
                             <a
-                              href="compara.html"
+                              href="compara_en.html"
                               class="nav-link submenu isDisabled"
-                              >Comparação</a
+                              >Comparison</a
                             >
                           </li>
                           <li class="dropdown-item drop-item sub-drop disabled">
                             <a
-                              href="valida.html"
+                              href="valida_en.html"
                               class="nav-link submenu isDisabled"
-                              >Validação</a
+                              >Validation</a
                             >
                           </li>
                           <li class="dropdown-item drop-item sub-drop disabled">
                             <a
-                              href="simula.html"
+                              href="simula_en.html"
                               class="nav-link submenu isDisabled"
-                              >Simulação</a
+                              >Simulation</a
                             >
                           </li>
                         </ul>
                       </li>
+
                       <li class="dropdown-item drop-item disabled">
                         <a
-                          href="municipios.html"
-                          class="itemcol nav-link submenu isDisabled"
-                          >Municipios</a
+                          href="municipios_en.html"
+                          class="nav-link itemcol submenu isDisabled"
+                          >Cities</a
                         >
                       </li>
                       <li class="dropdown-item drop-item disabled">
                         <a
-                          href="reg_sau.html"
-                          class="itemcol nav-link submenu isDisabled"
-                          >Regiões de saúde</a
-                        >
+                          href="reg_sau_en.html"
+                          class="nav-link itemcol submenu isDisabled"
+                          >Regions
+                        </a>
                       </li>
                       <li class="dropdown-item drop-item disabled">
                         <a
-                          href="tsd.html"
-                          class="itemcol nav-link submenu isDisabled"
-                          >Traga seus dados</a
+                          href="tsd_en.html"
+                          class="nav-link submenu itemcol isDisabled"
+                          >Bring your data</a
                         >
                       </li>
                     </ul>
@@ -381,61 +395,55 @@
                 aria-expanded="false"
                 tabindex="0"
               >
-                Divulgação
+                Outreach
               </div>
               <div
                 class="dropdown-menu dropdown dropdown-menu-right"
                 aria-labelledby="navbarDropdown1"
               >
                 <div class="dropdown-item drop-item">
-                  <a href="news.html#newsletter" class="nav-link submenu">
+                  <a href="news_en.html#newsletter" class="nav-link submenu">
                     Newsletter</a
                   >
                 </div>
                 <div class="dropdown-item drop-item">
-                  <a href="news.html#eventos" class="nav-link submenu"
-                    >Eventos</a
+                  <a href="news_en.html#eventos" class="nav-link submenu"
+                    >Events</a
                   >
                 </div>
                 <div class="dropdown-item drop-item">
-                  <a href="news.html#boletim" class="nav-link submenu"
-                    >Boletim</a
+                  <a href="news_en.html#boletim" class="nav-link submenu"
+                    >Bulletin</a
                   >
                 </div>
                 <div class="dropdown-item drop-item">
-                  <a href="news.html#midia" class="nav-link submenu"
-                    >Notícias</a
+                  <a href="news_en.html#midia" class="nav-link submenu">News</a>
+                </div>
+                <div class="dropdown-item drop-item">
+                  <a href="news_en.html#galeria-videos" class="nav-link submenu"
+                    >Video gallery</a
                   >
                 </div>
                 <div class="dropdown-item drop-item">
-                  <a href="news.html#galeria-videos" class="nav-link submenu"
-                    >Galeria de vídeos</a
+                  <a href="news_en.html#artigos" class="nav-link submenu"
+                    >Papers</a
                   >
                 </div>
                 <div class="dropdown-item drop-item">
-                  <a href="news.html#artigos" class="nav-link submenu"
-                    >Artigos</a
-                  >
-                </div>
-
-                <div class="dropdown-item drop-item">
-                  <a href="contato.html#faq" class="nav-link submenu"
-                    >Perguntas frequentes</a
-                  >
+                  <a href="contato_en.html#faq" class="nav-link submenu">FAQ</a>
                 </div>
                 <div class="dropdown-item drop-item">
-                  <a href="contato.html#tutorial" class="nav-link submenu"
+                  <a href="contato_en.html#tutorial" class="nav-link submenu"
                     >Tutorial</a
                   >
                 </div>
                 <div class="dropdown-item drop-item">
-                  <a href="contato.html#faleconosco" class="nav-link submenu"
-                    >Fale conosco</a
+                  <a href="contato_en.html#faleconosco" class="nav-link submenu"
+                    >Contact us</a
                   >
                 </div>
               </div>
             </li>
-
             <li class="navbar-item dropdown">
               <div
                 class="dropdown-item dropdown-toggle"
@@ -462,12 +470,14 @@
                 aria-labelledby="navbarDropdown1"
               >
                 <div class="dropdown-item drop-item">
-                  <a href="ibp.html" class="nav-link active submenu"
+                  <a href="../mobgoo.html" class="nav-link submenu"
                     >Português</a
                   >
                 </div>
-                <div class="dropdown-item drop-item" disabled>
-                  <a href="en/ibp_en.html" class="nav-link submenu">English</a>
+                <div class="dropdown-item drop-item">
+                  <a href="mobgoo_en.html" class="nav-link active submenu"
+                    >English</a
+                  >
                 </div>
               </div>
             </li>
@@ -477,107 +487,160 @@
     </nav>
 
     <section class="top">
-      <h1>Índice de privação brasileiro (IBP)</h1>
+      <h1>Intercity Brazilian mobility</h1>
       <div class="intro" style="padding: 2rem 0rem 5rem">
-        <h2 class="mb-5">Descrição</h2>
+        <h2 class="mb-5">Description</h2>
         <p class="card-text">
-          Ele fornece medidas de privação para cada município brasileiro e setor
-          censitário e é usado para avaliar as desigualdades em saúde em todo o
-          país. O Censo Demográfico Brasileiro de 2010 é a base de cálculo da
-          medida de privação, disponível no
-          <a href="https://cidacs.bahia.fiocruz.br/ibp/" target="_blank"
-            >CIDACS</a
-          >. O índice IBP combina três fatores:
-        </p>
-        <ol>
-          <li>
-            percentual de famílias com renda per capita inferior a meio salário
-            mínimo;
-          </li>
-          <li>percentual de analfabetos maiores de 7 anos;</li>
-          <li>
-            percentual de pessoas sem acesso adequado a água potável, esgoto,
-            coleta de lixo, banheiro ou chuveiro;
-          </li>
-        </ol>
-        <p>
-          Esses dados não precisam ser atualizados e a documentação completa
-          sobre a construção do índice é apresentada em
-          <a href="http://eprints.gla.ac.uk/215898/1/215898.pdf"
-            >Developing a small-area deprivation measure for Brazil: Technical
-            report</a
-          >. A fonte de dados original e a visualização podem ser encontradas em
+          It is the historical average flux data throughout the country using
+          road/air/fluvial networks. The data is available in the Brazilian
+          Institute of Geography and Statistics (IBGE) separated into 2
+          different data sources: the first includes only air mobility from the
           <a
-            href="https://cidacs.bahia.fiocruz.br/ibp/base-de-dados-do-ibp-municipal-esta-disponivel-para-download/"
             target="_blank"
-            >Cidacs</a
+            href="https://geoftp.ibge.gov.br/organizacao_do_territorio/redes_e_fluxos_geograficos/ligacoes_aereas/ligacoes_aereas_2010.pdf"
+            >2010 air connections report</a
+          >
+          and the second includes roads and fluvial mobility from the
+          <a
+            target="_blank"
+            href="https://biblioteca.ibge.gov.br/visualizacao/livros/liv100602.pdf"
+            >2016 roads and fluvial connections report</a
+          >. Originally the IBGE reports have the goal to analyze the relations
+          and connexions between the Brazilian cities highlighting the principal
+          nodes for material (people, goods, cargo) and immaterial (information,
+          orders, money) exchanges.
+        </p>
+
+        <h3 class="mt-5 pt-5">Air connections</h3>
+        <p>
+          From the 5 565 municipalities in Brazil, only 135 had an airport in
+          2010. The data shows the <strong>number of people </strong> traveling
+          between these 135 airports and it is aggregated by binding city pairs,
+          no matter the direction people are traveling. It also includes cargo
+          information but this is not being considered here. The original data
+          can be downloaded directly on the
+          <a
+            href="http://geoftp.ibge.gov.br/organizacao_do_territorio/redes_e_fluxos_geograficos/ligacoes_aereas/bases_de_dados/"
+            target="_blank"
+            >website in IBGE</a
+          >. Other air connection reports can be found in the
+          <a
+            href="https://www.gov.br/anac/pt-br/assuntos/dados-e-estatisticas/mercado-de-transporte-aereo/anuario-do-transporte-aereo/dados-do-anuario-do-transporte-aereo"
+            target="_blank"
+            >National Civil Aviation Agency (ANAC)</a
+          >.
+        </p>
+        <h3 class="mt-5 pt-5">Road and fluvial connections</h3>
+        <p>
+          The 2016 Road/Fluvial Connections survey only includes information on
+          intercity passenger transport. It is informed of the number of
+          vehicles per pair of locations where the direction of transport can be
+          either from city A to city B or from B to A. Transport frequency
+          information will be relative to the pair of municipalities, never to
+          the municipality alone. The frequency of the data is weekly and
+          doesn’t take into account the number of people per vehicle. For road
+          transportation, the conventional bus may accommodate 50 people seated
+          and the fluvial transportation may vary from 20 to 500 people per
+          vehicle estimation based on
+          <a
+            href="https://www2.mppa.mp.br/sistemas/gcsubsites/upload/41/transportepassageiros.pdf"
+            target="_blank"
+            >Characterization of the Supply and Demand of River Passenger
+            Transport in the Amazon Region</a
+          >. For now, is going to be used only the vehicle information without
+          estimating the number of passengers. The original data can be
+          downloaded on the
+          <a
+            href="http://geoftp.ibge.gov.br/organizacao_do_territorio/redes_e_fluxos_geograficos/ligacoes_rodoviarias_e_hidroviarias/base_de_dados/"
+            target="_blank"
+            >IBGE website</a
           >.
         </p>
 
-        <h2 class="mb-5 mt-5 pt-5 pb-2">Informação de acesso a dados</h2>
+        <h2 class="mb-5 mt-5 pt-5 pb-2">Data access information</h2>
         <p>
-          Os dados e documentação estão disponíveis na
+          The data is available on the
           <a
-            href="http://dx.doi.org/10.5525/gla.researchdata.980"
+            href="http://geoftp.ibge.gov.br/organizacao_do_territorio/redes_e_fluxos_geograficos/ligacoes_rodoviarias_e_hidroviarias/base_de_dados/"
             target="_blank"
-            >Universidade de Glasgow</a
-          >. Os dados e este relatório são distribuídos sob a licença Creative
-          Commons Share-Alike (CC BY-SA 4.0) e podem ser usados livremente por
-          pesquisadores, legisladores ou público.
+            >IBGE website</a
+          >
+          and documentation is available at the
+          <a
+            target="_blank"
+            href="https://geoftp.ibge.gov.br/organizacao_do_territorio/redes_e_fluxos_geograficos/ligacoes_aereas/ligacoes_aereas_2010.pdf"
+            >2010 air connections report</a
+          >
+          and the
+          <a
+            target="_blank"
+            href="https://biblioteca.ibge.gov.br/visualizacao/livros/liv100602.pdf"
+            >2016 roads and fluvial connections report</a
+          >.
         </p>
-        <h2 class="mb-5 mt-5 pt-5 pb-2">Métodos de coleta de dados</h2>
+
+        <h2 class="mb-5 mt-5 pt-5 pb-2">Methods of data collection</h2>
         <p>
-          Um código Python está disponível em nosso diretório
+          A Python code is available on our
           <a href="https://github.com/PAMepi/scripts-datalake" target="_blank"
             >Github</a
           >
-          para baixar os dados do
+          directory to download the data from the
           <a
-            href="https://cidacs.bahia.fiocruz.br/ibp/base-de-dados-do-ibp-municipal-esta-disponivel-para-download/"
+            href="http://geoftp.ibge.gov.br/organizacao_do_territorio/redes_e_fluxos_geograficos/ligacoes_rodoviarias_e_hidroviarias/base_de_dados/"
             target="_blank"
-            >Cidacs</a
-          >. O banco de dados não precisa de atualização. Informações adicionais
-          sobre métodos de coleta de dados podem ser encontradas em
-          <a href="http://eprints.gla.ac.uk/215898/1/215898.pdf"
-            >Developing a small-area deprivation measure for Brazil: Technical
-            report</a
-          >
-          e
+            >IBGE website</a
+          >. This data doesn’t need to be updated unless a newer report is
+          published. Additional information on data collection methods can be
+          found in the
+          <a
+            target="_blank"
+            href="https://geoftp.ibge.gov.br/organizacao_do_territorio/redes_e_fluxos_geograficos/ligacoes_aereas/ligacoes_aereas_2010.pdf"
+            >2010 air connections report</a
+          >, the
+          <a
+            target="_blank"
+            href="https://biblioteca.ibge.gov.br/visualizacao/livros/liv100602.pdf"
+            >2016 roads and fluvial connections report</a
+          >, and
           <a href="https://github.com/PAMepi/scripts-datalake" target="_blank"
             >Github</a
           >.
         </p>
-        <h2 class="mb-5 mt-5 pt-5 pb-2">
-          Informações específicas dos dados IBP
-        </h2>
+        <h2 class="mb-5 mt-5 pt-5 pb-2">Data-specific information</h2>
         <p>
-          O conjunto de dados IBP tem um total de 15 colunas e mostrou um total
-          de 5566 registros (linhas) e um tamanho de 734Kb. Um código com mais
-          detalhes sobre as variáveis, processamento de dados e métodos de
-          análise é apresentado em nosso diretório
+          The air mobility dataset has a total of 6 columns and shows a total of
+          227 registries (rows) and size of 13.9kB. The road/fluvial mobility
+          dataset has a total of 7 columns and shows a total of 65 639
+          registries (rows) and size of 2.7Mb. A code with more details about
+          the variables, data processing, and analysis methods is presented in
+          our
           <a href="https://github.com/PAMepi/scripts-datalake" target="_blank"
             >Github</a
-          >.
+          >
+          directory.
         </p>
-        <h2 class="mb-5 mt-5 pt-5 pb-2">Limitações do conjunto de dados IBP</h2>
+        <h2 class="mb-5 mt-5 pt-5 pb-2">Limitations of dataset</h2>
         <p>
-          O conjunto de dados IBP inclui apenas 3 medidas de privação, excluindo
-          outras, como por exemplo: emprego, crime, saúde, educação e acesso a
-          serviços públicos. Também está relacionado exclusivamente ao ano de
-          2010, tornando impraticável a comparação ao longo do tempo. As
-          diferentes populações e etnias (por exemplo, povos indígenas,
-          quilombolas, ribeirinhos) também não são consideradas e existem alguns
-          vieses inerentes ao meio rural.
+          The data doesn’t show the direction of the flux, this means it is not
+          possible to know if the passengers in a flight or the number of
+          vehicles on road/fluvial transport are leaving or arriving in the
+          city. In the case of air mobility is available the total number of
+          passengers per year traveling between two cities, but on road/fluvial
+          mobility is available only the average number of vehicles per week not
+          considering the occupancy of each vehicle.
         </p>
       </div>
     </section>
     <hr />
     <section class="middle-white">
-      <h2 class="data">Dados e recursos</h2>
+      <h2 class="data">Data and Resources</h2>
       <div class="dado-subitem">
         <div class="media download">
           <div class="media-left">
-            <h3 class="data">Dados e dicionário de variáveis</h3>
+            <h3 class="data">
+              Data and variable dictionary (Only in Portuguese)
+            </h3>
           </div>
           <div class="media-right">
             <a
@@ -590,7 +653,7 @@
         </div>
 
         <div class="data-in">
-          <h4 class="data">Explorador de dados</h4>
+          <h4 class="data">Data explorer - Air connections</h4>
           <div class="table-div">
             <table
               id="tableExp"
@@ -601,10 +664,30 @@
             ></table>
           </div>
 
-          <h4 class="data">Dicionário de Dados</h4>
+          <h4 class="data">Data dictionary - Air connections</h4>
           <div class="table-div">
             <table
               id="tableDic"
+              cellpadding="2"
+              cellspacing="2"
+              border="1"
+              class="table-data dic"
+            ></table>
+          </div>
+          <h4 class="data">Data explorer - Roads and Fluvial</h4>
+          <div class="table-div">
+            <table
+              id="tableExp2"
+              cellpadding="2"
+              cellspacing="2"
+              border="1"
+              class="table-data data"
+            ></table>
+          </div>
+          <h4 class="data">Data dictionary - Road and fluvial connections</h4>
+          <div class="table-div">
+            <table
+              id="tableDic2"
               cellpadding="2"
               cellspacing="2"
               border="1"
@@ -616,12 +699,14 @@
     </section>
 
     <footer class="page-footer font-small footer" id="footer">
-      <div class="row justify-content-center align-items-center copyrights">
+      <div
+        class="row justify-content-center align-items-center mb-4 copyrights"
+      >
         <div class="icons col-1">
           <a href="mailto:modeling.taskforce@gmail.com">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
+              fill="white"
               class="bi bi-envelope-fill icons-color"
               viewBox="0 0 16 16"
             >
@@ -634,7 +719,7 @@
           <a href="https://github.com/PAMepi" target="_blank"
             ><svg
               xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
+              fill="white"
               class="bi bi-github icons-color"
               viewBox="0 0 16 16"
             >
@@ -650,23 +735,24 @@
       </div>
     </footer>
 
+    <script type="text/javascript" src="../js/data.js"></script>
     <script>
       let cell;
-      let nlines = sampleIBP.length;
-      let ncols = Object.keys(sampleIBP['0']).length;
+      let nlines = sampleAirIBGE.length;
+      let ncols = Object.keys(sampleAirIBGE['0']).length;
       let tableExp = document.getElementById('tableExp');
       let row;
 
       function cellValue(lin, col) {
-        if (Object.keys(sampleIBP[lin.toString()])[col]) {
-          return `${Object.values(sampleIBP[lin.toString()])[col]}`;
+        if (Object.keys(sampleAirIBGE[lin.toString()])[col]) {
+          return `${Object.values(sampleAirIBGE[lin.toString()])[col]}`;
         }
         return '-';
       }
 
       function colValue(col) {
-        if (Object.keys(sampleIBP['0'])[col]) {
-          return `<th>${Object.keys(sampleIBP['0'])[col]}</th>`;
+        if (Object.keys(sampleAirIBGE['0'])[col]) {
+          return `<th>${Object.keys(sampleAirIBGE['0'])[col]}</th>`;
         }
         return '&nbsp;';
       }
@@ -686,13 +772,13 @@
       }
 
       lines = [0, 1, 2];
-      ncols = dicIBP.length;
+      ncols = dicAirIBGE.length;
 
       tableDic = document.getElementById('tableDic');
 
       function dicValue(lin, col) {
-        if (Object.keys(dicIBP[col.toString()])[lin]) {
-          return `<td >${Object.values(dicIBP[col.toString()])[lin]} </td>`;
+        if (Object.keys(dicAirIBGE[col.toString()])[lin]) {
+          return `<td >${Object.values(dicAirIBGE[col.toString()])[lin]} </td>`;
         }
         return '-';
       }
@@ -702,14 +788,80 @@
         row = tableDic.insertRow(i);
         cell = row.insertCell(row);
         cell.outerHTML = `<th class="headcol">${
-          Object.keys(dicIBP['0'])[lin]
+          Object.keys(dicAirIBGE['0'])[lin]
         }</th>`;
         ncol = 1;
         for (let col = 0; col < ncols; col++) {
-          col_name = Object.values(dicIBP[col.toString()])[5];
+          col_name = Object.values(dicAirIBGE[col.toString()])[5];
+          //only add column if field is in our data
 
           cell = row.insertCell(ncol);
           cell.outerHTML = dicValue(lin, col);
+          ncol++;
+        }
+      }
+      // rodoviária e fluviais
+
+      nlines = sampleRodoFluIBGE.length;
+      ncols = Object.keys(sampleRodoFluIBGE['0']).length;
+      let tableExp2 = document.getElementById('tableExp2');
+
+      function cellValue2(lin, col) {
+        if (Object.keys(sampleRodoFluIBGE[lin.toString()])[col]) {
+          return `${Object.values(sampleRodoFluIBGE[lin.toString()])[col]}`;
+        }
+        return '-';
+      }
+
+      function colValue2(col) {
+        if (Object.keys(sampleRodoFluIBGE['0'])[col]) {
+          return `<th>${Object.keys(sampleRodoFluIBGE['0'])[col]}</th>`;
+        }
+        return '&nbsp;';
+      }
+      // fill
+      row = tableExp2.insertRow(0);
+      for (var col = 0; col < ncols; col++) {
+        cell = row.insertCell(col);
+        cell.outerHTML = colValue2(col);
+      }
+      // fill table with data
+      for (var lin = 0; lin < nlines; lin++) {
+        row = tableExp2.insertRow(lin + 1);
+        for (var col = 0; col < ncols; col++) {
+          cell = row.insertCell(col);
+          cell.innerHTML = cellValue2(lin, col);
+        }
+      }
+
+      lines = [0, 1, 2];
+      ncols = dicRodoFluIBGE.length;
+
+      tableDic = document.getElementById('tableDic2');
+
+      function dicValue2(lin, col) {
+        if (Object.keys(dicRodoFluIBGE[col.toString()])[lin]) {
+          return `<td >${
+            Object.values(dicRodoFluIBGE[col.toString()])[lin]
+          } </td>`;
+        }
+        return '-';
+      }
+      col_name = '';
+      // fill table with data
+      for (let [i, lin] of lines.entries()) {
+        row = tableDic.insertRow(i);
+        cell = row.insertCell(row);
+        cell.outerHTML = `<th class="headcol">${
+          Object.keys(dicRodoFluIBGE['0'])[lin]
+        }</th>`;
+        ncol = 1;
+        for (let col = 0; col < ncols; col++) {
+          col_name = Object.values(dicRodoFluIBGE[col.toString()])[5];
+          //only add column if field is in our data
+
+          cell = row.insertCell(ncol);
+          cell.outerHTML = dicValue2(lin, col);
           ncol++;
         }
       }
@@ -717,6 +869,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="../js/scripts.js"></script>
   </body>
 </html>

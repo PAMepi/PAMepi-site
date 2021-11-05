@@ -201,7 +201,7 @@
                   "
                 >
                   <a
-                    class="btn dropdown-toggle nav-link submenu active"
+                    class="btn dropdown-toggle nav-link submenu"
                     href="#"
                     data-toggle="dropdown"
                     data-flip="false"
@@ -211,7 +211,7 @@
 
                   <ul class="dropdown-menu sub-drop">
                     <li class="dropdown-item drop-item">
-                      <a href="ibp.html" class="nav-link submenu active">IBP</a>
+                      <a href="ibp.html" class="nav-link submenu">IBP</a>
                     </li>
                   </ul>
                 </div>
@@ -225,7 +225,7 @@
                   "
                 >
                   <a
-                    class="btn dropdown-toggle nav-link submenu"
+                    class="btn dropdown-toggle nav-link submenu active"
                     href="#"
                     data-toggle="dropdown"
                     data-flip="false"
@@ -237,7 +237,7 @@
 
                   <ul class="dropdown-menu sub-drop">
                     <li class="dropdown-item drop-item">
-                      <a href="estringe.html" class="nav-link submenu"
+                      <a href="estringe.html" class="nav-link submenu active"
                         >Índice de estringência</a
                       >
                     </li>
@@ -462,12 +462,14 @@
                 aria-labelledby="navbarDropdown1"
               >
                 <div class="dropdown-item drop-item">
-                  <a href="ibp.html" class="nav-link active submenu"
+                  <a href="estringe.html" class="nav-link active submenu"
                     >Português</a
                   >
                 </div>
                 <div class="dropdown-item drop-item" disabled>
-                  <a href="en/ibp_en.html" class="nav-link submenu">English</a>
+                  <a href="en/estringe_en.html" class="nav-link submenu"
+                    >English</a
+                  >
                 </div>
               </div>
             </li>
@@ -477,97 +479,89 @@
     </nav>
 
     <section class="top">
-      <h1>Índice de privação brasileiro (IBP)</h1>
+      <h1>Índice de estringência</h1>
       <div class="intro" style="padding: 2rem 0rem 5rem">
         <h2 class="mb-5">Descrição</h2>
-        <p class="card-text">
-          Ele fornece medidas de privação para cada município brasileiro e setor
-          censitário e é usado para avaliar as desigualdades em saúde em todo o
-          país. O Censo Demográfico Brasileiro de 2010 é a base de cálculo da
-          medida de privação, disponível no
-          <a href="https://cidacs.bahia.fiocruz.br/ibp/" target="_blank"
-            >CIDACS</a
-          >. O índice IBP combina três fatores:
-        </p>
-        <ol>
-          <li>
-            percentual de famílias com renda per capita inferior a meio salário
-            mínimo;
-          </li>
-          <li>percentual de analfabetos maiores de 7 anos;</li>
-          <li>
-            percentual de pessoas sem acesso adequado a água potável, esgoto,
-            coleta de lixo, banheiro ou chuveiro;
-          </li>
-        </ol>
         <p>
-          Esses dados não precisam ser atualizados e a documentação completa
-          sobre a construção do índice é apresentada em
-          <a href="http://eprints.gla.ac.uk/215898/1/215898.pdf"
-            >Developing a small-area deprivation measure for Brazil: Technical
-            report</a
-          >. A fonte de dados original e a visualização podem ser encontradas em
-          <a
-            href="https://cidacs.bahia.fiocruz.br/ibp/base-de-dados-do-ibp-municipal-esta-disponivel-para-download/"
+          Os dados do índice de estringência é uma métrica que resume o nível de
+          medidas governamentais promulgadas pelos estados locais a partir de
+          março de 2020 (<a
+            href="https://www.sciencedirect.com/science/article/pii/S1755436521000232?via%3Dihub"
             target="_blank"
-            >Cidacs</a
-          >.
+          >
+            Jorge et al., 2021</a
+          >
+          ). O conjunto de dados é dividido em dois tipos. O primeiro contém as
+          informações textuais das medidas aplicadas pelos chefes dos governos
+          estaduais ou municipais. Após a leitura de cada texto, podemos
+          classificar o tipo de medidas que foram aplicadas no estado ou
+          município, identificando também o período de início e término da
+          medida. Com o resultado, podemos calcular uma métrica global de
+          estringência, uma combinação de subíndices de diferentes tipos de
+          fiscalização, como restrições a eventos, fechamento de escolas, etc,
+          conforme apresentado em (<a
+            href="https://www.sciencedirect.com/science/article/pii/S1755436521000232?via%3Dihub"
+            target="_blank"
+          >
+            Jorge et al., 2021</a
+          >
+          ).
         </p>
 
         <h2 class="mb-5 mt-5 pt-5 pb-2">Informação de acesso a dados</h2>
+
         <p>
-          Os dados e documentação estão disponíveis na
-          <a
-            href="http://dx.doi.org/10.5525/gla.researchdata.980"
-            target="_blank"
-            >Universidade de Glasgow</a
-          >. Os dados e este relatório são distribuídos sob a licença Creative
-          Commons Share-Alike (CC BY-SA 4.0) e podem ser usados livremente por
-          pesquisadores, legisladores ou público.
+          Para ter acesso aos arquivos de texto das medidas aplicadas em cada
+          estado ou município do Brasil, nossa equipe mantém um acordo de
+          colaboração com a
+          <a href="https://www.jusbrasil.com.br" target="_blank"> JusBrasil</a>,
+          startup que disponibiliza em plataforma online os documentos oficiais
+          do foro, como petições, decreto, novas leis, que são criados nos/pelos
+          tribunais e qualquer setor governamental. A coleção de textos não está
+          disponível abertamente, e o acesso direto deve ter acordo com a
+          startup. No entanto, a métrica de estringência que resume o nível de
+          medida aplicada para a pandemia COVID-19 é criada por nossa equipe e
+          fornecida em nosso
+          <a href="https://github.com/PAMepi/scripts-datalake" target="_blank"
+            >Github</a
+          >
+          .
         </p>
+
         <h2 class="mb-5 mt-5 pt-5 pb-2">Métodos de coleta de dados</h2>
         <p>
-          Um código Python está disponível em nosso diretório
-          <a href="https://github.com/PAMepi/scripts-datalake" target="_blank"
-            >Github</a
-          >
-          para baixar os dados do
-          <a
-            href="https://cidacs.bahia.fiocruz.br/ibp/base-de-dados-do-ibp-municipal-esta-disponivel-para-download/"
+          No servidor da
+          <a href="https://www.jusbrasil.com.br" target="_blank"> JusBrasil</a>,
+          temos acesso a todos os documentos textuais disponibilizados pela
+          plataforma
+          <a href="https://www.jusbrasil.com.br" target="_blank"> JusBrasil</a>.
+          Para selecionar os textos que podem conter informações sobre as
+          medidas empregadas para conter a pandemia, buscamos em cada texto
+          disponível as palavras-chave “covid-19” e “decreto”. Os dados
+          coletados resultantes são usados posteriormente para o propósito de
+          nosso trabalho. Um método diferente de coleta de dados no estágio
+          inicial da pandemia no Brasil foi usado antes da colaboração com a
+          <a href="https://www.jusbrasil.com.br" target="_blank"> JusBrasil</a>.
+          O método está descrito em (<a
+            href="https://www.sciencedirect.com/science/article/pii/S1755436521000232?via%3Dihub"
             target="_blank"
-            >Cidacs</a
-          >. O banco de dados não precisa de atualização. Informações adicionais
-          sobre métodos de coleta de dados podem ser encontradas em
-          <a href="http://eprints.gla.ac.uk/215898/1/215898.pdf"
-            >Developing a small-area deprivation measure for Brazil: Technical
-            report</a
           >
-          e
-          <a href="https://github.com/PAMepi/scripts-datalake" target="_blank"
-            >Github</a
-          >.
+            Jorge et al., 2021</a
+          >
+          ) e os dados e sua visualização são mostrados
+          <a
+            href="https://modelingtaskforce.shinyapps.io/transmission_rate_app/"
+            target="_blank"
+          >
+            nesse aplicativo
+          </a>
+          com dados até 22 de Maio de 2020.
         </p>
-        <h2 class="mb-5 mt-5 pt-5 pb-2">
-          Informações específicas dos dados IBP
-        </h2>
+
+        <h2 class="mb-5 mt-5 pt-5 pb-2">Limitações dos dados</h2>
         <p>
-          O conjunto de dados IBP tem um total de 15 colunas e mostrou um total
-          de 5566 registros (linhas) e um tamanho de 734Kb. Um código com mais
-          detalhes sobre as variáveis, processamento de dados e métodos de
-          análise é apresentado em nosso diretório
-          <a href="https://github.com/PAMepi/scripts-datalake" target="_blank"
-            >Github</a
-          >.
-        </p>
-        <h2 class="mb-5 mt-5 pt-5 pb-2">Limitações do conjunto de dados IBP</h2>
-        <p>
-          O conjunto de dados IBP inclui apenas 3 medidas de privação, excluindo
-          outras, como por exemplo: emprego, crime, saúde, educação e acesso a
-          serviços públicos. Também está relacionado exclusivamente ao ano de
-          2010, tornando impraticável a comparação ao longo do tempo. As
-          diferentes populações e etnias (por exemplo, povos indígenas,
-          quilombolas, ribeirinhos) também não são consideradas e existem alguns
-          vieses inerentes ao meio rural.
+          Os dados podem faltar todas as portarias para a esfera municipal e
+          apresentar atraso na sua atualização.
         </p>
       </div>
     </section>
@@ -651,22 +645,23 @@
     </footer>
 
     <script>
+      console.log(sampleIndex);
       let cell;
-      let nlines = sampleIBP.length;
-      let ncols = Object.keys(sampleIBP['0']).length;
+      let nlines = sampleIndex.length;
+      let ncols = Object.keys(sampleIndex['0']).length;
       let tableExp = document.getElementById('tableExp');
       let row;
 
       function cellValue(lin, col) {
-        if (Object.keys(sampleIBP[lin.toString()])[col]) {
-          return `${Object.values(sampleIBP[lin.toString()])[col]}`;
+        if (Object.keys(sampleIndex[lin.toString()])[col]) {
+          return `${Object.values(sampleIndex[lin.toString()])[col]}`;
         }
         return '-';
       }
 
       function colValue(col) {
-        if (Object.keys(sampleIBP['0'])[col]) {
-          return `<th>${Object.keys(sampleIBP['0'])[col]}</th>`;
+        if (Object.keys(sampleIndex['0'])[col]) {
+          return `<th>${Object.keys(sampleIndex['0'])[col]}</th>`;
         }
         return '&nbsp;';
       }
@@ -686,13 +681,15 @@
       }
 
       lines = [0, 1, 2];
-      ncols = dicIBP.length;
+      ncols = dicIndex.length;
 
       tableDic = document.getElementById('tableDic');
 
       function dicValue(lin, col) {
-        if (Object.keys(dicIBP[col.toString()])[lin]) {
-          return `<td >${Object.values(dicIBP[col.toString()])[lin]} </td>`;
+        if (Object.keys(dicIndex[col.toString()])[lin]) {
+          return `<td style="white-space: pre-line;">${
+            Object.values(dicIndex[col.toString()])[lin]
+          } </td>`;
         }
         return '-';
       }
@@ -702,11 +699,12 @@
         row = tableDic.insertRow(i);
         cell = row.insertCell(row);
         cell.outerHTML = `<th class="headcol">${
-          Object.keys(dicIBP['0'])[lin]
+          Object.keys(dicIndex['0'])[lin]
         }</th>`;
         ncol = 1;
         for (let col = 0; col < ncols; col++) {
-          col_name = Object.values(dicIBP[col.toString()])[5];
+          col_name = Object.values(dicIndex[col.toString()])[5];
+          //only add column if field is in our data
 
           cell = row.insertCell(ncol);
           cell.outerHTML = dicValue(lin, col);
