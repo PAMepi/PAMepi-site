@@ -35,6 +35,31 @@ html {
   width: 150px;
   overflow: scroll;
 }
+
+/* Left */
+::-webkit-scrollbar-button:single-button:horizontal:decrement {
+  background-color: #5f2c21;
+  display: block;
+  background-size: 10px;
+  background-repeat: no-repeat;
+  height: 15px;
+  width: 16px;
+  background-position: 5px 4px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='white'><polygon points='0,50 50,100 50,0'/></svg>");
+}
+
+/* Right */
+::-webkit-scrollbar-button:single-button:horizontal:increment {
+  background-color: #5f2c21;
+  display: block;
+  background-size: 10px;
+  background-repeat: no-repeat;
+  height: 15px;
+  width: 16px;
+  background-position: 5px 4px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='white'><polygon points='0,0 0,100 50,50'/></svg>");
+}
+
 #txt-logo {
   transition: 0.4s;
 }
@@ -859,6 +884,26 @@ h2 {
   margin: 0;
 }
 
+.dados-icon {
+  margin: 0;
+  display: inline;
+}
+
+.dados-img {
+  border-radius: 100%;
+  border: 1px solid #ccc;
+  width: 80px;
+  height: 80px;
+  float: left;
+  margin-right: 2rem;
+  padding: 0.2rem;
+}
+
+.dados-text {
+  line-height: 5rem;
+  margin: 0;
+  padding: 0;
+}
 .dado-subitem {
   margin: 2rem 0;
   border: 1px solid #bbb;
