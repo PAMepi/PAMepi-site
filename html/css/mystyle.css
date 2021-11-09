@@ -130,6 +130,8 @@ html {
   font-weight: 900;
   color: #eee;
   text-transform: uppercase;
+  padding: 0.8rem 0 0.8rem 1rem;
+  background-color: #853e2e;
 }
 
 .dropdown-menu.columns-2 {
@@ -162,9 +164,19 @@ html {
 
   white-space: normal;
 }
+.mail .bi-envelope-fill {
+  fill: white;
+}
+h6 {
+  margin: 0;
+}
 
-li.drop-item > a.itemcol {
-  margin-left: 1.5rem;
+.mail .bi-envelope-fill:hover {
+  fill: #974634;
+}
+
+.drop-item .itemcol {
+  margin-left: 1rem;
 }
 .btn:focus {
   box-shadow: none;

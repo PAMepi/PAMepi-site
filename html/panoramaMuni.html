@@ -19,10 +19,11 @@
     />
 
     <link rel="stylesheet" type="text/css" href="css/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="css/spin.css" />
     <link rel="icon" href="img/pamepi.ico" />
   </head>
 
-  <body>
+  <body onload="myFunction()" style="margin: 0">
     <nav
       id="navbar"
       class="navbar navbar-expand-lg fixed-top justify-content-center"
@@ -103,7 +104,7 @@
 
             <li class="navbar-item dropdown">
               <div
-                class="dropdown-item dropdown-toggle active"
+                class="dropdown-item dropdown-toggle"
                 id="navbarDropdown5"
                 role="button"
                 data-toggle="dropdown"
@@ -118,9 +119,7 @@
                 aria-labelledby="navbarDropdown5"
               >
                 <div class="dropdown-item drop-item">
-                  <a href="data.html" class="nav-link active submenu"
-                    >Visão geral</a
-                  >
+                  <a href="data.html" class="nav-link submenu">Visão geral</a>
                 </div>
                 <div
                   class="
@@ -250,7 +249,7 @@
 
             <li class="navbar-item dropdown">
               <div
-                class="dropdown-item dropdown-toggle"
+                class="dropdown-item dropdown-toggle active"
                 id="navbarDropdown2"
                 role="button"
                 data-toggle="dropdown"
@@ -277,7 +276,7 @@
                   "
                 >
                   <a
-                    class="btn dropdown-toggle nav-link submenu itemcol"
+                    class="btn dropdown-toggle nav-link submenu itemcol active"
                     href="#"
                     data-toggle="dropdown"
                     data-flip="false"
@@ -292,7 +291,9 @@
                       >
                     </li>
                     <li class="dropdown-item drop-item">
-                      <a href="panoramaMuni.html" class="nav-link submenu"
+                      <a
+                        href="panoramaMuni.html"
+                        class="nav-link submenu active"
                         >Municipios</a
                       >
                     </li>
@@ -471,12 +472,14 @@
                 aria-labelledby="navbarDropdown1"
               >
                 <div class="dropdown-item drop-item">
-                  <a href="data.html" class="nav-link active submenu"
+                  <a href="panoramaMuni.html" class="nav-link active submenu"
                     >Português</a
                   >
                 </div>
                 <div class="dropdown-item drop-item">
-                  <a href="en/data_en.html" class="nav-link submenu">English</a>
+                  <a href="en/panoramaMuni_en.html" class="nav-link submenu"
+                    >English</a
+                  >
                 </div>
               </div>
             </li>
@@ -485,253 +488,24 @@
       </div>
     </nav>
 
-    <section class="top" id="overview">
-      <h1 style="padding: 2rem 0 2rem">Base de dados</h1>
-      <h2>Visão geral do conjunto de dados</h2>
-
-      <div class="intro" style="padding: 2rem 0rem 5rem">
-        <p>
-          Reunimos dados sobre uma série de status infecciosos individuais
-          relacionados à pandemia de COVID-19, comportamento socioeconômico e
-          humano. Integraremos os dados de determinantes socioeconômicos e de
-          saúde disponíveis para cada uma das 5.570 cidades brasileiras.
-        </p>
-        <p>
-          Além disso, acessaremos em conjunto informações sobre as intervenções
-          implementadas e os padrões de mobilidade social. Os dados harmonizados
-          em nível municipal serão um recurso fundamental para a aplicação /
-          desenvolvimento de análises estatísticas, modelagem matemática não
-          linear, modelagem computacional, visualização de dados e divulgação
-          científica sobre a pandemia COVID-19 no Brasil.
-        </p>
-        <p>
-          Podemos coletar os dados de plataformas de acesso aberto como Google
-          Mobility, Brasil IO, OpenDatasus, JusBrasil e IPB Cidacs Bahia. Além
-          disso, um script em linguagem python foi desenvolvido para automatizar
-          o processo de organização, download e atualização de arquivos,
-          facilitando o ajuste do período de atualização do datalake conforme o
-          sistema da plataforma original recebe suas atualizações.
-        </p>
-        <p>
-          Atualmente, configuramos nosso datalake para atualizar semanalmente em
-          nosso projeto. Observe que os dados do projeto podem ser baixados por
-          meio do código python mencionado acima ou por meio do Google Drive.
-          Vale ressaltar que um aplicativo está sendo desenvolvido para dar aos
-          usuários o poder de gerenciar quais informações eles desejam obter
-          para suas pesquisas.
-        </p>
-        <p>
-          Os dados de vacinação têm 63 gigabytes, SG tem 14 gigabytes, SRAG tem
-          694 megabytes, Google Mobilidade 593 megabytes, ocupação hospitalar
-          192 megabytes, Brasil IO 285 megabytes e os setores censitários CIDACS
-          42 megabytes.
-        </p>
-        <p>
-          Dessa forma, o banco de dados soma aproximadamente 80 gigabytes para a
-          versão atualizada em 4 de agosto de 2021. Todos os arquivos estão
-          inicialmente disponíveis no formato .csv, exceto os dados dos setores
-          censitários e Brasil IO, respectivamente em .xlsx (excel 2007) e
-          extensões gzip. No entanto, adicionamos um formulário de conversão e
-          extração para distribuir todos os arquivos na extensão .csv.
-        </p>
+    <div class="top-model">
+      <h1>Panorama do Covid no Brasil - Municípios</h1>
+    </div>
+    <div id="myDiv" class="animate-bottom">
+      <div id="iframe-conf" style="margin: 0">
+        <iframe
+          id="plot"
+          src=""
+          style="
+            border: none;
+            width: 100%;
+            height: 1600px;
+            margin-top: 2rem;
+            margin-bottom: -25px;
+          "
+        ></iframe>
       </div>
-    </section>
-
-    <hr />
-    <section>
-      <div class="middle-white">
-        <h2 style="margin-bottom: 4rem">Nossos arquivos de dados</h2>
-
-        <div class="card data-card" id="sivep">
-          <div class="card-header data-header">
-            <h5 class="card-title">Síndrome Gripal (SG)</h5>
-          </div>
-          <div class="card-body data-body">
-            <p class="card-text truncate">
-              Com o surgimento da pandemia causada pelo SARS-COV-2, o Ministério
-              da Saúde implantou um sistema de vigilância para registro da
-              Síndrome da Gripe (SG, também denominado e-SUS VE) de casos leves
-              a moderados com suspeita de COVID-19.
-            </p>
-          </div>
-          <div class="card-footer data-footer">
-            <a class="data-button" href="sivep.html">Acessar</a>
-          </div>
-        </div>
-        <div class="card data-card" id="srag">
-          <div class="card-header data-header">
-            <h5 class="card-title">Síndrome Respiratória Aguda Grave (SRAG)</h5>
-          </div>
-
-          <div class="card-body data-body">
-            <p class="card-text truncate">
-              O conjunto de dados da Síndrome Respiratória Aguda Grave (SRAG) é
-              um conjunto de dados de saúde obtido junto ao Ministério da Saúde
-              do Brasil por meio da Secretaria de Vigilância em Saúde
-              (Ministério da Saúde, 2020). A vigilância SRAG começou com a
-              pandemia de Influenza A (H1N1) em 2009. Desde então, SRAG também é
-              usado para relatar Influenza e outros vírus respiratórios, que
-              anteriormente eram relatados apenas com a vigilância sentinela da
-              síndrome da gripe. Além disso, em 2020, as infecções humanas
-              causadas por SARS-COV-2 foram incorporadas à vigilância SRAG.
-            </p>
-          </div>
-          <div class="card-footer data-footer">
-            <a class="data-button" href="srag.html">Acessar</a>
-          </div>
-        </div>
-
-        <div class="card data-card" id="brio">
-          <div class="card-header data-header">
-            <h5 class="card-title">Brasil IO</h5>
-          </div>
-          <div class="card-body data-body">
-            <p class="card-text truncate">
-              O conjunto de dados Brasil io é extraído de um projeto não
-              governamental chamado Brasil io que realiza trabalho voluntário
-              para coletar informações sobre o número de casos confirmados e
-              óbitos causados por infecções por SARS-COV-2 agregados em nível
-              estadual e municipal (Brasil io, 2020). Os autores reúnem os dados
-              dos relatórios das secretarias estaduais e municipais disponíveis
-              publicamente antes do registro no banco de dados do Ministério da
-              Saúde do Brasil.
-            </p>
-          </div>
-
-          <div class="card-footer data-footer">
-            <a class="data-button" href="brio.html">Acessar</a>
-          </div>
-        </div>
-
-        <div class="card data-card" id="vac">
-          <div class="card-header data-header">
-            <h5 class="card-title">Vacinação</h5>
-          </div>
-          <div class="card-body data-body">
-            <p class="card-text truncate">
-              Os dados de vacinação da Covid-19 estão relacionados à Campanha
-              Nacional de Vacinação contra a Covid-19. O Ministério da Saúde
-              disponibiliza por meio do Sistema de Informações do Programa
-              Nacional de Imunizações (SI-PNI) e está disponível no OpenDatasus
-              para download.
-            </p>
-          </div>
-
-          <div class="card-footer data-footer">
-            <a class="data-button" href="vacina.html">Acessar</a>
-          </div>
-        </div>
-
-        <div class="card data-card" id="hosp">
-          <div class="card-header data-header">
-            <h5 class="card-title">Ocupação hospitalar</h5>
-          </div>
-          <div class="card-body data-body">
-            <p class="card-text truncate">
-              O Ministério da Saúde, por meio da Secretaria de Atenção
-              Especializada em Saúde (SAES), implementou, devido à pandemia, o
-              registro das internações por meio do Sistema ESUS Notifica-Módulo
-              Internações SUS. Esta página tem como finalidade disponibilizar o
-              banco de dados da ocupação dos leitos, a partir da incorporação do
-              sistema e-SUS Notifica- Módulo internações SUS, em vigor a partir
-              de abril de 2020.
-            </p>
-          </div>
-
-          <div class="card-footer data-footer">
-            <a class="data-button" href="hospital.html">Acessar</a>
-          </div>
-        </div>
-
-        <div class="card data-card" id="ibp">
-          <div class="card-header data-header">
-            <h5 class="card-title">Índice de privação brasileiro (IBP)</h5>
-          </div>
-          <div class="card-body data-body">
-            <p class="card-text truncate">
-              O conjunto de dados Índice de privação Brasileiro fornece medidas
-              de privação para cada município brasileiro e setor censitário e é
-              usado para avaliar as desigualdades em saúde em todo o país. O
-              Censo Demográfico Brasileiro de 2010 é a base de cálculo da medida
-              de privação, disponível no
-              <a
-                href="https://cidacs.bahia.fiocruz.br/ibp/base-de-dados-do-ibp-municipal-esta-disponivel-para-download"
-                target="_blank"
-                >CIDACS</a
-              >. Esses dados não precisam ser atualizados.
-            </p>
-          </div>
-          <div class="card-footer data-footer">
-            <a class="data-button" href="ibp.html">Acessar</a>
-          </div>
-        </div>
-
-        <div class="card data-card" id="mobgoogle">
-          <div class="card-header data-header">
-            <h5 class="card-title">Mobilidade Google</h5>
-          </div>
-          <div class="card-body data-body">
-            <p class="card-text truncate">
-              O conjunto de dados de mobilidade Google representa a mobilidade
-              humana fornecida pelas tendências do
-              <a href="https://www.google.com/covid19/mobility/" target="_blank"
-                >Google</a
-              >, que relata como a mobilidade humana é afetada pela propagação
-              do COVID-19 desde 15 de fevereiro de 2020.
-            </p>
-          </div>
-
-          <div class="card-footer data-footer">
-            <a class="data-button" href="mobgoo.html">Acessar</a>
-          </div>
-        </div>
-
-        <div class="card data-card" id="mobcity">
-          <div class="card-header data-header">
-            <h5 class="card-title">Mobilidade intermunicipal Brasileira</h5>
-          </div>
-          <div class="card-body data-body">
-            <p class="card-text truncate">
-              O conjunto de dados Mobilidade intermunicipal Brasileira são os
-              dados históricos de fluxo médio diário em todo o país usando redes
-              rodoviárias, aéreas e fluviais. Os dados estão disponíveis no
-              Instituto Brasileiro de Geografia e Estatística e medidos pelo
-              Censo Demográfico Brasileiro de 2010.
-            </p>
-          </div>
-
-          <div class="card-footer data-footer">
-            <a class="data-button" href="ibge.html">Acessar</a>
-          </div>
-        </div>
-
-        <div class="card data-card" id="jusbr">
-          <div class="card-header data-header">
-            <h5 class="card-title">Índice de estringência</h5>
-          </div>
-          <div class="card-body data-body">
-            <p class="card-text truncate">
-              O conjunto de dados Índice de estringência é uma métrica que
-              resume o nível de medidas governamentais promulgadas pelos estados
-              locais a partir de Março de 2020. O conjunto de dados é dividido
-              em dois arquivos. O primeiro contém informações textuais das
-              medidas aplicadas em ordem cronológica e para cada estado. O
-              segundo arquivo inclui a métrica global de rigor calculada, uma
-              combinação de subíndices de diferentes tipos de fiscalização, como
-              restrições a eventos, fechamento de escolas, etc. Os dados podem
-              ser obtidos pelo
-              <a href="https://www.jusbrasil.com.br/" target="_blank"
-                >JusBrasil</a
-              >.
-            </p>
-          </div>
-
-          <div class="card-footer data-footer">
-            <a class="data-button" href="estringe.html">Acessar</a>
-          </div>
-        </div>
-      </div>
-    </section>
+    </div>
 
     <footer class="page-footer font-small footer" id="footer">
       <div class="row justify-content-center align-items-center copyrights">
@@ -767,9 +541,23 @@
         PAMEpi <img src="img/no-virus.svg" class="filter-virus" />2021
       </div>
     </footer>
+
+    <div id="loader"></div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
+    <script>
+      var myVar;
+
+      function myFunction() {
+        myVar = setTimeout(showPage, 3000);
+      }
+
+      function showPage() {
+        document.getElementById('loader').style.display = 'none';
+        document.getElementById('myDiv').style.display = 'block';
+      }
+    </script>
   </body>
 </html>

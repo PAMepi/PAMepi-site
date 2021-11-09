@@ -19,10 +19,11 @@
     />
 
     <link rel="stylesheet" type="text/css" href="../css/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../css/spin.css" />
     <link rel="icon" href="../img/pamepi.ico" />
   </head>
 
-  <body>
+  <body onload="myFunction()" style="margin: 0">
     <nav
       id="navbar"
       class="navbar navbar-expand-lg fixed-top justify-content-center"
@@ -111,7 +112,7 @@
 
             <li class="navbar-item dropdown">
               <div
-                class="dropdown-item dropdown-toggle active"
+                class="dropdown-item dropdown-toggle"
                 id="navbarDropdown5"
                 role="button"
                 data-toggle="dropdown"
@@ -181,7 +182,7 @@
                   "
                 >
                   <a
-                    class="btn dropdown-toggle nav-link submenu active"
+                    class="btn dropdown-toggle nav-link submenu"
                     href="#"
                     data-toggle="dropdown"
                     data-flip="false"
@@ -197,7 +198,7 @@
                       >
                     </li>
                     <li class="dropdown-item drop-item">
-                      <a href="ibge_en.html" class="nav-link submenu active"
+                      <a href="ibge_en.html" class="nav-link submenu"
                         >Intercity</a
                       >
                     </li>
@@ -260,7 +261,7 @@
 
             <li class="navbar-item dropdown">
               <div
-                class="dropdown-item dropdown-toggle"
+                class="dropdown-item dropdown-toggle active"
                 id="navbarDropdown2"
                 role="button"
                 data-toggle="dropdown"
@@ -287,7 +288,7 @@
                   "
                 >
                   <a
-                    class="btn dropdown-toggle nav-link submenu itemcol"
+                    class="btn dropdown-toggle nav-link submenu itemcol active"
                     href="#"
                     data-toggle="dropdown"
                     data-flip="false"
@@ -301,8 +302,10 @@
                         >States</a
                       >
                     </li>
-                    <li class="dropdown-item drop-item">
-                      <a href="panoramaMuni_en.html" class="nav-link submenu"
+                    <li class="dropdown-item drop-item active">
+                      <a
+                        href="panoramaMuni_en.html"
+                        class="nav-link submenu active"
                         >Cities</a
                       >
                     </li>
@@ -483,12 +486,12 @@
                 aria-labelledby="navbarDropdown1"
               >
                 <div class="dropdown-item drop-item">
-                  <a href="../mobgoo.html" class="nav-link submenu"
+                  <a href="../panoramaMuni.html" class="nav-link submenu"
                     >Português</a
                   >
                 </div>
                 <div class="dropdown-item drop-item">
-                  <a href="mobgoo_en.html" class="nav-link active submenu"
+                  <a href="panoramaMuni_en.html" class="nav-link active submenu"
                     >English</a
                   >
                 </div>
@@ -499,235 +502,32 @@
       </div>
     </nav>
 
-    <section class="top">
-      <div class="row dados-icon">
-        <img
-          src="../img/transporte-publico.png"
-          class="dados-img"
-          style="width: 80px"
-        />
-
-        <h1 class="dados-text">Intercity Brazilian mobility</h1>
+    <div class="top-model">
+      <h1>Covid situation in Brazil - Cities (Only Portuguese)</h1>
+    </div>
+    <div id="myDiv" class="animate-bottom">
+      <div id="iframe-conf" style="margin: 0">
+        <iframe
+          id="plot"
+          src=""
+          style="
+            border: none;
+            width: 100%;
+            height: 1600px;
+            margin-top: 2rem;
+            margin-bottom: -25px;
+          "
+        ></iframe>
       </div>
-      <div class="intro" style="padding: 2rem 0rem 5rem">
-        <h2 class="mb-5">Description</h2>
-        <p class="card-text">
-          It is the historical average flux data throughout the country using
-          road/air/fluvial networks. The data is available in the Brazilian
-          Institute of Geography and Statistics (IBGE) separated into 2
-          different data sources: the first includes only air mobility from the
-          <a
-            target="_blank"
-            href="https://geoftp.ibge.gov.br/organizacao_do_territorio/redes_e_fluxos_geograficos/ligacoes_aereas/ligacoes_aereas_2010.pdf"
-            >2010 air connections report</a
-          >
-          and the second includes roads and fluvial mobility from the
-          <a
-            target="_blank"
-            href="https://biblioteca.ibge.gov.br/visualizacao/livros/liv100602.pdf"
-            >2016 roads and fluvial connections report</a
-          >. Originally the IBGE reports have the goal to analyze the relations
-          and connexions between the Brazilian cities highlighting the principal
-          nodes for material (people, goods, cargo) and immaterial (information,
-          orders, money) exchanges.
-        </p>
-
-        <h3 class="mt-5 pt-5">Air connections</h3>
-        <p>
-          From the 5 565 municipalities in Brazil, only 135 had an airport in
-          2010. The data shows the <strong>number of people </strong> traveling
-          between these 135 airports and it is aggregated by binding city pairs,
-          no matter the direction people are traveling. It also includes cargo
-          information but this is not being considered here. The original data
-          can be downloaded directly on the
-          <a
-            href="http://geoftp.ibge.gov.br/organizacao_do_territorio/redes_e_fluxos_geograficos/ligacoes_aereas/bases_de_dados/"
-            target="_blank"
-            >website in IBGE</a
-          >. Other air connection reports can be found in the
-          <a
-            href="https://www.gov.br/anac/pt-br/assuntos/dados-e-estatisticas/mercado-de-transporte-aereo/anuario-do-transporte-aereo/dados-do-anuario-do-transporte-aereo"
-            target="_blank"
-            >National Civil Aviation Agency (ANAC)</a
-          >.
-        </p>
-        <h3 class="mt-5 pt-5">Road and fluvial connections</h3>
-        <p>
-          The 2016 Road/Fluvial Connections survey only includes information on
-          intercity passenger transport. It is informed of the number of
-          vehicles per pair of locations where the direction of transport can be
-          either from city A to city B or from B to A. Transport frequency
-          information will be relative to the pair of municipalities, never to
-          the municipality alone. The frequency of the data is weekly and
-          doesn’t take into account the number of people per vehicle. For road
-          transportation, the conventional bus may accommodate 50 people seated
-          and the fluvial transportation may vary from 20 to 500 people per
-          vehicle estimation based on
-          <a
-            href="https://www2.mppa.mp.br/sistemas/gcsubsites/upload/41/transportepassageiros.pdf"
-            target="_blank"
-            >Characterization of the Supply and Demand of River Passenger
-            Transport in the Amazon Region</a
-          >. For now, is going to be used only the vehicle information without
-          estimating the number of passengers. The original data can be
-          downloaded on the
-          <a
-            href="http://geoftp.ibge.gov.br/organizacao_do_territorio/redes_e_fluxos_geograficos/ligacoes_rodoviarias_e_hidroviarias/base_de_dados/"
-            target="_blank"
-            >IBGE website</a
-          >.
-        </p>
-
-        <h2 class="mb-5 mt-5 pt-5 pb-2">Data access information</h2>
-        <p>
-          The data is available on the
-          <a
-            href="http://geoftp.ibge.gov.br/organizacao_do_territorio/redes_e_fluxos_geograficos/ligacoes_rodoviarias_e_hidroviarias/base_de_dados/"
-            target="_blank"
-            >IBGE website</a
-          >
-          and documentation is available at the
-          <a
-            target="_blank"
-            href="https://geoftp.ibge.gov.br/organizacao_do_territorio/redes_e_fluxos_geograficos/ligacoes_aereas/ligacoes_aereas_2010.pdf"
-            >2010 air connections report</a
-          >
-          and the
-          <a
-            target="_blank"
-            href="https://biblioteca.ibge.gov.br/visualizacao/livros/liv100602.pdf"
-            >2016 roads and fluvial connections report</a
-          >.
-        </p>
-
-        <h2 class="mb-5 mt-5 pt-5 pb-2">Methods of data collection</h2>
-        <p>
-          A Python code is available on our
-          <a href="https://github.com/PAMepi/scripts-datalake" target="_blank"
-            >Github</a
-          >
-          directory to download the data from the
-          <a
-            href="http://geoftp.ibge.gov.br/organizacao_do_territorio/redes_e_fluxos_geograficos/ligacoes_rodoviarias_e_hidroviarias/base_de_dados/"
-            target="_blank"
-            >IBGE website</a
-          >. This data doesn’t need to be updated unless a newer report is
-          published. Additional information on data collection methods can be
-          found in the
-          <a
-            target="_blank"
-            href="https://geoftp.ibge.gov.br/organizacao_do_territorio/redes_e_fluxos_geograficos/ligacoes_aereas/ligacoes_aereas_2010.pdf"
-            >2010 air connections report</a
-          >, the
-          <a
-            target="_blank"
-            href="https://biblioteca.ibge.gov.br/visualizacao/livros/liv100602.pdf"
-            >2016 roads and fluvial connections report</a
-          >, and
-          <a href="https://github.com/PAMepi/scripts-datalake" target="_blank"
-            >Github</a
-          >.
-        </p>
-        <h2 class="mb-5 mt-5 pt-5 pb-2">Data-specific information</h2>
-        <p>
-          The air mobility dataset has a total of 6 columns and shows a total of
-          227 registries (rows) and size of 13.9kB. The road/fluvial mobility
-          dataset has a total of 7 columns and shows a total of 65 639
-          registries (rows) and size of 2.7Mb. A code with more details about
-          the variables, data processing, and analysis methods is presented in
-          our
-          <a href="https://github.com/PAMepi/scripts-datalake" target="_blank"
-            >Github</a
-          >
-          directory.
-        </p>
-        <h2 class="mb-5 mt-5 pt-5 pb-2">Limitations of dataset</h2>
-        <p>
-          The data doesn’t show the direction of the flux, this means it is not
-          possible to know if the passengers in a flight or the number of
-          vehicles on road/fluvial transport are leaving or arriving in the
-          city. In the case of air mobility is available the total number of
-          passengers per year traveling between two cities, but on road/fluvial
-          mobility is available only the average number of vehicles per week not
-          considering the occupancy of each vehicle.
-        </p>
-      </div>
-    </section>
-    <hr />
-    <section class="middle-white">
-      <h2 class="data">Data and Resources</h2>
-      <div class="dado-subitem">
-        <div class="media download">
-          <div class="media-left">
-            <h3 class="data">
-              Data and variable dictionary (Only in Portuguese)
-            </h3>
-          </div>
-          <div class="media-right">
-            <a
-              href="https://github.com/PAMepi/scripts-datalake"
-              class="btn btn-info"
-              target="_blank"
-              >Download</a
-            >
-          </div>
-        </div>
-
-        <div class="data-in">
-          <h4 class="data">Data explorer - Air connections</h4>
-          <div class="table-div">
-            <table
-              id="tableExp"
-              cellpadding="2"
-              cellspacing="2"
-              border="1"
-              class="table-data data"
-            ></table>
-          </div>
-
-          <h4 class="data">Data dictionary - Air connections</h4>
-          <div class="table-div">
-            <table
-              id="tableDic"
-              cellpadding="2"
-              cellspacing="2"
-              border="1"
-              class="table-data dic"
-            ></table>
-          </div>
-          <h4 class="data">Data explorer - Roads and Fluvial</h4>
-          <div class="table-div">
-            <table
-              id="tableExp2"
-              cellpadding="2"
-              cellspacing="2"
-              border="1"
-              class="table-data data"
-            ></table>
-          </div>
-          <h4 class="data">Data dictionary - Road and fluvial connections</h4>
-          <div class="table-div">
-            <table
-              id="tableDic2"
-              cellpadding="2"
-              cellspacing="2"
-              border="1"
-              class="table-data dic"
-            ></table>
-          </div>
-        </div>
-      </div>
-    </section>
+    </div>
 
     <footer class="page-footer font-small footer" id="footer">
-      <div
-        class="row justify-content-center align-items-center mb-4 copyrights"
-      >
+      <div class="row justify-content-center align-items-center copyrights">
         <div class="icons col-1">
           <a href="mailto:modeling.taskforce@gmail.com">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              fill="white"
+              fill="currentColor"
               class="bi bi-envelope-fill icons-color"
               viewBox="0 0 16 16"
             >
@@ -740,7 +540,7 @@
           <a href="https://github.com/PAMepi" target="_blank"
             ><svg
               xmlns="http://www.w3.org/2000/svg"
-              fill="white"
+              fill="currentColor"
               class="bi bi-github icons-color"
               viewBox="0 0 16 16"
             >
@@ -752,144 +552,27 @@
       </div>
 
       <div class="copyrights row align-items-center justify-content-center">
-        PAMEpi <img src="img/no-virus.svg" class="filter-virus" />2021
+        PAMEpi <img src="../img/no-virus.svg" class="filter-virus" />2021
       </div>
     </footer>
 
-    <script type="text/javascript" src="../js/data.js"></script>
-    <script>
-      let cell;
-      let nlines = sampleAirIBGE.length;
-      let ncols = Object.keys(sampleAirIBGE['0']).length;
-      let tableExp = document.getElementById('tableExp');
-      let row;
+    <div id="loader"></div>
 
-      function cellValue(lin, col) {
-        if (Object.keys(sampleAirIBGE[lin.toString()])[col]) {
-          return `${Object.values(sampleAirIBGE[lin.toString()])[col]}`;
-        }
-        return '-';
-      }
-
-      function colValue(col) {
-        if (Object.keys(sampleAirIBGE['0'])[col]) {
-          return `<th>${Object.keys(sampleAirIBGE['0'])[col]}</th>`;
-        }
-        return '&nbsp;';
-      }
-      // fill
-      row = tableExp.insertRow(0);
-      for (var col = 0; col < ncols; col++) {
-        cell = row.insertCell(col);
-        cell.outerHTML = colValue(col);
-      }
-      // fill table with data
-      for (var lin = 0; lin < nlines; lin++) {
-        row = tableExp.insertRow(lin + 1);
-        for (var col = 0; col < ncols; col++) {
-          cell = row.insertCell(col);
-          cell.innerHTML = cellValue(lin, col);
-        }
-      }
-
-      lines = [0, 1, 2];
-      ncols = dicAirIBGE.length;
-
-      tableDic = document.getElementById('tableDic');
-
-      function dicValue(lin, col) {
-        if (Object.keys(dicAirIBGE[col.toString()])[lin]) {
-          return `<td >${Object.values(dicAirIBGE[col.toString()])[lin]} </td>`;
-        }
-        return '-';
-      }
-      let col_name = '';
-      // fill table with data
-      for (let [i, lin] of lines.entries()) {
-        row = tableDic.insertRow(i);
-        cell = row.insertCell(row);
-        cell.outerHTML = `<th class="headcol">${
-          Object.keys(dicAirIBGE['0'])[lin]
-        }</th>`;
-        ncol = 1;
-        for (let col = 0; col < ncols; col++) {
-          col_name = Object.values(dicAirIBGE[col.toString()])[5];
-          //only add column if field is in our data
-
-          cell = row.insertCell(ncol);
-          cell.outerHTML = dicValue(lin, col);
-          ncol++;
-        }
-      }
-      // rodoviária e fluviais
-
-      nlines = sampleRodoFluIBGE.length;
-      ncols = Object.keys(sampleRodoFluIBGE['0']).length;
-      let tableExp2 = document.getElementById('tableExp2');
-
-      function cellValue2(lin, col) {
-        if (Object.keys(sampleRodoFluIBGE[lin.toString()])[col]) {
-          return `${Object.values(sampleRodoFluIBGE[lin.toString()])[col]}`;
-        }
-        return '-';
-      }
-
-      function colValue2(col) {
-        if (Object.keys(sampleRodoFluIBGE['0'])[col]) {
-          return `<th>${Object.keys(sampleRodoFluIBGE['0'])[col]}</th>`;
-        }
-        return '&nbsp;';
-      }
-      // fill
-      row = tableExp2.insertRow(0);
-      for (var col = 0; col < ncols; col++) {
-        cell = row.insertCell(col);
-        cell.outerHTML = colValue2(col);
-      }
-      // fill table with data
-      for (var lin = 0; lin < nlines; lin++) {
-        row = tableExp2.insertRow(lin + 1);
-        for (var col = 0; col < ncols; col++) {
-          cell = row.insertCell(col);
-          cell.innerHTML = cellValue2(lin, col);
-        }
-      }
-
-      lines = [0, 1, 2];
-      ncols = dicRodoFluIBGE.length;
-
-      tableDic = document.getElementById('tableDic2');
-
-      function dicValue2(lin, col) {
-        if (Object.keys(dicRodoFluIBGE[col.toString()])[lin]) {
-          return `<td >${
-            Object.values(dicRodoFluIBGE[col.toString()])[lin]
-          } </td>`;
-        }
-        return '-';
-      }
-      col_name = '';
-      // fill table with data
-      for (let [i, lin] of lines.entries()) {
-        row = tableDic.insertRow(i);
-        cell = row.insertCell(row);
-        cell.outerHTML = `<th class="headcol">${
-          Object.keys(dicRodoFluIBGE['0'])[lin]
-        }</th>`;
-        ncol = 1;
-        for (let col = 0; col < ncols; col++) {
-          col_name = Object.values(dicRodoFluIBGE[col.toString()])[5];
-          //only add column if field is in our data
-
-          cell = row.insertCell(ncol);
-          cell.outerHTML = dicValue2(lin, col);
-          ncol++;
-        }
-      }
-    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="../js/scripts.js"></script>
+    <script>
+      var myVar;
+
+      function myFunction() {
+        myVar = setTimeout(showPage, 3000);
+      }
+
+      function showPage() {
+        document.getElementById('loader').style.display = 'none';
+        document.getElementById('myDiv').style.display = 'block';
+      }
+    </script>
   </body>
 </html>
