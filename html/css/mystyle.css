@@ -23,12 +23,12 @@ html {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #974634;
+  background: #892e2c;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #be7a0e;
+  background: #dd6731;
 }
 
 ::-webkit-scrollbar-thumb:horizontal {
@@ -38,7 +38,7 @@ html {
 
 /* Left */
 ::-webkit-scrollbar-button:single-button:horizontal:decrement {
-  background-color: #5f2c21;
+  background-color: #742725;
   display: block;
   background-size: 10px;
   background-repeat: no-repeat;
@@ -50,7 +50,7 @@ html {
 
 /* Right */
 ::-webkit-scrollbar-button:single-button:horizontal:increment {
-  background-color: #5f2c21;
+  background-color: #742725;
   display: block;
   background-size: 10px;
   background-repeat: no-repeat;
@@ -79,7 +79,7 @@ html {
 }
 
 .navbar {
-  background-color: #974634;
+  background-color: #892e2c;
   padding: 0.8rem 0;
   color: #f2f2f2;
 }
@@ -131,7 +131,7 @@ html {
   color: #eee;
   text-transform: uppercase;
   padding: 0.8rem 0 0.8rem 1rem;
-  background-color: #853e2e;
+  background-color: #742725;
 }
 
 .dropdown-menu.columns-2 {
@@ -172,7 +172,7 @@ h6 {
 }
 
 .mail .bi-envelope-fill:hover {
-  fill: #974634;
+  fill: #892e2c;
 }
 
 .drop-item .itemcol {
@@ -197,7 +197,7 @@ h6 {
   top: 2rem;
   margin: 0px;
   border-radius: 8px;
-  background-color: #974634;
+  background-color: #892e2c;
 }
 
 .dropdown-content a {
@@ -215,14 +215,14 @@ h6 {
 }
 
 .dropdown-item:hover {
-  background-color: #5f2c21;
+  background-color: #742725;
   color: #fff;
   border-radius: 8px;
 }
 
 .dropdown-item {
   text-align: left;
-  background-color: #974634;
+  background-color: #892e2c;
   font-weight: 500;
   font-size: 0.9rem;
   color: #ddd;
@@ -232,15 +232,15 @@ h6 {
 
 .dropdown-item:active,
 .dropdown-item:focus {
-  background-color: #5f2c21;
+  background-color: #742725;
   color: #fff;
   border-radius: 8px;
-  border: 2px solid #723527;
+  border: 2px solid #60201f;
 }
 
 .dropdown:active,
 .dropdown:focus {
-  border: 2px solid #723527;
+  border: 2px solid #60201f;
 }
 
 nav {
@@ -259,7 +259,7 @@ nav {
 
 .nav-link:active,
 .nav-link:focus {
-  background-color: #5f2c21;
+  background-color: #742725;
   color: #fff;
   border-radius: 8px;
 }
@@ -283,7 +283,7 @@ nav {
 
 .nav-link:hover {
   color: #fff;
-  background-color: #5f2c21;
+  background-color: #742725;
 }
 
 .dropdown-item .active {
@@ -305,8 +305,8 @@ nav {
   /* color: #ECEFA4; */
   color: #fff;
   font-weight: 900;
-  background-color: #974634;
-  border: 1px solid #723527;
+  background-color: #892e2c;
+  border: 1px solid #60201f;
 }
 
 .nav-arrow {
@@ -418,7 +418,7 @@ nav {
 
 .middle {
   margin-top: 4rem;
-  background-color: #f2f2f2;
+  background-color: #f8f8f8;
   padding: 4rem 10rem 5rem;
   border: 1px solid #ddd;
 }
@@ -438,6 +438,17 @@ hr {
   border-top: 10px dotted #ccc;
   width: 5%;
   margin: 4rem auto 0;
+}
+
+.link-back {
+  float: right;
+  padding: 0.5rem 1rem;
+  border: 1px solid #892e2c;
+  border-radius: 16px;
+}
+.link-back:hover {
+  background-color: #892e2c;
+  color: white;
 }
 
 .artigos {
@@ -466,7 +477,7 @@ hr {
   font-weight: 900;
   column-span: all;
   font-size: 1.2rem;
-  color: #be7a0e;
+  color: #dd6731;
   font-family: 'Raleway', sans-serif;
 }
 
@@ -497,7 +508,7 @@ h1 {
   font-size: 2.2rem;
   font-family: 'Raleway', sans-serif;
   font-weight: 900;
-  color: #974634;
+  color: #892e2c;
   column-span: all;
 }
 
@@ -514,12 +525,20 @@ h1 {
 .destaque {
   text-transform: uppercase;
   font-weight: bold;
-  color: #974634;
+  color: #892e2c;
 }
 
 .img-background {
   margin-bottom: 3rem;
   padding: 5rem 0;
+  border-radius: 16px;
+}
+
+.banner-covid {
+  width: 100%;
+
+  padding: 0;
+
   border-radius: 16px;
 }
 
@@ -549,6 +568,10 @@ h1 {
   margin-bottom: 3rem;
   padding: 2rem 0;
   border-radius: 16px;
+}
+
+.img3:hover {
+  box-shadow: 0 0 8px black;
 }
 
 .github-img {
@@ -597,7 +620,7 @@ h1 {
 
 .destaque:hover {
   text-decoration: none;
-  color: #974634;
+  color: #892e2c;
 }
 
 .footer {
@@ -616,10 +639,6 @@ body {
   font-family: 'Ruda', sans-serif;
   text-align: justify;
   font-size: 1rem;
-}
-
-.construction {
-  margin: 2rem auto;
 }
 
 .h1main {
@@ -654,7 +673,7 @@ body {
 }
 
 h2 {
-  color: #974634;
+  color: #892e2c;
   font-weight: 600;
   font-size: 1.7rem;
   margin: 1rem 0;
@@ -673,12 +692,30 @@ h2 {
   max-width: 48%;
   margin-bottom: 1rem;
 }
+.card-link {
+  text-decoration: none;
+  color: #000;
+}
+
+.bi-caret-down-fill {
+  float: right;
+  margin-top: 0.4rem;
+  width: 20px;
+  height: 20px;
+}
+.principal {
+  fill: #892e2c;
+}
+.principal:hover {
+  fill: #742725;
+}
 
 .edition {
   text-align: center;
   font-size: 1.5rem;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
+  text-decoration: none;
 }
 
 .container h1 {
@@ -716,7 +753,7 @@ h2 {
 
 .data-header {
   padding: 0.2rem 1rem;
-  background-color: #be7a0e;
+  background-color: #dd6731;
   border-radius: 16px 16px 0 0;
   color: #fff;
 }
@@ -760,7 +797,7 @@ h2 {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   padding: 2rem 0;
-  color: #974634;
+  color: #892e2c;
 }
 
 .img-text {
@@ -805,7 +842,10 @@ h2 {
   width: 100%;
   border-radius: 16px;
 }
-
+.img-webnar {
+  border-radius: 16px;
+  width: 300px;
+}
 .img-evt {
   width: 50%;
   border-radius: 16px;
@@ -835,9 +875,8 @@ h2 {
 
 .middle-video {
   margin-top: 4rem;
-  background-color: #f2f2f2;
+
   padding: 4rem 10rem;
-  border: 1px solid #ccc;
 }
 
 .custom-toggler .navbar-toggler-icon {
@@ -847,7 +886,7 @@ h2 {
 .drop-item {
   margin: 0;
   padding: 0 0.8rem;
-  border-bottom: 1px solid #5f2c21;
+  border-bottom: 1px solid #742725;
 }
 
 .custom-toggler.navbar-toggler {
@@ -896,6 +935,10 @@ h2 {
   margin: 0;
 }
 
+h5 {
+  text-decoration: none;
+}
+
 .dados-icon {
   margin: 0;
   display: inline;
@@ -929,12 +972,11 @@ h2 {
   top: 50%;
   transform: translate(-50%, -50%);
   cursor: pointer;
-  fill: #17a2b8;
+  fill: #dd6731;
 }
 
 .play-btn:hover {
-  -webkit-filter: drop-shadow(5px 5px 5px #888);
-  filter: drop-shadow(5px 5px 5px #888);
+  fill: #222831;
 }
 
 .close-btn {
@@ -944,12 +986,12 @@ h2 {
   top: 5%;
   transform: translate(-50%, -50%);
   cursor: pointer;
-  fill: #17a2b8;
+  fill: #dd6731;
+  -webkit-filter: drop-shadow(0px 0px 2px #000);
 }
 
 .close-btn:hover {
-  -webkit-filter: drop-shadow(5px 5px 5px #222831);
-  filter: drop-shadow(5px 5px 5px #222831);
+  fill: #222831;
 }
 
 #videoPlayer,
@@ -966,7 +1008,7 @@ h2 {
   font-family: 'Raleway', sans-serif;
   margin-bottom: 5rem;
   font-weight: 900;
-  color: #974634;
+  color: #892e2c;
   column-span: all;
 }
 
@@ -984,7 +1026,7 @@ h3 {
   font-family: 'Raleway', sans-serif;
   font-weight: 900;
   column-span: all;
-  color: #be7a0e;
+  color: #dd6731;
 }
 
 h4 {
@@ -1027,7 +1069,7 @@ a:hover {
   }
 
   .dropdown-submenu:hover {
-    background-color: #974634;
+    background-color: #892e2c;
   }
 
   .submenu {
@@ -1036,7 +1078,7 @@ a:hover {
 
   .sub-drop {
     padding: 0;
-    background-color: #974634;
+    background-color: #892e2c;
   }
 
   .dropdown-submenu .dropdown-menu {
@@ -1068,6 +1110,9 @@ a:hover {
   }
   .navbar-header {
     width: 100% !important;
+  }
+  .intro {
+    column-count: 1;
   }
 }
 
@@ -1101,7 +1146,7 @@ a:hover {
 }
 
 .box-header {
-  background-color: #be7a0e;
+  background-color: #892e2c;
   color: white;
   font-size: 1rem;
   margin: 0;
@@ -1164,7 +1209,7 @@ a:hover {
 }
 
 .box-footer {
-  background-color: #974634;
+  background-color: #808285;
   border: none;
   color: #fff;
   font-weight: 700;
@@ -1176,7 +1221,7 @@ a:hover {
 
 .box-footer:hover {
   text-decoration: none;
-  background-color: #be7a0e;
+  background-color: #dd6731;
 }
 
 .div-icons {
@@ -1214,11 +1259,11 @@ svg {
 }
 
 svg:hover {
-  fill: #974634;
+  fill: #892e2c;
 }
 
 .cvbutton {
-  background-color: #974634;
+  background-color: #892e2c;
   border: none;
   color: white;
   padding: 1rem;
@@ -1240,7 +1285,7 @@ svg:hover {
 }
 
 .button {
-  background-color: #974634;
+  background-color: #892e2c;
   border: none;
   color: white;
   padding: 1rem;
@@ -1250,7 +1295,7 @@ svg:hover {
 }
 
 .button:hover {
-  background-color: #5f2c21;
+  background-color: #742725;
 }
 
 .abutton {
@@ -1269,7 +1314,7 @@ svg:hover {
 }
 
 .team {
-  width: 16rem;
+  width: 10rem;
   border-radius: 50%;
   margin-right: 6rem;
 }
@@ -1370,7 +1415,7 @@ table.data tr:hover {
   padding-top: 12px;
   padding-bottom: 12px;
 
-  background-color: #be7a0e;
+  background-color: #dd6731;
   color: white;
 }
 
@@ -1390,7 +1435,7 @@ h4.data {
 }
 
 h2.data {
-  color: #5f2c21;
+  color: #742725;
   font-size: 2rem;
   font-family: 'Raleway', sans-serif;
   font-weight: 900;

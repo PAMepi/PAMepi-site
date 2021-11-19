@@ -9,6 +9,7 @@
                         #f3e8d8 #1a0a00
                         #fef5e6 #311f02
                         #f7f3ed 
+                        #892e2c #dd6731 #f1ae40 #fad328
 */
 
 html {
@@ -67,7 +68,7 @@ html {
 }
 
 .nav-link:hover {
-  color: #a66b0c;
+  color: #dd6731;
 }
 
 .nav-link:active,
@@ -111,7 +112,7 @@ html {
 }
 
 .navbar-brand:hover {
-  color: #a66b0c;
+  color: #dd6731;
   font-family: 'Ruda', sans-serif;
   font-weight: 800;
 }
@@ -139,7 +140,7 @@ html {
 }
 
 .dropdown:hover .dropdown-menu {
-  color: #a66b0c;
+  color: #dd6731;
   background-color: #eee;
 }
 
@@ -167,15 +168,15 @@ html {
 }
 
 .dropdown-item:hover {
-  color: #a66b0c;
+  color: #dd6731;
   background-color: #eee;
   border-radius: 8px;
   border: 1px solid #ccc;
-  fill: #a66b0c;
+  fill: #dd6731;
 }
 
 .dropdown-item .active {
-  color: #a66b0c;
+  color: #dd6731;
   font-weight: 900;
   border-radius: 8px;
 }
@@ -205,46 +206,127 @@ html {
   font-size: 3rem;
   text-align: center;
   margin-top: 2rem;
-  padding: 3rem 0 1rem 0;
+  padding: 4rem 0 2rem 0;
   font-family: 'Ruda', sans-serif;
+  color: #fff;
+  opacity: 1;
+  line-height: 70%;
+}
+
+.tutorial-img {
+  width: 6rem;
 }
 
 .isDisabled {
   color: #999;
   cursor: not-allowed;
-  opacity: 0.5;
+  opacity: 0.9;
   text-decoration: none;
   pointer-events: none;
 }
 
 .titles {
-  color: #974634;
-
+  color: #892e2c;
   margin-bottom: 2rem;
 }
 
 .main-hr {
   max-width: 200px;
   margin: 0 auto;
+  padding: 0;
   border-radius: 3px;
-  border-top: 4px solid #222831;
+  border-top: 4px solid #fff;
 }
 
+.banner {
+  background-color: #222831;
+  color: #fff;
+}
+
+.banner-img {
+  width: 100%;
+}
+
+.container-banner {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 40.5%;
+  transform: translate(-50%, -50%);
+  font-size: 2.3rem;
+  font-weight: 900;
+}
+
+.plataformas-img {
+  width: 60px;
+  border: 1px solid #ccc;
+  padding: 1px;
+  border-radius: 100%;
+  margin: 2rem 0;
+}
+
+.plataforma-card {
+  line-height: 100px;
+  height: 100px;
+  text-align: center;
+  border-radius: 16px;
+}
+
+.plataforma-card:hover,
+.border-card:hover {
+  box-shadow: 1px 4px 10px 5px rgba(0, 0, 0, 0.2);
+}
+
+.plataforma-h3 {
+  line-height: 1;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.bg-patogeno {
+  background-color: #fbd526;
+  color: #892e2c;
+}
+.bg-hanseniase {
+  background-color: #f3b140;
+  color: #fff;
+  text-shadow: 0 0 4px black;
+}
+.bg-covid {
+  background-color: #892e2c;
+  color: #fff;
+  text-shadow: 0 0 4px black;
+}
+.bg-arbovirus {
+  background-color: #df6832;
+  color: #fff;
+  text-shadow: 0 0 4px black;
+}
+
+.subtitle {
+  font-size: 1rem;
+  font-weight: 300;
+}
 .main-home {
   display: block;
-  margin: 5rem auto;
+  margin: 1rem auto;
   position: relative;
-  max-width: 800px;
+  max-width: 600px;
   text-align: center;
-  padding: 2rem 0;
+  padding: 2rem 0 3rem;
 }
 
 .main-subtitle {
   font-size: 1.5rem;
   font-family: 'Ruda', sans-serif;
-  color: #222831;
-  padding: 1rem 2rem;
+  opacity: 1;
+  padding: 2rem 1rem 0rem;
   display: block;
+  color: #fff;
   font-weight: 300;
 }
 
@@ -253,11 +335,11 @@ svg {
 }
 
 svg:hover {
-  fill: #a66b0c;
+  fill: #dd6731;
 }
 
 a:hover {
-  color: #a66b0c;
+  color: #dd6731;
 }
 
 .icon-language {
@@ -341,7 +423,6 @@ a:hover {
 .hdruk:hover,
 .icoda:hover,
 .flaticon-img:hover {
-  //filter: invert(26%) sepia(77%) saturate(659%) hue-rotate(299deg) brightness(88%) contrast(86%); rosa
   transform: scale(1.1);
   transition: transform 0.3s ease;
 }
@@ -478,11 +559,9 @@ a:hover {
 }
 
 .media-left {
-  width: 30%;
 }
 
 .media {
-  display: flex;
   align-items: center;
 }
 
@@ -514,8 +593,9 @@ a:hover {
 
 .div-media {
   margin: 3rem 0;
-  border: 1px solid #ddd;
+  border: 1px solid #ccc;
   border-radius: 16px;
+  padding: 4rem;
 }
 
 .middle {
@@ -524,9 +604,78 @@ a:hover {
   background-color: #f9f9f9;
   padding: 4rem 10rem 5rem;
 }
+.middle-white {
+  margin: 0 0 10rem;
+  padding: 4rem 10rem 0rem;
+}
 
 .bottom {
   margin: 5rem 10rem;
+}
+
+.construction {
+  margin: 0 3rem 0 0;
+  padding: 0.8rem;
+  background-color: #222831;
+  border-radius: 16px;
+}
+
+.media-object {
+}
+
+.img-background {
+  margin-bottom: 0;
+  padding: 5rem 0;
+  border-radius: 0 0 16px 16px;
+  height: 300px;
+}
+
+.img1 {
+  background-image: url('../img/webnario1021.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.img2 {
+  background-image: url('../img/boletim_pag1.png');
+  background-position: fit;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+}
+
+.img3 {
+  background-image: url('../img/newsletter-en.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+}
+
+.img-text {
+  color: #fff;
+  padding: 3rem 1rem;
+  text-align: center;
+  font-size: 1.8rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  text-shadow: 2px 2px 5px #222831;
+}
+
+.index {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 auto;
+  padding: 0;
+}
+.border-card {
+  border: 1px solid #ccc;
+  border-radius: 16px;
+  margin: 0;
+  padding: 0;
 }
 
 .top {
@@ -561,7 +710,7 @@ a:hover {
 }
 
 .card-header:first-child {
-  border-radius: 16px;
+  border-radius: 16px 16px 0 0;
 }
 
 .card,
@@ -610,7 +759,7 @@ a:hover {
   margin-bottom: 4rem;
 }
 .cvbutton {
-  background-color: #723527;
+  background-color: #892e2c;
   border: none;
   color: white;
   padding: 0.4rem;
@@ -621,7 +770,7 @@ a:hover {
 .cvbutton:hover,
 .cvbutton:focus,
 .cvbutton:target {
-  box-shadow: 0px 0px 0px 2px #f6a688;
+  box-shadow: 0px 0px 0px 2px #e0a09f;
   border: none;
 
   font-weight: 500;
@@ -635,7 +784,7 @@ a:hover {
 .destaque {
   text-transform: uppercase;
   font-weight: bold;
-  color: #a66b0c;
+  color: #dd6731;
 }
 
 .destaque:hover {
@@ -720,6 +869,10 @@ a:hover {
   .navbar-header {
     width: 100% !important;
   }
+
+  .intro {
+    column-count: 1;
+  }
 }
 
 @media only screen and (max-width: 1065px) {
@@ -742,7 +895,7 @@ a:hover {
 
   .sub-drop {
     padding: 0;
-    background-color: #900d0d;
+    background-color: #892e2c;
   }
 
   .dropdown-submenu .dropdown-menu {
