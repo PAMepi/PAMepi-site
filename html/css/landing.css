@@ -15,7 +15,15 @@
 html {
   scroll-behavior: smooth;
 }
+.embed-responsive {
+  width: 85%;
+  margin: 3rem auto;
+  overflow: auto;
 
+  border: 1px solid #ccc;
+  border-radius: 16px;
+  padding: 4rem;
+}
 /* width */
 
 ::-webkit-scrollbar {
@@ -824,6 +832,11 @@ a:hover {
   background-color: #5f3d07;
   box-shadow: 0px 0px 0px 3px #fae0b8;
 }
+.link-text {
+  text-decoration: underline;
+  font-weight: bold;
+  color: #dd6731;
+}
 
 /* .row .columns-team:not(:first-child) {
     background-color: red;
@@ -908,5 +921,11 @@ a:hover {
 
   h1 {
     font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1100px) {
+  .plataforma-h3 {
+    font-size: 1.45rem;
   }
 }
