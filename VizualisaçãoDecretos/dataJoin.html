@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <script type="text/javascript" src="sampleDecree.js"></script>
+  </head>
+  <style>
+    .table-data th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+
+      background-color: #ccc;
+      color: black;
+    }
+    .table-div {
+      margin: 2rem 1rem 4rem;
+      overflow: auto;
+      white-space: nowrap;
+    }
+
+    td,
+    th {
+      border: 1px solid #ddd;
+      padding: 0.3rem 1.1rem;
+      text-align: left;
+      line-height: 1;
+    }
+  </style>
+  <body onload="updateTable(mergedDecretos)">
+    <section class="mt-4 ml-5 mr-5">
+      <div class="row justify-content-center">
+        <div class="col-md-3 mb-5">
+          <select id="selectState" onChange="filterData()">
+            <!-- this.options[this.selectedIndex].value -->
+            <option>ESTADO</option>
+          </select>
+        </div>
+        <div class="col-md-3 mb-5">
+          <select id="selectClass" onChange="filterData()">
+            <option>Classe</option>
+          </select>
+        </div>
+        <div class="col-md-3 mb-5">
+          <select id="selectData">
+            <option>Data</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row justify-content-around">
+        <div class="col-md-4">
+          <h2>Estados: <span id="h1Estado">Todos</span></h2>
+        </div>
+        <div class="col-md-4">
+          <h2>Classe: <span id="h1Class"></span></h2>
+        </div>
+        <div class="col-md-4">
+          <h2>Número de decretos: <span id="nDecretos"></span></h2>
+        </div>
+      </div>
+
+      <div class="table-div">
+        <table
+          id="tableDecretos"
+          cellpadding="2"
+          cellspacing="2"
+          border="1"
+          class="table-data data"
+        ></table>
+      </div>
+    </section>
+
+    <script>
+      var selectUF = document.getElementById('selectState');
+      var selectClass = document.getElementById('selectClass');
+      var nDecretos = document.getElementById('nDecretos');
+      var h1Estado = document.getElementById('h1Estado');
+      var h1Class = document.getElementById('h1Class');
+      var estados = [
+        'AC',
+        'AL',
+        'AP',
+        'AM',
+        'BA',
+        'CE',
+        'DF',
+        'ES',
+        'GO',
+        'MA',
+        'MT',
+        'MS',
+        'MG',
+        'PA',
+        'PB',
+        'PR',
+        'PE',
+        'PI',
+        'RJ',
+        'RN',
+        'RS',
+        'RO',
+        'RR',
+        'SC',
+        'SP',
+        'SE',
+        'TO',
+      ];
+      var indexClass = ['O1', 'O2', 'O3', 'O4', 'C1', 'C2', 'C3'];
+      let dataUpdated;
+
+      // generate select options
+      for (var i = 0; i < estados.length; i++) {
+        var opt = estados[i];
+        var el = document.createElement('option');
+        el.textContent = opt;
+        el.value = opt;
+        selectUF.appendChild(el);
+      }
+
+      for (var i = 0; i < indexClass.length; i++) {
+        var opt = indexClass[i];
+        var el = document.createElement('option');
+        el.textContent = opt;
+        el.value = opt;
+        selectClass.appendChild(el);
+      }
+
+      // join decrees duplicated in original table generate array with diferent information
+      function joinClass(allDecrees) {
+        var mergedDecretos = [];
+        var iComp = 0;
+        while (iComp < allDecrees.length) {
+          iJoin = allDecrees.filter(
+            x =>
+              x.UF == allDecrees[iComp].UF &&
+              x.Decree == allDecrees[iComp].Decree
+          );
+
+          mergedDecretos.push({
+            UF: allDecrees[iComp].UF,
+            Code: allDecrees[iComp].Code,
+            'Date of  the decree': allDecrees[iComp]['Date of  the decree'],
+            'Starting date of the measure': iJoin.map(
+              x => x['Starting date of the measure']
+            ),
+            'End date of the measure': iJoin.map(
+              x => x['End date of the measure']
+            ),
+            DOE: iJoin.map(x => x.DOE),
+            Decree: allDecrees[iComp].Decree,
+            'Description of the measure': iJoin.map(
+              x => x['Description of the measure']
+            ),
+            Class: iJoin.map(x => x.Class),
+            Value: iJoin.map(x => x.Value),
+            Target: iJoin.map(x => x.Target),
+            Link_DOE: allDecrees[iComp].Link_DOE,
+            Link_Summary_Decrees: allDecrees[iComp].Link_Summary_Decrees,
+            text: allDecrees[iComp].text,
+            Observação: allDecrees[iComp].Observação,
+          });
+
+          iComp += iJoin.length;
+        }
+
+        return mergedDecretos;
+      }
+
+      var mergedDecretos = joinClass(sampleDecrees);
+      nDecretos.textContent = mergedDecretos.length;
+      h1Class.textContent = 'Todas';
+      h1Estado.textContent = 'Todos';
+
+      function filterData() {
+        UF = selectUF.options[selectUF.selectedIndex].value;
+        Classe = selectClass.options[selectClass.selectedIndex].value;
+        if (UF === 'ESTADO' && Classe === 'Classe') {
+          nDecretos.textContent = mergedDecretos.length;
+          h1Estado.textContent = 'Todos';
+          h1Class.textContent = 'Todas';
+          updateTable(mergedDecretos);
+        } else if (UF === 'ESTADO' && Classe !== 'Classe') {
+          result = sampleDecrees.filter(x => x.Class === Classe);
+          result = joinClass(result);
+          nDecretos.textContent = result.length;
+          h1Estado.textContent = 'Todos';
+          h1Class.textContent = Classe;
+          updateTable(result);
+        } else if (UF !== 'ESTADO' && Classe === 'Classe') {
+          result = mergedDecretos.filter(x => x.UF === UF);
+          nDecretos.textContent = result.length;
+          h1Estado.textContent = UF;
+          h1Class.textContent = 'Todas';
+          updateTable(result);
+        } else {
+          var keys = ['UF', 'Class'];
+          var values = [UF, Classe];
+
+          var result = sampleDecrees.filter(function (e) {
+            return keys.every(function (a) {
+              return values.includes(e[a]);
+            });
+          });
+          result = joinClass(result);
+          nDecretos.textContent = result.length;
+          h1Estado.textContent = UF;
+          h1Class.textContent = Classe;
+          updateTable(result);
+        }
+      }
+
+      function updateTable(data) {
+        let tableExp = document.getElementById('tableDecretos');
+        tableExp.innerHTML = '';
+        let cell;
+        let nlines = data.length;
+        let ncols = Object.keys(data['0']).length;
+        let row;
+
+        row = tableExp.insertRow(0);
+        for (var col = 0; col < ncols; col++) {
+          cell = row.insertCell(col);
+          cell.outerHTML = colValue(col, data);
+        }
+        // fill table with data
+        for (var lin = 0; lin < nlines; lin++) {
+          row = tableExp.insertRow(lin + 1);
+          for (var col = 0; col < ncols; col++) {
+            cell = row.insertCell(col);
+            cell.innerHTML = cellValue(lin, col, data);
+          }
+        }
+      }
+
+      function cellValue(lin, col, data) {
+        if (Object.keys(data[lin.toString()])[col]) {
+          if (Object.keys(data[lin.toString()])[col] == 'text') {
+            return `<a> Clique aqui para ler o decreto completo<\a>`;
+          }
+          return `${Object.values(data[lin.toString()])[col]}`;
+        }
+        return '-';
+      }
+
+      function colValue(col, data) {
+        if (Object.keys(data['0'])[col]) {
+          return `<th>${Object.keys(data['0'])[col]}</th>`;
+        }
+        return '&nbsp;';
+      }
+    </script>
+  </body>
+</html>
+<!-- 
+different DOE, class, Description of the measure, 
+End date of the measure, Starting date of the measure, 
+Target, Value
+
+ -->
