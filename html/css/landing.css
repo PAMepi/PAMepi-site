@@ -648,15 +648,30 @@ a:hover {
 
 .img2 {
   background-image: url('../img/boletim_pag1.png');
-  background-position: fit;
+  background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.img3 {
+  background-image: url('../img//index_news.png');
+  background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   position: relative;
 }
 
-.img3 {
+.img3-en {
   background-image: url('../img/newsletter-en.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+}
+
+.img4 {
+  background-image: url('../img/nota_index.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;

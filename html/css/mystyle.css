@@ -1261,7 +1261,11 @@ svg {
 svg:hover {
   fill: #892e2c;
 }
-
+.nota-img {
+  width: 300px;
+  float: left;
+  margin: 1rem 2rem 1rem 0;
+}
 .cvbutton {
   background-color: #892e2c;
   border: none;
