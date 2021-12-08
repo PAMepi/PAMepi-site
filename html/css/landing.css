@@ -633,7 +633,6 @@ a:hover {
 
 .img-background {
   margin-bottom: 0;
-  padding: 5rem 0;
   border-radius: 0 0 16px 16px;
   height: 300px;
 }
@@ -900,6 +899,11 @@ a:hover {
 
   .intro {
     column-count: 1;
+  }
+
+  .news-card {
+    width: 100%;
+    object-fit: cover;
   }
 }
 

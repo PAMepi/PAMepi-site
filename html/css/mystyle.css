@@ -462,7 +462,28 @@ hr {
   background-color: #fff;
   margin-top: 1rem;
 }
-
+.w3-blue-grey {
+  background-color: #892e2c !important;
+}
+.w3-light-grey {
+  color: #dd6731 !important;
+  border: 1px solid #dd6731 !important;
+  border-radius: 8px;
+  background-color: #fff !important;
+  margin: 0 1rem;
+}
+.w3-light-grey:hover {
+  color: #fff !important;
+  border: 1px solid #af4b1d !important;
+  background-color: #dd6731 !important;
+}
+.w3-light-grey:focus,
+.w3-light-grey:active {
+  box-shadow: 0 0 0 1px red;
+}
+.myNotes {
+  width: 100%;
+}
 .authors {
   text-align: right;
   font-weight: 400;
@@ -609,7 +630,9 @@ h1 {
 .w3-btn {
   border-radius: 16px;
 }
-
+.w3-content {
+  max-width: none;
+}
 .h1sel {
   color: red;
   margin: 0 auto;
@@ -1265,6 +1288,7 @@ svg:hover {
   width: 300px;
   float: left;
   margin: 1rem 2rem 1rem 0;
+  border-radius: 8px;
 }
 .cvbutton {
   background-color: #892e2c;

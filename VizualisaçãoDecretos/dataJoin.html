@@ -144,7 +144,7 @@
           mergedDecretos.push({
             UF: allDecrees[iComp].UF,
             Code: allDecrees[iComp].Code,
-            'Date of  the decree': allDecrees[iComp]['Date of  the decree'],
+            'Date of the decree': allDecrees[iComp]['Date of the decree'],
             'Starting date of the measure': iJoin.map(
               x => x['Starting date of the measure']
             ),
@@ -253,6 +253,27 @@
         }
         return '&nbsp;';
       }
+
+      let newDate = new Date('4/2/20');
+      console.log(newDate);
+      //  .map(x => (x['Date of  the decree'] = new Date(x['Date of  the decree'])))
+      sampleDecrees.slice(1).map(function (data) {
+        formatedData = data['Date of the decree'].split('/');
+
+        data['Date of the decree'] = new Date(
+          '20' + formatedData[2],
+          formatedData[0],
+          formatedData[1],
+          0,
+          0,
+          1,
+          0
+        );
+        console.log(formatedData);
+        console.log(data['Date of the decree']);
+        return data;
+      });
+      //  console.log(JSON.stringify(sampleDecrees.slice(10), '', 2));
     </script>
   </body>
 </html>
