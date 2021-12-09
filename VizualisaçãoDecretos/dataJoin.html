@@ -33,7 +33,7 @@
   </style>
   <body onload="updateTable(mergedDecretos)">
     <section class="mt-4 ml-5 mr-5">
-      <div class="row justify-content-center">
+      <div class="row justify-content-center align-items-center">
         <div class="col-md-3 mb-5">
           <select id="selectState" onChange="filterData()">
             <!-- this.options[this.selectedIndex].value -->
@@ -46,20 +46,41 @@
           </select>
         </div>
         <div class="col-md-3 mb-5">
-          <select id="selectData">
-            <option>Data</option>
-          </select>
+          <label for="selectDataI">Data início:</label>
+          <input
+            type="date"
+            id="selectDataI"
+            name="selectDataI"
+            onChange="filterData()"
+          />
+        </div>
+        <div class="col-md-3 mb-5">
+          <label for="selectDataF">Data fim:</label>
+          <input
+            type="date"
+            id="selectDataF"
+            name="selectDataF"
+            onChange="filterData()"
+          />
         </div>
       </div>
 
       <div class="row justify-content-around">
-        <div class="col-md-4">
+        <div class="col-md-3">
           <h2>Estados: <span id="h1Estado">Todos</span></h2>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
           <h2>Classe: <span id="h1Class"></span></h2>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
+          <h2>Data início: <span id="h1DataI"></span></h2>
+        </div>
+        <div class="col-md-3">
+          <h2>Data fim: <span id="h1DataF"></span></h2>
+        </div>
+      </div>
+      <div class="row justify-content-start mt-5">
+        <div class="col-md-6">
           <h2>Número de decretos: <span id="nDecretos"></span></h2>
         </div>
       </div>
@@ -78,9 +99,18 @@
     <script>
       var selectUF = document.getElementById('selectState');
       var selectClass = document.getElementById('selectClass');
+      var selectDataI = document.getElementById('selectDataI');
+      const today = new Date();
+      var selectDataF = document.getElementById('selectDataF');
+      selectDataF.value = `${today.getFullYear()}-${String(
+        today.getMonth() + 1
+      ).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
       var nDecretos = document.getElementById('nDecretos');
       var h1Estado = document.getElementById('h1Estado');
       var h1Class = document.getElementById('h1Class');
+      var h1DataI = document.getElementById('h1DataI');
+      var h1DataF = document.getElementById('h1DataF');
+
       var estados = [
         'AC',
         'AL',
@@ -111,7 +141,6 @@
         'TO',
       ];
       var indexClass = ['O1', 'O2', 'O3', 'O4', 'C1', 'C2', 'C3'];
-      let dataUpdated;
 
       // generate select options
       for (var i = 0; i < estados.length; i++) {
@@ -172,44 +201,90 @@
       }
 
       var mergedDecretos = joinClass(sampleDecrees);
+      // pesquisar qual a menor data possível
+
       nDecretos.textContent = mergedDecretos.length;
       h1Class.textContent = 'Todas';
       h1Estado.textContent = 'Todos';
+      h1DataF.textContent = selectDataF.value;
+      dataMin = sampleDecrees.sort(function (a, b) {
+        a = new Date(a['Date of the decree']);
+        b = new Date(b['Date of the decree']);
+        return a - b;
+      })[0]['Date of the decree'];
+      dataMin = new Date(`${dataMin} 00:00:00 GMT`);
+      selectDataI.value = `${dataMin.getFullYear()}-${String(
+        dataMin.getMonth() + 1
+      ).padStart(2, '0')}-${String(dataMin.getDate()).padStart(2, '0')}`;
+      h1DataI.textContent = selectDataI.value;
+
+      function checkDates() {
+        dataI = new Date(`${selectDataI.value} 00:00:00 GMT`);
+        dataF = new Date(`${selectDataF.value} 00:00:00 GMT`);
+        if (dataI > dataF) {
+          alert('Data de início deve ser menor que a data de fim');
+          selectDataI.value = `${dataMin.getFullYear()}-${String(
+            dataMin.getMonth() + 1
+          ).padStart(2, '0')}-${String(dataMin.getDate()).padStart(2, '0')}`;
+          h1DataI.textContent = selectDataI.value;
+          selectDataF.value = `${today.getFullYear()}-${String(
+            today.getMonth() + 1
+          ).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+          h1DataF.textContent = selectDataF.value;
+          return false;
+        }
+        return true;
+      }
+
+      function filterbyDate(data) {
+        dataI = new Date(`${selectDataI.value} 00:00:00 GMT`);
+        h1DataI.textContent = selectDataI.value;
+        dataF = new Date(`${selectDataF.value} 00:00:00 GMT`);
+        h1DataF.textContent = selectDataF.value;
+        var resultProductData = data.filter(function (a) {
+          if (a['Starting date of the measure'] !== '') {
+            var dataS = new Date(a['Starting date of the measure']);
+          } else {
+            dataS = new Date(a['Date of the decree']);
+          }
+          if (a['End date of the measure'] !== '') {
+            dataE = new Date(a['End date of the measure']);
+          } else {
+            dataE = today;
+          }
+          return dataF >= dataS && dataI <= dataE;
+        });
+        return resultProductData;
+      }
+
+      function filterbyClass(data) {
+        Classe = selectClass.options[selectClass.selectedIndex].value;
+        if (Classe === 'Classe') {
+          h1Class.textContent = 'Todas';
+          return data;
+        }
+        h1Class.textContent = Classe;
+        return data.filter(x => x.Class === Classe);
+      }
+
+      function filterbyState(data) {
+        UF = selectUF.options[selectUF.selectedIndex].value;
+        if (UF === 'ESTADO') {
+          h1Estado.textContent = 'Todos';
+          return data;
+        }
+        h1Estado.textContent = UF;
+        return data.filter(x => x.UF === UF);
+      }
 
       function filterData() {
-        UF = selectUF.options[selectUF.selectedIndex].value;
-        Classe = selectClass.options[selectClass.selectedIndex].value;
-        if (UF === 'ESTADO' && Classe === 'Classe') {
-          nDecretos.textContent = mergedDecretos.length;
-          h1Estado.textContent = 'Todos';
-          h1Class.textContent = 'Todas';
-          updateTable(mergedDecretos);
-        } else if (UF === 'ESTADO' && Classe !== 'Classe') {
-          result = sampleDecrees.filter(x => x.Class === Classe);
-          result = joinClass(result);
-          nDecretos.textContent = result.length;
-          h1Estado.textContent = 'Todos';
-          h1Class.textContent = Classe;
-          updateTable(result);
-        } else if (UF !== 'ESTADO' && Classe === 'Classe') {
-          result = mergedDecretos.filter(x => x.UF === UF);
-          nDecretos.textContent = result.length;
-          h1Estado.textContent = UF;
-          h1Class.textContent = 'Todas';
-          updateTable(result);
-        } else {
-          var keys = ['UF', 'Class'];
-          var values = [UF, Classe];
+        if (checkDates()) {
+          result = filterbyState(sampleDecrees);
+          result = filterbyClass(result);
+          result = filterbyDate(result);
 
-          var result = sampleDecrees.filter(function (e) {
-            return keys.every(function (a) {
-              return values.includes(e[a]);
-            });
-          });
           result = joinClass(result);
           nDecretos.textContent = result.length;
-          h1Estado.textContent = UF;
-          h1Class.textContent = Classe;
           updateTable(result);
         }
       }
@@ -253,33 +328,6 @@
         }
         return '&nbsp;';
       }
-
-      let newDate = new Date('4/2/20');
-      console.log(newDate);
-      //  .map(x => (x['Date of  the decree'] = new Date(x['Date of  the decree'])))
-      sampleDecrees.slice(1).map(function (data) {
-        formatedData = data['Date of the decree'].split('/');
-
-        data['Date of the decree'] = new Date(
-          '20' + formatedData[2],
-          formatedData[0],
-          formatedData[1],
-          0,
-          0,
-          1,
-          0
-        );
-        console.log(formatedData);
-        console.log(data['Date of the decree']);
-        return data;
-      });
-      //  console.log(JSON.stringify(sampleDecrees.slice(10), '', 2));
     </script>
   </body>
 </html>
-<!-- 
-different DOE, class, Description of the measure, 
-End date of the measure, Starting date of the measure, 
-Target, Value
-
- -->
