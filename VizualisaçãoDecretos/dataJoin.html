@@ -1,333 +1,410 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
-      crossorigin="anonymous"
-    />
-    <script type="text/javascript" src="sampleDecree.js"></script>
-  </head>
-  <style>
-    .table-data th {
-      padding-top: 12px;
-      padding-bottom: 12px;
 
-      background-color: #ccc;
-      color: black;
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
+  <script language="javascript" type="text/javascript" src="https://code.highcharts.com/highcharts.js"></script>
+  <script language="javascript" type="text/javascript" src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <script type="text/javascript" src="sampleDecree.js"></script>
+</head>
+<style>
+  .table-data th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+    background-color: #ccc;
+    color: black;
+  }
+
+  .table-div {
+    margin: 2rem 1rem 4rem;
+    overflow: auto;
+    white-space: nowrap;
+  }
+
+  td,
+  th {
+    border: 1px solid #ddd;
+    padding: 0.3rem 1.1rem;
+    text-align: left;
+    line-height: 1;
+  }
+</style>
+
+<body onload="updateTable(mergedDecretos)">
+  <section class="mt-4 ml-5 mr-5">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-md-3 mb-5">
+        <select id="selectState" onChange="filterData()">
+          <!-- this.options[this.selectedIndex].value -->
+          <option>ESTADO</option>
+        </select>
+      </div>
+      <div class="col-md-3 mb-5">
+        <div id="plotClass" style="width:100%; height:400px;"></div>
+        <select id="selectClass" onChange="filterData()">
+          <option>Classe</option>
+        </select>
+      </div>
+      <div class="col-md-3 mb-5">
+        <label for="selectDataI">Data início:</label>
+        <input type="date" id="selectDataI" name="selectDataI" onChange="filterData()" />
+      </div>
+      <div class="col-md-3 mb-5">
+        <label for="selectDataF">Data fim:</label>
+        <input type="date" id="selectDataF" name="selectDataF" onChange="filterData()" />
+      </div>
+    </div>
+
+    <div class="row justify-content-around">
+      <div class="col-md-3">
+        <h2>Estados: <span id="h1Estado">Todos</span></h2>
+      </div>
+      <div class="col-md-3">
+        <h2>Classe: <span id="h1Class"></span></h2>
+      </div>
+      <div class="col-md-3">
+        <h2>Data início: <span id="h1DataI"></span></h2>
+      </div>
+      <div class="col-md-3">
+        <h2>Data fim: <span id="h1DataF"></span></h2>
+      </div>
+    </div>
+    <div class="row justify-content-start mt-5">
+      <div class="col-md-6">
+        <h2>Número de decretos: <span id="nDecretos"></span></h2>
+      </div>
+    </div>
+
+    <div class="table-div">
+      <table id="tableDecretos" cellpadding="2" cellspacing="2" border="1" class="table-data data"></table>
+    </div>
+  </section>
+
+  <script>
+    var selectUF = document.getElementById('selectState');
+    var selectClass = document.getElementById('selectClass');
+    var selectDataI = document.getElementById('selectDataI');
+    const today = new Date();
+    var selectDataF = document.getElementById('selectDataF');
+    selectDataF.value = `${today.getFullYear()}-${String(
+      today.getMonth() + 1
+    ).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+    var nDecretos = document.getElementById('nDecretos');
+    var h1Estado = document.getElementById('h1Estado');
+    var h1Class = document.getElementById('h1Class');
+    var h1DataI = document.getElementById('h1DataI');
+    var h1DataF = document.getElementById('h1DataF');
+
+    var chartClass = plotClass()
+
+    var estados = [
+      'AC',
+      'AL',
+      'AP',
+      'AM',
+      'BA',
+      'CE',
+      'DF',
+      'ES',
+      'GO',
+      'MA',
+      'MT',
+      'MS',
+      'MG',
+      'PA',
+      'PB',
+      'PR',
+      'PE',
+      'PI',
+      'RJ',
+      'RN',
+      'RS',
+      'RO',
+      'RR',
+      'SC',
+      'SP',
+      'SE',
+      'TO',
+    ];
+    var indexClass = ['O1', 'O2', 'O3', 'O4', 'C1', 'C2', 'C3'];
+
+    // generate select options
+    for (var i = 0; i < estados.length; i++) {
+      var opt = estados[i];
+      var el = document.createElement('option');
+      el.textContent = opt;
+      el.value = opt;
+      selectUF.appendChild(el);
     }
-    .table-div {
-      margin: 2rem 1rem 4rem;
-      overflow: auto;
-      white-space: nowrap;
+
+    for (var i = 0; i < indexClass.length; i++) {
+      var opt = indexClass[i];
+      var el = document.createElement('option');
+      el.textContent = opt;
+      el.value = opt;
+      selectClass.appendChild(el);
     }
 
-    td,
-    th {
-      border: 1px solid #ddd;
-      padding: 0.3rem 1.1rem;
-      text-align: left;
-      line-height: 1;
-    }
-  </style>
-  <body onload="updateTable(mergedDecretos)">
-    <section class="mt-4 ml-5 mr-5">
-      <div class="row justify-content-center align-items-center">
-        <div class="col-md-3 mb-5">
-          <select id="selectState" onChange="filterData()">
-            <!-- this.options[this.selectedIndex].value -->
-            <option>ESTADO</option>
-          </select>
-        </div>
-        <div class="col-md-3 mb-5">
-          <select id="selectClass" onChange="filterData()">
-            <option>Classe</option>
-          </select>
-        </div>
-        <div class="col-md-3 mb-5">
-          <label for="selectDataI">Data início:</label>
-          <input
-            type="date"
-            id="selectDataI"
-            name="selectDataI"
-            onChange="filterData()"
-          />
-        </div>
-        <div class="col-md-3 mb-5">
-          <label for="selectDataF">Data fim:</label>
-          <input
-            type="date"
-            id="selectDataF"
-            name="selectDataF"
-            onChange="filterData()"
-          />
-        </div>
-      </div>
+    // join decrees duplicated in original table generate array with diferent information
+    function joinClass(allDecrees) {
+      var mergedDecretos = [];
+      var iComp = 0;
+      while (iComp < allDecrees.length) {
+        iJoin = allDecrees.filter(
+          x =>
+            x.UF == allDecrees[iComp].UF &&
+            x.Decree == allDecrees[iComp].Decree
+        );
 
-      <div class="row justify-content-around">
-        <div class="col-md-3">
-          <h2>Estados: <span id="h1Estado">Todos</span></h2>
-        </div>
-        <div class="col-md-3">
-          <h2>Classe: <span id="h1Class"></span></h2>
-        </div>
-        <div class="col-md-3">
-          <h2>Data início: <span id="h1DataI"></span></h2>
-        </div>
-        <div class="col-md-3">
-          <h2>Data fim: <span id="h1DataF"></span></h2>
-        </div>
-      </div>
-      <div class="row justify-content-start mt-5">
-        <div class="col-md-6">
-          <h2>Número de decretos: <span id="nDecretos"></span></h2>
-        </div>
-      </div>
-
-      <div class="table-div">
-        <table
-          id="tableDecretos"
-          cellpadding="2"
-          cellspacing="2"
-          border="1"
-          class="table-data data"
-        ></table>
-      </div>
-    </section>
-
-    <script>
-      var selectUF = document.getElementById('selectState');
-      var selectClass = document.getElementById('selectClass');
-      var selectDataI = document.getElementById('selectDataI');
-      const today = new Date();
-      var selectDataF = document.getElementById('selectDataF');
-      selectDataF.value = `${today.getFullYear()}-${String(
-        today.getMonth() + 1
-      ).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
-      var nDecretos = document.getElementById('nDecretos');
-      var h1Estado = document.getElementById('h1Estado');
-      var h1Class = document.getElementById('h1Class');
-      var h1DataI = document.getElementById('h1DataI');
-      var h1DataF = document.getElementById('h1DataF');
-
-      var estados = [
-        'AC',
-        'AL',
-        'AP',
-        'AM',
-        'BA',
-        'CE',
-        'DF',
-        'ES',
-        'GO',
-        'MA',
-        'MT',
-        'MS',
-        'MG',
-        'PA',
-        'PB',
-        'PR',
-        'PE',
-        'PI',
-        'RJ',
-        'RN',
-        'RS',
-        'RO',
-        'RR',
-        'SC',
-        'SP',
-        'SE',
-        'TO',
-      ];
-      var indexClass = ['O1', 'O2', 'O3', 'O4', 'C1', 'C2', 'C3'];
-
-      // generate select options
-      for (var i = 0; i < estados.length; i++) {
-        var opt = estados[i];
-        var el = document.createElement('option');
-        el.textContent = opt;
-        el.value = opt;
-        selectUF.appendChild(el);
-      }
-
-      for (var i = 0; i < indexClass.length; i++) {
-        var opt = indexClass[i];
-        var el = document.createElement('option');
-        el.textContent = opt;
-        el.value = opt;
-        selectClass.appendChild(el);
-      }
-
-      // join decrees duplicated in original table generate array with diferent information
-      function joinClass(allDecrees) {
-        var mergedDecretos = [];
-        var iComp = 0;
-        while (iComp < allDecrees.length) {
-          iJoin = allDecrees.filter(
-            x =>
-              x.UF == allDecrees[iComp].UF &&
-              x.Decree == allDecrees[iComp].Decree
-          );
-
-          mergedDecretos.push({
-            UF: allDecrees[iComp].UF,
-            Code: allDecrees[iComp].Code,
-            'Date of the decree': allDecrees[iComp]['Date of the decree'],
-            'Starting date of the measure': iJoin.map(
-              x => x['Starting date of the measure']
-            ),
-            'End date of the measure': iJoin.map(
-              x => x['End date of the measure']
-            ),
-            DOE: iJoin.map(x => x.DOE),
-            Decree: allDecrees[iComp].Decree,
-            'Description of the measure': iJoin.map(
-              x => x['Description of the measure']
-            ),
-            Class: iJoin.map(x => x.Class),
-            Value: iJoin.map(x => x.Value),
-            Target: iJoin.map(x => x.Target),
-            Link_DOE: allDecrees[iComp].Link_DOE,
-            Link_Summary_Decrees: allDecrees[iComp].Link_Summary_Decrees,
-            text: allDecrees[iComp].text,
-            Observação: allDecrees[iComp].Observação,
-          });
-
-          iComp += iJoin.length;
-        }
-
-        return mergedDecretos;
-      }
-
-      var mergedDecretos = joinClass(sampleDecrees);
-      // pesquisar qual a menor data possível
-
-      nDecretos.textContent = mergedDecretos.length;
-      h1Class.textContent = 'Todas';
-      h1Estado.textContent = 'Todos';
-      h1DataF.textContent = selectDataF.value;
-      dataMin = sampleDecrees.sort(function (a, b) {
-        a = new Date(a['Date of the decree']);
-        b = new Date(b['Date of the decree']);
-        return a - b;
-      })[0]['Date of the decree'];
-      dataMin = new Date(`${dataMin} 00:00:00 GMT`);
-      selectDataI.value = `${dataMin.getFullYear()}-${String(
-        dataMin.getMonth() + 1
-      ).padStart(2, '0')}-${String(dataMin.getDate()).padStart(2, '0')}`;
-      h1DataI.textContent = selectDataI.value;
-
-      function checkDates() {
-        dataI = new Date(`${selectDataI.value} 00:00:00 GMT`);
-        dataF = new Date(`${selectDataF.value} 00:00:00 GMT`);
-        if (dataI > dataF) {
-          alert('Data de início deve ser menor que a data de fim');
-          selectDataI.value = `${dataMin.getFullYear()}-${String(
-            dataMin.getMonth() + 1
-          ).padStart(2, '0')}-${String(dataMin.getDate()).padStart(2, '0')}`;
-          h1DataI.textContent = selectDataI.value;
-          selectDataF.value = `${today.getFullYear()}-${String(
-            today.getMonth() + 1
-          ).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
-          h1DataF.textContent = selectDataF.value;
-          return false;
-        }
-        return true;
-      }
-
-      function filterbyDate(data) {
-        dataI = new Date(`${selectDataI.value} 00:00:00 GMT`);
-        h1DataI.textContent = selectDataI.value;
-        dataF = new Date(`${selectDataF.value} 00:00:00 GMT`);
-        h1DataF.textContent = selectDataF.value;
-        var resultProductData = data.filter(function (a) {
-          if (a['Starting date of the measure'] !== '') {
-            var dataS = new Date(a['Starting date of the measure']);
-          } else {
-            dataS = new Date(a['Date of the decree']);
-          }
-          if (a['End date of the measure'] !== '') {
-            dataE = new Date(a['End date of the measure']);
-          } else {
-            dataE = today;
-          }
-          return dataF >= dataS && dataI <= dataE;
+        mergedDecretos.push({
+          UF: allDecrees[iComp].UF,
+          Code: allDecrees[iComp].Code,
+          'Date of the decree': allDecrees[iComp]['Date of the decree'],
+          'Starting date of the measure': iJoin.map(
+            x => x['Starting date of the measure']
+          ),
+          'End date of the measure': iJoin.map(
+            x => x['End date of the measure']
+          ),
+          DOE: iJoin.map(x => x.DOE),
+          Decree: allDecrees[iComp].Decree,
+          'Description of the measure': iJoin.map(
+            x => x['Description of the measure']
+          ),
+          Class: iJoin.map(x => x.Class),
+          Value: iJoin.map(x => x.Value),
+          Target: iJoin.map(x => x.Target),
+          Link_DOE: allDecrees[iComp].Link_DOE,
+          Link_Summary_Decrees: allDecrees[iComp].Link_Summary_Decrees,
+          text: allDecrees[iComp].text,
+          Observação: allDecrees[iComp].Observação,
         });
-        return resultProductData;
+
+        iComp += iJoin.length;
       }
 
-      function filterbyClass(data) {
-        Classe = selectClass.options[selectClass.selectedIndex].value;
-        if (Classe === 'Classe') {
-          h1Class.textContent = 'Todas';
-          return data;
+      return mergedDecretos;
+    }
+
+    var mergedDecretos = joinClass(sampleDecrees);
+    // pesquisar qual a menor data possível
+
+    nDecretos.textContent = mergedDecretos.length;
+    h1Class.textContent = 'Todas';
+    h1Estado.textContent = 'Todos';
+    h1DataF.textContent = selectDataF.value;
+    dataMin = sampleDecrees.sort(function (a, b) {
+      a = new Date(a['Date of the decree']);
+      b = new Date(b['Date of the decree']);
+      return a - b;
+    })[0]['Date of the decree'];
+    dataMin = new Date(`${dataMin} 00:00:00 GMT`);
+    selectDataI.value = `${dataMin.getFullYear()}-${String(
+      dataMin.getMonth() + 1
+    ).padStart(2, '0')}-${String(dataMin.getDate()).padStart(2, '0')}`;
+    h1DataI.textContent = selectDataI.value;
+
+    function checkDates() {
+      dataI = new Date(`${selectDataI.value} 00:00:00 GMT`);
+      dataF = new Date(`${selectDataF.value} 00:00:00 GMT`);
+      if (dataI > dataF) {
+        alert('Data de início deve ser menor que a data de fim');
+        selectDataI.value = `${dataMin.getFullYear()}-${String(
+          dataMin.getMonth() + 1
+        ).padStart(2, '0')}-${String(dataMin.getDate()).padStart(2, '0')}`;
+        h1DataI.textContent = selectDataI.value;
+        selectDataF.value = `${today.getFullYear()}-${String(
+          today.getMonth() + 1
+        ).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+        h1DataF.textContent = selectDataF.value;
+        return false;
+      }
+      return true;
+    }
+
+    function filterbyDate(data) {
+      dataI = new Date(`${selectDataI.value} 00:00:00 GMT`);
+      h1DataI.textContent = selectDataI.value;
+      dataF = new Date(`${selectDataF.value} 00:00:00 GMT`);
+      h1DataF.textContent = selectDataF.value;
+      var resultProductData = data.filter(function (a) {
+        if (a['Starting date of the measure'] !== '') {
+          var dataS = new Date(a['Starting date of the measure']);
+        } else {
+          dataS = new Date(a['Date of the decree']);
         }
-        h1Class.textContent = Classe;
-        return data.filter(x => x.Class === Classe);
-      }
-
-      function filterbyState(data) {
-        UF = selectUF.options[selectUF.selectedIndex].value;
-        if (UF === 'ESTADO') {
-          h1Estado.textContent = 'Todos';
-          return data;
+        if (a['End date of the measure'] !== '') {
+          dataE = new Date(a['End date of the measure']);
+        } else {
+          dataE = today;
         }
-        h1Estado.textContent = UF;
-        return data.filter(x => x.UF === UF);
+        return dataF >= dataS && dataI <= dataE;
+      });
+      return resultProductData;
+    }
+
+    function filterbyClass(data) {
+      Classe = selectClass;
+      if (Classe === 'Classe') {
+        h1Class.textContent = 'Todas';
+        return data;
       }
+      h1Class.textContent = Classe;
+      return data.filter(x => x.Class === Classe);
+    }
 
-      function filterData() {
-        if (checkDates()) {
-          result = filterbyState(sampleDecrees);
-          result = filterbyClass(result);
-          result = filterbyDate(result);
-
-          result = joinClass(result);
-          nDecretos.textContent = result.length;
-          updateTable(result);
-        }
+    function filterbyState(data) {
+      UF = selectUF.options[selectUF.selectedIndex].value;
+      if (UF === 'ESTADO') {
+        h1Estado.textContent = 'Todos';
+        return data;
       }
+      h1Estado.textContent = UF;
+      return data.filter(x => x.UF === UF);
+    }
 
-      function updateTable(data) {
-        let tableExp = document.getElementById('tableDecretos');
-        tableExp.innerHTML = '';
-        let cell;
-        let nlines = data.length;
-        let ncols = Object.keys(data['0']).length;
-        let row;
+    function filterData() {
+      if (checkDates()) {
+        result = filterbyState(sampleDecrees);
+        result = filterbyClass(result);
+        result = filterbyDate(result);
 
-        row = tableExp.insertRow(0);
+        result = joinClass(result);
+        nDecretos.textContent = result.length;
+        updateTable(result);
+      }
+    }
+
+    function updateTable(data) {
+      let tableExp = document.getElementById('tableDecretos');
+      tableExp.innerHTML = '';
+      let cell;
+      let nlines = data.length;
+      let ncols = Object.keys(data['0']).length;
+      let row;
+
+      row = tableExp.insertRow(0);
+      for (var col = 0; col < ncols; col++) {
+        cell = row.insertCell(col);
+        cell.outerHTML = colValue(col, data);
+      }
+      // fill table with data
+      for (var lin = 0; lin < nlines; lin++) {
+        row = tableExp.insertRow(lin + 1);
         for (var col = 0; col < ncols; col++) {
           cell = row.insertCell(col);
-          cell.outerHTML = colValue(col, data);
-        }
-        // fill table with data
-        for (var lin = 0; lin < nlines; lin++) {
-          row = tableExp.insertRow(lin + 1);
-          for (var col = 0; col < ncols; col++) {
-            cell = row.insertCell(col);
-            cell.innerHTML = cellValue(lin, col, data);
-          }
+          cell.innerHTML = cellValue(lin, col, data);
         }
       }
+    }
 
-      function cellValue(lin, col, data) {
-        if (Object.keys(data[lin.toString()])[col]) {
-          if (Object.keys(data[lin.toString()])[col] == 'text') {
-            return `<a> Clique aqui para ler o decreto completo<\a>`;
-          }
-          return `${Object.values(data[lin.toString()])[col]}`;
+    function cellValue(lin, col, data) {
+      if (Object.keys(data[lin.toString()])[col]) {
+        if (Object.keys(data[lin.toString()])[col] == 'text') {
+          return `<a> Clique aqui para ler o decreto completo<\a>`;
         }
-        return '-';
+        return `${Object.values(data[lin.toString()])[col]}`;
       }
+      return '-';
+    }
 
-      function colValue(col, data) {
-        if (Object.keys(data['0'])[col]) {
-          return `<th>${Object.keys(data['0'])[col]}</th>`;
-        }
-        return '&nbsp;';
+    function colValue(col, data) {
+      if (Object.keys(data['0'])[col]) {
+        return `<th>${Object.keys(data['0'])[col]}</th>`;
       }
-    </script>
-  </body>
+      return '&nbsp;';
+    }
+
+    function plotClass() {
+      const chart = Highcharts.chart('plotClass', {
+        chart: {
+          type: 'pie'
+        },
+        title: {
+          text: ''
+        },
+        yAxis: {
+          title: {
+            text: ''
+          }
+        },
+        exporting: { //for disable exporting options
+          buttons: {
+            contextButton: {
+              enabled: false
+            },
+            customButton: {
+              _titleKey: 'Back',
+              symbol: 'url(images/filter.png)',
+              cursor: 'pointer',
+              theme: {
+                fill: '#2E465D',
+                _titleKey: 'Back',
+                states: {
+                  hover: {
+                    fill: '#2E465D',
+                  },
+                  select: {
+                    stroke: '#039',
+                    fill: '#bada55'
+                  }
+                }
+              },
+              onclick: function () {
+                selectClass = "Classe"
+                filterData()
+                // Dado Inicial
+                data = [
+                  { name: "O1", y: 1 },
+                  { name: "O2", y: 5 }
+                ]
+                updatePlotClass(chart, data)
+              }
+            }
+          }
+        },
+        plotOptions: {
+          series: {
+            cursor: 'pointer',
+            point: {
+              events: {
+                click: function () {
+                  selectClass = this.name
+                  filterData()
+                  // Dado da classe selecionada
+                  data = [
+                    { name: "O2", y: 5 }
+                  ]
+                  updatePlotClass(chart, data)
+                }
+              }
+            }
+          }
+        },
+        series: [{
+          name: "ola",
+          colorByPoint: true,
+          data: [
+            { name: "O1", y: 1 },
+            { name: "O2", y: 5 }
+          ]
+        }]
+      });
+
+      return chart
+    };
+
+    function updatePlotClass(chart, data){
+      chart.series[0].update({
+        data: data
+      }, true)
+    }
+
+  </script>
+</body>
+
 </html>
