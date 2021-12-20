@@ -591,6 +591,17 @@ h1 {
   border-radius: 16px;
 }
 
+.imgbgBoletim2 {
+  background-image: url('../img/background-boletim2.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+  margin-bottom: 3rem;
+  padding: 2rem 0;
+  border-radius: 16px;
+}
+
 .img3:hover {
   box-shadow: 0 0 8px black;
 }
