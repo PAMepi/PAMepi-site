@@ -43,6 +43,71 @@
       text-align: left;
       line-height: 1;
     }
+
+    /* Popup container */
+    .popup {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+    }
+    .bundlePopupWrapper {
+      display: block;
+      //  position: absolute;
+      // right: 10%;
+      //  top: 10%;
+      //transform: translate(-50%, -50%);
+      width: 90%;
+      height: 95vh;
+      margin: 1rem auto;
+      border-radius: 5px;
+      background: white;
+      font-size: 1.2rem;
+      line-height: 1.5;
+      text-align: justify;
+      padding: 1rem;
+    }
+
+    .bundlePopupDescription {
+      width: 90%;
+      word-wrap: break-word;
+    }
+    /* The actual popup (appears on top) */
+    .popup .popuptext {
+      display: none;
+      position: fixed;
+      background: rgb(59 147 190 / 58%);
+      z-index: 99999999;
+      left: 0px;
+      top: 0px;
+      width: 100%;
+      height: 100vh;
+    }
+
+    /* Toggle this class when clicking on the popup container (hide and show the popup) */
+    .popup .show {
+      display: block;
+      -webkit-animation: fadeIn 1s;
+      animation: fadeIn 1s;
+    }
+
+    /* Add animation (fade in the popup) */
+    @-webkit-keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
   </style>
 
   <body onload="updateTable(mergedDecretos)">
@@ -181,8 +246,16 @@
       var chartClass = plotClass(dataClass);
 
       function checkDuplication(data) {
-        // if same decree has same date no need to repeat
-        // would be good to show what decree is related when different
+        // if (data.length > 1) {
+        //   var mergedData = [];
+        //   for (let i = 0; i < data.length; i++) {
+        //     if (!mergedData.includes(data[i])) {
+        //       mergedData.push(data[i]);
+        //     }
+        //   }
+        //   return mergedData;
+        // }
+        return data;
       }
 
       // join decrees duplicated in original table generate array with diferent information
@@ -200,20 +273,16 @@
             UF: allDecrees[iComp].UF,
             Code: allDecrees[iComp].Code,
             'Date of the decree': allDecrees[iComp]['Date of the decree'],
-            'Starting date of the measure': iJoin.map(
-              x => x['Starting date of the measure']
+            'Starting date': checkDuplication(
+              iJoin.map(x => x['Starting date'])
             ),
-            'End date of the measure': iJoin.map(
-              x => x['End date of the measure']
-            ),
-            DOE: iJoin.map(x => x.DOE),
+            'End date': checkDuplication(iJoin.map(x => x['End date'])),
+            DOE: checkDuplication(iJoin.map(x => x.DOE)),
             Decree: allDecrees[iComp].Decree,
-            'Description of the measure': iJoin.map(
-              x => x['Description of the measure']
-            ),
-            Class: iJoin.map(x => x.Class),
-            Value: iJoin.map(x => x.Value),
-            Target: iJoin.map(x => x.Target),
+            Description: checkDuplication(iJoin.map(x => x['Description'])),
+            Class: checkDuplication(iJoin.map(x => x.Class)),
+            Value: checkDuplication(iJoin.map(x => x.Value)),
+            Target: checkDuplication(iJoin.map(x => x.Target)),
             Link_DOE: allDecrees[iComp].Link_DOE,
             Link_Summary_Decrees: allDecrees[iComp].Link_Summary_Decrees,
             text: allDecrees[iComp].text,
@@ -268,13 +337,13 @@
         dataF = new Date(`${selectDataF.value} 00:00:00 GMT`);
         h1DataF.textContent = selectDataF.value;
         var resultProductData = data.filter(function (a) {
-          if (a['Starting date of the measure'] !== '') {
-            var dataS = new Date(a['Starting date of the measure']);
+          if (a['Starting date'] !== '') {
+            var dataS = new Date(a['Starting date']);
           } else {
             dataS = new Date(a['Date of the decree']);
           }
-          if (a['End date of the measure'] !== '') {
-            dataE = new Date(a['End date of the measure']);
+          if (a['End date'] !== '') {
+            dataE = new Date(a['End date']);
           } else {
             dataE = today;
           }
@@ -326,17 +395,20 @@
         let nlines = data.length;
         let ncols = Object.keys(data['0']).length;
         let row;
+        cols = [0, 6, 8, 9, 10, 2, 3, 4, 7, 5];
 
         row = tableExp.insertRow(0);
-        for (var col = 0; col < ncols; col++) {
-          cell = row.insertCell(col);
+        // for (var col = 0; col < ncols; col++) {
+        for (let [i, col] of cols.entries()) {
+          cell = row.insertCell(i);
           cell.outerHTML = colValue(col, data);
         }
         // fill table with data
         for (var lin = 0; lin < nlines; lin++) {
           row = tableExp.insertRow(lin + 1);
-          for (var col = 0; col < ncols; col++) {
-            cell = row.insertCell(col);
+          //for (var col = 0; col < ncols; col++) {
+          for (let [i, col] of cols.entries()) {
+            cell = row.insertCell(i);
             cell.innerHTML = cellValue(lin, col, data);
           }
         }
@@ -346,6 +418,36 @@
         if (Object.keys(data[lin.toString()])[col]) {
           if (Object.keys(data[lin.toString()])[col] == 'text') {
             return `<a> Clique aqui para ler o decreto completo<\a>`;
+          }
+          if (Object.keys(data[lin.toString()])[col] == 'DOE') {
+            return `<a href="${
+              Object.values(data[lin.toString()])[11]
+            }" target="_blank"> ${
+              Object.values(data[lin.toString()])[col]
+            }<\a>`;
+          }
+          if (Object.keys(data[lin.toString()])[col] == 'UF') {
+            return `<a href="${
+              Object.values(data[lin.toString()])[12]
+            }" target="_blank"> ${
+              Object.values(data[lin.toString()])[col]
+            }<\a>`;
+          }
+          if (Object.keys(data[lin.toString()])[col] == 'Decree') {
+            return `<div class="popup" onclick="myFunction()">
+              ${Object.values(data[lin.toString()])[col]}
+              <div class="popuptext" id="myPopup">
+                <div class="bundlePopupWrapper">
+                  <div class="bundlePopupDescription"><p>
+                ${Object.values(data[lin.toString()])[13]}</p>
+              </div></div></div>
+</div>`;
+          }
+          if (
+            Array.isArray(Object.values(data[lin.toString()])[col]) &&
+            Object.values(data[lin.toString()])[col].length > 1
+          ) {
+            return `${Object.values(data[lin.toString()])[col].join('<br>')}`;
           }
           return `${Object.values(data[lin.toString()])[col]}`;
         }
@@ -379,14 +481,13 @@
                 enabled: false,
               },
               customButton: {
-                _titleKey: 'Back',
                 text: 'Voltar',
                 // symbol: 'url(images/filter.png)',
                 cursor: 'pointer',
                 theme: {
                   fill: '#ccc',
                   color: '#fff',
-                  _titleKey: 'Back',
+
                   states: {
                     hover: {
                       fill: '#aaa',
@@ -450,6 +551,11 @@
           },
           true
         );
+      }
+
+      function myFunction() {
+        var popup = document.getElementById('myPopup');
+        popup.classList.toggle('show');
       }
     </script>
   </body>
