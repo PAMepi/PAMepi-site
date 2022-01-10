@@ -18,119 +18,11 @@
       src="https://code.highcharts.com/modules/exporting.js"
     ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
+    <link rel="stylesheet" type="text/css" href="decree.css" />
     <script type="text/javascript" src="sampleDecree.js"></script>
   </head>
-  <style>
-    .table-div {
-      margin: 2rem 1rem 4rem;
-    }
 
-    td,
-    th {
-      border: 1px solid #ddd;
-      padding: 0.3rem 1.1rem;
-      text-align: left;
-      line-height: 1;
-      max-width: 340px;
-    }
-
-    table {
-      padding: 0;
-      font-size: 0.9rem;
-      display: block;
-      overflow-x: auto;
-      font-family: Arial, Helvetica, sans-serif;
-      border-collapse: collapse;
-      border: 0;
-      margin-bottom: 4rem;
-      white-space: normal;
-      overflow: auto;
-    }
-
-    #tableDecretos tr:nth-child(even) {
-      background-color: #f2f2f2;
-    }
-
-    #tableDecretos tr:hover {
-      background-color: #ddd;
-    }
-
-    #tableDecretos th {
-      padding-top: 0.1rem;
-      padding-bottom: 0.1rem;
-      background-color: #dd6731;
-      color: white;
-    }
-    .expand {
-      width: 300px;
-      padding: 0;
-    }
-    /* Popup container */
-    .popup {
-      position: relative;
-      display: inline-block;
-      cursor: pointer;
-    }
-    .bundlePopupWrapper {
-      display: block;
-      width: 700px;
-      height: 95vh;
-      margin: 1rem auto;
-      border-radius: 5px;
-      background: white;
-      font-size: 1.2rem;
-      line-height: 1.5;
-      text-align: justify;
-      padding: 1rem;
-      overflow-y: scroll;
-    }
-
-    .bundlePopupDescription {
-      width: 650px;
-      word-wrap: break-word;
-      text-align: justify;
-    }
-    /* The actual popup (appears on top) */
-    .popup .popuptext {
-      display: none;
-      position: fixed;
-      background: rgb(59 147 190 / 58%);
-      z-index: 99999999;
-      left: 0px;
-      top: 0px;
-      width: 100%;
-      height: 100vh;
-    }
-
-    /* Toggle this class when clicking on the popup container (hide and show the popup) */
-    .popup .show {
-      display: block;
-      -webkit-animation: fadeIn 1s;
-      animation: fadeIn 1s;
-    }
-
-    /* Add animation (fade in the popup) */
-    @-webkit-keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
-  </style>
-
-  <body onload="updateTable(mergedDecretos)">
+  <body onload="updateTable(mergedDecretos,0),sortTable()">
     <section class="mt-4 ml-5 mr-5">
       <div class="row justify-content-center align-items-center">
         <div class="col-md-3 mb-5">
@@ -185,7 +77,7 @@
         </div>
       </div>
 
-      <div class="table-div">
+      <div class="table-div" id="doublescroll">
         <table
           id="tableDecretos"
           cellpadding="2"
@@ -404,11 +296,12 @@
           result = joinClass(result);
 
           nDecretos.textContent = result.length;
-          updateTable(result);
+          updateTable(result, 1);
+          sortTable();
         }
       }
 
-      function updateTable(data) {
+      function updateTable(data, index) {
         let tableExp = document.getElementById('tableDecretos');
         tableExp.innerHTML = '';
         let cell;
@@ -418,10 +311,10 @@
         cols = [0, 6, 8, 9, 10, 2, 3, 4, 7, 5];
 
         row = tableExp.insertRow(0);
-        // for (var col = 0; col < ncols; col++) {
+
         for (let [i, col] of cols.entries()) {
           cell = row.insertCell(i);
-          cell.outerHTML = colValue(col, data);
+          cell.outerHTML = colValue(col, data, i);
         }
         // fill table with data
         for (var lin = 0; lin < nlines; lin++) {
@@ -432,6 +325,19 @@
             cell.innerHTML = cellValue(lin, col, data);
           }
         }
+        if (index === 0) {
+          DoubleScroll(document.getElementById('tableDecretos'));
+        }
+      }
+
+      function colValue(col, data, i) {
+        if (Object.keys(data['0'])[col]) {
+          // return `<th onclick="sortTable(${i})">${
+          //   Object.keys(data['0'])[col]
+          // }</th>`;
+          return `<th >${Object.keys(data['0'])[col]}</th>`;
+        }
+        return '&nbsp;';
       }
 
       function cellValue(lin, col, data) {
@@ -452,16 +358,16 @@
           }
           if (Object.keys(data[lin.toString()])[col] == 'Decree') {
             return `<div class="popup" onclick="myFunction()">
-              ${Object.values(data[lin.toString()])[col]}
-              <div class="popuptext" id="myPopup">
-                <div class="bundlePopupWrapper">
-                  <div class="bundlePopupDescription"><p>
-                ${Object.values(data[lin.toString()])[13].replace(
-                  '\n',
-                  '<br>'
-                )}</p>
-              </div></div></div>
-</div>`;
+                        ${Object.values(data[lin.toString()])[col]}
+                        <div class="popuptext" id="myPopup">
+                          <div class="bundlePopupWrapper">
+                            <div class="bundlePopupDescription"><p>
+                          ${Object.values(data[lin.toString()])[13].replace(
+                            '\n',
+                            '<br>'
+                          )}</p>
+                        </div></div></div>
+          </div>`;
           }
 
           if (Object.keys(data[lin.toString()])[col] == 'Description') {
@@ -480,11 +386,133 @@
         return '-';
       }
 
-      function colValue(col, data) {
-        if (Object.keys(data['0'])[col]) {
-          return `<th>${Object.keys(data['0'])[col]}</th>`;
-        }
-        return '&nbsp;';
+      function DoubleScroll(element) {
+        var scrollbar = document.createElement('div');
+        scrollbar.appendChild(document.createElement('div'));
+        scrollbar.style.overflow = 'auto';
+        scrollbar.style.overflowY = 'hidden';
+        scrollbar.firstChild.style.width = element.scrollWidth + 'px';
+        scrollbar.firstChild.style.paddingTop = '1px';
+        scrollbar.firstChild.appendChild(document.createTextNode('\xA0'));
+        var running = false;
+        scrollbar.onscroll = function () {
+          if (running) {
+            running = false;
+            return;
+          }
+          running = true;
+          element.scrollLeft = scrollbar.scrollLeft;
+        };
+        element.onscroll = function () {
+          if (running) {
+            running = false;
+            return;
+          }
+          running = true;
+          scrollbar.scrollLeft = element.scrollLeft;
+        };
+        element.parentNode.insertBefore(scrollbar, element);
+      }
+
+      //     function sortTable(n) {
+      //       var table,
+      //         rows,
+      //         switching,
+      //         i,
+      //         x,
+      //         y,
+      //         shouldSwitch,
+      //         dir,
+      //         switchcount = 0;
+      //       table = document.getElementById('tableDecretos');
+      //       switching = true;
+      //       // Set the sorting direction to ascending:
+      //       dir = 'asc';
+      //       /* Make a loop that will continue until
+      // no switching has been done: */
+      //       while (switching) {
+      //         // Start by saying: no switching is done:
+      //         switching = false;
+      //         rows = table.rows;
+      //         /* Loop through all table rows (except the
+      //   first, which contains table headers): */
+      //         for (i = 1; i < rows.length - 1; i++) {
+      //           // Start by saying there should be no switching:
+      //           shouldSwitch = false;
+      //           /* Get the two elements you want to compare,
+      //     one from current row and one from the next: */
+      //           x = rows[i].getElementsByTagName('TD')[n];
+      //           y = rows[i + 1].getElementsByTagName('TD')[n];
+      //           /* Check if the two rows should switch place,
+      //     based on the direction, asc or desc: */
+      //           if (dir == 'asc') {
+      //             if (
+      //               x.innerHTML
+      //                 .toLowerCase()
+      //                 .localeCompare(y.innerHTML.toLowerCase()) === 1
+      //             ) {
+      //               // If so, mark as a switch and break the loop:
+      //               shouldSwitch = true;
+      //               break;
+      //             }
+      //           } else if (dir == 'desc') {
+      //             if (
+      //               x.innerHTML
+      //                 .toLowerCase()
+      //                 .localeCompare(y.innerHTML.toLowerCase()) === -1
+      //             ) {
+      //               // If so, mark as a switch and break the loop:
+      //               shouldSwitch = true;
+      //               break;
+      //             }
+      //           }
+      //         }
+      //         if (shouldSwitch) {
+      //           /* If a switch has been marked, make the switch
+      //     and mark that a switch has been done: */
+      //           rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      //           switching = true;
+      //           // Each time a switch is done, increase this count by 1:
+      //           switchcount++;
+      //         } else {
+      //           /* If no switching has been done AND the direction is "asc",
+      //     set the direction to "desc" and run the while loop again. */
+      //           if (switchcount == 0 && dir == 'asc') {
+      //             dir = 'desc';
+      //             switching = true;
+      //           }
+      //         }
+      //       }
+      //     }
+
+      function sortTable() {
+        const getCellValue = (tr, idx) =>
+          tr.children[idx].innerText || tr.children[idx].textContent;
+
+        const comparer = (idx, asc) => (a, b) =>
+          ((v1, v2) =>
+            v1 !== '' && v2 !== '' && !isNaN(v1) && !isNaN(v2)
+              ? v1 - v2
+              : v1.toString().localeCompare(v2))(
+            getCellValue(asc ? a : b, idx),
+            getCellValue(asc ? b : a, idx)
+          );
+
+        // do the work...
+        document.querySelectorAll('th').forEach(th =>
+          th.addEventListener('click', () => {
+            const table = th.closest('table');
+            const tbody = table.querySelector('tbody');
+            Array.from(tbody.querySelectorAll('tr'))
+              .sort(
+                comparer(
+                  Array.from(th.parentNode.children).indexOf(th),
+                  (this.asc = !this.asc)
+                )
+              )
+              .forEach(tr => tbody.appendChild(tr));
+          })
+        );
       }
 
       function plotClass(dataClass) {
@@ -538,17 +566,19 @@
               },
             },
           },
+
           plotOptions: {
-            series: {
+            pie: {
+              allowPointSelect: true,
               cursor: 'pointer',
+              dataLabels: {
+                enabled: true,
+              },
               point: {
                 events: {
                   click: function () {
                     selectClass = this.name;
                     filterData();
-                    // Dado da classe selecionada
-                    data = [{ name: this.name, y: this.y }];
-                    updatePlotClass(chart, data);
                   },
                 },
               },
