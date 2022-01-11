@@ -84,7 +84,10 @@
           cellspacing="2"
           border="1"
           class="table-data data"
-        ></table>
+        >
+          <thead></thead>
+          <tbody></tbody>
+        </table>
       </div>
     </section>
 
@@ -302,15 +305,22 @@
       }
 
       function updateTable(data, index) {
-        let tableExp = document.getElementById('tableDecretos');
-        tableExp.innerHTML = '';
+        let tableBody = document
+          .getElementById('tableDecretos')
+          .getElementsByTagName('tbody')[0];
+        let tableHead = document
+          .getElementById('tableDecretos')
+          .getElementsByTagName('thead')[0];
+        tableBody.innerHTML = '';
+        tableHead.innerHTML = '';
+
         let cell;
         let nlines = data.length;
         let ncols = Object.keys(data['0']).length;
         let row;
         cols = [0, 6, 8, 9, 10, 2, 3, 4, 7, 5];
 
-        row = tableExp.insertRow(0);
+        row = tableHead.insertRow(0);
 
         for (let [i, col] of cols.entries()) {
           cell = row.insertCell(i);
@@ -318,7 +328,7 @@
         }
         // fill table with data
         for (var lin = 0; lin < nlines; lin++) {
-          row = tableExp.insertRow(lin + 1);
+          let row = tableBody.insertRow(lin);
           //for (var col = 0; col < ncols; col++) {
           for (let [i, col] of cols.entries()) {
             cell = row.insertCell(i);
