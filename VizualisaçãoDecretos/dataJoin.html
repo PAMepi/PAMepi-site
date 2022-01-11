@@ -24,7 +24,7 @@
 
   <body onload="updateTable(mergedDecretos,0),sortTable()">
     <section class="mt-4 ml-5 mr-5">
-      <div class="row justify-content-center align-items-center">
+      <div class="row justify-content-around align-items-center">
         <div class="col-md-3 mb-5">
           <select id="selectState" onChange="filterData()">
             <!-- this.options[this.selectedIndex].value -->
@@ -37,7 +37,7 @@
             <option>Classe</option>
           </select> -->
         </div>
-        <div class="col-md-3 mb-5">
+        <div class="col-md-3 mb-5" style="text-align: right">
           <label for="selectDataI">Data início:</label>
           <input
             type="date"
@@ -45,8 +45,6 @@
             name="selectDataI"
             onChange="filterData()"
           />
-        </div>
-        <div class="col-md-3 mb-5">
           <label for="selectDataF">Data fim:</label>
           <input
             type="date"
@@ -57,23 +55,27 @@
         </div>
       </div>
 
-      <div class="row justify-content-around">
-        <div class="col-md-3">
-          <h2>Estados: <span id="h1Estado">Todos</span></h2>
+      <div class="row justify-content-around dashboard">
+        <div class="col-md-2 square">
+          <h2>Estados: <br /><span id="h1Estado">Todos</span></h2>
         </div>
-        <div class="col-md-3">
-          <h2>Classe: <span id="h1Class"></span></h2>
+        <div class="col-md-2 square">
+          <h2>Classe: <br /><span id="h1Class"></span></h2>
         </div>
-        <div class="col-md-3">
-          <h2>Data início: <span id="h1DataI"></span></h2>
+        <div class="col-md-2 square">
+          <h2>
+            Data início:<br />
+            <span id="h1DataI"></span>
+          </h2>
         </div>
-        <div class="col-md-3">
-          <h2>Data fim: <span id="h1DataF"></span></h2>
+        <div class="col-md-2 square">
+          <h2>Data fim: <br /><span id="h1DataF"></span></h2>
         </div>
-      </div>
-      <div class="row justify-content-start mt-5">
-        <div class="col-md-6">
-          <h2>Número de decretos: <span id="nDecretos"></span></h2>
+        <div class="col-md-2 square">
+          <h2>
+            Decretos:<br />
+            <span id="nDecretos"></span>
+          </h2>
         </div>
       </div>
 
@@ -345,7 +347,9 @@
           // return `<th onclick="sortTable(${i})">${
           //   Object.keys(data['0'])[col]
           // }</th>`;
-          return `<th >${Object.keys(data['0'])[col]}</th>`;
+          return `<th ><div style="display:flex;  align-items: center;  justify-content: left;">${
+            Object.keys(data['0'])[col]
+          } <img src="/home/andcris/Covid-TaskForce/git/PAMepi-site/html/img/sort.png" style='width:20px;float:right;margin:auto 0 auto 1rem;'></div></th>`;
         }
         return '&nbsp;';
       }
@@ -423,77 +427,6 @@
         };
         element.parentNode.insertBefore(scrollbar, element);
       }
-
-      //     function sortTable(n) {
-      //       var table,
-      //         rows,
-      //         switching,
-      //         i,
-      //         x,
-      //         y,
-      //         shouldSwitch,
-      //         dir,
-      //         switchcount = 0;
-      //       table = document.getElementById('tableDecretos');
-      //       switching = true;
-      //       // Set the sorting direction to ascending:
-      //       dir = 'asc';
-      //       /* Make a loop that will continue until
-      // no switching has been done: */
-      //       while (switching) {
-      //         // Start by saying: no switching is done:
-      //         switching = false;
-      //         rows = table.rows;
-      //         /* Loop through all table rows (except the
-      //   first, which contains table headers): */
-      //         for (i = 1; i < rows.length - 1; i++) {
-      //           // Start by saying there should be no switching:
-      //           shouldSwitch = false;
-      //           /* Get the two elements you want to compare,
-      //     one from current row and one from the next: */
-      //           x = rows[i].getElementsByTagName('TD')[n];
-      //           y = rows[i + 1].getElementsByTagName('TD')[n];
-      //           /* Check if the two rows should switch place,
-      //     based on the direction, asc or desc: */
-      //           if (dir == 'asc') {
-      //             if (
-      //               x.innerHTML
-      //                 .toLowerCase()
-      //                 .localeCompare(y.innerHTML.toLowerCase()) === 1
-      //             ) {
-      //               // If so, mark as a switch and break the loop:
-      //               shouldSwitch = true;
-      //               break;
-      //             }
-      //           } else if (dir == 'desc') {
-      //             if (
-      //               x.innerHTML
-      //                 .toLowerCase()
-      //                 .localeCompare(y.innerHTML.toLowerCase()) === -1
-      //             ) {
-      //               // If so, mark as a switch and break the loop:
-      //               shouldSwitch = true;
-      //               break;
-      //             }
-      //           }
-      //         }
-      //         if (shouldSwitch) {
-      //           /* If a switch has been marked, make the switch
-      //     and mark that a switch has been done: */
-      //           rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-      //           switching = true;
-      //           // Each time a switch is done, increase this count by 1:
-      //           switchcount++;
-      //         } else {
-      //           /* If no switching has been done AND the direction is "asc",
-      //     set the direction to "desc" and run the while loop again. */
-      //           if (switchcount == 0 && dir == 'asc') {
-      //             dir = 'desc';
-      //             switching = true;
-      //           }
-      //         }
-      //       }
-      //     }
 
       function sortTable() {
         const getCellValue = (tr, idx) =>

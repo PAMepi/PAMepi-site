@@ -163,3 +163,22 @@ a {
     opacity: 1;
   }
 }
+body {
+  font-family: 'Raleway', sans-serif;
+}
+h2 {
+  font-size: 1.2rem;
+
+  font-weight: 900;
+}
+
+.square {
+  background-color: #ccc;
+  color: #212529;
+  border-radius: 8px;
+  display: flex;
+  align-itens: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+}
