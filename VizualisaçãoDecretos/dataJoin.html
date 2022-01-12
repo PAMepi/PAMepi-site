@@ -17,6 +17,8 @@
       type="text/javascript"
       src="https://code.highcharts.com/modules/exporting.js"
     ></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="decree.css" />
     <script type="text/javascript" src="sampleDecree.js"></script>
@@ -474,36 +476,20 @@
           exporting: {
             //for disable exporting options
             buttons: {
-              contextButton: {
-                enabled: false,
-              },
               customButton: {
                 text: 'Voltar',
-                // symbol: 'url(images/filter.png)',
+                x: 0,
+                align: 'left',
                 cursor: 'pointer',
                 theme: {
                   fill: '#ccc',
-                  color: '#fff',
-
-                  states: {
-                    hover: {
-                      fill: '#aaa',
-                    },
-                    select: {
-                      stroke: '#039',
-                      fill: '#bada55',
-                    },
-                  },
+                  text: '#fff',
                 },
                 onclick: function () {
                   selectClass = 'Classe';
                   filterData();
                   // Dado Inicial
                   data = dataClass;
-                  // [
-                  //   { name: 'O1', y: 1 },
-                  //   { name: 'O2', y: 5 },
-                  // ];
                   updatePlotClass(chart, data);
                 },
               },
@@ -531,6 +517,7 @@
             {
               name: 'Decretos',
               colorByPoint: true,
+
               data: dataClass,
               // [
               //   { name: 'O1', y: 1 },
@@ -538,6 +525,7 @@
               // ],
             },
           ],
+          showInLegend: true,
         });
 
         return chart;

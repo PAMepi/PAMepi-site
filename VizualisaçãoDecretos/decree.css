@@ -20,7 +20,7 @@ html {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #dd6731;
+  background: #742725;
 }
 
 ::-webkit-scrollbar-thumb:horizontal {
