@@ -1,549 +1,579 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
-      crossorigin="anonymous"
-    />
-    <script
-      language="javascript"
-      type="text/javascript"
-      src="https://code.highcharts.com/highcharts.js"
-    ></script>
-    <script
-      language="javascript"
-      type="text/javascript"
-      src="https://code.highcharts.com/modules/exporting.js"
-    ></script>
-    <script src="https://code.highcharts.com/modules/export-data.js"></script>
-    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="decree.css" />
-    <script type="text/javascript" src="sampleDecree.js"></script>
-  </head>
 
-  <body onload="updateTable(mergedDecretos,0),sortTable()">
-    <section class="mt-4 ml-5 mr-5">
-      <div class="row justify-content-around align-items-center">
-        <div class="col-md-3 mb-5">
-          <select id="selectState" onChange="filterData()">
-            <!-- this.options[this.selectedIndex].value -->
-            <option>ESTADO</option>
-          </select>
-        </div>
-        <div class="col-md-3 mb-5">
-          <div id="plotClass" style="width: 100%; height: 300px"></div>
-          <!-- <select id="selectClass" onChange="filterData()">
-            <option>Classe</option>
-          </select> -->
-        </div>
-        <div class="col-md-3 mb-5" style="text-align: right">
-          <label for="selectDataI">Data início:</label>
-          <input
-            type="date"
-            id="selectDataI"
-            name="selectDataI"
-            onChange="filterData()"
-          />
-          <label for="selectDataF">Data fim:</label>
-          <input
-            type="date"
-            id="selectDataF"
-            name="selectDataF"
-            onChange="filterData()"
-          />
-        </div>
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
+  <script src="https://code.highcharts.com/maps/highmaps.js"></script>
+  <script language="javascript" type="text/javascript" src="https://code.highcharts.com/modules/exporting.js"></script>
+
+  <script src="https://code.highcharts.com/mapdata/countries/br/br-all.js"></script>
+  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="decree.css" />
+  <script type="text/javascript" src="sampleDecree.js"></script>
+</head>
+
+<body onload="updateTable(mergedDecretos,0),sortTable()">
+  <section class="mt-4 ml-5 mr-5">
+    <div class="row justify-content-around align-items-center">
+      <div class="col-md-3 mb-5">
+        <div id="mapClass" style="width: 100%; height: 300px"></div>
       </div>
-
-      <div class="row justify-content-around dashboard">
-        <div class="col-md-2 square">
-          <h2>Estados: <br /><span id="h1Estado">Todos</span></h2>
-        </div>
-        <div class="col-md-2 square">
-          <h2>Classe: <br /><span id="h1Class"></span></h2>
-        </div>
-        <div class="col-md-2 square">
-          <h2>
-            Data início:<br />
-            <span id="h1DataI"></span>
-          </h2>
-        </div>
-        <div class="col-md-2 square">
-          <h2>Data fim: <br /><span id="h1DataF"></span></h2>
-        </div>
-        <div class="col-md-2 square">
-          <h2>
-            Decretos:<br />
-            <span id="nDecretos"></span>
-          </h2>
-        </div>
+      <div class="col-md-3 mb-5">
+        <div id="plotClass" style="width: 100%; height: 300px"></div>
       </div>
-
-      <div class="table-div" id="doublescroll">
-        <table
-          id="tableDecretos"
-          cellpadding="2"
-          cellspacing="2"
-          border="1"
-          class="table-data data"
-        >
-          <thead></thead>
-          <tbody></tbody>
-        </table>
+      <div class="col-md-3 mb-5" style="text-align: right">
+        <label for="selectDataI">Data início:</label>
+        <input type="date" id="selectDataI" name="selectDataI" onChange="filterData()" />
+        <label for="selectDataF">Data fim:</label>
+        <input type="date" id="selectDataF" name="selectDataF" onChange="filterData()" />
       </div>
-    </section>
+    </div>
 
-    <script>
-      var selectUF = document.getElementById('selectState');
-      var selectClass = document.getElementById('selectClass');
-      var selectDataI = document.getElementById('selectDataI');
-      const today = new Date();
-      var selectDataF = document.getElementById('selectDataF');
-      selectDataF.value = `${today.getFullYear()}-${String(
-        today.getMonth() + 1
-      ).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
-      var nDecretos = document.getElementById('nDecretos');
-      var h1Estado = document.getElementById('h1Estado');
-      var h1Class = document.getElementById('h1Class');
-      var h1DataI = document.getElementById('h1DataI');
-      var h1DataF = document.getElementById('h1DataF');
+    <div class="row justify-content-around dashboard">
+      <div class="col-md-2 square">
+        <h2>Estados: <br /><span id="h1Estado">Todos</span></h2>
+      </div>
+      <div class="col-md-2 square">
+        <h2>Classe: <br /><span id="h1Class"></span></h2>
+      </div>
+      <div class="col-md-2 square">
+        <h2>
+          Data início:<br />
+          <span id="h1DataI"></span>
+        </h2>
+      </div>
+      <div class="col-md-2 square">
+        <h2>Data fim: <br /><span id="h1DataF"></span></h2>
+      </div>
+      <div class="col-md-2 square">
+        <h2>
+          Decretos:<br />
+          <span id="nDecretos"></span>
+        </h2>
+      </div>
+    </div>
 
-      var estados = [
-        'AC',
-        'AL',
-        'AP',
-        'AM',
-        'BA',
-        'CE',
-        'DF',
-        'ES',
-        'GO',
-        'MA',
-        'MT',
-        'MS',
-        'MG',
-        'PA',
-        'PB',
-        'PR',
-        'PE',
-        'PI',
-        'RJ',
-        'RN',
-        'RS',
-        'RO',
-        'RR',
-        'SC',
-        'SP',
-        'SE',
-        'TO',
-      ];
-      var indexClass = ['O1', 'O2', 'O3', 'O4', 'C1', 'C2', 'C3'];
+    <div class="table-div" id="doublescroll">
+      <table id="tableDecretos" cellpadding="2" cellspacing="2" border="1" class="table-data data">
+        <thead></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
 
-      // generate select options
-      for (var i = 0; i < estados.length; i++) {
-        var opt = estados[i];
-        var el = document.createElement('option');
-        el.textContent = opt;
-        el.value = opt;
-        selectUF.appendChild(el);
-      }
+  <script>
+    var selectUF = document.getElementById('selectState');
+    var selectClass = document.getElementById('selectClass');
+    var selectDataI = document.getElementById('selectDataI');
+    const today = new Date();
+    var selectDataF = document.getElementById('selectDataF');
+    selectDataF.value = `${today.getFullYear()}-${String(
+      today.getMonth() + 1
+    ).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+    var nDecretos = document.getElementById('nDecretos');
+    var h1Estado = document.getElementById('h1Estado');
+    var h1Class = document.getElementById('h1Class');
+    var h1DataI = document.getElementById('h1DataI');
+    var h1DataF = document.getElementById('h1DataF');
 
-      function createClassDataPlot(data) {
-        var dataClass = [];
-        var result = {};
-        for (i = 0; i < indexClass.length; i++) {
-          result = joinClass(data.filter(x => x.Class === indexClass[i]));
-          if (result.length > 0) {
-            dataClass.push({ name: indexClass[i], y: result.length });
-          }
+    var indexClass = ['O1', 'O2', 'O3', 'O4', 'C1', 'C2', 'C3'];
+
+    function createClassDataPlot(data) {
+      var dataClass = [];
+      var result = {};
+      for (i = 0; i < indexClass.length; i++) {
+        result = joinClass(data.filter(x => x.Class === indexClass[i]));
+        if (result.length > 0) {
+          dataClass.push({ name: indexClass[i], y: result.length });
         }
-        return dataClass;
       }
-      dataClass = createClassDataPlot(sampleDecrees);
-      var chartClass = plotClass(dataClass);
+      return dataClass;
+    }
 
-      function checkDuplication(data) {
-        // if (data.length > 1) {
-        //   var mergedData = [];
-        //   for (let i = 0; i < data.length; i++) {
-        //     if (!mergedData.includes(data[i])) {
-        //       mergedData.push(data[i]);
-        //     }
-        //   }
-        //   return mergedData;
-        // }
+    function createMapDataPlot(data){
+      var dataMap = [];
+      var result = {};
+      var ufList = data.map(d => d.UF).filter((v, i, a) => a.indexOf(v) === i)
+      for (i = 0; i < ufList.length; i++) {
+        result = data.filter(x => x.UF === ufList[i]);
+        if (result.length > 0) {
+          dataMap.push(['br-'+ ufList[i].toLowerCase(), result.length ]);
+        }
+      }
+      return dataMap;
+    }
+
+    dataClass = createClassDataPlot(sampleDecrees);
+    dataMap = createMapDataPlot(sampleDecrees);
+    var chartClass = plotClass(dataClass);
+    var chartMap = plotMap(dataMap);
+
+    function checkDuplication(data) {
+      // if (data.length > 1) {
+      //   var mergedData = [];
+      //   for (let i = 0; i < data.length; i++) {
+      //     if (!mergedData.includes(data[i])) {
+      //       mergedData.push(data[i]);
+      //     }
+      //   }
+      //   return mergedData;
+      // }
+      return data;
+    }
+
+    // join decrees duplicated in original table generate array with diferent information
+    function joinClass(allDecrees) {
+      var mergedDecretos = [];
+      var iComp = 0;
+      while (iComp < allDecrees.length) {
+        iJoin = allDecrees.filter(
+          x =>
+            x.UF == allDecrees[iComp].UF &&
+            x.Decree == allDecrees[iComp].Decree
+        );
+
+        mergedDecretos.push({
+          UF: allDecrees[iComp].UF,
+          Code: allDecrees[iComp].Code,
+          'Date of the decree': allDecrees[iComp]['Date of the decree'],
+          'Starting date': checkDuplication(
+            iJoin.map(x => x['Starting date'])
+          ),
+          'End date': checkDuplication(iJoin.map(x => x['End date'])),
+          DOE: checkDuplication(iJoin.map(x => x.DOE)),
+          Decree: allDecrees[iComp].Decree,
+          Description: checkDuplication(iJoin.map(x => x['Description'])),
+          Class: checkDuplication(iJoin.map(x => x.Class)),
+          Value: checkDuplication(iJoin.map(x => x.Value)),
+          Target: checkDuplication(iJoin.map(x => x.Target)),
+          Link_DOE: allDecrees[iComp].Link_DOE,
+          Link_Summary_Decrees: allDecrees[iComp].Link_Summary_Decrees,
+          text: allDecrees[iComp].text,
+          Observação: allDecrees[iComp].Observação,
+        });
+
+        iComp += iJoin.length;
+      }
+
+      return mergedDecretos;
+    }
+
+    var mergedDecretos = joinClass(sampleDecrees);
+    // pesquisar qual a menor data possível
+
+    nDecretos.textContent = mergedDecretos.length;
+    h1Class.textContent = 'Todas';
+    h1Estado.textContent = 'Todos';
+    h1DataF.textContent = selectDataF.value;
+    dataMin = sampleDecrees.sort(function (a, b) {
+      a = new Date(a['Date of the decree']);
+      b = new Date(b['Date of the decree']);
+      return a - b;
+    })[0]['Date of the decree'];
+    dataMin = new Date(`${dataMin} 00:00:00 GMT`);
+    selectDataI.value = `${dataMin.getFullYear()}-${String(
+      dataMin.getMonth() + 1
+    ).padStart(2, '0')}-${String(dataMin.getDate()).padStart(2, '0')}`;
+    h1DataI.textContent = selectDataI.value;
+
+    function checkDates() {
+      dataI = new Date(`${selectDataI.value} 00:00:00 GMT`);
+      dataF = new Date(`${selectDataF.value} 00:00:00 GMT`);
+      if (dataI > dataF) {
+        alert('Data de início deve ser menor que a data de fim');
+        selectDataI.value = `${dataMin.getFullYear()}-${String(
+          dataMin.getMonth() + 1
+        ).padStart(2, '0')}-${String(dataMin.getDate()).padStart(2, '0')}`;
+        h1DataI.textContent = selectDataI.value;
+        selectDataF.value = `${today.getFullYear()}-${String(
+          today.getMonth() + 1
+        ).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+        h1DataF.textContent = selectDataF.value;
+        return false;
+      }
+      return true;
+    }
+
+    function filterbyDate(data) {
+      dataI = new Date(`${selectDataI.value} 00:00:00 GMT`);
+      h1DataI.textContent = selectDataI.value;
+      dataF = new Date(`${selectDataF.value} 00:00:00 GMT`);
+      h1DataF.textContent = selectDataF.value;
+      var resultProductData = data.filter(function (a) {
+        if (a['Starting date'] !== '') {
+          var dataS = new Date(a['Starting date']);
+        } else {
+          dataS = new Date(a['Date of the decree']);
+        }
+        if (a['End date'] !== '') {
+          dataE = new Date(a['End date']);
+        } else {
+          dataE = today;
+        }
+        return dataF >= dataS && dataI <= dataE;
+      });
+      return resultProductData;
+    }
+
+    function filterbyClass(data) {
+      Classe = selectClass;
+      if (Classe === 'Classe' || Classe === null) {
+        h1Class.textContent = 'Todas';
         return data;
       }
+      h1Class.textContent = Classe;
 
-      // join decrees duplicated in original table generate array with diferent information
-      function joinClass(allDecrees) {
-        var mergedDecretos = [];
-        var iComp = 0;
-        while (iComp < allDecrees.length) {
-          iJoin = allDecrees.filter(
-            x =>
-              x.UF == allDecrees[iComp].UF &&
-              x.Decree == allDecrees[iComp].Decree
-          );
+      return data.filter(x => x.Class === Classe);
+    }
 
-          mergedDecretos.push({
-            UF: allDecrees[iComp].UF,
-            Code: allDecrees[iComp].Code,
-            'Date of the decree': allDecrees[iComp]['Date of the decree'],
-            'Starting date': checkDuplication(
-              iJoin.map(x => x['Starting date'])
-            ),
-            'End date': checkDuplication(iJoin.map(x => x['End date'])),
-            DOE: checkDuplication(iJoin.map(x => x.DOE)),
-            Decree: allDecrees[iComp].Decree,
-            Description: checkDuplication(iJoin.map(x => x['Description'])),
-            Class: checkDuplication(iJoin.map(x => x.Class)),
-            Value: checkDuplication(iJoin.map(x => x.Value)),
-            Target: checkDuplication(iJoin.map(x => x.Target)),
-            Link_DOE: allDecrees[iComp].Link_DOE,
-            Link_Summary_Decrees: allDecrees[iComp].Link_Summary_Decrees,
-            text: allDecrees[iComp].text,
-            Observação: allDecrees[iComp].Observação,
-          });
-
-          iComp += iJoin.length;
-        }
-
-        return mergedDecretos;
+    function filterbyState(data) {
+      UF = selectUF;
+      if (UF === 'ESTADO' || UF === null) {
+        h1Estado.textContent = 'Todos';
+        return data;
       }
+      h1Estado.textContent = UF;
+      return data.filter(x => x.UF === UF);
+    }
 
-      var mergedDecretos = joinClass(sampleDecrees);
-      // pesquisar qual a menor data possível
+    function filterData() {
+      if (checkDates()) {
+        result = filterbyState(sampleDecrees);
+        result = filterbyClass(result);
+        result = filterbyDate(result);
 
-      nDecretos.textContent = mergedDecretos.length;
-      h1Class.textContent = 'Todas';
-      h1Estado.textContent = 'Todos';
-      h1DataF.textContent = selectDataF.value;
-      dataMin = sampleDecrees.sort(function (a, b) {
-        a = new Date(a['Date of the decree']);
-        b = new Date(b['Date of the decree']);
-        return a - b;
-      })[0]['Date of the decree'];
-      dataMin = new Date(`${dataMin} 00:00:00 GMT`);
-      selectDataI.value = `${dataMin.getFullYear()}-${String(
-        dataMin.getMonth() + 1
-      ).padStart(2, '0')}-${String(dataMin.getDate()).padStart(2, '0')}`;
-      h1DataI.textContent = selectDataI.value;
+        result = joinClass(result);
 
-      function checkDates() {
-        dataI = new Date(`${selectDataI.value} 00:00:00 GMT`);
-        dataF = new Date(`${selectDataF.value} 00:00:00 GMT`);
-        if (dataI > dataF) {
-          alert('Data de início deve ser menor que a data de fim');
-          selectDataI.value = `${dataMin.getFullYear()}-${String(
-            dataMin.getMonth() + 1
-          ).padStart(2, '0')}-${String(dataMin.getDate()).padStart(2, '0')}`;
-          h1DataI.textContent = selectDataI.value;
-          selectDataF.value = `${today.getFullYear()}-${String(
-            today.getMonth() + 1
-          ).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
-          h1DataF.textContent = selectDataF.value;
-          return false;
-        }
-        return true;
+        nDecretos.textContent = result.length;
+        updateTable(result, 1);
+        sortTable();
       }
+    }
 
-      function filterbyDate(data) {
-        dataI = new Date(`${selectDataI.value} 00:00:00 GMT`);
-        h1DataI.textContent = selectDataI.value;
-        dataF = new Date(`${selectDataF.value} 00:00:00 GMT`);
-        h1DataF.textContent = selectDataF.value;
-        var resultProductData = data.filter(function (a) {
-          if (a['Starting date'] !== '') {
-            var dataS = new Date(a['Starting date']);
-          } else {
-            dataS = new Date(a['Date of the decree']);
-          }
-          if (a['End date'] !== '') {
-            dataE = new Date(a['End date']);
-          } else {
-            dataE = today;
-          }
-          return dataF >= dataS && dataI <= dataE;
-        });
-        return resultProductData;
+    function updateTable(data, index) {
+      let tableBody = document
+        .getElementById('tableDecretos')
+        .getElementsByTagName('tbody')[0];
+      let tableHead = document
+        .getElementById('tableDecretos')
+        .getElementsByTagName('thead')[0];
+      tableBody.innerHTML = '';
+      tableHead.innerHTML = '';
+
+      let cell;
+      let nlines = data.length;
+      let ncols = Object.keys(data['0']).length;
+      let row;
+      cols = [0, 6, 8, 9, 10, 2, 3, 4, 7, 5];
+
+      row = tableHead.insertRow(0);
+
+      for (let [i, col] of cols.entries()) {
+        cell = row.insertCell(i);
+        cell.outerHTML = colValue(col, data, i);
       }
-
-      function filterbyClass(data) {
-        Classe = selectClass;
-        if (Classe === 'Classe') {
-          h1Class.textContent = 'Todas';
-          return data;
-        }
-        h1Class.textContent = Classe;
-        return data.filter(x => x.Class === Classe);
-      }
-
-      function filterbyState(data) {
-        UF = selectUF.options[selectUF.selectedIndex].value;
-        if (UF === 'ESTADO') {
-          h1Estado.textContent = 'Todos';
-          return data;
-        }
-        h1Estado.textContent = UF;
-        return data.filter(x => x.UF === UF);
-      }
-
-      function filterData() {
-        if (checkDates()) {
-          result = filterbyState(sampleDecrees);
-          result = filterbyClass(result);
-          result = filterbyDate(result);
-
-          dataClass = createClassDataPlot(result);
-          chartClass = plotClass(dataClass);
-
-          result = joinClass(result);
-
-          nDecretos.textContent = result.length;
-          updateTable(result, 1);
-          sortTable();
-        }
-      }
-
-      function updateTable(data, index) {
-        let tableBody = document
-          .getElementById('tableDecretos')
-          .getElementsByTagName('tbody')[0];
-        let tableHead = document
-          .getElementById('tableDecretos')
-          .getElementsByTagName('thead')[0];
-        tableBody.innerHTML = '';
-        tableHead.innerHTML = '';
-
-        let cell;
-        let nlines = data.length;
-        let ncols = Object.keys(data['0']).length;
-        let row;
-        cols = [0, 6, 8, 9, 10, 2, 3, 4, 7, 5];
-
-        row = tableHead.insertRow(0);
-
+      // fill table with data
+      for (var lin = 0; lin < nlines; lin++) {
+        let row = tableBody.insertRow(lin);
+        //for (var col = 0; col < ncols; col++) {
         for (let [i, col] of cols.entries()) {
           cell = row.insertCell(i);
-          cell.outerHTML = colValue(col, data, i);
-        }
-        // fill table with data
-        for (var lin = 0; lin < nlines; lin++) {
-          let row = tableBody.insertRow(lin);
-          //for (var col = 0; col < ncols; col++) {
-          for (let [i, col] of cols.entries()) {
-            cell = row.insertCell(i);
-            cell.innerHTML = cellValue(lin, col, data);
-          }
-        }
-        if (index === 0) {
-          DoubleScroll(document.getElementById('tableDecretos'));
+          cell.innerHTML = cellValue(lin, col, data);
         }
       }
+      if (index === 0) {
+        DoubleScroll(document.getElementById('tableDecretos'));
+      }
+    }
 
-      function colValue(col, data, i) {
-        if (Object.keys(data['0'])[col]) {
-          // return `<th onclick="sortTable(${i})">${
-          //   Object.keys(data['0'])[col]
-          // }</th>`;
-          return `<th ><div style="display:flex;  align-items: center;  justify-content: left;">${
-            Object.keys(data['0'])[col]
+    function colValue(col, data, i) {
+      if (Object.keys(data['0'])[col]) {
+        // return `<th onclick="sortTable(${i})">${
+        //   Object.keys(data['0'])[col]
+        // }</th>`;
+        return `<th ><div style="display:flex;  align-items: center;  justify-content: left;">${Object.keys(data['0'])[col]
           } <img src="/home/andcris/Covid-TaskForce/git/PAMepi-site/html/img/sort.png" style='width:20px;float:right;margin:auto 0 auto 1rem;'></div></th>`;
-        }
-        return '&nbsp;';
       }
+      return '&nbsp;';
+    }
 
-      function cellValue(lin, col, data) {
-        if (Object.keys(data[lin.toString()])[col]) {
-          if (Object.keys(data[lin.toString()])[col] == 'DOE') {
-            return `<a href="${
-              Object.values(data[lin.toString()])[11]
+    function cellValue(lin, col, data) {
+      if (Object.keys(data[lin.toString()])[col]) {
+        if (Object.keys(data[lin.toString()])[col] == 'DOE') {
+          return `<a href="${Object.values(data[lin.toString()])[11]
             }" target="_blank"> ${Object.values(data[lin.toString()])[col].join(
               '<br>'
             )}<\a>`;
-          }
-          if (Object.keys(data[lin.toString()])[col] == 'UF') {
-            return `<a href="${
-              Object.values(data[lin.toString()])[12]
-            }" target="_blank"> ${
-              Object.values(data[lin.toString()])[col]
+        }
+        if (Object.keys(data[lin.toString()])[col] == 'UF') {
+          return `<a href="${Object.values(data[lin.toString()])[12]
+            }" target="_blank"> ${Object.values(data[lin.toString()])[col]
             }<\a>`;
-          }
-          if (Object.keys(data[lin.toString()])[col] == 'Decree') {
-            return `<div class="popup" onclick="myFunction()">
+        }
+        if (Object.keys(data[lin.toString()])[col] == 'Decree') {
+          return `<div class="popup" onclick="myFunction()">
                         ${Object.values(data[lin.toString()])[col]}
                         <div class="popuptext" id="myPopup">
                           <div class="bundlePopupWrapper">
                             <div class="bundlePopupDescription"><p>
                           ${Object.values(data[lin.toString()])[13].replace(
-                            '\n',
-                            '<br>'
-                          )}</p>
+            '\n',
+            '<br>'
+          )}</p>
                         </div></div></div>
           </div>`;
-          }
-
-          if (Object.keys(data[lin.toString()])[col] == 'Description') {
-            return `<p class="expand">${Object.values(data[lin.toString()])[
-              col
-            ].join('<br>')}</p>`;
-          }
-          if (
-            Array.isArray(Object.values(data[lin.toString()])[col]) &&
-            Object.values(data[lin.toString()])[col].length > 1
-          ) {
-            return `${Object.values(data[lin.toString()])[col].join('<br>')}`;
-          }
-          return `${Object.values(data[lin.toString()])[col]}`;
         }
-        return '-';
+
+        if (Object.keys(data[lin.toString()])[col] == 'Description') {
+          return `<p class="expand">${Object.values(data[lin.toString()])[
+            col
+          ].join('<br>')}</p>`;
+        }
+        if (
+          Array.isArray(Object.values(data[lin.toString()])[col]) &&
+          Object.values(data[lin.toString()])[col].length > 1
+        ) {
+          return `${Object.values(data[lin.toString()])[col].join('<br>')}`;
+        }
+        return `${Object.values(data[lin.toString()])[col]}`;
       }
+      return '-';
+    }
 
-      function DoubleScroll(element) {
-        var scrollbar = document.createElement('div');
-        scrollbar.appendChild(document.createElement('div'));
-        scrollbar.style.overflow = 'auto';
-        scrollbar.style.overflowY = 'hidden';
-        scrollbar.firstChild.style.width = element.scrollWidth + 'px';
-        scrollbar.firstChild.style.paddingTop = '1px';
-        scrollbar.firstChild.appendChild(document.createTextNode('\xA0'));
-        var running = false;
-        scrollbar.onscroll = function () {
-          if (running) {
-            running = false;
-            return;
-          }
-          running = true;
-          element.scrollLeft = scrollbar.scrollLeft;
-        };
-        element.onscroll = function () {
-          if (running) {
-            running = false;
-            return;
-          }
-          running = true;
-          scrollbar.scrollLeft = element.scrollLeft;
-        };
-        element.parentNode.insertBefore(scrollbar, element);
-      }
+    function DoubleScroll(element) {
+      var scrollbar = document.createElement('div');
+      scrollbar.appendChild(document.createElement('div'));
+      scrollbar.style.overflow = 'auto';
+      scrollbar.style.overflowY = 'hidden';
+      scrollbar.firstChild.style.width = element.scrollWidth + 'px';
+      scrollbar.firstChild.style.paddingTop = '1px';
+      scrollbar.firstChild.appendChild(document.createTextNode('\xA0'));
+      var running = false;
+      scrollbar.onscroll = function () {
+        if (running) {
+          running = false;
+          return;
+        }
+        running = true;
+        element.scrollLeft = scrollbar.scrollLeft;
+      };
+      element.onscroll = function () {
+        if (running) {
+          running = false;
+          return;
+        }
+        running = true;
+        scrollbar.scrollLeft = element.scrollLeft;
+      };
+      element.parentNode.insertBefore(scrollbar, element);
+    }
 
-      function sortTable() {
-        const getCellValue = (tr, idx) =>
-          tr.children[idx].innerText || tr.children[idx].textContent;
+    function sortTable() {
+      const getCellValue = (tr, idx) =>
+        tr.children[idx].innerText || tr.children[idx].textContent;
 
-        const comparer = (idx, asc) => (a, b) =>
-          ((v1, v2) =>
-            v1 !== '' && v2 !== '' && !isNaN(v1) && !isNaN(v2)
-              ? v1 - v2
-              : v1.toString().localeCompare(v2))(
-            getCellValue(asc ? a : b, idx),
-            getCellValue(asc ? b : a, idx)
-          );
+      const comparer = (idx, asc) => (a, b) =>
+        ((v1, v2) =>
+          v1 !== '' && v2 !== '' && !isNaN(v1) && !isNaN(v2)
+            ? v1 - v2
+            : v1.toString().localeCompare(v2))(
+              getCellValue(asc ? a : b, idx),
+              getCellValue(asc ? b : a, idx)
+            );
 
-        // do the work...
-        document.querySelectorAll('th').forEach(th =>
-          th.addEventListener('click', () => {
-            const table = th.closest('table');
-            const tbody = table.querySelector('tbody');
-            Array.from(tbody.querySelectorAll('tr'))
-              .sort(
-                comparer(
-                  Array.from(th.parentNode.children).indexOf(th),
-                  (this.asc = !this.asc)
-                )
+      // do the work...
+      document.querySelectorAll('th').forEach(th =>
+        th.addEventListener('click', () => {
+          const table = th.closest('table');
+          const tbody = table.querySelector('tbody');
+          Array.from(tbody.querySelectorAll('tr'))
+            .sort(
+              comparer(
+                Array.from(th.parentNode.children).indexOf(th),
+                (this.asc = !this.asc)
               )
-              .forEach(tr => tbody.appendChild(tr));
-          })
-        );
-      }
+            )
+            .forEach(tr => tbody.appendChild(tr));
+        })
+      );
+    }
 
-      function plotClass(dataClass) {
-        const chart = Highcharts.chart('plotClass', {
-          chart: {
-            type: 'pie',
-          },
-          title: {
-            text: 'Classes',
-          },
-          yAxis: {
-            title: {
-              text: '',
-            },
-          },
-          exporting: {
-            //for disable exporting options
-            buttons: {
-              customButton: {
-                text: 'Voltar',
-                x: 0,
-                align: 'left',
-                cursor: 'pointer',
-                theme: {
-                  fill: '#ccc',
-                  text: '#fff',
-                },
-                onclick: function () {
-                  selectClass = 'Classe';
+    function plotMap(data) {
+
+      // Create the chart
+      const chart = Highcharts.mapChart('mapClass', {
+        chart: {
+          map: 'countries/br/br-all'
+        },
+
+        title: {
+          text: ''
+        },
+
+        subtitle: {
+          text: ''
+        },
+
+        mapNavigation: {
+          enabled: false,
+        },
+        legend: {
+          enabled: false
+        },
+        plotOptions: {
+          series: {
+            point: {
+              events: {
+                click: function () {
+                  selectUF = this.properties["hc-a2"]
                   filterData();
-                  // Dado Inicial
-                  data = dataClass;
-                  updatePlotClass(chart, data);
-                },
-              },
-            },
-          },
 
-          plotOptions: {
-            pie: {
-              allowPointSelect: true,
+                }
+              }
+            }
+          }
+        },
+        exporting: {
+          //for disable exporting options
+          buttons: {
+            contextButton: {
+              enabled: false
+            },
+            customButton: {
+              text: 'Voltar',
+              x: 0,
+              align: 'left',
               cursor: 'pointer',
-              dataLabels: {
-                enabled: true,
+              theme: {
+                fill: '#ccc',
+                text: '#fff',
               },
-              point: {
-                events: {
-                  click: function () {
-                    selectClass = this.name;
-                    filterData();
-                  },
+              onclick: function () {
+                selectUF = 'ESTADO';
+                filterData();
+                deselectAllPoints(this)
+              },
+            },
+          },
+        },
+        colorAxis: {
+          min: 0
+        },
+        series: [{
+          data: data,
+          name: 'Número de decretos',
+          states: {
+            hover: {
+              color: '#BADA55'
+            },
+            select: {
+              borderColor: 'red'
+            }
+          },
+          allowPointSelect: true,
+          dataLabels: {
+            enabled: true,
+            format: '{point.sigla}'
+          }
+        }]
+      });
+
+      return chart
+    }
+
+    function plotClass(dataClass) {
+      const chart = Highcharts.chart('plotClass', {
+        chart: {
+          type: 'pie',
+        },
+        title: {
+          text: 'Classes',
+        },
+        yAxis: {
+          title: {
+            text: '',
+          },
+        },
+        exporting: {
+          //for disable exporting options
+          buttons: {
+            contextButton: {
+              enabled: false
+            },
+            customButton: {
+              text: 'Voltar',
+              x: 0,
+              align: 'left',
+              cursor: 'pointer',
+              theme: {
+                fill: '#ccc',
+                text: '#fff',
+              },
+              onclick: function () {
+                selectClass = 'Classe';
+                filterData();
+                // Dado Inicial
+                deselectAllPoints(this)
+              },
+            },
+          },
+        },
+
+        plotOptions: {
+          pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+              enabled: true,
+            },
+            point: {
+              events: {
+                click: function () {
+                  selectClass = this.name;
+                  filterData();
                 },
               },
             },
           },
-          series: [
-            {
-              name: 'Decretos',
-              colorByPoint: true,
-
-              data: dataClass,
-              // [
-              //   { name: 'O1', y: 1 },
-              //   { name: 'O2', y: 5 },
-              // ],
-            },
-          ],
-          showInLegend: true,
-        });
-
-        return chart;
-      }
-
-      function updatePlotClass(chart, data) {
-        chart.series[0].update(
+        },
+        series: [
           {
-            data: data,
+            name: 'Decretos',
+            colorByPoint: true,
+            data: dataClass,
           },
-          true
-        );
-      }
+        ],
+        showInLegend: true,
+      });
 
-      function myFunction() {
-        var popup = document.getElementById('myPopup');
-        popup.classList.toggle('show');
-      }
-    </script>
-  </body>
+      return chart;
+    }
+
+    function deselectAllPoints(chart) {
+      const series = chart.series;
+      series.forEach(s => {
+        s.data.forEach((point) => {
+          point.select(false);
+        });
+      });
+    }
+
+    function updatePlotClass(chart, data) {
+      chart.series[0].update(
+        {
+          data: data,
+        },
+        true
+      );
+    }
+
+    function myFunction() {
+      var popup = document.getElementById('myPopup');
+      popup.classList.toggle('show');
+    }
+  </script>
+</body>
+
 </html>
