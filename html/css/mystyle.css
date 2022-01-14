@@ -512,6 +512,8 @@ hr {
   column-count: 2;
   column-gap: 5rem;
   column-rule: 1px solid #ccc;
+  line-height: 1.5;
+  overflow: visible;
   /* border: 1px solid black; */
 }
 
@@ -1384,10 +1386,10 @@ svg:hover {
 
 .truncate {
   /**Major Properties**/
-  line-height: 1.8rem;
-  max-height: 3.6rem;
+  line-height: 1.5rem;
+  max-height: 4.5rem;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   display: -webkit-box;
   overflow: hidden;
   text-overflow: ellipsis;

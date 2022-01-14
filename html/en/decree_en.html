@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://code.highcharts.com/maps/highmaps.js"></script>
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="https://code.highcharts.com/modules/exporting.js"
+    ></script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <title>PAMEpi</title>
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ruda:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" type="text/css" href="../css/mystyle.css" />
+    <link rel="icon" href="../img/pamepi.ico" />
+    <script src="https://code.highcharts.com/mapdata/countries/br/br-all.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/decree.css" />
+    <script type="text/javascript" src="../js/sampleDecree.js"></script>
+  </head>
+
+  <body onload="updateTable(mergedDecretos,0),sortTable()">
+    <nav
+      id="navbar"
+      class="navbar navbar-expand-lg fixed-top justify-content-center"
+    >
+      <div class="container-fluid">
+        <div class="navbar-header w-100 row align-items-center">
+          <div>
+            <a
+              href="index_en.html"
+              class="navbar-brand active"
+              id="navbar-header"
+              ><img id="img-logo" src="../img/logo.jpeg" />PAMEpi</a
+            >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-chevron-right"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+              />
+            </svg>
+            <a
+              href="covid_en.html"
+              class="navbar-brand active"
+              id="navbar-header"
+              >Covid-19</a
+            >
+          </div>
+
+          <button
+            class="navbar-toggler custom-toggler navbar-light ml-auto hidden-sm-up float-right"
+            autofocus
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse w-100" id="navbarNav">
+          <ul class="nav navbar-nav ml-auto dropdown-menu-right">
+            <li class="navbar-item dropdown">
+              <div
+                class="dropdown-item dropdown-toggle"
+                id="navbarDropdown1"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                tabindex="0"
+              >
+                Project
+              </div>
+              <div
+                class="dropdown-menu dropdown"
+                aria-labelledby="navbarDropdown1"
+              >
+                <div class="dropdown-item drop-item">
+                  <a href="covid_en.html#projeto" class="nav-link submenu">
+                    Goals</a
+                  >
+                </div>
+
+                <div class="dropdown-item drop-item">
+                  <a href="covid_en.html#faq" class="nav-link submenu">FAQ</a>
+                </div>
+                <div class="dropdown-item drop-item">
+                  <a href="covid_en.html#tutorial" class="nav-link submenu"
+                    >Tutorial</a
+                  >
+                </div>
+                <div class="dropdown-item drop-item">
+                  <a href="covid_en.html#faleconosco" class="nav-link submenu"
+                    >Contact us</a
+                  >
+                </div>
+                <div class="dropdown-item drop-item">
+                  <a href="covid_en.html#github" class="nav-link submenu"
+                    >Source code</a
+                  >
+                </div>
+              </div>
+            </li>
+
+            <li class="navbar-item dropdown">
+              <div
+                class="dropdown-item dropdown-toggle"
+                id="navbarDropdown5"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                tabindex="0"
+              >
+                Data
+              </div>
+              <div
+                class="dropdown-menu dropdown dropdown-menu-right"
+                aria-labelledby="navbarDropdown5"
+              >
+                <div class="dropdown-item drop-item">
+                  <a href="data_en.html" class="nav-link submenu">Overview</a>
+                </div>
+                <div
+                  class="dropdown-item drop-item dropdown dropright dropdown-submenu"
+                >
+                  <a
+                    class="btn dropdown-toggle nav-link submenu"
+                    href="#"
+                    data-toggle="dropdown"
+                    data-flip="false"
+                    style="text-align: left"
+                  >
+                    Health</a
+                  >
+
+                  <ul class="dropdown-menu sub-drop">
+                    <li class="dropdown-item drop-item">
+                      <a href="sivep_en.html" class="nav-link submenu">SG</a>
+                    </li>
+                    <li class="dropdown-item drop-item">
+                      <a href="srag_en.html" class="nav-link submenu">SRAG</a>
+                    </li>
+                    <li class="dropdown-item drop-item">
+                      <a href="brio_en.html" class="nav-link submenu"
+                        >Brasil IO</a
+                      >
+                    </li>
+                    <li class="dropdown-item drop-item">
+                      <a href="vacina_en.html" class="nav-link submenu"
+                        >Vaccination</a
+                      >
+                    </li>
+                    <li class="dropdown-item drop-item">
+                      <a href="hospital_en.html" class="nav-link submenu">
+                        Hospital Occupancy
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  class="dropdown-item drop-item dropdown dropright dropdown-submenu"
+                >
+                  <a
+                    class="btn dropdown-toggle nav-link submenu"
+                    href="#"
+                    data-toggle="dropdown"
+                    data-flip="false"
+                    style="text-align: left"
+                  >
+                    Mobility
+                  </a>
+
+                  <ul class="dropdown-menu sub-drop">
+                    <li class="dropdown-item drop-item">
+                      <a href="mobgoo_en.html" class="nav-link submenu"
+                        >Google</a
+                      >
+                    </li>
+                    <li class="dropdown-item drop-item">
+                      <a href="ibge_en.html" class="nav-link submenu"
+                        >Intercity</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  class="dropdown-item drop-item dropdown dropright dropdown-submenu"
+                >
+                  <a
+                    class="btn dropdown-toggle nav-link submenu"
+                    href="#"
+                    data-toggle="dropdown"
+                    data-flip="false"
+                    style="text-align: left"
+                    >Inequality</a
+                  >
+
+                  <ul class="dropdown-menu sub-drop">
+                    <li class="dropdown-item drop-item">
+                      <a href="ibp_en.html" class="nav-link submenu">IBP</a>
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  class="dropdown-item drop-item dropdown dropright dropdown-submenu"
+                >
+                  <a
+                    class="btn dropdown-toggle nav-link submenu"
+                    href="#"
+                    data-toggle="dropdown"
+                    data-flip="false"
+                    style="text-align: left; width: 100%; margin: 0"
+                    role="button"
+                  >
+                    Non-pharmaceutical measure
+                  </a>
+
+                  <ul class="dropdown-menu sub-drop">
+                    <li class="dropdown-item drop-item">
+                      <a href="estringe_en.html" class="nav-link submenu"
+                        >Stringency index</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="dropdown-item drop-item">
+                  <a href="aggregated_en.html" class="nav-link submenu"
+                    >Aggregated</a
+                  >
+                </div>
+              </div>
+            </li>
+
+            <li class="navbar-item dropdown">
+              <div
+                class="dropdown-item dropdown-toggle active"
+                id="navbarDropdown2"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                tabindex="0"
+              >
+                Visualization
+              </div>
+
+              <div
+                class="dropdown-menu dropdown dropdown-menu-right"
+                aria-labelledby="navbarDropdown2"
+              >
+                <h6 class="dropdown-header">Description</h6>
+
+                <div
+                  class="dropdown-item drop-item dropdown dropright dropdown-submenu"
+                >
+                  <a
+                    class="btn dropdown-toggle nav-link submenu itemcol"
+                    href="#"
+                    data-toggle="dropdown"
+                    data-flip="false"
+                    style="text-align: left"
+                  >
+                    Panorama</a
+                  >
+                  <ul class="dropdown-menu sub-drop">
+                    <li class="dropdown-item drop-item">
+                      <a href="panoramaEstado_en.html" class="nav-link submenu"
+                        >States</a
+                      >
+                    </li>
+                    <li class="dropdown-item drop-item">
+                      <a href="panoramaMuni_en.html" class="nav-link submenu"
+                        >Cities</a
+                      >
+                    </li>
+                    <li class="dropdown-item drop-item">
+                      <a href="panoramaRegSau_en.html" class="nav-link submenu"
+                        >Regions</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="dropdown-item drop-item">
+                  <a
+                    href="decree_en.html"
+                    class="itemcol nav-link submenu active"
+                    >Decrees</a
+                  >
+                </div>
+                <div class="dropdown-item drop-item">
+                  <a href="#" class="itemcol nav-link submenu isDisabled"
+                    >Mobility</a
+                  >
+                </div>
+
+                <h6 class="dropdown-header">Models</h6>
+
+                <div
+                  class="dropdown-item drop-item dropdown dropright dropdown-submenu"
+                >
+                  <a
+                    class="btn dropdown-toggle nav-link submenu itemcol"
+                    href="#"
+                    data-toggle="dropdown"
+                    data-flip="false"
+                    style="text-align: left"
+                  >
+                    States
+                  </a>
+
+                  <ul class="dropdown-menu sub-drop">
+                    <li class="dropdown-item drop-item sub-drop">
+                      <a href="curto_en.html" class="nav-link submenu"
+                        >Short term</a
+                      >
+                    </li>
+                    <li class="dropdown-item drop-item sub-drop">
+                      <a href="longo_en.html" class="nav-link submenu"
+                        >Long term</a
+                      >
+                    </li>
+                    <li class="dropdown-item drop-item sub-drop disabled">
+                      <a
+                        href="compara_en.html"
+                        class="nav-link submenu isDisabled"
+                        >Comparison</a
+                      >
+                    </li>
+                    <li class="dropdown-item drop-item sub-drop disabled">
+                      <a
+                        href="valida_en.html"
+                        class="nav-link submenu isDisabled"
+                        >Validation</a
+                      >
+                    </li>
+                    <li class="dropdown-item drop-item sub-drop disabled">
+                      <a
+                        href="simula_en.html"
+                        class="nav-link submenu isDisabled"
+                        >Simulation</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="dropdown-item drop-item disabled">
+                  <a
+                    href="municipios_en.html"
+                    class="itemcol nav-link submenu isDisabled"
+                    >Cities</a
+                  >
+                </div>
+                <div class="dropdown-item drop-item disabled">
+                  <a
+                    href="reg_sau_en.html"
+                    class="itemcol nav-link submenu isDisabled"
+                    >Regions</a
+                  >
+                </div>
+                <div class="dropdown-item drop-item disabled">
+                  <a
+                    href="tsd_en.html"
+                    class="itemcol nav-link submenu isDisabled"
+                    >Bring your data</a
+                  >
+                </div>
+              </div>
+            </li>
+
+            <li class="navbar-item dropdown">
+              <div
+                class="dropdown-item dropdown-toggle"
+                id="navbarDropdown1"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                tabindex="0"
+              >
+                Outreach
+              </div>
+              <div
+                class="dropdown-menu dropdown dropdown-menu-right"
+                aria-labelledby="navbarDropdown1"
+              >
+                <div class="dropdown-item drop-item">
+                  <a href="news_en.html#newsletter" class="nav-link submenu">
+                    Newsletter</a
+                  >
+                </div>
+                <div class="dropdown-item drop-item">
+                  <a href="news_en.html#boletim" class="nav-link submenu"
+                    >Bulletin</a
+                  >
+                </div>
+                <div class="dropdown-item drop-item">
+                  <a href="news_en.html#midia" class="nav-link submenu">News</a>
+                </div>
+                <div class="dropdown-item drop-item">
+                  <a href="news_en.html#artigos" class="nav-link submenu"
+                    >Papers</a
+                  >
+                </div>
+                <div class="dropdown-item drop-item">
+                  <a href="contato_en.html#eventos" class="nav-link submenu"
+                    >Events</a
+                  >
+                </div>
+                <div class="dropdown-item drop-item">
+                  <a
+                    href="contato_en.html#galeria-videos"
+                    class="nav-link submenu"
+                    >Video gallery</a
+                  >
+                </div>
+              </div>
+            </li>
+            <li class="navbar-item dropdown">
+              <div
+                class="dropdown-item dropdown-toggle"
+                id="navbarDropdown3"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                tabindex="0"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  class="bi bi-globe icon-language"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a6.958 6.958 0 0 0-.656 2.5h2.49zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5H4.847zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5H4.51zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12c.138.386.295.744.468 1.068.552 1.035 1.218 1.65 1.887 1.855V12H5.145zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11a13.652 13.652 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5H3.82zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855.173-.324.33-.682.468-1.068H8.5zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5a6.959 6.959 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5h2.49zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4a7.966 7.966 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4h2.355z"
+                  />
+                </svg>
+              </div>
+              <div
+                class="dropdown-menu dropdown dropdown-menu-right"
+                aria-labelledby="navbarDropdown1"
+              >
+                <div class="dropdown-item drop-item">
+                  <a href="../decree.html" class="nav-link submenu"
+                    >Português</a
+                  >
+                </div>
+                <div class="dropdown-item drop-item">
+                  <a href="decree_en.html" class="nav-link active submenu"
+                    >English</a
+                  >
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="top-decree">
+      <h1 style="margin-bottom: 2rem; text-align: center">
+        Decrees visualization (under construction)
+      </h1>
+      <div class="row justify-content-around align-items-center mt-5 pt-5">
+        <div class="col-md-4 mb-5">
+          <div id="mapClass" style="width: 100%; height: 300px"></div>
+        </div>
+        <div class="col-md-4 mb-5">
+          <div id="plotClass" style="width: 100%; height: 300px"></div>
+        </div>
+        <div class="col-md-4 mb-5" style="text-align: right">
+          <p>
+            <label for="selectDataI">Starting date:</label>
+            <input
+              type="date"
+              id="selectDataI"
+              name="selectDataI"
+              onChange="filterData()"
+            />
+          </p>
+          <p>
+            <label for="selectDataF">Ending date:</label>
+            <input
+              type="date"
+              id="selectDataF"
+              name="selectDataF"
+              onChange="filterData()"
+            />
+          </p>
+        </div>
+      </div>
+
+      <div class="row justify-content-around dashboard">
+        <div class="col-md-2 square">
+          <h2>States: <br /><span id="h1Estado">All</span></h2>
+        </div>
+        <div class="col-md-2 square">
+          <h2>Class: <br /><span id="h1Class"></span></h2>
+        </div>
+        <div class="col-md-2 square">
+          <h2>
+            Starting date:<br />
+            <span id="h1DataI"></span>
+          </h2>
+        </div>
+        <div class="col-md-2 square">
+          <h2>Ending date: <br /><span id="h1DataF"></span></h2>
+        </div>
+        <div class="col-md-2 square">
+          <h2>
+            Decrees:<br />
+            <span id="nDecretos"></span>
+          </h2>
+        </div>
+      </div>
+
+      <div class="table-decree">
+        <table
+          id="tableDecretos"
+          cellpadding="2"
+          cellspacing="2"
+          border="1"
+          class="table-data data"
+        >
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <script>
+      var selectUF = document.getElementById('selectState');
+      var selectClass = document.getElementById('selectClass');
+      var selectDataI = document.getElementById('selectDataI');
+      const today = new Date();
+      var selectDataF = document.getElementById('selectDataF');
+      selectDataF.value = `${today.getFullYear()}-${String(
+        today.getMonth() + 1
+      ).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+      var nDecretos = document.getElementById('nDecretos');
+      var h1Estado = document.getElementById('h1Estado');
+      var h1Class = document.getElementById('h1Class');
+      var h1DataI = document.getElementById('h1DataI');
+      var h1DataF = document.getElementById('h1DataF');
+
+      var indexClass = ['O1', 'O2', 'O3', 'O4', 'C1', 'C2', 'C3'];
+
+      function createClassDataPlot(data) {
+        var dataClass = [];
+        var result = {};
+        for (i = 0; i < indexClass.length; i++) {
+          result = joinClass(data.filter(x => x.Class === indexClass[i]));
+          if (result.length > 0) {
+            dataClass.push({ name: indexClass[i], y: result.length });
+          }
+        }
+        return dataClass;
+      }
+
+      function createMapDataPlot(data) {
+        var dataMap = [];
+        var result = {};
+        var ufList = data
+          .map(d => d.UF)
+          .filter((v, i, a) => a.indexOf(v) === i);
+        for (i = 0; i < ufList.length; i++) {
+          result = data.filter(x => x.UF === ufList[i]);
+          if (result.length > 0) {
+            dataMap.push(['br-' + ufList[i].toLowerCase(), result.length]);
+          }
+        }
+        return dataMap;
+      }
+
+      dataClass = createClassDataPlot(sampleDecrees);
+      dataMap = createMapDataPlot(sampleDecrees);
+      var chartClass = plotClass(dataClass);
+      var chartMap = plotMap(dataMap);
+
+      // join decrees duplicated in original table generate array with diferent information
+      function joinClass(allDecrees) {
+        var mergedDecretos = [];
+        var iComp = 0;
+        while (iComp < allDecrees.length) {
+          iJoin = allDecrees.filter(
+            x =>
+              x.UF == allDecrees[iComp].UF &&
+              x.Decree == allDecrees[iComp].Decree
+          );
+
+          mergedDecretos.push({
+            UF: allDecrees[iComp].UF,
+            Code: allDecrees[iComp].Code,
+            'Date of the decree': allDecrees[iComp]['Date of the decree'],
+            'Starting date': iJoin.map(x => x['Starting date']),
+            'End date': iJoin.map(x => x['End date']),
+            DOE: iJoin.map(x => x.DOE),
+            Decree: allDecrees[iComp].Decree,
+            Description: iJoin.map(x => x['Description']),
+            Class: iJoin.map(x => x.Class),
+            Value: iJoin.map(x => x.Value),
+            Target: iJoin.map(x => x.Target),
+            Link_DOE: allDecrees[iComp].Link_DOE,
+            Link_Summary_Decrees: allDecrees[iComp].Link_Summary_Decrees,
+            text: allDecrees[iComp].text,
+            Observação: allDecrees[iComp].Observação,
+          });
+
+          iComp += iJoin.length;
+        }
+
+        return mergedDecretos;
+      }
+
+      var mergedDecretos = joinClass(sampleDecrees);
+      // pesquisar qual a menor data possível
+
+      nDecretos.textContent = mergedDecretos.length;
+      h1Class.textContent = 'All';
+      h1Estado.textContent = 'All';
+      h1DataF.textContent = selectDataF.value;
+      dataMin = sampleDecrees.sort(function (a, b) {
+        a = new Date(a['Date of the decree']);
+        b = new Date(b['Date of the decree']);
+        return a - b;
+      })[0]['Date of the decree'];
+      dataMin = new Date(`${dataMin} 00:00:00 GMT`);
+      selectDataI.value = `${dataMin.getFullYear()}-${String(
+        dataMin.getMonth() + 1
+      ).padStart(2, '0')}-${String(dataMin.getDate()).padStart(2, '0')}`;
+      h1DataI.textContent = selectDataI.value;
+
+      function checkDates() {
+        dataI = new Date(`${selectDataI.value} 00:00:00 GMT`);
+        dataF = new Date(`${selectDataF.value} 00:00:00 GMT`);
+        if (dataI > dataF) {
+          alert('Data de início deve ser menor que a data de fim');
+          selectDataI.value = `${dataMin.getFullYear()}-${String(
+            dataMin.getMonth() + 1
+          ).padStart(2, '0')}-${String(dataMin.getDate()).padStart(2, '0')}`;
+          h1DataI.textContent = selectDataI.value;
+          selectDataF.value = `${today.getFullYear()}-${String(
+            today.getMonth() + 1
+          ).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+          h1DataF.textContent = selectDataF.value;
+          return false;
+        }
+        return true;
+      }
+
+      function filterbyDate(data) {
+        dataI = new Date(`${selectDataI.value} 00:00:00 GMT`);
+        h1DataI.textContent = selectDataI.value;
+        dataF = new Date(`${selectDataF.value} 00:00:00 GMT`);
+        h1DataF.textContent = selectDataF.value;
+        var resultProductData = data.filter(function (a) {
+          if (a['Starting date'] !== '') {
+            var dataS = new Date(a['Starting date']);
+          } else {
+            dataS = new Date(a['Date of the decree']);
+          }
+          if (a['End date'] !== '') {
+            dataE = new Date(a['End date']);
+          } else {
+            dataE = today;
+          }
+          return dataF >= dataS && dataI <= dataE;
+        });
+        return resultProductData;
+      }
+
+      function filterbyClass(data) {
+        Classe = selectClass;
+        if (Classe === 'Classe' || Classe === null) {
+          h1Class.textContent = 'All';
+          return data;
+        }
+        h1Class.textContent = Classe;
+
+        return data.filter(x => x.Class === Classe);
+      }
+
+      function filterbyState(data) {
+        UF = selectUF;
+        if (UF === 'ESTADO' || UF === null) {
+          h1Estado.textContent = 'All';
+          return data;
+        }
+        h1Estado.textContent = UF;
+        return data.filter(x => x.UF === UF);
+      }
+
+      function filterData() {
+        if (checkDates()) {
+          result = filterbyState(sampleDecrees);
+          result = filterbyClass(result);
+          result = filterbyDate(result);
+
+          result = joinClass(result);
+
+          nDecretos.textContent = result.length;
+          updateTable(result, 1);
+          sortTable();
+        }
+      }
+
+      function updateTable(data, index) {
+        let tableBody = document
+          .getElementById('tableDecretos')
+          .getElementsByTagName('tbody')[0];
+        let tableHead = document
+          .getElementById('tableDecretos')
+          .getElementsByTagName('thead')[0];
+        tableBody.innerHTML = '';
+        tableHead.innerHTML = '';
+
+        let cell;
+        let nlines = data.length;
+        let ncols = Object.keys(data['0']).length;
+        let row;
+        cols = [0, 6, 8, 9, 10, 2, 3, 4, 7, 5];
+
+        row = tableHead.insertRow(0);
+
+        for (let [i, col] of cols.entries()) {
+          cell = row.insertCell(i);
+          cell.outerHTML = colValue(col, data, i);
+        }
+        // fill table with data
+        for (var lin = 0; lin < nlines; lin++) {
+          let row = tableBody.insertRow(lin);
+          //for (var col = 0; col < ncols; col++) {
+          for (let [i, col] of cols.entries()) {
+            cell = row.insertCell(i);
+            cell.innerHTML = cellValue(lin, col, data);
+          }
+        }
+        if (index === 0) {
+          DoubleScroll(document.getElementById('tableDecretos'));
+        }
+      }
+
+      function colValue(col, data, i) {
+        if (Object.keys(data['0'])[col]) {
+          // return `<th onclick="sortTable(${i})">${
+          //   Object.keys(data['0'])[col]
+          // }</th>`;
+          return `<th ><div style="display:flex;  align-items: center;  justify-content: left;">${
+            Object.keys(data['0'])[col]
+          } <img src="/home/andcris/Covid-TaskForce/git/PAMepi-site/html/img/sort.png" style='width:20px;float:right;margin:auto 0 auto 1rem;'></div></th>`;
+        }
+        return '&nbsp;';
+      }
+
+      function cellValue(lin, col, data) {
+        if (Object.keys(data[lin.toString()])[col]) {
+          if (Object.keys(data[lin.toString()])[col] == 'DOE') {
+            return `<a href="${
+              Object.values(data[lin.toString()])[11]
+            }" target="_blank"> ${Object.values(data[lin.toString()])[col].join(
+              '<br>'
+            )}<\a>`;
+          }
+          if (Object.keys(data[lin.toString()])[col] == 'UF') {
+            return `<a href="${
+              Object.values(data[lin.toString()])[12]
+            }" target="_blank"> ${
+              Object.values(data[lin.toString()])[col]
+            }<\a>`;
+          }
+          if (Object.keys(data[lin.toString()])[col] == 'Decree') {
+            return `<div class="popup" onclick="myFunction()">
+              <div style="display:flex;  align-items: center;  justify-content: left;line-height:1rem;">
+                        ${
+                          Object.values(data[lin.toString()])[col]
+                        }<img src='/home/andcris/Covid-TaskForce/git/PAMepi-site/html/img/external-link.svg' style='width:0.9rem;float:right;margin:auto 0 auto 0.5rem;'></div>
+                        <div class="popuptext" id="myPopup">
+                          <div class="bundlePopupWrapper">
+                            <div class="bundlePopupDescription"><p>
+                          ${Object.values(data[lin.toString()])[13].replace(
+                            '\n',
+                            '<br>'
+                          )}</p>
+                        </div></div></div>
+          </div>`;
+          }
+
+          if (Object.keys(data[lin.toString()])[col] == 'Description') {
+            return `<p class="expand">${Object.values(data[lin.toString()])[
+              col
+            ].join('<br>')}</p>`;
+          }
+          if (
+            Array.isArray(Object.values(data[lin.toString()])[col]) &&
+            Object.values(data[lin.toString()])[col].length > 1
+          ) {
+            return `${Object.values(data[lin.toString()])[col].join('<br>')}`;
+          }
+          return `${Object.values(data[lin.toString()])[col]}`;
+        }
+        return '-';
+      }
+
+      function DoubleScroll(element) {
+        var scrollbar = document.createElement('div');
+        scrollbar.appendChild(document.createElement('div'));
+        scrollbar.style.overflow = 'auto';
+        scrollbar.style.overflowY = 'hidden';
+        scrollbar.firstChild.style.width = element.scrollWidth + 'px';
+        scrollbar.firstChild.style.paddingTop = '1px';
+        scrollbar.firstChild.appendChild(document.createTextNode('\xA0'));
+        var running = false;
+        scrollbar.onscroll = function () {
+          if (running) {
+            running = false;
+            return;
+          }
+          running = true;
+          element.scrollLeft = scrollbar.scrollLeft;
+        };
+        element.onscroll = function () {
+          if (running) {
+            running = false;
+            return;
+          }
+          running = true;
+          scrollbar.scrollLeft = element.scrollLeft;
+        };
+        element.parentNode.insertBefore(scrollbar, element);
+      }
+
+      function sortTable() {
+        const getCellValue = (tr, idx) =>
+          tr.children[idx].innerText || tr.children[idx].textContent;
+
+        const comparer = (idx, asc) => (a, b) =>
+          ((v1, v2) =>
+            v1 !== '' && v2 !== '' && !isNaN(v1) && !isNaN(v2)
+              ? v1 - v2
+              : v1.toString().localeCompare(v2))(
+            getCellValue(asc ? a : b, idx),
+            getCellValue(asc ? b : a, idx)
+          );
+
+        // do the work...
+        document.querySelectorAll('th').forEach(th =>
+          th.addEventListener('click', () => {
+            const table = th.closest('table');
+            const tbody = table.querySelector('tbody');
+            Array.from(tbody.querySelectorAll('tr'))
+              .sort(
+                comparer(
+                  Array.from(th.parentNode.children).indexOf(th),
+                  (this.asc = !this.asc)
+                )
+              )
+              .forEach(tr => tbody.appendChild(tr));
+          })
+        );
+      }
+
+      function plotMap(data) {
+        // Create the chart
+        const chart = Highcharts.mapChart('mapClass', {
+          chart: {
+            map: 'countries/br/br-all',
+          },
+
+          title: {
+            text: 'Brazil',
+          },
+
+          subtitle: {
+            text: 'States',
+          },
+
+          mapNavigation: {
+            enabled: false,
+          },
+          legend: {
+            enabled: false,
+          },
+          plotOptions: {
+            series: {
+              point: {
+                events: {
+                  click: function () {
+                    selectUF = this.properties['hc-a2'];
+                    filterData();
+                  },
+                },
+              },
+            },
+          },
+          exporting: {
+            //for disable exporting options
+            buttons: {
+              contextButton: {
+                enabled: false,
+              },
+              customButton: {
+                text: 'Return',
+                x: 0,
+                align: 'left',
+                cursor: 'pointer',
+                theme: {
+                  fill: '#ccc',
+                  text: '#fff',
+                },
+                onclick: function () {
+                  selectUF = 'ESTADO';
+                  filterData();
+                  deselectAllPoints(this);
+                },
+              },
+            },
+          },
+          colorAxis: {
+            min: 0,
+          },
+          series: [
+            {
+              data: data,
+              name: 'Number of decrees',
+              states: {
+                hover: {
+                  color: '#BADA55',
+                },
+                select: {
+                  borderColor: 'red',
+                },
+              },
+              allowPointSelect: true,
+              dataLabels: {
+                enabled: true,
+                format: '{point.sigla}',
+              },
+            },
+          ],
+        });
+
+        return chart;
+      }
+
+      function plotClass(dataClass) {
+        const chart = Highcharts.chart('plotClass', {
+          chart: {
+            type: 'pie',
+          },
+          title: {
+            text: 'Classes',
+          },
+          yAxis: {
+            title: {
+              text: '',
+            },
+          },
+          exporting: {
+            //for disable exporting options
+            buttons: {
+              contextButton: {
+                enabled: false,
+              },
+              customButton: {
+                text: 'Return',
+                x: 0,
+                align: 'left',
+                cursor: 'pointer',
+                theme: {
+                  fill: '#ccc',
+                  text: '#fff',
+                },
+                onclick: function () {
+                  selectClass = 'Classe';
+                  filterData();
+                  // Dado Inicial
+                  deselectAllPoints(this);
+                },
+              },
+            },
+          },
+
+          plotOptions: {
+            pie: {
+              allowPointSelect: true,
+              cursor: 'pointer',
+              dataLabels: {
+                enabled: true,
+              },
+              point: {
+                events: {
+                  click: function () {
+                    selectClass = this.name;
+                    filterData();
+                  },
+                },
+              },
+            },
+          },
+          series: [
+            {
+              name: 'Decree',
+              colorByPoint: true,
+              data: dataClass,
+            },
+          ],
+          showInLegend: true,
+        });
+
+        return chart;
+      }
+
+      function deselectAllPoints(chart) {
+        const series = chart.series;
+        series.forEach(s => {
+          s.data.forEach(point => {
+            point.select(false);
+          });
+        });
+      }
+
+      function updatePlotClass(chart, data) {
+        chart.series[0].update(
+          {
+            data: data,
+          },
+          true
+        );
+      }
+
+      function myFunction() {
+        var popup = document.getElementById('myPopup');
+        popup.classList.toggle('show');
+      }
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../js/scripts.js"></script>
+  </body>
+</html>

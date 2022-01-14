@@ -53,6 +53,8 @@ html {
 }
 
 .table-div {
+  height: 400px;
+
   margin: 2rem 1rem 4rem;
 }
 
@@ -76,7 +78,9 @@ table {
   margin-bottom: 4rem;
   white-space: normal;
   overflow: auto;
+  width: 100%;
 }
+
 a {
   text-decoration: underline;
 }
@@ -130,7 +134,7 @@ a {
 .popup .popuptext {
   display: none;
   position: fixed;
-  background: rgb(59 147 190 / 58%);
+  background: RGBA(187, 187, 187, 0.7);
   z-index: 99999999;
   left: 0px;
   top: 0px;
