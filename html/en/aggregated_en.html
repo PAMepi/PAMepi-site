@@ -667,34 +667,6 @@
           ncol++;
         }
       }
-      function DoubleScroll(element) {
-        var scrollbar = document.createElement('div');
-        scrollbar.appendChild(document.createElement('div'));
-        scrollbar.style.overflow = 'auto';
-        scrollbar.style.overflowY = 'hidden';
-        scrollbar.firstChild.style.width = element.scrollWidth + 'px';
-        scrollbar.firstChild.style.paddingTop = '1px';
-        scrollbar.firstChild.appendChild(document.createTextNode('\xA0'));
-        var running = false;
-        scrollbar.onscroll = function () {
-          if (running) {
-            running = false;
-            return;
-          }
-          running = true;
-          element.scrollLeft = scrollbar.scrollLeft;
-        };
-        element.onscroll = function () {
-          if (running) {
-            running = false;
-            return;
-          }
-          running = true;
-          scrollbar.scrollLeft = element.scrollLeft;
-        };
-        element.parentNode.insertBefore(scrollbar, element);
-      }
-      DoubleScroll(document.getElementById('tableDic'));
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>

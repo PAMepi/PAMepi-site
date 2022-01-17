@@ -53,30 +53,34 @@ html {
 }
 
 .table-decree {
-  height: 400px;
-  margin: 2rem 1rem 4rem;
+  margin: 5rem 1rem 4rem;
+  overflow-y: auto;
+
+  height: 350px;
 }
 
 .table-decree td,
 .table-decree th {
   border: 1px solid #ddd;
   padding: 0.4rem 1.1rem;
-  text-align: left;
+  text-align: right;
   line-height: 1;
   max-width: 340px;
+}
+
+.table-decree thead th {
+  position: sticky;
+  top: 0;
 }
 
 .table-decree table {
   padding: 0;
   font-size: 0.9rem;
-  display: block;
-  overflow-x: auto;
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   border: 0;
   margin-bottom: 4rem;
   white-space: normal;
-  overflow: auto;
   width: 100%;
 }
 
@@ -96,6 +100,7 @@ a {
   padding-bottom: 0.1rem;
   background-color: #dd6731;
   color: white;
+
   cursor: pointer;
 }
 .expand {

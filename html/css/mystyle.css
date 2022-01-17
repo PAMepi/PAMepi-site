@@ -1399,11 +1399,11 @@ table {
   padding: 0;
   font-size: 0.9rem;
   display: block;
-  overflow-x: auto;
+  //overflow-x: auto;
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   border: 0;
-  margin-bottom: 4rem;
+  margin-bottom: 0;
 }
 
 table.data {
@@ -1419,6 +1419,7 @@ table.dic {
   margin: 2rem 1rem 4rem;
   overflow: auto;
   white-space: nowrap;
+  max-height: 350px;
 }
 
 td,
@@ -1455,7 +1456,7 @@ table.data tr:hover {
 .table-data th {
   padding-top: 12px;
   padding-bottom: 12px;
-
+  z-index: 99;
   background-color: #dd6731;
   color: white;
 }

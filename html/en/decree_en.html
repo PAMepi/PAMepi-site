@@ -544,7 +544,7 @@
           id="tableDecretos"
           cellpadding="2"
           cellspacing="2"
-          border="1"
+          border="0"
           class="table-data data"
         >
           <thead></thead>
@@ -760,9 +760,9 @@
             cell.innerHTML = cellValue(lin, col, data);
           }
         }
-        if (index === 0) {
-          DoubleScroll(document.getElementById('tableDecretos'));
-        }
+        // if (index === 0) {
+        //   DoubleScroll(document.getElementById('tableDecretos'));
+        // }
       }
 
       function colValue(col, data, i) {
@@ -826,33 +826,33 @@
         return '-';
       }
 
-      function DoubleScroll(element) {
-        var scrollbar = document.createElement('div');
-        scrollbar.appendChild(document.createElement('div'));
-        scrollbar.style.overflow = 'auto';
-        scrollbar.style.overflowY = 'hidden';
-        scrollbar.firstChild.style.width = element.scrollWidth + 'px';
-        scrollbar.firstChild.style.paddingTop = '1px';
-        scrollbar.firstChild.appendChild(document.createTextNode('\xA0'));
-        var running = false;
-        scrollbar.onscroll = function () {
-          if (running) {
-            running = false;
-            return;
-          }
-          running = true;
-          element.scrollLeft = scrollbar.scrollLeft;
-        };
-        element.onscroll = function () {
-          if (running) {
-            running = false;
-            return;
-          }
-          running = true;
-          scrollbar.scrollLeft = element.scrollLeft;
-        };
-        element.parentNode.insertBefore(scrollbar, element);
-      }
+      // function DoubleScroll(element) {
+      //   var scrollbar = document.createElement('div');
+      //   scrollbar.appendChild(document.createElement('div'));
+      //   scrollbar.style.overflow = 'auto';
+      //   // scrollbar.style.overflowY = 'hidden';
+      //   scrollbar.firstChild.style.width = element.scrollWidth + 'px';
+      //   scrollbar.firstChild.style.paddingTop = '1px';
+      //   scrollbar.firstChild.appendChild(document.createTextNode('\xA0'));
+      //   var running = false;
+      //   scrollbar.onscroll = function () {
+      //     if (running) {
+      //       running = false;
+      //       return;
+      //     }
+      //     running = true;
+      //     element.scrollLeft = scrollbar.scrollLeft;
+      //   };
+      //   element.onscroll = function () {
+      //     if (running) {
+      //       running = false;
+      //       return;
+      //     }
+      //     running = true;
+      //     scrollbar.scrollLeft = element.scrollLeft;
+      //   };
+      //   element.parentNode.insertBefore(scrollbar, element);
+      // }
 
       function sortTable() {
         const getCellValue = (tr, idx) =>
