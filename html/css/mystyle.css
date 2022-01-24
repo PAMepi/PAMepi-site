@@ -380,6 +380,10 @@ nav {
 .cite {
   font-size: 1rem;
   font-weight: 900;
+  color: #222831;
+}
+.div-cite {
+  line-height: 1.1;
 }
 
 .img-fiocruz {
@@ -455,13 +459,24 @@ hr {
   font-weight: 900;
   font-size: 1.4rem;
   font-family: 'Raleway', sans-serif;
-  padding-top: 2rem;
+  padding: 0;
+  margin-top: 2rem;
 }
 
 #artigos {
   background-color: #fff;
   margin-top: 1rem;
 }
+
+ol li::marker {
+  font-weight: 900;
+  font-size: 1.4rem;
+  font-family: 'Raleway', sans-serif;
+  color: #dd6731;
+  margin-left: -1em;
+  display: inline-block;
+}
+
 .w3-blue-grey {
   background-color: #892e2c !important;
 }
@@ -1080,7 +1095,7 @@ a {
 
 a:hover {
   text-decoration: none;
-  color: #9a4219;
+  color: #c55420;
 }
 
 @media only screen and (max-width: 992px) {
