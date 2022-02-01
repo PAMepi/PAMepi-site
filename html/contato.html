@@ -727,7 +727,8 @@
 
       function stopVideo() {
         videoPlayer.style.display = 'none';
-        $('.embed-responsive-item').each(function (index) {
+
+        $('#myVideo').each(function (index) {
           $(this).attr('src', $(this).attr('src'));
           return false;
         });
@@ -745,7 +746,8 @@
 
       function stopVideo1() {
         videoPlayer1.style.display = 'none';
-        $('.embed-responsive-item').each(function (index) {
+
+        $('#myVideo1').each(function (index) {
           $(this).attr('src', $(this).attr('src'));
           return false;
         });
