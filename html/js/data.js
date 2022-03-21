@@ -1722,34 +1722,34 @@ const dicSRAG = [
     Coluna: 'ID_REGIONA OU CO_REGIONA',
   },
   {
-    'Nome do campo': '5-Unidade de Saúde Código (CNES)',
+    'Nome do campo': 'Unidade de Saúde com 5 Códigos (CNES)',
     Tipo: 'Varchar2(7)',
     Categoria:
-      'Tabela com códigos CNES e nomes das Unidades Sentinelas cadastradas no sistema.',
+      'Tabela com códigos do CNES e nomes das Unidades Sentinela cadastradas no sistema.',
     Descrição:
-      'Unidade Sentinela que realizou o atendimento, coleta de amostra e registro do caso.',
+      'Unidade Sentinela que realizou o atendimento, coleta de amostras e registro de casos.',
     Características:
-      'Campo Obrigatório  <br> Preenchendo o nome da unidade, o código é preenchido automaticamente, e vice-versa; <br>Se usuário que está digitando a ficha for de nível: <br>Unidade Sentinela - o campo é preenchido automaticamente pelo sistema. <br>Municipal – abre tabela apenas com as unidades sentinelas do município. Estadual ou Federal – abre tabela com as unidades sentinelas do município selecionado o campo 4.',
-    Coluna: 'ID_UNIDADE OU CO_UNI_NOT',
+      'Campo obrigatório <br> Preenchendo o nome da unidade, o código é preenchido automaticamente e vice-versa; <br>Se o usuário que está digitando o formulário for um nível: <br>Unidade Sentinela - o campo é preenchido automaticamente pelo sistema. <br>Municipal – abre uma tabela apenas com as unidades sentinelas do município. Estadual ou Federal - abre uma tabela com as unidades sentinelas do município selecionadas no campo 4.',
+    Coluna: 'UNIT_ID OU CO_UNI_NOT',
   },
   {
-    'Nome do campo': '6- Tem CPF?',
+    'Nome do campo': '6- Você tem CPF?',
     Tipo: 'Varchar(1)',
     Categoria: 'Sim / Não',
     Descrição:
-      'Informar se o paciente notificado dispõe de Número do Cadastro de Pessoa Física (CPF)',
+      'Informar se o paciente notificado possui Cadastro de Pessoa Física (CPF)',
     Características:
-      'Campo Obrigatório  <br> Se selecionado “Sim”, preencher campo “CPF”. <br>Se selecionado “Não” preencher CNS. <br>Se o paciente não dispor de CPF é obrigatório o preenchimento do CNS. No caso de pacientes raça/cor indígenas, somente o CNS é considerado como campo obrigatório.',
+      'Campo obrigatório <br> Se selecionado “Sim”, preencha o campo “CPF”. <br>Se selecionado “Não”, preencha CNS. <br>Caso o paciente não possua CPF, é obrigatório o preenchimento do CNS. No caso de pacientes de raça/cor indígena, apenas o CNS é considerado campo obrigatório.',
     Coluna: 'TEM_CPF',
   },
   {
-    'Nome do campo': '7-CPF do paciente',
+    'Nome do campo': '7- CPF do paciente',
     Tipo: 'Varchar2(15)',
     Categoria: 'Numérico (11 dígitos)',
     Descrição:
-      'Número do Cadastro de Pessoa Física (CPF) do paciente notificado',
+      'Número do Cadastro de Pessoas Físicas (CPF) do paciente notificado',
     Características:
-      'Campo Obrigatório  <br> Quando preenchido o número do CPF o sistema deverá preencher o Nome, Sexo, Data de Nascimento, Idade, Raça/Cor e o nome da mãe do paciente.',
+      'Campo obrigatório <br> Ao preencher o número do CPF, o sistema deve preencher o Nome, Gênero, Data de Nascimento, Idade, Raça/Cor e o nome da mãe do paciente.',
     Coluna: 'NU_CPF',
   },
   {
@@ -1758,7 +1758,7 @@ const dicSRAG = [
     Categoria: 'Sim / Não',
     Descrição: 'Informar se o paciente é estrangeiro',
     Características:
-      'Campo Obrigatório  <br> Se selecionado “Sim”, o campo CPF e CNS, deixa de ser obrigatório.',
+      'Campo obrigatório <br> Se selecionado “Sim”, o campo CPF e CNS não é mais obrigatório.',
     Coluna: 'ESTRANG',
   },
   {
@@ -1766,32 +1766,32 @@ const dicSRAG = [
     Tipo: 'Varchar2(15)',
     Categoria: 'Numérico (14 dígitos)',
     Descrição: 'Preencher com o número do Cartão Nacional de Saúde do paciente',
-    Características: 'Campo Obrigatório  <br>',
+    Características: 'Campo obrigatório <br>',
     Coluna: 'NU_CNS',
   },
   {
     'Nome do campo': '10-Nome',
     Tipo: 'Varchar2(70)',
     Categoria: '',
-    Descrição: 'Nome completo do paciente (sem abreviações)',
-    Características: 'Campo Obrigatório  <br>',
+    Descrição: 'Nome completo do paciente (sem abreviaturas)',
+    Características: 'Campo obrigatório <br>',
     Coluna: 'NM_PACIENT',
   },
   {
-    'Nome do campo': '11-Sexo',
-    Tipo: 'Varchar2 (1)',
+    'Nome do campo': '11-Gender',
+    Tipo: 'Varchar2(1)',
     Categoria: '1-Masculino, 2-Feminino, 9-Ignorado',
     Descrição: 'Sexo do paciente.',
-    Características: 'Campo Obrigatório  <br>',
+    Características: 'Campo obrigatório <br>',
     Coluna: 'CS_SEXO',
   },
   {
     'Nome do campo': '12-Data de nascimento',
-    Tipo: 'Date DD/MM/AAAA',
+    Tipo: 'Data DD/MM/AAAA',
     Categoria: '',
     Descrição: 'Data de nascimento do paciente.',
     Características:
-      'Campo Essencial Data deve ser <= a data dos primeiros sintomas.',
+      'O campo Data essencial deve ser <= a data dos primeiros sintomas.',
     Coluna: 'DT_NASC',
   },
   {
@@ -3226,6 +3226,1574 @@ const dicSRAG = [
   return x < y ? -1 : x > y ? 1 : 0;
 });
 
+const dicSRAGEn = [
+  {
+    'Field name': 'No.',
+    Type: 'Varchar2(12)',
+    Category: '',
+    Description: 'Record number',
+    Characteristics:
+      'Internal Field <br>Sequential number automatically generated by the system. <br>Use the pattern: <br>320120000123 <br>Digit 1: characterizes the type of record (1=SG, 2=SRAG-ICU and 3-SRAG Hospitalized). <br>Digits 2 to 12: sequential number generated automatically by the system.',
+    Column: 'NU_NOTIFIC',
+  },
+  {
+    'Field name': '1-Date of filling out the notification form',
+    Type: 'Date DD/MM/YYYY',
+    Category: '',
+    Description: 'Date of filling out the notification form.',
+    Characteristics: 'Required field <br> Date must be <= the date entered.',
+    Column: 'DT_NOTIFIC',
+  },
+  {
+    'Field name': 'Epidemiological week for filling in the notification form',
+    Type: 'Varchar2(6)',
+    Category: '',
+    Description: 'Epidemiological week of filling out the notification form.',
+    Characteristics:
+      'Internal Field <br>Calculated from the date of First Symptoms. (SS)',
+    Column: 'SEM_NOT',
+  },
+  {
+    'Field name': '2-Date of 1st symptoms',
+    Type: 'Date DD/MM/YYYY',
+    Category: '',
+    Description: 'Date of 1st case symptoms.',
+    Characteristics:
+      'Required field <br> Date must be <= the date of typing and date of filling out the notification form',
+    Column: 'DT_SIN_PRI',
+  },
+  {
+    'Field name': 'Epidemiological Week of First Symptoms',
+    Type: 'Varchar2(6)',
+    Category: '',
+    Description: 'Epidemiological week of symptom onset.',
+    Characteristics:
+      'Internal Field <br>Calculated from the date of First Symptoms. (SS)',
+    Column: 'SEM_PRI',
+  },
+  {
+    'Field name': '3-UF',
+    Type: 'Varchar2(2)',
+    Category: 'Table with UF code and acronyms standardized by IBGE.',
+    Description:
+      'Federal Unit where the Sentinel Unit that made the notification is located.',
+    Characteristics:
+      'Required field <br> If the user who is typing the form is of the following level: <br>Sentinel Unit - the field is automatically filled in by the system with the UF, municipality and unit where the user is registered. <br>Municipal – the field is automatically filled in by the system with the State and municipality where the user is registered. <br>State – the field is automatically filled in by the system with the user s UF. <br> Federal - opens a table with all the FUs that have sentinel units registered in the system.',
+    Column: 'SG_UF_NOT',
+  },
+  {
+    'Field name': '4-Municipality Code (IBGE)',
+    Type: 'Varchar2(6)',
+    Category:
+      'Table with code and names of Municipalities standardized by IBGE.',
+    Description:
+      'Municipality where the Sentinel Unit that made the notification is located.',
+    Characteristics:
+      'Required field <br> By filling in the name of the notification municipality, the code is automatically filled in, and vice versa; <br>If the user who is typing the form is of the following level: <br>Sentinel Unit – the field is automatically filled in by the system with the Municipality where the notification unit is located. <br>Municipal – the field is automatically filled in by the system with the user s municipality. State or Federal – opens a table with all the municipalities of the FU selected in field 3 that have sentinel units registered in the system.',
+    Column: 'ID_MUNICIP OU CO_MUN_NOT',
+  },
+  {
+    'Field name': 'Regional Health Notification Code (IBGE)',
+    Type: 'Varchar2(6)',
+    Category:
+      'Table with code and names of the Health Regionals of the reporting municipalities standardized by the IBGE.',
+    Description:
+      'Health Region where the Municipality is located made the notification.',
+    Characteristics:
+      'Internal Field <br>Filling in the name of the regional health notification, the code is automatically filled in, and vice versa; <br>If the user who is typing the form is of the following level: <br>Sentinel Unit – the field is automatically filled in by the system with the Regional of the Municipality where the notification unit is located. <br>Municipal – the field is automatically filled in by the system with the regional of the user s municipality.',
+    Column: 'ID_REGIONA OU CO_REGIONA',
+  },
+  {
+    'Field name': '5-Code Health Unit (CNES)',
+    Type: 'Varchar2(7)',
+    Category:
+      'Table with CNES codes and names of Sentinel Units registered in the system.',
+    Description:
+      'Sentinel Unit that performed the service, sample collection and case registration.',
+    Characteristics:
+      'Required field <br> Filling in the unit name, the code is filled automatically, and vice versa; <br>If the user who is typing the form is a level: <br>Sentinel Unit - the field is automatically filled in by the system. <br>Municipal – opens a table with only the sentinel units in the municipality. State or Federal – opens a table with the sentinel units of the municipality selected in field 4.',
+    Column: 'ID_UNIDADE OU CO_UNI_NOT',
+  },
+  {
+    'Field name': '6- Do you have CPF?',
+    Type: 'Varchar(1)',
+    Category: 'Yes / No',
+    Description:
+      'Inform if the notified patient has an Individual Taxpayer Registration Number (CPF)',
+    Characteristics:
+      'Required field <br> If selected “Yes”, fill in the “CPF” field. <br>If selected “No”, fill in CNS. <br>If the patient does not have a CPF, it is mandatory to fill in the CNS. In the case of patients of indigenous race/color, only the CNS is considered a mandatory field.',
+    Column: 'TEM_CPF',
+  },
+  {
+    'Field name': '7-Patient CPF',
+    Type: 'Varchar2(15)',
+    Category: 'Numeric (11 digits)',
+    Description:
+      'Number of the Register of Individuals (CPF) of the notified patient',
+    Characteristics:
+      'Required field <br> When filling in the CPF number, the system must fill in the Name, Gender, Date of Birth, Age, Race/Color and the name of the patient s mother.',
+    Column: 'NU_CPF',
+  },
+  {
+    'Field name': '8- Foreign',
+    Type: 'Varchar(1)',
+    Category: 'Yes / No',
+    Description: 'Inform if the patient is a foreigner',
+    Characteristics:
+      'Required field <br> If selected “Yes”, the CPF and CNS field is no longer mandatory.',
+    Column: 'ESTRANG',
+  },
+  {
+    'Field name': '9- National Health Card (CNS)',
+    Type: 'Varchar2(15)',
+    Category: 'Numeric (14 digits)',
+    Description: 'Fill in with the patient s National Health Card number',
+    Features: 'Required field <br>',
+    Column: 'NU_CNS',
+  },
+  {
+    'Field name': '10-Name',
+    Type: 'Varchar2(70)',
+    Category: '',
+    Description: 'Patient s full name (no abbreviations)',
+    Features: 'Required field <br>',
+    Column: 'NM_PACIENT',
+  },
+  {
+    'Field name': '11-Gender',
+    Type: 'Varchar2(1)',
+    Category: '1-Male, 2-Female, 9-Ignored',
+    Description: 'Patient s gender.',
+    Features: 'Required field <br>',
+    Column: 'CS_SEXO',
+  },
+  {
+    'Field name': '12-Date of birth',
+    Type: 'Date DD/MM/YYYY',
+    Category: '',
+    Description: 'Patient s date of birth.',
+    Characteristics:
+      'Essential Date field must be <= the date of the first symptoms.',
+    Column: 'DT_NASC',
+  },
+  {
+    'Field name': '13-(or) Age',
+    Type: 'Varchar2(3)',
+    Category: '',
+    Description:
+      'Age informed by the patient when the date of birth is not known. In the absence of this data, the apparent age is recorded.',
+    Characteristics:
+      'Required field <br> If the date of birth is entered, the age is calculated and automatically filled in by the system: considering the interval between the date of birth and the date of the first symptoms. Age must be <= 150.',
+    Column: 'NU_IDADE_N',
+  },
+  {
+    'Field name': '(or) Type/Age',
+    Type: 'Varchar2(1)',
+    Category: '1-Day, 2-Month, 3-Year',
+    Description: '',
+    Characteristics:
+      'Required Field <br> If the date of birth is entered, the Age/Type field is automatically calculated and filled in by the system: considering the interval between the date of birth and the date of the first symptoms. <br>If the difference is from 0 to 30 days, the system writes in Age = (nº of days) and in Type = 1-Day. For example: if Date of birth = 05/12/2012 and Date of 1st symptoms = 11/12/2012, then Age = 6 and Type = 1-Day. <br>If the difference is from 1 to 11 months, the system writes in Age = (nº months) and in Type = 2-Month. For example: if Date of birth = 05/10/2012 and Date of 1st symptoms = 11/12/2012, then Age = 2 and Type = 2-Month. <br>If the difference is greater than or equal to 12 months, the system writes in Age = (nº years) and in Type = 3-Year. For example: if Date of birth = 05/10/2011 and Date of 1st symptoms = 11/12/2012, then Age = 1 and Type = 3-Year.',
+    Column: 'TP_IDADE',
+  },
+  {
+    'Field name': '14-Pregnant',
+    Type: 'Varchar2(1)',
+    Category:
+      '1-1st Trimester, 2-2nd Trimester, 3-3rd Trimester <br>4-Gestational Age Unknown, 5-No<br> 6-Not Applicable, 9-Ignored',
+    Description: 'Gestational age of the patient.',
+    Characteristics:
+      'Required field <br> If category 2-Female is selected in the Gender field. <br>If you select gender equal to Male or age less or equal to 9 years, the field is automatically filled in with 6-Not applicable. <br>If selected gender equals Female and age greater than 9 years, the field cannot be filled with 6-Not applicable.',
+    Column: 'CS_GESTANT',
+  },
+  {
+    'Field name': '15-Race/Color',
+    Type: 'Varchar2(2)',
+    Category:
+      '1-White, 2-Black, 3-Yellow <br> 4-Brown, 5-Indigenous, 9-Ignored',
+    Description:
+      'Color or race declared by the patient: White; black; Yellow; Brown (person who declared himself to be mulatto, cabocla, cafuza, mameluca or mestizo de preto with a person of another color or race); and, Indigenous.',
+    Features: 'Required field <br>',
+    Column: 'CS_RACA',
+  },
+  {
+    'Field name': '16-If indigenous, which ethnicity?',
+    Type: 'Varchar2(4)',
+    Category: 'SIASI table with code and names of indigenous ethnicities.',
+    Description: 'Patient s name and ethnicity code, when indigenous.',
+    Characteristics:
+      'Essential Field<br> Enabled if field 11-Race/Color equals 5-Indigenous.',
+    Column: 'CS_ETINIA',
+  },
+  {
+    'Field name': '17- Are you a member of a traditional people or community?',
+    Type: 'Varchar 2(1)',
+    Category: 'Yes / No',
+    Description:
+      'Inform if the patient is a member of some traditional people or community',
+    Features: 'Required field <br>',
+    Column: 'POV_CT',
+  },
+  {
+    'Field name': '18- If yes, which one?',
+    Type: 'Varchar 2(100)',
+    Category: 'Table of Traditional Peoples and Communities',
+    Description: 'Inform the people or traditional community',
+    Characteristics:
+      'Mandatory field <br>- Enabled if field 13- Are you a member of a traditional people or community? is equal to 1- Yes',
+    Column: 'TP_POV_CT',
+  },
+  {
+    'Field name': '19-School',
+    Type: 'Varchar2(1)',
+    Category:
+      '0-No schooling/Illiterate <br> 1- Elementary 1st cycle (1st to 5th grade)<br> 2- Elementary 2nd cycle (6th to 9th grade)<br> 3- Middle (1st to 3rd year), 4- Superior<br> 5-Not applicable, 9-Ignored',
+    Description:
+      'Patient s education level. For elementary and middle levels, the last grade or year completed should be considered.',
+    Characteristics:
+      'Essential Field<br> Auto-populated with category “does not apply” when age is less than 7 years When age is greater than 7 years, the field cannot be filled with “does not apply”.',
+    Column: 'CS_ESCOL_N',
+  },
+  {
+    'Field name': '20- Occupation',
+    Type: 'Varchar2(6)',
+    Category:
+      'Table with Occupation code of the Brazilian Classification of Occupations (CBO).',
+    Description: 'Professional occupation of the patient',
+    Features: 'Essential Field',
+    Column: 'PAC_COCBO ou PAC_DSCBO',
+  },
+
+  {
+    'Field name': '21-Mother s name',
+    Type: 'Varchar2(70)',
+    Category: '',
+    Description: 'Full name of the patient s mother (no abbreviations).',
+    Features: 'Essential Field',
+    Column: 'NM_MAE_PAC',
+  },
+  {
+    'Field name': '22-CEP',
+    Type: 'Varchar2(8)',
+    Category: '',
+    Description: 'Patient s zip code.',
+    Characteristics:
+      'Essential Field<br> Validated from the postal code table.',
+    Column: 'NU_CEP',
+  },
+  {
+    'Field name': '23-UF',
+    Type: 'Varchar2(2)',
+    Category: 'Table with UF code and acronyms standardized by IBGE.',
+    Description: 'Federal unit of residence of the patient.',
+    Characteristics:
+      'Required field <br> If field 25-Country is Brazil. <br>If the CEP field is filled in, the UF is automatically filled in by the system and disabled for editing.',
+    Column: 'SG_UF',
+  },
+  {
+    'Field name': 'Regional Health Residence Code (IBGE)',
+    Type: 'Varchar2(6)',
+    Category:
+      'Table with code and names of the Health Regionals of the municipalities of residence standardized by the IBGE.',
+    Description:
+      'Health Region where the patient s city of residence is located.',
+    Characteristics:
+      'Internal Field <br>Filling in the name of the health regional of residence, the code is automatically filled in, and vice versa;',
+    Column: 'ID_RG_RESI OU CO_RG_RESI',
+  },
+  {
+    'Field name': '24-Municipality Code (IBGE)',
+    Type: 'Varchar2(6)',
+    Category:
+      'Table with code and name of Municipalities standardized by IBGE.',
+    Description: 'City of residence of the patient.',
+    Characteristics:
+      'Required field <br> If field 25-Country is Brazil. <br>If the CEP field is filled in, the Municipality and its respective IBGE code are automatically filled in by the system and disabled for editing. <br>If the CEP is not filled in, the field is enabled after selecting a UF in field 17. In this case, the system opens a table with the municipalities of the UF. By filling in the name of the municipality, the code is automatically filled in, or vice versa.',
+    Column: 'ID_MN_RESI OU CO_MUN_RES',
+  },
+  {
+    'Field name': '25-Neighborhood',
+    Type: 'Varchar2(72)',
+    Category:
+      'Table with code and name of Neighborhoods standardized by Correios.',
+    Description: 'Neighborhood of the patient s residence.',
+    Characteristics:
+      'Essential Field<br> If the CEP field is filled in, the Neighborhood is automatically filled in by the system.',
+    Column: 'NM_BAIRRO',
+  },
+  {
+    'Field name': '26-Address (Street, Avenue, etc.)',
+    Type: 'Varchar2(50)',
+    Category:
+      'Table with code and name of public places standardized by the Post Office.',
+    Description:
+      'Place (street, avenue, block, lane, etc.) of the patient s home address.',
+    Characteristics:
+      'Essential Field<br> If the CEP field is filled in, the street is automatically filled in by the system.',
+    Column: 'NM_LOGRADO',
+  },
+  {
+    'Field name': '27-No',
+    Type: 'Varchar2(8)',
+    Category: '',
+    Description: 'Number of the street (house or building number).',
+    Features: 'Essential Field',
+    Column: 'NU_NUMERO',
+  },
+  {
+    'Field name': '28-Complement (apt, house, etc.)',
+    Type: 'Varchar2(15)',
+    Category: '',
+    Description: 'Place complement (block, apartment, house, etc.).',
+    Features: 'Essential Field',
+    Column: 'NM_COMPLEM',
+  },
+  {
+    'Field name': '29-(DDD) Telephone',
+    Type: 'Varchar2(4) Varchar2(10)',
+    Category: '',
+    Description: 'DDD code and patient contact telephone number.',
+    Features: 'Essential Field',
+    Column: 'NU_DDD_TEL OU NU_TELEFON',
+  },
+  {
+    'Field name': '30-Zone',
+    Type: 'Varchar2(1)',
+    Category: '1-Urban, 2-Rural, 3-Periurban, 9-Ignored',
+    Description: 'Geographical zone of the patient s home address.',
+    Features: 'Essential Field',
+    Column: 'CS_ZONA',
+  },
+  {
+    'Field name': '31-Country (if residing outside Brazil)',
+    Type: 'Varchar2(3)',
+    Category: 'Table with country code and name.',
+    Description: 'Patient s country of residence.',
+    Characteristics:
+      'Required field <br> If the CEP is filled in, or a State is selected, the Country field is automatically filled in by the system and disabled for editing. <br>If Country other than Brazil is selected, fields 17 to 23 are disabled.',
+    Column: 'ID_PAIS OU CO_PAIS',
+  },
+  {
+    'Field name': '32-Is this a nosocomial case (hospital acquired infection)?',
+    Type: 'Varchar2(1)',
+    Category: '1-Yes, 2-No, 9-Ignored',
+    Description: 'Case of SARS with infection acquired after hospitalization.',
+    Characteristics:
+      'Essential Field<br> When field 33 is equal to 1, it is allowed to enter the date of onset of symptoms after the date of hospitalization.',
+    Column: 'NOSOCOMIAL',
+  },
+  {
+    'Field name':
+      '33- Does the patient work or have direct contact with birds, pigs, or other animals?',
+    Type: 'Varchar2(1)',
+    Category: '1-Yes, 2-No, 9-Ignored',
+    Description: 'Case with direct contact with poultry or swine.',
+    Features: 'Essential Field',
+    Column: 'AVE_SUINO',
+  },
+  {
+    'Field name':
+      '33-Patient works or has direct contact with poultry, swine/Other animal (specify)',
+    Type: 'Varchar2(60)',
+    Category: '',
+    Description:
+      'Inform the animal that the patient had contact if option 3 was selected.',
+    Characteristics:
+      'Essential Field<br> Enabled field 34- Contact with another animal = 3 (Other).',
+    Column: 'OUT_ANIM',
+  },
+  {
+    'Field name': '34-Signs and Symptoms/Fever',
+    Type: 'Varchar2(1)',
+    Category: '1-Yes, 2-No, 9-Ignored',
+    Description: 'Does the patient have a fever?',
+    Features: 'Essential Field',
+    Column: 'FEBRE',
+  },
+  {
+    'Field name': '34-Signs and Symptoms/Cough',
+    Type: 'Varchar2(1)',
+    Category: '1-Yes, 2-No, 9-Ignored',
+    Description: 'Has the patient coughed?',
+    Features: 'Essential Field',
+    Column: 'TOSSE',
+  },
+  {
+    'Field name': '34-Signs and Symptoms/Sore Throat',
+    Type: 'Varchar2(1)',
+    Category: '1-Yes, 2-No, 9-Ignored',
+    Description: 'Has the patient had a sore throat?',
+    Features: 'Essential Field',
+    Column: 'GARGANTA',
+  },
+  {
+    'Field name': '34-Signs and Symptoms/Dyspnea',
+    Type: 'Varchar2(1)',
+    Category: '1-Yes, 2-No, 9-Ignored',
+    Description: 'Did the patient have dyspnea?',
+    Features: 'Essential Field',
+    Column: 'DISPNEIA',
+  },
+  {
+    'Field name': '34-Signs and Symptoms/Respiratory Discomfort',
+    Type: 'Varchar2(1)',
+    Category: '1-Yes, 2-No, 9-Ignored',
+    Description: 'Did the patient experience respiratory distress?',
+    Features: 'Essential Field',
+    Column: 'DESC_RESP',
+  },
+  {
+    'Field name': '34-Signs and Symptoms/O2 Saturation< 95%',
+    Type: 'Varchar2(1)',
+    Category: '1-Yes, 2-No, 9-Ignored',
+    Description: 'Patient presented O2 saturation < 95%?',
+    Features: 'Essential Field',
+    Column: 'SATURACAO',
+  },
+  {
+    'Field name': '34-Signs and Symptoms/Diarrhea',
+    Type: 'Varchar2(1)',
+    Category: '1-Yes, 2-No, 9-Ignored',
+    Description: 'Has the patient had diarrhea?',
+    Features: 'Essential Field',
+    Column: 'DIARREIA',
+  },
+  {
+    'Field name': '34-Signs and Symptoms/Vomiting',
+    Type: 'Varchar2(1)',
+    Category: '1-Yes, 2-No, 9-Ignored',
+    Description: 'Patient vomited?',
+    Features: 'Essential Field',
+    Column: 'VOMITO',
+  },
+  {
+    'Field name': '34-Signs and Symptoms/Abdominal pain',
+    Type: 'Varchar2(1)',
+    Category: '1-Yes, 2-No, 9-Ignored',
+    Description: 'Did the patient have abdominal pain?',
+    Features: 'Essential Field',
+    Column: 'DOR_ABD',
+  },
+  {
+    'Field name': '34-Signs and Symptoms/Fatigue',
+    Type: 'Varchar2(1)',
+    Category: '1-Yes, 2-No, 9-Ignored',
+    Description: 'Does the patient experience fatigue?',
+    Features: 'Essential Field',
+    Column: 'FADIGA',
+  },
+  {
+    'Field name': '34-Signs and Symptoms/Loss of Smell',
+    Type: 'Varchar2(1)',
+    Category: '1-Yes, 2-No, 9-Ignored',
+    Description: 'Does the patient experience loss of smell?',
+    Features: 'Essential Field',
+    Column: 'PERD_OLFT',
+  },
+  {
+    'Field name': '34-Signs and Symptoms/Taste Loss',
+    Type: 'Varchar2(1)',
+    Category: '1-Yes, 2-No, 9-Ignored',
+    Description: 'Has the patient experienced loss of taste?',
+    Features: 'Essential Field',
+    Column: 'PERD_PALA',
+  },
+  {
+    'Field name': '34-Signs and Symptoms/Others',
+    Type: 'Varchar2(1)',
+    Category: '1-Yes, 2-No, 9-Ignored',
+    Description: 'Has the patient presented other symptom(s)?',
+    Features: 'Essential Field',
+    Column: 'OUTRO_SIN',
+  },
+  {
+    'Field name': '34-Signs and Symptoms/Others (Description)',
+    Type: 'Varchar2(30)',
+    Category: '',
+    Description: 'List other signs and symptoms presented by the patient.',
+    Characteristics:
+      'Essential Field<br> Enabled if selected category 1-Yes in Signs and Symptoms/Others.',
+    Column: 'OUTRO_DES',
+  },
+
+  {
+    'Field name': '35-Risk factors',
+    Type: 'Varchar2(1)',
+    Category: '1-Yes, 2-No, 9-Ignored',
+    Description: 'Patient presents some risk factor',
+    Features: 'Essential Field',
+    Column: 'FATOR_RISC',
+  },
+  {
+    'Field name': '35-Risk Factors/Postpartum',
+    Type: 'Varchar2(1)',
+    Category: '1-Yes, 2-No, 9-Ignored',
+    Description:
+      'Is the patient postpartum or parturient (woman who gave birth recently – within 45 days of delivery)?',
+    Characteristics:
+      'Essential Field<br> Enabled if selected in field 8- Female Gender.',
+    Column: 'PUERPERA',
+  },
+  {
+    'Field name': '35-Risk Factors/Chronic Cardiovascular Disease',
+    Type: 'Varchar2(1)',
+    Category: '1-Yes, 2-No, 9-Ignored',
+    Description: 'Does the patient have Chronic Cardiovascular Disease?',
+    Features: 'Essential Field',
+    Column: 'CARDIOPATI',
+  },
+  {
+    'Field name': '35-Risk Factors/Chronic Hematologic Disease',
+    Type: 'Varchar2(1)',
+    Category: '1-Yes, 2-No, 9-Ignored',
+    Description: 'Does the patient have a Chronic Hematologic Disease?',
+    Features: 'Essential Field',
+    Column: 'HEMATOLOGI',
+  },
+  {
+    'Field name': '35-Risk Factors/Down Syndrome',
+    Type: 'Varchar2(1)',
+    Category: '1-Yes, 2-No, 9-Ignored',
+    Description: 'Does patient have Down Syndrome?',
+    Features: 'Essential Field',
+    Column: 'SIND_DOWN',
+  },
+  {
+    'Field name': '35-Risk Factors/Chronic Liver Disease',
+    Type: 'Varchar2(1)',
+    Category: '1-Yes, 2-No, 9-Ignored',
+    Description: 'Does patient have Chronic Liver Disease?',
+    Features: 'Essential Field',
+    Column: 'HEPATICA',
+  },
+  {
+    'Field name': '35-Risk factors/Asthma',
+    Type: 'Varchar2(1)',
+    Category: '1-Yes, 2-No, 9-Ignored',
+    Description: 'Does patient have Asthma?',
+    Features: 'Essential Field',
+    Column: 'ASMA',
+  },
+  {
+    'Field name': '35-Risk factors/Diabetes mellitus',
+    Type: 'Varchar2(1)',
+    Category: '1-Yes, 2-No, 9-Ignored',
+    Description: 'Does the patient have Diabetes mellitus?',
+    Features: 'Essential Field',
+    Column: 'DIABETES',
+  },
+  {
+    'Field name': '35-Risk Factors/Chronic Neurological Disease',
+    Type: 'Varchar2(1)',
+    Category: '1-Yes, 2-No, 9-Ignored',
+    Description: 'Patient has Neurological Disease?',
+    Features: 'Essential Field',
+    Column: 'NEUROLOGIC',
+  },
+  {
+    'Field name': '35-Risk Factors/Other Chronic Pneumatopathy',
+    Type: 'Varchar2(1)',
+    Category: '1-Yes, 2-No, 9-Ignored',
+    Description: 'Does the patient have another chronic lung disease?',
+    Features: 'Essential Field',
+    Column: 'PNEUMOPATI',
+  },
+  {
+    'Field name': '35-Risk Factors/Immunodeficiency or Immunodepression',
+    Type: 'Varchar2(1)',
+    Category: '1-Yes, 2-No, 9-Ignored',
+    Description:
+      'Patient has Immunodeficiency or Immunodepression (decreased immune system function)?',
+    Features: 'Essential Field',
+    Column: 'IMUNODEPRE',
+  },
+
+  {
+    'Field name': '35-Risk Factors/Chronic Kidney Disease',
+    Type: 'Varchar2(1)',
+    Category: '1-Yes, 2-No, 9-Ignored',
+    Description: 'Does the patient have Chronic Kidney Disease?',
+    Features: 'Essential Field',
+    Column: 'RENAL',
+  },
+  {
+    'Field name': '35-Risk factors/Obesity',
+    Type: 'Varchar2(1)',
+    Category: '1-Yes, 2-No, 9-Ignored',
+    Description: 'Does patient have obesity?',
+    Features: 'Essential Field',
+    Column: 'OBESIDADE',
+  },
+  {
+    'Field name': '35-Risk Factors/Obesity (BMI Description)',
+    Type: 'Varchar2(3)',
+    Category: '',
+    Description:
+      'The patient s BMI (Body Mass Index) value calculated by the healthcare professional.',
+    Characteristics:
+      'Essential Field<br>Enabled if selected category 1-Yes in Risk Factors/Obesity.',
+    Column: 'OBES_IMC',
+  },
+  {
+    'Field name': '35-Risk Factors/Others',
+    Type: 'Varchar2(1)',
+    Category: '1-Yes, 2-No, 9-Ignored',
+    Description: 'Does the patient have other risk factor(s)?',
+    Features: 'Essential Field',
+    Column: 'OUT_MORBI',
+  },
+  {
+    'Field name': '35-Risk Factors/Others (Description)',
+    Type: 'Varchar2(30)',
+    Category: '',
+    Description: 'List other risk factor(s) for the patient.',
+    Characteristics:
+      'Essential Field<br>- Enabled if selected category 1-Yes in Risk Factors/Others.',
+    Column: 'MORB_DESC',
+  },
+  {
+    'Field name': '36- Did you receive COVID-19 vaccine?',
+    Type: 'Varchar(1)',
+    Category: '1-Yes, 2-No, 9-Ignored',
+    Description:
+      'Inform if the patient received COVID-19 vaccine, after checking the documentation / booklet.',
+    Features: 'Required field <br>',
+    Column: 'VACINA_COV',
+  },
+  {
+    'Field name':
+      '37- If you received COVID-19 vaccine, inform: Date of 1st dose',
+    Type: 'Varchar(10)',
+    Category: 'Date DD/MM/YYYY',
+    Description:
+      'Inform the date on which the patient received the 1st dose of the COVID-19 vaccine',
+    Characteristics:
+      'Essential field<br> Enabled if field 36- Did you receive COVID-19 vaccine? is equal to 1.',
+    Column: 'DOSE_1_COV',
+  },
+  {
+    'Field name':
+      '37- If you received COVID-19 vaccine, inform: Date of 2nd dose',
+    Type: 'Varchar(10)',
+    Category: 'Date DD/MM/YYYY',
+    Description:
+      'Inform the date on which the patient received the 2nd dose of the COVID-19 vaccine',
+    Characteristics:
+      'Essential field<br> Enabled if field 36- Did you receive COVID-19 vaccine? is equal to 1.',
+    Column: 'DOSE_2_COV',
+  },
+  {
+    'Field name': '38- Laboratory Producer vaccine COVID-19:',
+    Type: 'Varchar(80)',
+    Category: '',
+    Description:
+      'Inform the vaccine producing laboratory that the patient received',
+    Characteristics:
+      'Essential field Enabled if field 36- Did you receive COVID-19 vaccine? is equal to 1.',
+    Column: 'LAB_PR_COV_',
+  },
+
+  {
+    'Field name': '39- COVID-19 vaccine batch: 1st Dose batch',
+    Type: 'Varchar(20)',
+    Category: '',
+    Description:
+      'Inform the batch of the 1st dose of the COVID-19 vaccine, which the patient received',
+    Characteristics:
+      'Essential field<br> Enabled if field 36- Did you receive COVID-19 vaccine? is equal to 1.',
+    Column: 'LOTE_1_COV',
+  },
+  {
+    'Field name': '39- COVID-19 vaccine batch: 2nd Dose batch',
+    Type: 'Varchar(20)',
+    Category: '',
+    Description:
+      'Inform the batch of the 2nd dose of the COVID-19 vaccine, which the patient received',
+    Characteristics:
+      'Essential field<br> Enabled if field 36- Did you receive COVID-19 vaccine? is equal to 1.',
+    Column: 'LOTE_2_COV',
+  },
+  {
+    'Field name': '39- Source of data/information on COVID-19 vaccine',
+    Type: 'Varchar(1)',
+    Category: '1- Manual 2- RNDS',
+    Description: '',
+    Characteristics:
+      'Internal Field <br> Number automatically generated by the system. <br>Field according to the source of the data/information about the COVID-19 vaccine, if it was manually typed or retrieved via integration with the RNDS database.',
+    Column: 'FNT_IN_COV',
+  },
+  {
+    'Name of the field': '40-Did you receive flu vaccine in the last campaign?',
+    Type: 'Varchar2(1)',
+    Category: '1-Yes, 2-No, 9-Ignored',
+    Description:
+      'Inform if the patient was vaccinated against influenza in the last campaign, after checking the documentation / booklet. <br>If the patient does not have the booklet, direct the question to him or her guardian and fill in the field with the code corresponding to the answer.',
+    Features: 'Essential Field',
+    Column: 'VACINA',
+  },
+  {
+    'Field name': '41-Date of vaccination',
+    Type: 'Date DD/MM/YYYY',
+    Category: '',
+    Description: 'Date of last flu shot the patient took.',
+    Characteristics:
+      'Essential field<br>Enabled if field 31- Received flu vaccine is equal to 1. Date must be <= the date of entry (current date).',
+    Column: 'DT_UT_DOSE',
+  },
+
+  {
+    'Field name': 'If < 6 months: did the mother receive the vaccine?',
+    Type: 'Varchar2(1)',
+    Category: '1-Yes, 2-No, 9-Ignored',
+    Description: 'If patient < 6 months, did the mother receive the vaccine?',
+    Characteristics:
+      'Essential Field<br>Enable field If Case Age is < 6 months.',
+    Column: 'MAE_VAC',
+  },
+  {
+    'Field name': 'If yes, date',
+    Type: 'Date DD/MM/YYYY',
+    Category: '',
+    Description: 'If the mother received the vaccine, what is the date?',
+    Characteristics:
+      'Essential field<br>Enabled if field If < 6 months: the mother received the vaccine is equal to 1. Date must be <= the typing date (current date).',
+    Column: 'DT_VAC_MAE',
+  },
+  {
+    'Field name': 'If < 6 months: does the mother breastfeed the child?',
+    Type: 'Varchar2(1)',
+    Category: '1-Yes, 2-No, 9-Ignored',
+    Description:
+      'If the patient is < 6 months, does the mother breastfeed the child?',
+    Characteristics:
+      'Essential Field<br>Enable field if Case Age is < 6 months.',
+    Column: 'M_AMAMENTA',
+  },
+  {
+    'Field name': 'If >= 6 months and <= 8 years: Single dose date 1/1',
+    Type: 'Date DD/MM/YYYY',
+    Category: '',
+    Description:
+      'If >= 6 months and <= 8 years, date of single dose for children vaccinated in campaigns from previous years',
+    Characteristics:
+      'Essential Field<br>Enable field If Case Age is >= 6 months and <= 8 years',
+    Column: 'DT_DOSEUNI',
+  },
+  {
+    'Field name': 'If >= 6 months and <= 8 years: Date of 1st dose',
+    Type: 'Date DD/MM/YYYY',
+    Category: '',
+    Description:
+      'If >= 6 months and <= 8 years, date of 1st dose for children vaccinated for the first time',
+    Characteristics:
+      'Essential Field<br>Enable field If Case Age is >= 6 months and <= 8 years',
+    Column: 'DT_1_DOSE',
+  },
+  {
+    'Field name': 'If >= 6 months and <= 8 years: Date of 2nd dose',
+    Type: 'Date DD/MM/YYYY',
+    Category: '',
+    Description:
+      'If >= 6 months and <= 8 years date of the 2nd dose for children vaccinated for the first time',
+    Characteristics:
+      'Essential Field<br>Enable field If Case Age is >= 6 months and <= 8 years',
+    Column: 'DT_2_DOSE',
+  },
+  {
+    'Field name': '42-Did you use antiviral for flu?',
+    Type: 'Varchar2(1)',
+    Category: '1-Yes, 2-No, 9-Ignored',
+    Description: 'Did you use an antiviral to treat the disease?',
+    Features: 'Essential Field',
+    Column: 'ANTIVIRAL',
+  },
+  {
+    'Field name': '43-Which antiviral?',
+    Type: 'Varchar2(1)',
+    Category: '1- Oseltamivir, 2- Zanamivir, 3- Other',
+    Description: 'Which antiviral used?',
+    Characteristics:
+      'Essential Field<br>Enabled if field 39- Which antiviral? is equal to 1.',
+    Column: 'TP_ANTIVIR',
+  },
+  {
+    'Field name': 'Which antiviral /Other, please specify',
+    Type: 'Varchar2(30)',
+    Category: '',
+    Description:
+      'If the antiviral used was not Oseltamivir or Zanamivir, inform which antiviral was used.',
+    Characteristics:
+      'Essential Field<br>Enabled if field 40- Which antiviral? is equal to 3.',
+    Column: 'OUT_ANTIV',
+  },
+  {
+    'Field name': '44-Treatment start date',
+    Type: 'Date DD/MM/YYYY',
+    Category: '',
+    Description: 'Date on which antiviral treatment was started.',
+    Characteristics:
+      'Essential Field<br>Enabled if field 39-Did you use flu antiviral? is equal to 1. Date must be <= the typing date (current date).',
+    Column: 'DT_ANTIVIR',
+  },
+  {
+    'Field name': '45-Was there hospitalization?',
+    Type: 'Varchar2(1)',
+    Category: '1-Yes, 2-No, 9-Ignored',
+    Description: 'Has the patient been hospitalized?',
+    Characteristics:
+      'Essential Field<br>If the field is not equal to 1 – Yes, the system will issue a warning indicating that it does not meet the case definition.',
+    Column: 'HOSPITAL',
+  },
+  {
+    'Field name': '46-Date of hospitalization for SARS',
+    Type: 'Date DD/MM/YYYY',
+    Category: '',
+    Description: 'Date the patient was hospitalized.',
+    Characteristics:
+      'Required field <br> Date must be greater than or equal to 2- Date of 1st symptoms and less than or equal to the typing date (current).',
+    Column: 'DT_INTERNA',
+  },
+  {
+    'Field name': '47-UF of hospitalization',
+    Type: 'Varchar2(2)',
+    Category: 'Table with UF code and acronyms standardized by IBGE.',
+    Description: 'Federal Unit of Patient Hospitalization.',
+    Characteristics:
+      'Essential Field<br>Enabled if field 42-Was there hospitalization? is equal to 1',
+    Column: 'SG_UF_INTE',
+  },
+  {
+    'Field name': 'Regional Health hospitalization Code (IBGE)',
+    Type: 'Varchar2(6)',
+    Category:
+      'Table with code and names of the Health Regionals of the municipalities of hospitalization standardized by the IBGE.',
+    Description: 'Health Region where the patient s hospital is located.',
+    Characteristics:
+      'Internal Field <br>Filling in the name of the inpatient health region, the code is automatically filled in, and vice versa.',
+    Column: 'ID_RG_INTE OU CO_RG_INTE',
+  },
+  {
+    'Field name': '48-Municipality of hospitalization/Code (IBGE)',
+    Type: 'Varchar2(20)',
+    Category:
+      'Table with code and names of Municipalities standardized by IBGE.',
+    Description:
+      'Municipality where the Health Unit where the patient was hospitalized is located.',
+    Characteristics:
+      'Essential Field<br>Enabled if field 42-Was there hospitalization? is equal to 1',
+    Column: 'ID_MN_INTE OU CO_MU_INTE',
+  },
+  {
+    'Field name': '49-Inpatient Health Unit/ CNES Code',
+    Type: 'Varchar2(20)',
+    Category: 'Table with CNES codes and names of Health Units.',
+    Description: 'Sentinel Unit that performed the patient s hospitalization.',
+    Characteristics:
+      'Essential Field<br>Enabled if field 42-Was there hospitalization? is equal to 1',
+    Column: 'ID_UN_INTE OU CO_UN_INTE',
+  },
+
+  {
+    'Field name': '50-Inpatient in ICU?',
+    Type: 'Varchar2(1)',
+    Category: '1-Yes, 2-No, 9-Ignored',
+    Description: 'Was the patient admitted to the ICU?',
+    Features: 'Essential Field',
+    Column: 'UTI',
+  },
+  {
+    'Field name': '51-Date of ICU entry',
+    Type: 'Date DD/MM/YYYY',
+    Category: '',
+    Description: 'Date of patient entry into the Intensive Care Unit (ICU).',
+    Characteristics:
+      'Essential Field<br>Enabled if field 47-Inpatient in ICU? is equal to 1. <br>Date must be greater than or equal to 2-Date of 1st symptoms of SARS and less than or equal to the typing date (current).',
+    Column: 'DT_ENTUTI',
+  },
+  {
+    'Field name': '52-Date of ICU discharge',
+    Type: 'Date DD/MM/YYYY',
+    Category: '',
+    Description: 'Date the patient left the Intensive Care Unit (ICU).',
+    Characteristics:
+      'Essential Field<br>Enabled if field 47-Inpatient in ICU? is equal to 1. <br>Date must be greater than or equal to 48-Date of admission to the ICU and less than or equal to the typing date (current).',
+    Column: 'DT_SAIDUTI',
+  },
+  {
+    'Field name': '53-Use ventilatory support?',
+    Type: 'Varchar2(1)',
+    Category: '1-Yes, invasive; 2-Yes, non-invasive <br>3-No, 9-Ignored',
+    Description: 'Did the patient use ventilatory support?',
+    Features: 'Essential Field',
+    Column: 'SUPPORT_VEN',
+  },
+  {
+    'Field name': '54- Chest X-ray',
+    Type: 'Varchar2(1)',
+    Category:
+      '1-Normal, 2-Interstitial Infiltrate <br>3-Consolidation, 4-Mixed, 5-Other<br> 6-Unfulfilled, 9-Ignored',
+    Description: 'Report Chest X-Ray result.',
+    Features: 'Essential Field',
+    Column: 'RAIOX_RES',
+  },
+  {
+    'Field name': 'Chest X-ray/Other (specify)',
+    Type: 'Varchar2(30)',
+    Category: '',
+    Description:
+      'Inform the result of the chest X-ray if option 5-Other is selected.',
+    Characteristics:
+      'Essential Field<br>Enabled from field 51- Chest X-Ray = 5 (Other).',
+    Column: 'RAIOX_OUT',
+  },
+  {
+    'Field name': '55-X-ray date',
+    Type: 'Date DD/MM/YYYY',
+    Category: '',
+    Description:
+      'If you performed a Chest X-ray, specify the date of the exam.',
+    Characteristics:
+      'Essential Field<br>Enabled if field 51- Chest X-Ray is equal to 1, 2, 3, 4 or 5.',
+    Column: 'DT_RAIOX',
+  },
+  {
+    'Field name': '56- Tomography Aspect',
+    Type: 'Number(3)',
+    Category:
+      '1-Typical covid-19 <br> 2- Undetermined covid-19 <br>3- Atypical covid-19 <br>4- Negative for Pneumonia <br> 5- Other, 6-Not performed, 9-Ignored',
+    Description: 'Inform the tomography result.',
+    Features: 'Essential Field',
+    Column: 'TOMO_RES',
+  },
+
+  {
+    'Field name': 'Tomography Aspect/Other (specify)',
+    Type: 'Varchar2(100)',
+    Category: '',
+    Description: 'Inform the tomography result if option 5-Other is selected',
+    Characteristics:
+      'Essential Field<br>Enabled field 53- Tomography Aspect = 5 (Other',
+    Column: 'TOMO_OUT',
+  },
+  {
+    'Field name': '57- Tomography Date',
+    Type: 'Date DD/MM/YYYY',
+    Category: '',
+    Description: 'If you performed a tomography, specify the date of the exam.',
+    Characteristics:
+      'Essential Field<br>Enabled if field 53- Tomography Aspect is equal to 1, 2, 3, 4 or 5.',
+    Column: 'DT_TOMO',
+  },
+  {
+    'Field name': '58-Did you collect sample?',
+    Type: 'Varchar2(1)',
+    Category: '1-Yes, 2-No, 9-Ignored',
+    Description: 'Was a sample collection carried out for diagnostic testing?',
+    Features: 'Essential Field',
+    Column: 'AMOSTRA',
+  },
+  {
+    'Field name': '59-Collection Date',
+    Type: 'Date DD/MM/YYYY',
+    Category: '',
+    Description: 'Date of sample collection to perform the diagnostic test.',
+    Characteristics:
+      'Essential Field<br>Enabled field 55-Have you sampled? = <br>1. Date must be greater than or equal to <br> 2-Date of 1st symptoms and less than or equal to the typing date (current).',
+    Column: 'DT_COLETA',
+  },
+  {
+    'Field name': '60-Sample Type',
+    Type: 'Varchar2(30)',
+    Category:
+      '1- Naso-oropharynx secretion <br>2-Brocho-alveolar lavage, 3-Post-mortem tissue <br>4-Other, which one?, 5-CSF, 9-Ignored',
+    Description: 'Type of clinical specimen collected for diagnostic testing.',
+    Characteristics:
+      'Essential Field<br>Enabled field 55-Have you sampled? = 1.',
+    Column: 'TP_AMOSTRA',
+  },
+  {
+    'Field Name': 'Sample Type/Other',
+    Type: 'Varchar2(30)',
+    Category: '',
+    Description:
+      'Description of the type of clinical sample, if different from those listed in the field categories.',
+    Characteristics:
+      'Essential Field<br>Field enabled if selected category <br>4-Other, which in Sample type.',
+    Column: 'OUT_AMOST',
+  },
+  {
+    'Field name': '61-GAL Request No',
+    Type: '',
+    Category: '',
+    Description: 'Exam requisition number generated by the GAL system.',
+    Features: 'Essential Field',
+    Column: 'REQUI_GAL',
+  },
+  {
+    'Field name': '62- Antigenic Test Type',
+    Type: 'Number(3)',
+    Category: '1-Immunofluorescence (IF) <br>2- Rapid antigenic test',
+    Description: 'Type of antigenic test that was performed.',
+    Features: 'Essential Field',
+    Column: 'TP_TES_AN',
+  },
+  {
+    'Field name': '63- Date of Antigenic test result',
+    Type: 'Date DD/MM/YYYY',
+    Category: '',
+    Description: 'Date of antigenic test result.',
+    Characteristics:
+      'Essential Field<br>Date must be greater than or equal to 56- Date of Collection',
+    Column: 'DT_RES_AN',
+  },
+  {
+    'Field name': '64- Antigen Test Result',
+    Type: 'Varchar2(1)',
+    Category:
+      '1-Positive, 2-Negative, 3- Inconclusive <br>4-Not accomplished, 5-Awaiting result<br> 9-Ignored',
+    Description: 'Antigenic Test Result',
+    Characteristics:
+      'Essential Field<br>This field will be marked with 5-Waiting for Result and will be enabled if the field 55-Collected sample? = 1',
+    Column: 'RES_AN',
+  },
+  {
+    'Field name': '65-Laboratory that performed the antigenic test',
+    Type: 'Varchar2(70)',
+    Category: 'Laboratory names registered in the system',
+    Description:
+      'Laboratory responsible for releasing the antigenic test result.',
+    Characteristics:
+      'Essential Field<br>Enabled if field 61- Antigen Test Result: is selected as <br>1-Positive, <br>2- Negative,<br> 3- Inconclusive or <br>5- Awaiting result. <br>Filling in the name of the Laboratory, the code is automatically filled, or vice versa.',
+    Column: 'LAB_AN',
+  },
+  {
+    'Field name': '65-Laboratory that performed the antigenic test',
+    Type: 'Varchar2(7)',
+    Category: 'Table with CNES codes',
+    Description: '',
+    Features: 'Essential Field',
+    Column: 'CO_LAB_AN',
+  },
+  {
+    'Field name':
+      '66-Etiologic agent – ​​Antigenic Test. Positive for Influenza?',
+    Type: 'Varchar2(1)',
+    Category: '1-Yes, 2-No, 9-Ignored',
+    Description: 'Antigen Test Result that was positive for Influenza',
+    Features: 'Essential Field',
+    Column: 'POS_AN_FLU',
+  },
+  {
+    'Field name':
+      '66-Etiologic agent – ​​Antigenic Test. <br>If yes, which Influenza?',
+    Type: 'Varchar2(1)',
+    Category: '1-Influenza A <br>2-Influenza B',
+    Description: 'Result of the Antigen Test, for the type of Influenza.',
+    Characteristics:
+      'Essential Field<br>Enabled if field 63-Etiologic agent – ​​Antigenic Test: Positive for Influenza? = 1.',
+    Column: 'TP_FLU_AN',
+  },
+  {
+    'Field name':
+      '66-Etiologic agent – ​​Antigenic Test. Positive for other viruses?',
+    Type: 'Varchar2(1)',
+    Category: '1-Yes, 2-No, 9-Ignored',
+    Description:
+      'Antigen Test Result, which was positive for another respiratory virus.',
+    Features: 'Essential Field',
+    Column: 'POS_AN_OUT',
+  },
+  {
+    'Field name': '66-Etiologic agent – ​​Antigenic Test. SARS-CoV-2',
+    Type: 'Varchar2(1)',
+    Category: '1-marked by user Empty - unmarked',
+    Description: 'Antigen Test Result, for SARS-CoV-2.',
+    Characteristics:
+      'Essential Field<br>Enabled if field 63-Etiologic agent, Antigenic Test. Positive for other viruses? = 1.',
+    Column: 'AN_SARS2',
+  },
+  {
+    'Field name': '66-Etiologic agent – ​​Antigenic Test. VSR',
+    Type: 'Varchar2(1)',
+    Category: '1-marked by user Empty - unmarked',
+    Description: 'Result of Antigen Test, for RSV.',
+    Characteristics:
+      'Essential Field<br>Enabled if field 63-Etiologic agent, Antigenic Test. Positive for other viruses? = 1.',
+    Column: 'AN_VSR',
+  },
+
+  {
+    'Field name': '66-Etiologic agent – ​​Antigenic Test. Parainfluenza 1',
+    Type: 'Varchar2(1)',
+    Category: '1-marked by user Empty - unmarked',
+    Description: 'Antigen Test Result, for Parainfluenza 1.',
+    Characteristics:
+      'Essential Field<br>Enabled if field 63-Etiologic agent, Antigenic Test. Positive for other viruses? = 1.',
+    Column: 'AN_PARA1',
+  },
+  {
+    'Field name': '66-Etiologic agent – ​​Antigenic Test. Parainfluenza 2',
+    Type: 'Varchar2(1)',
+    Category: '1-marked by user Empty - unmarked',
+    Description: 'Antigenic Test Result. Parainfluenza 2.',
+    Characteristics:
+      'Essential Field<br>Enabled if field 63-Etiologic agent, Positive Antigen Test for other viruses? = 1.',
+    Column: 'AN_PARA2',
+  },
+  {
+    'Field name': '66-Etiologic agent – ​​Antigenic Test. Parainfluenza 3',
+    Type: 'Varchar2(1)',
+    Category: '1-marked by user Empty - unmarked',
+    Description: 'Antigenic Test Result. Parainfluenza 3.',
+    Characteristics:
+      'Essential Field<br>Enabled if field 63-Etiologic agent, Antigenic Test. Positive for other viruses? = 1.',
+    Column: 'AN_PARA3',
+  },
+  {
+    'Field name': '66-Etiologic agent – ​​Antigenic Test. adenovirus',
+    Type: 'Varchar2(1)',
+    Category: '1-marked by user Empty - unmarked',
+    Description: 'Antigenic Test Result. Adenovirus.',
+    Characteristics:
+      'Essential Field<br>Enabled if field 63-Etiologic agent, Antigenic Test. Positive for other viruses? = 1.',
+    Column: 'AN_ADENO',
+  },
+  {
+    'Field name':
+      '66- Etiologic agent – ​​Antigenic Test. Another respiratory virus',
+    Type: 'Varchar2(1)',
+    Category: '1-marked by user Empty - unmarked',
+    Description: 'Antigenic Test Result. Another respiratory virus.',
+    Characteristics:
+      'Essential Field<br>Enabled if field 63-Etiologic agent, Antigenic Test. Positive for other viruses? = 1.',
+    Column: 'AN_OUTRO',
+  },
+  {
+    'Field name':
+      '66- Etiologic agent – ​​Antigenic Test. Other respiratory virus (Description)',
+    Type: 'Varchar2(30)',
+    Category: '',
+    Description:
+      'Name of the other respiratory virus identified by the Antigen Test.',
+    Characteristics:
+      'Essential Field<br>Enabled if field 63-Etiologic agent, Antigenic Test. Positive for other viruses? = 1.',
+    Column: 'DS_AN_OUT',
+  },
+  {
+    'Field name': '67-Result of RT-PCR/other method by Molecular Biology',
+    Type: 'Varchar2(1)',
+    Category:
+      '1-Detectable, 2-Not Detectable, 3-Inconclusive <br>4-Not Accomplished, 5-Waiting for Result <br> 9-Ignored',
+    Description: 'Result of RT-PCR test/other method by Molecular Biology.',
+    Characteristics:
+      'Essential Field<br>This field will be marked with 5-Waiting for Result and will be enabled if the field 55-Collected sample? = 1.',
+    Column: 'PCR_RESUL',
+  },
+  {
+    'Field name': '68-Date of RT-PCR Result/other method by Molecular Biology',
+    Type: 'Date DD/MM/YYYY',
+    Category: '',
+    Description: 'RT-PCR Result Date/other method by Molecular Biology',
+    Characteristics:
+      'Essential Field<br>Field enabled if selected category <br>1-Detectable, <br>2-Not Detectable or <br>3-Inconclusive in Result of RT-PCR/other method by Molecular Biology. <br>Date must be >= the date of collection - field 56.',
+    Column: 'DT_PCR',
+  },
+  {
+    'Field name':
+      '69- Etiologic agent – ​​RT-PCR/other method by Molecular Biology: Positive for Influenza?',
+    Type: 'Varchar2(1)',
+    Category: '1-Yes, 2-No, 9-Ignored',
+    Description: 'RT-PCR result was positive for Influenza',
+    Features: 'Essential Field',
+    Column: 'POS_PCRFLU',
+  },
+
+  {
+    'Field name':
+      '69- Etiologic agent – ​​RT-PCR/other method by Molecular Biology: If yes, which Influenza?',
+    Type: 'Varchar2(1)',
+    Category: '1-Influenza A <br>2-Influenza B',
+    Description: 'Diagnostic result of RT-PCR for the type of Influenza.',
+    Characteristics:
+      'Essential Field<br>Enabled if field 66-Etiologic agent – ​​RT_PCR/other method by Molecular Biology: Positive for Influenza? = 1.',
+    Column: 'TP_FLU_PCR',
+  },
+  {
+    'Field name':
+      '69- Etiologic agent – ​​RT-PCR/other method by Molecular Biology: If Influenza A, which subtype?',
+    Type: 'Varchar2(1)',
+    Category:
+      '1-Influenza A(H1N1)pdm09 <br>2-Influenza A (H3N2) <br>3-Influenza A not subtyped <br>4-Influenza A not subtyped <br>5-Inconclusive <br>6-Other, specify:',
+    Description: 'Subtype for Influenza A.',
+    Characteristics:
+      'Essential Field<br>Enabled if field 66-Etiological agent – ​​RT_PCR/other method by Molecular Biology: If yes, which Influenza? = 1.',
+    Column: 'PCR_FLUASU',
+  },
+  {
+    'Field name':
+      '69- Etiologic agent – ​​RT-PCR/other method by Molecular Biology: If Influenza A, which subtype? Other, specify:',
+    Type: 'Varchar2(30)',
+    Category: '',
+    Description: 'Another subtype for Influenza A.',
+    Characteristics:
+      'Essential Field<br>Enabled if etiologic agent – ​​RT-PCR/other method by Molecular Biology: If Influenza A, which subtype? = 6.',
+    Column: 'FLUASU_OUT',
+  },
+  {
+    'Field name':
+      '69- Etiologic agent – ​​RT-PCR/other method by Molecular Biology: If Influenza B, which strain?',
+    Type: 'Varchar2(1)',
+    Category:
+      '1-Victoria<br> 2-Yamagatha <br>3-Not accomplished <br>4-Inconclusive <br>5-Other, please specify:',
+    Description: 'Bloodline for Influenza B.',
+    Characteristics:
+      'Essential Field<br>Enabled if field 66-Etiological agent – ​​RT_PCR/other method by Molecular Biology: If yes, which Influenza? = 2.',
+    Column: 'PCR_FLUBLI',
+  },
+  {
+    'Field name':
+      '69- Etiologic agent – ​​RT-PCR/other method by Molecular Biology: If Influenza B, which strain? Other, specify:',
+    Type: 'Varchar2(30)',
+    Category: '',
+    Description: 'Another strain for Influenza B.',
+    Characteristics:
+      'Essential Field<br>Enabled if 66- Etiologic agent – ​​RT-PCR/other method by Molecular Biology: If Influenza B, which strain? = 5.',
+    Column: 'FLUBLI_OUT',
+  },
+  {
+    'Field name':
+      '69- Etiologic agent – ​​RT-PCR/other method by Molecular Biology: Positive for other viruses?',
+    Type: 'Varchar2(1)',
+    Category: '1-Yes, 2-No, 9-Ignored',
+    Description: 'RT-PCR result was positive for another respiratory virus',
+    Features: 'Essential Field',
+    Column: 'POS_PCROUT',
+  },
+  {
+    'Field name':
+      '69- Etiologic agent – ​​RT-PCR/other method by Molecular Biology: SARS-CoV-2',
+    Type: 'Varchar2(1)',
+    Category: '1-marked by user Empty - unmarked',
+    Description: 'RT-PCR diagnostic result for (SARS-CoV-2).',
+    Characteristics:
+      'Essential Field<br>Enabled if field 66- Etiologic agent – ​​RT-PCR/other method by Molecular Biology: Positive for other viruses? = 1.',
+    Column: 'PCR_SARS2',
+  },
+  {
+    'Field name':
+      '69- Etiologic agent – ​​RT-PCR/other method by Molecular Biology: RSV',
+    Type: 'Varchar2(1)',
+    Category: '1-marked by user Empty - unmarked',
+    Description: 'RT-PCR diagnostic result for (VSR).',
+    Characteristics:
+      'Essential Field<br>Enabled if field 66- Etiologic agent – ​​RT-PCR/other method by Molecular Biology: Positive for other viruses? = 1',
+    Column: 'PCR_VSR',
+  },
+
+  {
+    'Field name':
+      '69- Etiologic agent – ​​RT-PCR/other method by Molecular Biology: Parainfluenza 1',
+    Type: 'Varchar2(1)',
+    Category: '1-marked by user Empty - unmarked',
+    Description: 'Diagnostic result of RT-PCR for Parainfluenza 1.',
+    Characteristics:
+      'Essential Field<br>Enabled if field 66- Etiologic agent – ​​RT-PCR/other method by Molecular Biology: Positive for other viruses? = 1',
+    Column: 'PCR_PARA1',
+  },
+  {
+    'Field name':
+      '69- Etiologic agent – ​​RT-PCR/other method by Molecular Biology: Parainfluenza 2',
+    Type: 'Varchar2(1)',
+    Category: '1-marked by user Empty - unmarked',
+    Description: 'Diagnostic result of RT-PCR for Parainfluenza 2.',
+    Characteristics:
+      'Essential Field<br>Enabled if field 66- Etiologic agent – ​​RT-PCR/other method by Molecular Biology: Positive for other viruses? = 1',
+    Column: 'PCR_PARA2',
+  },
+  {
+    'Field name':
+      '69- Etiologic agent – ​​RT-PCR/other method by Molecular Biology: Parainfluenza 3',
+    Type: 'Varchar2(1)',
+    Category: '1-marked by user Empty - unmarked',
+    Description: 'Diagnostic result of RT-PCR for Parainfluenza 3.',
+    Characteristics:
+      'Essential Field<br>Enabled if field 66- Etiologic agent – ​​RT-PCR/other method by Molecular Biology: Positive for other viruses? = 1',
+    Column: 'PCR_PARA3',
+  },
+  {
+    'Field name':
+      '69- Etiologic agent – ​​RT-PCR/other method by Molecular Biology: Parainfluenza 4',
+    Type: 'Varchar2(1)',
+    Category: '1-marked by user Empty - unmarked',
+    Description: 'Diagnostic result of RT-PCR for Parainfluenza 4.',
+    Characteristics:
+      'Essential Field<br>Enabled if field 66- Etiologic agent – ​​RT-PCR/other method by Molecular Biology: Positive for other viruses? = 1',
+    Column: 'PCR_PARA4',
+  },
+  {
+    'Field name':
+      '69- Etiologic agent – ​​RT-PCR/other method by Molecular Biology: Adenovirus',
+    Type: 'Varchar2(1)',
+    Category: '1-marked by user Empty - unmarked',
+    Description: 'Diagnostic result of RT-PCR for Adenovirus.',
+    Characteristics:
+      'Essential Field<br>Enabled if field 66- Etiologic agent – ​​RT-PCR/other method by Molecular Biology: Positive for other viruses? = 1',
+    Column: 'PCR_ADENO',
+  },
+  {
+    'Field name':
+      '69- Etiologic agent – ​​RT-PCR/other method by Molecular Biology: Metapneumovirus',
+    Type: 'Varchar2(1)',
+    Category: '1-marked by user Empty - unmarked',
+    Description: 'Diagnostic result of RT-PCR for Metapneumovirus.',
+    Characteristics:
+      'Essential Field<br>Enabled if field 66- Etiologic agent – ​​RT-PCR/other method by Molecular Biology: Positive for other viruses? = 1',
+    Column: 'PCR_METAP',
+  },
+  {
+    'Field name':
+      '69- Etiologic agent – ​​RT-PCR/other method by Molecular Biology: Bocavirus',
+    Type: 'Varchar2(1)',
+    Category: '1-marked by user Empty - unmarked',
+    Description: 'Diagnostic result of RT-PCR for Bocavirus.',
+    Characteristics:
+      'Essential Field<br>Enabled if field 66- Etiologic agent – ​​RT-PCR/other method by Molecular Biology: Positive for other viruses? = 1',
+    Column: 'PCR_BOCA',
+  },
+  {
+    'Field name':
+      '69- Etiologic agent – ​​RT-PCR/other method by Molecular Biology: Rhinovirus',
+    Type: 'Varchar2(1)',
+    Category: '1-marked by user Empty - unmarked',
+    Description: 'Diagnostic result of RT-PCR for Rhinovirus.',
+    Characteristics:
+      'Essential Field<br>Enabled if field 66- Etiologic agent – ​​RT-PCR/other method by Molecular Biology: Positive for other viruses? = 1',
+    Column: 'PCR_RINO',
+  },
+
+  {
+    'Field name':
+      '69- Etiologic agent – ​​RT-PCR/other method by Molecular Biology: Other respiratory virus, specify:',
+    Type: 'Varchar2(1)',
+    Category: '1-marked by user Empty - unmarked',
+    Description: 'Diagnostic result of RT-PCR for Other respiratory virus.',
+    Characteristics:
+      'Essential Field<br>Enabled if field 66- Etiologic agent – ​​RT-PCR/other method by Molecular Biology: Positive for other viruses? = 1',
+    Column: 'PCR_OUTRO',
+  },
+  {
+    'Field name':
+      '69- Etiologic agent – ​​RT-PCR/other method by Molecular Biology: Other respiratory virus (Description)',
+    Type: 'Varchar2(30)',
+    Category: '',
+    Description: 'Name of other respiratory virus identified by RT-PCR.',
+    Characteristics:
+      'Essential Field<br>Enabled if 66- Etiologic agent – ​​RT-PCR/other method by Molecular Biology: Other respiratory virus, specify:',
+    Column: 'DS_PCR_OUT',
+  },
+  {
+    'Field name':
+      '70-Laboratory that performed RT-PCR/other method by Code Molecular Biology (CNES)',
+    Type: 'Varchar2(7)',
+    Category:
+      'Table with CNES codes and names of Laboratories registered in the system.',
+    Description:
+      'Laboratory responsible for releasing the diagnostic test result (RT-PCR) of the patient s sample.',
+    Characteristics:
+      'Essential Field<br>Enabled if selected category <br>1-Detectable, <br>2-Not Detectable or <br> 3- Inconclusive in 66-Result of RT-PCR/other method by Molecular Biology. <br> By filling in the name of the Laboratory, the code is automatically filled in, or vice versa.',
+    Column: 'LAB_PCR OU CO_LAB_PCR',
+  },
+  {
+    'Field name': '71- Type of Serological Sample for SARS-Cov-2',
+    Type: 'Number(3)',
+    Category: '1- Blood/plasma/serum <br>2-Other, which one? <br>9-Ignored',
+    Description: 'Type of serological sample that was collected.',
+    Features: 'Essential Field',
+    Column: 'TP_AM_SOR',
+  },
+  {
+    'Field name': 'Serological Sample Type for SARS-Cov-2/Other, which one?',
+    Type: '',
+    Category: '',
+    Description:
+      'Description of the type of clinical sample, if different from those listed in category one (1) of the field.',
+    Characteristics:
+      'Essential Field<br>Field enabled if selected category 2-Other, which one? in Serological Sample Type.',
+    Column: 'SOR_OUT',
+  },
+  {
+    'Field name': '72- Date of collection',
+    Type: 'Date DD/MM/YYYY',
+    Category: '',
+    Description: 'Date of collection of material for diagnosis by Serology.',
+    Characteristics:
+      'Essential Field<br>Enabled field 55-Have you sampled? = 1. <br> Date must be greater than or equal to 2-Date of 1st symptoms<br> and less than or equal to the typing date (current).',
+    Column: 'DT_CO_SOR',
+  },
+  {
+    'Field name': '73- Serology Type for SARS-Cov-2',
+    Type: 'Number(3)',
+    Category:
+      '1-Quick test <br>2-Elisa <br>3- Chemiluminescence <br>4- Other, which one',
+    Description: 'Type of Serological Test performed',
+    Features: 'Essential Field',
+    Column: 'TP_SOR',
+  },
+  {
+    'Field name': '73- Serology Type for SARS-Cov-2',
+    Type: 'Varchar 2(100)',
+    Category: '',
+    Description: 'Serological Test Type Description',
+    Characteristics:
+      'Essential Field<br>Field enabled if selected category <br>4-Other, which one? in Type of Serology.',
+    Column: 'OUT_SOR',
+  },
+
+  {
+    'Field name': '73- Type of serology for SARS-Cov-2/Other, which one?',
+    Type: 'Varchar 2(100)',
+    Category: '',
+    Description: 'Other type of Serological sample',
+    Characteristics: '',
+    Column: 'SOR_OUT',
+  },
+  {
+    'Field name': '73- Result of the Serological Test for SARS-CoV-2:',
+    Type: 'Varchar2(1)',
+    Category: 'IgG',
+    Description: 'Serology Result for SARS-CoV-2',
+    Features: 'Essential Field',
+    Column: 'RES_IGG',
+  },
+  {
+    'Field name': '73- Result of the Serological Test for SARS-CoV-2:',
+    Type: 'Varchar2(1)',
+    Category: 'IgM',
+    Description: 'Serology Result for SARS-CoV-2',
+    Features: 'Essential Field',
+    Column: 'RES_IGM',
+  },
+  {
+    'Field name': '73- Result of the Serological Test for SARS-CoV-2:',
+    Type: 'Varchar2(1)',
+    Category: 'IgA',
+    Description: 'Serology Result for SARS-CoV-2',
+    Features: 'Essential Field',
+    Column: 'RES_IGA',
+  },
+  {
+    'Field name': '74- Result Date',
+    Type: 'Date DD/MM/YYYY',
+    Category: '',
+    Description: 'Serological Test Result Date',
+    Characteristics:
+      'Essential Field<br>Date must be greater than or equal to 69- Date of Collection',
+    Column: 'DT_RES',
+  },
+  {
+    'Field name': '75-Final case classification',
+    Type: 'Varchar2(1)',
+    Category:
+      '1-SRAG by influenza <br>2-SRAG by another respiratory virus <br>3-SRAG by another etiologic agent, which: <br>4-SRAG unspecified 5-SRAG by covid-19',
+    Description:
+      'Final diagnosis of the case. <br>If you have divergent results between the laboratory methodologies, prioritize the RT-PCR result.',
+    Features: 'Required field <br>',
+    Column: 'CLASSI_FIN',
+  },
+  {
+    'Field name':
+      '75-Final classification of the 3-SRAG case for another cause, which:',
+    Type: 'Varchar2(30)',
+    Category: '',
+    Description: 'Description of which other etiologic agent was identified',
+    Characteristics:
+      'Required field <br> If field 72-Final case classification = 3. <br>Enabled if field 72-Final case classification = 3.',
+    Column: 'CLASSI_OUT',
+  },
+  {
+    'Field name': '76–Closing Criteria',
+    Type: 'Varchar2(1)',
+    Category:
+      '1. Laboratory <br>2. Clinical Epidemiological <br>3. Clinical <br>4. Clinic Image',
+    Description: 'Indicate the confirmation criteria.',
+    Features: 'Essential Field',
+    Column: 'CRITERIO',
+  },
+  {
+    'Field name': '77–Evolution of the case',
+    Type: 'Varchar2(1)',
+    Category: '1-Cure <br>2-Death <br>3- Death from other causes <br>9-Ignored',
+    Description: 'Evolution of the case',
+    Features: 'Essential Field',
+    Column: 'EVOLUCAO',
+  },
+  {
+    'Field name': '78–Date of discharge or death',
+    Type: 'Date DD/MM/YYYY',
+    Category: '',
+    Description: 'Date of discharge or death',
+    Characteristics:
+      'Essential Field<br>Date of discharge or death must be > or = the date of the first symptoms and <= the date of entry (current). <br>Enabled if field 74- Evolution of the case = 1 or 2.',
+    Column: 'DT_EVOLUCA',
+  },
+  {
+    'Field name': '79-End Date',
+    Type: 'Date DD/MM/YYYY',
+    Category: '',
+    Description: 'Case closing date.',
+    Characteristics:
+      'Required field <br> If field 72- Final classification of the case is filled. <br>Closing date must be > or = the completion date. <br>End date must be < or = the (current) typing date.',
+    Column: 'DT_ENCERRA',
+  },
+  {
+    'Field name': '80- Number D.O',
+    Type: '',
+    Category: '',
+    Description: 'Death Certificate Number',
+    Characteristics:
+      'Essential Field<br>Enabled if field 74- Case evolution = 2',
+    Column: 'NU_DO',
+  },
+  {
+    'Field name': '81-Remarks',
+    Type: 'Varchar2(999)',
+    Category: '',
+    Description: 'Other observations about the patient considered pertinent.',
+    Features: 'Optional Field',
+    Column: 'OBSERVA',
+  },
+  {
+    'Field name': '82-Responsible Health Professional',
+    Type: 'Varchar2(60)',
+    Category: '',
+    Description:
+      'Full name of the healthcare professional (without abbreviations) responsible for the notification.',
+    Features: 'Essential Field',
+    Column: 'NOME_PROF',
+  },
+  {
+    'Field name': '83-Registration Council/Enrollment',
+    Type: 'Varchar2(15)',
+    Category: '',
+    Description:
+      'Council number or registration number of the health professional responsible for the notification (Ex: CRM/RJ 1234)',
+    Features: 'Essential Field',
+    Column: 'REG_PROF',
+  },
+  {
+    'Field name': 'Entry date',
+    Type: 'Date DD/MM/YYYY',
+    Category: '',
+    Description: 'Date the registration was added to the system.',
+    Characteristics:
+      'Internal Field <br>Automatically filled in by the system with the date the form was entered. <br>It is not the date the form was filled out manually, but the date it was entered into the system. <br>Does not update if there are subsequent data changes.',
+    Column: 'DT_DIGITA',
+  },
+].sort(function (a, b) {
+  var x = a.Column.toLowerCase();
+  var y = b.Column.toLowerCase();
+  return x < y ? -1 : x > y ? 1 : 0;
+});
+
 const sampleSIVEP = [
   {
     id: '3ODKsTM6Iq',
@@ -3546,7 +5114,7 @@ const dicSIVEP = [
     Coluna: 'estadoNotificacao',
   },
   {
-    Descrição: 'Código IBGE  <br>Estado de  <br>Notificação',
+    Descrição: 'Código IBGE  <br>Estado de Notificação',
     Tipo: 'Número codificado por terminologia externa: IBGE',
     Coluna: 'estadoNotificacaoIBGE',
   },
@@ -3556,8 +5124,8 @@ const dicSIVEP = [
     Coluna: 'municipioNotificacao',
   },
   {
-    Descrição: 'Código IBGE Município da Notificação',
-    Tipo: 'Número codificado por terminologia  <br>externa: IBGE',
+    Descrição: 'Código IBGE <br>Município da Notificação',
+    Tipo: 'Número codificado por terminologia externa: IBGE',
     Coluna: 'municipioNotificacaoIBGE',
   },
   {
@@ -3606,8 +5174,8 @@ const dicSIVEP = [
     Coluna: 'estado',
   },
   {
-    Descrição: 'Código IBGE do Estado de Residência',
-    Tipo: 'Número codificado por terminologia  <br>externa: IBGE',
+    Descrição: 'Código IBGE <br> Estado de Residência',
+    Tipo: 'Número codificado por terminologia externa: IBGE',
     Coluna: 'estadoIBGE',
   },
   {
@@ -3616,8 +5184,8 @@ const dicSIVEP = [
     Coluna: 'municipio',
   },
   {
-    Descrição: 'Código IBGE do Município de Residência',
-    Tipo: 'Número codificado por terminologia  <br>externa: IBGE',
+    Descrição: 'Código IBGE <br> Município de Residência',
+    Tipo: 'Número codificado por terminologia externa: IBGE',
     Coluna: 'municipioIBGE',
   },
   {
@@ -3627,11 +5195,11 @@ const dicSIVEP = [
   },
   {
     Descrição: 'Sintomas',
-    Tipo: 'Dor de Garganta Dispneia <br>Febre <br>Tosse <br>Outros',
+    Tipo: 'Dor de Garganta<br> Dispneia <br>Febre <br>Tosse <br>Outros',
     Coluna: 'sintomas',
   },
   {
-    Descrição: 'Descrição  <br>Sintomas Outros',
+    Descrição: 'Descrição Sintomas Outros',
     Tipo: 'Alfanumérico',
     Coluna: 'outrosSintomas',
   },
@@ -3642,7 +5210,7 @@ const dicSIVEP = [
   },
   {
     Descrição: 'Condições',
-    Tipo: 'Doenças  <br>respiratórias  <br>crônicas  <br>descompensadas Doenças cardíacas crônicas <br>Diabetes <br>Doenças renais crônicas em  estágio avançado (graus 3, 4 ou 5) Imunossupressão Gestante <br>Portador de doenças  <br>cromossômicas ou estado de fragilidade  <br>imunológica',
+    Tipo: 'Doenças respiratórias crônicas descompensadas <br>Doenças cardíacas crônicas <br>Diabetes <br>Doenças renais crônicas em  estágio avançado (graus 3, 4 ou 5) <br>Imunossupressão<br> Gestante <br>Portador de doenças cromossômicas ou estado de fragilidade imunológica',
     Coluna: 'condicoes',
   },
   {
@@ -3667,12 +5235,12 @@ const dicSIVEP = [
   },
   {
     Descrição: 'Classificação  <br>Final',
-    Tipo: 'Confirmado  <br>Laboratorial <br>Confirmado  <br>Clínico <br>Epidemiológico Descartado <br>Síndrome Gripal não Especificada Confirmado  <br>Clínico-Imagem Confirmado por Critério Clínico',
+    Tipo: 'Confirmado Laboratorial <br>Confirmado Clínico <br>Epidemiológico Descartado <br>Síndrome Gripal não Especificada Confirmado  <br>Clínico-Imagem Confirmado por Critério Clínico',
     Coluna: 'classificacaoFinal',
   },
   {
     Descrição: 'Evolução do Caso',
-    Tipo: 'Cancelado <br>Ignorado <br>Óbito <br>Cura <br>Internado <br>Internado em UTI Em tratamento domiciliar',
+    Tipo: 'Cancelado <br>Ignorado <br>Óbito <br>Cura <br>Internado <br>Internado em UTI <br>Em tratamento domiciliar',
     Coluna: 'evolucaoCaso',
   },
   {
@@ -3693,6 +5261,163 @@ const dicSIVEP = [
 ].sort(function (a, b) {
   var x = a.Coluna.toLowerCase();
   var y = b.Coluna.toLowerCase();
+  return x < y ? -1 : x > y ? 1 : 0;
+});
+
+const dicSIVEPEn = [
+  {
+    Description: 'State of the Notification',
+    Type: 'Text encoded by external terminology: IBGE',
+    Column: 'estadoNotificacao',
+  },
+  {
+    Description: 'IBGE Code <br>State of the Notification',
+    Type: 'Number encoded by external terminology: IBGE',
+    Column: 'estadoNotificacaoIBGE',
+  },
+  {
+    Description: 'Municipality of the Notification',
+    Type: 'Text encoded by external terminology: IBGE',
+    Column: 'municipioNotificacao',
+  },
+  {
+    Description: 'IBGE Code <br>Municipality of the Notification',
+    Type: 'Number coded by external terminology: IBGE',
+    Column: 'municipioNotificacaoIBGE',
+  },
+  {
+    Description: 'Country of origin',
+    Type: 'Text encoded by external terminology: ISO',
+    Column: 'paisOrigem',
+  },
+  {
+    Description: 'Are you a health professional?',
+    Type: 'Sim=Yes <br>Não=No',
+    Column: 'profissionalSaude',
+  },
+  {
+    Description: 'Are you a security professional?',
+    Type: 'Sim=Yes <br>Não=No',
+    Column: 'profissionalSeguranca',
+  },
+  {
+    Description: 'CBO',
+    Type: 'The professions available in the table relate to specific occupations in the health area.',
+    Column: 'cbo',
+  },
+  {
+    Description: 'Date of Birth',
+    Type: 'Date',
+    Column: 'dataNascimento',
+  },
+  {
+    Description: 'Age',
+    Type: 'Numeric',
+    Column: 'idade',
+  },
+  {
+    Description: 'Sex',
+    Type: 'Masculino=Male <br> Feminino=Female',
+    Column: 'sexo',
+  },
+  {
+    Description: 'Race/Color',
+    Type: 'Branca=White <br>Preta=Black <br>Parda=Brown <br>Amarela=Yellow <br>Indígena=Indigenous',
+    Column: 'racaCor',
+  },
+  {
+    Description: 'State of Residence',
+    Type: 'Text encoded by external terminology: IBGE',
+    Column: 'estado',
+  },
+  {
+    Description: 'IBGE Code: State of Residence ',
+    Type: 'Number coded by external terminology: IBGE',
+    Column: 'estadoIBGE',
+  },
+  {
+    Description: 'Municipality of Residence',
+    Type: 'Text encoded by external terminology: IBGE',
+    Column: 'municipio',
+  },
+  {
+    Description: 'IBGE Code:  Municipality of Residence',
+    Type: 'Number coded by external terminology: IBGE',
+    Column: 'municipioIBGE',
+  },
+  {
+    Description: 'Date of Notification',
+    Type: 'Date',
+    Column: 'dataNotificação',
+  },
+  {
+    Description: 'Symptoms',
+    Type: 'Dor de Garganta=Sore Throat <br>Dispneia=Dyspnea <br>Febre=Fever <br> Tosse=Cough <br> Outros=Others',
+    Column: 'sintomas',
+  },
+  {
+    Description: 'Description of Other Symptoms',
+    Type: 'Alphanumeric',
+    Column: 'outrosSintomas',
+  },
+  {
+    Description: 'Date of onset of symptoms',
+    Type: 'Date',
+    Column: 'dataInicioSintomas',
+  },
+  {
+    Description: 'Conditions',
+    Type: 'Respiratory Chronic Decompensated Diseases <br> Chronic Heart Diseases <br>Diabetes <br> Advanced Stage Chronic Kidney Diseases (Degree 3, 4, or 5) <br> Immunosuppression <br>Pregnant <br> Carrier of Diseases chromosomal or immunological frailty state',
+    Column: 'condicoes',
+  },
+  {
+    Description: 'Test Status',
+    Type: 'Requested <br>Collected <br>Completed <br>Exam not requested',
+    Column: 'estadoTeste',
+  },
+  {
+    Description: 'Test Collection Date',
+    Type: 'Date',
+    Column: 'dataTeste',
+  },
+  {
+    Description: 'Test Type',
+    Type: 'Rapid Test - Antibody <br>Rapid Test - Antigen <br>RT-PCR <br>Immunoassay io-ELISA <br>Electrochemoluminescence Immunoassay-ECLIA',
+    Column: 'tipoTeste',
+  },
+  {
+    Description: 'Test Result',
+    Type: 'Negative <br>Positive',
+    Column: 'resultadoTeste',
+  },
+  {
+    Description: 'Final ranking',
+    Type: 'Confirmed Laboratory <br>Confirmed Clinical <br>Epidemiological Discarded <br>Unspecified Influenza Syndrome Confirmed <br>Clinical-Image Confirmed by Clinical Criteria',
+    Column: 'classificacaoFinal',
+  },
+  {
+    Description: 'Evolution of the Case',
+    Type: 'Cancelado=Canceled <br>Ignorado=Ignored <br>Óbito=Death <br>Cura=Cure <br>Internado=Inpatient <br>Internado em UTI =Inpatient in ICU <br>Em tratamento domiciliar=Under home treatment',
+    Column: 'evolucaoCaso',
+  },
+  {
+    Description: 'End Date',
+    Type: 'Date',
+    Column: 'dataEncerramento',
+  },
+  {
+    Description: 'CNES',
+    Type: 'Internal field filled in automatically by the system, from the logged in operator.',
+    Column: 'cnes',
+  },
+  {
+    Description: 'id',
+    Type: 'Internal field filled in automatically by the system, from the logged in operator.',
+    Column: 'id',
+  },
+].sort(function (a, b) {
+  var x = a.Column.toLowerCase();
+  var y = b.Column.toLowerCase();
   return x < y ? -1 : x > y ? 1 : 0;
 });
 
@@ -4005,6 +5730,115 @@ const dicBrasilio = [
 ].sort(function (a, b) {
   var x = a.Coluna.toLowerCase();
   var y = b.Coluna.toLowerCase();
+  return x < y ? -1 : x > y ? 1 : 0;
+});
+
+const dicBrasilioEn = [
+  {
+    Column: 'epidemiological_week',
+    Type: 'integer',
+    Description: 'Epidemiological week number.',
+  },
+  {
+    Column: 'date',
+    Type: 'string (max_length=10)',
+    Description: 'Data collection date in YYYY-MM-DD format.',
+  },
+  {
+    Column: 'order_for_place',
+    Type: 'integer',
+    Description:
+      'Number that identifies the registration order for this location. The record referring to the first bulletin in which this location appears will be counted as 1 and the other bulletins will increment this value.',
+  },
+  {
+    Column: 'state',
+    Type: 'string (max_length=2)',
+    Description: 'Acronym of the federative unit example: SP.',
+  },
+  {
+    Column: 'city',
+    Type: 'string (max_length=64)',
+    Description:
+      'Name of the municipality (can be blank when the record refers to the state and can be filled with `Imported/Undefined` as well).',
+  },
+  {
+    Column: 'city_ibge_code',
+    Type: 'integer',
+    Description: 'IBGE code of the location.',
+  },
+  {
+    Column: 'place_type',
+    Type: 'string (max_length=5)',
+    Description: 'Type of location this record describes can be city or state.',
+  },
+  {
+    Column: 'last_available_date',
+    Type: 'string (max_length=10)',
+    Description: 'Date the data refers to.',
+  },
+  {
+    Column: 'last_available_confirmed',
+    Type: 'integer',
+    Description:
+      'Number of confirmed cases from the last available day on or before the date date.',
+  },
+  {
+    Column: 'last_available_confirmed_per_100k_inhabitants',
+    Type: 'float',
+    Description:
+      'Number of confirmed cases per 100,000 population on the last available day on or before the date.',
+  },
+  {
+    Column: 'new_confirmed',
+    Type: 'integer',
+    Description:
+      'Number of new confirmed cases since the last day (note that if is_repeated is True, this value will always be 0 and that this value can be negative if SES reassigns cases from this municipality to another).',
+  },
+  {
+    Column: 'last_available_deaths',
+    Type: 'integer',
+    Description:
+      'Number of deaths of the last available day equal to or before the date date.',
+  },
+  {
+    Column: 'new_deaths',
+    Type: 'integer',
+    Description:
+      'Number of new deaths since the last day (note that if is_repeated is True, this value will always be 0 and that this value can be negative if SES reassigns cases from this municipality to another).',
+  },
+  {
+    Column: 'last_available_death_rate',
+    Type: 'float',
+    Description:
+      'Mortality rate (deaths / confirmed) for the last available day on or before the date date.',
+  },
+  {
+    Column: 'estimated_population',
+    Type: 'integer',
+    Description:
+      'Estimated population for the location in 2020 according to IBGE.',
+  },
+  {
+    Column: 'estimated_population_2019',
+    Type: 'integer',
+    Description:
+      'Estimated population for this municipality/state in 2019 according to IBGE.',
+  },
+  {
+    Column: 'is_last',
+    Type: 'bool',
+    Description:
+      'Precomputed field that says if this record is the newest for this location can be True or False (if you filter by this field use is_last=True or is_last=False do not use lowercase value).',
+  },
+  {
+    Column: 'is_repeated',
+    Type: 'bool',
+    Description:
+      'Precomputed field that says if the information in this record was published by the State Health Department on the day of the date or if the data is repeated from the last day the data is available (equal to or before the date). This is because not all secretariats publish newsletters every day. See also the field last_available_date.',
+  },
+].sort(function (a, b) {
+  var x = a.Column.toLowerCase();
+  var y = b.Column.toLowerCase();
   return x < y ? -1 : x > y ? 1 : 0;
 });
 
@@ -4581,6 +6415,207 @@ const dicVacina = [
   return x < y ? -1 : x > y ? 1 : 0;
 });
 
+const dicVacinaEn = [
+  {
+    Order: '1',
+    Column: 'document_id',
+    Description: 'Document identifier',
+    Category: 'String',
+  },
+  {
+    Order: '2',
+    Column: 'paciente_id',
+    Description: 'Patient identifier',
+    Category: 'String',
+  },
+  {
+    Order: '3',
+    Column: 'paciente_idade',
+    Description: 'Patient Age',
+    Category: 'Number',
+  },
+  {
+    Order: '4',
+    Column: 'paciente_dataNascimento',
+    Description: 'Patient Date of birth',
+    Category: 'Date YYY-MM-DD',
+  },
+  {
+    Order: '5',
+    Column: 'patient_enumSexoBiologico',
+    Description: 'Patient Gender',
+    Category: 'M = Male, F = Female',
+  },
+  {
+    Order: '6',
+    Column: 'patient_racaCor_codigo',
+    Description: 'Patient race/color code',
+    Category: '1; 2; 3; 4; 99',
+  },
+  {
+    Order: '7',
+    Column: 'paciente_racaCor_valor',
+    Description: 'Description of the race/color of the Patient',
+    Category:
+      '1 = White; 2 = Black; 3 = Brown; 4 = Yellow; 99 = No information',
+  },
+  {
+    Order: '8',
+    Column: 'paciente_endereco_coibgeMunicipio',
+    Description: ' IBGE code of Patient address ',
+    Category: 'Number',
+  },
+  {
+    Order: '9',
+    Column: 'paciente_endereco_coPais',
+    Description: 'Country code of Patient address',
+    Category: 'Number',
+  },
+  {
+    Order: '10',
+    Column: 'paciente_endereco_nmMunicipio',
+    Description: 'Municipality Name of Patient address',
+    Category: 'String',
+  },
+  {
+    Order: '11',
+    Column: 'paciente_endereco_nmPais',
+    Description: 'Country Name of Patient address',
+    Category: 'String',
+  },
+  {
+    Order: '12',
+    Column: 'paciente_endereco_uf',
+    Description: 'State Abbreviation of Patient address',
+    Category: 'String',
+  },
+  {
+    Order: '13',
+    Column: 'paciente_endereco_cep',
+    Description: '5 digits for anonymized and 7 digits for identified',
+    Category: 'Number',
+  },
+  {
+    Order: '14',
+    Column: 'paciente_nacionalidade_enumNacionalidade',
+    Description: 'Patient Nationality',
+    Category: 'String',
+  },
+  {
+    Order: '15',
+    Column: 'estabelecimento_valor',
+    Description:
+      'CNES code of the establishment that carried out the vaccination',
+    Category: 'Number',
+  },
+  {
+    Order: '16',
+    Column: 'estabelecimento_razaoSocial',
+    Description: 'Name/Corporate Name of the establishment',
+    Category: 'String',
+  },
+  {
+    Order: '17',
+    Column: 'estabelecimento_noFantasia',
+    Description: 'Fantasy name of the establishment',
+    Category: 'String',
+  },
+  {
+    Order: '18',
+    Column: 'estabelecimento_municipio_codigo',
+    Description: 'Code of the municipality of the establishment',
+    Category: 'Number',
+  },
+  {
+    Order: '19',
+    Column: 'estabelecimento_municipio_nome',
+    Description: 'Name of the municipality of the establishment',
+    Category: 'String',
+  },
+  {
+    Order: '20',
+    Column: 'estabelecimento_uf',
+    Description: 'Acronym of the UF of the establishment',
+    Category: 'String',
+  },
+  {
+    Order: '21',
+    Column: 'vacina_grupo_atendimento_code',
+    Description: 'Code of the care group to which the patient belongs',
+    Category: 'String',
+  },
+  {
+    Order: '22',
+    Column: 'vacina_grupo_atendimento_nome',
+    Description: 'Name of the care group to which the patient belongs',
+    Category: 'String',
+  },
+  {
+    Order: '23',
+    Column: 'vacina_categoria_code',
+    Description: 'Category code',
+    Category: 'Number',
+  },
+  {
+    Order: '24',
+    Column: 'vacina_categoria_nome',
+    Description: 'Category Description',
+    Category: 'String',
+  },
+  {
+    Order: '25',
+    Column: 'vacina_lote',
+    Description: 'Vaccine batch number',
+    Category: 'Number',
+  },
+  {
+    Order: '26',
+    Column: 'vacina_fabricante_nome',
+    Description: 'Name of manufacturer/supplier',
+    Category: 'String',
+  },
+  {
+    Order: '27',
+    Column: 'vacina_fabricante_referencia',
+    Description: 'Manufacturer/supplier CNP.I',
+    Category: 'String',
+  },
+  {
+    Order: '28',
+    Column: 'vacina_dataAplicacao',
+    Description: 'Date of vaccine application',
+    Category: 'Date YYY-MM-DD',
+  },
+  {
+    Order: '29',
+    Column: 'vacina_descricao_dose',
+    Description: 'Dose description',
+    Category: 'String',
+  },
+  {
+    Order: '30',
+    Column: 'vacina_codigo',
+    Description: 'Vaccine code',
+    Category: 'Number',
+  },
+  {
+    Order: '31',
+    Column: 'vacina_nome',
+    Description: 'Name of vaccine/product',
+    Category: 'String',
+  },
+  {
+    Order: '32',
+    Column: 'sistema origem',
+    Description: 'Source system name',
+    Category: 'String',
+  },
+].sort(function (a, b) {
+  var x = a.Column.toLowerCase();
+  var y = b.Column.toLowerCase();
+  return x < y ? -1 : x > y ? 1 : 0;
+});
+
 const sampleHosp = [
   {
     _id: 'p5Ez41Zu6B',
@@ -4944,6 +6979,137 @@ const dicHosp = [
 ].sort(function (a, b) {
   var x = a.Coluna.toLowerCase();
   var y = b.Coluna.toLowerCase();
+  return x < y ? -1 : x > y ? 1 : 0;
+});
+
+const dicHospEn = [
+  {
+    Column: '_index',
+    Description: 'Elastic information that tells which index is being queried',
+    Type: 'String',
+  },
+  {
+    Column: '_type',
+    Description:
+      'Elastic information that tells you what type of document is being queried',
+    Type: 'String',
+  },
+  {
+    Column: '_id',
+    Description: 'String that informs the specific registry key',
+    Type: 'String',
+  },
+  {
+    Column: '_score',
+    Description:
+      'Elastic information that gives a score when the information is searched',
+    Type: 'Number',
+  },
+  {
+    Column: '_source',
+    Description: 'Array containing a set of retrieved data',
+    Type: 'Object',
+  },
+  {
+    Column: 'estado',
+    Description: 'Status',
+    Type: 'String',
+  },
+  {
+    Column: 'estadoSigla',
+    Description: 'State Acronym',
+    Type: 'String',
+  },
+  {
+    Column: 'municipio',
+    Description: 'Municipality',
+    Type: 'String',
+  },
+  {
+    Column: 'cnes',
+    Description: 'Code of the National Registry of Health Establishments',
+    Type: 'String',
+  },
+  {
+    Column: 'nomeCnes',
+    Description: 'Name of Health Establishments',
+    Type: 'String',
+  },
+  {
+    Column: 'dataNotificacoes',
+    Description: 'Date of notification',
+    Type: 'Datetime',
+  },
+  {
+    Column: 'dataAtualizacao',
+    Description: 'Update date',
+    Type: 'Datetime',
+  },
+  {
+    Column: 'OfertaHospCli',
+    Description: 'Offer that the hospital has for other medical specialties',
+    Type: 'Number',
+  },
+  {
+    Column: 'OfertaHospUti',
+    Description:
+      'Offer that the hospital has for the use of other medical specialties',
+    Type: 'Number',
+  },
+  {
+    Column: 'OfertaSRAGCli',
+    Description:
+      'Offer that the hospital has for the specific treatment of SARS (COVID)',
+    Type: 'Number',
+  },
+  {
+    Column: 'OfertaSRAGUti',
+    Description:
+      'Offer that the hospital has for the specific ICU of the SARS (COVID)',
+    Type: 'Number',
+  },
+  {
+    Column: 'ocupHospCli',
+    Description:
+      'Occupation that the hospital has for use by other medical specialties',
+    Type: 'Number',
+  },
+  {
+    Column: 'ocupHospUti',
+    Description:
+      'Occupation that the hospital has for use by other medical specialties',
+    Type: 'Number',
+  },
+  {
+    Column: 'ocupSRAGCli',
+    Description:
+      'Occupation that the hospital has for specific use by SARS (COVID)',
+    Type: 'Number',
+  },
+  {
+    Column: 'ocupSRAGUti',
+    Description:
+      'Occupation that the hospital has of ICU for specific use by SARS (COVID)',
+    Type: 'Number',
+  },
+  {
+    Column: 'altas',
+    Description: 'Discharges number',
+    Type: 'Number',
+  },
+  {
+    Column: 'obitos',
+    Description: 'Number of deaths',
+    Type: 'Number',
+  },
+  {
+    Column: 'ocupacaoInformada',
+    Description: 'Occupation was reported?',
+    Type: 'Boolean',
+  },
+].sort(function (a, b) {
+  var x = a.Column.toLowerCase();
+  var y = b.Column.toLowerCase();
   return x < y ? -1 : x > y ? 1 : 0;
 });
 
@@ -5640,6 +7806,7 @@ const sampleAirIBGE = [
     Pax: 205550,
   },
 ];
+
 const dicAirIBGE = [
   {
     Coluna: 'Id',
