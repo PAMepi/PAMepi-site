@@ -664,13 +664,15 @@
       }
 
       lines = [1, 2, 3];
-      ncols = dicVacina.length;
+      ncols = dicVacinaEn.length;
 
       tableDic = document.getElementById('tableDic');
 
       function dicValue(lin, col) {
-        if (Object.keys(dicVacina[col.toString()])[lin]) {
-          return `<td >${Object.values(dicVacina[col.toString()])[lin]} </td>`;
+        if (Object.keys(dicVacinaEn[col.toString()])[lin]) {
+          return `<td >${
+            Object.values(dicVacinaEn[col.toString()])[lin]
+          } </td>`;
         }
         return '-';
       }
@@ -680,11 +682,11 @@
         row = tableDic.insertRow(i);
         cell = row.insertCell(row);
         cell.outerHTML = `<th class="headcol">${
-          Object.keys(dicVacina['0'])[lin]
+          Object.keys(dicVacinaEn['0'])[lin]
         }</th>`;
         ncol = 1;
         for (let col = 0; col < ncols; col++) {
-          col_name = Object.values(dicVacina[col.toString()])[5];
+          col_name = Object.values(dicVacinaEn[col.toString()])[5];
 
           cell = row.insertCell(ncol);
           cell.outerHTML = dicValue(lin, col);

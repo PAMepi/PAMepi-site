@@ -699,7 +699,6 @@
     </footer>
     <script type="text/javascript" src="../js/data.js"></script>
     <script>
-      console.log(sampleSRAG);
       let cell;
       let nlines = sampleSRAG.length;
       let ncols = Object.keys(sampleSRAG['0']).length;
@@ -901,13 +900,13 @@
       ];
 
       lines = [5, 3, 1];
-      ncols = dicSRAG.length;
+      ncols = dicSRAGEn.length;
 
       tableDic = document.getElementById('tableDic');
 
       function dicValue(lin, col) {
-        if (Object.keys(dicSRAG[col.toString()])[lin]) {
-          return `<td >${Object.values(dicSRAG[col.toString()])[lin]} </td>`;
+        if (Object.keys(dicSRAGEn[col.toString()])[lin]) {
+          return `<td >${Object.values(dicSRAGEn[col.toString()])[lin]} </td>`;
         }
         return '-';
       }
@@ -917,11 +916,11 @@
         row = tableDic.insertRow(i);
         cell = row.insertCell(row);
         cell.outerHTML = `<th class="headcol">${
-          Object.keys(dicSRAG['0'])[lin]
+          Object.keys(dicSRAGEn['0'])[lin]
         }</th>`;
         ncol = 1;
         for (let col = 0; col < ncols; col++) {
-          col_name = Object.values(dicSRAG[col.toString()])[5];
+          col_name = Object.values(dicSRAGEn[col.toString()])[5];
           //only add column if field is in our data
           if (fields.find(fields => fields === col_name)) {
             cell = row.insertCell(ncol);

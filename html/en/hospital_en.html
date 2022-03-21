@@ -674,13 +674,13 @@
       }
 
       lines = [0, 1, 2];
-      ncols = dicHosp.length;
+      ncols = dicHospEn.length;
 
       tableDic = document.getElementById('tableDic');
 
       function dicValue(lin, col) {
-        if (Object.keys(dicHosp[col.toString()])[lin]) {
-          return `<td >${Object.values(dicHosp[col.toString()])[lin]} </td>`;
+        if (Object.keys(dicHospEn[col.toString()])[lin]) {
+          return `<td >${Object.values(dicHospEn[col.toString()])[lin]} </td>`;
         }
         return '-';
       }
@@ -690,11 +690,11 @@
         row = tableDic.insertRow(i);
         cell = row.insertCell(row);
         cell.outerHTML = `<th class="headcol">${
-          Object.keys(dicHosp['0'])[lin]
+          Object.keys(dicHospEn['0'])[lin]
         }</th>`;
         ncol = 1;
         for (let col = 0; col < ncols; col++) {
-          col_name = Object.values(dicHosp[col.toString()])[5];
+          col_name = Object.values(dicHospEn[col.toString()])[5];
 
           cell = row.insertCell(ncol);
           cell.outerHTML = dicValue(lin, col);

@@ -712,13 +712,13 @@
       }
 
       lines = [2, 0, 1];
-      ncols = dicSIVEP.length;
+      ncols = dicSIVEPEn.length;
 
       tableDic = document.getElementById('tableDic');
 
       function dicValue(lin, col) {
-        if (Object.keys(dicSIVEP[col.toString()])[lin]) {
-          return `<td >${Object.values(dicSIVEP[col.toString()])[lin]} </td>`;
+        if (Object.keys(dicSIVEPEn[col.toString()])[lin]) {
+          return `<td >${Object.values(dicSIVEPEn[col.toString()])[lin]} </td>`;
         }
         return '-';
       }
@@ -728,11 +728,11 @@
         row = tableDic.insertRow(i);
         cell = row.insertCell(row);
         cell.outerHTML = `<th class="headcol">${
-          Object.keys(dicSIVEP['0'])[lin]
+          Object.keys(dicSIVEPEn['0'])[lin]
         }</th>`;
         ncol = 1;
         for (let col = 0; col < ncols; col++) {
-          col_name = Object.values(dicSIVEP[col.toString()])[5];
+          col_name = Object.values(dicSIVEPEn[col.toString()])[5];
           //only add column if field is in our data
 
           cell = row.insertCell(ncol);

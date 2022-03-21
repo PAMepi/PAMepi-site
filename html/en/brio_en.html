@@ -695,14 +695,14 @@
       }
 
       lines = [0, 1, 2];
-      ncols = dicBrasilio.length;
+      ncols = dicBrasilioEn.length;
 
       tableDic = document.getElementById('tableDic');
 
       function dicValue(lin, col) {
-        if (Object.keys(dicBrasilio[col.toString()])[lin]) {
+        if (Object.keys(dicBrasilioEn[col.toString()])[lin]) {
           return `<td >${
-            Object.values(dicBrasilio[col.toString()])[lin]
+            Object.values(dicBrasilioEn[col.toString()])[lin]
           } </td>`;
         }
         return '-';
@@ -713,11 +713,11 @@
         row = tableDic.insertRow(i);
         cell = row.insertCell(row);
         cell.outerHTML = `<th class="headcol">${
-          Object.keys(dicBrasilio['0'])[lin]
+          Object.keys(dicBrasilioEn['0'])[lin]
         }</th>`;
         ncol = 1;
         for (let col = 0; col < ncols; col++) {
-          col_name = Object.values(dicBrasilio[col.toString()])[5];
+          col_name = Object.values(dicBrasilioEn[col.toString()])[5];
 
           cell = row.insertCell(ncol);
           cell.outerHTML = dicValue(lin, col);
