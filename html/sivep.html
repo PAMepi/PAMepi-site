@@ -158,11 +158,6 @@
                         >Vacinação</a
                       >
                     </li>
-                    <li class="dropdown-item drop-item">
-                      <a href="hospital.html" class="nav-link submenu">
-                        Ocupação Hospitalar
-                      </a>
-                    </li>
                   </ul>
                 </div>
                 <div
@@ -480,9 +475,9 @@
           notificado em outro estado ou município (Campos: Notificação estado,
           Notificação município), além de questões demográficas e
           clínico-epidemiológicas, (<a
-            href="https://opendatasus.saude.gov.br/dataset/casos-nacionais"
+            href="https://opendatasus.saude.gov.br/dataset/notificacoes-de-sindrome-gripal-leve-2021"
             target="_blank"
-            >Ministério da Saúde, 2020a</a
+            >Ministério da Saúde, 2021</a
           >), (<a
             href="https://portal.fiocruz.br/sites/portal.fiocruz.br/files/documentos/nota_tecnica_13.pdf 
           "
@@ -504,9 +499,9 @@
         <p>
           Os dados SG são licenciados sob a Creative Commons Attribution License
           cc-by (versão 4.0), ver (<a
-            href="https://opendatasus.saude.gov.br/dataset/casos-nacionais"
+            href="https://opendatasus.saude.gov.br/dataset/notificacoes-de-sindrome-gripal-leve-2021"
             target="_blank"
-            >Ministério da Saúde, 2020a</a
+            >Ministério da Saúde, 2021</a
           >). Além disso, o conjunto de dados SG está disponível ao público e
           publicado pelo Ministério da Saúde do Brasil. Portanto, não é
           necessária a aprovação de um comitê de ética para o uso desses dados,
@@ -563,10 +558,10 @@
           sintomas disponíveis no conjunto de dados.
         </p>
         <h2 class="mb-5 mt-5 pt-5 pb-2">
-          Visão esquemática da base de dados SG
+          Visão esquemática da base de dados SG e SRAG
         </h2>
         <p style="column-span: all">
-          <img src="img/sivep_esquema.jpeg" style="width: 100%" />
+          <img src="img/sivep_esquema_pt.jpeg" style="width: 100%" />
         </p>
       </div>
     </section>
@@ -580,10 +575,10 @@
           </div>
           <div class="media-right">
             <a
-              href="https://github.com/PAMepi/PAMepi_scripts_datalake"
+              href="files/dic/Dicionarios-Portugues-SG.csv"
               class="btn btn-info"
               target="_blank"
-              >Download</a
+              >Download - Dicionário .csv</a
             >
           </div>
         </div>
@@ -650,7 +645,6 @@
     </footer>
 
     <script>
-      console.log(sampleSIVEP);
       let cell;
       let nlines = sampleSIVEP.length;
       let ncols = Object.keys(sampleSIVEP['0']).length;
@@ -685,9 +679,8 @@
         }
       }
 
-      lines = [2, 0, 1];
       ncols = dicSIVEP.length;
-
+      console.log(dicSIVEP);
       tableDic = document.getElementById('tableDic');
 
       function dicValue(lin, col) {
@@ -696,21 +689,20 @@
         }
         return '-';
       }
+
       let col_name = '';
       // fill table with data
-      for (let [i, lin] of lines.entries()) {
+      for (let i = 0; i < Object.keys(dicSIVEP[0]).length; i++) {
         row = tableDic.insertRow(i);
         cell = row.insertCell(row);
         cell.outerHTML = `<th class="headcol">${
-          Object.keys(dicSIVEP['0'])[lin]
+          Object.keys(dicSIVEP['0'])[i]
         }</th>`;
         ncol = 1;
         for (let col = 0; col < ncols; col++) {
           col_name = Object.values(dicSIVEP[col.toString()])[5];
-          //only add column if field is in our data
-
           cell = row.insertCell(ncol);
-          cell.outerHTML = dicValue(lin, col);
+          cell.outerHTML = dicValue(i, col);
           ncol++;
         }
       }
@@ -721,25 +713,3 @@
     <script src="js/scripts.js"></script>
   </body>
 </html>
-
-<!-- 
-"síndrome gripal": {
-  "arquivo": "dados-*.csv",
-  "link": "https://modellingtask.slack.com/files/U027NHJHC6Q/F028Q6K66MT/2021_07_12_decretos.csv",
-  "espacialidade": "municipio",
-  "temporalidade": "dia",
-  "informação": "Notificação de síndrome gripal",
-  "n_colunas": 30,
-  "colunas": [
-      "cbo", "classificacaoFinal", "cnes", "condicoes",
-      "dataEncerramento", "dataInicioSintomas",
-      "dataNascimento", "dataNotificacao", "dataTeste",
-      "estado", "estadoIBGE", "estadoNotificacao",
-      "estadoNotificacaoIBGE", "estadoTeste", "evolucaoCaso",
-      "excluido", "idade", "municipio", "municipioIBGE",
-      "municipioNotificacao", "municipioNotificacaoIBGE",
-      "origem", "paisOrigem", "profissionalSaude",
-      "resultadoTeste", "sexo", "sintomas", "tipoTeste",
-      "validado", "id"
-  ]
-}, -->
