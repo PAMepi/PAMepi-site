@@ -156,11 +156,6 @@
                         >Vacinação</a
                       >
                     </li>
-                    <li class="dropdown-item drop-item">
-                      <a href="hospital.html" class="nav-link submenu">
-                        Ocupação Hospitalar
-                      </a>
-                    </li>
                   </ul>
                 </div>
                 <div
@@ -539,10 +534,10 @@
           </div>
           <div class="media-right">
             <a
-              href="https://github.com/PAMepi/PAMepi_scripts_datalake"
+              href="files/dic/Dicionarios-Portugues-Vac.csv"
               class="btn btn-info"
               target="_blank"
-              >Download</a
+              >Download - Dicionário .csv</a
             >
           </div>
         </div>
@@ -645,31 +640,30 @@
         }
       }
 
-      lines = [1, 2, 3];
-      ncols = dicVacina.length;
+      ncols = dicVac.length;
 
       tableDic = document.getElementById('tableDic');
 
       function dicValue(lin, col) {
-        if (Object.keys(dicVacina[col.toString()])[lin]) {
-          return `<td >${Object.values(dicVacina[col.toString()])[lin]} </td>`;
+        if (Object.keys(dicVac[col.toString()])[lin]) {
+          return `<td >${Object.values(dicVac[col.toString()])[lin]} </td>`;
         }
         return '-';
       }
       let col_name = '';
       // fill table with data
-      for (let [i, lin] of lines.entries()) {
+      for (let i = 0; i < Object.keys(dicVac[0]).length; i++) {
         row = tableDic.insertRow(i);
         cell = row.insertCell(row);
         cell.outerHTML = `<th class="headcol">${
-          Object.keys(dicVacina['0'])[lin]
+          Object.keys(dicVac['0'])[i]
         }</th>`;
         ncol = 1;
         for (let col = 0; col < ncols; col++) {
-          col_name = Object.values(dicVacina[col.toString()])[5];
+          col_name = Object.values(dicVac[col.toString()])[5];
 
           cell = row.insertCell(ncol);
-          cell.outerHTML = dicValue(lin, col);
+          cell.outerHTML = dicValue(i, col);
           ncol++;
         }
       }

@@ -6007,7 +6007,7 @@ const dicSIVEPEn = [
   return x < y ? -1 : x > y ? 1 : 0;
 });
 
-const sampleBRio = [
+const sampleWCota = [
   {
     city: 'Plácido de Castro',
     city_ibge_code: 1200385,
@@ -6210,108 +6210,144 @@ const sampleBRio = [
   },
 ];
 
-const dicBrasilio = [
+const dicWCota = [
   {
-    Coluna: 'epidemiological_week',
-    Tipo: 'integer',
+    'Nome do campo na base<br>de dados original': 'epi_week',
+    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+      'sem_ntf',
+    'Legenda do Campo': 'Semana epidemiológica',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
     Descrição: 'Número da semana epidemiológica.',
   },
   {
-    Coluna: 'date',
-    Tipo: 'string (max_length=10)',
-    Descrição: 'Data de coleta dos dados no formato YYYY-MM-DD.',
+    'Nome do campo na base<br>de dados original': 'date',
+    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+      'date',
+    'Legenda do Campo': 'Data',
+    Tipo: 'Date YYYY-MM-DD',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição: 'Data de divulgação dos dados no formato YYYY-MM-DD.',
   },
   {
-    Coluna: 'order_for_place',
-    Tipo: 'integer',
+    'Nome do campo na base<br>de dados original': 'state',
+    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+      'uf',
+    'Legenda do Campo': 'UF - Estado',
+    Tipo: 'String',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
     Descrição:
-      'Número que identifica a ordem do registro para este local. O registro referente ao primeiro boletim em que esse local aparecer será contabilizado como 1 e os demais boletins incrementarão esse valor.',
+      'Sigla da unidade federativa, exemplo: SP, ou “TOTAL” quando se refere a todo o país',
   },
   {
-    Coluna: 'state',
-    Tipo: 'string (max_length=2)',
-    Descrição: 'Sigla da unidade federativa exemplo: SP.',
-  },
-  {
-    Coluna: 'city',
-    Tipo: 'string (max_length=64)',
+    'Nome do campo na base<br>de dados original': 'city',
+    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+      'mun_name',
+    'Legenda do Campo': 'Município',
+    Tipo: 'String',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
     Descrição:
-      'Nome do município (pode estar em branco quando o registro é referente ao estado pode ser preenchido com `Importados/Indefinidos` também).',
+      'Nome completo do município no formato Cidade/UF. Pode ter o valor “CASO SEM LOCALIZAÇÃO DEFINIDA/UF”, referindo-se àqueles casos na unidade federativa que não tem seu município definido.',
   },
   {
-    Coluna: 'city_ibge_code',
-    Tipo: 'integer',
-    Descrição: 'Código IBGE do local.',
-  },
-  {
-    Coluna: 'place_type',
-    Tipo: 'string (max_length=5)',
+    'Nome do campo na base<br>de dados original': 'ibgeID',
+    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+      'code_full_mun_ibge',
+    'Legenda do Campo': 'Cód. IBGE',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
     Descrição:
-      'Tipo de local que esse registro descreve pode ser city ou state.',
+      'Identificação única do município fornecida pelo Instituto Brasileiro de Pesquisas Estatísticas (IBGE)',
   },
   {
-    Coluna: 'last_available_date',
-    Tipo: 'string (max_length=10)',
-    Descrição: 'Data da qual o dado se refere.',
-  },
-  {
-    Coluna: 'last_available_confirmed',
-    Tipo: 'integer',
+    'Nome do campo na base<br>de dados original': 'newDeaths',
+    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+      'newDeaths',
+    'Legenda do Campo': 'Óbitos no dia',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
     Descrição:
-      'Número de casos confirmados do último dia disponível igual ou anterior à data date.',
+      'Diferença entre o número de óbitos da data correspondente e a anterior',
   },
   {
-    Coluna: 'last_available_confirmed_per_100k_inhabitants',
-    Tipo: 'float',
+    'Nome do campo na base<br>de dados original': 'deaths',
+    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+      'deaths',
+    'Legenda do Campo': 'Óbitos acum.',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição: 'Número acumulado de óbitos nessa data',
+  },
+  {
+    'Nome do campo na base<br>de dados original': 'newCases',
+    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+      'newCases',
+    'Legenda do Campo': 'Confirmações no dia',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
     Descrição:
-      'Número de casos confirmados por 100.000 habitantes do último dia disponível igual ou anterior à data date.',
+      'Diferença entre o número de casos da data correspondente e a anterior',
   },
   {
-    Coluna: 'new_confirmed',
-    Tipo: 'integer',
-    Descrição:
-      'Número de novos casos confirmados desde o último dia (note que caso is_repeated seja True esse valor sempre será 0 e que esse valor pode ser negativo caso a SES remaneje os casos desse município para outro).',
+    'Nome do campo na base<br>de dados original': 'totalCases',
+    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+      'totalCases',
+    'Legenda do Campo': 'Confirmados acum.',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição: 'Número acumulado de casos nessa data',
   },
   {
-    Coluna: 'last_available_deaths',
-    Tipo: 'integer',
-    Descrição:
-      'Número de mortes do último dia disponível igual ou anterior à data date.',
+    'Nome do campo na base<br>de dados original': 'deaths_per_100k_inhabitants',
+    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+      'deaths_per_100k_inhabitants',
+    'Legenda do Campo': 'Óbitos acum./100k hab.',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição: 'Número de óbitos por 100.000 habitantes para aquela localidade',
   },
   {
-    Coluna: 'new_deaths',
-    Tipo: 'integer',
-    Descrição:
-      'Número de novos óbitos desde o último dia (note que caso is_repeated seja True esse valor sempre será 0 e que esse valor pode ser negativo caso a SES remaneje os casos desse município para outro).',
+    'Nome do campo na base<br>de dados original':
+      'totalCases_per_100k_inhabitants',
+    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+      'totalCases_per_100k_inhabitants',
+    'Legenda do Campo': 'Confirmados acum./100k hab.',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição: 'Número de casos por 100.000 habitantes para aquela localidade',
   },
   {
-    Coluna: 'last_available_death_rate',
-    Tipo: 'float',
-    Descrição:
-      'Taxa de mortalidade (mortes / confirmados) do último dia disponível igual ou anterior à data date.',
-  },
-  {
-    Coluna: 'estimated_population',
-    Tipo: 'integer',
-    Descrição: 'População estimada para o local em 2020 segundo o IBGE.',
-  },
-  {
-    Coluna: 'estimated_population_2019',
-    Tipo: 'integer',
-    Descrição:
-      'População estimada para esse município/estado em 2019 segundo o IBGE.',
-  },
-  {
-    Coluna: 'is_last',
-    Tipo: 'bool',
-    Descrição:
-      'Campo pré-computado que diz se esse registro é o mais novo para esse local pode ser True ou False (caso filtre por esse campo use is_last=True ou is_last=False não use o valor em minúsculas).',
-  },
-  {
-    Coluna: 'is_repeated',
-    Tipo: 'bool',
-    Descrição:
-      'Campo pré-computado que diz se as informações nesse registro foram publicadas pela Secretaria Estadual de Saúde no dia date ou se o dado é repetido do último dia em que o dado está disponível (igual ou anterior a date). Isso ocorre pois nem todas as secretarias publicam boletins todos os dias. Veja também o campo last_available_date.',
+    'Nome do campo na base<br>de dados original': 'deaths_by_totalCases',
+    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+      'deaths_by_totalCases',
+    'Legenda do Campo': 'Óbitos/confirmados',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição: 'Razão entre número de óbitos e casos (deaths/totalCases)',
   },
 ].sort(function (a, b) {
   var x = a['Nome do campo na base<br>de dados original'].toLowerCase();
@@ -6801,199 +6837,361 @@ const sampleVac = [
   },
 ];
 
-const dicVacina = [
+const dicVac = [
   {
-    Ordem: '1',
-    Coluna: 'document_id',
+    'Nome do campo na base<br>de dados original': 'document_id',
+    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+      'doc_id',
+    'Legenda do Campo': 'Identificador do documento',
+    Tipo: 'String',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
     Descrição: 'Identificador do documento',
-    Categoria: 'String',
   },
   {
-    Ordem: '2',
-    Coluna: 'paciente_id',
+    'Nome do campo na base<br>de dados original': 'paciente_id',
+    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+      'id',
+    'Legenda do Campo': 'Identificador do vacinado',
+    Tipo: 'String',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
     Descrição: 'Identificador do vacinado',
-    Categoria: 'String',
   },
   {
-    Ordem: '3',
-    Coluna: 'paciente_idade',
-    Descrição: 'Idade do vacinado',
-    Categoria: 'Number',
+    'Nome do campo na base<br>de dados original': 'paciente_idade',
+    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+      'idade',
+    'Legenda do Campo': 'Idade do vacinado',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição: 'Idade do vacinado em anos.',
   },
   {
-    Ordem: '4',
-    Coluna: 'paciente_dataNascimento',
+    'Nome do campo na base<br>de dados original': 'paciente_dataNascimento',
+    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+      'dt_nasc',
+    'Legenda do Campo': 'Data de nascimento do vacinado',
+    Tipo: 'Date yyyy-mm-dd',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
     Descrição: 'Data de nascimento do vacinado',
-    Categoria: 'Date YYY-MM-DD',
   },
   {
-    Ordem: '5',
-    Coluna: 'paciente_enumSexoBiologico',
+    'Nome do campo na base<br>de dados original': 'paciente_enumSexoBiologico',
+    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+      'sexo',
+    'Legenda do Campo': 'Sexo do vacinado',
+    Tipo: 'String',
+    Categorias: 'M= Masculino<br>F= Feminino<br>I=Ignorado',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'M- Masculino<br>F- Feminino<br>I-Ignorado',
     Descrição: 'Sexo do vacinado',
-    Categoria: 'M = Masculino, F = Feminino',
   },
   {
-    Ordem: '6',
-    Coluna: 'paciente_racaCor_codigo',
-    Descrição: 'Código da raça/cor do vacinado',
-    Categoria: '1; 2; 3; 4; 99',
+    'Nome do campo na base<br>de dados original': 'paciente_racaCor_codigo',
+    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+      'racaCor_code',
+    'Legenda do Campo': 'Código da raça/cor do vacinado',
+    Tipo: 'Number',
+    Categorias: '1,2,3,4,99',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      '1- Branca<br>2- Preta<br>3- Parda<br>4- Amarela<br>99- Sem informação',
+    Descrição: 'Descrição na coluna paciente_racaCor_valor',
   },
   {
-    Ordem: '7',
-    Coluna: 'paciente_racaCor_valor',
-    Descrição: 'Descrição da raça/cor do vacinado',
-    Categoria:
-      '1 = Branca; 2 = Preta; 3 = Parda; 4 = Amarela; 99 = Sem informação',
+    'Nome do campo na base<br>de dados original': 'paciente_racaCor_valor',
+    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+      'racaCor',
+    'Legenda do Campo': 'Descrição da raça/cor do vacinado',
+    Tipo: 'String',
+    Categorias: 'Branca<br>Preta<br>Parda<br>Amarela<br>Sem informação',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Branca<br>Preta<br>Parda<br>Amarela<br>Sem informação',
+    Descrição: 'Relativo a coluna paciente_racaCor_codigo',
   },
   {
-    Ordem: '8',
-    Coluna: 'paciente_endereco_colbgeMunicipio',
+    'Nome do campo na base<br>de dados original':
+      'paciente_endereco_coIbgeMunicipio',
+    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+      'mun_res',
+    'Legenda do Campo': 'Código IBGE do município de endereço do vacinado',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
     Descrição: 'Código IBGE do município de endereço do vacinado',
-    Categoria: 'Number',
   },
   {
-    Ordem: '9',
-    Coluna: 'paciente_endereco_coPais',
+    'Nome do campo na base<br>de dados original': 'paciente_endereco_coPais',
+    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+      'pais_code_res',
+    'Legenda do Campo': 'Código do país de endereço do vacinado',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
     Descrição: 'Código do país de endereço do vacinado',
-    Categoria: 'Number',
   },
   {
-    Ordem: '10',
-    Coluna: 'paciente_endereco_nmMunicipio',
+    'Nome do campo na base<br>de dados original':
+      'paciente_endereco_nmMunicipio',
+    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+      'mun_res',
+    'Legenda do Campo': 'Nome do município de endereço do vacinado',
+    Tipo: 'String',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
     Descrição: 'Nome do município de endereço do vacinado',
-    Categoria: 'String',
   },
   {
-    Ordem: '11',
-    Coluna: 'paciente_endereco_nmPais',
+    'Nome do campo na base<br>de dados original': 'paciente_endereco_nmPais',
+    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+      'pais_res',
+    'Legenda do Campo': 'Nome do país de endereço do vacinado',
+    Tipo: 'String',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
     Descrição: 'Nome do país de endereço do vacinado',
-    Categoria: 'String',
   },
   {
-    Ordem: '12',
-    Coluna: 'paciente_endereco_uf',
+    'Nome do campo na base<br>de dados original': 'paciente_endereco_uf',
+    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+      'uf_res',
+    'Legenda do Campo': 'Sigla da UF de endereço do vacinado',
+    Tipo: 'String',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
     Descrição: 'Sigla da UF de endereço do vacinado',
-    Categoria: 'String',
   },
   {
-    Ordem: '13',
-    Coluna: 'paciente_endereco_cep',
-    Descrição: '5 dígitos para anonimizado e 7 dígitos para identificado',
-    Categoria: 'Number',
+    'Nome do campo na base<br>de dados original': 'paciente_endereco_cep',
+    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+      'cep_res',
+    'Legenda do Campo': 'Código de Endereçamento Postal',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      'Código de Endereçamento Postal com 5 dígitos para anonimizado e 7 dígitos para identificado',
   },
   {
-    Ordem: '14',
-    Coluna: 'paciente_nacionalidade_enumNacionalidade',
+    'Nome do campo na base<br>de dados original':
+      'paciente_nacionalidade_enumNacionalidade',
+    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+      'nacionalidade',
+    'Legenda do Campo': 'Nacionalidade do vacinado',
+    Tipo: 'String',
+    Categorias: 'B=Brasileiro<br>E=Estrangeiro<br>N=Ignorado',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'B-Brasileiro<br>E-Estrangeiro<br>N-Ignorado',
     Descrição: 'Nacionalidade do vacinado',
-    Categoria: 'String',
   },
   {
-    Ordem: '15',
-    Coluna: 'estabelecimento_valor',
+    'Nome do campo na base<br>de dados original': 'estabelecimento_valor',
+    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+      'cnes',
+    'Legenda do Campo':
+      'Código do CNES do estabelecimento que realizou a vacinação',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
     Descrição: 'Código do CNES do estabelecimento que realizou a vacinação',
-    Categoria: 'Number',
   },
   {
-    Ordem: '16',
-    Coluna: 'estabelecimento_razaoSocial',
+    'Nome do campo na base<br>de dados original': 'estabelecimento_razaoSocial',
+    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+      'estabelecimento_razaoSocial',
+    'Legenda do Campo': 'Nome/Razão Social do estabelecimento',
+    Tipo: 'String',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
     Descrição: 'Nome/Razão Social do estabelecimento',
-    Categoria: 'String',
   },
   {
-    Ordem: '17',
-    Coluna: 'estabelecimento_noFantasia',
+    'Nome do campo na base<br>de dados original': 'estabelecimento_noFantasia',
+    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+      'uni_ntf',
+    'Legenda do Campo': 'Nome fantasia do estabelecimento',
+    Tipo: 'String',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
     Descrição: 'Nome fantasia do estabelecimento',
-    Categoria: 'String',
   },
   {
-    Ordem: '18',
-    Coluna: 'estabelecimento_municipio_codigo',
+    'Nome do campo na base<br>de dados original':
+      'estabelecimento_municipio_codigo',
+    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+      'mun_code_ntf',
+    'Legenda do Campo': 'Código do município do estabelecimento',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
     Descrição: 'Código do município do estabelecimento',
-    Categoria: 'Number',
   },
   {
-    Ordem: '19',
-    Coluna: 'estabelecimento_municipio_nome',
+    'Nome do campo na base<br>de dados original':
+      'estabelecimento_municipio_nome',
+    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+      'mun_ntf',
+    'Legenda do Campo': 'Nome do município do estabelecimento',
+    Tipo: 'String',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
     Descrição: 'Nome do município do estabelecimento',
-    Categoria: 'String',
   },
   {
-    Ordem: '20',
-    Coluna: 'estabelecimento_uf',
-    Descrição: 'Sigla da UF do estabelecimento',
-    Categoria: 'String',
+    'Nome do campo na base<br>de dados original': 'estabelecimento_uf',
+    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+      'uf_ntf',
+    'Legenda do Campo': 'Sigla UF do estabelecimento',
+    Tipo: 'String',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição: 'Sigla UF do estabelecimento',
   },
   {
-    Ordem: '21',
-    Coluna: 'vacina_grupo_atendimento_code',
-    Descrição: 'Código do grupo de atendimento ao qual pertence o vacinado',
-    Categoria: 'String',
+    'Nome do campo na base<br>de dados original':
+      'vacina_grupo_atendimento_codigo',
+    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+      'vacina_grupo_atendimento_codigo',
+    'Legenda do Campo':
+      'Código do grupo de atendimento ao qual pertence o vacinado',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição: 'Descrição na coluna vacina_grupo_atendimento_nome',
   },
   {
-    Ordem: '22',
-    Coluna: 'vacina_grupo_atendimento_nome',
-    Descrição: 'Nome do grupo de atendimento ao qual pertence o vacinado',
-    Categoria: 'String',
+    'Nome do campo na base<br>de dados original':
+      'vacina_grupo_atendimento_nome',
+    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+      'vacina_grupo_atendimento_nome',
+    'Legenda do Campo':
+      'Nome do grupo de atendimento ao qual pertence o vacinado',
+    Tipo: 'String',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição: 'Relativo a coluna vacina_grupo_atendimento_codigo',
   },
   {
-    Ordem: '23',
-    Coluna: 'vacina_categoria_code',
-    Descrição: 'Código da categoria',
-    Categoria: 'Number',
+    'Nome do campo na base<br>de dados original': 'vacina_categoria_codigo',
+    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+      'vacina_categoria_codigo',
+    'Legenda do Campo': 'Código da categoria',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição: 'Descrição na coluna vacina_categoria_nome',
   },
   {
-    Ordem: '24',
-    Coluna: 'vacina_categoria_nome',
-    Descrição: 'Descrição da categoria',
-    Categoria: 'String',
+    'Nome do campo na base<br>de dados original': 'vacina_categoria_nome',
+    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+      'vacina_categoria_nome',
+    'Legenda do Campo': 'Descrição da categoria',
+    Tipo: 'String',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição: 'Referente a coluna vacina_categoria_codigo',
   },
   {
-    Ordem: '25',
-    Coluna: 'vacina_lote',
+    'Nome do campo na base<br>de dados original': 'vacina_lote',
+    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+      'vacina_lote',
+    'Legenda do Campo': 'Número do lote da vacina',
+    Tipo: 'String',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
     Descrição: 'Número do lote da vacina',
-    Categoria: 'Number',
   },
   {
-    Ordem: '26',
-    Coluna: 'vacina_fabricante_nome',
+    'Nome do campo na base<br>de dados original': 'vacina_fabricante_nome',
+    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+      'vacina_fabricante_nome',
+    'Legenda do Campo': 'Nome do fabricante/fornecedor',
+    Tipo: 'String',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
     Descrição: 'Nome do fabricante/fornecedor',
-    Categoria: 'String',
   },
   {
-    Ordem: '27',
-    Coluna: 'vacina_fabricante_referencia',
-    Descrição: 'CNP.I do fabricante/fornecedor',
-    Categoria: 'String',
+    'Nome do campo na base<br>de dados original':
+      'vacina_fabricante_referencia',
+    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+      'vacina_fabricante_referencia',
+    'Legenda do Campo': 'CNPJ do fabricante/fornecedor',
+    Tipo: 'String',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição: 'CNPJ do fabricante/fornecedor',
   },
   {
-    Ordem: '28',
-    Coluna: 'vacina_dataAplicacao',
+    'Nome do campo na base<br>de dados original': 'vacina_dataAplicacao',
+    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+      'data_vac',
+    'Legenda do Campo': 'Data de aplicação da vacina',
+    Tipo: 'Date yyyy-mm-dd',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
     Descrição: 'Data de aplicação da vacina',
-    Categoria: 'Date YYY-MM-DD',
   },
   {
-    Ordem: '29',
-    Coluna: 'vacina_descricao_dose',
-    Descrição: 'Descrição da dose',
-    Categoria: 'String',
+    'Nome do campo na base<br>de dados original': 'vacina_descricao_dose',
+    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+      'dose',
+    'Legenda do Campo': 'Descrição da dose',
+    Tipo: 'String',
+    Categorias:
+      '1ª Dose<br>Dose Inicial<br>2ª Dose<br>Reforço<br>Dose<br>Dose Adicional<br>3ª Dose<br>2º Reforço<br>4ª Dose<br>Única<br>1º Reforço<br>2ª Dose Revacinação<br>1ª Dose Revacinação<br>5ª Dose<br>3ª Dose Revacinação<br>Revacinação<br>3º Reforço<br>Tratamento com uma dose<br>Tratamento com dezessete doses<br>',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      '1- 1ª Dose / Dose Inicial<br>2- 2ª Dose / Única<br>3- Reforço / Dose / Dose Adicional / 3ª Dose / 2º Reforço / 4ª Dose / 1º Reforço / 2ª Dose Revacinação / 1ª Dose Revacinação / 5ª Dose /<br>3ª Dose Revacinação / Revacinação / 3º Reforço / Tratamento com uma dose / Tratamento com dezessete doses<br>9 - Ignorado',
+    Descrição:
+      'Descrição da dose, Pamepi separa os dados em 3 categorias: 1ª Dose, 2ª Dose e Reforço.',
   },
   {
-    Ordem: '30',
-    Coluna: 'vacina_codigo',
+    'Nome do campo na base<br>de dados original': 'vacina_codigo',
+    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+      'vacina_codigo',
+    'Legenda do Campo': 'Código da vacina',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
     Descrição: 'Código da vacina',
-    Categoria: 'Number',
   },
   {
-    Ordem: '31',
-    Coluna: 'vacina_nome',
-    Descrição: 'Nome da vacina/produto',
-    Categoria: 'String',
-  },
-  {
-    Ordem: '32',
-    Coluna: 'sistema origem',
-    Descrição: 'Nome do sistema de origem',
-    Categoria: 'String',
+    'Nome do campo na base<br>de dados original': 'vacina_nome',
+    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+      'vacina_nome',
+    'Legenda do Campo': 'Nome da vacina/produto',
+    Tipo: 'String',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      '1-Astrazeneca<br>2-Coronavac<br>3-Pfizer<br>4-Janssen',
+    Descrição: 'Relativo a coluna vacina_codigo',
   },
 ].sort(function (a, b) {
   var x = a['Nome do campo na base<br>de dados original'].toLowerCase();
