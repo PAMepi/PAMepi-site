@@ -156,11 +156,7 @@
                         >Vacinação</a
                       >
                     </li>
-                    <li class="dropdown-item drop-item">
-                      <a href="hospital.html" class="nav-link submenu">
-                        Ocupação Hospitalar
-                      </a>
-                    </li>
+            
                   </ul>
                 </div>
                 <div
@@ -331,29 +327,19 @@
                         >Validação</a
                       >
                     </li>
-                    <li class="dropdown-item drop-item sub-drop disabled">
-                      <a href="simula.html" class="nav-link submenu isDisabled"
-                        >Simulação</a
-                      >
-                    </li>
+               
                   </ul>
                 </div>
                 <div class="dropdown-item drop-item disabled">
                   <a
-                    href="municipios.html"
+                    href="dashboard.html"
                     class="itemcol nav-link submenu isDisabled"
-                    >Municipios</a
+                    >Simulação</a
                   >
                 </div>
+      
                 <div class="dropdown-item drop-item disabled">
-                  <a
-                    href="reg_sau.html"
-                    class="itemcol nav-link submenu isDisabled"
-                    >Regiões de saúde</a
-                  >
-                </div>
-                <div class="dropdown-item drop-item disabled">
-                  <a href="tsd.html" class="itemcol nav-link submenu isDisabled"
+                  <a href="#" class="itemcol nav-link submenu isDisabled"
                     >Traga seus dados</a
                   >
                 </div>
@@ -495,14 +481,7 @@
           <div class="media-left">
             <h3 class="data">Dados e dicionário de variáveis</h3>
           </div>
-          <div class="media-right">
-            <a
-              href="https://github.com/PAMepi/PAMepi_scripts_datalake"
-              class="btn btn-info"
-              target="_blank"
-              >Download</a
-            >
-          </div>
+  
         </div>
 
         <div class="data-in">
@@ -517,7 +496,12 @@
             ></table>
           </div>
 
-          <h4 class="data">Dicionário de Dados</h4>
+          <h4 class="data">Dicionário de Dados       <a
+            href="files/dic/Dicionarios-Portugues-Agreg.csv"
+            class="btn btn-info float-right mr-3"
+            target="_blank"
+            >Download</a
+          ></h4>
           <div class="table-div">
             <table
               id="tableDic"
@@ -567,7 +551,7 @@
     </footer>
     <script type="text/javascript" src="js/data.js"></script>
     <script>
-      console.log(sampleAgregate);
+   
       let cell;
       let nlines = sampleAgregate.length;
       let ncols = Object.keys(sampleAgregate['0']).length;
@@ -602,7 +586,6 @@
         }
       }
 
-      lines = [0, 1, 2, 3, 4];
       ncols = dicAgregate.length;
 
       tableDic = document.getElementById('tableDic');
@@ -617,11 +600,11 @@
       }
       let col_name = '';
       // fill table with data
-      for (let [i, lin] of lines.entries()) {
+      for (let i = 0; i < Object.keys(dicAgregate[0]).length; i++)  {
         row = tableDic.insertRow(i);
         cell = row.insertCell(row);
         cell.outerHTML = `<th class="headcol">${
-          Object.keys(dicAgregate['0'])[lin]
+          Object.keys(dicAgregate['0'])[i]
         }</th>`;
         ncol = 1;
         for (let col = 0; col < ncols; col++) {
@@ -629,7 +612,7 @@
           //only add column if field is in our data
 
           cell = row.insertCell(ncol);
-          cell.outerHTML = dicValue(lin, col);
+          cell.outerHTML = dicValue(i, col);
           ncol++;
         }
       }

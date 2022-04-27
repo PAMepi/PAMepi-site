@@ -328,29 +328,18 @@
                         >Validação</a
                       >
                     </li>
-                    <li class="dropdown-item drop-item sub-drop disabled">
-                      <a href="simula.html" class="nav-link submenu isDisabled"
-                        >Simulação</a
-                      >
-                    </li>
                   </ul>
                 </div>
                 <div class="dropdown-item drop-item disabled">
                   <a
-                    href="municipios.html"
+                    href="dashboard.html"
                     class="itemcol nav-link submenu isDisabled"
-                    >Municipios</a
+                    >Simulação</a
                   >
                 </div>
+
                 <div class="dropdown-item drop-item disabled">
-                  <a
-                    href="reg_sau.html"
-                    class="itemcol nav-link submenu isDisabled"
-                    >Regiões de saúde</a
-                  >
-                </div>
-                <div class="dropdown-item drop-item disabled">
-                  <a href="tsd.html" class="itemcol nav-link submenu isDisabled"
+                  <a href="#" class="itemcol nav-link submenu isDisabled"
                     >Traga seus dados</a
                   >
                 </div>
@@ -573,14 +562,6 @@
           <div class="media-left">
             <h3 class="data">Dados e dicionário de variáveis</h3>
           </div>
-          <div class="media-right">
-            <a
-              href="files/dic/Dicionarios-Portugues-SG.csv"
-              class="btn btn-info"
-              target="_blank"
-              >Download - Dicionário .csv</a
-            >
-          </div>
         </div>
 
         <div class="data-in">
@@ -595,7 +576,15 @@
             ></table>
           </div>
 
-          <h4 class="data">Dicionário de Dados</h4>
+          <h4 class="data">
+            Dicionário de Dados
+            <a
+              href="files/dic/Dicionarios-Portugues-SG.csv"
+              class="btn btn-info float-right mr-3"
+              target="_blank"
+              >Download</a
+            >
+          </h4>
           <div class="table-div">
             <table
               id="tableDic"
@@ -680,7 +669,7 @@
       }
 
       ncols = dicSIVEP.length;
-      console.log(dicSIVEP);
+
       tableDic = document.getElementById('tableDic');
 
       function dicValue(lin, col) {

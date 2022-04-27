@@ -156,11 +156,6 @@
                         >Vacinação</a
                       >
                     </li>
-                    <li class="dropdown-item drop-item">
-                      <a href="hospital.html" class="nav-link submenu">
-                        Ocupação Hospitalar
-                      </a>
-                    </li>
                   </ul>
                 </div>
                 <div
@@ -331,29 +326,18 @@
                         >Validação</a
                       >
                     </li>
-                    <li class="dropdown-item drop-item sub-drop disabled">
-                      <a href="simula.html" class="nav-link submenu isDisabled"
-                        >Simulação</a
-                      >
-                    </li>
                   </ul>
                 </div>
                 <div class="dropdown-item drop-item disabled">
                   <a
-                    href="municipios.html"
+                    href="dashboard.html"
                     class="itemcol nav-link submenu isDisabled"
-                    >Municipios</a
+                    >Simulação</a
                   >
                 </div>
+
                 <div class="dropdown-item drop-item disabled">
-                  <a
-                    href="reg_sau.html"
-                    class="itemcol nav-link submenu isDisabled"
-                    >Regiões de saúde</a
-                  >
-                </div>
-                <div class="dropdown-item drop-item disabled">
-                  <a href="tsd.html" class="itemcol nav-link submenu isDisabled"
+                  <a href="#" class="itemcol nav-link submenu isDisabled"
                     >Traga seus dados</a
                   >
                 </div>
@@ -627,14 +611,6 @@
           <div class="media-left">
             <h3 class="data">Dados e dicionário de variáveis</h3>
           </div>
-          <div class="media-right">
-            <a
-              href="https://github.com/PAMepi/PAMepi_scripts_datalake"
-              class="btn btn-info"
-              target="_blank"
-              >Download</a
-            >
-          </div>
         </div>
 
         <div class="data-in">
@@ -649,7 +625,16 @@
             ></table>
           </div>
 
-          <h4 class="data">Dicionário de Dados - Aéreo</h4>
+          <h4 class="data">
+            Dicionário de Dados - Aéreo
+            <a
+              href="files/dic/Dicionarios-Portugues-MobAer.csv"
+              class="btn btn-info float-right mr-3"
+              target="_blank"
+              >Download</a
+            >
+          </h4>
+
           <div class="table-div">
             <table
               id="tableDic"
@@ -669,7 +654,15 @@
               class="table-data data"
             ></table>
           </div>
-          <h4 class="data">Dicionário de Dados - Rodoviário e Fluviais</h4>
+          <h4 class="data">
+            Dicionário de Dados - Rodoviário e Fluviais
+            <a
+              href="files/dic/Dicionarios-Portugues-MobRodoFluv.csv"
+              class="btn btn-info float-right mr-3"
+              target="_blank"
+              >Download</a
+            >
+          </h4>
           <div class="table-div">
             <table
               id="tableDic2"
@@ -753,7 +746,6 @@
         }
       }
 
-      lines = [0, 1, 2];
       ncols = dicAirIBGE.length;
 
       tableDic = document.getElementById('tableDic');
@@ -766,11 +758,11 @@
       }
       let col_name = '';
       // fill table with data
-      for (let [i, lin] of lines.entries()) {
+      for (let i = 0; i < Object.keys(dicAirIBGE[0]).length; i++) {
         row = tableDic.insertRow(i);
         cell = row.insertCell(row);
         cell.outerHTML = `<th class="headcol">${
-          Object.keys(dicAirIBGE['0'])[lin]
+          Object.keys(dicAirIBGE['0'])[i]
         }</th>`;
         ncol = 1;
         for (let col = 0; col < ncols; col++) {
@@ -778,7 +770,7 @@
           //only add column if field is in our data
 
           cell = row.insertCell(ncol);
-          cell.outerHTML = dicValue(lin, col);
+          cell.outerHTML = dicValue(i, col);
           ncol++;
         }
       }
@@ -816,7 +808,6 @@
         }
       }
 
-      lines = [0, 1, 2];
       ncols = dicRodoFluIBGE.length;
 
       tableDic = document.getElementById('tableDic2');
@@ -831,11 +822,11 @@
       }
       col_name = '';
       // fill table with data
-      for (let [i, lin] of lines.entries()) {
+      for (let i = 0; i < Object.keys(dicRodoFluIBGE[0]).length; i++) {
         row = tableDic.insertRow(i);
         cell = row.insertCell(row);
         cell.outerHTML = `<th class="headcol">${
-          Object.keys(dicRodoFluIBGE['0'])[lin]
+          Object.keys(dicRodoFluIBGE['0'])[i]
         }</th>`;
         ncol = 1;
         for (let col = 0; col < ncols; col++) {
@@ -843,7 +834,7 @@
           //only add column if field is in our data
 
           cell = row.insertCell(ncol);
-          cell.outerHTML = dicValue2(lin, col);
+          cell.outerHTML = dicValue2(i, col);
           ncol++;
         }
       }

@@ -1644,7 +1644,7 @@ const sampleSRAG = [
 const dicSRAG = [
   {
     'Nome do campo na base<br>de dados original': 'DT_NOTIFIC',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'dt_ntf',
     'Legenda do Campo': '1-Data de preenchimento da ficha de notificação.',
     Tipo: 'Date DD/MM/AAAA',
@@ -1655,7 +1655,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'SEM_NOT',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'sem_ntf',
     'Legenda do Campo':
       'Semana Epidemiológica do preenchimento da ficha de notificação.',
@@ -1668,7 +1668,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'DT_SIN_PRI',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'dt_sin_pri',
     'Legenda do Campo': '2-Data de 1º sintomas do caso.',
     Tipo: 'Date DD/MM/AAAA',
@@ -1680,7 +1680,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'SEM_PRI',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'sem_pri',
     'Legenda do Campo': 'Semana Epidemiológica do início dos sintomas.',
     Tipo: 'String',
@@ -1692,7 +1692,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'SG_UF_NOT',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'uf_ntf',
     'Legenda do Campo':
       '3-Unidade Federativa onde está localizada a Unidade Sentinela que realizou a notificação.',
@@ -1705,7 +1705,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'ID_MUNICIP',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'mun_ntf',
     'Legenda do Campo':
       '4-Município onde está localizada a Unidade Sentinela que realizou a notificação.',
@@ -1719,7 +1719,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'CO_MUN_NOT',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'mun_code_ntf',
     'Legenda do Campo':
       '4- Código do Município onde está localizada a Unidade Sentinela que realizou a notificação.',
@@ -1733,7 +1733,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'ID_REGIONA',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'reg_mun_ntf',
     'Legenda do Campo':
       'Regional de Saúde onde está localizado o Município realizou a notificação.',
@@ -1747,7 +1747,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'CO_REGIONA',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'reg_mun_code_ntf',
     'Legenda do Campo':
       'Código da Regional de Saúde onde está localizado o Município realizou a notificação.',
@@ -1761,7 +1761,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'ID_UNIDADE',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'uni_ntf',
     'Legenda do Campo':
       '5-Unidade Sentinela que realizou o atendimento, coleta de amostra e registro do caso.',
@@ -1774,7 +1774,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'CO_UNI_NOT',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'cnes',
     'Legenda do Campo': '5-Código CNES da Unidade de Saúde',
     Tipo: 'Number',
@@ -1787,7 +1787,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'ESTRANG',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'entrang',
     'Legenda do Campo': '8-Informar se o paciente é estrangeiro',
     Tipo: 'Number',
@@ -1799,7 +1799,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'CS_SEXO',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'sexo',
     'Legenda do Campo': '11-Sexo do paciente.',
     Tipo: 'String',
@@ -1811,7 +1811,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'DT_NASC',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'dt_nasc',
     'Legenda do Campo': '12-Data de nascimento do paciente.',
     Tipo: 'Date DD/MM/AAAA',
@@ -1823,7 +1823,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'NU_IDADE_N',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'idade',
     'Legenda do Campo':
       '13-Idade informada pelo paciente quando não se sabe a data de nascimento. Na falta desse dado é registrada a idade aparente.',
@@ -1836,7 +1836,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'TP_IDADE',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'tp_idade',
     'Legenda do Campo': '13-Unidade de medida da Idade em dias, meses ou anos.',
     Tipo: 'Number',
@@ -1848,7 +1848,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'CS_GESTANT',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'cs_gestant',
     'Legenda do Campo': '14-Idade gestacional da paciente.',
     Tipo: 'Number',
@@ -1861,7 +1861,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'CS_RACA',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'racacor',
     'Legenda do Campo': '15-Cor ou raça declarada pelo paciente: Branca',
     Tipo: 'Preta',
@@ -1872,7 +1872,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'CS_ESCOL_N',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'cs_escol_n',
     'Legenda do Campo':
       '19-Nível de escolaridade do paciente. Para os níveis fundamental e médio deve ser considerada a última série ou ano concluído.',
@@ -1886,7 +1886,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'PAC_DSCBO',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'pac_dscbo',
     'Legenda do Campo': '20-Ocupação profissional do paciente',
     Tipo: 'String',
@@ -1898,7 +1898,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'PAC_COCBO',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'pac_cocbo',
     'Legenda do Campo': '20-Código da Ocupação profissional do paciente',
     Tipo: 'Number',
@@ -1910,7 +1910,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'SG_UF',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'uf_res',
     'Legenda do Campo': '23-Unidade Federativa de residência do paciente.',
     Tipo: 'String',
@@ -1922,7 +1922,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'ID_RG_RESI',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'reg_res',
     'Legenda do Campo':
       'Regional de Saúde onde está localizado o Município de residência do paciente.',
@@ -1936,7 +1936,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'CO_RG_RESI',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'reg_code_res',
     'Legenda do Campo':
       'Código da Regional de Saúde onde está localizado o Município de residência do paciente.',
@@ -1950,7 +1950,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'ID_MN_RESI',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'mun_res',
     'Legenda do Campo': '24-Município de residência do paciente.',
     Tipo: 'String',
@@ -1963,7 +1963,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'CO_MUN_RES',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'mun_code_res',
     'Legenda do Campo': '24-Código do Município de residência do paciente.',
     Tipo: 'Number',
@@ -1976,7 +1976,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'CS_ZONA',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'cs_zona',
     'Legenda do Campo':
       '30-Zona geográfica do endereço de residência do paciente.',
@@ -1989,7 +1989,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'ID_PAIS',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'pais_res',
     'Legenda do Campo': '31-País de residência do paciente.',
     Tipo: 'String',
@@ -2001,7 +2001,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'CO_PAIS',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'pais_code_res',
     'Legenda do Campo': '31- Código País de residência do paciente.',
     Tipo: 'Number',
@@ -2013,7 +2013,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'NOSOCOMIAL',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'nosocomial',
     'Legenda do Campo':
       '32-Caso de SRAG com infecção adquirida após internação.',
@@ -2026,7 +2026,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'AVE_SUINO',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'ave_suino',
     'Legenda do Campo': '33-Caso com contato direto com aves ou suínos.',
     Tipo: 'Number',
@@ -2038,7 +2038,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'OUT_ANIM',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'out_anim',
     'Legenda do Campo':
       '33-Informar o animal que o paciente teve contato se selecionado a opção 3.',
@@ -2051,7 +2051,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'FEBRE',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'febre',
     'Legenda do Campo': '34-Paciente apresentou febre?',
     Tipo: 'Number',
@@ -2063,7 +2063,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'TOSSE',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'tosse',
     'Legenda do Campo': '34-Paciente apresentou tosse?',
     Tipo: 'Number',
@@ -2075,7 +2075,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'GARGANTA',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'garganta',
     'Legenda do Campo': '34-Paciente apresentou dor de garganta?',
     Tipo: 'Number',
@@ -2087,7 +2087,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'DISPNEIA',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'dispneia',
     'Legenda do Campo': '34-Paciente apresentou dispneia?',
     Tipo: 'Number',
@@ -2099,7 +2099,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'DESC_RESP',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'desc_resp',
     'Legenda do Campo': '34-Paciente apresentou desconforto respiratório?',
     Tipo: 'Number',
@@ -2111,7 +2111,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'SATURACAO',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'saturacao',
     'Legenda do Campo': '34-Paciente apresentou saturação O2< 95%?',
     Tipo: 'Number',
@@ -2123,7 +2123,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'DIARREIA',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'diarreia',
     'Legenda do Campo': '34-Paciente apresentou diarreia?',
     Tipo: 'Number',
@@ -2135,7 +2135,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'VOMITO',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'vomito',
     'Legenda do Campo': '34-Paciente apresentou vômito?',
     Tipo: 'Number',
@@ -2147,7 +2147,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'DOR_ABD',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'dor_abd',
     'Legenda do Campo': '34-Paciente apresentou dor abdominal?',
     Tipo: 'Number',
@@ -2159,7 +2159,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'FADIGA',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'fadiga',
     'Legenda do Campo': '34-Paciente apresentou fadiga?',
     Tipo: 'Number',
@@ -2171,7 +2171,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'PERD_OLFT',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'perd_olft',
     'Legenda do Campo': '34-Paciente apresentou perda do olfato?',
     Tipo: 'Number',
@@ -2183,7 +2183,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'PERD_PALA',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'perd_pala',
     'Legenda do Campo': '34-Paciente apresentou perda do paladar?',
     Tipo: 'Number',
@@ -2195,7 +2195,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'OUTRO_SIN',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'outro_sin',
     'Legenda do Campo': '34-Paciente apresentou outro(s) sintoma(s)?',
     Tipo: 'Number',
@@ -2207,7 +2207,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'OUTRO_DES',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'outro_des',
     'Legenda do Campo':
       '34-Listar outros sinais e sintomas apresentados pelo paciente.',
@@ -2220,7 +2220,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'FATOR_RISC',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'fator_risc',
     'Legenda do Campo': '35-Paciente apresenta algum fator de risco',
     Tipo: 'Number',
@@ -2232,7 +2232,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'PUERPERA',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'puerpera',
     'Legenda do Campo':
       '35-Paciente é puérpera ou parturiente (mulher que pariu recentemente – até 45 dias do parto)?',
@@ -2245,7 +2245,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'CARDIOPATI',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'cardiopati',
     'Legenda do Campo': '35-Paciente possui Doença Cardiovascular Crônica?',
     Tipo: 'Number',
@@ -2257,7 +2257,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'HEMATOLOGI',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'hematologi',
     'Legenda do Campo': '35-Paciente possui Doença Hematológica Crônica?',
     Tipo: 'Number',
@@ -2269,7 +2269,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'SIND_DOWN',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'sind_down',
     'Legenda do Campo': '35-Paciente possui Síndrome de Down?',
     Tipo: 'Number',
@@ -2281,7 +2281,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'HEPATICA',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'hepatica',
     'Legenda do Campo': '35-Paciente possui Doença Hepática Crônica?',
     Tipo: 'Number',
@@ -2293,7 +2293,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'ASMA',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'asma',
     'Legenda do Campo': '35-Paciente possui Asma?',
     Tipo: 'Number',
@@ -2305,7 +2305,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'DIABETES',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'diabetes',
     'Legenda do Campo': '35-Paciente possui Diabetes mellitus?',
     Tipo: 'Number',
@@ -2317,7 +2317,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'NEUROLOGIC',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'neurologic',
     'Legenda do Campo': '35-Paciente possui Doença Neurológica?',
     Tipo: 'Number',
@@ -2329,7 +2329,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'PNEUMOPATI',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'pneumopati',
     'Legenda do Campo': '35-Paciente possui outra pneumopatia crônica?',
     Tipo: 'Number',
@@ -2341,7 +2341,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'IMUNODEPRE',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'imunodepre',
     'Legenda do Campo':
       '35-Paciente possui Imunodeficiência  ou Imunodepressão (diminuição da função do sistema  imunológico)?',
@@ -2354,7 +2354,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'RENAL',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'renal',
     'Legenda do Campo': '35-Paciente possui Doença Renal Crônica?',
     Tipo: 'Number',
@@ -2366,7 +2366,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'OBESIDADE',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'obesidade',
     'Legenda do Campo': '35-Paciente possui obesidade?',
     Tipo: 'Number',
@@ -2378,7 +2378,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'OBES_IMC',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'obes_imc',
     'Legenda do Campo':
       '35-Valor do IMC (Índice de Massa Corporal) do paciente calculado pelo profissional de saúde.',
@@ -2391,7 +2391,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'OUT_MORBI',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'out_morbi',
     'Legenda do Campo': '35-Paciente possui outro(s) fator(es) de risco?',
     Tipo: 'Number',
@@ -2403,7 +2403,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'MORB_DESC',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'morb_desc',
     'Legenda do Campo': '35-Listar outro(s) fator(es) de risco do paciente.',
     Tipo: 'String',
@@ -2415,7 +2415,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'VACINA_COV',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'vacina_cov',
     'Legenda do Campo':
       '36-Informar se o paciente recebeu vacina COVID-19, após verificar a documentação / caderneta.',
@@ -2428,7 +2428,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'DOSE_1_COV',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'dose_1_cov',
     'Legenda do Campo':
       '37-Informar a data em que o paciente recebeu a 1ª dose da vacina COVID-19',
@@ -2441,7 +2441,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'DOSE_2_COV',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'dose_2_cov',
     'Legenda do Campo':
       '37-Informar a data em que o paciente recebeu a 2ª dose da vacina COVID-19',
@@ -2454,7 +2454,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'LAB_PR_COV_',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'lab_pr_cov_',
     'Legenda do Campo':
       '38-Informar laboratório produtor da vacina, que o paciente recebeu',
@@ -2467,7 +2467,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'LOTE_1_COV',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'lote_1_cov',
     'Legenda do Campo':
       '39-Informar o Lote da 1ª dose da vacina COVID-19, que o paciente recebeu',
@@ -2480,7 +2480,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'LOTE_2_COV',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'lote_2_cov',
     'Legenda do Campo':
       '39-Informar o Lote da 2ª dose da vacina COVID-19, que o paciente recebeu',
@@ -2493,7 +2493,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'FNT_IN_COV',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'fnt_in_cov',
     'Legenda do Campo':
       '39-Fonte dos dados/informação sobre a vacina COVID-19, se foi digitada manualmente ou recuperada via integração com a base do RNDS.',
@@ -2506,7 +2506,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'VACINA',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'vacina_gripe',
     'Legenda do Campo':
       '40-Informar se o paciente foi vacinado contra gripe na última campanha, após verificar a documentação/caderneta. Caso o paciente não tenha a caderneta, direcionar a pergunta para ele ou responsável e preencher o campo com o código correspondente a resposta.',
@@ -2519,7 +2519,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'DT_UT_DOSE',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'dt_vac_gripe',
     'Legenda do Campo':
       '41-Data da última dose de vacina contra  gripe que o paciente tomou.',
@@ -2532,7 +2532,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'MAE_VAC',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'mae_vac',
     'Legenda do Campo': 'Se paciente < 6 meses, a mãe recebeu vacina?',
     Tipo: 'Number',
@@ -2544,7 +2544,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'DT_VAC_MAE',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'dt_vac_mae',
     'Legenda do Campo': 'Se a mãe recebeu vacina, qual a data?',
     Tipo: 'Date DD/MM/AAAA',
@@ -2556,7 +2556,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'M_AMAMENTA',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'm_amamenta',
     'Legenda do Campo': 'Se paciente < 6 meses, a mãe amamenta a criança?',
     Tipo: 'Number',
@@ -2568,7 +2568,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'DT_DOSEUNI',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'dt_doseuni',
     'Legenda do Campo':
       'Se >= 6 meses e <= 8 anos, data da dose única para crianças vacinadas em campanhas de anos anteriores',
@@ -2581,7 +2581,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'DT_1_DOSE',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'dt_1_dose',
     'Legenda do Campo':
       'Se >= 6 meses e <= 8 anos, data da 1ª dose para crianças vacinadas pela primeira vez',
@@ -2594,7 +2594,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'DT_2_DOSE',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'dt_2_dose',
     'Legenda do Campo':
       'Se >= 6 meses e <= 8 anos data da 2ª dose para crianças vacinadas pela primeira vez',
@@ -2607,7 +2607,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'ANTIVIRAL',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'antiviral',
     'Legenda do Campo': '42-Fez uso de antiviral para tratamento da doença?',
     Tipo: 'Number',
@@ -2619,7 +2619,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'TP_ANTIVIR',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'tp_antivir',
     'Legenda do Campo': '43-Qual antiviral utilizado?',
     Tipo: 'Number',
@@ -2631,7 +2631,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'OUT_ANTIV',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'out_antiv',
     'Legenda do Campo':
       'Se o antiviral utilizado não foi Oseltamivir ou Zanamivir, informar qual antiviral foi utilizado.',
@@ -2644,7 +2644,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'DT_ANTIVIR',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'dt_antivir',
     'Legenda do Campo':
       '44-Data em que foi iniciado o tratamento com o antiviral.',
@@ -2657,7 +2657,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'HOSPITAL',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'hospital',
     'Legenda do Campo': '45-O paciente foi internado?',
     Tipo: 'Number',
@@ -2669,7 +2669,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'DT_INTERNA',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'dt_interna',
     'Legenda do Campo': '46-Data em que o paciente foi hospitalizado.',
     Tipo: 'Date DD/MM/AAAA',
@@ -2681,7 +2681,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'SG_UF_INTE',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'uf_inte',
     'Legenda do Campo': '47-Unidade Federativa de internação do paciente.',
     Tipo: 'String',
@@ -2693,7 +2693,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'ID_RG_INTE',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'reg_inte',
     'Legenda do Campo':
       'Regional de Saúde onde está localizado o Município de internação do paciente.',
@@ -2707,7 +2707,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'CO_RG_INTE',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'reg_code_inte',
     'Legenda do Campo':
       'Código da Regional de Saúde onde está localizado o Município de internação do paciente.',
@@ -2721,7 +2721,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'ID_MN_INTE',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'mun_inte',
     'Legenda do Campo':
       '48-Município onde está localizado a Unidade de Saúde onde o paciente internou.',
@@ -2735,7 +2735,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'CO_MU_INTE',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'mun_code_inte',
     'Legenda do Campo':
       '48-Código do Município onde está localizado a Unidade de Saúde onde o paciente internou.',
@@ -2749,7 +2749,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'UTI',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'uti',
     'Legenda do Campo': '50O paciente foi internado em UTI?',
     Tipo: 'String',
@@ -2761,7 +2761,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'DT_ENTUTI',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'dt_in_uti',
     'Legenda do Campo':
       '51-Data de entrada do paciente na unidade de Terapia intensiva (UTI).',
@@ -2774,7 +2774,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'DT_SAIDUTI',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'dt_out_uti',
     'Legenda do Campo':
       '52-Data em que o paciente saiu da Unidade de Terapia intensiva (UTI).',
@@ -2787,7 +2787,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'SUPORT_VEN',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'suport_ven',
     'Legenda do Campo': '53-O paciente fez uso de suporte ventilatório?',
     Tipo: 'Number',
@@ -2800,7 +2800,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'RAIOX_RES',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'raiox_res',
     'Legenda do Campo': '54-Informar resultado de Raio X de Tórax.',
     Tipo: 'Number',
@@ -2813,7 +2813,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'RAIOX_OUT',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'raiox_out',
     'Legenda do Campo':
       'Informar o resultado do RX de tórax se selecionado a opção 5-Outro.',
@@ -2826,7 +2826,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'DT_RAIOX',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'dt_raiox',
     'Legenda do Campo':
       '55-Se realizou RX de Tórax, especificar a data do exame.',
@@ -2839,7 +2839,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'TOMO_RES',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'tomo_res',
     'Legenda do Campo': '56-Informar o resultado da tomografia.',
     Tipo: 'Number',
@@ -2852,7 +2852,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'TOMO_OUT',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'tomo_out',
     'Legenda do Campo':
       'Informar o resultado da tomografia se selecionado a opção 5-Outro',
@@ -2865,7 +2865,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'DT_TOMO',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'dt_tomo',
     'Legenda do Campo':
       '57-Se realizou tomografia, especificar a data do exame.',
@@ -2878,7 +2878,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'AMOSTRA',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'amostra',
     'Legenda do Campo':
       '58-Foi realizado coleta de amostra para realização de teste diagnóstico?',
@@ -2891,7 +2891,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'DT_COLETA',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'dt_coleta',
     'Legenda do Campo':
       '59-Data da coleta da amostra para realização do teste diagnóstico.',
@@ -2904,7 +2904,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'TP_AMOSTRA',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'tp_amostra',
     'Legenda do Campo':
       '60-Tipo da amostra clínica coletada para o teste diagnóstico.',
@@ -2918,7 +2918,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'OUT_AMOST',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'out_amost',
     'Legenda do Campo':
       '60-Descrição do tipo da amostra clínica, caso diferente das listadas nas categorias do campo.',
@@ -2931,7 +2931,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'TP_TES_AN',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'tp_tes_an',
     'Legenda do Campo': '62-Tipo do teste antigênico que foi realizado.',
     Tipo: 'Number',
@@ -2942,7 +2942,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'DT_RES_AN',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'dt_res_an',
     'Legenda do Campo': '63-Data do resultado do teste antigênico.',
     Tipo: 'Date DD/MM/AAAA',
@@ -2954,7 +2954,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'RES_AN',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'res_an',
     'Legenda do Campo': '64-Resultado do Teste Antigênico',
     Tipo: 'String',
@@ -2967,7 +2967,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'LAB_AN',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'lab_an',
     'Legenda do Campo':
       '65-Laboratório responsável pela liberação do resultado do teste antigênico.',
@@ -2980,7 +2980,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'POS_AN_FLU',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'pos_an_flu',
     'Legenda do Campo':
       '66-Resultado do Teste Antigênico que foi positivo para Influenza',
@@ -2992,7 +2992,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'TP_FLU_AN',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'tp_flu_an',
     'Legenda do Campo':
       '66-Resultado do Teste Antigênico, para o tipo de Influenza.',
@@ -3005,7 +3005,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'POS_AN_OUT',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'pos_an_out',
     'Legenda do Campo':
       '66-Resultado do Teste Antigênico, que foi positivo para outro vírus respiratório.',
@@ -3018,7 +3018,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'AN_SARS2',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'an_sars3',
     'Legenda do Campo': '66-Resultado do Teste Antigênico, para SARS-CoV-2.',
     Tipo: 'Number',
@@ -3030,7 +3030,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'AN_VSR',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'an_vsr',
     'Legenda do Campo':
       '66-Resultado do Teste Antigênico, para Vírus Sincicial Respiratório.',
@@ -3043,7 +3043,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'AN_PARA1',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'an_para2',
     'Legenda do Campo':
       '66-Resultado do Teste Antigênico, para Parainfluenza 1.',
@@ -3056,7 +3056,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'AN_PARA2',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'an_para3',
     'Legenda do Campo': '66-Resultado do Teste Antigênico. Parainfluenza 2.',
     Tipo: 'Number',
@@ -3068,7 +3068,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'AN_PARA3',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'an_para4',
     'Legenda do Campo': '66- Resultado do Teste Antigênico. Parainfluenza 3.',
     Tipo: 'Number',
@@ -3080,7 +3080,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'AN_ADENO',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'an_adeno',
     'Legenda do Campo': '66-Resultado do Teste Antigênico. Adenovírus.',
     Tipo: 'Number',
@@ -3092,7 +3092,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'AN_OUTRO',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'an_outro',
     'Legenda do Campo':
       '66-Resultado do Teste Antigênico. Outro vírus respiratório.',
@@ -3105,7 +3105,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'DS_AN_OUT',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'ds_an_out',
     'Legenda do Campo':
       '66-Nome do outro vírus respiratório identificado pelo Teste Antigênico.',
@@ -3118,7 +3118,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'PCR_RESUL',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'pcr_resul',
     'Legenda do Campo':
       '67-Resultado do teste de RT-PCR/outro método por Biologia Molecular.',
@@ -3132,7 +3132,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'DT_PCR',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'dt_pcr',
     'Legenda do Campo':
       '68-Data do Resultado RT-PCR/outro método por Biologia Molecular',
@@ -3145,7 +3145,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'POS_PCRFLU',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'pos_pcrflu',
     'Legenda do Campo': '69-Resultado da RT-PCR foi positivo para Influenza',
     Tipo: 'Number',
@@ -3157,7 +3157,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'TP_FLU_PCR',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'tp_flu_pcr',
     'Legenda do Campo':
       '69-Resultado diagnóstico do RT PCR para o tipo de Influenza.',
@@ -3170,7 +3170,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'PCR_FLUASU',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'pcr_fluasu',
     'Legenda do Campo': '69-Subtipo para Influenza A.',
     Tipo: 'Number',
@@ -3183,7 +3183,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'FLUASU_OUT',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'fluasu_out',
     'Legenda do Campo': '69-Outro subtipo para Influenza A.',
     Tipo: 'String',
@@ -3195,7 +3195,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'PCR_FLUBLI',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'pcr_flubli',
     'Legenda do Campo': '69-Linhagem para Influenza B.',
     Tipo: 'Number',
@@ -3208,7 +3208,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'FLUBLI_OUT',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'flubli_out',
     'Legenda do Campo': '69-Outra linhagem para Influenza B.',
     Tipo: 'String',
@@ -3220,7 +3220,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'POS_PCROUT',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'pos_pcrout',
     'Legenda do Campo':
       '69-Resultado da RT PCR foi positivo para outro vírus respiratório',
@@ -3233,7 +3233,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'PCR_SARS2',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'pcr_sars3',
     'Legenda do Campo': '69-Resultado diagnóstico do RT PCR para (SARS-CoV 2).',
     Tipo: 'Number',
@@ -3245,7 +3245,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'PCR_VSR',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'pcr_vsr',
     'Legenda do Campo':
       '69-Resultado diagnóstico do RT PCR para Vírus Sincicial Respiratório..',
@@ -3258,7 +3258,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'PCR_PARA1',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'pcr_para2',
     'Legenda do Campo':
       '69-Resultado diagnóstico do RT PCR para Parainfluenza 1.',
@@ -3271,7 +3271,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'PCR_PARA2',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'pcr_para3',
     'Legenda do Campo':
       '69-Resultado diagnóstico do RT PCR para Parainfluenza 2.',
@@ -3284,7 +3284,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'PCR_PARA3',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'pcr_para4',
     'Legenda do Campo':
       '69-Resultado diagnóstico do RT PCR para Parainfluenza 3.',
@@ -3297,7 +3297,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'PCR_PARA4',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'pcr_para5',
     'Legenda do Campo':
       '69-Resultado diagnóstico do RT PCR para Parainfluenza 4.',
@@ -3310,7 +3310,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'PCR_ADENO',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'pcr_adeno',
     'Legenda do Campo': '69-Resultado diagnóstico do RT PCR para Adenovírus.',
     Tipo: 'Number',
@@ -3322,7 +3322,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'PCR_METAP',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'pcr_metap',
     'Legenda do Campo':
       '69-Resultado diagnóstico do RT PCR para Metapneumovírus.',
@@ -3335,7 +3335,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'PCR_BOCA',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'pcr_boca',
     'Legenda do Campo': '69-Resultado diagnóstico do RT PCR para Bocavírus.',
     Tipo: 'Number',
@@ -3347,7 +3347,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'PCR_RINO',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'pcr_rino',
     'Legenda do Campo': '69-Resultado diagnóstico do RT PCR para Rinovírus.',
     Tipo: 'Number',
@@ -3359,7 +3359,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'PCR_OUTRO',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'pcr_outro',
     'Legenda do Campo':
       '69-Resultado diagnóstico do RT PCR para Outro vírus respiratório.',
@@ -3372,7 +3372,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'DS_PCR_OUT',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'ds_pcr_out',
     'Legenda do Campo':
       '69-Nome do outro vírus respiratório identificado pelo RT-PCR.',
@@ -3385,7 +3385,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'TP_AM_SOR',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'tp_am_sor',
     'Legenda do Campo': '71-Tipo de amostra sorológica que foi coletada.',
     Tipo: 'Number',
@@ -3397,7 +3397,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'SOR_OUT',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'sor_out',
     'Legenda do Campo':
       '71-Descrição do tipo da amostra clínica, caso diferente das listadas na categoria um (1) do campo.',
@@ -3410,7 +3410,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'DT_CO_SOR',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'dt_co_sor',
     'Legenda do Campo':
       '72-Data da coleta do material para diagnóstico por Sorologia.',
@@ -3423,7 +3423,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'TP_SOR',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'tp_sor',
     'Legenda do Campo': '73-Tipo do Teste Sorológico que foi realizado',
     Tipo: 'Number',
@@ -3435,7 +3435,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'OUT_SOR',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'out_sor',
     'Legenda do Campo':
       '73-Descrição do tipo de Teste Sorológico/Outro tipo de amostra Sorológica',
@@ -3448,7 +3448,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'RES_IGG',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'res_igg',
     'Legenda do Campo': '73-Resultado da Sorologia para SARS-CoV-2 - IgG',
     Tipo: 'Number',
@@ -3461,7 +3461,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'RES_IGM',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'res_igm',
     'Legenda do Campo': '73-Resultado da Sorologia para SARS-CoV-2 - IgM',
     Tipo: 'Number',
@@ -3474,7 +3474,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'RES_IGA',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'res_iga',
     'Legenda do Campo': '73-Resultado da Sorologia para SARS-CoV-2 - IgA',
     Tipo: 'Number',
@@ -3487,7 +3487,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'DT_RES',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'dt_res',
     'Legenda do Campo': '74-Data do Resultado do Teste Sorológico',
     Tipo: 'Date DD/MM/AAAA',
@@ -3499,7 +3499,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'CLASSI_FIN',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'class_fin',
     'Legenda do Campo':
       '74-Diagnóstico final do caso. Se tiver resultados divergentes entre as metodologias laboratoriais, priorizar o resultado do RT PCR.',
@@ -3512,7 +3512,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'CLASSI_OUT',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'classi_out',
     'Legenda do Campo':
       '75-Descrição de qual outro agente etiológico foi identificado',
@@ -3525,7 +3525,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'CRITERIO',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'criterio',
     'Legenda do Campo': '76-Indicar qual o critério de confirmação.',
     Tipo: 'String',
@@ -3537,7 +3537,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'EVOLUCAO',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'ev_caso',
     'Legenda do Campo': '77-Evolução do caso',
     Tipo: 'String',
@@ -3550,7 +3550,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'DT_EVOLUCA',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'dt_evoluca',
     'Legenda do Campo': '78-Data da alta ou óbito',
     Tipo: 'Date DD/MM/AAAA',
@@ -3562,7 +3562,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'DT_ENCERRA',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'dt_enc',
     'Legenda do Campo': '79-Data do encerramento do caso.',
     Tipo: 'Date DD/MM/AAAA',
@@ -3574,7 +3574,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'OBSERVA',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'observa',
     'Legenda do Campo':
       '81-Outras observações sobre o paciente consideradas pertinentes.',
@@ -3586,7 +3586,7 @@ const dicSRAG = [
   },
   {
     'Nome do campo na base<br>de dados original': 'DT_DIGITA',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'dt_digita',
     'Legenda do Campo': 'Data de inclusão do registro no sistema.',
     Tipo: 'Date DD/MM/AAAA',
@@ -3596,11 +3596,7 @@ const dicSRAG = [
     Descrição:
       'Campo Interno. Preenchido automaticamente pelo sistema com a data da digitação da ficha. Não é a data de preenchimento da ficha manualmente e sim a data em que é digitado no sistema. Não é atualizada se houver alterações posteriores de dados.',
   },
-].sort(function (a, b) {
-  var x = a['Nome do campo na base<br>de dados original'].toLowerCase();
-  var y = b['Nome do campo na base<br>de dados original'].toLowerCase();
-  return x < y ? -1 : x > y ? 1 : 0;
-});
+];
 
 const dicSRAGEn = [
   {
@@ -5164,11 +5160,7 @@ const dicSRAGEn = [
       'Internal Field <br>Automatically filled in by the system with the date the form was entered. <br>It is not the date the form was filled out manually, but the date it was entered into the system. <br>Does not update if there are subsequent data changes.',
     Column: 'DT_DIGITA',
   },
-].sort(function (a, b) {
-  var x = a.Column.toLowerCase();
-  var y = b.Column.toLowerCase();
-  return x < y ? -1 : x > y ? 1 : 0;
-});
+];
 
 const sampleSIVEP = [
   {
@@ -5486,7 +5478,7 @@ const sampleSIVEP = [
 const dicSIVEP = [
   {
     'Nome do campo na base<br>de dados original': 'estadoNotificacao',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'uf_ntf',
     'Legenda do Campo': 'Estado da Notificação',
     Tipo: 'String: Texto codificado por terminologia externa IBGE',
@@ -5498,7 +5490,7 @@ const dicSIVEP = [
   },
   {
     'Nome do campo na base<br>de dados original': 'estadoNotificacaoIBGE',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'uf_code_ntf',
     'Legenda do Campo': 'Código IBGE Estado de Notificação',
     Tipo: 'Number: Número codificado por terminologia externa IBGE',
@@ -5510,7 +5502,7 @@ const dicSIVEP = [
   },
   {
     'Nome do campo na base<br>de dados original': 'municipioNotificacao',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'mun_ntf',
     'Legenda do Campo': 'Município da Notificação',
     Tipo: 'String: Texto codificado por terminologia externa IBGE',
@@ -5522,7 +5514,7 @@ const dicSIVEP = [
   },
   {
     'Nome do campo na base<br>de dados original': 'municipioNotificacaoIBGE',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'mun_code_ntf',
     'Legenda do Campo': 'Código IBGE Município da Notificação',
     Tipo: 'Number: Número codificado por terminologia  externa IBGE',
@@ -5534,7 +5526,7 @@ const dicSIVEP = [
   },
   {
     'Nome do campo na base<br>de dados original': 'paisOrigem',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'paisOrigem',
     'Legenda do Campo': 'País de origem',
     Tipo: 'String: Texto codificado por terminologia externa ISO',
@@ -5545,7 +5537,7 @@ const dicSIVEP = [
   },
   {
     'Nome do campo na base<br>de dados original': 'profissionalSaude',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'prof_saude',
     'Legenda do Campo': 'É profissional de saúde?',
     Tipo: 'String',
@@ -5557,7 +5549,7 @@ const dicSIVEP = [
   },
   {
     'Nome do campo na base<br>de dados original': 'profissionalSeguranca',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'prof_seg',
     'Legenda do Campo': 'É profissional de segurança?',
     Tipo: 'String',
@@ -5569,7 +5561,7 @@ const dicSIVEP = [
   },
   {
     'Nome do campo na base<br>de dados original': 'cbo',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'cbo',
     'Legenda do Campo': 'CBO',
     Tipo: 'String',
@@ -5581,7 +5573,7 @@ const dicSIVEP = [
   },
   {
     'Nome do campo na base<br>de dados original': 'dataNascimento',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'dt_nasc',
     'Legenda do Campo': 'Data de Nascimento',
     Tipo: 'Data: Formato AAAA-MM-DD hms',
@@ -5592,7 +5584,7 @@ const dicSIVEP = [
   },
   {
     'Nome do campo na base<br>de dados original': 'idade',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'idade',
     'Legenda do Campo': 'Idade',
     Tipo: 'Number',
@@ -5604,7 +5596,7 @@ const dicSIVEP = [
   },
   {
     'Nome do campo na base<br>de dados original': 'sexo',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'sexo',
     'Legenda do Campo': 'Sexo',
     Tipo: 'String',
@@ -5616,7 +5608,7 @@ const dicSIVEP = [
   },
   {
     'Nome do campo na base<br>de dados original': 'racaCor',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'racaCor',
     'Legenda do Campo': 'Raça/cor',
     Tipo: 'String',
@@ -5628,7 +5620,7 @@ const dicSIVEP = [
   },
   {
     'Nome do campo na base<br>de dados original': 'estado',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'uf_res',
     'Legenda do Campo': 'Estado de Residência',
     Tipo: 'String: Texto codificado por terminologia externa IBGE',
@@ -5640,7 +5632,7 @@ const dicSIVEP = [
   },
   {
     'Nome do campo na base<br>de dados original': 'estadoIBGE',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'uf_code_res',
     'Legenda do Campo': 'Código IBGE do Estado de Residência',
     Tipo: 'Number: Número codificado por terminologia  externa IBGE',
@@ -5651,7 +5643,7 @@ const dicSIVEP = [
   },
   {
     'Nome do campo na base<br>de dados original': 'municipio',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'mun_res',
     'Legenda do Campo': 'Município de Residência',
     Tipo: 'String: Texto codificado por terminologia externa: IBGE',
@@ -5663,7 +5655,7 @@ const dicSIVEP = [
   },
   {
     'Nome do campo na base<br>de dados original': 'municipioIBGE',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'mun_code_res',
     'Legenda do Campo': 'Código IBGE do Município de Residência',
     Tipo: 'Number: Número codificado por terminologia externa IBGE',
@@ -5674,7 +5666,7 @@ const dicSIVEP = [
   },
   {
     'Nome do campo na base<br>de dados original': 'dataNotificação',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'dt_ntf',
     'Legenda do Campo': 'Data da Notificação',
     Tipo: 'Data: Formato AAAA-MM-DD hms',
@@ -5686,7 +5678,7 @@ const dicSIVEP = [
   },
   {
     'Nome do campo na base<br>de dados original': 'sintomas',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'sint',
     'Legenda do Campo': 'Sintomas',
     Tipo: 'String: Categorias separadas por vírgulas',
@@ -5698,7 +5690,7 @@ const dicSIVEP = [
   },
   {
     'Nome do campo na base<br>de dados original': 'outrosSintomas',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'oth_sint',
     'Legenda do Campo': 'Descrição de Sintomas Outros',
     Tipo: 'String',
@@ -5710,7 +5702,7 @@ const dicSIVEP = [
   },
   {
     'Nome do campo na base<br>de dados original': 'dataInicioSintomas',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'dt_in_sint',
     'Legenda do Campo': 'Data do início dos sintomas',
     Tipo: 'Data: Formato AAAA-MM-DD hms',
@@ -5722,7 +5714,7 @@ const dicSIVEP = [
   },
   {
     'Nome do campo na base<br>de dados original': 'condicoes',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'cond',
     'Legenda do Campo': 'Condições',
     Tipo: 'String: Categorias separadas por vírgula',
@@ -5734,7 +5726,7 @@ const dicSIVEP = [
   },
   {
     'Nome do campo na base<br>de dados original': 'estadoTeste',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'est_teste',
     'Legenda do Campo': 'Estado do Teste',
     Tipo: 'String',
@@ -5747,7 +5739,7 @@ const dicSIVEP = [
   },
   {
     'Nome do campo na base<br>de dados original': 'dataTeste',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'dt_teste',
     'Legenda do Campo': 'Data de Coleta do Teste',
     Tipo: 'Data: Formato AAAA-MM-DD hms',
@@ -5759,7 +5751,7 @@ const dicSIVEP = [
   },
   {
     'Nome do campo na base<br>de dados original': 'tipoTeste',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'tp_teste',
     'Legenda do Campo': 'Tipo de Teste',
     Tipo: 'String',
@@ -5772,7 +5764,7 @@ const dicSIVEP = [
   },
   {
     'Nome do campo na base<br>de dados original': 'resultadoTeste',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'res_teste',
     'Legenda do Campo': 'Resultado do Teste',
     Tipo: 'String',
@@ -5784,7 +5776,7 @@ const dicSIVEP = [
   },
   {
     'Nome do campo na base<br>de dados original': 'classificacaoFinal',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'class_fin',
     'Legenda do Campo': 'Classificação Final',
     Tipo: 'String',
@@ -5797,7 +5789,7 @@ const dicSIVEP = [
   },
   {
     'Nome do campo na base<br>de dados original': 'evolucaoCaso',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'ev_caso',
     'Legenda do Campo': 'Evolução do Caso',
     Tipo: 'String',
@@ -5810,7 +5802,7 @@ const dicSIVEP = [
   },
   {
     'Nome do campo na base<br>de dados original': 'dataEncerramento',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'dt_enc',
     'Legenda do Campo': 'Data de Encerramento',
     Tipo: 'Data: Formato AAAA-MM-DD hms',
@@ -5822,7 +5814,7 @@ const dicSIVEP = [
   },
   {
     'Nome do campo na base<br>de dados original': 'cnes',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'cnes',
     'Legenda do Campo': 'Unidade de Saúde Código (CNES)',
     Tipo: 'Number',
@@ -5834,7 +5826,7 @@ const dicSIVEP = [
   },
   {
     'Nome do campo na base<br>de dados original': 'ÿid',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'id',
     'Legenda do Campo': 'ÿid',
     Tipo: 'String',
@@ -5844,11 +5836,7 @@ const dicSIVEP = [
     Descrição:
       'Campo interno preenchido automaticamente pelo sistema, a partir do operador logado.',
   },
-].sort(function (a, b) {
-  var x = a['Nome do campo na base<br>de dados original'].toLowerCase();
-  var y = b['Nome do campo na base<br>de dados original'].toLowerCase();
-  return x < y ? -1 : x > y ? 1 : 0;
-});
+];
 
 const dicSIVEPEn = [
   {
@@ -6001,11 +5989,7 @@ const dicSIVEPEn = [
     Type: 'Internal field filled in automatically by the system, from the logged in operator.',
     Column: 'id',
   },
-].sort(function (a, b) {
-  var x = a.Column.toLowerCase();
-  var y = b.Column.toLowerCase();
-  return x < y ? -1 : x > y ? 1 : 0;
-});
+];
 
 const sampleWCota = [
   {
@@ -6213,7 +6197,7 @@ const sampleWCota = [
 const dicWCota = [
   {
     'Nome do campo na base<br>de dados original': 'epi_week',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'sem_ntf',
     'Legenda do Campo': 'Semana epidemiológica',
     Tipo: 'Number',
@@ -6224,7 +6208,7 @@ const dicWCota = [
   },
   {
     'Nome do campo na base<br>de dados original': 'date',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'date',
     'Legenda do Campo': 'Data',
     Tipo: 'Date YYYY-MM-DD',
@@ -6235,7 +6219,7 @@ const dicWCota = [
   },
   {
     'Nome do campo na base<br>de dados original': 'state',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'uf',
     'Legenda do Campo': 'UF - Estado',
     Tipo: 'String',
@@ -6247,7 +6231,7 @@ const dicWCota = [
   },
   {
     'Nome do campo na base<br>de dados original': 'city',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'mun_name',
     'Legenda do Campo': 'Município',
     Tipo: 'String',
@@ -6259,7 +6243,7 @@ const dicWCota = [
   },
   {
     'Nome do campo na base<br>de dados original': 'ibgeID',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'code_full_mun_ibge',
     'Legenda do Campo': 'Cód. IBGE',
     Tipo: 'Number',
@@ -6271,7 +6255,7 @@ const dicWCota = [
   },
   {
     'Nome do campo na base<br>de dados original': 'newDeaths',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'newDeaths',
     'Legenda do Campo': 'Óbitos no dia',
     Tipo: 'Number',
@@ -6283,7 +6267,7 @@ const dicWCota = [
   },
   {
     'Nome do campo na base<br>de dados original': 'deaths',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'deaths',
     'Legenda do Campo': 'Óbitos acum.',
     Tipo: 'Number',
@@ -6294,7 +6278,7 @@ const dicWCota = [
   },
   {
     'Nome do campo na base<br>de dados original': 'newCases',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'newCases',
     'Legenda do Campo': 'Confirmações no dia',
     Tipo: 'Number',
@@ -6306,7 +6290,7 @@ const dicWCota = [
   },
   {
     'Nome do campo na base<br>de dados original': 'totalCases',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'totalCases',
     'Legenda do Campo': 'Confirmados acum.',
     Tipo: 'Number',
@@ -6317,7 +6301,7 @@ const dicWCota = [
   },
   {
     'Nome do campo na base<br>de dados original': 'deaths_per_100k_inhabitants',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'deaths_per_100k_inhabitants',
     'Legenda do Campo': 'Óbitos acum./100k hab.',
     Tipo: 'Number',
@@ -6329,7 +6313,7 @@ const dicWCota = [
   {
     'Nome do campo na base<br>de dados original':
       'totalCases_per_100k_inhabitants',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'totalCases_per_100k_inhabitants',
     'Legenda do Campo': 'Confirmados acum./100k hab.',
     Tipo: 'Number',
@@ -6340,7 +6324,7 @@ const dicWCota = [
   },
   {
     'Nome do campo na base<br>de dados original': 'deaths_by_totalCases',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'deaths_by_totalCases',
     'Legenda do Campo': 'Óbitos/confirmados',
     Tipo: 'Number',
@@ -6349,120 +6333,7 @@ const dicWCota = [
       'Sem categoria',
     Descrição: 'Razão entre número de óbitos e casos (deaths/totalCases)',
   },
-].sort(function (a, b) {
-  var x = a['Nome do campo na base<br>de dados original'].toLowerCase();
-  var y = b['Nome do campo na base<br>de dados original'].toLowerCase();
-  return x < y ? -1 : x > y ? 1 : 0;
-});
-
-const dicBrasilioEn = [
-  {
-    Column: 'epidemiological_week',
-    Type: 'integer',
-    Description: 'Epidemiological week number.',
-  },
-  {
-    Column: 'date',
-    Type: 'string (max_length=10)',
-    Description: 'Data collection date in YYYY-MM-DD format.',
-  },
-  {
-    Column: 'order_for_place',
-    Type: 'integer',
-    Description:
-      'Number that identifies the registration order for this location. The record referring to the first bulletin in which this location appears will be counted as 1 and the other bulletins will increment this value.',
-  },
-  {
-    Column: 'state',
-    Type: 'string (max_length=2)',
-    Description: 'Acronym of the federative unit example: SP.',
-  },
-  {
-    Column: 'city',
-    Type: 'string (max_length=64)',
-    Description:
-      'Name of the municipality (can be blank when the record refers to the state and can be filled with `Imported/Undefined` as well).',
-  },
-  {
-    Column: 'city_ibge_code',
-    Type: 'integer',
-    Description: 'IBGE code of the location.',
-  },
-  {
-    Column: 'place_type',
-    Type: 'string (max_length=5)',
-    Description: 'Type of location this record describes can be city or state.',
-  },
-  {
-    Column: 'last_available_date',
-    Type: 'string (max_length=10)',
-    Description: 'Date the data refers to.',
-  },
-  {
-    Column: 'last_available_confirmed',
-    Type: 'integer',
-    Description:
-      'Number of confirmed cases from the last available day on or before the date date.',
-  },
-  {
-    Column: 'last_available_confirmed_per_100k_inhabitants',
-    Type: 'float',
-    Description:
-      'Number of confirmed cases per 100,000 population on the last available day on or before the date.',
-  },
-  {
-    Column: 'new_confirmed',
-    Type: 'integer',
-    Description:
-      'Number of new confirmed cases since the last day (note that if is_repeated is True, this value will always be 0 and that this value can be negative if SES reassigns cases from this municipality to another).',
-  },
-  {
-    Column: 'last_available_deaths',
-    Type: 'integer',
-    Description:
-      'Number of deaths of the last available day equal to or before the date date.',
-  },
-  {
-    Column: 'new_deaths',
-    Type: 'integer',
-    Description:
-      'Number of new deaths since the last day (note that if is_repeated is True, this value will always be 0 and that this value can be negative if SES reassigns cases from this municipality to another).',
-  },
-  {
-    Column: 'last_available_death_rate',
-    Type: 'float',
-    Description:
-      'Mortality rate (deaths / confirmed) for the last available day on or before the date date.',
-  },
-  {
-    Column: 'estimated_population',
-    Type: 'integer',
-    Description:
-      'Estimated population for the location in 2020 according to IBGE.',
-  },
-  {
-    Column: 'estimated_population_2019',
-    Type: 'integer',
-    Description:
-      'Estimated population for this municipality/state in 2019 according to IBGE.',
-  },
-  {
-    Column: 'is_last',
-    Type: 'bool',
-    Description:
-      'Precomputed field that says if this record is the newest for this location can be True or False (if you filter by this field use is_last=True or is_last=False do not use lowercase value).',
-  },
-  {
-    Column: 'is_repeated',
-    Type: 'bool',
-    Description:
-      'Precomputed field that says if the information in this record was published by the State Health Department on the day of the date or if the data is repeated from the last day the data is available (equal to or before the date). This is because not all secretariats publish newsletters every day. See also the field last_available_date.',
-  },
-].sort(function (a, b) {
-  var x = a.Column.toLowerCase();
-  var y = b.Column.toLowerCase();
-  return x < y ? -1 : x > y ? 1 : 0;
-});
+];
 
 const sampleVac = [
   {
@@ -6840,7 +6711,7 @@ const sampleVac = [
 const dicVac = [
   {
     'Nome do campo na base<br>de dados original': 'document_id',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'doc_id',
     'Legenda do Campo': 'Identificador do documento',
     Tipo: 'String',
@@ -6851,7 +6722,7 @@ const dicVac = [
   },
   {
     'Nome do campo na base<br>de dados original': 'paciente_id',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'id',
     'Legenda do Campo': 'Identificador do vacinado',
     Tipo: 'String',
@@ -6862,7 +6733,7 @@ const dicVac = [
   },
   {
     'Nome do campo na base<br>de dados original': 'paciente_idade',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'idade',
     'Legenda do Campo': 'Idade do vacinado',
     Tipo: 'Number',
@@ -6873,7 +6744,7 @@ const dicVac = [
   },
   {
     'Nome do campo na base<br>de dados original': 'paciente_dataNascimento',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'dt_nasc',
     'Legenda do Campo': 'Data de nascimento do vacinado',
     Tipo: 'Date yyyy-mm-dd',
@@ -6884,7 +6755,7 @@ const dicVac = [
   },
   {
     'Nome do campo na base<br>de dados original': 'paciente_enumSexoBiologico',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'sexo',
     'Legenda do Campo': 'Sexo do vacinado',
     Tipo: 'String',
@@ -6895,7 +6766,7 @@ const dicVac = [
   },
   {
     'Nome do campo na base<br>de dados original': 'paciente_racaCor_codigo',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'racaCor_code',
     'Legenda do Campo': 'Código da raça/cor do vacinado',
     Tipo: 'Number',
@@ -6906,7 +6777,7 @@ const dicVac = [
   },
   {
     'Nome do campo na base<br>de dados original': 'paciente_racaCor_valor',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'racaCor',
     'Legenda do Campo': 'Descrição da raça/cor do vacinado',
     Tipo: 'String',
@@ -6918,7 +6789,7 @@ const dicVac = [
   {
     'Nome do campo na base<br>de dados original':
       'paciente_endereco_coIbgeMunicipio',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'mun_res',
     'Legenda do Campo': 'Código IBGE do município de endereço do vacinado',
     Tipo: 'Number',
@@ -6929,7 +6800,7 @@ const dicVac = [
   },
   {
     'Nome do campo na base<br>de dados original': 'paciente_endereco_coPais',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'pais_code_res',
     'Legenda do Campo': 'Código do país de endereço do vacinado',
     Tipo: 'Number',
@@ -6941,7 +6812,7 @@ const dicVac = [
   {
     'Nome do campo na base<br>de dados original':
       'paciente_endereco_nmMunicipio',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'mun_res',
     'Legenda do Campo': 'Nome do município de endereço do vacinado',
     Tipo: 'String',
@@ -6952,7 +6823,7 @@ const dicVac = [
   },
   {
     'Nome do campo na base<br>de dados original': 'paciente_endereco_nmPais',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'pais_res',
     'Legenda do Campo': 'Nome do país de endereço do vacinado',
     Tipo: 'String',
@@ -6963,7 +6834,7 @@ const dicVac = [
   },
   {
     'Nome do campo na base<br>de dados original': 'paciente_endereco_uf',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'uf_res',
     'Legenda do Campo': 'Sigla da UF de endereço do vacinado',
     Tipo: 'String',
@@ -6974,7 +6845,7 @@ const dicVac = [
   },
   {
     'Nome do campo na base<br>de dados original': 'paciente_endereco_cep',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'cep_res',
     'Legenda do Campo': 'Código de Endereçamento Postal',
     Tipo: 'Number',
@@ -6987,7 +6858,7 @@ const dicVac = [
   {
     'Nome do campo na base<br>de dados original':
       'paciente_nacionalidade_enumNacionalidade',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'nacionalidade',
     'Legenda do Campo': 'Nacionalidade do vacinado',
     Tipo: 'String',
@@ -6998,7 +6869,7 @@ const dicVac = [
   },
   {
     'Nome do campo na base<br>de dados original': 'estabelecimento_valor',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'cnes',
     'Legenda do Campo':
       'Código do CNES do estabelecimento que realizou a vacinação',
@@ -7010,7 +6881,7 @@ const dicVac = [
   },
   {
     'Nome do campo na base<br>de dados original': 'estabelecimento_razaoSocial',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'estabelecimento_razaoSocial',
     'Legenda do Campo': 'Nome/Razão Social do estabelecimento',
     Tipo: 'String',
@@ -7021,7 +6892,7 @@ const dicVac = [
   },
   {
     'Nome do campo na base<br>de dados original': 'estabelecimento_noFantasia',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'uni_ntf',
     'Legenda do Campo': 'Nome fantasia do estabelecimento',
     Tipo: 'String',
@@ -7033,7 +6904,7 @@ const dicVac = [
   {
     'Nome do campo na base<br>de dados original':
       'estabelecimento_municipio_codigo',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'mun_code_ntf',
     'Legenda do Campo': 'Código do município do estabelecimento',
     Tipo: 'Number',
@@ -7045,7 +6916,7 @@ const dicVac = [
   {
     'Nome do campo na base<br>de dados original':
       'estabelecimento_municipio_nome',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'mun_ntf',
     'Legenda do Campo': 'Nome do município do estabelecimento',
     Tipo: 'String',
@@ -7056,7 +6927,7 @@ const dicVac = [
   },
   {
     'Nome do campo na base<br>de dados original': 'estabelecimento_uf',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'uf_ntf',
     'Legenda do Campo': 'Sigla UF do estabelecimento',
     Tipo: 'String',
@@ -7068,7 +6939,7 @@ const dicVac = [
   {
     'Nome do campo na base<br>de dados original':
       'vacina_grupo_atendimento_codigo',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'vacina_grupo_atendimento_codigo',
     'Legenda do Campo':
       'Código do grupo de atendimento ao qual pertence o vacinado',
@@ -7081,7 +6952,7 @@ const dicVac = [
   {
     'Nome do campo na base<br>de dados original':
       'vacina_grupo_atendimento_nome',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'vacina_grupo_atendimento_nome',
     'Legenda do Campo':
       'Nome do grupo de atendimento ao qual pertence o vacinado',
@@ -7093,7 +6964,7 @@ const dicVac = [
   },
   {
     'Nome do campo na base<br>de dados original': 'vacina_categoria_codigo',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'vacina_categoria_codigo',
     'Legenda do Campo': 'Código da categoria',
     Tipo: 'Number',
@@ -7104,7 +6975,7 @@ const dicVac = [
   },
   {
     'Nome do campo na base<br>de dados original': 'vacina_categoria_nome',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'vacina_categoria_nome',
     'Legenda do Campo': 'Descrição da categoria',
     Tipo: 'String',
@@ -7115,7 +6986,7 @@ const dicVac = [
   },
   {
     'Nome do campo na base<br>de dados original': 'vacina_lote',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'vacina_lote',
     'Legenda do Campo': 'Número do lote da vacina',
     Tipo: 'String',
@@ -7126,7 +6997,7 @@ const dicVac = [
   },
   {
     'Nome do campo na base<br>de dados original': 'vacina_fabricante_nome',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'vacina_fabricante_nome',
     'Legenda do Campo': 'Nome do fabricante/fornecedor',
     Tipo: 'String',
@@ -7138,7 +7009,7 @@ const dicVac = [
   {
     'Nome do campo na base<br>de dados original':
       'vacina_fabricante_referencia',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'vacina_fabricante_referencia',
     'Legenda do Campo': 'CNPJ do fabricante/fornecedor',
     Tipo: 'String',
@@ -7149,7 +7020,7 @@ const dicVac = [
   },
   {
     'Nome do campo na base<br>de dados original': 'vacina_dataAplicacao',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'data_vac',
     'Legenda do Campo': 'Data de aplicação da vacina',
     Tipo: 'Date yyyy-mm-dd',
@@ -7160,7 +7031,7 @@ const dicVac = [
   },
   {
     'Nome do campo na base<br>de dados original': 'vacina_descricao_dose',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'dose',
     'Legenda do Campo': 'Descrição da dose',
     Tipo: 'String',
@@ -7173,7 +7044,7 @@ const dicVac = [
   },
   {
     'Nome do campo na base<br>de dados original': 'vacina_codigo',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'vacina_codigo',
     'Legenda do Campo': 'Código da vacina',
     Tipo: 'Number',
@@ -7184,7 +7055,7 @@ const dicVac = [
   },
   {
     'Nome do campo na base<br>de dados original': 'vacina_nome',
-    'Nome do campo depois da<br>harmonização (váriável<br>nomeada pela PAMEpi)':
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
       'vacina_nome',
     'Legenda do Campo': 'Nome da vacina/produto',
     Tipo: 'String',
@@ -7193,11 +7064,7 @@ const dicVac = [
       '1-Astrazeneca<br>2-Coronavac<br>3-Pfizer<br>4-Janssen',
     Descrição: 'Relativo a coluna vacina_codigo',
   },
-].sort(function (a, b) {
-  var x = a['Nome do campo na base<br>de dados original'].toLowerCase();
-  var y = b['Nome do campo na base<br>de dados original'].toLowerCase();
-  return x < y ? -1 : x > y ? 1 : 0;
-});
+];
 
 const dicVacinaEn = [
   {
@@ -7394,591 +7261,148 @@ const dicVacinaEn = [
     Description: 'Source system name',
     Category: 'String',
   },
-].sort(function (a, b) {
-  var x = a.Column.toLowerCase();
-  var y = b.Column.toLowerCase();
-  return x < y ? -1 : x > y ? 1 : 0;
-});
-
-const sampleHosp = [
-  {
-    _id: 'p5Ez41Zu6B',
-    dataNotificacao: '2020-04-14T03:00:00.000Z',
-    cnes: 2303167,
-    ocupacaoSuspeitoCli: 0,
-    ocupacaoSuspeitoUti: 0,
-    ocupacaoConfirmadoCli: 0,
-    ocupacaoConfirmadoUti: 0,
-    saidaSuspeitaObitos: 0,
-    saidaSuspeitaAltas: 0,
-    saidaConfirmadaObitos: 0,
-    saidaConfirmadaAltas: 0,
-    origem: 'aplicacao-web',
-    _p_usuario: '_User$auVMjEVEVz',
-    estadoNotificacao: 'Santa Catarina',
-    municipioNotificacao: 'Itapema',
-    estado: 'Santa Catarina',
-    municipio: 'Itapema',
-    excluido: true,
-    validado: false,
-    _created_at: '2020-04-15T13:44:30.085Z',
-    _updated_at: '2020-04-16T13:56:13.656Z',
-  },
-  {
-    _id: 'eUOMsSt7T7',
-    dataNotificacao: '2020-04-15T03:00:00.000Z',
-    cnes: 5935377,
-    ocupacaoSuspeitoCli: 1,
-    ocupacaoSuspeitoUti: 0,
-    ocupacaoConfirmadoCli: 0,
-    ocupacaoConfirmadoUti: 0,
-    saidaSuspeitaObitos: 0,
-    saidaSuspeitaAltas: 1,
-    saidaConfirmadaObitos: 0,
-    saidaConfirmadaAltas: 0,
-    origem: 'parse-cloud',
-    _p_usuario: '_User$WBa5nfe9P9',
-    estadoNotificacao: 'Rio de Janeiro',
-    municipioNotificacao: 'Rio de Janeiro',
-    estado: 'Rio de Janeiro',
-    municipio: 'Rio de Janeiro',
-    excluido: false,
-    validado: false,
-    _created_at: '2020-04-15T13:50:47.256Z',
-    _updated_at: '2020-08-01T20:08:13.116Z',
-  },
-  {
-    _id: 'QaG4oIBrMa',
-    dataNotificacao: '2020-04-15T14:57:16.255Z',
-    cnes: 12599,
-    ocupacaoSuspeitoCli: 15,
-    ocupacaoSuspeitoUti: 1,
-    ocupacaoConfirmadoCli: 3,
-    ocupacaoConfirmadoUti: 2,
-    saidaSuspeitaObitos: 0,
-    saidaSuspeitaAltas: 0,
-    saidaConfirmadaObitos: 0,
-    saidaConfirmadaAltas: 0,
-    origem: 'parse-cloud',
-    _p_usuario: '_User$6oxZQHBPQ7',
-    estadoNotificacao: 'Rio de Janeiro',
-    municipioNotificacao: 'Niterói',
-    estado: 'Rio de Janeiro',
-    municipio: 'Niterói',
-    excluido: false,
-    validado: false,
-    _created_at: '2020-04-15T15:20:57.033Z',
-    _updated_at: '2020-08-01T20:02:12.729Z',
-  },
-  {
-    _id: 'ifya31F3ZF',
-    dataNotificacao: '2020-03-24T03:00:00.000Z',
-    cnes: 2562871,
-    ocupacaoSuspeitoCli: 9,
-    ocupacaoSuspeitoUti: 0,
-    ocupacaoConfirmadoCli: 1,
-    ocupacaoConfirmadoUti: 0,
-    saidaSuspeitaObitos: 0,
-    saidaSuspeitaAltas: 0,
-    saidaConfirmadaObitos: 0,
-    saidaConfirmadaAltas: 0,
-    origem: 'parse-cloud',
-    _p_usuario: '_User$fhufIbmR9C',
-    estadoNotificacao: 'Ceará',
-    municipioNotificacao: 'Várzea Alegre',
-    estado: 'Ceará',
-    municipio: 'Várzea Alegre',
-    excluido: false,
-    validado: false,
-    _created_at: '2020-04-15T16:58:32.839Z',
-    _updated_at: '2020-08-01T21:40:37.624Z',
-  },
-  {
-    _id: 'dkurDhelx9',
-    dataNotificacao: '2020-04-01T03:00:00.000Z',
-    cnes: 2252228,
-    ocupacaoSuspeitoCli: 26,
-    ocupacaoSuspeitoUti: 0,
-    ocupacaoConfirmadoCli: 1,
-    ocupacaoConfirmadoUti: 0,
-    saidaSuspeitaObitos: 0,
-    saidaSuspeitaAltas: 0,
-    saidaConfirmadaObitos: 0,
-    saidaConfirmadaAltas: 0,
-    origem: 'parse-cloud',
-    _p_usuario: '_User$tkAdHTNhC9',
-    estadoNotificacao: 'Rio Grande do Sul',
-    municipioNotificacao: 'Encantado',
-    estado: 'Rio Grande do Sul',
-    municipio: 'Encantado',
-    excluido: false,
-    validado: false,
-    _created_at: '2020-04-15T17:02:53.877Z',
-    _updated_at: '2020-08-01T21:37:53.664Z',
-  },
-  {
-    _id: 'yhrIosmBut',
-    dataNotificacao: '2020-04-02T03:00:00.000Z',
-    cnes: 2252228,
-    ocupacaoSuspeitoCli: 25,
-    ocupacaoSuspeitoUti: 0,
-    ocupacaoConfirmadoCli: 0,
-    ocupacaoConfirmadoUti: 0,
-    saidaSuspeitaObitos: 0,
-    saidaSuspeitaAltas: 1,
-    saidaConfirmadaObitos: 0,
-    saidaConfirmadaAltas: 0,
-    origem: 'parse-cloud',
-    _p_usuario: '_User$tkAdHTNhC9',
-    estadoNotificacao: 'Rio Grande do Sul',
-    municipioNotificacao: 'Encantado',
-    estado: 'Rio Grande do Sul',
-    municipio: 'Encantado',
-    excluido: false,
-    validado: false,
-    _created_at: '2020-04-15T17:05:56.421Z',
-    _updated_at: '2020-08-01T21:31:13.994Z',
-  },
-  {
-    _id: 'wo5LH0DBa5',
-    dataNotificacao: '2020-04-03T03:00:00.000Z',
-    cnes: 2252228,
-    ocupacaoSuspeitoCli: 23,
-    ocupacaoSuspeitoUti: 0,
-    ocupacaoConfirmadoCli: 1,
-    ocupacaoConfirmadoUti: 0,
-    saidaSuspeitaObitos: 0,
-    saidaSuspeitaAltas: 0,
-    saidaConfirmadaObitos: 0,
-    saidaConfirmadaAltas: 0,
-    origem: 'parse-cloud',
-    _p_usuario: '_User$tkAdHTNhC9',
-    estadoNotificacao: 'Rio Grande do Sul',
-    municipioNotificacao: 'Encantado',
-    estado: 'Rio Grande do Sul',
-    municipio: 'Encantado',
-    excluido: false,
-    validado: false,
-    _created_at: '2020-04-15T17:06:53.924Z',
-    _updated_at: '2020-08-01T21:24:58.530Z',
-  },
-  {
-    _id: '4huqGyzGGC',
-    dataNotificacao: '2020-04-15T03:00:00.000Z',
-    cnes: 2240335,
-    ocupacaoSuspeitoCli: 17,
-    ocupacaoSuspeitoUti: 5,
-    ocupacaoConfirmadoCli: 0,
-    ocupacaoConfirmadoUti: 1,
-    saidaSuspeitaObitos: 0,
-    saidaSuspeitaAltas: 0,
-    saidaConfirmadaObitos: 0,
-    saidaConfirmadaAltas: 0,
-    origem: 'parse-cloud',
-    _p_usuario: '_User$Enseqp32PQ',
-    estadoNotificacao: 'Rio Grande do Sul',
-    municipioNotificacao: 'Farroupilha',
-    estado: 'Rio Grande do Sul',
-    municipio: 'Farroupilha',
-    excluido: false,
-    validado: false,
-    _created_at: '2020-04-15T17:07:29.899Z',
-    _updated_at: '2020-08-01T20:08:26.411Z',
-  },
-  {
-    _id: 'LMMGiXdFV9',
-    dataNotificacao: '2020-04-04T03:00:00.000Z',
-    cnes: 2252228,
-    ocupacaoSuspeitoCli: 19,
-    ocupacaoSuspeitoUti: 0,
-    ocupacaoConfirmadoCli: 1,
-    ocupacaoConfirmadoUti: 0,
-    saidaSuspeitaObitos: 0,
-    saidaSuspeitaAltas: 0,
-    saidaConfirmadaObitos: 0,
-    saidaConfirmadaAltas: 0,
-    origem: 'parse-cloud',
-    _p_usuario: '_User$tkAdHTNhC9',
-    estadoNotificacao: 'Rio Grande do Sul',
-    municipioNotificacao: 'Encantado',
-    estado: 'Rio Grande do Sul',
-    municipio: 'Encantado',
-    excluido: false,
-    validado: false,
-    _created_at: '2020-04-15T17:08:01.784Z',
-    _updated_at: '2020-08-01T21:18:40.146Z',
-  },
-  {
-    _id: 'zQWnrlFWwD',
-    dataNotificacao: '2020-03-25T03:00:00.000Z',
-    cnes: 2562871,
-    ocupacaoSuspeitoCli: 5,
-    ocupacaoSuspeitoUti: 0,
-    ocupacaoConfirmadoCli: 0,
-    ocupacaoConfirmadoUti: 0,
-    saidaSuspeitaObitos: 0,
-    saidaSuspeitaAltas: 1,
-    saidaConfirmadaObitos: 0,
-    saidaConfirmadaAltas: 0,
-    origem: 'parse-cloud',
-    _p_usuario: '_User$fhufIbmR9C',
-    estadoNotificacao: 'Ceará',
-    municipioNotificacao: 'Várzea Alegre',
-    estado: 'Ceará',
-    municipio: 'Várzea Alegre',
-    excluido: false,
-    validado: false,
-    _created_at: '2020-04-15T17:09:06.940Z',
-    _updated_at: '2020-08-01T21:40:20.770Z',
-  },
 ];
-
-const dicHosp = [
-  {
-    Coluna: '_index',
-    Descrição:
-      'Informações do Elastic que informa qual o index está sendo consultado',
-    Tipo: 'String',
-  },
-  {
-    Coluna: '_type',
-    Descrição:
-      'Informações do Elastic que informa qual o tipo de documento que está sendo consultado',
-    Tipo: 'String',
-  },
-  {
-    Coluna: '_id',
-    Descrição: 'String que informa a chave especifica do registro',
-    Tipo: 'String',
-  },
-  {
-    Coluna: '_score',
-    Descrição:
-      'Informação do Elastic que concede uma pontuação quando a informação é pesquisada',
-    Tipo: 'Number',
-  },
-  {
-    Coluna: '_source',
-    Descrição: 'Array que contem um conjunto de dados recuperados',
-    Tipo: 'Object',
-  },
-  {
-    Coluna: 'estado',
-    Descrição: 'Estado',
-    Tipo: 'String',
-  },
-  {
-    Coluna: 'estadoSigla',
-    Descrição: 'Sigla do estado',
-    Tipo: 'String',
-  },
-  {
-    Coluna: 'municipio',
-    Descrição: 'Município',
-    Tipo: 'String',
-  },
-  {
-    Coluna: 'cnes',
-    Descrição: 'Código do Cadastro Nacional de Estabelecimentos de Saúde',
-    Tipo: 'String',
-  },
-  {
-    Coluna: 'nomeCnes',
-    Descrição: 'Nome do Estabelecimentos de Saúde',
-    Tipo: 'String',
-  },
-  {
-    Coluna: 'dataNotificacoes',
-    Descrição: 'Data da notificação',
-    Tipo: 'Datetime',
-  },
-  {
-    Coluna: 'dataAtualizacao',
-    Descrição: 'Data da atualização',
-    Tipo: 'Datetime',
-  },
-  {
-    Coluna: 'OfertaHospCli',
-    Descrição:
-      'Oferta que o hospital possui para outras especialidades médicas',
-    Tipo: 'Number',
-  },
-  {
-    Coluna: 'OfertaHospUti',
-    Descrição:
-      'Oferta que o hospital possui para uti de outras especialidades médicas',
-    Tipo: 'Number',
-  },
-  {
-    Coluna: 'OfertaSRAGCli',
-    Descrição:
-      'Oferta que o hospital possui para tratamento especifico do SRAG (COVID)',
-    Tipo: 'Number',
-  },
-  {
-    Coluna: 'OfertaSRAGUti',
-    Descrição:
-      'Oferta que o hospital possui para uti especifico do SRAG (COVID)',
-    Tipo: 'Number',
-  },
-  {
-    Coluna: 'ocupHospCli',
-    Descrição:
-      'Ocupação que o hospital possui de utilização por outras especialidades médicas',
-    Tipo: 'Number',
-  },
-  {
-    Coluna: 'ocupHospUti',
-    Descrição:
-      'Ocupação que o hospital possui de uti de utilização por outras especialidades médicas',
-    Tipo: 'Number',
-  },
-  {
-    Coluna: 'ocupSRAGCli',
-    Descrição:
-      'Ocupação que o hospital possui de utilização especifico por SRAG (COVID)',
-    Tipo: 'Number',
-  },
-  {
-    Coluna: 'ocupSRAGUti',
-    Descrição:
-      'Ocupação que o hospital possui de uti de utilização especifico por SRAG (COVID)',
-    Tipo: 'Number',
-  },
-  {
-    Coluna: 'altas',
-    Descrição: 'Número altas',
-    Tipo: 'Number',
-  },
-  {
-    Coluna: 'obitos',
-    Descrição: 'Número óbitos',
-    Tipo: 'Number',
-  },
-  {
-    Coluna: 'ocupacaoInformada',
-    Descrição: 'Ocupação foi informada?',
-    Tipo: 'Boolean',
-  },
-].sort(function (a, b) {
-  var x = a['Nome do campo na base<br>de dados original'].toLowerCase();
-  var y = b['Nome do campo na base<br>de dados original'].toLowerCase();
-  return x < y ? -1 : x > y ? 1 : 0;
-});
-
-const dicHospEn = [
-  {
-    Column: '_index',
-    Description: 'Elastic information that tells which index is being queried',
-    Type: 'String',
-  },
-  {
-    Column: '_type',
-    Description:
-      'Elastic information that tells you what type of document is being queried',
-    Type: 'String',
-  },
-  {
-    Column: '_id',
-    Description: 'String that informs the specific registry key',
-    Type: 'String',
-  },
-  {
-    Column: '_score',
-    Description:
-      'Elastic information that gives a score when the information is searched',
-    Type: 'Number',
-  },
-  {
-    Column: '_source',
-    Description: 'Array containing a set of retrieved data',
-    Type: 'Object',
-  },
-  {
-    Column: 'estado',
-    Description: 'Status',
-    Type: 'String',
-  },
-  {
-    Column: 'estadoSigla',
-    Description: 'State Acronym',
-    Type: 'String',
-  },
-  {
-    Column: 'municipio',
-    Description: 'Municipality',
-    Type: 'String',
-  },
-  {
-    Column: 'cnes',
-    Description: 'Code of the National Registry of Health Establishments',
-    Type: 'String',
-  },
-  {
-    Column: 'nomeCnes',
-    Description: 'Name of Health Establishments',
-    Type: 'String',
-  },
-  {
-    Column: 'dataNotificacoes',
-    Description: 'Date of notification',
-    Type: 'Datetime',
-  },
-  {
-    Column: 'dataAtualizacao',
-    Description: 'Update date',
-    Type: 'Datetime',
-  },
-  {
-    Column: 'OfertaHospCli',
-    Description: 'Offer that the hospital has for other medical specialties',
-    Type: 'Number',
-  },
-  {
-    Column: 'OfertaHospUti',
-    Description:
-      'Offer that the hospital has for the use of other medical specialties',
-    Type: 'Number',
-  },
-  {
-    Column: 'OfertaSRAGCli',
-    Description:
-      'Offer that the hospital has for the specific treatment of SARS (COVID)',
-    Type: 'Number',
-  },
-  {
-    Column: 'OfertaSRAGUti',
-    Description:
-      'Offer that the hospital has for the specific ICU of the SARS (COVID)',
-    Type: 'Number',
-  },
-  {
-    Column: 'ocupHospCli',
-    Description:
-      'Occupation that the hospital has for use by other medical specialties',
-    Type: 'Number',
-  },
-  {
-    Column: 'ocupHospUti',
-    Description:
-      'Occupation that the hospital has for use by other medical specialties',
-    Type: 'Number',
-  },
-  {
-    Column: 'ocupSRAGCli',
-    Description:
-      'Occupation that the hospital has for specific use by SARS (COVID)',
-    Type: 'Number',
-  },
-  {
-    Column: 'ocupSRAGUti',
-    Description:
-      'Occupation that the hospital has of ICU for specific use by SARS (COVID)',
-    Type: 'Number',
-  },
-  {
-    Column: 'altas',
-    Description: 'Discharges number',
-    Type: 'Number',
-  },
-  {
-    Column: 'obitos',
-    Description: 'Number of deaths',
-    Type: 'Number',
-  },
-  {
-    Column: 'ocupacaoInformada',
-    Description: 'Occupation was reported?',
-    Type: 'Boolean',
-  },
-].sort(function (a, b) {
-  var x = a.Column.toLowerCase();
-  var y = b.Column.toLowerCase();
-  return x < y ? -1 : x > y ? 1 : 0;
-});
 
 const dicIBP = [
   {
-    Coluna: 'ip_cd_d',
-    Descrição: 'Código da localização',
-    Formato: 'Number',
+    'Nome do campo na base<br>de dados original': 'epi_week',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'sem_ntf',
+    'Legenda do Campo': 'Semana epidemiológica',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição: 'Número da semana epidemiológica.',
   },
   {
-    Coluna: 'ip_cd_m',
-    Descrição: 'Código do município',
-    Formato: 'Number',
+    'Nome do campo na base<br>de dados original': 'date',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'date',
+    'Legenda do Campo': 'Data',
+    Tipo: 'Date YYYY-MM-DD',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição: 'Data de divulgação dos dados no formato YYYY-MM-DD.',
   },
   {
-    Coluna: 'ip_nm_f',
-    Descrição: 'Nome da UF',
-    Formato: 'String',
-  },
-  {
-    Coluna: 'ip_nm_r',
-    Descrição: 'Nome da Região',
-    Formato: 'String',
-  },
-  {
-    Coluna: 'ip_cd_f',
-    Descrição: 'Sigla da UF',
-    Formato: 'String',
-  },
-  {
-    Coluna: 'ip_vl_f',
-    Descrição: 'Código da UF',
-    Formato: 'Number',
-  },
-  {
-    Coluna: 'ip_vl_p',
-    Descrição: 'População segundo censo IBGE 2010',
-    Formato: 'Number',
-  },
-  {
-    Coluna: 'ip_nm_m',
-    Descrição: 'Nome do município',
-    Formato: 'String',
-  },
-  {
-    Coluna: 'ip_vl_n',
-    Descrição: 'Valor do indice de privacão',
-    Formato: 'Number',
-  },
-  {
-    Coluna: 'ip_dcl_',
-    Descrição: 'Decil do indice de privação',
-    Formato: 'Number',
-  },
-  {
-    Coluna: 'ip_qntl_n',
-    Descrição: 'Quintil do indice de privação',
-    Formato: 'Number',
-  },
-  {
-    Coluna: 'ip_prcnt_r',
+    'Nome do campo na base<br>de dados original': 'state',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'uf',
+    'Legenda do Campo': 'UF - Estado',
+    Tipo: 'String',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
     Descrição:
-      'Percentual de pessoas com renda per capita abaixo de 1/2 salário mínimo',
-    Formato: 'Number',
+      'Sigla da unidade federativa, exemplo: SP, ou “TOTAL” quando se refere a todo o país',
   },
   {
-    Coluna: 'ip_prcnt_d',
-    Descrição: 'Percentual de pessoas analfabetas com mais de 7 anos.',
-    Formato: 'Number',
+    'Nome do campo na base<br>de dados original': 'city',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'mun_name',
+    'Legenda do Campo': 'Município',
+    Tipo: 'String',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      'Nome completo do município no formato Cidade/UF. Pode ter o valor “CASO SEM LOCALIZAÇÃO DEFINIDA/UF”, referindo-se àqueles casos na unidade federativa que não tem seu município definido.',
   },
   {
-    Coluna: 'ip_prcnt_m',
-    Descrição: 'Percentual de população em casas inapropriadas.',
-    Formato: 'Number',
+    'Nome do campo na base<br>de dados original': 'ibgeID',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'code_full_mun_ibge',
+    'Legenda do Campo': 'Cód. IBGE',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      'Identificação única do município fornecida pelo Instituto Brasileiro de Pesquisas Estatísticas (IBGE)',
   },
   {
-    Coluna: 'ip_cd_c',
-    Descrição: 'Vazio/Desconhecido',
-    Formato: 'String',
+    'Nome do campo na base<br>de dados original': 'newDeaths',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'newDeaths',
+    'Legenda do Campo': 'Óbitos no dia',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      'Diferença entre o número de óbitos da data correspondente e a anterior',
   },
-].sort(function (a, b) {
-  var x = a['Nome do campo na base<br>de dados original'].toLowerCase();
-  var y = b['Nome do campo na base<br>de dados original'].toLowerCase();
-  return x < y ? -1 : x > y ? 1 : 0;
-});
+  {
+    'Nome do campo na base<br>de dados original': 'deaths',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'deaths',
+    'Legenda do Campo': 'Óbitos acum.',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição: 'Número acumulado de óbitos nessa data',
+  },
+  {
+    'Nome do campo na base<br>de dados original': 'newCases',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'newCases',
+    'Legenda do Campo': 'Confirmações no dia',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      'Diferença entre o número de casos da data correspondente e a anterior',
+  },
+  {
+    'Nome do campo na base<br>de dados original': 'totalCases',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'totalCases',
+    'Legenda do Campo': 'Confirmados acum.',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição: 'Número acumulado de casos nessa data',
+  },
+  {
+    'Nome do campo na base<br>de dados original': 'deaths_per_100k_inhabitants',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'deaths_per_100k_inhabitants',
+    'Legenda do Campo': 'Óbitos acum./100k hab.',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição: 'Número de óbitos por 100.000 habitantes para aquela localidade',
+  },
+  {
+    'Nome do campo na base<br>de dados original':
+      'totalCases_per_100k_inhabitants',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'totalCases_per_100k_inhabitants',
+    'Legenda do Campo': 'Confirmados acum./100k hab.',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição: 'Número de casos por 100.000 habitantes para aquela localidade',
+  },
+  {
+    'Nome do campo na base<br>de dados original': 'deaths_by_totalCases',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'deaths_by_totalCases',
+    'Legenda do Campo': 'Óbitos/confirmados',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição: 'Razão entre número de óbitos e casos (deaths/totalCases)',
+  },
+];
 
 const dicIBPEn = [
   {
@@ -8057,11 +7481,7 @@ const dicIBPEn = [
     Description: 'Empty/Unknown',
     Format: 'String',
   },
-].sort(function (a, b) {
-  var x = a.Column.toLowerCase();
-  var y = b.Column.toLowerCase();
-  return x < y ? -1 : x > y ? 1 : 0;
-});
+];
 
 const sampleIBP = [
   {
@@ -8502,94 +7922,184 @@ const dicMobGooEN = [
     Description: 'Place ID',
     Type: 'String',
   },
-].sort(function (a, b) {
-  var x = a.Column.toLowerCase();
-  var y = b.Column.toLowerCase();
-  return x < y ? -1 : x > y ? 1 : 0;
-});
+];
 
 const dicMobGooBR = [
   {
-    Coluna: 'country_region_code',
-    Descrição: 'código do país / região',
+    'Nome do campo na base<br>de dados original': 'country_region_code',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'pais_abrev',
+    'Legenda do Campo': 'Código do país ou região',
     Tipo: 'String',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição: 'Código do país ou região',
   },
   {
-    Coluna: 'country_region',
-    Descrição: 'país / região',
+    'Nome do campo na base<br>de dados original': 'country_region',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'pais',
+    'Legenda do Campo': 'Nome do país ou região',
     Tipo: 'String',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição: 'Nome do país ou região',
   },
   {
-    Coluna: 'sub_region_1',
-    Descrição: 'Nome da sub-região (por exemplo, estado BR)',
+    'Nome do campo na base<br>de dados original': 'sub_region_1',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'nome_uf',
+    'Legenda do Campo': 'Nome da sub-região, no caso do Brasil este é o Estado',
     Tipo: 'String',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição: 'Nome da sub-região, no caso do Brasil este é o Estado',
   },
   {
-    Coluna: 'sub_region_2',
-    Descrição: 'Nome da sub-região (por exemplo, cidade BR)',
+    'Nome do campo na base<br>de dados original': 'sub_region_2',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'nome_mun',
+    'Legenda do Campo': 'Nome da sub-região, no caso do Brasil esta é a Cidade',
     Tipo: 'String',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição: 'Nome da sub-região, no caso do Brasil esta é a Cidade',
   },
   {
-    Coluna: 'iso_3166_2_code',
+    'Nome do campo na base<br>de dados original': 'iso_3166_2_code',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'iso_3166_2_code',
+    'Legenda do Campo': 'Códigos de país ISO3133-2',
+    Tipo: 'String',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
     Descrição: 'Códigos de país ISO3133-2',
-    Tipo: 'String',
   },
   {
-    Coluna: 'census_fips_code',
-    Descrição: 'Código FIPS do censo dos EUA',
+    'Nome do campo na base<br>de dados original': 'census_fips_code',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'census_fips_code',
+    'Legenda do Campo': 'Código FIPS do Censo dos EUA',
     Tipo: 'String',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição: 'Código FIPS do Censo dos EUA',
   },
   {
-    Coluna: 'date',
-    Descrição: 'Data no formato aaaa-mm-dd',
+    'Nome do campo na base<br>de dados original': 'date',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'date',
+    'Legenda do Campo': 'Data no formato aaaa-mm-dd',
     Tipo: 'Date',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição: 'Data no formato aaaa-mm-dd',
   },
   {
-    Coluna: 'retail_and_recreation_percent_change_from_baseline',
+    'Nome do campo na base<br>de dados original':
+      'retail_and_recreation_percent_change_from_baseline',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'retail_and_recreation_percent_change_from_baseline',
+    'Legenda do Campo': 'Taxa de mudança na mobilidade humana',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
     Descrição: 'Taxa de mudança na mobilidade humana',
-    Tipo: 'Number',
   },
   {
-    Coluna: 'grocery_and_pharmacy_percent_change_from_baseline',
-    Descrição:
-      'Taxa de mudança na mobilidade humana (supermercados e drogarias)',
+    'Nome do campo na base<br>de dados original':
+      'grocery_and_pharmacy_percent_change_from_baseline',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'grocery_and_pharmacy_percent_change_from_baseline',
+    'Legenda do Campo':
+      'Taxa de mudança na mobilidade humana (mercearias e drogarias)',
     Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição: 'Taxa de mudança na mobilidade humana (mercearias e drogarias)',
   },
   {
-    Coluna: 'parks_percent_change_from_baseline',
+    'Nome do campo na base<br>de dados original':
+      'parks_percent_change_from_baseline',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'parks_percent_change_from_baseline',
+    'Legenda do Campo': 'Taxa de mudança na mobilidade humana (parques)',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
     Descrição: 'Taxa de mudança na mobilidade humana (parques)',
-    Tipo: 'Number',
   },
   {
-    Coluna: 'transit_stations_percent_change_from_baseline',
-    Descrição: 'Taxa de mudança na mobilidade humana (transit_stations)',
+    'Nome do campo na base<br>de dados original':
+      'transit_stations_percent_change_from_baseline',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'transit_stations_percent_change_from_baseline',
+    'Legenda do Campo':
+      'Taxa de mudança na mobilidade humana (estações de trânsito)',
     Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição: 'Taxa de mudança na mobilidade humana (estações de trânsito)',
   },
   {
-    Coluna: 'workplaces_percent_change_from_baseline',
+    'Nome do campo na base<br>de dados original':
+      'workplaces_percent_change_from_baseline',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'workplaces_percent_change_from_baseline',
+    'Legenda do Campo':
+      'Taxa de mudança na mobilidade humana (local de trabalho)',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
     Descrição: 'Taxa de mudança na mobilidade humana (local de trabalho)',
-    Tipo: 'Number',
   },
   {
-    Coluna: 'residential_percent_change_from_baseline',
+    'Nome do campo na base<br>de dados original':
+      'residential_percent_change_from_baseline',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'residential_percent_change_from_baseline',
+    'Legenda do Campo': 'Taxa de mudança na mobilidade humana (residencial)',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
     Descrição: 'Taxa de mudança na mobilidade humana (residencial)',
-    Tipo: 'Number',
   },
   {
-    Coluna: 'metro_area',
+    'Nome do campo na base<br>de dados original': 'metro_area',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'metro_area',
+    'Legenda do Campo': 'Nome da área metropolitana',
+    Tipo: 'String',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
     Descrição: 'Nome da área metropolitana',
-    Tipo: 'String',
   },
   {
-    Coluna: 'place_id',
-    Descrição: 'ID de local',
+    'Nome do campo na base<br>de dados original': 'place_id',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'place_id',
+    'Legenda do Campo': 'Código do local',
     Tipo: 'String',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição: 'Código do local',
   },
-].sort(function (a, b) {
-  var x = a['Nome do campo na base<br>de dados original'].toLowerCase();
-  var y = b['Nome do campo na base<br>de dados original'].toLowerCase();
-  return x < y ? -1 : x > y ? 1 : 0;
-});
+];
 
 const sampleAirIBGE = [
   {
@@ -8676,34 +8186,75 @@ const sampleAirIBGE = [
 
 const dicAirIBGE = [
   {
-    Coluna: 'Id',
+    'Nome do campo na base<br>de dados original': 'Id',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'id',
+    'Legenda do Campo': 'Identificador arbitrário único da ligação',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
     Descrição: 'Identificador arbitrário único da ligação',
-    Tipo: 'Number',
   },
   {
-    Coluna: 'Cod-orig',
-    Descrição: 'Código do município de origem da ligação',
+    'Nome do campo na base<br>de dados original': 'Cod-orig',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'code_full_mun_ibge_a',
+    'Legenda do Campo': 'Código do município de origem da ligação',
     Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      "Código do município A do par de ligação com dígito verificador. A descrição original da coluna inclui o termo 'origem da ligação' o que leva a crer que há um sentido no movimento. No entanto os dados de mobilidade são referentes ao par das cidades da ligação e não considera origem e destino do movimento.",
   },
   {
-    Coluna: 'Mun-origem',
-    Descrição: 'Nome do município de origem da ligação',
+    'Nome do campo na base<br>de dados original': 'Mun-origem',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'mun_name_a',
+    'Legenda do Campo': 'Nome do município de origem da ligação',
     Tipo: 'String',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      "Nome do município A do par de ligação. A descrição original da coluna inclui o termo 'origem da ligação' o que leva a crer que há um sentido no movimento. No entanto os dados de mobilidade são referentes ao par das cidades da ligação e não considera origem e destino do movimento.",
   },
   {
-    Coluna: 'Cod-dest',
-    Descrição: 'Código do município de destino da ligação',
+    'Nome do campo na base<br>de dados original': 'Cod-dest',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'code_full_mun_ibge_b',
+    'Legenda do Campo': 'Código do município de destino da ligação',
     Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      "Código do município B do par de ligação com dígito verificador. A descrição original da coluna inclui o termo 'destino da ligação' o que leva a crer que há um sentido no movimento. No entanto os dados de mobilidade são referentes ao par das cidades da ligação e não considera origem e destino do movimento.",
   },
   {
-    Coluna: 'Mun-destino',
-    Descrição: 'Nome do município de origem da ligação',
+    'Nome do campo na base<br>de dados original': 'Mun-destino',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'mun_name_b',
+    'Legenda do Campo': 'Nome do município de origem da ligação',
     Tipo: 'String',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      "Nome do município B do par de ligação. A descrição original da coluna inclui o termo 'destino da ligação' o que leva a crer que há um sentido no movimento. No entanto os dados de mobilidade são referentes ao par das cidades da ligação e não considera origem e destino do movimento.",
   },
   {
-    Coluna: 'Pax',
-    Descrição: 'Quantidade de passageiros da ligação',
+    'Nome do campo na base<br>de dados original': 'Pax',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'n_pass',
+    'Legenda do Campo': 'Quantidade de passageiros da ligação',
     Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      'Número de pessoas que viajaram entre as cidades do par de ligação sem considerar a origem e o destino.',
   },
 ];
 
@@ -8747,8 +8298,8 @@ const sampleRodoFluIBGE = [
     NOMEMUN_A: 'Manaus',
     CODMUNDV_B: 1304260,
     NOMEMUN_B: 'Uarini',
-    'VAR05/HIDROVIÁRIOS': '7,5',
-    'VAR06/RODOVIÁRIOS': 0,
+    VAR05: '7,5',
+    VAR06: 0,
   },
   {
     ID: 51038095108402,
@@ -8756,8 +8307,8 @@ const sampleRodoFluIBGE = [
     NOMEMUN_A: "Figueirópolis D'Oeste",
     CODMUNDV_B: 5108402,
     NOMEMUN_B: 'Várzea Grande',
-    'VAR05/HIDROVIÁRIOS': 0,
-    'VAR06/RODOVIÁRIOS': 42,
+    VAR05: 0,
+    VAR06: 42,
   },
   {
     ID: 13019021504802,
@@ -8765,8 +8316,8 @@ const sampleRodoFluIBGE = [
     NOMEMUN_A: 'Itacoatiara',
     CODMUNDV_B: 1504802,
     NOMEMUN_B: 'Monte Alegre',
-    'VAR05/HIDROVIÁRIOS': '4,5',
-    'VAR06/RODOVIÁRIOS': 0,
+    VAR05: '4,5',
+    VAR06: 0,
   },
   {
     ID: 15021031504604,
@@ -8774,8 +8325,8 @@ const sampleRodoFluIBGE = [
     NOMEMUN_A: 'Cametá',
     CODMUNDV_B: 1504604,
     NOMEMUN_B: 'Mocajuba',
-    'VAR05/HIDROVIÁRIOS': '49,5',
-    'VAR06/RODOVIÁRIOS': 6,
+    VAR05: '49,5',
+    VAR06: 6,
   },
   {
     ID: 23001502304400,
@@ -8783,8 +8334,8 @@ const sampleRodoFluIBGE = [
     NOMEMUN_A: 'Acarape',
     CODMUNDV_B: 2304400,
     NOMEMUN_B: 'Fortaleza',
-    'VAR05/HIDROVIÁRIOS': 0,
-    'VAR06/RODOVIÁRIOS': 716,
+    VAR05: 0,
+    VAR06: 716,
   },
   {
     ID: 23021072309102,
@@ -8792,8 +8343,8 @@ const sampleRodoFluIBGE = [
     NOMEMUN_A: 'Baturité',
     CODMUNDV_B: 2309102,
     NOMEMUN_B: 'Mulungu',
-    'VAR05/HIDROVIÁRIOS': 0,
-    'VAR06/RODOVIÁRIOS': 437,
+    VAR05: 0,
+    VAR06: 437,
   },
   {
     ID: 23014062302107,
@@ -8801,8 +8352,8 @@ const sampleRodoFluIBGE = [
     NOMEMUN_A: 'Aratuba',
     CODMUNDV_B: 2302107,
     NOMEMUN_B: 'Baturité',
-    'VAR05/HIDROVIÁRIOS': 0,
-    'VAR06/RODOVIÁRIOS': 390,
+    VAR05: 0,
+    VAR06: 390,
   },
   {
     ID: 28003082806701,
@@ -8810,8 +8361,8 @@ const sampleRodoFluIBGE = [
     NOMEMUN_A: 'Aracaju',
     CODMUNDV_B: 2806701,
     NOMEMUN_B: 'São Cristóvão',
-    'VAR05/HIDROVIÁRIOS': 0,
-    'VAR06/RODOVIÁRIOS': 752,
+    VAR05: 0,
+    VAR06: 752,
   },
   {
     ID: 23049052305001,
@@ -8819,8 +8370,8 @@ const sampleRodoFluIBGE = [
     NOMEMUN_A: 'Groaíras',
     CODMUNDV_B: 2305001,
     NOMEMUN_B: 'Guaraciaba do Norte',
-    'VAR05/HIDROVIÁRIOS': 0,
-    'VAR06/RODOVIÁRIOS': 14,
+    VAR05: 0,
+    VAR06: 14,
   },
   {
     ID: 23020083304557,
@@ -8828,47 +8379,94 @@ const sampleRodoFluIBGE = [
     NOMEMUN_A: 'Barro',
     CODMUNDV_B: 3304557,
     NOMEMUN_B: 'Rio de Janeiro',
-    'VAR05/HIDROVIÁRIOS': 0,
-    'VAR06/RODOVIÁRIOS': 15,
+    VAR05: 0,
+    VAR06: 15,
   },
 ];
 
 const dicRodoFluIBGE = [
   {
-    Coluna: 'ID',
+    'Nome do campo na base<br>de dados original': 'ID',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'id',
+    'Legenda do Campo': 'Identificador único da ligação',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
     Descrição: 'Identificador único da ligação',
-    Tipo: 'Int',
   },
   {
-    Coluna: 'CODMUNDV_A',
+    'Nome do campo na base<br>de dados original': 'CODMUNDV_A',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'code_full_mun_ibge_a',
+    'Legenda do Campo':
+      'Código do município A do par de ligação com dígito verificador',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
     Descrição: 'Código do município A do par de ligação com dígito verificador',
-    Tipo: 'Int',
   },
   {
-    Coluna: 'NOMEMUN_A',
+    'Nome do campo na base<br>de dados original': 'NOMEMUN_A',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'mun_name_a',
+    'Legenda do Campo': 'Nome do município A do par de ligação',
+    Tipo: 'String',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
     Descrição: 'Nome do município A do par de ligação',
-    Tipo: 'String',
   },
   {
-    Coluna: 'CODMUNDV_B',
+    'Nome do campo na base<br>de dados original': 'CODMUNDV_B',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'code_full_mun_ibge_b',
+    'Legenda do Campo':
+      'Código do município B do par de ligação com dígito verificador',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
     Descrição: 'Código do município B do par de ligação com dígito verificador',
-    Tipo: 'Int',
   },
   {
-    Coluna: 'NOMEMUN_B',
-    Descrição: 'Nome do município B do par de ligação',
+    'Nome do campo na base<br>de dados original': 'NOMEMUN_B',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'mun_name_b',
+    'Legenda do Campo': 'Nome do município B do par de ligação',
     Tipo: 'String',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição: 'Nome do município B do par de ligação',
   },
   {
-    Coluna: 'VAR05/HIDROVIÁRIOS',
-    Descrição:
+    'Nome do campo na base<br>de dados original': 'VAR05',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'hidroviarios',
+    'Legenda do Campo':
       'Frequência de saídas de veículos hidroviários no par de ligação',
-    Tipo: 'Float',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      'Frequência semanal de saídas de veículos hidroviários no par de ligação. Não considera o número de pessoas por veículo.',
   },
   {
-    Coluna: 'VAR06/RODOVIÁRIOS',
-    Descrição: 'Frequência de saídas de veículos rodoviários no par de ligação',
-    Tipo: 'Float',
+    'Nome do campo na base<br>de dados original': 'VAR06',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'rodoviarios',
+    'Legenda do Campo':
+      'Frequência de saídas de veículos rodoviários no par de ligação',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      'Frequência  semanal de saídas de veículos rodoviários no par de ligação. Não considera o número de pessoas por veículo.',
   },
 ];
 
@@ -8899,13 +8497,13 @@ const dicRodoFluIBGEEn = [
     Type: 'String',
   },
   {
-    Column: 'VAR05/HIDROVIÁRIOS',
+    Column: 'VAR05',
     Description:
       'Frequency of waterway vehicle departures on the connecting pair',
     Type: 'Float',
   },
   {
-    Column: 'VAR06/RODOVIÁRIOS',
+    Column: 'VAR06',
     Description:
       'Frequency of departures of road vehicles on the connecting pair',
     Type: 'Float',
@@ -8914,72 +8512,278 @@ const dicRodoFluIBGEEn = [
 
 const dicIndex = [
   {
-    ID: 'UF',
-    Name: 'State initials',
-    'Coding Instructions': '',
+    'Nome do campo na base<br>de dados original': 'UF',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'uf',
+    'Legenda do Campo': 'Iniciais do estado',
+    Tipo: 'String',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição: 'Iniciais do estado',
   },
   {
-    ID: 'Cod',
-    Name: 'State code',
-    'Coding Instructions': '',
+    'Nome do campo na base<br>de dados original': 'Cod',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'uf_code',
+    'Legenda do Campo': 'Código do estado',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição: 'Código do estado',
   },
   {
-    ID: 'Date',
-    Name: 'Date the decree was published',
-    'Coding Instructions': '',
+    'Nome do campo na base<br>de dados original': 'Data',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'data',
+    'Legenda do Campo': 'Data de publicação do decreto',
+    Tipo: 'Data',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição: 'Data de publicação do decreto',
   },
   {
-    ID: 'indGeneral',
-    Name: 'General index',
-    'Coding Instructions': '( O1 + O2 + O3 + O4 + C1 + C2 ) * 100 / 6',
+    'Nome do campo na base<br>de dados original': 'indGeneral',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'indGeneral',
+    'Legenda do Campo': 'Indice geral',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição: '(O1 + O2 + O3 + O4 + C1 + C2 ) * 100 / 6',
   },
+  {
+    'Nome do campo na base<br>de dados original': 'O1',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'O1',
+    'Legenda do Campo': 'Cancelar eventos públicos',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      'NO0 - Sem medidas <br>NO1 - Proibição de eventos e equipamentos públicos <br>NO2 - Restrições a aglomerações muito grandes (acima de 500 pessoas)<br>NO3 - Restrições a aglomerações entre 100-499 pessoas<br>NO4 - Restrições para aglomerações de 50 a 99 pessoas<br>NO5 - Restrições para aglomerações de 5 a 49 pessoas<br>NO6 - Proibição total de eventos ou atividades lotadas <br>GO0 - Direcionado ou condicional<br>GO1 - Geral',
+  },
+  {
+    'Nome do campo na base<br>de dados original': 'O2',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'O2',
+    'Legenda do Campo': 'Fechamento de escolas/universidades',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      'NO0 - Sem medidas<br>NO1 - Sugere fechamento<br>NO2 - Exige fechamento <br>GO0 - Direcionado ou condicional<br>GO1 - Geral',
+  },
+  {
+    'Nome do campo na base<br>de dados original': 'O3',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'O3',
+    'Legenda do Campo': 'Home-office para funcionários públicos',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      'NO0 - Sem medidas<br>NO1 - Home-office para pessoas com sintomas ou de algum grupo de risco<br>NO2 - Home-office opcional<br>NO3 - Agendamento estratégico trabalho<br>NO4 - Home-office obrigatório <br>GO0 - Direcionado ou condicional<br>GO1 - Geral',
+  },
+  {
+    'Nome do campo na base<br>de dados original': 'O4',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'O4',
+    'Legenda do Campo': 'Isolamento',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      'NO0 - Sem medidas<br>NO1 - Isolamento vertical<br>NO2 - Isolamento horizontal <br>GO0 - Direcionado ou condicional<br>GO1 - Geral',
+  },
+  {
+    'Nome do campo na base<br>de dados original': 'C1',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'C1',
+    'Legenda do Campo':
+      'Fechamento de negócios não essenciais e atividades públicas',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      '0 - Sem medidas<br>+1 - Fechamento de shoppings<br>+1 – Suspensão de negócios não essenciais<br>+1 - Suspensão de bares e restaurantes<br>+1 - Proibição de atividades em espaços públicos (praias, parques, etc) <br>+1 - Suspensão de atividades religiosas<br>+1 - Fechamento de locais culturais (teatro, cinema, museu)<br> +1 – Encerramento dos ginásios <br>SGCj – A soma das medidas que foi geral <br>SCj - A soma das restrições aplicadas<br>Ncj - O número de restrições possíveis',
+  },
+  {
+    'Nome do campo na base<br>de dados original': 'C2',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'C2',
+    'Legenda do Campo':
+      'Bloqueio de transporte (Considerando apenas transporte rodoviário e fluvial)',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      '0 - Sem medidas<br>+1 - Suspensão em ônibus urbanos <br>+1 - Suspensão em ônibus intermunicipais <br>+ 1 - Suspensão dos ônibus interestaduais<br>+1 - Suspensão total do transporte na cidade <br>+1 - Suspensão total do transporte intermunicipal<br>+1 – Suspensão total do transporte interestadual <br>SGCj – Soma das medidas que foi geral <br>SCj - A soma das restrições aplicadas <br>Ncj - O número de restrições possíveis',
+  },
+  {
+    'Nome do campo na base<br>de dados original': 'O',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'O',
+    'Legenda do Campo':
+      'A classe ordinal apresenta uma ordem clara sobre a intensidade da restrição',
+    Tipo: 'Formula para calcular as colunas com nome iniciadas em O',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição: 'i=j/[NOj(2-Goj)]',
+  },
+  {
+    'Nome do campo na base<br>de dados original': 'C',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'C',
+    'Legenda do Campo':
+      'A classe cumulativa não apresenta uma ordem clara de intensidade da restrição.',
+    Tipo: 'Formula para calcular as colunas com nome iniciadas em C',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição: 'iCj=[SGCj+(SCj-SGCj)]/NCj',
+  },
+];
 
+const dicIndexEn = [
   {
-    ID: 'Oj',
-    Name: 'Ordinal class present a clear order on the intensity of the restriction',
-    'Coding Instructions': 'iOj = j / [ NOj ( 2 - Goj ) ]',
+    'Field name in the original database': 'UF',
+    'Field name after matching (variable named by PAMEpi)': 'uf',
+    'Field Legend': 'State initials',
+    Type: 'String',
+    Categories: 'Uncategorized',
+    'Values ​​that appear within the variable with the respective matching given by PAMEpi':
+      'Uncategorized',
+    Description: 'uf',
   },
   {
-    ID: 'O1',
-    Name: 'Cancel public events',
-    'Coding Instructions':
-      'NO0 - No measures &#10;&#13; NO1 - Ban of public events and public facilities <br> NO2 - Restrictions on very large gatherings (above 500 people)<br> NO3 - Restrictions on gatherings between 100-499 people <br> NO4 - Restrictions on gatherings between 50-99 people<br> NO5 - Restrictions on gatherings between 5-49 people<br> NO6 - Total ban on crowded events or activities <br> GO0 - Targeted or conditional<br> GO1 - General',
+    'Field name in the original database': 'Cod',
+    'Field name after matching (variable named by PAMEpi)': 'uf_code',
+    'Field Legend': 'State code',
+    Type: 'Number',
+    Categories: 'Uncategorized',
+    'Values ​​that appear within the variable with the respective matching given by PAMEpi':
+      'Uncategorized',
+    Description: 'uf_code',
   },
   {
-    ID: 'O2',
-    Name: 'Closure of schools/universities',
-    'Coding Instructions':
-      'NO0 - No measures<br> NO1 - Suggests closure<br> NO2 - Require closing <br> GO0 - Targeted or conditional<br> GO1 - General',
-  },
-
-  {
-    ID: 'O3',
-    Name: 'Home-office for government employees',
-    'Coding Instructions':
-      'NO0 - No measures<br> NO1 - Home-office for those with symptoms or from some risk groups<br> NO2 - Optional home-office<br> NO3 - Strategic scheduling work<br> NO4 - Mandatory home-office <br> GO0 - Targeted or conditional<br> GO1 - General',
+    'Field name in the original database': 'Date',
+    'Field name after matching (variable named by PAMEpi)': 'date',
+    'Field Legend': 'Date the decree was published',
+    Type: 'Date',
+    Categories: 'Uncategorized',
+    'Values ​​that appear within the variable with the respective matching given by PAMEpi':
+      'Uncategorized',
+    Description: 'date',
   },
   {
-    ID: 'O4',
-    Name: 'Isolation',
-    'Coding Instructions':
-      'NO0 - No measures<br> NO1 - Vertical isolation<br> NO2 - Horizontal isolation <br> GO0 - Targeted or conditional<br> GO1 - General',
+    'Field name in the original database': 'indGeneral',
+    'Field name after matching (variable named by PAMEpi)': 'indGeneral',
+    'Field Legend': 'General index',
+    Type: 'Number',
+    Categories: 'Uncategorized',
+    'Values ​​that appear within the variable with the respective matching given by PAMEpi':
+      'Uncategorized',
+    Description: '( O1 + O2 + O3 + O4 + C1 + C2 ) * 100 / 6',
   },
   {
-    ID: 'Cj',
-    Name: 'Cumulative class present no clear order of intensity of the restriction.',
-    'Coding Instructions': 'iCj = [ SGCj + ( SCj - SGCj ) ] / NCj',
+    'Field name in the original database': 'O1',
+    'Field name after matching (variable named by PAMEpi)': 'O1',
+    'Field Legend': 'Cancel public events',
+    Type: 'Number',
+    Categories: 'Uncategorized',
+    'Values ​​that appear within the variable with the respective matching given by PAMEpi':
+      'Uncategorized',
+    Description:
+      'NO0 - No measures <br>NO1 - Ban of public events and public facilities <br>NO2 - Restrictions on very large gatherings (above 500 people)<br>NO3 - Restrictions on gatherings between 100-499 people<br>NO4 - Restrictions on gatherings between 50-99 people<br>NO5 - Restrictions on gatherings between 5-49 people<br>NO6 - Total ban on crowded events or activities <br>GO0 - Targeted or conditional<br>GO1 - General',
   },
   {
-    ID: 'C1',
-    Name: 'Closure of non-essential businesses and public activities',
-    'Coding Instructions':
-      '0 - No measures<br> +1 - Closure of malls<br> +1 – Suspension of non-essential businesses <br> +1 - Suspension of bars and restaurants<br> +1 - Ban of activities in public spaces (beaches, parks, etc) <br> +1 - Suspension of religious activities<br> +1 - Closure of cultural places (theater, cinema, museum)<br> +1 – Closure of gyms<br>  SGCj – The sum of the measures that was general<br> SCj - The sum of the restrictions applied<br> Ncj - The number of possible restrictions',
+    'Field name in the original database': 'O2',
+    'Field name after matching (variable named by PAMEpi)': 'O2',
+    'Field Legend': 'Closure of schools/universities',
+    Type: 'Number',
+    Categories: 'Uncategorized',
+    'Values ​​that appear within the variable with the respective matching given by PAMEpi':
+      'Uncategorized',
+    Description:
+      'NO0 - No measures<br>NO1 - Suggests closure<br>NO2 - Require closing <br>GO0 - Targeted or conditional<br>GO1 - General',
   },
   {
-    ID: 'C2',
-    Name: 'Transport lock (Considering  only  road and  river  transportation)',
-    'Coding Instructions':
-      '0 - No measures<br> +1 - Suspension on city buses <br> +1 - Suspension on inter-cities buses <br> +1 - Suspension on inter-state buses<br> +1 - Total transportation suspension in the city <br> +1 - Total transportation suspension inter cities<br> +1 – Total transportation suspension inter states<br>  SGCj – The sum of the<br> measures that was general<br> SCj - The sum of the restrictions applied<br> Ncj - The number of possible restrictions',
+    'Field name in the original database': 'O3',
+    'Field name after matching (variable named by PAMEpi)': 'O3',
+    'Field Legend': 'Home-office for government employees',
+    Type: 'Number',
+    Categories: 'Uncategorized',
+    'Values ​​that appear within the variable with the respective matching given by PAMEpi':
+      'Uncategorized',
+    Description:
+      'NO0 - No measures<br>NO1 - Home-office for those with symptoms or from some risk groups<br>NO2 - Optional home-office<br>NO3 - Strategic scheduling work<br>NO4 - Mandatory home-office <br>GO0 - Targeted or conditional<br>GO1 - General',
+  },
+  {
+    'Field name in the original database': 'O4',
+    'Field name after matching (variable named by PAMEpi)': 'O4',
+    'Field Legend': 'Isolation',
+    Type: 'Number',
+    Categories: 'Uncategorized',
+    'Values ​​that appear within the variable with the respective matching given by PAMEpi':
+      'Uncategorized',
+    Description:
+      'NO0 - No measures<br>NO1 - Vertical isolation<br>NO2 - Horizontal isolation <br>GO0 - Targeted or conditional<br>GO1 - General',
+  },
+  {
+    'Field name in the original database': 'C1',
+    'Field name after matching (variable named by PAMEpi)': 'C1',
+    'Field Legend': 'Closure of non-essential businesses and public activities',
+    Type: 'Number',
+    Categories: 'Uncategorized',
+    'Values ​​that appear within the variable with the respective matching given by PAMEpi':
+      'Uncategorized',
+    Description:
+      '0 - No measures<br>+1 - Closure of malls<br>+1 – Suspension of non-essential businesses<br>+1 - Suspension of bars and restaurants<br>+1 - Ban of activities in public spaces (beaches, parks, etc) <br>+1 - Suspension of religious activities<br>+1 - Closure of cultural places (theater, cinema, museum)<br> +1 – Closure of gyms <br>SGCj – The sum of the measures that was general <br>SCj - The sum of the restrictions applied<br>Ncj - The number of possible restrictions',
+  },
+  {
+    'Field name in the original database': 'C2',
+    'Field name after matching (variable named by PAMEpi)': 'C2',
+    'Field Legend':
+      'Transport lock (Considering only road and river transportation)',
+    Type: 'Number',
+    Categories: 'Uncategorized',
+    'Values ​​that appear within the variable with the respective matching given by PAMEpi':
+      'Uncategorized',
+    Description:
+      '0 - No measures<br>+1 - Suspension on city buses <br>+1 - Suspension on inter-cities buses <br>+ 1 - Suspension on inter-state buses<br>+1 - Total transportation suspension in the city <br>+1 - Total transportation suspension inter cities<br>+1 – Total transportation suspension inter states <br>SGCj – The sum of the measures that was general <br>SCj - The sum of the restrictions applied <br>Ncj - The number of possible restrictions',
+  },
+  {
+    'Field name in the original database': 'O',
+    'Field name after matching (variable named by PAMEpi)': 'O',
+    'Field Legend':
+      'Ordinal class present a clear order on the intensity of the restriction',
+    Type: 'Formula to calculate named columns starting with O',
+    Categories: 'Uncategorized',
+    'Values ​​that appear within the variable with the respective matching given by PAMEpi':
+      'Uncategorized',
+    Description: 'iOj=j/[NOj(2-Goj)]',
+  },
+  {
+    'Field name in the original database': 'C',
+    'Field name after matching (variable named by PAMEpi)': 'C',
+    'Field Legend':
+      'Cumulative class present in the clear order of intensity of the restriction.',
+    Type: 'Formula to calculate named columns starting in C',
+    Categories: 'Uncategorized',
+    'Values ​​that appear within the variable with the respective matching given by PAMEpi':
+      'Uncategorized',
+    Description: 'iCj=[SGCj+(SCj-SGCj)]/NCj',
   },
 ];
 
@@ -9108,348 +8912,1213 @@ const sampleIndex = [
 
 const dicAgregate = [
   {
-    'PAMEpi variable': 'date',
-    'Pamepi description': 'Date when vaccine was applied',
-    'Original variable': 'vacina_dataAplicacao',
-    'Original description': 'Data de aplicação da vacina',
-    Observation: '',
+    'Nome do campo na base<br>de dados original': 'code_full_mun_ibge',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'code_full_mun_ibge',
+    'Legenda do Campo': 'Código IBGE da cidade completo',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição: 'Código IBGE da cidade completo com 7 dígitos',
   },
   {
-    'PAMEpi variable': 'mun_res',
-    'Pamepi description': 'IBGE code of the city of residence of the patient',
-    'Original variable': 'paciente_endereco_coIbgeMunicipio',
-    'Original description': 'Código IBGE do município de  endereço do vacinado',
-    Observation:
-      'The municipality used is referred to the residence municipality of the person',
+    'Nome do campo na base<br>de dados original': 'code_mun_ibge',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'code_mun_ibge',
+    'Legenda do Campo': 'Código IBGE da cidade',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição: 'Código IBGE da cidade completo com 6 dígitos',
   },
   {
-    'PAMEpi variable': 'nome_mun_res',
-    'Pamepi description': 'Name of the city of residence of the patient',
-    'Original variable': 'paciente_endereco_nmMunicipio',
-    'Original description': 'Nome do município de endereço do vacinado',
-    Observation: '',
+    'Nome do campo na base<br>de dados original': 'nome_mun',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'mun_name',
+    'Legenda do Campo': 'Nome da cidade',
+    Tipo: 'String',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição: 'Nome da cidade',
   },
   {
-    'PAMEpi variable': 'uf_res',
-    'Pamepi description': 'IBGE code of the state of the patient',
-    'Original variable': 'paciente_endereco_uf',
-    'Original description': 'Sigla da UF de endereço do vacinado',
-    Observation:
-      'The state used is refered to the  residence state of the person',
+    'Nome do campo na base<br>de dados original': 'uf',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'uf',
+    'Legenda do Campo': 'Sigla da UF',
+    Tipo: 'String',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição: 'Sigla da UF (BA, AC,...)',
   },
   {
-    'PAMEpi variable': 'num_dose_reg_VAC',
-    'Pamepi description':
-      'Number of doses applied that are registered in  the system',
-    'Original variable': 'vacina_descricao_dose',
-    'Original description': 'Descrição da dose',
-    Observation:
-      "The variable was created by summing  together all categories except 'Dose' and 'null' in  vacina_descricao_dose <br><a href='https://qsprod.saude.gov.br/extensions/DEMAS_C19Vacina/DEMAS_C19Vacina.html' target='_blank'>See more information HERE </a>",
+    'Nome do campo na base<br>de dados original': 'uf_code',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'uf_code',
+    'Legenda do Campo': 'Codigo IBGE da UF',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição: 'Codigo IBGE da UF (11, 33, ...)',
   },
   {
-    'PAMEpi variable': 'num_dose_non_reg_VAC',
-    'Pamepi description':
-      'Number of doses applied that are not yet registered  in the system',
-    'Original variable': 'vacina_descricao_dose',
-    'Original description': 'Descrição da dose',
-    Observation:
-      "The variable was created by summing  together the categories 'Dose' and 'null' in  vacina_descricao_dose",
+    'Nome do campo na base<br>de dados original': 'date',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'date',
+    'Legenda do Campo': 'Data',
+    Tipo: 'Date',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição: 'Date (starting from 01/01/2020)',
   },
   {
-    'PAMEpi variable': 'total_dose_VAC',
-    'Pamepi description': 'Total number of applied dose',
-    'Original variable': 'vacina_descricao_dose',
-    'Original description': 'Descrição da dose',
-    Observation:
-      'The variable was created by summing  together all categories in  vacina_descricao_dose',
+    'Nome do campo na base<br>de dados original': 'num_dose_reg_VAC',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'num_dose_reg_VAC',
+    'Legenda do Campo': 'Número de doses aplicadas registradas',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      "Total de doses aplicadas e registradas. A variável é criada com a variável vacina_descricao_dose, da base da vacina, pela soma todas as categorias, exceto 'Dose' e 'null'",
   },
   {
-    'PAMEpi variable': 'num_pri_reg_VAC',
-    'Pamepi description':
-      'Number of first dose applied that are registered  in the system',
-    'Original variable': 'vacina_descricao_dose',
-    'Original description': 'Descrição da dose',
-    Observation:
-      "The variable was created by summing  together the categories '1ª Dose', 'Dose Inicial' in  vacina_descricao_dose",
+    'Nome do campo na base<br>de dados original': 'num_dose_non_reg_VAC',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'num_dose_non_reg_VAC',
+    'Legenda do Campo': 'Número de doses aplicadas não registradas',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      "Total de doses aplicadas e registradas. A variável é criada com a variável vacina_descricao_dose, da base da vacina, pela soma da categoria 'Dose' e 'null'",
   },
   {
-    'PAMEpi variable': 'num_sec_uni_reg_VAC',
-    'Pamepi description':
-      'Number of second and unique dose applied that  are registered in the system',
-    'Original variable': 'vacina_descricao_dose',
-    'Original description': 'Descrição da dose',
-    Observation:
-      "The variable was created by summing  together the categories '2ª Dose', 'Única' in  vacina_descricao_dose",
+    'Nome do campo na base<br>de dados original': 'total_dose_VAC',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'total_dose_VAC',
+    'Legenda do Campo': 'Número total de doses aplicadas',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição: 'Soma de num_dose_reg_VAC e num_dose_non_reg_VAC',
   },
   {
-    'PAMEpi variable': 'num_reinforcment_VAC',
-    'Pamepi description':
-      'Number of third doses, aditional and reinforcement applied',
-    'Original variable': 'vacina_descricao_dose',
-    'Original description': 'Descrição da dose',
-    Observation:
-      "The variable was created by summing  together the categories '3ª Dose', '1º Reforço', 'Reforço', 'Dose Adicional'  in vacina_descricao_dose",
+    'Nome do campo na base<br>de dados original': 'num_vac_type_1_VAC',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'num_vac_type_1_VAC',
+    'Legenda do Campo': 'Número total de doses aplicadas da vacina tipo 1.',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      "Número de doses aplicadas da vacina de tipo 1 (AZD1222/AstraZeneca). <br>A variável pode ser criada usando a coluna 'vacina_nome' na base da vacina.",
   },
   {
-    'PAMEpi variable': 'num_pri_revac_VAC',
-    'Pamepi description': 'Number of first doses revaccination',
-    'Original variable': 'vacina_descricao_dose',
-    'Original description': 'Descrição da dose',
-    Observation:
-      "The variable was created by summing  together the categories '1ª Dose Revacinação' in  vacina_descricao_dose",
+    'Nome do campo na base<br>de dados original': 'num_vac_type_2_VAC',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'num_vac_type_2_VAC',
+    'Legenda do Campo': 'Número total de doses aplicadas da vacina tipo 2.',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      "Número de doses aplicadas da vacina de tipo 2 (CoronaVac/Sinovac). <br>A variável pode ser criada usando a coluna 'vacina_nome' na base da vacina.",
   },
   {
-    'PAMEpi variable': 'num_sec_revac_VAC',
-    'Pamepi description': 'Number of second doses revaccination',
-    'Original variable': 'vacina_descricao_dose',
-    'Original description': 'Descrição da dose',
-    Observation:
-      "The variable was created by summing  together the categories '2ª Dose Revacinação' in  vacina_descricao_dose",
+    'Nome do campo na base<br>de dados original': 'num_vac_type_3_VAC',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'num_vac_type_3_VAC',
+    'Legenda do Campo': 'Número total de doses aplicadas da vacina tipo 3.',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      "Número de doses aplicadas da vacina de tipo 3 (BNT162b2/Pfizer). <br>A variável pode ser criada usando a coluna 'vacina_nome' na base da vacina.",
   },
   {
-    'PAMEpi variable': 'newDeaths_WC',
-    'Pamepi description':
-      'Daily number of deaths collected by the health reports',
-    'Original variable': 'newDeaths',
-    'Original description': '',
-    Observation: '',
+    'Nome do campo na base<br>de dados original': 'num_vac_type_4_VAC',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'num_vac_type_4_VAC',
+    'Legenda do Campo': 'Número total de doses aplicadas da vacina tipo 4.',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      "Número de doses aplicadas da vacina de tipo 4 (Ad26.COV2.S/Johnson&Johnson). <br>A variável pode ser criada usando a coluna 'vacina_nome' na base da vacina.",
   },
   {
-    'PAMEpi variable': 'deaths_WC',
-    'Pamepi description': 'Cummulated number of deaths',
-    'Original variable': 'deaths',
-    'Original description': '',
-    Observation: '',
+    'Nome do campo na base<br>de dados original': 'num_dose_pri_VAC',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'num_dose_pri_VAC',
+    'Legenda do Campo': 'Número de primeira dose aplicada',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      "'A variável foi criada somando as categorias '1ª Dose', 'Dose Inicial' na vacina_descricao_dose",
   },
   {
-    'PAMEpi variable': 'newCases_WC',
-    'Pamepi description':
-      'Daily number of new cases of COVID, collected from the reports',
-    'Original variable': 'newCases',
-    'Original description': '',
-    Observation: '',
+    'Nome do campo na base<br>de dados original': 'num_dose_sec_uni_VAC',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'num_dose_sec_uni_VAC',
+    'Legenda do Campo': 'Número de segunda e única dose aplicada',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      "A variável foi criada somando as categorias '2ª Dose', 'Unica' na vacina_descricao_dose",
   },
   {
-    'PAMEpi variable': 'totalCases_WC',
-    'Pamepi description': 'Cummulated number of cases',
-    'Original variable': 'totalCases',
-    'Original description': '',
-    Observation: '',
+    'Nome do campo na base<br>de dados original': 'num_dose_reinforcment_VAC',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'num_dose_reinforcment_VAC',
+    'Legenda do Campo': 'Número de doses de reforços aplicados',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      "A variável foi criada somando as categorias '3ª, 4ª e 5ª Dose', '1º, 2º e 3º Reforço', 'Reforço', 'Dose Adicional', '1ª, 2ª, 3ª Dose Revacinação', 'Revacinação' e 'tratamento com duas doses ou mais da variável vacina_descricao_dose na base da vacinação. <br>Mais informação em: <a href='https://www.cdc.gov/coronavirus/2019-ncov/vaccines/faq.html' target='blank'>CDC</a> e <a href='https://www.gov.br/saude/pt-br/coronavirus/publicacoes-tecnicas/guias-e-planos/plano-nacional-de-operacionalizacao-da-vacinacao-contra-covid-19.pdf target='blank'>Plano nacional de Vacinação</a>",
   },
   {
-    'PAMEpi variable': 'ocupacaoSuspeitoCli_HOS',
-    'Pamepi description': 'Suspected clinical occupation by a COVID-19 case',
-    'Original variable': 'ocupacaoSuspeitoCli',
-    'Original description': '',
-    Observation: '',
+    'Nome do campo na base<br>de dados original': 'num_ind_VAC',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'num_ind_VAC',
+    'Legenda do Campo':
+      'Número total de pessoas vacinadas (seja qual for o tipo de dose).',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      'Númerototal de pessoas vacinadas, seja qual for a dose. Variável pode ser criada após pivotagem da base da vacinação para contar o número de pessoas vacinadas.',
   },
   {
-    'PAMEpi variable': 'ocupacaoSuspeitoUti_HOS',
-    'Pamepi description': 'Suspected ICU occupation by a COVID-19 case',
-    'Original variable': 'ocupacaoSuspeitoUti',
-    'Original description': '',
-    Observation: '',
+    'Nome do campo na base<br>de dados original': 'num_ind_incom_VAC',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'num_ind_incom_VAC',
+    'Legenda do Campo': 'Número de indivídos com ciclo vacinal incompleto',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      'Número de pessoas com ciclo vacinal incompleto, ou seja, que só receberam a 1ª dose.<br>Variável criada após pivotagem da base da vacinação para contar o número de pessoas que só receberam a 1ª dose.',
   },
   {
-    'PAMEpi variable': 'ocupacaoConfirmadoCli_HOS',
-    'Pamepi description': 'Confirmed clinical occupation by a COVID-19 case',
-    'Original variable': 'ocupacaoConfirmadoCli',
-    'Original description': '',
-    Observation: '',
+    'Nome do campo na base<br>de dados original': 'num_ind_com_VAC',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'num_ind_com_VAC',
+    'Legenda do Campo': 'Número de indivídos com ciclo vacinal completo',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      'Número de pessoas com ciclo vacinal completo, ou seja, que receberam 1ª e 2ª dose ou dose única.<br>Variável criada após pivotagem da base da vacinação para contar o número de pessoas que receberam 1ª e 2ª dose ou dose única.',
   },
   {
-    'PAMEpi variable': 'ocupacaoConfirmadoUti_HOS',
-    'Pamepi description': 'Confirmed ICU occupation by a COVID-19 case',
-    'Original variable': 'ocupacaoConfirmadoUti',
-    'Original description': '',
-    Observation: '',
+    'Nome do campo na base<br>de dados original': 'num_ind_com_atu_VAC',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'num_ind_com_atu_VAC',
+    'Legenda do Campo':
+      'Número de indivídos com ciclo vacinal completo e atualizado',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      'Número de pessoas com ciclo vacinal completo e com reforço.<br>Variável criada após pivotagem da base da vacinação para contar o número de pessoas que receberam 1ª e 2ª dose ou dose única e reforço.',
   },
   {
-    'PAMEpi variable': 'saidaSuspeitaObitos_HOS',
-    'Pamepi description': 'Suspected death caused by COVID-19',
-    'Original variable': 'saidaSuspeitaObitos',
-    'Original description': '',
-    Observation: '',
+    'Nome do campo na base<br>de dados original':
+      'num_ind_incom_delay_less2_VAC',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'num_ind_incom_delay_less2_VAC',
+    'Legenda do Campo':
+      'Número de indivídos com ciclo vacinal incompleto a menos de 2 meses (<2).',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      'Número de indivídos que só receberam a 1ª dose a menos de dois meses (<2).',
   },
   {
-    'PAMEpi variable': 'saidaSuspeitaAltas_HOS',
-    'Pamepi description': 'Suspected recovered case of COVID-19',
-    'Original variable': 'saidaSuspeitaAltas',
-    'Original description': '',
-    Observation: '',
+    'Nome do campo na base<br>de dados original': 'num_ind_incom_delay_2_6_VAC',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'num_ind_incom_delay_2_6_VAC',
+    'Legenda do Campo':
+      'Número de indivídos com ciclo vacinal incompleto a mais ou igual a 2 ou menos que 6 meses (2<= and <6).',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      'Número de indivídos que só receberam a 1ª dose a mais (>=) de 2 e menos (<) de 6 meses.',
   },
   {
-    'PAMEpi variable': 'saidaConfirmadaObitos_HOS',
-    'Pamepi description': 'Confirmed death caused by COVID-19',
-    'Original variable': 'saidaConfirmadaObitos',
-    'Original description': '',
-    Observation: '',
+    'Nome do campo na base<br>de dados original':
+      'num_ind_incom_delay_more6_VAC',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'num_ind_incom_delay_more6_VAC',
+    'Legenda do Campo':
+      'Número de indivídos com ciclo vacinal incompleto a mais ou igual a 6 meses (>= 6).',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      'Número de indivídos que só receberam a 1ª dose a mais (>=) de 6 meses.',
   },
   {
-    'PAMEpi variable': 'saidaConfirmadaAltas_HOS',
-    'Pamepi description': 'Confirmed recovered case of COVID-19',
-    'Original variable': 'saidaConfirmadaAltas',
-    'Original description': '',
-    Observation: '',
+    'Nome do campo na base<br>de dados original':
+      'num_dose_sec_uni_delay_less2_VAC',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'num_dose_sec_uni_delay_less2_VAC',
+    'Legenda do Campo':
+      'Número de indivídos com ciclo vacinal completo a menos de 2 meses (<2).',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      'Número de pessoas com ciclo vacinal completo, ou seja, que receberam 1ª e 2ª dose ou dose única a menos de dois meses (<2).',
   },
   {
-    'PAMEpi variable': 'date',
-    'Pamepi description': 'Date of first symptoms',
-    'Original variable': 'Data do início dos sintomas',
-    'Original description':
-      'Data do início dos sintomas <br>*Se o paciente for assintomático, porém com resultado positivo para  COVID-19, informar a data da notificação.',
-    Observation:
-      'The date used to make the series of cases must  be the date of first symptoms. Nogte that, if the  date of first symptoms is null, we will use the dat of  the laboratory test given by teh variable "Data de  Coleta do Teste". If the date of the test is also null,  we will use the date of notification given in the variable  "Data da Notificação".',
+    'Nome do campo na base<br>de dados original':
+      'num_dose_sec_uni_delay_2_6_VAC',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'num_dose_sec_uni_delay_2_6_VAC',
+    'Legenda do Campo':
+      'Número de indivídos com ciclo vacinal completo a mais ou igual a 2 ou menos que 6 meses (2<= and <6).',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      'Número de pessoas com ciclo vacinal completo, ou seja, que receberam 1ª e 2ª dose ou dose única a mais (>=) de 2 e menos (<) de 6 meses.',
   },
   {
-    'PAMEpi variable': 'mun_res',
-    'Pamepi description': 'IBGE code of the city of residence of the patient',
-    'Original variable': 'Código IBGE do Município de Residência',
-    'Original description': 'Código do município',
-    Observation:
-      'The municipality to be used is the municipality of  residence given by the variable "Município de Residência". <br>If the value is null, then we can use the municipality of  notification given in the variable "Município da Notificação".',
+    'Nome do campo na base<br>de dados original':
+      'num_dose_sec_uni_delay_more6_VAC',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'num_dose_sec_uni_delay_more6_VAC',
+    'Legenda do Campo':
+      'Número de indivídos com ciclo vacinal completo a mais ou igual a 6 meses (>= 6).',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      'Número de pessoas com ciclo vacinal completo, ou seja, que receberam 1ª e 2ª dose ou dose única a mais (>=) de 6 meses.',
   },
   {
-    'PAMEpi variable': 'newCases_SG',
-    'Pamepi description': 'Daily number of confirmed cases of COVID-19',
-    'Original variable': 'classificacaoFinal',
-    'Original description':
-      'Classificação Final:<br>1=Confirmado, <br>2=Confirmado Clinico-Epidemiologico, <br>3=Confirmado por Critério Clínico, <br>4=Confirmado Laboratorial, <br>5=Confirmado Clinico-Imagem, <br>6=Síndrome Gripal Não Especificada, <br>7=Descartado',
-    Observation: 'Created by summing the categories 1 to 6',
+    'Nome do campo na base<br>de dados original':
+      'num_ind_com_atu_delay_less2_VAC',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'num_ind_com_atu_delay_less2_VAC',
+    'Legenda do Campo':
+      'Número de indivídos com ciclo vacinal completo e atualizado a menos de 2 meses (<2).',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      'Número de pessoas com ciclo vacinal completo e com reforço a menos de dois meses (<2).',
   },
   {
-    'PAMEpi variable': 'new_des_SG',
-    'Pamepi description': 'Daily number of discarded cases',
-    'Original variable': 'classificacaoFinal',
-    'Original description':
-      'Classificação Final:<br>1=Confirmado, <br>2=Confirmado Clinico-Epidemiologico, <br>3=Confirmado por Critério Clínico, <br>4=Confirmado Laboratorial, <br>5=Confirmado Clinico-Imagem, <br>6=Síndrome Gripal Não Especificada, <br>7=Descartado',
-    Observation: 'Created with the category 7',
+    'Nome do campo na base<br>de dados original':
+      'num_ind_com_atu_delay_2_6_VAC',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'num_ind_com_atu_delay_2_6_VAC',
+    'Legenda do Campo':
+      'Número de indivídos com ciclo vacinal completo e atualizado a mais ou igual a 2 ou menos que 6 meses (2<= and <6).',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      'Número de pessoas com ciclo vacinal completo e com reforço a mais (>=) de 2 e menos (<) de 6 meses.',
   },
   {
-    'PAMEpi variable': 'new_undefined_SG',
-    'Pamepi description':
-      'Daily number of cases that has no final classification',
-    'Original variable': 'classificacaoFinal',
-    'Original description':
-      'Classificação Final:<br>1=Confirmado, <br>2=Confirmado Clinico-Epidemiologico, <br>3=Confirmado por Critério Clínico, <br>4=Confirmado Laboratorial, <br>5=Confirmado Clinico-Imagem, <br>6=Síndrome Gripal Não Especificada, <br>7=Descartado',
-    Observation: 'Created with null values',
+    'Nome do campo na base<br>de dados original':
+      'num_ind_com_atu_delay_more6_VAC',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'num_ind_com_atu_delay_more6_VAC',
+    'Legenda do Campo':
+      'Número de indivídos com ciclo vacinal completo e atualizadoa mais ou igual a 6 meses (>= 6).',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      'Número de pessoas com ciclo vacinal completo e com reforço a mais (>=) de 6 meses.',
   },
   {
-    'PAMEpi variable': 'newDeath_SG',
-    'Pamepi description': 'Daily number of deaths',
-    'Original variable': 'evolucaoCaso',
-    'Original description':
-      'Evolução do Caso:<br>1=Óbito, <br>2=Cura, <br>3=Internado em UTI, <br>4=Cancelado,<br>5=Em tratamento domiciliar, <br>9=Ignorado<br><br>*A categoria “Cancelado” significa excluir ficha.',
-    Observation: 'Created with the category 1',
+    'Nome do campo na base<br>de dados original': 'newCases_SG',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'newCases_SG',
+    'Legenda do Campo':
+      'Número de novos casos diários de sindrome gripal confirmados para COVID-19.',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      "Número de novos casos diários de sindrome gripal confirmados para COVID-19. <br>Para construir a variável deve considerar o municipio de residência (mun_res) e data de primeiro sintomas. <br>A contagem é feita utilizando a variável 'classificacaoFinal' somando as categorias <br>1=Confirmado <br>2=Confirmado Clinico-Epidemiologico <br>3=Confirmado por Critério Clínico <br>4=Confirmado Laboratorial <br>5=Confirmado Clinico-Imagem <br>6=Síndrome Gripal Não Especificada. <br>Observe que, valores nulos na variável 'mun_res' podem serem substituídos por valores não nulos da <br>Variável de municipio de notificação. Da mesma forma,valores nulos ou mal preenchidos na 'ataInicioSintomas'podem serem substituídas por valores válidos da <br>Variável 'dataTeste' ou 'dataNotificação'.",
   },
   {
-    'PAMEpi variable': 'new_recovered_SG',
-    'Pamepi description': 'Daily number of recovered',
-    'Original variable': 'evolucaoCaso',
-    'Original description':
-      'Evolução do Caso:<br>1=Óbito, <br>2=Cura, <br>3=Internado em UTI, <br>4=Cancelado,<br>5=Em tratamento domiciliar, <br>9=Ignorado<br><br>*A categoria “Cancelado” significa  excluir ficha.',
-    Observation: 'Created with the category 2',
+    'Nome do campo na base<br>de dados original': 'new_des_SG',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'new_des_SG',
+    'Legenda do Campo':
+      'Número de novos casos diários de sindromegripal descartados (não Covid-19).',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      "Número de novos casos diários de sindrome gripal descartados (ou seja, não confirmados de COVID-19).A contagem é feita utilizando a variável 'classificacaoFinal' e categoria 7=Descartado.",
   },
   {
-    'PAMEpi variable': 'UtiEvolution_SG',
-    'Pamepi description': 'Number of cases that will need hospitalization',
-    'Original variable': 'evolucaoCaso',
-    'Original description':
-      'Evolução do Caso:<br>1=Óbito, <br>2=Cura, <br>3=Internado em UTI, <br>4=Cancelado,<br>5=Em tratamento domiciliar, <br>9=Ignorado<br><br>*A categoria “Cancelado” significa  excluir ficha.',
-    Observation: '',
+    'Nome do campo na base<br>de dados original': 'new_undefined_SG',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'new_undefined_SG',
+    'Legenda do Campo': 'Número de casos diários sem classificação final.',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      "Contagens dos valores nulos ou ignorados da variável 'classificacaoFinal'.",
   },
   {
-    'PAMEpi variable': 'newCases_SRAG',
-    'Pamepi description': 'Daily number of severe cases of COVID-19',
-    'Original variable': '',
-    'Original description': '',
-    Observation:
-      'The date used to make the series of cases must  be the date of first symptoms generated by the variables  "2-Data de 1ºs sintomas" e "75-Classificação final do caso".<br>Note that, if the date of first symptoms is null, we will use the date of  the laboratory test given by the variable "72- Data da coleta".<br>If the date of the test is also null, we will use the date of  notification given in the variable  "1-Data do preenchimento da ficha de notificação".<br><br>The municipality to be used is the municipality of  residence given by the variable "24-Município  Código (IBGE)". If the value is null, then we can use the municipality of notification given in the variable "4-Município  Código (IBGE)".',
+    'Nome do campo na base<br>de dados original': 'newDeath_SG',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'newDeath_SG',
+    'Legenda do Campo': 'Número diários de óbitos por COVID-19.',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      "Para a criação da variável deve-se inicialmente selecionar os casos confirmados de COVID-19 e depois filtrar a categoria 1=Óbito da variável 'evolucaoCaso'.",
   },
   {
-    'PAMEpi variable': 'hosp_clinc_SRAG',
-    'Pamepi description':
-      'Daily number of cases that goes to hospitalization on  clinical beds',
-    'Original variable': '',
-    'Original description': '',
-    Observation:
-      'The variable is created using the date given in the variable  "46-Data da internação por SRAG" and the municipality of  residence, as described before. Before it is necessary to select "Não"  in the variable "50-Internado em UTI?" to know if the person went to  ICU of not.',
+    'Nome do campo na base<br>de dados original': 'newDeath_des_SG',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'newDeath_des_SG',
+    'Legenda do Campo': 'Número diário de óbitos de casos não COVID-19.',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      "Para a criação da variável deve-se inicialmente selecionar os casos descartados e depois filtrar a categoria '1=Óbito' da variável 'evolucaoCaso'.",
   },
   {
-    'PAMEpi variable': 'hosp_ICU_SRAG',
-    'Pamepi description': 'Daily number of cases that goes to ICU',
-    'Original variable': '',
-    'Original description': '',
-    Observation:
-      'The variable is created using the date given in the variable  "51-Data da entrada na UTI" and the municipality of  residence, as described before.',
+    'Nome do campo na base<br>de dados original': 'newDeath_undefined_SG',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'newDeath_undefined_SG',
+    'Legenda do Campo':
+      'Número diário de óbitos de casos sem classificação final.',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      "Para a criação da variável deve-se inicialmente selecionar os casos sem classificação final e depois filtrar a categoria '1=Óbito' da variável 'evolucaoCaso'.",
   },
   {
-    'PAMEpi variable': 'ocup_ICU_SRAG',
-    'Pamepi description': 'Confirmed ICU occupation by a COVID-19 case',
-    'Original variable': '',
-    'Original description': '',
-    Observation:
-      'The variable is created using the columns "51-Data da entrada na UTI" and "52-Data da saída da UTI", by counting how many entries had the column 52 after and 51 before the given date. It must be filtered using column "75 - Classificação final do caso".',
+    'Nome do campo na base<br>de dados original': 'new_recovered_SG',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'new_recovered_SG',
+    'Legenda do Campo': 'Número diário de casos de COVID-19 recuperados.',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      "Para a criação da variável deve-se inicialmente selecionar os casos confirmados de COVID-19 e depois filtrar a categoria 2=Cura da variável 'evolucaoCaso'.",
   },
   {
-    'PAMEpi variable': 'ocup_clinc_SRAG',
-    'Pamepi description': 'Confirmed clinical occupation by a COVID-19 case',
-    'Original variable': '',
-    'Original description': '',
-    Observation:
-      'The variable is created using the columns "46-Data da internação por SRAG", "78–Data da alta ou óbito ", "51-Data da entrada na UTI" and "52-Data da saída da UTI", by counting how many entries had the the given date before column 78 and after 46, while not being between column 51 and 52. . It must be filtered using column "75 - Classificação final do caso".',
+    'Nome do campo na base<br>de dados original': 'new_recovered_des_SG',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'new_recovered_des_SG',
+    'Legenda do Campo': 'Número diário de casos não COVID-19 recuperados.',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      "Para a criação da variável deve-se inicialmente selecionar os casos descartados e depois filtrar a categoria 2=Cura da variável 'evolucaoCaso'.",
   },
   {
-    'PAMEpi variable': 'newDeath_SRAG',
-    'Pamepi description': 'Daily number of deaths',
-    'Original variable': 'EVOLUCAO and DT_EVOLUCA',
-    'Original description':
-      'Evolução do Caso:<br>1=Cura, <br>2=Óbito, <br>3=Óbito por outras causas, <br>9=Ignorado',
-    Observation:
-      'Created with the category 2 of the column "77–Evolução do caso", and the date from column "78–Data da alta ou óbito". . It must be filtered using column "75 - Classificação final do caso".',
+    'Nome do campo na base<br>de dados original': 'new_recovered_undefined_SG',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'new_recovered_undefined_SG',
+    'Legenda do Campo':
+      'Número diário de casos recuperados sem classificação final.',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      "Para a criação da variável deve-se inicialmente selecionar os casos sem classificação final e depois filtrar a categoria '2=Cura' da variável 'evolucaoCaso'.",
   },
   {
-    'PAMEpi variable': 'newRecovered_SRAG',
-    'Pamepi description': 'Daily number of recovered patients',
-    'Original variable': 'EVOLUCAO and DT_EVOLUCA',
-    'Original description':
-      'Evolução do Caso:<br>1=Cura, <br>2=Óbito, <br>3=Óbito por outras causas, <br>9=Ignorado',
-    Observation:
-      'Created with the category 1 of the column "77–Evolução do caso", and the date from column "78–Data da alta ou óbito". . It must be filtered using column "75 - Classificação final do caso".',
+    'Nome do campo na base<br>de dados original': 'hosp_uti_SG',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'hosp_uti_SG',
+    'Legenda do Campo': 'Novos casos de COVID-19 em UTI.',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      "Para a criação da variável deve-se inicialmente selecionar os casos confirmados de COVID-19 e depois filtrar a categoria 3=Internado em UTI da <br>Variável 'evolucaoCaso'.",
   },
   {
-    'PAMEpi variable': 'newDeath_ICU_SRAG',
-    'Pamepi description': 'Daily number of deaths that used a ICU bed',
-    'Original variable': '',
-    'Original description': '',
-    Observation:
-      'Created with the category 2 of the column "77–Evolução do caso", and the date from column "78–Data da alta ou óbito". It must be filtered using column "75 - Classificação final do caso" and it is necessary to select "Sim" in the variable "50-Internado em UTI?',
+    'Nome do campo na base<br>de dados original': 'hosp_uti_des_SG',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'hosp_uti_des_SG',
+    'Legenda do Campo': 'Novos casos não-COVID-19 em UTI.',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      "Para a criação da variável deve-se inicialmente selecionar os casos descartados e depois filtrar a categoria 3=Internado em UTI da <br>Variável da variável 'evolucaoCaso'.",
   },
   {
-    'PAMEpi variable': 'newRecovered_ICU_SRAG',
-    'Pamepi description':
-      'Daily number of recovered patients that used a ICU bed',
-    'Original variable': '',
-    'Original description': '',
-    Observation:
-      'Created with the category 1 of the column "77–Evolução do caso", and the date from column "78–Data da alta ou óbito". It must be filtered using column "75 - Classificação final do caso" and it is necessary to select "Sim" in the variable "50-Internado em UTI?',
+    'Nome do campo na base<br>de dados original': 'hosp_uti_undefined_SG',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'hosp_uti_undefined_SG',
+    'Legenda do Campo': 'Novos casos sem classificação em UTI.',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      "Para a criação da variável deve-se inicialmente selecionar os casos sem classificação final e depois filtrar a categoria 3=Internado em UTI da variável da variável 'evolucaoCaso'.",
   },
   {
-    'PAMEpi variable': 'newDeath_clinic_SRAG',
-    'Pamepi description': 'Daily number of deaths that did not use a ICU bed',
-    'Original variable': '',
-    'Original description': '',
-    Observation:
-      'Created with the category 2 of the column "77–Evolução do caso", and the date from column "78–Data da alta ou óbito". It must be filtered using column "75 - Classificação final do caso" and it is necessary to select "Não" in the variable "50-Internado em UTI?',
+    'Nome do campo na base<br>de dados original': 'dom_trat_SG',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'dom_trat_SG',
+    'Legenda do Campo': 'Novos casos de COVID-19 em tratamento domiciliar.',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      "Para a criação da variável deve-se inicialmente selecionar os casos confirmados de COVID-19 e depois filtrar a categoria 5=Em tratamento domiciliar da variável 'evolucaoCaso'.",
   },
   {
-    'PAMEpi variable': 'newRecovered_clinic_SRAG',
-    'Pamepi description':
-      'Daily number of recovered patients that did not use a ICU bed',
-    'Original variable': '',
-    'Original description': '',
-    Observation:
-      'Created with the category 1 of the column "77–Evolução do caso", and the date from column "78–Data da alta ou óbito". It must be filtered using column "75 - Classificação final do caso" and it is necessary to select "Não" in the variable "50-Internado em UTI?',
+    'Nome do campo na base<br>de dados original': 'dom_trat_des_SG',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'dom_trat_des_SG',
+    'Legenda do Campo': 'Novos casos não-COVID-19 em tratamento domiciliar.',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      "Para a criação da variável deve-se inicialmente selecionar os casos descartados e depois filtrar a categoria 5=Em tratamento domiciliar da <br>Variável da variável 'evolucaoCaso'.",
+  },
+  {
+    'Nome do campo na base<br>de dados original': 'dom_trat_undefined_SG',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'dom_trat_undefined_SG',
+    'Legenda do Campo':
+      'Novos casos sem classificação final em tratamento domiciliar.',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      "Para a criação da variável deve-se inicialmente selecionar os casos sem classificação final e depois filtrar a categoria 5=Em tratamento domiciliar da <br>Variável da variável 'evolucaoCaso'.",
+  },
+  {
+    'Nome do campo na base<br>de dados original': 'hos_clinc_SG',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'hos_clinc_SG',
+    'Legenda do Campo': 'Novos casos de COVID-19 em enfermaria.',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      "Para a criação da variável deve-se inicialmente selecionar os casos confirmados de COVID-19 e depois filtrar a categoria 6=Internado da variável 'evolucaoCaso'.",
+  },
+  {
+    'Nome do campo na base<br>de dados original': 'hos_clinc_des_SG',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'hos_clinc_des_SG',
+    'Legenda do Campo': 'Novos casos não-COVID-19 em enfermaria.',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      "Para a criação da variável deve-se inicialmente selecionar os casos descartados e depois filtrar a categoria 6=Internado da variável da variável 'evolucaoCaso'.",
+  },
+  {
+    'Nome do campo na base<br>de dados original': 'hos_clinc_undefined_SG',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'hos_clinc_undefined_SG',
+    'Legenda do Campo': 'Novos casos sem classificação final em enfermaria.',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      "Para a criação da variável deve-se inicialmente selecionar os casos sem classificação final e depois filtrar a categoria 6=Internado da variável da variável 'evolucaoCaso'.",
+  },
+  {
+    'Nome do campo na base<br>de dados original': 'newCases_SRAG',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'newCases_SRAG',
+    'Legenda do Campo':
+      'Número de novos casos diários de SRAG confirmados para COVID-19.',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      "Número de novos casos diários de sindrome respiratória aguda grave confirmados para COVID-19. <br>Para construir a variável deve considerar o municipio de residência ('CO_MUN_RES') e data de primeiro sintomas ('DT_SIN_PRI'). <br>A contagem é feita utilizando a variável 'CLASSI_FIN'e a categoria 5-SRAG por covid-19.<br>Observe que, valores nulos na variável 'CO_MUN_RES' podem serem substituídos por valores não nulos da <br>Variável de municipio de notificação ('CO_MUN_NOT').<br>Da mesma forma, valores nulos ou mal preenchidos na 'DT_SIN_PRI' podem serem substituídas por valores válidos da data do teste laboratórial ou data notificação.",
+  },
+  {
+    'Nome do campo na base<br>de dados original': 'new_des_SRAG',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'new_des_SRAG',
+    'Legenda do Campo': 'Número de novos casos diários de SRAGnão-COVID-19.',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      "A contagem é feita utilizando a variável 'CLASSI_FIN'e somando as categorias 1-SRAG por influenza, 2-SRAG por outro vírus respiratório, 3-SRAG por outro agente etiológico .",
+  },
+  {
+    'Nome do campo na base<br>de dados original': 'new_undefined_SRAG',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'new_undefined_SRAG',
+    'Legenda do Campo':
+      'Número de novos casos diários de SRAGnão especificado ou ignorado.',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      "A contagem é feita utilizando a variável 'CLASSI_FIN'e as categorias 4-SRAG não especificado e 9-Ignorado.",
+  },
+  {
+    'Nome do campo na base<br>de dados original': 'newDeath_SRAG',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'newDeath_SRAG',
+    'Legenda do Campo':
+      'Número de novos óbitos diários de SRAGconfirmados para COVID-19.',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      "Para a criação da variável deve-se inicialmenteselecionar os casos confirmados de COVID-19 e depois filtrar a categoria '2-Óbito' da variável 'EVOLUCAO'.",
+  },
+  {
+    'Nome do campo na base<br>de dados original': 'newDeath_des_SRAG',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'newDeath_des_SRAG',
+    'Legenda do Campo': 'Número de novos óbitos diários de SRAGnão-COVID-19.',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      "Para a criação da variável deve-se inicialmenteselecionar os casos de 1-SRAG por influenza, 2-SRAG por outro vírus respiratório e 3-SRAG por outro agente etiológico e depois filtrar a categoria '2-Óbito' da variável 'EVOLUCAO'.",
+  },
+  {
+    'Nome do campo na base<br>de dados original': 'newDeath_undefined_SRAG',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'newDeath_undefined_SRAG',
+    'Legenda do Campo':
+      'Número de novos óbitos diários de SRAGnão especificado ou ignorado.',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      "Para a criação da variável deve-se inicialmenteselecionar os casos de 4-SRAG não especificado e 9-Ignorado e depois filtrar a categoria '2-Óbito' da Variável 'EVOLUCAO'.",
+  },
+  {
+    'Nome do campo na base<br>de dados original': 'new_recovered_SRAG',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'new_recovered_SRAG',
+    'Legenda do Campo': 'Número diário de casos SRAG de COVID-19 recuperados.',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      "Para a criação da variável deve-se inicialmente selecionar os casos confirmados de COVID-19 e depois filtrar a categoria '1-Cura ' da variável 'EVOLUCAO'.",
+  },
+  {
+    'Nome do campo na base<br>de dados original': 'new_recovered_des_SRAG',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'new_recovered_des_SRAG',
+    'Legenda do Campo':
+      'Número de novos de casos diários de SRAG não-Covid-19 recuperados.',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      "Para a criação da variável deve-se inicialmente selecionar os casos de 1-SRAG por influenza, 2-SRAG por outro vírus respiratório e 3-SRAG por outro agente etiológico e depois filtrar a categoria 1-Cura da variável 'EVOLUCAO'.",
+  },
+  {
+    'Nome do campo na base<br>de dados original':
+      'new_recovered_undefined_SRAG',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'new_recovered_undefined_SRAG',
+    'Legenda do Campo':
+      'Número de novos casos diários de SRAG não especificado ou ignorado recuperados.',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      "Para a criação da variável deve-se inicialmente selecionar os casos de 4-SRAG não especificado e 9-Ignorado e depois filtrar a categoria '1-Cura ' da <br>Variável 'EVOLUCAO'.",
+  },
+  {
+    'Nome do campo na base<br>de dados original': 'num_ind_vac_SRAG',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'num_ind_vac_SRAG',
+    'Legenda do Campo':
+      'Número total de pessoas vacinadas para a COVID-19 (seja qual for o tipo de dose) no SRAG.',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      "Número total de pessoas vacinadas pra COVID-19, seja qual for a dose. Variável pode ser criada com a variavél 'VACINA_COV', categoria '1-Sim'.",
+  },
+  {
+    'Nome do campo na base<br>de dados original': 'num_ind_incom_vac_SRAG',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'num_ind_incom_vac_SRAG',
+    'Legenda do Campo':
+      'Número de indivídos com ciclo vacinal da COVID-19 incompleto no SRAG.',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      "Número de pessoas com ciclo vacinal incompleto, ou seja, que só receberam a 1ª dose no SRAG. Para criar essa <br>Variável basta primeiro selecionar vacinado e depois valores não nulos em 'DOSE_1_COV', valores nulos da <br>Variável 'DOSE_2_COV' e com tipo de vacina em 'LAB_PR_COV_' não Jassen.",
+  },
+  {
+    'Nome do campo na base<br>de dados original': 'num_ind_com_vac_SRAG',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'num_ind_com_vac_SRAG',
+    'Legenda do Campo':
+      'Número de indivídos com ciclo vacinal completo no SRAG.',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      "Número de pessoas com ciclo vacinal completo, ou seja, que receberam 1ª e 2ª dose ou dose única. <br>Para criar essa variável basta primeiro selecionar vacinado e depois valores não nulos em 'DOSE_2_COV' ou a data 'DOSE_1_COV' se for Jassen 'LAB_PR_COV_'.",
+  },
+  {
+    'Nome do campo na base<br>de dados original':
+      'num_ind_incom_delay_less2_vac_SRAG',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'num_ind_incom_delay_less2_vac_SRAG',
+    'Legenda do Campo':
+      'Número de indivídos com ciclo vacinal incompleto a menos de 2 meses (<2).',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      'Número de indivídos que só receberam a 1ª dose a menos de dois meses (<2).',
+  },
+  {
+    'Nome do campo na base<br>de dados original':
+      'num_ind_incom_delay_2_6_vac_SRAG',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'num_ind_incom_delay_2_6_vac_SRAG',
+    'Legenda do Campo':
+      'Número de indivídos com ciclo vacinal incompleto a mais ou igual a 2 ou menos que 6 meses (2<= and <6).',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      'Número de indivídos que só receberam a 1ª dose a mais (>=) de 2 e menos (<) de 6 meses.',
+  },
+  {
+    'Nome do campo na base<br>de dados original':
+      'num_ind_incom_delay_more6_vac_SRAG',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'num_ind_incom_delay_more6_vac_SRAG',
+    'Legenda do Campo':
+      'Número de indivídos com ciclo vacinal incompleto a mais ou igual a 6 meses (>= 6).',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      'Número de indivídos que só receberam a 1ª dose a mais (>=) de 6 meses.',
+  },
+  {
+    'Nome do campo na base<br>de dados original':
+      'num_dose_sec_uni_delay_less2_vac_SRAG',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'num_dose_sec_uni_delay_less2_vac_SRAG',
+    'Legenda do Campo':
+      'Número de indivídos com ciclo vacinal completo a menos de 2 meses (<2).',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      'Número de pessoas com ciclo vacinal completo, ou seja, que receberam 1ª e 2ª dose ou dose única a menos de dois meses (<2).',
+  },
+  {
+    'Nome do campo na base<br>de dados original':
+      'num_dose_sec_uni_delay_2_6_vac_SRAG',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'num_dose_sec_uni_delay_2_6_vac_SRAG',
+    'Legenda do Campo':
+      'Número de indivídos com ciclo vacinal completo a mais ou igual a 2 ou menos que 6 meses (2<= and <6).',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      'Número de pessoas com ciclo vacinal completo, ou seja, que receberam 1ª e 2ª dose ou dose única a mais (>=) de 2 e menos (<) de 6 meses.',
+  },
+  {
+    'Nome do campo na base<br>de dados original':
+      'num_dose_sec_uni_delay_more6_vac_SRAG',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'num_dose_sec_uni_delay_more6_vac_SRAG',
+    'Legenda do Campo':
+      'Número de indivídos com ciclo vacinal completo a mais ou igual a 6 meses (>= 6).',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      'Número de pessoas com ciclo vacinal completo, ou seja, que receberam 1ª e 2ª dose ou dose única a mais (>=) de 6 meses.',
+  },
+  {
+    'Nome do campo na base<br>de dados original': 'ocu_ICU_SRAG',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'ocu_ICU_SRAG',
+    'Legenda do Campo':
+      'Número diário de pessoas confirmado de COVID-19 ocupando um leito UTI.',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      "Número diário de pessoas confirmado de COVID-19 ocupando um leito UTI.<br> Para criar essa variável deve-se: <br>1- selecionar os casos SRAG confirmados de COVID-19<br>2- Com as variáveis 'DT_ENTUTI' e 'DT_SAIDUTI' dá pra saber os dias que essa pessoa ocupou um leito na UTI. <br>3 - Contar quantas pessoas estão ocupando um leito de UTI em uma data X.",
+  },
+  {
+    'Nome do campo na base<br>de dados original': 'ocup_clinc_SRAG',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'ocup_clinc_SRAG',
+    'Legenda do Campo':
+      'Número diário de pessoas confirmado de COVID-19 ocupando um leito clinico.',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      "Número diário de pessoas confirmado de COVID-19 ocupando um leito clinico. Para criar essa variável deve-se:<br>1- selecionar os casos SRAG confirmados de COVID-19<br>2- Com as variáveis 'DT_INTERNA', 'DT_ENTUTI' e 'DT_SAIDUTI' dá pra saber os dias que essa pessoa ocupou um leito clinico dado que ela não estava na UTI (caso ela precisou de UTI). <br>3 - Contar quantas pessoas ocupou um leito clinico em uma data X.",
+  },
+  {
+    'Nome do campo na base<br>de dados original': 'num_ind_clin_SRAG',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'num_ind_clin_SRAG',
+    'Legenda do Campo':
+      'Número total de pessoas confirmadas de COVID-19 que usaram leito clinico.',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      "Número diário de pessoas confirmado de COVID-19 que usaram um leito clinico. Para criar essa variável deve-se: <br>1- selecionar os casos SRAG confirmados de COVID-19<br>2 - Usar a variável 'HOSPITAL', categoria 1-Sim, e contar por município de residencia (CO_MUN_RES) e data de internação (DT_INTERNA).",
+  },
+  {
+    'Nome do campo na base<br>de dados original': 'num_ind_UTI_SRAG',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'num_ind_UTI_SRAG',
+    'Legenda do Campo':
+      'Número total de pessoas confirmadas de COVID-19 que usaram leito UTI.',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      "Número diário de pessoas confirmado de COVID-19 que usaram um leito UTI. Para criar essa variável deve-se: <br>1- selecionar os casos SRAG confirmados de COVID-19<br>2 - Usar a variável 'UTI', categoria 1-Sim, e contar por município de residencia (CO_MUN_RES) e data de entrada na (DT_ENTUTI).",
+  },
+  {
+    'Nome do campo na base<br>de dados original': 'newDeath_clinc_SRAG',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'newDeath_clinc_SRAG',
+    'Legenda do Campo':
+      'Número diário de caso SRAG confirmados de COVID-19 que morreram em leito clinico.',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      "Para criar essa variável deve-se:<br> 1- selecionar os casos SRAG confirmados de COVID-19<br> 2 - Usar a variável 'EVOLUCAO', categoria 2-Óbito, e conferir se a data de evolução (DT_EVOLUCA) coincide com a data da pessoa em leito clinico. <br>A contagem é por município de residencia (CO_MUN_RES) e data de evolução (DT_EVOLUCA).",
+  },
+  {
+    'Nome do campo na base<br>de dados original': 'newDeath_UTI_SRAG',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'newDeath_UTI_SRAG',
+    'Legenda do Campo':
+      'Número diário de caso SRAG confirmados de COVID-19 que morreram em leito UTI.',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      "Para criar essa variável deve-se:<br> 1- selecionar os casos SRAG confirmados de COVID-19<br> 2 - Usar a variável 'EVOLUCAO', categoria 2-Óbito, e conferir se a data de evolução (DT_EVOLUCA) coincide com a data da pessoa em leito UTI. <br>A contagem é por município de residencia (CO_MUN_RES) e data de evolução (DT_EVOLUCA).",
+  },
+  {
+    'Nome do campo na base<br>de dados original': 'new_recovered_clinc_SRAG',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'new_recovered_clinc_SRAG',
+    'Legenda do Campo':
+      'Número diário de caso SRAG confirmados de COVID-19 que recuperaram em leito clinico.',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      "Para criar essa variável deve-se:<br> 1- selecionar os casos SRAG confirmados de COVID-19<br> 2 - Usar a variável 'EVOLUCAO', categoria 1-Cura , e conferir se a data de evolução (DT_EVOLUCA) coincide com a data da pessoa em leito clinico. <br>A contagem é por município de residencia (CO_MUN_RES) e data de evolução (DT_EVOLUCA).",
+  },
+  {
+    'Nome do campo na base<br>de dados original': 'new_recovered_UTI_SRAG',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'new_recovered_UTI_SRAG',
+    'Legenda do Campo':
+      'Número diário de caso SRAG confirmados de COVID-19 que recuperaram em leito UTI.',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      "Para criar essa variável deve-se:<br> 1- selecionar os casos SRAG confirmados de COVID-19<br> 2 - Usar a variável 'EVOLUCAO', categoria 1-Cura , e conferir se a data de evolução (DT_EVOLUCA) coincide com a data da pessoa em leito UTI. <br>A contagem é por município de residencia (CO_MUN_RES) e data de evolução (DT_EVOLUCA).",
+  },
+  {
+    'Nome do campo na base<br>de dados original': 'ip_vl_n',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'index_ibp',
+    'Legenda do Campo': 'Valor do indice de privacão',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição: 'Valor do indice de privacão',
+  },
+  {
+    'Nome do campo na base<br>de dados original': 'ip_dcl_',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'decil',
+    'Legenda do Campo': 'Decil do indice de privação',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição: 'Decil do indice de privação',
+  },
+  {
+    'Nome do campo na base<br>de dados original': 'ip_qntl_n',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'quintil',
+    'Legenda do Campo': 'Quintil do indice de privação',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição: 'Quintil do indice de privação',
+  },
+  {
+    'Nome do campo na base<br>de dados original': 'ip_prcnt_r',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'pcent_salary',
+    'Legenda do Campo':
+      'Percentual de pessoas com renda per capita abaixo de 1/2 salário mínimo',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      'Percentual de pessoas com renda per capita abaixo de 1/2 salário mínimo',
+  },
+  {
+    'Nome do campo na base<br>de dados original': 'ip_prcnt_d',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'pcent_edu',
+    'Legenda do Campo': 'Percentual de pessoas analfabetas com mais de 7 anos.',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição: 'Percentual de pessoas analfabetas com mais de 7 anos.',
+  },
+  {
+    'Nome do campo na base<br>de dados original': 'ip_prcnt_m',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'pcent_home',
+    'Legenda do Campo': 'Percentual de população em casas inapropriadas.',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição: 'Percentual de população em casas inapropriadas.',
+  },
+  {
+    'Nome do campo na base<br>de dados original':
+      'retail_and_recreation_percent_change_from_baseline',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'retail_and_recreation_percent_change_from_baseline',
+    'Legenda do Campo': 'Taxa de mudança na mobilidade humana',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição: 'Taxa de mudança na mobilidade humana',
+  },
+  {
+    'Nome do campo na base<br>de dados original':
+      'grocery_and_pharmacy_percent_change_from_baseline',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'grocery_and_pharmacy_percent_change_from_baseline',
+    'Legenda do Campo':
+      'Taxa de mudança na mobilidade humana (mercearias e drogarias)',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição: 'Taxa de mudança na mobilidade humana (mercearias e drogarias)',
+  },
+  {
+    'Nome do campo na base<br>de dados original':
+      'parks_percent_change_from_baseline',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'parks_percent_change_from_baseline',
+    'Legenda do Campo': 'Taxa de mudança na mobilidade humana (parques)',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição: 'Taxa de mudança na mobilidade humana (parques)',
+  },
+  {
+    'Nome do campo na base<br>de dados original':
+      'transit_stations_percent_change_from_baseline',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'transit_stations_percent_change_from_baseline',
+    'Legenda do Campo':
+      'Taxa de mudança na mobilidade humana (estações de trânsito)',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição: 'Taxa de mudança na mobilidade humana (estações de trânsito)',
+  },
+  {
+    'Nome do campo na base<br>de dados original':
+      'workplaces_percent_change_from_baseline',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'workplaces_percent_change_from_baseline',
+    'Legenda do Campo':
+      'Taxa de mudança na mobilidade humana (local de trabalho)',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição: 'Taxa de mudança na mobilidade humana (local de trabalho)',
+  },
+  {
+    'Nome do campo na base<br>de dados original':
+      'residential_percent_change_from_baseline',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'residential_percent_change_from_baseline',
+    'Legenda do Campo': 'Taxa de mudança na mobilidade humana (residencial)',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição: 'Taxa de mudança na mobilidade humana (residencial)',
+  },
+  {
+    'Nome do campo na base<br>de dados original': 'pop',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'pop',
+    'Legenda do Campo': 'População estimada para cada município.',
+    Tipo: 'Integer',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      'População municipal estimada para cada município fornecido pelo IBGE para o ano de 2021.',
+  },
+  {
+    'Nome do campo na base<br>de dados original': 'newDeaths',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'newDeaths_WCota',
+    'Legenda do Campo': 'Óbitos no dia',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      'Diferença entre o número de óbitos da data correspondente e a anterior',
+  },
+  {
+    'Nome do campo na base<br>de dados original': 'deaths',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'deaths_WCota',
+    'Legenda do Campo': 'Óbitos acum.',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição: 'Número acumulado de óbitos nessa data',
+  },
+  {
+    'Nome do campo na base<br>de dados original': 'newCases',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'newCases_WCota',
+    'Legenda do Campo': 'Confirmações no dia',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      'Diferença entre o número de casos da data correspondente e a anterior',
+  },
+  {
+    'Nome do campo na base<br>de dados original': 'totalCases',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'totalCases_WCota',
+    'Legenda do Campo': 'Confirmados acum.',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição: 'Número acumulado de casos nessa data',
+  },
+  {
+    'Nome do campo na base<br>de dados original': 'indGeneral',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'indGeneral',
+    'Legenda do Campo': 'Indice geral',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição: '(O1 + O2 + O3 + O4 + C1 + C2 ) * 100 / 6',
+  },
+  {
+    'Nome do campo na base<br>de dados original': 'O1',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'O1',
+    'Legenda do Campo': 'Cancelar eventos públicos',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      'NO0 - Sem medidas <br>NO1 - Proibição de eventos e equipamentos públicos <br>NO2 - Restrições a aglomerações muito grandes (acima de 500 pessoas)<br>NO3 - Restrições a aglomerações entre 100-499 pessoas<br>NO4 - Restrições para aglomerações de 50 a 99 pessoas<br>NO5 - Restrições para aglomerações de 5 a 49 pessoas<br>NO6 - Proibição total de eventos ou atividades lotadas <br>GO0 - Direcionado ou condicional<br>GO1 - Geral',
+  },
+  {
+    'Nome do campo na base<br>de dados original': 'O2',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'O2',
+    'Legenda do Campo': 'Fechamento de escolas/universidades',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      'NO0 - Sem medidas<br>NO1 - Sugere fechamento<br>NO2 - Exige fechamento <br>GO0 - Direcionado ou condicional<br>GO1 - Geral',
+  },
+  {
+    'Nome do campo na base<br>de dados original': 'O3',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'O3',
+    'Legenda do Campo': 'Home-office para funcionários públicos',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      'NO0 - Sem medidas<br>NO1 - Home-office para pessoas com sintomas ou de algum grupo de risco<br>NO2 - Home-office opcional<br>NO3 - Agendamento estratégico trabalho<br>NO4 - Home-office obrigatório <br>GO0 - Direcionado ou condicional<br>GO1 - Geral',
+  },
+  {
+    'Nome do campo na base<br>de dados original': 'O4',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'O4',
+    'Legenda do Campo': 'Isolamento',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      'NO0 - Sem medidas<br>NO1 - Isolamento vertical<br>NO2 - Isolamento horizontal <br>GO0 - Direcionado ou condicional<br>GO1 - Geral',
+  },
+  {
+    'Nome do campo na base<br>de dados original': 'C1',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'C1',
+    'Legenda do Campo':
+      'Fechamento de negócios não essenciais e atividades públicas',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      '0 - Sem medidas<br>+1 - Fechamento de shoppings<br>+1 – Suspensão de negócios não essenciais<br>+1 - Suspensão de bares e restaurantes<br>+1 - Proibição de atividades em espaços públicos (praias, parques, etc) <br>+1 - Suspensão de atividades religiosas<br>+1 - Fechamento de locais culturais (teatro, cinema, museu)<br> +1 – Encerramento dos ginásios <br>SGCj – A soma das medidas que foi geral <br>SCj - A soma das restrições aplicadas<br>Ncj - O número de restrições possíveis',
+  },
+  {
+    'Nome do campo na base<br>de dados original': 'C2',
+    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+      'C2',
+    'Legenda do Campo':
+      'Bloqueio de transporte (Considerando apenas transporte rodoviário e fluvial)',
+    Tipo: 'Number',
+    Categorias: 'Sem categoria',
+    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+      'Sem categoria',
+    Descrição:
+      '0 - Sem medidas<br>+1 - Suspensão em ônibus urbanos <br>+1 - Suspensão em ônibus intermunicipais <br>+ 1 - Suspensão dos ônibus interestaduais<br>+1 - Suspensão total do transporte na cidade <br>+1 - Suspensão total do transporte intermunicipal<br>+1 – Suspensão total do transporte interestadual <br>SGCj – Soma das medidas que foi geral <br>SCj - A soma das restrições aplicadas <br>Ncj - O número de restrições possíveis',
   },
 ];
 

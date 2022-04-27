@@ -1,0 +1,16 @@
+Nome do campo na base de dados original;Nome do campo depoisda harmonização(váriável nomeada pela PAMEpi);Legenda do Campo;Tipo;Categorias;Valores que aparecem dentroda variável com respectiva harmonização dada pela PAMEpi;Descrição
+country_region_code;pais_abrev;Código do país ou região;String;Sem categoria;Sem categoria;Código do país ou região
+country_region;pais;Nome do país ou região;String;Sem categoria;Sem categoria;Nome do país ou região
+sub_region_1;nome_uf;Nome da sub-região, no caso do Brasil este é o Estado;String;Sem categoria;Sem categoria;Nome da sub-região, no caso do Brasil este é o Estado
+sub_region_2;nome_mun;Nome da sub-região, no caso do Brasil esta é a Cidade;String;Sem categoria;Sem categoria;Nome da sub-região, no caso do Brasil esta é a Cidade
+iso_3166_2_code;iso_3166_2_code;Códigos de país ISO3133-2;String;Sem categoria;Sem categoria;Códigos de país ISO3133-2
+census_fips_code;census_fips_code;Código FIPS do Censo dos EUA;String;Sem categoria;Sem categoria;Código FIPS do Censo dos EUA
+date;date;Data no formato aaaa-mm-dd;Date;Sem categoria;Sem categoria;Data no formato aaaa-mm-dd
+retail_and_recreation_percent_change_from_baseline;retail_and_recreation_percent_change_from_baseline;Taxa de mudança na mobilidade humana;Number;Sem categoria;Sem categoria;Taxa de mudança na mobilidade humana
+grocery_and_pharmacy_percent_change_from_baseline;grocery_and_pharmacy_percent_change_from_baseline;Taxa de mudança na mobilidade humana (mercearias e drogarias);Number;Sem categoria;Sem categoria;Taxa de mudança na mobilidade humana (mercearias e drogarias)
+parks_percent_change_from_baseline;parks_percent_change_from_baseline;Taxa de mudança na mobilidade humana (parques);Number;Sem categoria;Sem categoria;Taxa de mudança na mobilidade humana (parques)
+transit_stations_percent_change_from_baseline;transit_stations_percent_change_from_baseline;Taxa de mudança na mobilidade humana (estações de trânsito);Number;Sem categoria;Sem categoria;Taxa de mudança na mobilidade humana (estações de trânsito)
+workplaces_percent_change_from_baseline;workplaces_percent_change_from_baseline;Taxa de mudança na mobilidade humana (local de trabalho);Number;Sem categoria;Sem categoria;Taxa de mudança na mobilidade humana (local de trabalho)
+residential_percent_change_from_baseline;residential_percent_change_from_baseline;Taxa de mudança na mobilidade humana (residencial);Number;Sem categoria;Sem categoria;Taxa de mudança na mobilidade humana (residencial)
+metro_area;metro_area;Nome da área metropolitana;String;Sem categoria;Sem categoria;Nome da área metropolitana
+place_id;place_id;Código do local;String;Sem categoria;Sem categoria;Código do local

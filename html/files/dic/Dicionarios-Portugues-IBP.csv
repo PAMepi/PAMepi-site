@@ -1,0 +1,16 @@
+Nome do campo na base de dados original;Nome do campo depoisda harmonização(váriável nomeada pela PAMEpi);Legenda do Campo;Tipo;Categorias;Valores que aparecem dentroda variável com respectivaharmonização dada pela PAMEpi;Descrição
+ip_cd_d;code_full_mun_ibge;Código da localização, nesse caso é o mesmo do município. ;Number;Sem categoria;Sem categoria;Código da localização, nesse caso é o mesmo do município. 
+ip_cd_m;code_full_mun_ibge;Código do município;Number;Sem categoria;Sem categoria;Código do município
+ip_nm_f;nome_uf;Nome da UF;String;Sem categoria;Sem categoria;Nome da UF
+ip_nm_r;regiao;Nome da Região;String;Sem categoria;Sem categoria;Nome da Região
+ip_cd_f;uf;Sigla da UF;String;Sem categoria;Sem categoria;Sigla da UF
+ip_vl_f;uf_code;Código da UF;Number;Sem categoria;Sem categoria;Código da UF
+ip_vl_p;populacao;População segundo censo IBGE 2010;Number;Sem categoria;Sem categoria;População segundo censo IBGE 2010
+ip_nm_m;mun_name;Nome do município;String;Sem categoria;Sem categoria;Nome do município
+ip_vl_n;index_ibp;Valor do indice de privacão;Number;Sem categoria;Sem categoria;Valor do indice de privacão
+ip_dcl_;decil;Decil do indice de privação;Number;Sem categoria;Sem categoria;Decil do indice de privação
+ip_qntl_n;quintil;Quintil do indice de privação;Number;Sem categoria;Sem categoria;Quintil do indice de privação
+ip_prcnt_r;pcent_salary;Percentual de pessoas com renda per capita abaixo de 1/2 salário mínimo;Number;Sem categoria;Sem categoria;Percentual de pessoas com renda per capita abaixo de 1/2 salário mínimo
+ip_prcnt_d;pcent_edu;Percentual de pessoas analfabetas com mais de 7 anos.;Number;Sem categoria;Sem categoria;Percentual de pessoas analfabetas com mais de 7 anos.
+ip_prcnt_m;pcent_home;Percentual de população em casas inapropriadas.;Number;Sem categoria;Sem categoria;Percentual de população em casas inapropriadas.
+ip_cd_c;ip_cd_c;Vazio/Desconhecido;;Sem categoria;Sem categoria;Vazio/Desconhecido

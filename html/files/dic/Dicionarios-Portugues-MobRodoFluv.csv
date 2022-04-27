@@ -1,0 +1,8 @@
+Nome do campo na base de dados original;Nome do campo depoisda harmonização(váriável nomeada pela PAMEpi);Legenda do Campo;Tipo;Categorias;Valores que aparecem dentroda variável com respectiva harmonização dada pela PAMEpi;Descrição
+ID;id;Identificador único da ligação;Number;Sem categoria;Sem categoria;Identificador único da ligação
+CODMUNDV_A;code_full_mun_ibge_a;Código do município A do par de ligação com dígito verificador;Number;Sem categoria;Sem categoria;Código do município A do par de ligação com dígito verificador
+NOMEMUN_A;mun_name_a;Nome do município A do par de ligação;String;Sem categoria;Sem categoria;Nome do município A do par de ligação
+CODMUNDV_B;code_full_mun_ibge_b;Código do município B do par de ligação com dígito verificador;Number;Sem categoria;Sem categoria;Código do município B do par de ligação com dígito verificador
+NOMEMUN_B;mun_name_b;Nome do município B do par de ligação;String;Sem categoria;Sem categoria;Nome do município B do par de ligação
+VAR05;hidroviarios;Frequência de saídas de veículos hidroviários no par de ligação;Number;Sem categoria;Sem categoria;Frequência semanal de saídas de veículos hidroviários no par de ligação. Não considera o número de pessoas por veículo.
+VAR06;rodoviarios;Frequência de saídas de veículos rodoviários no par de ligação;Number;Sem categoria;Sem categoria;Frequência  semanal de saídas de veículos rodoviários no par de ligação. Não considera o número de pessoas por veículo.
