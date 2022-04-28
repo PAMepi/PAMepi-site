@@ -1643,1955 +1643,1955 @@ const sampleSRAG = [
 
 const dicSRAG = [
   {
-    'Nome do campo na base<br>de dados original': 'DT_NOTIFIC',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'DT_NOTIFIC',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'dt_ntf',
     'Legenda do Campo': '1-Data de preenchimento da ficha de notificação.',
     Tipo: 'Date DD/MM/AAAA',
     Categorias: 'Sem categoria',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição: 'Campo Obrigatório. Data deve ser <= a data da digitação.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'SEM_NOT',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'SEM_NOT',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'sem_ntf',
     'Legenda do Campo':
       'Semana Epidemiológica do preenchimento da ficha de notificação.',
     Tipo: 'String',
     Categorias: 'Sem categoria',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
       'Campo Interno. Calculado a partir da data dos Primeiros Sintomas. (SS)',
   },
   {
-    'Nome do campo na base<br>de dados original': 'DT_SIN_PRI',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'DT_SIN_PRI',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'dt_sin_pri',
     'Legenda do Campo': '2-Data de 1º sintomas do caso.',
     Tipo: 'Date DD/MM/AAAA',
     Categorias: 'Sem categoria',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
       'Campo Obrigatório. Data deve ser <= a data da digitação e data do preenchimento da ficha de notificação.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'SEM_PRI',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'SEM_PRI',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'sem_pri',
     'Legenda do Campo': 'Semana Epidemiológica do início dos sintomas.',
     Tipo: 'String',
     Categorias: 'Sem categoria',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
       'Campo Interno. Calculado a partir da data dos Primeiros Sintomas. (SS)',
   },
   {
-    'Nome do campo na base<br>de dados original': 'SG_UF_NOT',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'SG_UF_NOT',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'uf_ntf',
     'Legenda do Campo':
       '3-Unidade Federativa onde está localizada a Unidade Sentinela que realizou a notificação.',
     Tipo: 'String',
     Categorias: 'Tabela com código e siglas das UF padronizados pelo IBGE.',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
-      'Campo Obrigatório. Se usuário que está digitando a ficha for de nível: <br> Unidade Sentinela - o campo é preenchido automaticamente pelo sistema com a UF, município e unidade onde está cadastrado o usuário. <br> Municipal – o campo é preenchido automaticamente pelo sistema com a UF e município onde está cadastrado o usuário. <br> Estadual – o campo é preenchido automaticamente pelo sistema com a UF do usuário. <br> Federal - abre tabela com todas as UF que possuam unidades sentinelas cadastradas no sistema.',
+      'Campo Obrigatório. Se usuário que está digitando a ficha for de nível:  Unidade Sentinela - o campo é preenchido automaticamente pelo sistema com a UF, município e unidade onde está cadastrado o usuário.  Municipal – o campo é preenchido automaticamente pelo sistema com a UF e município onde está cadastrado o usuário.  Estadual – o campo é preenchido automaticamente pelo sistema com a UF do usuário.  Federal - abre tabela com todas as UF que possuam unidades sentinelas cadastradas no sistema.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'ID_MUNICIP',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'ID_MUNICIP',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'mun_ntf',
     'Legenda do Campo':
       '4-Município onde está localizada a Unidade Sentinela que realizou a notificação.',
     Tipo: 'String',
     Categorias:
       'Tabela com código e nomes dos Municípios padronizados pelo IBGE.',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
-      'Campo Obrigatório. Preenchendo o nome do município de notificação, o código é preenchido automaticamente, e vice-versa. Se usuário que está digitando a ficha for de nível: <br> Unidade Sentinela – o campo é preenchido automaticamente pelo sistema com o Município onde está localizada a unidade de notificação. <br> Municipal – o campo é preenchido automaticamente pelo sistema com o município do usuário. <br> Estadual ou Federal – abre tabela com todos os municípios da UF selecionada no campo 3 que possuam unidades sentinelas cadastradas no sistema.',
+      'Campo Obrigatório. Preenchendo o nome do município de notificação, o código é preenchido automaticamente, e vice-versa. Se usuário que está digitando a ficha for de nível: Unidade Sentinela – o campo é preenchido automaticamente pelo sistema com o Município onde está localizada a unidade de notificação.  Municipal – o campo é preenchido automaticamente pelo sistema com o município do usuário.  Estadual ou Federal – abre tabela com todos os municípios da UF selecionada no campo 3 que possuam unidades sentinelas cadastradas no sistema.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'CO_MUN_NOT',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'CO_MUN_NOT',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'mun_code_ntf',
     'Legenda do Campo':
       '4- Código do Município onde está localizada a Unidade Sentinela que realizou a notificação.',
     Tipo: 'Number',
     Categorias:
       'Tabela com código e nomes dos Municípios padronizados pelo IBGE.',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
-      'Campo Obrigatório. Preenchendo o nome do município de notificação, o código é preenchido automaticamente, e vice-versa. Se usuário que está digitando a ficha for de nível: <br> Unidade Sentinela – o campo é preenchido automaticamente pelo sistema com o Município onde está localizada a unidade de notificação. <br> Municipal – o campo é preenchido automaticamente pelo sistema com o município do usuário. <br> Estadual ou Federal – abre tabela com todos os municípios da UF selecionada no campo 3 que possuam unidades sentinelas cadastradas no sistema.',
+      'Campo Obrigatório. Preenchendo o nome do município de notificação, o código é preenchido automaticamente, e vice-versa. Se usuário que está digitando a ficha for de nível:  Unidade Sentinela – o campo é preenchido automaticamente pelo sistema com o Município onde está localizada a unidade de notificação.  Municipal – o campo é preenchido automaticamente pelo sistema com o município do usuário.  Estadual ou Federal – abre tabela com todos os municípios da UF selecionada no campo 3 que possuam unidades sentinelas cadastradas no sistema.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'ID_REGIONA',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'ID_REGIONA',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'reg_mun_ntf',
     'Legenda do Campo':
       'Regional de Saúde onde está localizado o Município realizou a notificação.',
     Tipo: 'String',
     Categorias:
       'Tabela com código e nomes das Regionais de Saúde dos municípios de notificação padronizados pelo IBGE.',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
-      'Campo Interno. Preenchendo o nome da regional de saúde de notificação, o código é preenchido automaticamente, e vice-versa. Se usuário que está digitando a ficha for de nível: <br> Unidade Sentinela – o campo é preenchido automaticamente pelo  sistema com a Regional do Município onde está localizada a unidade de notificação. <br> Municipal – o campo é preenchido automaticamente pelo sistema com a  regional do município do usuário.',
+      'Campo Interno. Preenchendo o nome da regional de saúde de notificação, o código é preenchido automaticamente, e vice-versa. Se usuário que está digitando a ficha for de nível:  Unidade Sentinela – o campo é preenchido automaticamente pelo  sistema com a Regional do Município onde está localizada a unidade de notificação.  Municipal – o campo é preenchido automaticamente pelo sistema com a  regional do município do usuário.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'CO_REGIONA',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'CO_REGIONA',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'reg_mun_code_ntf',
     'Legenda do Campo':
       'Código da Regional de Saúde onde está localizado o Município realizou a notificação.',
     Tipo: 'Number',
     Categorias:
       'Tabela com código e nomes das Regionais de Saúde dos municípios de notificação padronizados pelo IBGE.',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
-      'Campo Interno. Preenchendo o nome da regional de saúde de notificação, o código é preenchido automaticamente, e vice-versa. Se usuário que está digitando a ficha for de nível:<br> Unidade Sentinela – o campo é preenchido automaticamente pelo  sistema com a Regional do Município onde está localizada a unidade de  notificação.<br> Municipal – o campo é preenchido automaticamente pelo sistema com a  regional do município do usuário.',
+      'Campo Interno. Preenchendo o nome da regional de saúde de notificação, o código é preenchido automaticamente, e vice-versa. Se usuário que está digitando a ficha for de nível:\\n  Unidade Sentinela – o campo é preenchido automaticamente pelo  sistema com a Regional do Município onde está localizada a unidade de  notificação.\\n  Municipal – o campo é preenchido automaticamente pelo sistema com a  regional do município do usuário.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'ID_UNIDADE',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'ID_UNIDADE',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'uni_ntf',
     'Legenda do Campo':
       '5-Unidade Sentinela que realizou o atendimento, coleta de amostra e registro do caso.',
     Tipo: 'String',
     Categorias: 'Sem categoria',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
-      'Campo Obrigatório.Preenchendo o nome da unidade, o código é preenchido automaticamente, e vice-versa. Se usuário que está digitando a ficha for de nível: <br> Unidade Sentinela - o campo é preenchido automaticamente pelo sistema. <br> Municipal – abre tabela apenas com as unidades sentinelas do município. <br> Estadual ou Federal – abre tabela com as unidades sentinelas do município selecionado o campo 4.',
+      'Campo Obrigatório.Preenchendo o nome da unidade, o código é preenchido automaticamente, e vice-versa. Se usuário que está digitando a ficha for de nível:\\n  Unidade Sentinela - o campo é preenchido automaticamente pelo sistema.  Municipal – abre tabela apenas com as unidades sentinelas do município.  Estadual ou Federal – abre tabela com as unidades sentinelas do município selecionado o campo 4.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'CO_UNI_NOT',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'CO_UNI_NOT',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'cnes',
     'Legenda do Campo': '5-Código CNES da Unidade de Saúde',
     Tipo: 'Number',
     Categorias:
       'Tabela com códigos CNES e nomes das Unidades Sentinelas cadastradas no sistema.',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
-      'Campo Obrigatório.Preenchendo o nome da unidade, o código é preenchido automaticamente, e vice-versa. Se usuário que está digitando a ficha for de nível: <br> Unidade Sentinela - o campo é preenchido automaticamente pelo sistema. <br> Municipal – abre tabela apenas com as unidades sentinelas do município. <br> Estadual ou Federal – abre tabela com as unidades sentinelas do município selecionado o campo 4.',
+      'Campo Obrigatório.Preenchendo o nome da unidade, o código é preenchido automaticamente, e vice-versa. Se usuário que está digitando a ficha for de nível:\\n  Unidade Sentinela - o campo é preenchido automaticamente pelo sistema.  Municipal – abre tabela apenas com as unidades sentinelas do município.  Estadual ou Federal – abre tabela com as unidades sentinelas do município selecionado o campo 4.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'ESTRANG',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'ESTRANG',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'entrang',
     'Legenda do Campo': '8-Informar se o paciente é estrangeiro',
     Tipo: 'Number',
-    Categorias: 'Sim = 1<br>Não = 2',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim<br>2-Não<br>9-Ignorado',
+    Categorias: 'Sim = 1\\n Não = 2',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 2-Não\\n 9-Ignorado',
     Descrição:
       'Campo Obrigatório.Se selecionado “Sim”, o campo CPF e CNS, deixa de ser obrigatório. Valor 9 quando não preenchido',
   },
   {
-    'Nome do campo na base<br>de dados original': 'CS_SEXO',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'CS_SEXO',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'sexo',
     'Legenda do Campo': '11-Sexo do paciente.',
     Tipo: 'String',
-    Categorias: 'M-Masculino<br>F-Feminino <br>I-Ignorado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Masculino <br>2-Feminino <br>9-Ignorado',
+    Categorias: 'M-Masculino\\n F-Feminino\\n I-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Masculino\\n 2-Feminino\\n 9-Ignorado',
     Descrição:
       'Campo Obrigatório. Valor 9 quando não preenchido ou marcado como Ignorado.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'DT_NASC',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'DT_NASC',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'dt_nasc',
     'Legenda do Campo': '12-Data de nascimento do paciente.',
     Tipo: 'Date DD/MM/AAAA',
     Categorias: 'Sem categoria',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
       'Campo Essencial. Data deve ser <= a data dos primeiros sintomas.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'NU_IDADE_N',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'NU_IDADE_N',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'idade',
     'Legenda do Campo':
       '13-Idade informada pelo paciente quando não se sabe a data de nascimento. Na falta desse dado é registrada a idade aparente.',
     Tipo: 'Number',
     Categorias: 'Sem categoria',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
       'Campo Obrigatório.Se digitado a data de nascimento, a idade é calculada e preenchida automaticamente pelo sistema: considerando o intervalo entre a data de nascimento e a data dos primeiros sintomas. Idade deve ser <= 150.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'TP_IDADE',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'TP_IDADE',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'tp_idade',
     'Legenda do Campo': '13-Unidade de medida da Idade em dias, meses ou anos.',
     Tipo: 'Number',
     Categorias: '1-Dia 2-Mês 3-Ano',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       '1-Dia 2-Mês 3-Ano',
     Descrição:
       'Campo Obrigatório.Se digitado a data de nascimento, o campo Idade/Tipo é calculado e preenchido automaticamente pelo sistema: considerando o intervalo entre a data de nascimento e a data dos primeiros sintomas. Se a diferença for de 0 a 30 dias, o sistema grava em Idade = (nº dias) e em Tipo = 1-Dia. Por exemplo: se Data de nascimento = 05/12/2012 e Data dos 1ºs sintomas = 11/12/2012, então Idade = 6 e Tipo = 1-Dia. Se a diferença for de 1 a 11 meses, o sistema grava em Idade = (nº meses) e em Tipo = 2-Mês. Por exemplo: se Data de nascimento = 05/10/2012 e Data dos 1ºs sintomas = 11/12/2012, então Idade = 2 e Tipo = 2-Mês. Se a diferença for maior ou igual a 12 meses, o sistema grava em Idade = (nº anos) e em Tipo = 3-Ano. Por exemplo: se Data de nascimento = 05/10/2011 e Data dos 1ºs sintomas = 11/12/2012, então Idade = 1 e Tipo = 3-Ano.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'CS_GESTANT',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'CS_GESTANT',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'cs_gestant',
     'Legenda do Campo': '14-Idade gestacional da paciente.',
     Tipo: 'Number',
     Categorias:
-      '1-1º Trimestre <br>2-2º Trimestre <br>3-3º Trimestre <br>4-Idade Gestacional <br>Ignorada <br>5-Não <br>6-Não se aplica <br>9-Ignorado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-1º Trimestre <br>2-2º Trimestre <br>3-3º Trimestre <br>4-Idade Gestacional <br>Ignorada <br>5-Não <br>6-Não se aplica <br>9-Ignorado',
+      '1-1º Trimestre\\n 2-2º Trimestre\\n 3-3º Trimestre\\n 4-Idade Gestacional\\n Ignorada\\n 5-Não\\n 6-Não se aplica\\n 9-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-1º Trimestre\\n 2-2º Trimestre\\n 3-3º Trimestre\\n 4-Idade Gestacional\\n Ignorada\\n 5-Não\\n 6-Não se aplica\\n 9-Ignorado',
     Descrição:
       'Campo Obrigatório.Se selecionado categoria 2-Feminino no campo Sexo. Se selecionado sexo igual a Masculino ou a idade for menor ou igual a 9 anos o campo é preenchido automaticamente com 6-Não se aplica. Se selecionado sexo igual a Feminino e idade for maior que 9 anos, o campo não pode ser preenchido com 6-Não se aplica. Valor 9 quando não preenchido, marcado como 0 ou Ignorado.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'CS_RACA',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'CS_RACA',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'racacor',
-    'Legenda do Campo': '15-Cor ou raça declarada pelo paciente: Branca',
-    Tipo: 'Preta',
-    Categorias: 'Amarela',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      'Parda (pessoa que se declarou mulata, cabocla, cafuza, mameluca ou mestiça de preto com pessoa de outra cor ou raça)',
-    Descrição: 'e, Indígena.',
+    'Legenda do Campo':
+      '15-Cor ou raça declarada pelo paciente: Branca\\n Preta\\n Amarela\\n Parda (pessoa que se declarou mulata, cabocla, cafuza, mameluca ou mestiça de preto com pessoa de outra cor ou raça) e, Indígena.',
+    Tipo: 'Number',
+    Categorias:
+      '1-Branca\\n 2-Preta\\n 3-Amarela\\n 4-Parda\\n 5-Indígena\\n 9-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Branca\\n 2-Preta\\n 3-Amarela\\n 4-Parda\\n 5-Indígena\\n  9-Ignorado',
+    Descrição: 'Campo Obrigatório.CS_ETINIA',
   },
   {
-    'Nome do campo na base<br>de dados original': 'CS_ESCOL_N',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'CS_ESCOL_N',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'cs_escol_n',
     'Legenda do Campo':
       '19-Nível de escolaridade do paciente. Para os níveis fundamental e médio deve ser considerada a última série ou ano concluído.',
     Tipo: 'Number',
     Categorias:
-      '0-Sem escolaridade/Analfabeto <br>1-Fundamental 1º ciclo (1ª a 5ª série) <br>2-Fundamental 2º ciclo (6ª a 9ª série) <br>3-Médio (1º ao 3º ano) 4-Superior <br>5-Não se aplica <br>9-Ignorado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '0-Sem escolaridade/Analfabeto <br>1-Fundamental 1º ciclo (1ª a 5ª série) <br>2-Fundamental 2º ciclo (6ª a 9ª série) <br>3- Médio (1º ao 3º ano) 4-Superior <br>5-Não se aplica <br>9-Ignorado',
+      '0-Sem escolaridade/Analfabeto\\n 1-Fundamental 1º ciclo (1ª a 5ª série)\\n 2-Fundamental 2º ciclo (6ª a 9ª série)\\n 3-Médio (1º ao 3º ano) 4-Superior\\n 5-Não se aplica\\n 9-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '0-Sem escolaridade/Analfabeto\\n 1-Fundamental 1º ciclo (1ª a 5ª série)\\n 2-Fundamental 2º ciclo (6ª a 9ª série)\\n 3- Médio (1º ao 3º ano) 4-Superior\\n 5-Não se aplica\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Preenchido automaticamente com a categoria “não se aplica” quando idade for menor que 7 anos. Quando idade for maior que 7 anos, o campo não pode ser preenchido com “não se aplica”. Valor 9 quando não preenchido ou marcado como Ignorado.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'PAC_DSCBO',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'PAC_DSCBO',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'pac_dscbo',
     'Legenda do Campo': '20-Ocupação profissional do paciente',
     Tipo: 'String',
     Categorias:
       'Tabela com código da Ocupação da Classificação Brasileira de Ocupações (CBO).',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição: 'Campo Essencial.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'PAC_COCBO',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'PAC_COCBO',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'pac_cocbo',
     'Legenda do Campo': '20-Código da Ocupação profissional do paciente',
     Tipo: 'Number',
     Categorias:
       'Tabela com código da Ocupação da Classificação Brasileira de Ocupações (CBO).',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição: 'Campo Essencial.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'SG_UF',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'SG_UF',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'uf_res',
     'Legenda do Campo': '23-Unidade Federativa de residência do paciente.',
     Tipo: 'String',
     Categorias: 'Tabela com código e siglas das UF padronizados pelo IBGE.',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
       'Campo Obrigatório.Se campo 25-País for Brasil. Se preenchido o campo CEP, a UF é preenchida automaticamente pelo sistema e desabilitada para edição.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'ID_RG_RESI',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'ID_RG_RESI',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'reg_res',
     'Legenda do Campo':
       'Regional de Saúde onde está localizado o Município de residência do paciente.',
     Tipo: 'String',
     Categorias:
       'Tabela com código e nomes das Regionais de Saúde dos municípios de residência padronizados pelo IBGE.',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
       'Campo Interno. Preenchendo o nome da regional de saúde de residência, o código é preenchido automaticamente, e vice-versa.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'CO_RG_RESI',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'CO_RG_RESI',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'reg_code_res',
     'Legenda do Campo':
       'Código da Regional de Saúde onde está localizado o Município de residência do paciente.',
     Tipo: 'Number',
     Categorias:
       'Tabela com código e nomes das Regionais de Saúde dos municípios de residência padronizados pelo IBGE.',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
       'Campo Interno. Preenchendo o nome da regional de saúde de residência, o código é preenchido automaticamente, e vice-versa.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'ID_MN_RESI',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'ID_MN_RESI',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'mun_res',
     'Legenda do Campo': '24-Município de residência do paciente.',
     Tipo: 'String',
     Categorias:
       'Tabela com código e nome dos Municípios padronizados pelo IBGE.',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
       'Campo Obrigatório.Se campo 25-País for Brasil. Se preenchido o campo CEP, o Município e seu respectivo código IBGE são preenchidos automaticamente pelo sistema e desabilitados para edição. Se o CEP não for preenchido, o campo é habilitado depois de selecionada uma UF no campo 17. Nesse caso, o sistema abre tabela com os municípios da UF. Preenchendo o nome do município, o código é preenchido automaticamente, ou vice- versa.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'CO_MUN_RES',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'CO_MUN_RES',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'mun_code_res',
     'Legenda do Campo': '24-Código do Município de residência do paciente.',
     Tipo: 'Number',
     Categorias:
       'Tabela com código e nome dos Municípios padronizados pelo IBGE.',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
       'Campo Obrigatório.Se campo 25-País for Brasil. Se preenchido o campo CEP, o Município e seu respectivo código IBGE são preenchidos automaticamente pelo sistema e desabilitados para edição. Se o CEP não for preenchido, o campo é habilitado depois de selecionada uma UF no campo 17. Nesse caso, o sistema abre tabela com os municípios da UF. Preenchendo o nome do município, o código é preenchido automaticamente, ou vice- versa.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'CS_ZONA',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'CS_ZONA',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'cs_zona',
     'Legenda do Campo':
       '30-Zona geográfica do endereço de residência do paciente.',
     Tipo: 'Number',
-    Categorias: '1-Urbana <br>2-Rural <br>3-Periurbana <br>9-Ignorado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Urbana <br>2-Rural <br>3-Periurbana <br>9-Ignorado',
+    Categorias: '1-Urbana\\n 2-Rural\\n 3-Periurbana\\n 9-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Urbana\\n 2-Rural\\n 3-Periurbana\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Valor 9 quando não preenchido ou marcado como Ignorado.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'ID_PAIS',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'ID_PAIS',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'pais_res',
     'Legenda do Campo': '31-País de residência do paciente.',
     Tipo: 'String',
     Categorias: 'Tabela com código e nome dos Países.',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
       'Campo Obrigatório.Se preenchido CEP, ou for selecionada uma UF, o campo País é preenchido automaticamente pelo sistema e desabilitado para edição. Se selecionado País diferente de Brasil, os campos 17 a 23 são desabilitados.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'CO_PAIS',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'CO_PAIS',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'pais_code_res',
     'Legenda do Campo': '31- Código País de residência do paciente.',
     Tipo: 'Number',
     Categorias: 'Tabela com código e nome dos Países.',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
       'Campo Obrigatório.Se preenchido CEP, ou for selecionada uma UF, o campo País é preenchido automaticamente pelo sistema e desabilitado para edição. Se selecionado País diferente de Brasil, os campos 17 a 23 são desabilitados.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'NOSOCOMIAL',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'NOSOCOMIAL',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'nosocomial',
     'Legenda do Campo':
       '32-Caso de SRAG com infecção adquirida após internação.',
     Tipo: 'Number',
-    Categorias: '1-Sim <br>2-Não <br>9-Ignorado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim <br>2-Não <br>9-Ignorado',
+    Categorias: '1-Sim\\n 2-Não\\n 9-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 2-Não\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Quando o campo 33 for igual a 1, é permitido digitar data de início dos sintomas posterior a data de internação. Valor 9 quando não preenchido ou marcado como Ignorado.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'AVE_SUINO',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'AVE_SUINO',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'ave_suino',
     'Legenda do Campo': '33-Caso com contato direto com aves ou suínos.',
     Tipo: 'Number',
-    Categorias: '1-Sim <br>2-Não <br>9-Ignorado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim <br>2-Não <br>3-Outro<br>9-Ignorado',
+    Categorias: '1-Sim\\n 2-Não\\n 9-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 2-Não\\n 3-Outro\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Valor 9 quando não preenchido ou marcado como Ignorado.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'OUT_ANIM',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'OUT_ANIM',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'out_anim',
     'Legenda do Campo':
       '33-Informar o animal que o paciente teve contato se selecionado a opção 3.',
     Tipo: 'String',
     Categorias: 'Sem categoria',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
       'Campo Essencial. Habilitado de campo 34- Contato com outro animal = 3 (Outro).',
   },
   {
-    'Nome do campo na base<br>de dados original': 'FEBRE',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'FEBRE',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'febre',
     'Legenda do Campo': '34-Paciente apresentou febre?',
     Tipo: 'Number',
-    Categorias: '1-Sim <br>2-Não <br>9-Ignorado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim <br>2-Não <br>9-Ignorado',
+    Categorias: '1-Sim\\n 2-Não\\n 9-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 2-Não\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Valor 9 quando não preenchido ou marcado como Ignorado.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'TOSSE',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'TOSSE',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'tosse',
     'Legenda do Campo': '34-Paciente apresentou tosse?',
     Tipo: 'Number',
-    Categorias: '1-Sim <br>2-Não <br>9-Ignorado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim <br>2-Não <br>9-Ignorado',
+    Categorias: '1-Sim\\n 2-Não\\n 9-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 2-Não\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Valor 9 quando não preenchido ou marcado como Ignorado.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'GARGANTA',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'GARGANTA',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'garganta',
     'Legenda do Campo': '34-Paciente apresentou dor de garganta?',
     Tipo: 'Number',
-    Categorias: '1-Sim <br>2-Não <br>9-Ignorado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim <br>2-Não <br>9-Ignorado',
+    Categorias: '1-Sim\\n 2-Não\\n 9-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 2-Não\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Valor 9 quando não preenchido ou marcado como Ignorado.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'DISPNEIA',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'DISPNEIA',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'dispneia',
     'Legenda do Campo': '34-Paciente apresentou dispneia?',
     Tipo: 'Number',
-    Categorias: '1-Sim <br>2-Não <br>9-Ignorado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim <br>2-Não <br>9-Ignorado',
+    Categorias: '1-Sim\\n 2-Não\\n 9-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 2-Não\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Valor 9 quando não preenchido ou marcado como Ignorado.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'DESC_RESP',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'DESC_RESP',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'desc_resp',
     'Legenda do Campo': '34-Paciente apresentou desconforto respiratório?',
     Tipo: 'Number',
-    Categorias: '1-Sim <br>2-Não <br>9-Ignorado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim <br>2-Não <br>9-Ignorado',
+    Categorias: '1-Sim\\n 2-Não\\n 9-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 2-Não\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Valor 9 quando não preenchido ou marcado como Ignorado.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'SATURACAO',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'SATURACAO',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'saturacao',
     'Legenda do Campo': '34-Paciente apresentou saturação O2< 95%?',
     Tipo: 'Number',
-    Categorias: '1-Sim <br>2-Não <br>9-Ignorado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim <br>2-Não <br>9-Ignorado',
+    Categorias: '1-Sim\\n 2-Não\\n 9-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 2-Não\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Valor 9 quando não preenchido ou marcado como Ignorado.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'DIARREIA',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'DIARREIA',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'diarreia',
     'Legenda do Campo': '34-Paciente apresentou diarreia?',
     Tipo: 'Number',
-    Categorias: '1-Sim <br>2-Não <br>9-Ignorado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim <br>2-Não <br>9-Ignorado',
+    Categorias: '1-Sim\\n 2-Não\\n 9-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 2-Não\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Valor 9 quando não preenchido ou marcado como Ignorado.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'VOMITO',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'VOMITO',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'vomito',
     'Legenda do Campo': '34-Paciente apresentou vômito?',
     Tipo: 'Number',
-    Categorias: '1-Sim <br>2-Não <br>9-Ignorado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim <br>2-Não <br>9-Ignorado',
+    Categorias: '1-Sim\\n 2-Não\\n 9-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 2-Não\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Valor 9 quando não preenchido ou marcado como Ignorado.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'DOR_ABD',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'DOR_ABD',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'dor_abd',
     'Legenda do Campo': '34-Paciente apresentou dor abdominal?',
     Tipo: 'Number',
-    Categorias: '1-Sim <br>2-Não <br>9-Ignorado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim <br>2-Não <br>9-Ignorado',
+    Categorias: '1-Sim\\n 2-Não\\n 9-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 2-Não\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Valor 9 quando não preenchido ou marcado como Ignorado.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'FADIGA',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'FADIGA',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'fadiga',
     'Legenda do Campo': '34-Paciente apresentou fadiga?',
     Tipo: 'Number',
-    Categorias: '1-Sim <br>2-Não <br>9-Ignorado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim <br>2-Não <br>9-Ignorado',
+    Categorias: '1-Sim\\n 2-Não\\n 9-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 2-Não\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Valor 9 quando não preenchido ou marcado como Ignorado.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'PERD_OLFT',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'PERD_OLFT',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'perd_olft',
     'Legenda do Campo': '34-Paciente apresentou perda do olfato?',
     Tipo: 'Number',
-    Categorias: '1-Sim <br>2-Não <br>9-Ignorado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim <br>2-Não <br>9-Ignorado',
+    Categorias: '1-Sim\\n 2-Não\\n 9-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 2-Não\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Valor 9 quando não preenchido ou marcado como Ignorado.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'PERD_PALA',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'PERD_PALA',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'perd_pala',
     'Legenda do Campo': '34-Paciente apresentou perda do paladar?',
     Tipo: 'Number',
-    Categorias: '1-Sim <br>2-Não <br>9-Ignorado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim <br>2-Não <br>9-Ignorado',
+    Categorias: '1-Sim\\n 2-Não\\n 9-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 2-Não\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Valor 9 quando não preenchido ou marcado como Ignorado.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'OUTRO_SIN',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'OUTRO_SIN',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'outro_sin',
     'Legenda do Campo': '34-Paciente apresentou outro(s) sintoma(s)?',
     Tipo: 'Number',
-    Categorias: '1-Sim <br>2-Não <br>9-Ignorado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim <br>2-Não <br>9-Ignorado',
+    Categorias: '1-Sim\\n 2-Não\\n 9-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 2-Não\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Valor 9 quando não preenchido ou marcado como Ignorado.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'OUTRO_DES',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'OUTRO_DES',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'outro_des',
     'Legenda do Campo':
       '34-Listar outros sinais e sintomas apresentados pelo paciente.',
     Tipo: 'String',
     Categorias: 'Sem categoria',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
       'Campo Essencial. Habilitado se selecionado categoria 1-Sim em Sinais e Sintomas/Outros.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'FATOR_RISC',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'FATOR_RISC',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'fator_risc',
     'Legenda do Campo': '35-Paciente apresenta algum fator de risco',
     Tipo: 'Number',
-    Categorias: '1-Sim <br>2-Não <br>9-Ignorado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim <br>2-Não <br>9-Ignorado',
+    Categorias: '1-Sim\\n 2-Não\\n 9-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 2-Não\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Valor 1 quando marcado 1 ou S. Valor 2 quando marcado 2 ou N. Valor 9 quando não preenchido ou marcado como Ignorado.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'PUERPERA',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'PUERPERA',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'puerpera',
     'Legenda do Campo':
       '35-Paciente é puérpera ou parturiente (mulher que pariu recentemente – até 45 dias do parto)?',
     Tipo: 'Number',
-    Categorias: '1-Sim<br>2-Não<br>9-Ignorado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim <br>2-Não <br>9-Ignorado',
+    Categorias: '1-Sim\\n 2-Não\\n 9-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 2-Não\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Habilitado se selecionado no campo 8- Sexo Feminino. Valor 9 quando não preenchido ou marcado como Ignorado.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'CARDIOPATI',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'CARDIOPATI',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'cardiopati',
     'Legenda do Campo': '35-Paciente possui Doença Cardiovascular Crônica?',
     Tipo: 'Number',
-    Categorias: '1-Sim <br>2-Não <br>9-Ignorado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim <br>2-Não <br>9-Ignorado',
+    Categorias: '1-Sim\\n 2-Não\\n 9-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 2-Não\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Valor 9 quando não preenchido ou marcado como Ignorado.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'HEMATOLOGI',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'HEMATOLOGI',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'hematologi',
     'Legenda do Campo': '35-Paciente possui Doença Hematológica Crônica?',
     Tipo: 'Number',
-    Categorias: '1-Sim <br>2-Não <br>9-Ignorado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim <br>2-Não <br>9-Ignorado',
+    Categorias: '1-Sim\\n 2-Não\\n 9-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 2-Não\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Valor 9 quando não preenchido ou marcado como Ignorado.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'SIND_DOWN',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'SIND_DOWN',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'sind_down',
     'Legenda do Campo': '35-Paciente possui Síndrome de Down?',
     Tipo: 'Number',
-    Categorias: '1-Sim <br>2-Não <br>9-Ignorado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim <br>2-Não <br>9-Ignorado',
+    Categorias: '1-Sim\\n 2-Não\\n 9-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 2-Não\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Valor 9 quando não preenchido ou marcado como Ignorado.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'HEPATICA',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'HEPATICA',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'hepatica',
     'Legenda do Campo': '35-Paciente possui Doença Hepática Crônica?',
     Tipo: 'Number',
-    Categorias: '1-Sim <br>2-Não <br>9-Ignorado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim <br>2-Não <br>9-Ignorado',
+    Categorias: '1-Sim\\n 2-Não\\n 9-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 2-Não\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Valor 9 quando não preenchido ou marcado como Ignorado.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'ASMA',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'ASMA',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'asma',
     'Legenda do Campo': '35-Paciente possui Asma?',
     Tipo: 'Number',
-    Categorias: '1-Sim <br>2-Não <br>9-Ignorado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim <br>2-Não <br>9-Ignorado',
+    Categorias: '1-Sim\\n 2-Não\\n 9-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 2-Não\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Valor 9 quando não preenchido ou marcado como Ignorado.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'DIABETES',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'DIABETES',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'diabetes',
     'Legenda do Campo': '35-Paciente possui Diabetes mellitus?',
     Tipo: 'Number',
-    Categorias: '1-Sim <br>2-Não <br>9-Ignorado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim <br>2-Não <br>9-Ignorado',
+    Categorias: '1-Sim\\n 2-Não\\n 9-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 2-Não\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Valor 9 quando não preenchido ou marcado como Ignorado.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'NEUROLOGIC',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'NEUROLOGIC',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'neurologic',
     'Legenda do Campo': '35-Paciente possui Doença Neurológica?',
     Tipo: 'Number',
-    Categorias: '1-Sim <br>2-Não <br>9-Ignorado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim <br>2-Não <br>9-Ignorado',
+    Categorias: '1-Sim\\n 2-Não\\n 9-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 2-Não\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Valor 9 quando não preenchido ou marcado como Ignorado.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'PNEUMOPATI',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'PNEUMOPATI',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'pneumopati',
     'Legenda do Campo': '35-Paciente possui outra pneumopatia crônica?',
     Tipo: 'Number',
-    Categorias: '1-Sim <br>2-Não <br>9-Ignorado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim <br>2-Não <br>9-Ignorado',
+    Categorias: '1-Sim\\n 2-Não\\n 9-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 2-Não\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Valor 9 quando não preenchido ou marcado como Ignorado.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'IMUNODEPRE',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'IMUNODEPRE',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'imunodepre',
     'Legenda do Campo':
       '35-Paciente possui Imunodeficiência  ou Imunodepressão (diminuição da função do sistema  imunológico)?',
     Tipo: 'Number',
-    Categorias: '1-Sim<br>2-Não <br>9-Ignorado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim <br>2-Não <br>9-Ignorado',
+    Categorias: '1-Sim\\n 2-Não\\n 9-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 2-Não\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Valor 9 quando não preenchido ou marcado como Ignorado.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'RENAL',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'RENAL',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'renal',
     'Legenda do Campo': '35-Paciente possui Doença Renal Crônica?',
     Tipo: 'Number',
-    Categorias: '1-Sim <br>2-Não <br>9-Ignorado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim <br>2-Não <br>9-Ignorado',
+    Categorias: '1-Sim\\n 2-Não\\n 9-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 2-Não\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Valor 9 quando não preenchido ou marcado como Ignorado.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'OBESIDADE',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'OBESIDADE',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'obesidade',
     'Legenda do Campo': '35-Paciente possui obesidade?',
     Tipo: 'Number',
-    Categorias: '1-Sim <br>2-Não <br>9-Ignorado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim <br>2-Não <br>9-Ignorado',
+    Categorias: '1-Sim\\n 2-Não\\n 9-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 2-Não\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Valor 9 quando não preenchido ou marcado como Ignorado.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'OBES_IMC',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'OBES_IMC',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'obes_imc',
     'Legenda do Campo':
       '35-Valor do IMC (Índice de Massa Corporal) do paciente calculado pelo profissional de saúde.',
     Tipo: 'String',
     Categorias: 'Sem categoria',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
       'Campo Essencial. Habilitado se selecionado categoria 1-Sim em Fatores de risco/Obesidade.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'OUT_MORBI',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'OUT_MORBI',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'out_morbi',
     'Legenda do Campo': '35-Paciente possui outro(s) fator(es) de risco?',
     Tipo: 'Number',
-    Categorias: '1-Sim <br>2-Não <br>9-Ignorado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim <br>2-Não <br>9-Ignorado',
+    Categorias: '1-Sim\\n 2-Não\\n 9-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 2-Não\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Valor 9 quando não preenchido ou marcado como Ignorado.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'MORB_DESC',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'MORB_DESC',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'morb_desc',
     'Legenda do Campo': '35-Listar outro(s) fator(es) de risco do paciente.',
     Tipo: 'String',
     Categorias: 'Sem categoria',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
       'Campo Essencial. Habilitado se selecionado categoria 1-Sim em Fatores de risco/Outros.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'VACINA_COV',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'VACINA_COV',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'vacina_cov',
     'Legenda do Campo':
       '36-Informar se o paciente recebeu vacina COVID-19, após verificar a documentação / caderneta.',
     Tipo: 'Number',
-    Categorias: '1-Sim<br>2-Não<br>9-Ignorado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim <br>2-Não <br>9-Ignorado',
+    Categorias: '1-Sim\\n 2-Não\\n 9-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 2-Não\\n 9-Ignorado',
     Descrição:
       'Campo Obrigatório. Valor 9 quando não preenchido ou marcado como Ignorado.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'DOSE_1_COV',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'DOSE_1_COV',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'dose_1_cov',
     'Legenda do Campo':
       '37-Informar a data em que o paciente recebeu a 1ª dose da vacina COVID-19',
     Tipo: 'Date DD/MM/AAAA',
     Categorias: 'Sem categoria',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
       'Campo Essencial. Habilitado se campo 36- Recebeu vacina COVID-19? for igual a 1.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'DOSE_2_COV',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'DOSE_2_COV',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'dose_2_cov',
     'Legenda do Campo':
       '37-Informar a data em que o paciente recebeu a 2ª dose da vacina COVID-19',
     Tipo: 'Date DD/MM/AAAA',
     Categorias: 'Sem categoria',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
       'Campo Essencial. Habilitado se campo 36- Recebeu vacina COVID-19? for igual a 1.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'LAB_PR_COV_',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'LAB_PR_COV_',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'lab_pr_cov_',
     'Legenda do Campo':
       '38-Informar laboratório produtor da vacina, que o paciente recebeu',
     Tipo: 'String',
     Categorias: 'Sem categoria',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
       'Campo essencial Habilitado se campo 36- Recebeu vacina COVID-19? for igual a 1.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'LOTE_1_COV',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'LOTE_1_COV',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'lote_1_cov',
     'Legenda do Campo':
       '39-Informar o Lote da 1ª dose da vacina COVID-19, que o paciente recebeu',
     Tipo: 'String',
     Categorias: 'Sem categoria',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
       'Campo Essencial. Habilitado se campo 36- Recebeu vacina COVID-19? for igual a 1.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'LOTE_2_COV',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'LOTE_2_COV',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'lote_2_cov',
     'Legenda do Campo':
       '39-Informar o Lote da 2ª dose da vacina COVID-19, que o paciente recebeu',
     Tipo: 'String',
     Categorias: 'Sem categoria',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
       'Campo Essencial. Habilitado se campo 36- Recebeu vacina COVID-19? for igual a 1.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'FNT_IN_COV',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'FNT_IN_COV',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'fnt_in_cov',
     'Legenda do Campo':
       '39-Fonte dos dados/informação sobre a vacina COVID-19, se foi digitada manualmente ou recuperada via integração com a base do RNDS.',
     Tipo: 'Number',
-    Categorias: '1- Manual <br>2- RNDS',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1- Manual <br>2- RNDS',
+    Categorias: '1- Manual\\n 2- RNDS',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1- Manual\\n 2- RNDS',
     Descrição:
       'Campo Interno. Número gerado automaticamente pelo sistema. Campo preenchido de acordo com a fonte dos dados/informação sobre a  vacina COVID-19, se foi digitada manualmente ou recuperada via  integração com a base do RNDS.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'VACINA',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'VACINA',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'vacina_gripe',
     'Legenda do Campo':
       '40-Informar se o paciente foi vacinado contra gripe na última campanha, após verificar a documentação/caderneta. Caso o paciente não tenha a caderneta, direcionar a pergunta para ele ou responsável e preencher o campo com o código correspondente a resposta.',
     Tipo: 'Number',
-    Categorias: '1-Sim <br>2-Não <br>9-Ignorado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim <br>2-Não <br>9-Ignorado',
+    Categorias: '1-Sim\\n 2-Não\\n 9-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 2-Não\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Valor 9 quando não preenchido ou marcado como Ignorado.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'DT_UT_DOSE',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'DT_UT_DOSE',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'dt_vac_gripe',
     'Legenda do Campo':
       '41-Data da última dose de vacina contra  gripe que o paciente tomou.',
     Tipo: 'Date DD/MM/AAAA',
     Categorias: 'Sem categoria',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
       'Campo Essencial. Habilitado se campo 31-Recebeu vacina contra Gripe for igual a 1. Data deve ser <= a data da digitação (data atual).',
   },
   {
-    'Nome do campo na base<br>de dados original': 'MAE_VAC',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'MAE_VAC',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'mae_vac',
     'Legenda do Campo': 'Se paciente < 6 meses, a mãe recebeu vacina?',
     Tipo: 'Number',
-    Categorias: '1-Sim<br>2-Não<br>9-Ignorado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim <br>2-Não <br>9-Ignorado',
+    Categorias: '1-Sim\\n 2-Não\\n 9-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 2-Não\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Habilitar campo Se a Idade do caso for < 6 meses. Valor 9 quando não preenchido ou marcado como Ignorado.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'DT_VAC_MAE',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'DT_VAC_MAE',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'dt_vac_mae',
     'Legenda do Campo': 'Se a mãe recebeu vacina, qual a data?',
     Tipo: 'Date DD/MM/AAAA',
     Categorias: 'Sem categoria',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
       'Campo Essencial. Habilitado se campo Se < 6 meses: a mãe recebeu a vacina for igual a 1. Data deve ser <= a data da digitação (data atual).',
   },
   {
-    'Nome do campo na base<br>de dados original': 'M_AMAMENTA',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'M_AMAMENTA',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'm_amamenta',
     'Legenda do Campo': 'Se paciente < 6 meses, a mãe amamenta a criança?',
     Tipo: 'Number',
-    Categorias: '1-Sim<br>2-Não<br>9-Ignorado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim <br>2-Não <br>9-Ignorado',
+    Categorias: '1-Sim\\n 2-Não\\n 9-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 2-Não\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Habilitar campo se Se a Idade do caso for < 6 meses. Valor 9 quando não preenchido ou marcado como Ignorado.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'DT_DOSEUNI',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'DT_DOSEUNI',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'dt_doseuni',
     'Legenda do Campo':
       'Se >= 6 meses e <= 8 anos, data da dose única para crianças vacinadas em campanhas de anos anteriores',
     Tipo: 'Date DD/MM/AAAA',
     Categorias: 'Sem categoria',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
       'Campo Essencial. Habilitar campo Se a Idade do caso for >= 6 meses e <= 8 anos',
   },
   {
-    'Nome do campo na base<br>de dados original': 'DT_1_DOSE',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'DT_1_DOSE',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'dt_1_dose',
     'Legenda do Campo':
       'Se >= 6 meses e <= 8 anos, data da 1ª dose para crianças vacinadas pela primeira vez',
     Tipo: 'Date DD/MM/AAAA',
     Categorias: 'Sem categoria',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
       'Campo Essencial. Habilitar campo Se a Idade do caso for >= 6 meses e <= 8 anos',
   },
   {
-    'Nome do campo na base<br>de dados original': 'DT_2_DOSE',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'DT_2_DOSE',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'dt_2_dose',
     'Legenda do Campo':
       'Se >= 6 meses e <= 8 anos data da 2ª dose para crianças vacinadas pela primeira vez',
     Tipo: 'Date DD/MM/AAAA',
     Categorias: 'Sem categoria',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
       'Campo Essencial. Habilitar campo Se a Idade do caso for >= 6 meses e <= 8 anos',
   },
   {
-    'Nome do campo na base<br>de dados original': 'ANTIVIRAL',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'ANTIVIRAL',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'antiviral',
     'Legenda do Campo': '42-Fez uso de antiviral para tratamento da doença?',
     Tipo: 'Number',
-    Categorias: '1-Sim <br>2-Não <br>9-Ignorado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim <br>2-Não <br>9-Ignorado',
+    Categorias: '1-Sim\\n 2-Não\\n 9-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 2-Não\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Valor 9 quando não preenchido ou marcado como Ignorado.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'TP_ANTIVIR',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'TP_ANTIVIR',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'tp_antivir',
     'Legenda do Campo': '43-Qual antiviral utilizado?',
     Tipo: 'Number',
-    Categorias: '1- Oseltamivir <br>2- Zanamivir <br>3- Outro',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1- Oseltamivir <br>2- Zanamivir <br>3- Outro<br>9-Ignorado',
+    Categorias: '1- Oseltamivir\\n 2- Zanamivir\\n 3- Outro',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1- Oseltamivir\\n 2- Zanamivir\\n 3- Outro\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Habilitado se campo 39- Qual antiviral? for igual a 1. Valor 9 quando não preenchido',
   },
   {
-    'Nome do campo na base<br>de dados original': 'OUT_ANTIV',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'OUT_ANTIV',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'out_antiv',
     'Legenda do Campo':
       'Se o antiviral utilizado não foi Oseltamivir ou Zanamivir, informar qual antiviral foi utilizado.',
     Tipo: 'String',
     Categorias: 'Sem categoria',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
       'Campo Essencial. Habilitado se campo 40- Qual antiviral? for igual a 3.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'DT_ANTIVIR',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'DT_ANTIVIR',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'dt_antivir',
     'Legenda do Campo':
       '44-Data em que foi iniciado o tratamento com o antiviral.',
     Tipo: 'Date DD/MM/AAAA',
     Categorias: 'Sem categoria',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
       'Campo Essencial. Habilitado se campo 39-Usou antiviral para gripe? for igual a 1. Data deve ser <= a data da digitação (data atual).',
   },
   {
-    'Nome do campo na base<br>de dados original': 'HOSPITAL',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'HOSPITAL',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'hospital',
     'Legenda do Campo': '45-O paciente foi internado?',
     Tipo: 'Number',
-    Categorias: '1-Sim<br>2-Não<br>9-Ignorado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim <br>2-Não <br>9-Ignorado',
+    Categorias: '1-Sim\\n 2-Não\\n 9-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 2-Não\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Caso o campo não seja igual a 1 – Sim o sistema emitirá um aviso indicando que não atende a definição de caso. Valor 9 quando não preenchido ou marcado como Ignorado.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'DT_INTERNA',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'DT_INTERNA',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'dt_interna',
     'Legenda do Campo': '46-Data em que o paciente foi hospitalizado.',
     Tipo: 'Date DD/MM/AAAA',
     Categorias: 'Sem categoria',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
       'Campo Obrigatório.Data deve ser maior ou igual a 2- Data de 1ºs sintomas e menor ou igual a data da digitação (atual).',
   },
   {
-    'Nome do campo na base<br>de dados original': 'SG_UF_INTE',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'SG_UF_INTE',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'uf_inte',
     'Legenda do Campo': '47-Unidade Federativa de internação do paciente.',
     Tipo: 'String',
     Categorias: 'Tabela com código e siglas das UF padronizados pelo IBGE.',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
       'Campo Essencial. Habilitado se campo 42-Houve internação? for igual a 1',
   },
   {
-    'Nome do campo na base<br>de dados original': 'ID_RG_INTE',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'ID_RG_INTE',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'reg_inte',
     'Legenda do Campo':
       'Regional de Saúde onde está localizado o Município de internação do paciente.',
     Tipo: 'String',
     Categorias:
       'Tabela com código e nomes das Regionais de Saúde dos municípios de internação padronizados pelo IBGE.',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
       'Campo Interno. Preenchendo o nome da regional de saúde de internação, o código é preenchido automaticamente, e vice-versa.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'CO_RG_INTE',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'CO_RG_INTE',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'reg_code_inte',
     'Legenda do Campo':
       'Código da Regional de Saúde onde está localizado o Município de internação do paciente.',
     Tipo: 'Number',
     Categorias:
       'Tabela com código e nomes das Regionais de Saúde dos municípios de internação padronizados pelo IBGE.',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
       'Campo Interno. Preenchendo o nome da regional de saúde de internação, o código é preenchido automaticamente, e vice-versa.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'ID_MN_INTE',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'ID_MN_INTE',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'mun_inte',
     'Legenda do Campo':
       '48-Município onde está localizado a Unidade de Saúde onde o paciente internou.',
     Tipo: 'String',
     Categorias:
       'Tabela com código e nomes dos Municípios padronizados pelo IBGE.',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
       'Campo Essencial. Habilitado se campo 42-Houve internação? for igual a 1',
   },
   {
-    'Nome do campo na base<br>de dados original': 'CO_MU_INTE',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'CO_MU_INTE',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'mun_code_inte',
     'Legenda do Campo':
       '48-Código do Município onde está localizado a Unidade de Saúde onde o paciente internou.',
     Tipo: 'Number',
     Categorias:
       'Tabela com código e nomes dos Municípios padronizados pelo IBGE.',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
       'Campo Essencial. Habilitado se campo 42-Houve internação? for igual a 1',
   },
   {
-    'Nome do campo na base<br>de dados original': 'UTI',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'UTI',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'uti',
     'Legenda do Campo': '50O paciente foi internado em UTI?',
     Tipo: 'String',
-    Categorias: '1-Sim <br>2-Não <br>9-Ignorado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim <br>2-Não <br>9-Ignorado',
+    Categorias: '1-Sim\\n 2-Não\\n 9-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 2-Não\\n 9-Ignorado',
     Descrição:
       'Campo EssencialValor 9 quando não preenchido ou marcado como Ignorado.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'DT_ENTUTI',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'DT_ENTUTI',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'dt_in_uti',
     'Legenda do Campo':
       '51-Data de entrada do paciente na unidade de Terapia intensiva (UTI).',
     Tipo: 'Date DD/MM/AAAA',
     Categorias: 'Sem categoria',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
       'Campo Essencial. Habilitado se campo 47-Internado em UTI? for igual a 1. Data deve ser maior ou igual a 2-Data de 1ºs sintomas da SRAG e menor ou igual a data da digitação (atual).',
   },
   {
-    'Nome do campo na base<br>de dados original': 'DT_SAIDUTI',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'DT_SAIDUTI',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'dt_out_uti',
     'Legenda do Campo':
       '52-Data em que o paciente saiu da Unidade de Terapia intensiva (UTI).',
     Tipo: 'Date DD/MM/AAAA',
     Categorias: 'Sem categoria',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
       'Campo Essencial. Habilitado se campo 47-Internado em UTI? for igual a 1. Data deve ser maior ou igual a 48-Data da entrada na UTI e menor ou igual a data da digitação (atual).',
   },
   {
-    'Nome do campo na base<br>de dados original': 'SUPORT_VEN',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'SUPORT_VEN',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'suport_ven',
     'Legenda do Campo': '53-O paciente fez uso de suporte ventilatório?',
     Tipo: 'Number',
-    Categorias:
-      '1-Sim, invasivo <br>2-Sim, não invasivo <br>3-Não <br>9-Ignorado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim, invasivo <br>2-Sim, não invasivo <br>3-Não <br>9-Ignorado',
+    Categorias: '1-Sim, invasivo\\n 2-Sim, não invasivo\\n 3-Não\\n 9-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim, invasivo\\n 2-Sim, não invasivo\\n 3-Não\\n 9-Ignorado',
     Descrição:
       'Campo EssencialValor 9 quando não preenchido ou marcado como Ignorado.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'RAIOX_RES',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'RAIOX_RES',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'raiox_res',
     'Legenda do Campo': '54-Informar resultado de Raio X de Tórax.',
     Tipo: 'Number',
     Categorias:
-      '1-Normal <br>2-Infiltrado intersticial n3-Consolidação <br>4-Misto <br>5-Outro <br>6-Não realizado <br>9-Ignorado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Normal <br>2-Infiltrado intersticial <br>3-Consolidação <br>4-Misto <br>5-Outro <br>6-Não realizado <br>9-Ignorado',
+      '1-Normal\\n 2-Infiltrado intersticial n3-Consolidação\\n 4-Misto\\n 5-Outro\\n 6-Não realizado\\n 9-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Normal\\n 2-Infiltrado intersticial\\n 3-Consolidação\\n 4-Misto\\n 5-Outro\\n 6-Não realizado\\n 9-Ignorado',
     Descrição:
       'Campo EssencialValor 9 quando não preenchido ou marcado como Ignorado.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'RAIOX_OUT',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'RAIOX_OUT',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'raiox_out',
     'Legenda do Campo':
       'Informar o resultado do RX de tórax se selecionado a opção 5-Outro.',
     Tipo: 'String',
     Categorias: 'Sem categoria',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
       'Campo Essencial. Habilitado de campo 51- Raio X de Tórax = 5 (Outro).',
   },
   {
-    'Nome do campo na base<br>de dados original': 'DT_RAIOX',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'DT_RAIOX',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'dt_raiox',
     'Legenda do Campo':
       '55-Se realizou RX de Tórax, especificar a data do exame.',
     Tipo: 'Date DD/MM/AAAA',
     Categorias: 'Sem categoria',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
       'Campo Essencial. Habilitado se campo 51- Raio X de Tórax for igual a 1, 2, 3, 4 ou 5.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'TOMO_RES',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'TOMO_RES',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'tomo_res',
     'Legenda do Campo': '56-Informar o resultado da tomografia.',
     Tipo: 'Number',
     Categorias:
-      '1-Tipico covid-19 <br>2- Indeterminado covid-19 <br>3- Atípico covid-19 <br>4- Negativo para Pneumonia<br>5- Outro  <br>6-Não realizado  <br>9-Ignorado<br>',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Tipico covid-19 <br>2- Indeterminado covid-19 <br>3- Atípico covid-19 <br> 4- Negativo para Pneumonia<br>5- Outro  <br>6-Não realizado  <br>9-Ignorado<br>',
+      '1-Tipico covid-19\\n 2- Indeterminado covid-19\\n 3- Atípico covid-19\\n 4- Negativo para Pneumonia\\n 5- Outro\\n 6-Não realizado\\n 9-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Tipico covid-19\\n 2- Indeterminado covid-19\\n 3- Atípico covid-19\\n  4- Negativo para Pneumonia\\n 5- Outro\\n 6-Não realizado\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Valor 9 quando não preenchido ou marcado como Ignorado.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'TOMO_OUT',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'TOMO_OUT',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'tomo_out',
     'Legenda do Campo':
       'Informar o resultado da tomografia se selecionado a opção 5-Outro',
     Tipo: 'String',
     Categorias: 'Sem categoria',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
       'Campo Essencial. Habilitado de campo 53- Aspecto Tomografia = 5 (Outro)',
   },
   {
-    'Nome do campo na base<br>de dados original': 'DT_TOMO',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'DT_TOMO',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'dt_tomo',
     'Legenda do Campo':
       '57-Se realizou tomografia, especificar a data do exame.',
     Tipo: 'Date DD/MM/AAAA',
     Categorias: 'Sem categoria',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
       'Campo Essencial. Habilitado se campo 53- Aspecto Tomografia for igual a 1, 2, 3, 4 ou 5.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'AMOSTRA',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'AMOSTRA',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'amostra',
     'Legenda do Campo':
       '58-Foi realizado coleta de amostra para realização de teste diagnóstico?',
     Tipo: 'String',
-    Categorias: '1-Sim <br>2-Não <br>9-Ignorado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim <br>2-Não <br> 9-Ignorado',
+    Categorias: '1-Sim\\n 2-Não\\n 9-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 2-Não\\n  9-Ignorado',
     Descrição:
       'Campo EssencialValor 9 quando não preenchido ou marcado como Ignorado.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'DT_COLETA',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'DT_COLETA',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'dt_coleta',
     'Legenda do Campo':
       '59-Data da coleta da amostra para realização do teste diagnóstico.',
     Tipo: 'Date DD/MM/AAAA',
     Categorias: 'Sem categoria',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
       'Campo Essencial. Habilitado de campo 55-Coletou amostra? = 1. Data deve ser maior ou igual a 2-Data de 1ºs sintomas e menor ou igual a data da digitação (atual).',
   },
   {
-    'Nome do campo na base<br>de dados original': 'TP_AMOSTRA',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'TP_AMOSTRA',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'tp_amostra',
     'Legenda do Campo':
       '60-Tipo da amostra clínica coletada para o teste diagnóstico.',
     Tipo: 'String',
     Categorias:
-      '1-Secreção de Naso orofaringe <br>2-Lavado Broco-alveolar <br>3-Tecido post-mortem <br>4-Outra, qual? <br>5-LCR <br>9-Ignorado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Secreção de Naso-orofaringe <br>2-Lavado Broco-alveolar <br>3-Tecido post-mortem <br>4-Outra, qual? <br>5-LCR <br>9-Ignorado',
+      '1-Secreção de Naso orofaringe\\n 2-Lavado Broco-alveolar\\n 3-Tecido post-mortem\\n 4-Outra, qual?\\n 5-LCR\\n 9-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Secreção de Naso-orofaringe\\n 2-Lavado Broco-alveolar\\n 3-Tecido post-mortem\\n 4-Outra, qual?\\n 5-LCR\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Habilitado de campo 55-Coletou amostra? = 1. Valor 9 quando não preenchido ou marcado como Ignorado.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'OUT_AMOST',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'OUT_AMOST',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'out_amost',
     'Legenda do Campo':
       '60-Descrição do tipo da amostra clínica, caso diferente das listadas nas categorias do campo.',
     Tipo: 'String',
     Categorias: 'Sem categoria',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
       'Campo Essencial. Campo habilitado se selecionado categoria 4-Outra, qual em Tipo de amostra.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'TP_TES_AN',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'TP_TES_AN',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'tp_tes_an',
     'Legenda do Campo': '62-Tipo do teste antigênico que foi realizado.',
     Tipo: 'Number',
-    Categorias: '1-Imunofluorescência (IF) <br>2- Teste rápido antigênico',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Imunofluorescência (IF) <br>2- Teste rápido antigênico<br>9-Ignorado',
+    Categorias: '1-Imunofluorescência (IF)\\n 2- Teste rápido antigênico',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Imunofluorescência (IF)\\n 2- Teste rápido antigênico\\n 9-Ignorado',
     Descrição: 'Campo Essencial. Valor 9 quando não preenchido.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'DT_RES_AN',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'DT_RES_AN',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'dt_res_an',
     'Legenda do Campo': '63-Data do resultado do teste antigênico.',
     Tipo: 'Date DD/MM/AAAA',
     Categorias: 'Sem categoria',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
       'Campo Essencial. Data deve ser maior ou igual a 56- Data da Coleta',
   },
   {
-    'Nome do campo na base<br>de dados original': 'RES_AN',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'RES_AN',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'res_an',
     'Legenda do Campo': '64-Resultado do Teste Antigênico',
     Tipo: 'String',
     Categorias:
-      '1-Positivo<br> 2-Negativo <br>3- Inconclusivo <br>4-Não realizado <br>5-Aguardando resultado <br>9-Ignorado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Positivo <br>2-Negativo <br>3- Inconclusivo <br>4-Não realizado <br>5-Aguardando resultado 9-Ignorado',
+      '1-Positivo\\n  2-Negativo\\n 3- Inconclusivo\\n 4-Não realizado\\n 5-Aguardando resultado\\n 9-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Positivo\\n 2-Negativo\\n 3- Inconclusivo\\n 4-Não realizado\\n 5-Aguardando resultado 9-Ignorado',
     Descrição:
       'Campo Essencial. Este campo virá marcado com 5-Aguardando Resultado e estará habilitado se o campo 55-Coletou amostra? = 1Valor 9 quando não preenchido ou marcado como Ignorado.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'LAB_AN',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'LAB_AN',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'lab_an',
     'Legenda do Campo':
       '65-Laboratório responsável pela liberação do resultado do teste antigênico.',
     Tipo: 'String',
     Categorias: 'Nomes dos Laboratórios cadastrados no sistema',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
-      'Campo Essencial. Habilitado se campo 61- Resultado do teste antigênico: estiver selecionado como 1-Positivo, 2- Negativo, 3- Inconclusivo ou 5- Aguardando resultado. Preenchendo o nome do Laboratório, o código é preenchido automaticamente, ou vice-versa.',
+      'Campo Essencial. Habilitado se campo 61- Resultado do teste antigênico: estiver selecionado como 1-Positivo\\n 2- Negativo\\n 3- Inconclusivo ou 5- Aguardando resultado. Preenchendo o nome do Laboratório, o código é preenchido automaticamente, ou vice-versa.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'POS_AN_FLU',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'POS_AN_FLU',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'pos_an_flu',
     'Legenda do Campo':
       '66-Resultado do Teste Antigênico que foi positivo para Influenza',
     Tipo: 'Number',
-    Categorias: '1-Sim<br>2-Não<br>9-Ignorado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim <br>2-Não <br>9-Ignorado',
+    Categorias: '1-Sim\\n 2-Não\\n 9-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 2-Não\\n 9-Ignorado',
     Descrição: 'Campo Essencial',
   },
   {
-    'Nome do campo na base<br>de dados original': 'TP_FLU_AN',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'TP_FLU_AN',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'tp_flu_an',
     'Legenda do Campo':
       '66-Resultado do Teste Antigênico, para o tipo de Influenza.',
     Tipo: 'Number',
-    Categorias: '1-Influenza A <br>2-Influenza B',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Influenza A <br> 2-Influenza B<br>9-Ignorado',
+    Categorias: '1-Influenza A\\n 2-Influenza B',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Influenza A\\n  2-Influenza B\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Habilitado se campo 63-Agente etiológico – Teste Antigênico: Positivo para Influenza? = 1. Valor 9 quando não preenchido.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'POS_AN_OUT',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'POS_AN_OUT',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'pos_an_out',
     'Legenda do Campo':
       '66-Resultado do Teste Antigênico, que foi positivo para outro vírus respiratório.',
     Tipo: 'Number',
-    Categorias: '1-Sim <br>2-Não <br>9-Ignorado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim <br>2-Não <br>9-Ignorado',
+    Categorias: '1-Sim\\n 2-Não\\n 9-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 2-Não\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Valor 9 quando não preenchido ou marcado como Ignorado.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'AN_SARS2',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'AN_SARS2',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'an_sars3',
     'Legenda do Campo': '66-Resultado do Teste Antigênico, para SARS-CoV-2.',
     Tipo: 'Number',
     Categorias: '1-marcado pelo usuário Vazio - não marcado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim<br>9-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Habilitado se campo 63-Agente etiológico, Teste Antigênico. Positivo para outros vírus? = 1. Valor 9 quando não preenchido.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'AN_VSR',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'AN_VSR',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'an_vsr',
     'Legenda do Campo':
       '66-Resultado do Teste Antigênico, para Vírus Sincicial Respiratório.',
     Tipo: 'Number',
     Categorias: '1-marcado pelo usuário Vazio - não marcado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim  <br>9-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Habilitado se campo 63-Agente etiológico, Teste Antigênico. Positivo para outros vírus? = 1. Valor 9 quando não preenchido.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'AN_PARA1',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'AN_PARA1',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'an_para2',
     'Legenda do Campo':
       '66-Resultado do Teste Antigênico, para Parainfluenza 1.',
     Tipo: 'Number',
     Categorias: '1-marcado pelo usuário Vazio - não marcado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim<br>9-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Habilitado se campo 63-Agente etiológico, Teste Antigênico. Positivo para outros vírus? = 1. Valor 9 quando não preenchido.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'AN_PARA2',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'AN_PARA2',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'an_para3',
     'Legenda do Campo': '66-Resultado do Teste Antigênico. Parainfluenza 2.',
     Tipo: 'Number',
     Categorias: '1-marcado pelo usuário Vazio - não marcado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim<br>9-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Habilitado se campo 63-Agente etiológico, Teste Antigênico. Positivo para outros vírus? = 1. Valor 9 quando não preenchido.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'AN_PARA3',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'AN_PARA3',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'an_para4',
     'Legenda do Campo': '66- Resultado do Teste Antigênico. Parainfluenza 3.',
     Tipo: 'Number',
     Categorias: '1-marcado pelo usuário Vazio - não marcado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim<br>9-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Habilitado se campo 63-Agente etiológico, Teste Antigênico. Positivo para outros vírus? = 1. Valor 9 quando não preenchido.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'AN_ADENO',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'AN_ADENO',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'an_adeno',
     'Legenda do Campo': '66-Resultado do Teste Antigênico. Adenovírus.',
     Tipo: 'Number',
     Categorias: '1-marcado pelo usuário Vazio - não marcado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim<br>9-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Habilitado se campo 63-Agente etiológico, Teste Antigênico. Positivo para outros vírus? = 1. Valor 9 quando não preenchido.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'AN_OUTRO',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'AN_OUTRO',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'an_outro',
     'Legenda do Campo':
       '66-Resultado do Teste Antigênico. Outro vírus respiratório.',
     Tipo: 'Number',
     Categorias: '1-marcado pelo usuário Vazio - não marcado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim<br>9-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Habilitado se campo 63-Agente etiológico, Teste Antigênico. Positivo para outros vírus? = 1. Valor 9 quando não preenchido.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'DS_AN_OUT',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'DS_AN_OUT',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'ds_an_out',
     'Legenda do Campo':
       '66-Nome do outro vírus respiratório identificado pelo Teste Antigênico.',
     Tipo: 'String',
     Categorias: 'Sem categoria',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
       'Campo Essencial. Habilitado se campo 63-Agente etiológico, Teste Antigênico. Positivo para outros vírus? = 1.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'PCR_RESUL',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'PCR_RESUL',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'pcr_resul',
     'Legenda do Campo':
       '67-Resultado do teste de RT-PCR/outro método por Biologia Molecular.',
     Tipo: 'Number',
     Categorias:
-      '1-Detectável <br>2-Não Detectável <br>3-Inconclusivo <br>4-Não Realizado <br>5-Aguardando Resultado <br>9-Ignorado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Detectável <br>2-Não Detectável <br>3-Inconclusivo <br>4-Não Realizado<br>5-Aguardando Resultado <br>9-Ignorado',
+      '1-Detectável\\n 2-Não Detectável\\n 3-Inconclusivo\\n 4-Não Realizado\\n 5-Aguardando Resultado\\n 9-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Detectável\\n 2-Não Detectável\\n 3-Inconclusivo\\n 4-Não Realizado\\n 5-Aguardando Resultado\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Este campo virá marcado com 5-Aguardando Resultado e estará habilitado se o campo 55-Coletou amostra? = 1. Valor 9 quando não preenchido ou marcado como Ignorado.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'DT_PCR',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'DT_PCR',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'dt_pcr',
     'Legenda do Campo':
       '68-Data do Resultado RT-PCR/outro método por Biologia Molecular',
     Tipo: 'Date DD/MM/AAAA',
     Categorias: 'Sem categoria',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
-      'Campo Essencial. Campo habilitado se selecionado categoria 1-Detectável, 2-Não Detectável ou 3-Inconclusivo em Resultado da RT-PCR/outro método por Biologia Molecular. Data deve ser >= a data da coleta- campo 56.',
+      'Campo Essencial. Campo habilitado se selecionado categoria 1-Detectável\\n 2-Não Detectável ou 3-Inconclusivo em Resultado da RT-PCR/outro método por Biologia Molecular. Data deve ser >= a data da coleta- campo 56.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'POS_PCRFLU',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'POS_PCRFLU',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'pos_pcrflu',
     'Legenda do Campo': '69-Resultado da RT-PCR foi positivo para Influenza',
     Tipo: 'Number',
-    Categorias: '1-Sim <br>2-Não <br>9-Ignorado<br>',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim <br>2-Não <br>9-Ignorado<br>',
+    Categorias: '1-Sim\\n 2-Não\\n 9-Ignorado\\n',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 2-Não\\n 9-Ignorado,',
     Descrição:
       'Campo Essencial Valor 9 quando não preenchido ou marcado como Ignorado.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'TP_FLU_PCR',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'TP_FLU_PCR',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'tp_flu_pcr',
     'Legenda do Campo':
       '69-Resultado diagnóstico do RT PCR para o tipo de Influenza.',
     Tipo: 'Number',
-    Categorias: '1-Influenza A <br>2-Influenza B',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Influenza A <br>2-Influenza B<br>9-Ignorado',
+    Categorias: '1-Influenza A\\n 2-Influenza B',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Influenza A\\n 2-Influenza B\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Habilitado se campo 66-Agente etiológico – RT_PCR/outro método por Biologia Molecular: Positivo para Influenza? = 1. Valor 9 quando não preenchido.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'PCR_FLUASU',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'PCR_FLUASU',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'pcr_fluasu',
     'Legenda do Campo': '69-Subtipo para Influenza A.',
     Tipo: 'Number',
     Categorias:
-      '1-Influenza A(H1N1)pdm09 <br>2-Influenza A (H3N2)  <br>3-Influenza A não subtipado  <br>4-Influenza A não subtipável  <br>5-Inconclusivo  <br>6-Outro, especifique:',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Influenza A(H1N1)pdm09  <br>2-Influenza A (H3N2)  <br>3-Influenza A não subtipado  <br>4-Influenza A não subtipável  <br>5-Inconclusivo  <br>6-Outro, especifique: <br>9-Ignorado',
+      '1-Influenza A(H1N1)pdm09\\n 2-Influenza A (H3N2)\\n 3-Influenza A não subtipado\\n 4-Influenza A não subtipável\\n 5-Inconclusivo\\n 6-Outro, especifique:',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Influenza A(H1N1)pdm09\\n 2-Influenza A (H3N2)\\n 3-Influenza A não subtipado\\n 4-Influenza A não subtipável\\n 5-Inconclusivo\\n 6-Outro, especifique:\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Habilitado se campo 66-Agente etiológico – RT_PCR/outro método por Biologia Molecular: Se sim, qual Influenza? = 1. Valor 9 quando não preenchido.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'FLUASU_OUT',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'FLUASU_OUT',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'fluasu_out',
     'Legenda do Campo': '69-Outro subtipo para Influenza A.',
     Tipo: 'String',
     Categorias: 'Sem categoria',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
       'Campo Essencial. Habilitado se Agente etiológico – RT-PCR/outro método por Biologia Molecular: Se Influenza A, qual subtipo? = 6.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'PCR_FLUBLI',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'PCR_FLUBLI',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'pcr_flubli',
     'Legenda do Campo': '69-Linhagem para Influenza B.',
     Tipo: 'Number',
     Categorias:
-      '1-Victoria  <br>2-Yamagatha  <br>3-Não realizado  <br>4-Inconclusivo  <br>5-Outro, especifique:',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Victoria  <br>2-Yamagatha  <br>3-Não realizado  <br>4-Inconclusivo  <br>5-Outro, especifique: <br>9-Ignorado',
+      '1-Victoria\\n 2-Yamagatha\\n 3-Não realizado\\n 4-Inconclusivo\\n 5-Outro\\n especifique:',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Victoria\\n 2-Yamagatha\\n 3-Não realizado\\n 4-Inconclusivo\\n 5-Outro, especifique:\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Habilitado se campo 66-Agente etiológico – RT_PCR/outro método por Biologia Molecular: Se sim, qual Influenza? = 2. Valor 9 quando não preenchido.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'FLUBLI_OUT',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'FLUBLI_OUT',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'flubli_out',
     'Legenda do Campo': '69-Outra linhagem para Influenza B.',
     Tipo: 'String',
     Categorias: 'Sem categoria',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
       'Campo Essencial. Habilitado se 66- Agente etiológico – RT-PCR/outro método por Biologia Molecular: Se Influenza B, qual linhagem? = 5.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'POS_PCROUT',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'POS_PCROUT',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'pos_pcrout',
     'Legenda do Campo':
       '69-Resultado da RT PCR foi positivo para outro vírus respiratório',
     Tipo: 'Number',
-    Categorias: '1-Sim <br>2-Não <br>9-Ignorado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim <br>2-Não <br>9-Ignorado',
+    Categorias: '1-Sim\\n 2-Não\\n 9-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 2-Não\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Valor 9 quando não preenchido ou marcado como Ignorado.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'PCR_SARS2',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'PCR_SARS2',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'pcr_sars3',
     'Legenda do Campo': '69-Resultado diagnóstico do RT PCR para (SARS-CoV 2).',
     Tipo: 'Number',
-    Categorias: '1-marcado pelo usuário <br>Vazio - não marcado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim<br>9-Ignorado',
+    Categorias: '1-marcado pelo usuário, Vazio - não marcado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Habilitado se campo 66- Agente etiológico – RT-PCR/outro método por Biologia Molecular: Positivo para outros vírus? = 1. Valor 9 quando não preenchido.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'PCR_VSR',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'PCR_VSR',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'pcr_vsr',
     'Legenda do Campo':
       '69-Resultado diagnóstico do RT PCR para Vírus Sincicial Respiratório..',
     Tipo: 'Number',
-    Categorias: '1-marcado pelo usuário <br>Vazio - não marcado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim<br>9-Ignorado',
+    Categorias: '1-marcado pelo usuário, Vazio - não marcado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Habilitado se campo 66- Agente etiológico – RT-PCR/outro método por Biologia Molecular: Positivo para outros vírus? = 1. Valor 9 quando não preenchido.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'PCR_PARA1',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'PCR_PARA1',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'pcr_para2',
     'Legenda do Campo':
       '69-Resultado diagnóstico do RT PCR para Parainfluenza 1.',
     Tipo: 'Number',
-    Categorias: '1-marcado pelo usuário<br>Vazio - não marcado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim<br>9-Ignorado',
+    Categorias: '1-marcado pelo usuário, Vazio - não marcado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Habilitado se campo 66- Agente etiológico – RT-PCR/outro método por Biologia Molecular: Positivo para outros vírus? = 1. Valor 9 quando não preenchido.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'PCR_PARA2',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'PCR_PARA2',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'pcr_para3',
     'Legenda do Campo':
       '69-Resultado diagnóstico do RT PCR para Parainfluenza 2.',
     Tipo: 'Number',
-    Categorias: '1-marcado pelo usuário<br>Vazio - não marcado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim<br>9-Ignorado',
+    Categorias: '1-marcado pelo usuário, Vazio - não marcado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Habilitado se campo 66- Agente etiológico – RT-PCR/outro método por Biologia Molecular: Positivo para outros vírus? = 1. Valor 9 quando não preenchido.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'PCR_PARA3',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'PCR_PARA3',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'pcr_para4',
     'Legenda do Campo':
       '69-Resultado diagnóstico do RT PCR para Parainfluenza 3.',
     Tipo: 'Number',
-    Categorias: '1-marcado pelo usuário<br>Vazio - não marcado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim<br>9-Ignorado',
+    Categorias: '1-marcado pelo usuário, Vazio - não marcado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Habilitado se campo 66- Agente etiológico – RT-PCR/outro método por Biologia Molecular: Positivo para outros vírus? = 1. Valor 9 quando não preenchido.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'PCR_PARA4',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'PCR_PARA4',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'pcr_para5',
     'Legenda do Campo':
       '69-Resultado diagnóstico do RT PCR para Parainfluenza 4.',
     Tipo: 'Number',
-    Categorias: '1-marcado pelo usuário<br>Vazio - não marcado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim<br>9-Ignorado',
+    Categorias: '1-marcado pelo usuário, Vazio - não marcado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Habilitado se campo 66- Agente etiológico – RT-PCR/outro método por Biologia Molecular: Positivo para outros vírus? = 1. Valor 9 quando não preenchido.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'PCR_ADENO',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'PCR_ADENO',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'pcr_adeno',
     'Legenda do Campo': '69-Resultado diagnóstico do RT PCR para Adenovírus.',
     Tipo: 'Number',
-    Categorias: '1-marcado pelo usuário<br>Vazio - não marcado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim<br>9-Ignorado',
+    Categorias: '1-marcado pelo usuário, Vazio - não marcado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Habilitado se campo 66- Agente etiológico – RT-PCR/outro método por Biologia Molecular: Positivo para outros vírus? = 1. Valor 9 quando não preenchido.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'PCR_METAP',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'PCR_METAP',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'pcr_metap',
     'Legenda do Campo':
       '69-Resultado diagnóstico do RT PCR para Metapneumovírus.',
     Tipo: 'Number',
-    Categorias: '1-marcado pelo usuário<br>Vazio - não marcado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim<br>9-Ignorado',
+    Categorias: '1-marcado pelo usuário, Vazio - não marcado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Habilitado se campo 66- Agente etiológico – RT-PCR/outro método por Biologia Molecular: Positivo para outros vírus? = 1. Valor 9 quando não preenchido.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'PCR_BOCA',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'PCR_BOCA',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'pcr_boca',
     'Legenda do Campo': '69-Resultado diagnóstico do RT PCR para Bocavírus.',
     Tipo: 'Number',
-    Categorias: '1-marcado pelo usuário<br>Vazio - não marcado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim<br>9-Ignorado',
+    Categorias: '1-marcado pelo usuário, Vazio - não marcado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Habilitado se campo 66- Agente etiológico – RT-PCR/outro método por Biologia Molecular: Positivo para outros vírus? = 1. Valor 9 quando não preenchido.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'PCR_RINO',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'PCR_RINO',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'pcr_rino',
     'Legenda do Campo': '69-Resultado diagnóstico do RT PCR para Rinovírus.',
     Tipo: 'Number',
-    Categorias: '1-marcado pelo usuário<br>Vazio - não marcado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim<br>9-Ignorado',
+    Categorias: '1-marcado pelo usuário, Vazio - não marcado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Habilitado se campo 66- Agente etiológico – RT-PCR/outro método por Biologia Molecular: Positivo para outros vírus? = 1. Valor 9 quando não preenchido.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'PCR_OUTRO',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'PCR_OUTRO',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'pcr_outro',
     'Legenda do Campo':
       '69-Resultado diagnóstico do RT PCR para Outro vírus respiratório.',
     Tipo: 'Number',
-    Categorias: '1-marcado pelo usuário<br>Vazio - não marcado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Sim<br>9-Ignorado',
+    Categorias: '1-marcado pelo usuário, Vazio - não marcado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Sim\\n 9-Ignorado',
     Descrição:
       'Campo Essencial. Habilitado se campo 66- Agente etiológico – RT-PCR/outro método por Biologia Molecular: Positivo para outros vírus? = 1. Valor 9 quando não preenchido.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'DS_PCR_OUT',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'DS_PCR_OUT',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'ds_pcr_out',
     'Legenda do Campo':
       '69-Nome do outro vírus respiratório identificado pelo RT-PCR.',
     Tipo: 'String',
     Categorias: 'Sem categoria',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
       'Campo Essencial. Habilitado se 66- Agente etiológico – RT-PCR/outro método por Biologia Molecular: Outro vírus respiratório, especifique:',
   },
   {
-    'Nome do campo na base<br>de dados original': 'TP_AM_SOR',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'TP_AM_SOR',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'tp_am_sor',
     'Legenda do Campo': '71-Tipo de amostra sorológica que foi coletada.',
     Tipo: 'Number',
-    Categorias: '1- Sangue/plasma/soro <br>2-Outra, qual? <br>9-Ignorado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1- Sangue/plasma/soro <br>2-Outra, qual? <br>9-Ignorado',
+    Categorias: '1- Sangue/plasma/soro\\n 2-Outra, qual?\\n 9-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1- Sangue/plasma/soro\\n 2-Outra, qual?\\n 9-Ignorado',
     Descrição:
       'Campo Essencial Valor 9 quando não preenchido ou marcado como Ignorado.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'SOR_OUT',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'SOR_OUT',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'sor_out',
     'Legenda do Campo':
       '71-Descrição do tipo da amostra clínica, caso diferente das listadas na categoria um (1) do campo.',
     Tipo: 'String',
     Categorias: 'Sem categoria',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
       'Campo Essencial. Campo habilitado se selecionado categoria 2-Outra, qual? em Tipo de Amostra Sorológica.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'DT_CO_SOR',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'DT_CO_SOR',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'dt_co_sor',
     'Legenda do Campo':
       '72-Data da coleta do material para diagnóstico por Sorologia.',
     Tipo: 'Date DD/MM/AAAA',
     Categorias: 'Sem categoria',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
       'Campo Essencial. Habilitado de campo 55-Coletou amostra? = 1. Data deve ser maior ou igual a 2-Data de 1ºs sintomas e menor ou igual a data da digitação (atual).',
   },
   {
-    'Nome do campo na base<br>de dados original': 'TP_SOR',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'TP_SOR',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'tp_sor',
     'Legenda do Campo': '73-Tipo do Teste Sorológico que foi realizado',
     Tipo: 'Number',
     Categorias:
-      '1-Teste rápido <br>2- Elisa <br>3- Quimiluminescência <br>4- Outro, qual',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Teste rápido <br>2- Elisa <br>3- Quimiluminescência <br>4- Outro, qual<br>9- Ignorado',
+      '1-Teste rápido\\n 2- Elisa\\n 3- Quimiluminescência\\n 4- Outro, qual',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Teste rápido\\n 2- Elisa\\n 3- Quimiluminescência\\n 4- Outro, qual\\n 9- Ignorado',
     Descrição: 'Campo Essencial Valor 9 quando não preenchido.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'OUT_SOR',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'OUT_SOR',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'out_sor',
     'Legenda do Campo':
       '73-Descrição do tipo de Teste Sorológico/Outro tipo de amostra Sorológica',
     Tipo: 'String',
     Categorias: 'Sem categoria',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
       'Campo Essencial Campo habilitado se selecionado categoria 4-Outro, qual?  em Tipo de Sorologia. Coluna concatenada com SOR_OUT pois se referem ao mesmo campo no formulário. Os valores foram separados por /.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'RES_IGG',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'RES_IGG',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'res_igg',
     'Legenda do Campo': '73-Resultado da Sorologia para SARS-CoV-2 - IgG',
     Tipo: 'Number',
     Categorias:
-      '1-Positivo <br>2-Negativo <br>3- Inconclusivo <br>4-Não realizado <br>5-Aguarda resultado <br>9 Ignorado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Positivo <br>2-Negativo <br>3- Inconclusivo <br>4-Não realizado <br>5-Aguarda resultado <br>9 Ignorado',
+      '1-Positivo\\n 2-Negativo\\n 3- Inconclusivo\\n 4-Não realizado\\n 5-Aguarda resultado\\n 9 Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Positivo\\n 2-Negativo\\n 3- Inconclusivo\\n 4-Não realizado\\n 5-Aguarda resultado\\n 9 Ignorado',
     Descrição:
       'Campo EssencialValor 9 quando não preenchido ou marcado como Ignorado.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'RES_IGM',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'RES_IGM',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'res_igm',
     'Legenda do Campo': '73-Resultado da Sorologia para SARS-CoV-2 - IgM',
     Tipo: 'Number',
     Categorias:
-      '1-Positivo <br>2-Negativo<br>3- Inconclusivo <br>4-Não realizado <br>5-Aguarda resultado <br>9 Ignorado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Positivo <br>2-Negativo <br>3- Inconclusivo <br>4-Não realizado <br>5-Aguarda resultado <br>9 Ignorado',
+      '1-Positivo\\n 2-Negativo\\n 3- Inconclusivo\\n 4-Não realizado\\n 5-Aguarda resultado\\n 9 Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Positivo\\n 2-Negativo\\n 3- Inconclusivo\\n 4-Não realizado\\n 5-Aguarda resultado\\n 9 Ignorado',
     Descrição:
       'Campo EssencialValor 9 quando não preenchido ou marcado como Ignorado.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'RES_IGA',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'RES_IGA',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'res_iga',
     'Legenda do Campo': '73-Resultado da Sorologia para SARS-CoV-2 - IgA',
     Tipo: 'Number',
     Categorias:
-      '1-Positivo <br>2-Negativo<br>3- Inconclusivo <br>4-Não realizado <br>5-Aguarda resultado <br>9 Ignorado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Positivo <br>2-Negativo <br>3- Inconclusivo <br>4-Não realizado <br>5-Aguarda resultado <br>9 Ignorado',
+      '1-Positivo\\n 2-Negativo\\n 3- Inconclusivo\\n 4-Não realizado\\n 5-Aguarda resultado\\n 9 Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Positivo\\n 2-Negativo\\n 3- Inconclusivo\\n 4-Não realizado\\n 5-Aguarda resultado\\n 9 Ignorado',
     Descrição:
       'Campo EssencialValor 9 quando não preenchido ou marcado como Ignorado.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'DT_RES',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'DT_RES',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'dt_res',
     'Legenda do Campo': '74-Data do Resultado do Teste Sorológico',
     Tipo: 'Date DD/MM/AAAA',
     Categorias: 'Sem categoria',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
       'Campo Essencial. Data deve ser maior ou igual a 69- Data da Coleta',
   },
   {
-    'Nome do campo na base<br>de dados original': 'CLASSI_FIN',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'CLASSI_FIN',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'class_fin',
     'Legenda do Campo':
       '74-Diagnóstico final do caso. Se tiver resultados divergentes entre as metodologias laboratoriais, priorizar o resultado do RT PCR.',
     Tipo: 'String',
     Categorias:
-      '1-SRAG por influenza <br>2-SRAG por outro vírus respiratório <br>3-SRAG por outro agente etiológico, qual: <br>4-SRAG não especificado <br>5-SRAG por covid-19',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-SRAG por influenza <br>2-SRAG por outro vírus respiratório <br>3-SRAG por outro agente<br> etiológico, qual: <br>4-SRAG não especificado <br>5-SRAG por covid-19<br>9-Ignorado',
+      '1-SRAG por influenza\\n 2-SRAG por outro vírus respiratório\\n 3-SRAG por outro agente etiológico, qual:\\n 4-SRAG não especificado\\n 5-SRAG por covid-19',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-SRAG por influenza\\n 2-SRAG por outro vírus respiratório\\n 3-SRAG por outro agente etiológico, qual:\\n 4-SRAG não especificado\\n 5-SRAG por covid-19\\n 9-Ignorado',
     Descrição: 'Campo Obrigatório. Valor 9 quando não preenchido',
   },
   {
-    'Nome do campo na base<br>de dados original': 'CLASSI_OUT',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'CLASSI_OUT',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'classi_out',
     'Legenda do Campo':
       '75-Descrição de qual outro agente etiológico foi identificado',
     Tipo: 'String',
     Categorias: 'Sem categoria',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
       'Campo Obrigatório.Se campo 72-Classificação final do caso = 3. Habilitado se campo 72-Classificação final do caso = 3.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'CRITERIO',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'CRITERIO',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'criterio',
     'Legenda do Campo': '76-Indicar qual o critério de confirmação.',
     Tipo: 'String',
     Categorias:
-      '1. Laboratorial <br>2. Clínico Epidemiológico <br>3. Clínico <br>4. Clínico Imagem',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1. Laboratorial <br>2. Clínico Epidemiológico <br>3. Clínico <br>4. Clínico Imagem<br>9. Ignorado',
+      '1. Laboratorial\\n 2. Clínico Epidemiológico\\n 3. Clínico\\n 4. Clínico Imagem',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1. Laboratorial\\n 2. Clínico Epidemiológico\\n 3. Clínico\\n 4. Clínico Imagem\\n 9. Ignorado',
     Descrição: 'Campo Essencial. Valor 9 quando não preenchido.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'EVOLUCAO',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'EVOLUCAO',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'ev_caso',
     'Legenda do Campo': '77-Evolução do caso',
     Tipo: 'String',
-    Categorias:
-      '1-Cura <br>2-Óbito <br>3- Óbito por outras causas <br>9-Ignorado',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
-      '1-Cura <br>2-Óbito <br>3- Óbito por outras causas <br>9-Ignorado',
+    Categorias: '1-Cura\\n 2-Óbito\\n 3- Óbito por outras causas\\n 9-Ignorado',
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
+      '1-Cura\\n 2-Óbito\\n 3- Óbito por outras causas\\n 9-Ignorado',
     Descrição:
       'Campo Essencial Valor 9 quando não preenchido ou marcado como Ignorado.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'DT_EVOLUCA',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'DT_EVOLUCA',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'dt_evoluca',
     'Legenda do Campo': '78-Data da alta ou óbito',
     Tipo: 'Date DD/MM/AAAA',
     Categorias: 'Sem categoria',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
       'Campo Essencial. Data da alta ou do óbito deve ser > ou = a data dos primeiros sintomas e <= a data da digitação (atual). Habilitado se campo 74- Evolução do caso = 1 ou 2.',
   },
   {
-    'Nome do campo na base<br>de dados original': 'DT_ENCERRA',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'DT_ENCERRA',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'dt_enc',
     'Legenda do Campo': '79-Data do encerramento do caso.',
     Tipo: 'Date DD/MM/AAAA',
     Categorias: 'Sem categoria',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
       'Campo Obrigatório.Se o campo 72- Classificação final do caso estiver preenchido. Data do encerramento deve ser > ou = a data do preenchimento. Data do encerramento deve ser < ou = a data da digitação (atual).',
   },
   {
-    'Nome do campo na base<br>de dados original': 'OBSERVA',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'OBSERVA',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'observa',
     'Legenda do Campo':
       '81-Outras observações sobre o paciente consideradas pertinentes.',
     Tipo: 'String',
     Categorias: 'Sem categoria',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição: 'Campo Opcional',
   },
   {
-    'Nome do campo na base<br>de dados original': 'DT_DIGITA',
-    'Nome do campo depois da<br>harmonização (variável<br>nomeada pela PAMEpi)':
+    'Nome do campo na base de dados original': 'DT_DIGITA',
+    'Nome do campo depois da harmonização (váriável nomeada pela PAMEpi)':
       'dt_digita',
     'Legenda do Campo': 'Data de inclusão do registro no sistema.',
     Tipo: 'Date DD/MM/AAAA',
     Categorias: 'Sem categoria',
-    'Valores que aparecem dentro<br>da variável com respectiva<br>harmonização dada pela PAMEpi':
+    'Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi':
       'Sem categoria',
     Descrição:
       'Campo Interno. Preenchido automaticamente pelo sistema com a data da digitação da ficha. Não é a data de preenchimento da ficha manualmente e sim a data em que é digitado no sistema. Não é atualizada se houver alterações posteriores de dados.',
