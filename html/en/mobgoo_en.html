@@ -119,14 +119,14 @@
 
                 <ul class="dropdown-menu sub-drop">
                   <li class="dropdown-item drop-item">
-                    <a href="sivep_en.html" class="nav-link submenu">SG</a>
+                    <a href="sg_en.html" class="nav-link submenu">FS</a>
                   </li>
                   <li class="dropdown-item drop-item">
-                    <a href="srag_en.html" class="nav-link submenu">SRAG</a>
+                    <a href="srag_en.html" class="nav-link submenu">SARS</a>
                   </li>
                   <li class="dropdown-item drop-item">
-                    <a href="brio_en.html" class="nav-link submenu"
-                      >Brasil IO</a
+                    <a href="wcota_en.html" class="nav-link submenu"
+                      >WCota</a
                     >
                   </li>
                   <li class="dropdown-item drop-item">
@@ -134,11 +134,7 @@
                       >Vaccination</a
                     >
                   </li>
-                  <li class="dropdown-item drop-item">
-                    <a href="hospital_en.html" class="nav-link submenu">
-                      Hospital Occupancy
-                    </a>
-                  </li>
+                  
                 </ul>
               </div>
               <div
@@ -343,25 +339,14 @@
                       >Validation</a
                     >
                   </li>
-                  <li class="dropdown-item drop-item sub-drop disabled">
-                    <a href="simula_en.html" class="nav-link submenu isDisabled"
-                      >Simulation</a
-                    >
-                  </li>
-                </ul>
+                         </ul>
               </div>
-              <div class="dropdown-item drop-item disabled">
+             
+              <div class="dropdown-item drop-item ">
                 <a
-                  href="municipios_en.html"
-                  class="itemcol nav-link submenu isDisabled"
-                  >Cities</a
-                >
-              </div>
-              <div class="dropdown-item drop-item disabled">
-                <a
-                  href="reg_sau_en.html"
-                  class="itemcol nav-link submenu isDisabled"
-                  >Regions</a
+                  href="dashboard_en.html"
+                  class="itemcol nav-link submenu "
+                  >Simulation</a
                 >
               </div>
               <div class="dropdown-item drop-item disabled">
@@ -536,14 +521,12 @@
     <h2 class="data">Data and Resources</h2>
     <div class="dado-subitem">
       <div class="media download">
-        <div class="media-left">
+      
           <h3 class="data">
             Data and variable dictionary
           </h3>
-        </div>
-        <div class="media-right">
-          <a href="https://github.com/PAMepi/PAMepi_scripts_datalake" class="btn btn-info" target="_blank">Download</a>
-        </div>
+  
+  
       </div>
 
       <div class="data-in">
@@ -552,7 +535,15 @@
           <table id="tableExp" cellpadding="2" cellspacing="2" border="1" class="table-data data"></table>
         </div>
 
-        <h4 class="data">Data dictionary</h4>
+          <h4 class="data">
+            Data dictionary
+            <a
+              href=""
+              class="btn btn-info float-right mr-3 disabled"
+              target="_blank"
+              >Download</a
+            >
+          </h4>
         <div class="table-div">
           <table id="tableDic" cellpadding="2" cellspacing="2" border="1" class="table-data dic"></table>
         </div>
@@ -620,7 +611,7 @@
       }
     }
 
-    lines = [0,1, 2];
+   
     ncols = dicMobGooEN.length;
 
     tableDic = document.getElementById('tableDic');
@@ -633,18 +624,18 @@
     }
     let col_name = '';
     // fill table with data
-    for (let [i, lin] of lines.entries()) {
+    for (let i = 0; i < Object.keys(dicXXX[0]).length; i++) {
       row = tableDic.insertRow(i);
       cell = row.insertCell(row);
       cell.outerHTML = `<th class="headcol">${
-          Object.keys(dicMobGooEN['0'])[lin]
+          Object.keys(dicMobGooEN['0'])[i]
         }</th>`;
       ncol = 1;
       for (let col = 0; col < ncols; col++) {
         col_name = Object.values(dicMobGooEN[col.toString()])[5];
 
         cell = row.insertCell(ncol);
-        cell.outerHTML = dicValue(lin, col);
+        cell.outerHTML = dicValue(i, col);
         ncol++;
       }
     }

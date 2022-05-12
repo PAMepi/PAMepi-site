@@ -149,25 +149,18 @@
 
                   <ul class="dropdown-menu sub-drop">
                     <li class="dropdown-item drop-item">
-                      <a href="sivep_en.html" class="nav-link submenu">SG</a>
+                      <a href="sg_en.html" class="nav-link submenu">FS</a>
                     </li>
                     <li class="dropdown-item drop-item">
-                      <a href="srag_en.html" class="nav-link submenu">SRAG</a>
+                      <a href="srag_en.html" class="nav-link submenu">SARS</a>
                     </li>
                     <li class="dropdown-item drop-item">
-                      <a href="brio_en.html" class="nav-link submenu"
-                        >Brasil IO</a
-                      >
+                      <a href="wcota_en.html" class="nav-link submenu">WCota</a>
                     </li>
                     <li class="dropdown-item drop-item">
                       <a href="vacina_en.html" class="nav-link submenu"
                         >Vaccination</a
                       >
-                    </li>
-                    <li class="dropdown-item drop-item">
-                      <a href="hospital_en.html" class="nav-link submenu">
-                        Hospital Occupancy
-                      </a>
                     </li>
                   </ul>
                 </div>
@@ -345,27 +338,11 @@
                         >Validation</a
                       >
                     </li>
-                    <li class="dropdown-item drop-item sub-drop disabled">
-                      <a
-                        href="simula_en.html"
-                        class="nav-link submenu isDisabled"
-                        >Simulation</a
-                      >
-                    </li>
                   </ul>
                 </div>
-                <div class="dropdown-item drop-item disabled">
-                  <a
-                    href="municipios_en.html"
-                    class="itemcol nav-link submenu isDisabled"
-                    >Cities</a
-                  >
-                </div>
-                <div class="dropdown-item drop-item disabled">
-                  <a
-                    href="reg_sau_en.html"
-                    class="itemcol nav-link submenu isDisabled"
-                    >Regions</a
+                <div class="dropdown-item drop-item">
+                  <a href="dashboard_en.html" class="itemcol nav-link submenu"
+                    >Simulation</a
                   >
                 </div>
                 <div class="dropdown-item drop-item disabled">
@@ -635,19 +612,7 @@
       <h2 class="data">Data and Resources</h2>
       <div class="dado-subitem">
         <div class="media download">
-          <div class="media-left">
-            <h3 class="data">
-              Data and variable dictionary (Only in Portuguese)
-            </h3>
-          </div>
-          <div class="media-right">
-            <a
-              href="https://github.com/PAMepi/PAMepi_scripts_datalake"
-              class="btn btn-info"
-              target="_blank"
-              >Download</a
-            >
-          </div>
+          <h3 class="data">Data and variable dictionary</h3>
         </div>
 
         <div class="data-in">
@@ -662,16 +627,6 @@
             ></table>
           </div>
 
-          <h4 class="data">Data dictionary - Air connections</h4>
-          <div class="table-div">
-            <table
-              id="tableDic"
-              cellpadding="2"
-              cellspacing="2"
-              border="1"
-              class="table-data dic"
-            ></table>
-          </div>
           <h4 class="data">Data explorer - Roads and Fluvial</h4>
           <div class="table-div">
             <table
@@ -682,7 +637,33 @@
               class="table-data data"
             ></table>
           </div>
-          <h4 class="data">Data dictionary - Road and fluvial connections</h4>
+          <h4 class="data">
+            Data dictionary - Air connections
+            <a
+              href=""
+              class="btn btn-info float-right mr-3 disabled"
+              target="_blank"
+              >Download</a
+            >
+          </h4>
+          <div class="table-div">
+            <table
+              id="tableDic"
+              cellpadding="2"
+              cellspacing="2"
+              border="1"
+              class="table-data dic"
+            ></table>
+          </div>
+          <h4 class="data">
+            Data dictionary - Road and fluvial connections
+            <a
+              href=""
+              class="btn btn-info float-right mr-3 disabled"
+              target="_blank"
+              >Download</a
+            >
+          </h4>
           <div class="table-div">
             <table
               id="tableDic2"
@@ -729,7 +710,7 @@
       </div>
 
       <div class="copyrights row align-items-center justify-content-center">
-        PAMEpi <img src="img/no-virus.svg" class="filter-virus" />2022
+        PAMEpi <img src="../img/no-virus.svg" class="filter-virus" />2022
       </div>
     </footer>
 
@@ -740,7 +721,7 @@
       let ncols = Object.keys(sampleAirIBGE['0']).length;
       let tableExp = document.getElementById('tableExp');
       let row;
-
+      // air
       function cellValue(lin, col) {
         if (Object.keys(sampleAirIBGE[lin.toString()])[col]) {
           return `${Object.values(sampleAirIBGE[lin.toString()])[col]}`;
@@ -769,35 +750,6 @@
         }
       }
 
-      lines = [0, 1, 2];
-      ncols = dicAirIBGE.length;
-
-      tableDic = document.getElementById('tableDic');
-
-      function dicValue(lin, col) {
-        if (Object.keys(dicAirIBGE[col.toString()])[lin]) {
-          return `<td >${Object.values(dicAirIBGE[col.toString()])[lin]} </td>`;
-        }
-        return '-';
-      }
-      let col_name = '';
-      // fill table with data
-      for (let [i, lin] of lines.entries()) {
-        row = tableDic.insertRow(i);
-        cell = row.insertCell(row);
-        cell.outerHTML = `<th class="headcol">${
-          Object.keys(dicAirIBGE['0'])[lin]
-        }</th>`;
-        ncol = 1;
-        for (let col = 0; col < ncols; col++) {
-          col_name = Object.values(dicAirIBGE[col.toString()])[5];
-          //only add column if field is in our data
-
-          cell = row.insertCell(ncol);
-          cell.outerHTML = dicValue(lin, col);
-          ncol++;
-        }
-      }
       // rodoviária e fluviais
 
       nlines = sampleRodoFluIBGE.length;
@@ -832,34 +784,66 @@
         }
       }
 
-      lines = [0, 1, 2];
-      ncols = dicRodoFluIBGE.length;
+      // dicionarios
+      ncols = dicAirIBGEEn.length;
+
+      tableDic = document.getElementById('tableDic');
+
+      function dicValue(lin, col) {
+        if (Object.keys(dicAirIBGEEn[col.toString()])[lin]) {
+          return `<td >${
+            Object.values(dicAirIBGEEn[col.toString()])[lin]
+          } </td>`;
+        }
+        return '-';
+      }
+      let col_name = '';
+      // fill table with data
+      for (let i = 0; i < Object.keys(dicXXX[0]).length; i++) {
+        row = tableDic.insertRow(i);
+        cell = row.insertCell(row);
+        cell.outerHTML = `<th class="headcol">${
+          Object.keys(dicAirIBGEEn['0'])[i]
+        }</th>`;
+        ncol = 1;
+        for (let col = 0; col < ncols; col++) {
+          col_name = Object.values(dicAirIBGEEn[col.toString()])[5];
+          //only add column if field is in our data
+
+          cell = row.insertCell(ncol);
+          cell.outerHTML = dicValue(i, col);
+          ncol++;
+        }
+      }
+
+      // rodoviária e fluviais
+      ncols = dicRodoFluIBGEEn.length;
 
       tableDic = document.getElementById('tableDic2');
 
       function dicValue2(lin, col) {
-        if (Object.keys(dicRodoFluIBGE[col.toString()])[lin]) {
+        if (Object.keys(dicRodoFluIBGEEn[col.toString()])[lin]) {
           return `<td >${
-            Object.values(dicRodoFluIBGE[col.toString()])[lin]
+            Object.values(dicRodoFluIBGEEn[col.toString()])[lin]
           } </td>`;
         }
         return '-';
       }
       col_name = '';
       // fill table with data
-      for (let [i, lin] of lines.entries()) {
+      for (let i = 0; i < Object.keys(dicXXX[0]).length; i++) {
         row = tableDic.insertRow(i);
         cell = row.insertCell(row);
         cell.outerHTML = `<th class="headcol">${
-          Object.keys(dicRodoFluIBGE['0'])[lin]
+          Object.keys(dicRodoFluIBGEEn['0'])[i]
         }</th>`;
         ncol = 1;
         for (let col = 0; col < ncols; col++) {
-          col_name = Object.values(dicRodoFluIBGE[col.toString()])[5];
+          col_name = Object.values(dicRodoFluIBGEEn[col.toString()])[5];
           //only add column if field is in our data
 
           cell = row.insertCell(ncol);
-          cell.outerHTML = dicValue2(lin, col);
+          cell.outerHTML = dicValue2(i, col);
           ncol++;
         }
       }

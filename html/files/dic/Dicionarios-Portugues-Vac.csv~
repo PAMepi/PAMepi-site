@@ -1,0 +1,32 @@
+Nome do campo na base de dados original;Nome do campo depois da harmonização (váriável nomeada pela PAMEpi);Legenda do Campo;Tipo;Categorias;Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi;Descrição
+document_id;doc_id;Identificador do documento;String;Sem categoria;Sem categoria;Identificador do documento
+paciente_id;id;Identificador do vacinado;String;Sem categoria;Sem categoria;Identificador do vacinado
+paciente_idade;idade;Idade do vacinado;Number;Sem categoria;Sem categoria;Idade do vacinado em anos.
+paciente_dataNascimento;dt_nasc;Data de nascimento do vacinado;Date yyyy-mm-dd;Sem categoria;Sem categoria;Data de nascimento do vacinado
+paciente_enumSexoBiologico;sexo;Sexo do vacinado;String;M= Masculino\nF= Feminino\nI=Ignorado;M- Masculino\nF- Feminino\nI-Ignorado;Sexo do vacinado
+paciente_racaCor_codigo;racaCor_code;Código da raça/cor do vacinado;Number;1,2,3,4,99;1- Branca\n2- Preta\n3- Parda\n4- Amarela\n99- Sem informação;Descrição na coluna paciente_racaCor_valor
+paciente_racaCor_valor;racaCor;Descrição da raça/cor do vacinado;String;Branca\nPreta\nParda\nAmarela\nSem informação;Branca\nPreta\nParda\nAmarela\nSem informação;Relativo a coluna paciente_racaCor_codigo
+paciente_endereco_coIbgeMunicipio;mun_res;Código IBGE do município de endereço do vacinado;Number;Sem categoria;Sem categoria;Código IBGE do município de endereço do vacinado
+paciente_endereco_coPais;pais_code_res;Código do país de endereço do vacinado;Number;Sem categoria;Sem categoria;Código do país de endereço do vacinado
+paciente_endereco_nmMunicipio;mun_res;Nome do município de endereço do vacinado ;String;Sem categoria;Sem categoria;Nome do município de endereço do vacinado 
+paciente_endereco_nmPais;pais_res;Nome do país de endereço do vacinado;String;Sem categoria;Sem categoria;Nome do país de endereço do vacinado
+paciente_endereco_uf;uf_res;Sigla da UF de endereço do vacinado ;String;Sem categoria;Sem categoria;Sigla da UF de endereço do vacinado 
+paciente_endereco_cep;cep_res;Código de Endereçamento Postal;Number;Sem categoria;Sem categoria;Código de Endereçamento Postal com 5 dígitos para anonimizado e 7 dígitos para identificado
+paciente_nacionalidade_enumNacionalidade;nacionalidade;Nacionalidade do vacinado;String;B=Brasileiro\nE=Estrangeiro\nN=Ignorado;B-Brasileiro\nE-Estrangeiro\nN-Ignorado;Nacionalidade do vacinado
+estabelecimento_valor;cnes;Código do CNES do estabelecimento que realizou a vacinação;Number;Sem categoria;Sem categoria;Código do CNES do estabelecimento que realizou a vacinação
+estabelecimento_razaoSocial;estabelecimento_razaoSocial;Nome/Razão Social do estabelecimento;String;Sem categoria;Sem categoria;Nome/Razão Social do estabelecimento
+estabelecimento_noFantasia;uni_ntf;Nome fantasia do estabelecimento;String;Sem categoria;Sem categoria;Nome fantasia do estabelecimento
+estabelecimento_municipio_codigo;mun_code_ntf;Código do município do estabelecimento;Number;Sem categoria;Sem categoria;Código do município do estabelecimento
+estabelecimento_municipio_nome;mun_ntf;Nome do município do estabelecimento;String;Sem categoria;Sem categoria;Nome do município do estabelecimento
+estabelecimento_uf;uf_ntf;Sigla UF do estabelecimento;String;Sem categoria;Sem categoria;Sigla UF do estabelecimento
+vacina_grupo_atendimento_codigo;vacina_grupo_atendimento_codigo;Código do grupo de atendimento ao qual pertence o vacinado;Number;Sem categoria;Sem categoria;Descrição na coluna vacina_grupo_atendimento_nome
+vacina_grupo_atendimento_nome;vacina_grupo_atendimento_nome;Nome do grupo de atendimento ao qual pertence o vacinado;String;Sem categoria;Sem categoria;Relativo a coluna vacina_grupo_atendimento_codigo
+vacina_categoria_codigo;vacina_categoria_codigo;Código da categoria ;Number;Sem categoria;Sem categoria;Descrição na coluna vacina_categoria_nome
+vacina_categoria_nome;vacina_categoria_nome;Descrição da categoria;String;Sem categoria;Sem categoria;Referente a coluna vacina_categoria_codigo
+vacina_lote;vacina_lote;Número do lote da vacina;String;Sem categoria;Sem categoria;Número do lote da vacina
+vacina_fabricante_nome;vacina_fabricante_nome;Nome do fabricante/fornecedor;String;Sem categoria;Sem categoria;Nome do fabricante/fornecedor
+vacina_fabricante_referencia;vacina_fabricante_referencia;CNPJ do fabricante/fornecedor;String;Sem categoria;Sem categoria;CNPJ do fabricante/fornecedor
+vacina_dataAplicacao;data_vac;Data de aplicação da vacina;Date yyyy-mm-dd;Sem categoria;Sem categoria;Data de aplicação da vacina
+vacina_descricao_dose;dose;Descrição da dose;String;1ª Dose\nDose Inicial\n2ª Dose\nReforço\nDose\nDose Adicional\n3ª Dose\n2º Reforço\n4ª Dose\nÚnica\n1º Reforço\n2ª Dose Revacinação\n1ª Dose Revacinação\n5ª Dose\n3ª Dose Revacinação\nRevacinação\n3º Reforço\nTratamento com uma dose\nTratamento com dezessete doses\n;1- 1ª Dose / Dose Inicial\n2- 2ª Dose / Única\n3- Reforço / Dose / Dose Adicional / 3ª Dose / 2º Reforço / 4ª Dose / 1º Reforço / 2ª Dose Revacinação / 1ª Dose Revacinação / 5ª Dose /\n3ª Dose Revacinação / Revacinação / 3º Reforço / Tratamento com uma dose / Tratamento com dezessete doses\n9 - Ignorado;Descrição da dose, Pamepi separa os dados em 3 categorias: 1ª Dose, 2ª Dose e Reforço.
+vacina_codigo;vacina_codigo;Código da vacina;Number;Sem categoria;Sem categoria;Código da vacina
+vacina_nome;vacina_nome;Nome da vacina/produto;String;Sem categoria;1-Astrazeneca\n2-Coronavac\n3-Pfizer\n4-Janssen;Relativo a coluna vacina_codigo

@@ -1,0 +1,13 @@
+Nome do campo na base de dados original;Nome do campo depois da harmonização (váriável nomeada pela PAMEpi);Legenda do Campo;Tipo;Categorias;Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi;Descrição
+epi_week;sem_ntf;Semana epidemiológica;Number;Sem categoria;Sem categoria;Número da semana epidemiológica.
+date;date;Data;Date YYYY-MM-DD;Sem categoria;Sem categoria;Data de divulgação dos dados no formato YYYY-MM-DD.
+state;uf;UF - Estado;String;Sem categoria;Sem categoria;Sigla da unidade federativa, exemplo: SP, ou “TOTAL” quando se refere a todo o país
+city;mun_name;Município;String;Sem categoria;Sem categoria;Nome completo do município no formato Cidade/UF. Pode ter o valor “CASO SEM LOCALIZAÇÃO DEFINIDA/UF”, referindo-se àqueles casos na unidade federativa que não tem seu município definido.
+ibgeID;code_full_mun_ibge;Cód. IBGE;Number;Sem categoria;Sem categoria;Identificação única do município fornecida pelo Instituto Brasileiro de Pesquisas Estatísticas (IBGE)
+newDeaths;newDeaths;Óbitos no dia;Number;Sem categoria;Sem categoria;Diferença entre o número de óbitos da data correspondente e a anterior
+deaths;deaths;Óbitos acum.;Number;Sem categoria;Sem categoria;Número acumulado de óbitos nessa data
+newCases;newCases;Confirmações no dia;Number;Sem categoria;Sem categoria;Diferença entre o número de casos da data correspondente e a anterior
+totalCases;totalCases;Confirmados acum.;Number;Sem categoria;Sem categoria;Número acumulado de casos nessa data
+deaths_per_100k_inhabitants;deaths_per_100k_inhabitants;Óbitos acum./100k hab.;Number;Sem categoria;Sem categoria;Número de óbitos por 100.000 habitantes para aquela localidade
+totalCases_per_100k_inhabitants;totalCases_per_100k_inhabitants;Confirmados acum./100k hab.;Number;Sem categoria;Sem categoria;Número de casos por 100.000 habitantes para aquela localidade
+deaths_by_totalCases;deaths_by_totalCases;Óbitos/confirmados;Number;Sem categoria;Sem categoria;Razão entre número de óbitos e casos (deaths/totalCases)

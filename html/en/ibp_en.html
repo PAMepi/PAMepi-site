@@ -148,25 +148,18 @@
 
                   <ul class="dropdown-menu sub-drop">
                     <li class="dropdown-item drop-item">
-                      <a href="sivep_en.html" class="nav-link submenu">SG</a>
+                      <a href="sg_en.html" class="nav-link submenu">FS</a>
                     </li>
                     <li class="dropdown-item drop-item">
-                      <a href="srag_en.html" class="nav-link submenu">SRAG</a>
+                      <a href="srag_en.html" class="nav-link submenu">SARS</a>
                     </li>
                     <li class="dropdown-item drop-item">
-                      <a href="brio_en.html" class="nav-link submenu"
-                        >Brasil IO</a
-                      >
+                      <a href="wcota_en.html" class="nav-link submenu">WCota</a>
                     </li>
                     <li class="dropdown-item drop-item">
                       <a href="vacina_en.html" class="nav-link submenu"
                         >Vaccination</a
                       >
-                    </li>
-                    <li class="dropdown-item drop-item">
-                      <a href="hospital_en.html" class="nav-link submenu">
-                        Hospital Occupancy
-                      </a>
                     </li>
                   </ul>
                 </div>
@@ -346,27 +339,11 @@
                         >Validation</a
                       >
                     </li>
-                    <li class="dropdown-item drop-item sub-drop disabled">
-                      <a
-                        href="simula_en.html"
-                        class="nav-link submenu isDisabled"
-                        >Simulation</a
-                      >
-                    </li>
                   </ul>
                 </div>
-                <div class="dropdown-item drop-item disabled">
-                  <a
-                    href="municipios_en.html"
-                    class="itemcol nav-link submenu isDisabled"
-                    >Cities</a
-                  >
-                </div>
-                <div class="dropdown-item drop-item disabled">
-                  <a
-                    href="reg_sau_en.html"
-                    class="itemcol nav-link submenu isDisabled"
-                    >Regions</a
+                <div class="dropdown-item drop-item">
+                  <a href="dashboard_en.html" class="itemcol nav-link submenu"
+                    >Simulation</a
                   >
                 </div>
                 <div class="dropdown-item drop-item disabled">
@@ -577,19 +554,7 @@
       <h2 class="data">Data and Resources</h2>
       <div class="dado-subitem">
         <div class="media download">
-          <div class="media-left">
-            <h3 class="data">
-              Data and variable dictionary (Only in Portuguese)
-            </h3>
-          </div>
-          <div class="media-right">
-            <a
-              href="https://github.com/PAMepi/PAMepi_scripts_datalake"
-              class="btn btn-info"
-              target="_blank"
-              >Download</a
-            >
-          </div>
+          <h3 class="data">Data and variable dictionary</h3>
         </div>
 
         <div class="data-in">
@@ -604,7 +569,15 @@
             ></table>
           </div>
 
-          <h4 class="data">Data dictionary</h4>
+          <h4 class="data">
+            Data dictionary
+            <a
+              href=""
+              class="btn btn-info float-right mr-3 disabled"
+              target="_blank"
+              >Download</a
+            >
+          </h4>
           <div class="table-div">
             <table
               id="tableDic"
@@ -691,31 +664,30 @@
         }
       }
 
-      lines = [0, 1, 2];
-      ncols = dicIBP.length;
+      ncols = dicIBPEn.length;
 
       tableDic = document.getElementById('tableDic');
 
       function dicValue(lin, col) {
-        if (Object.keys(dicIBP[col.toString()])[lin]) {
-          return `<td >${Object.values(dicIBP[col.toString()])[lin]} </td>`;
+        if (Object.keys(dicIBPEn[col.toString()])[lin]) {
+          return `<td >${Object.values(dicIBPEn[col.toString()])[lin]} </td>`;
         }
         return '-';
       }
       let col_name = '';
       // fill table with data
-      for (let [i, lin] of lines.entries()) {
+      for (let i = 0; i < Object.keys(dicXXX[0]).length; i++) {
         row = tableDic.insertRow(i);
         cell = row.insertCell(row);
         cell.outerHTML = `<th class="headcol">${
-          Object.keys(dicIBP['0'])[lin]
+          Object.keys(dicIBPEn['0'])[i]
         }</th>`;
         ncol = 1;
         for (let col = 0; col < ncols; col++) {
-          col_name = Object.values(dicIBP[col.toString()])[5];
+          col_name = Object.values(dicIBPEn[col.toString()])[5];
 
           cell = row.insertCell(ncol);
-          cell.outerHTML = dicValue(lin, col);
+          cell.outerHTML = dicValue(i, col);
           ncol++;
         }
       }

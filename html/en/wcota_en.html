@@ -19,11 +19,10 @@
     />
 
     <link rel="stylesheet" type="text/css" href="../css/mystyle.css" />
-    <link rel="stylesheet" type="text/css" href="../css/spin.css" />
     <link rel="icon" href="../img/pamepi.ico" />
   </head>
 
-  <body onload="myFunction()" style="margin: 0">
+  <body>
     <nav
       id="navbar"
       class="navbar navbar-expand-lg fixed-top justify-content-center"
@@ -118,7 +117,7 @@
 
             <li class="navbar-item dropdown">
               <div
-                class="dropdown-item dropdown-toggle"
+                class="dropdown-item dropdown-toggle active"
                 id="navbarDropdown5"
                 role="button"
                 data-toggle="dropdown"
@@ -136,10 +135,10 @@
                   <a href="data_en.html" class="nav-link submenu">Overview</a>
                 </div>
                 <div
-                  class="dropdown-item drop-item dropdown dropright dropdown-submenu"
+                  class="dropdown-item drop-item dropdown dropright dropdown-submenu active"
                 >
                   <a
-                    class="btn dropdown-toggle nav-link submenu"
+                    class="btn dropdown-toggle nav-link submenu active"
                     href="#"
                     data-toggle="dropdown"
                     data-flip="false"
@@ -156,7 +155,9 @@
                       <a href="srag_en.html" class="nav-link submenu">SARS</a>
                     </li>
                     <li class="dropdown-item drop-item">
-                      <a href="wcota_en.html" class="nav-link submenu">WCota</a>
+                      <a href="wcota_en.html" class="nav-link submenu active"
+                        >WCota</a
+                      >
                     </li>
                     <li class="dropdown-item drop-item">
                       <a href="vacina_en.html" class="nav-link submenu"
@@ -241,7 +242,7 @@
 
             <li class="navbar-item dropdown">
               <div
-                class="dropdown-item dropdown-toggle active"
+                class="dropdown-item dropdown-toggle"
                 id="navbarDropdown2"
                 role="button"
                 data-toggle="dropdown"
@@ -305,7 +306,7 @@
                   class="dropdown-item drop-item dropdown dropright dropdown-submenu"
                 >
                   <a
-                    class="btn dropdown-toggle nav-link submenu itemcol active"
+                    class="btn dropdown-toggle nav-link submenu itemcol"
                     href="#"
                     data-toggle="dropdown"
                     data-flip="false"
@@ -321,7 +322,7 @@
                       >
                     </li>
                     <li class="dropdown-item drop-item sub-drop">
-                      <a href="longo_en.html" class="nav-link submenu active"
+                      <a href="longo_en.html" class="nav-link submenu"
                         >Long term</a
                       >
                     </li>
@@ -346,6 +347,7 @@
                     >Simulation</a
                   >
                 </div>
+
                 <div class="dropdown-item drop-item disabled">
                   <a
                     href="tsd_en.html"
@@ -355,7 +357,6 @@
                 </div>
               </div>
             </li>
-
             <li class="navbar-item dropdown">
               <div
                 class="dropdown-item dropdown-toggle"
@@ -407,7 +408,7 @@
             <li class="navbar-item dropdown">
               <div
                 class="dropdown-item dropdown-toggle"
-                id="navbarDropdown3"
+                id="navbarDropdown1"
                 role="button"
                 data-toggle="dropdown"
                 aria-haspopup="true"
@@ -416,7 +417,7 @@
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
+                  fill="white"
                   class="bi bi-globe icon-language"
                   viewBox="0 0 16 16"
                 >
@@ -430,10 +431,10 @@
                 aria-labelledby="navbarDropdown1"
               >
                 <div class="dropdown-item drop-item">
-                  <a href="../longo.html" class="nav-link submenu">Português</a>
+                  <a href="../wcota.html" class="nav-link submenu">Português</a>
                 </div>
                 <div class="dropdown-item drop-item">
-                  <a href="longo_en.html" class="nav-link active submenu"
+                  <a href="wcota_en.html" class="nav-link active submenu"
                     >English</a
                   >
                 </div>
@@ -444,23 +445,156 @@
       </div>
     </nav>
 
-    <div class="top-model"><h1>Long term models</h1></div>
-    <div id="myDiv" class="animate-bottom">
-      <div id="iframe-conf" style="margin: 0">
-        <!--Changed here to try to force iframe -->
-        <iframe
-          id="long_time_pred"
-          src="https://pamepi.rondonia.fiocruz.br/shiny/long_pred/"
-          style="
-            border: none;
-            width: 100%;
-            height: 800px;
-            margin-top: 2rem;
-            margin-bottom: -25px;
-          "
-        ></iframe>
+    <section class="top">
+      <div class="row dados-icon">
+        <img src="../img/wcota.png" class="dados-img" style="width: 80px" />
+
+        <h1 class="dados-text">WCota</h1>
       </div>
-    </div>
+      <div class="intro" style="padding: 2rem 0rem 5rem">
+        <h2 class="mb-5">Description</h2>
+        <p class="card-text">
+          The WCota dataset is pulled from the
+          <a href="https://github.com/wcota/covid19br" target="_blank"
+            >Github repository</a
+          >
+          by researcher Wesley Cota. The number of confirmed cases and deaths
+          caused by SARS-COV-2 infections aggregated at the state and municipal
+          levels are compiled from data from the
+          <a href="https://covid.saude.gov.br/" target="_blank">
+            Ministry of Health</a
+          >
+          and State Health Departments.
+        </p>
+        <p>
+          The author gathers data from publicly available state and municipal
+          secretariat reports prior to registration in the Brazilian Ministry of
+          Health database. This process helps to make data on COVID-19 available
+          in real time, as it takes a long time to register cases from state and
+          municipal secretariats in the Brazilian single system.
+        </p>
+        <p>
+          Also, the data provided by the Ministry of Health has an infrequent,
+          slow process of update, the site goes down frequently, and the data is
+          unstructured.
+        </p>
+        <p>
+          We collected the data from February 1st 2020, and onward. The data can
+          be daily updated. Links to publications that use the WCota data or
+          provide other publicaly accessible locations of the data can be found
+          in (<a
+            href="https://www.sciencedirect.com/science/article/pii/S1755436521000232?via%3Dihub"
+            target="_blank"
+          >
+            Jorge et al., 2021, 35</a
+          >
+          ).
+        </p>
+        <h2 class="mb-5 mt-5 pt-5 pb-2">Data access information</h2>
+        <p>
+          The collected, clean and formatted data freely available from WCota
+          can be accessed and downloaded in (<a
+            href="https://github.com/wcota/covid19br"
+            target="_blank"
+            >WCota, 2020</a
+          >), under the Creative Commons Attribution ShareAlike (CC-BY-SA 4.0)
+          licence.
+        </p>
+
+        <h2 class="mb-5 mt-5 pt-5 pb-2">Methods of data collection</h2>
+        <p>
+          A python code is available on our
+          <a
+            href="https://github.com/PAMepi/PAMepi_scripts_datalake"
+            target="_blank"
+          >
+            Github
+          </a>
+          directory to download data from the WCota project, see details in
+          <a
+            href="https://github.com/wcota/covid19br/blob/master/DESCRIPTION.md"
+            target="_blank"
+          >
+            Github</a
+          >. Pamepi uses files named
+          <strong>cases-brazil-cities-time </strong> that contain the time
+          series of new cases and deaths by Covid-19.
+        </p>
+        <h2 class="mb-5 mt-5 pt-5 pb-2">Data-specific information for WCota</h2>
+        <p>
+          The WCota dataset has a total of 12 columns and showed a size of 311
+          MB in the last update of May 11th, 2022. A code with more details
+          about the variables, data processing and analysis methods is presented
+          in our
+          <a
+            href="https://github.com/PAMepi/PAMepi_scripts_datalake"
+            target="_blank"
+          >
+            Github
+          </a>
+          directory.
+        </p>
+        <h2 class="mb-5 mt-5 pt-5 pb-2">Limitations of WCota dataset</h2>
+        <p>
+          WCota dataset depends on the quality of the reported information given
+          by the state and municipal health secretaries. When files are provided
+          in pdf or images, it can compromise the tabulation of the data in
+          real-time. Additionally, the deaths and cases of COVID-19 are
+          tabulated according to the date when the data was collected.
+        </p>
+        <p>
+          Therefore, the epidemiological curve constructed can show a delay of
+          one to up to 7 weeks in relation to the date of the first symptoms or
+          the date of the laboratory test of the case (<a
+            href="https://portal.fiocruz.br/sites/portal.fiocruz.br/files/documentos/nota_tecnica_13.pdf"
+            target="_blank"
+            >Observatório COVID-19, 2020</a
+          >). Still, the dataset is considered an excellent source to measure
+          the course of the pandemic in real-time.
+        </p>
+      </div>
+    </section>
+    <hr />
+    <section class="middle-white">
+      <h2 class="data">Data and Resources</h2>
+      <div class="dado-subitem">
+        <div class="media download">
+          <h3 class="data">Data and variable dictionary</h3>
+        </div>
+
+        <div class="data-in">
+          <h4 class="data">Data explorer</h4>
+          <div class="table-div">
+            <table
+              id="tableExp"
+              cellpadding="2"
+              cellspacing="2"
+              border="1"
+              class="table-data data"
+            ></table>
+          </div>
+
+          <h4 class="data">
+            Data dictionary
+            <a
+              href=""
+              class="btn btn-info float-right mr-3 disabled"
+              target="_blank"
+              >Download</a
+            >
+          </h4>
+          <div class="table-div">
+            <table
+              id="tableDic"
+              cellpadding="2"
+              cellspacing="2"
+              border="1"
+              class="table-data dic"
+            ></table>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <footer class="page-footer font-small footer" id="footer">
       <div class="row justify-content-center align-items-center copyrights">
@@ -496,24 +630,73 @@
         PAMEpi <img src="../img/no-virus.svg" class="filter-virus" />2022
       </div>
     </footer>
+    <script type="text/javascript" src="../js/data.js"></script>
+    <script>
+      let cell;
+      let nlines = sampleWCota.length;
+      let ncols = Object.keys(sampleWCota['0']).length;
+      let tableExp = document.getElementById('tableExp');
+      let row;
 
-    <div id="loader"></div>
+      function cellValue(lin, col) {
+        if (Object.keys(sampleWCota[lin.toString()])[col]) {
+          return `${Object.values(sampleWCota[lin.toString()])[col]}`;
+        }
+        return '-';
+      }
 
+      function colValue(col) {
+        if (Object.keys(sampleWCota['0'])[col]) {
+          return `<th>${Object.keys(sampleWCota['0'])[col]}</th>`;
+        }
+        return '&nbsp;';
+      }
+      // fill
+      row = tableExp.insertRow(0);
+      for (var col = 0; col < ncols; col++) {
+        cell = row.insertCell(col);
+        cell.outerHTML = colValue(col);
+      }
+      // fill table with data
+      for (var lin = 0; lin < nlines; lin++) {
+        row = tableExp.insertRow(lin + 1);
+        for (var col = 0; col < ncols; col++) {
+          cell = row.insertCell(col);
+          cell.innerHTML = cellValue(lin, col);
+        }
+      }
+
+      ncols = dicWCotaEn.length;
+
+      tableDic = document.getElementById('tableDic');
+
+      function dicValue(lin, col) {
+        if (Object.keys(dicWCotaEn[col.toString()])[lin]) {
+          return `<td >${Object.values(dicWCotaEn[col.toString()])[lin]} </td>`;
+        }
+        return '-';
+      }
+      let col_name = '';
+      // fill table with data
+      for (let i = 0; i < Object.keys(dicXXX[0]).length; i++) {
+        row = tableDic.insertRow(i);
+        cell = row.insertCell(row);
+        cell.outerHTML = `<th class="headcol">${
+          Object.keys(dicWCotaEn['0'])[i]
+        }</th>`;
+        ncol = 1;
+        for (let col = 0; col < ncols; col++) {
+          col_name = Object.values(dicWCotaEn[col.toString()])[5];
+
+          cell = row.insertCell(ncol);
+          cell.outerHTML = dicValue(i, col);
+          ncol++;
+        }
+      }
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="../js/scripts.js"></script>
-    <script>
-      var myVar;
-
-      function myFunction() {
-        myVar = setTimeout(showPage, 3000);
-      }
-
-      function showPage() {
-        document.getElementById('loader').style.display = 'none';
-        document.getElementById('myDiv').style.display = 'block';
-      }
-    </script>
   </body>
 </html>

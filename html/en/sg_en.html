@@ -19,11 +19,10 @@
     />
 
     <link rel="stylesheet" type="text/css" href="../css/mystyle.css" />
-    <link rel="stylesheet" type="text/css" href="../css/spin.css" />
     <link rel="icon" href="../img/pamepi.ico" />
   </head>
 
-  <body onload="myFunction()" style="margin: 0">
+  <body>
     <nav
       id="navbar"
       class="navbar navbar-expand-lg fixed-top justify-content-center"
@@ -118,7 +117,7 @@
 
             <li class="navbar-item dropdown">
               <div
-                class="dropdown-item dropdown-toggle"
+                class="dropdown-item dropdown-toggle active"
                 id="navbarDropdown5"
                 role="button"
                 data-toggle="dropdown"
@@ -139,7 +138,7 @@
                   class="dropdown-item drop-item dropdown dropright dropdown-submenu"
                 >
                   <a
-                    class="btn dropdown-toggle nav-link submenu"
+                    class="btn dropdown-toggle nav-link submenu active"
                     href="#"
                     data-toggle="dropdown"
                     data-flip="false"
@@ -150,7 +149,9 @@
 
                   <ul class="dropdown-menu sub-drop">
                     <li class="dropdown-item drop-item">
-                      <a href="sg_en.html" class="nav-link submenu">FS</a>
+                      <a href="sg_en.html" class="nav-link submenu active"
+                        >FS</a
+                      >
                     </li>
                     <li class="dropdown-item drop-item">
                       <a href="srag_en.html" class="nav-link submenu">SARS</a>
@@ -241,7 +242,7 @@
 
             <li class="navbar-item dropdown">
               <div
-                class="dropdown-item dropdown-toggle active"
+                class="dropdown-item dropdown-toggle"
                 id="navbarDropdown2"
                 role="button"
                 data-toggle="dropdown"
@@ -305,7 +306,7 @@
                   class="dropdown-item drop-item dropdown dropright dropdown-submenu"
                 >
                   <a
-                    class="btn dropdown-toggle nav-link submenu itemcol active"
+                    class="btn dropdown-toggle nav-link submenu itemcol"
                     href="#"
                     data-toggle="dropdown"
                     data-flip="false"
@@ -321,7 +322,7 @@
                       >
                     </li>
                     <li class="dropdown-item drop-item sub-drop">
-                      <a href="longo_en.html" class="nav-link submenu active"
+                      <a href="longo_en.html" class="nav-link submenu"
                         >Long term</a
                       >
                     </li>
@@ -430,10 +431,10 @@
                 aria-labelledby="navbarDropdown1"
               >
                 <div class="dropdown-item drop-item">
-                  <a href="../longo.html" class="nav-link submenu">Português</a>
+                  <a href="../sg.html" class="nav-link submenu">Português</a>
                 </div>
                 <div class="dropdown-item drop-item">
-                  <a href="longo_en.html" class="nav-link active submenu"
+                  <a href="sg_en.html" class="nav-link active submenu"
                     >English</a
                   >
                 </div>
@@ -444,23 +445,175 @@
       </div>
     </nav>
 
-    <div class="top-model"><h1>Long term models</h1></div>
-    <div id="myDiv" class="animate-bottom">
-      <div id="iframe-conf" style="margin: 0">
-        <!--Changed here to try to force iframe -->
-        <iframe
-          id="long_time_pred"
-          src="https://pamepi.rondonia.fiocruz.br/shiny/long_pred/"
-          style="
-            border: none;
-            width: 100%;
-            height: 800px;
-            margin-top: 2rem;
-            margin-bottom: -25px;
-          "
-        ></iframe>
+    <section class="top">
+      <div class="row dados-icon">
+        <img src="../img/espirros.png" class="dados-img" style="width: 80px" />
+
+        <h1 class="dados-text">Flu Syndrome (FS)</h1>
       </div>
-    </div>
+      <div class="intro" style="padding: 2rem 0rem 5rem">
+        <h2 class="mb-5">Description</h2>
+        <p>
+          With the emergence of the pandemic caused by SARS-COV-2, the Brazilian
+          Ministry of Health implemented a surveillance system to record Flu
+          Syndrome (FS) (the e-SUS VE) of mild to moderate cases suspected of
+          COVID-19. The data is built by the private and public health care
+          units, which report the suspected cases to the e-SUS NOTIFICA system.
+        </p>
+        <p>
+          A suspected case of flu syndrome is a patient presenting at least two
+          of the following clinical conditions: fever (even if referred),
+          chills, sore throat, headache, cough, runny nose, olfactory disorders
+          or taste disorders. For children, nasal obstruction is one more
+          condition considered. While for older people, syncope, mental
+          confusion, excessive sleepiness, irritability and inappetence
+          represent an aggravation of the case. To clinically assign the case as
+          a SARS-COV-2 infection, in addition to the characteristics listed
+          before, patients may be followed by anosmia, ageusia, diarrhoea,
+          abdominal pain, myalgia, fatigue (<a
+            href="https://www.conasems.org.br/wp-content/uploads/2021/03/Guia-de-vigilância-epidemiológica-da-covid_19_15.03_2021.pdf"
+            target="_blank"
+            >Ministério da Saúde, 2020</a
+          >).
+        </p>
+        <p>
+          The data includes information referring to the patient's place of
+          residence (fields: state, municipality), regardless of whether they
+          have been notified in another state or municipality (Fields:
+          Notification state, Notification municipality), in addition to
+          demographic and clinical epidemiological issues, (<a
+            href="https://opendatasus.saude.gov.br/dataset/casos-nacionais"
+            target="_blank"
+            >Ministério da Saúde, 2020</a
+          >), (<a
+            href="https://portal.fiocruz.br/sites/portal.fiocruz.br/files/documentos/nota_tecnica_13.pdf 
+        "
+            target="_blank"
+            >Observatório COVID-19, 2020</a
+          >).
+        </p>
+        <p>
+          Links to publications that use the FS data or provide other publicly
+          accessible locations of the data can be found in (<a
+            href="https://portal.fiocruz.br/sites/portal.fiocruz.br/files/documentos/nota_tecnica_13.pdf 
+      "
+            target="_blank"
+            >Observatório COVID-19, 2020</a
+          >).
+        </p>
+
+        <h2 class="mb-5 mt-5 pt-5 pb-2">Data access information</h2>
+
+        <p>
+          The FS data is licensed under a Creative Commons Attribution License
+          cc-by (version 4.0), see (<a
+            href="https://opendatasus.saude.gov.br/dataset/casos-nacionais"
+            target="_blank"
+            >Ministério da Saúde, 2020a</a
+          >). Additionally, the FS dataset is publicly available and published
+          by the Ministry of Health of Brazil.
+        </p>
+        <p>
+          Therefore, no approval by an ethics committee is required to use this
+          data, according to Resolutions 466/2012 and 510/2016 (article 1,
+          sections III and V) from the National Health Council (CNS), Brazil.
+        </p>
+
+        <h2 class="mb-5 mt-5 pt-5 pb-2">Methods of data collection</h2>
+        <p>
+          A python code is available on our
+          <a
+            href="https://github.com/PAMepi/PAMepi_scripts_datalake"
+            target="_blank"
+            >Github</a
+          >
+          directory to download the FS data from the OpenDatasus , see details
+          in
+          <a
+            href="https://github.com/PAMepi/PAMepi_scripts_datalake"
+            target="_blank"
+            >Github</a
+          >. We are pulling the FS data from 2019 and on. The database is
+          updated weekly in our project, being a version associated with its
+          date of update.
+        </p>
+
+        <h2 class="mb-5 mt-5 pt-5 pb-2">Data-specific information for FS</h2>
+        <p>
+          The FS dataset has a total of 30 columns and showed a total of
+          48,288,827 registries (rows) and a size of 14 GB in the last update of
+          August 19th, 2021. A code with more details about the variables, data
+          processing and analysis methods is presented in our
+          <a
+            href="https://github.com/PAMepi/PAMepi_scripts_datalake"
+            target="_blank"
+            >Github</a
+          >
+          directory.
+        </p>
+        <h2 class="mb-5 mt-5 pt-5 pb-2">Limitations of FS dataset</h2>
+        <p>
+          Several cases in the FS dataset lack final classification. Every case
+          in FS will have a final classification given by the epidemiological
+          surveillance teams of the Secretariat of Health. However, given the
+          number of registered patients, they may not be classified on time
+          (some even closed and not analysed anymore).
+        </p>
+        <p>
+          To overcome such a difficulty, our team will apply a classification
+          algorithm to give a pre-diagnosis of the cases in FS that have no
+          final classification. The algorithm is applied to the information of
+          symptoms that is available in the dataset.
+        </p>
+        <h2 class="mb-5 mt-5 pt-5 pb-2">
+          Schematic view of the FS and SARS database
+        </h2>
+        <p style="column-span: all">
+          <img src="../img/sivep_esquema_en.jpeg" style="width: 100%" />
+        </p>
+      </div>
+    </section>
+    <hr />
+    <section class="middle-white">
+      <h2 class="data">Data and Resources</h2>
+      <div class="dado-subitem">
+        <div class="media download">
+          <h3 class="data">Data and variable dictionary</h3>
+        </div>
+
+        <div class="data-in">
+          <h4 class="data">Data explorer</h4>
+          <div class="table-div">
+            <table
+              id="tableExp"
+              cellpadding="2"
+              cellspacing="2"
+              border="1"
+              class="table-data data"
+            ></table>
+          </div>
+
+          <h4 class="data">
+            Data dictionary
+            <a
+              href=""
+              class="btn btn-info float-right mr-3 disabled"
+              target="_blank"
+              >Download</a
+            >
+          </h4>
+          <div class="table-div">
+            <table
+              id="tableDic"
+              cellpadding="2"
+              cellspacing="2"
+              border="1"
+              class="table-data dic"
+            ></table>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <footer class="page-footer font-small footer" id="footer">
       <div class="row justify-content-center align-items-center copyrights">
@@ -496,24 +649,75 @@
         PAMEpi <img src="../img/no-virus.svg" class="filter-virus" />2022
       </div>
     </footer>
+    <script type="text/javascript" src="../js/data.js"></script>
+    <script>
+      console.log(sampleSG);
+      let cell;
+      let nlines = sampleSG.length;
+      let ncols = Object.keys(sampleSG['0']).length;
+      let tableExp = document.getElementById('tableExp');
+      let row;
 
-    <div id="loader"></div>
+      function cellValue(lin, col) {
+        if (Object.keys(sampleSG[lin.toString()])[col]) {
+          return `${Object.values(sampleSG[lin.toString()])[col]}`;
+        }
+        return '-';
+      }
 
+      function colValue(col) {
+        if (Object.keys(sampleSG['0'])[col]) {
+          return `<th>${Object.keys(sampleSG['0'])[col]}</th>`;
+        }
+        return '&nbsp;';
+      }
+      // fill
+      row = tableExp.insertRow(0);
+      for (var col = 0; col < ncols; col++) {
+        cell = row.insertCell(col);
+        cell.outerHTML = colValue(col);
+      }
+      // fill table with data
+      for (var lin = 0; lin < nlines; lin++) {
+        row = tableExp.insertRow(lin + 1);
+        for (var col = 0; col < ncols; col++) {
+          cell = row.insertCell(col);
+          cell.innerHTML = cellValue(lin, col);
+        }
+      }
+
+      ncols = dicSGEn.length;
+
+      tableDic = document.getElementById('tableDic');
+
+      function dicValue(lin, col) {
+        if (Object.keys(dicSGEn[col.toString()])[lin]) {
+          return `<td >${Object.values(dicSGEn[col.toString()])[lin]} </td>`;
+        }
+        return '-';
+      }
+      let col_name = '';
+      // fill table with data
+      for (let i = 0; i < Object.keys(dicXXX[0]).length; i++) {
+        row = tableDic.insertRow(i);
+        cell = row.insertCell(row);
+        cell.outerHTML = `<th class="headcol">${
+          Object.keys(dicSGEn['0'])[i]
+        }</th>`;
+        ncol = 1;
+        for (let col = 0; col < ncols; col++) {
+          col_name = Object.values(dicSGEn[col.toString()])[5];
+          //only add column if field is in our data
+
+          cell = row.insertCell(ncol);
+          cell.outerHTML = dicValue(i, col);
+          ncol++;
+        }
+      }
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="../js/scripts.js"></script>
-    <script>
-      var myVar;
-
-      function myFunction() {
-        myVar = setTimeout(showPage, 3000);
-      }
-
-      function showPage() {
-        document.getElementById('loader').style.display = 'none';
-        document.getElementById('myDiv').style.display = 'block';
-      }
-    </script>
   </body>
 </html>

@@ -138,7 +138,7 @@
                   class="dropdown-item drop-item dropdown dropright dropdown-submenu"
                 >
                   <a
-                    class="btn dropdown-toggle nav-link submenu active"
+                    class="btn dropdown-toggle nav-link submenu"
                     href="#"
                     data-toggle="dropdown"
                     data-flip="false"
@@ -149,25 +149,18 @@
 
                   <ul class="dropdown-menu sub-drop">
                     <li class="dropdown-item drop-item">
-                      <a href="sivep_en.html" class="nav-link submenu">SG</a>
+                      <a href="sg_en.html" class="nav-link submenu">FS</a>
                     </li>
                     <li class="dropdown-item drop-item">
-                      <a href="srag_en.html" class="nav-link submenu">SRAG</a>
+                      <a href="srag_en.html" class="nav-link submenu">SARS</a>
                     </li>
                     <li class="dropdown-item drop-item">
-                      <a href="brio_en.html" class="nav-link submenu"
-                        >Brasil IO</a
-                      >
+                      <a href="wcota_en.html" class="nav-link submenu">WCota</a>
                     </li>
                     <li class="dropdown-item drop-item">
                       <a href="vacina_en.html" class="nav-link submenu"
                         >Vaccination</a
                       >
-                    </li>
-                    <li class="dropdown-item drop-item">
-                      <a href="hospital_en.html" class="nav-link submenu">
-                        Hospital Occupancy
-                      </a>
                     </li>
                   </ul>
                 </div>
@@ -345,27 +338,11 @@
                         >Validation</a
                       >
                     </li>
-                    <li class="dropdown-item drop-item sub-drop disabled">
-                      <a
-                        href="simula_en.html"
-                        class="nav-link submenu isDisabled"
-                        >Simulation</a
-                      >
-                    </li>
                   </ul>
                 </div>
-                <div class="dropdown-item drop-item disabled">
-                  <a
-                    href="municipios_en.html"
-                    class="itemcol nav-link submenu isDisabled"
-                    >Cities</a
-                  >
-                </div>
-                <div class="dropdown-item drop-item disabled">
-                  <a
-                    href="reg_sau_en.html"
-                    class="itemcol nav-link submenu isDisabled"
-                    >Regions</a
+                <div class="dropdown-item drop-item">
+                  <a href="dashboard_en.html" class="itemcol nav-link submenu"
+                    >Simulation</a
                   >
                 </div>
                 <div class="dropdown-item drop-item disabled">
@@ -480,7 +457,7 @@
           From the original database described in detail in the
           <a href="data_en.html">Overview</a>, including
           <a href="vacina_en.html"> Vaccination</a>,
-          <a href="brio_en.html"> Brasil IO (Wesley Cota)</a>,
+          <a href="brio_en.html"> WCota (Wesley Cota)</a>,
           <a href="hospital_en.html"> Hospitalization</a>,
           <a href="sivep_en.html"> SG</a>, and <a href="srag_en.html"> SRAG</a>,
           we created a single file where you can find the main information from
@@ -526,17 +503,7 @@
       <h2 class="data">Data and Resources</h2>
       <div class="dado-subitem">
         <div class="media download">
-          <div class="media-left">
-            <h3 class="data">Data and variable dictionary</h3>
-          </div>
-          <div class="media-right">
-            <a
-              href="https://github.com/PAMepi/PAMepi_scripts_datalake"
-              class="btn btn-info"
-              target="_blank"
-              >Download</a
-            >
-          </div>
+          <h3 class="data">Data and variable dictionary</h3>
         </div>
 
         <div class="data-in">
@@ -551,7 +518,15 @@
             ></table>
           </div>
 
-          <h4 class="data">Data dictionary</h4>
+          <h4 class="data">
+            Data dictionary
+            <a
+              href=""
+              class="btn btn-info float-right mr-3 disabled"
+              target="_blank"
+              >Download</a
+            >
+          </h4>
           <div class="table-div">
             <table
               id="tableDic"
@@ -601,7 +576,6 @@
     </footer>
     <script type="text/javascript" src="../js/data.js"></script>
     <script>
-      console.log(sampleAgregate);
       let cell;
       let nlines = sampleAgregate.length;
       let ncols = Object.keys(sampleAgregate['0']).length;
@@ -636,7 +610,6 @@
         }
       }
 
-      lines = [0, 1, 2, 3, 4];
       ncols = dicAgregate.length;
 
       tableDic = document.getElementById('tableDic');
@@ -651,11 +624,11 @@
       }
       let col_name = '';
       // fill table with data
-      for (let [i, lin] of lines.entries()) {
+      for (let i = 0; i < Object.keys(dicXXX[0]).length; i++) {
         row = tableDic.insertRow(i);
         cell = row.insertCell(row);
         cell.outerHTML = `<th class="headcol">${
-          Object.keys(dicAgregate['0'])[lin]
+          Object.keys(dicAgregate['0'])[i]
         }</th>`;
         ncol = 1;
         for (let col = 0; col < ncols; col++) {
@@ -663,7 +636,7 @@
           //only add column if field is in our data
 
           cell = row.insertCell(ncol);
-          cell.outerHTML = dicValue(lin, col);
+          cell.outerHTML = dicValue(i, col);
           ncol++;
         }
       }

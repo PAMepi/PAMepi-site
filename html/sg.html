@@ -17,13 +17,12 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ruda:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-
-    <link rel="stylesheet" type="text/css" href="../css/mystyle.css" />
-    <link rel="stylesheet" type="text/css" href="../css/spin.css" />
-    <link rel="icon" href="../img/pamepi.ico" />
+    <script type="text/javascript" src="js/data.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/mystyle.css" />
+    <link rel="icon" href="img/pamepi.ico" />
   </head>
 
-  <body onload="myFunction()" style="margin: 0">
+  <body>
     <nav
       id="navbar"
       class="navbar navbar-expand-lg fixed-top justify-content-center"
@@ -31,11 +30,8 @@
       <div class="container-fluid">
         <div class="navbar-header w-100 row align-items-center">
           <div>
-            <a
-              href="index_en.html"
-              class="navbar-brand active"
-              id="navbar-header"
-              ><img id="img-logo" src="../img/logo.jpeg" />PAMEpi</a
+            <a href="index.html" class="navbar-brand active"
+              ><img id="img-logo" src="img/logo.jpeg" />PAMEpi</a
             >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -50,12 +46,7 @@
                 d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
               />
             </svg>
-            <a
-              href="covid_en.html"
-              class="navbar-brand active"
-              id="navbar-header"
-              >Covid-19</a
-            >
+            <a href="covid.html" class="navbar-brand active">Covid-19</a>
           </div>
 
           <button
@@ -83,34 +74,36 @@
                 aria-expanded="false"
                 tabindex="0"
               >
-                Project
+                Projeto
               </div>
               <div
                 class="dropdown-menu dropdown"
                 aria-labelledby="navbarDropdown1"
               >
                 <div class="dropdown-item drop-item">
-                  <a href="covid_en.html#projeto" class="nav-link submenu">
-                    Goals</a
+                  <a href="covid.html#projeto" class="nav-link submenu">
+                    Objetivos</a
                   >
                 </div>
 
                 <div class="dropdown-item drop-item">
-                  <a href="covid_en.html#faq" class="nav-link submenu">FAQ</a>
+                  <a href="covid.html#faq" class="nav-link submenu"
+                    >Perguntas frequentes</a
+                  >
                 </div>
                 <div class="dropdown-item drop-item">
-                  <a href="covid_en.html#tutorial" class="nav-link submenu"
+                  <a href="covid.html#tutorial" class="nav-link submenu"
                     >Tutorial</a
                   >
                 </div>
                 <div class="dropdown-item drop-item">
-                  <a href="covid_en.html#faleconosco" class="nav-link submenu"
-                    >Contact us</a
+                  <a href="covid.html#faleconosco" class="nav-link submenu"
+                    >Fale conosco</a
                   >
                 </div>
                 <div class="dropdown-item drop-item">
-                  <a href="covid_en.html#github" class="nav-link submenu"
-                    >Source code</a
+                  <a href="covid.html#github" class="nav-link submenu"
+                    >Código fonte</a
                   >
                 </div>
               </div>
@@ -118,7 +111,7 @@
 
             <li class="navbar-item dropdown">
               <div
-                class="dropdown-item dropdown-toggle"
+                class="dropdown-item dropdown-toggle active"
                 id="navbarDropdown5"
                 role="button"
                 data-toggle="dropdown"
@@ -126,41 +119,41 @@
                 aria-expanded="false"
                 tabindex="0"
               >
-                Data
+                Dados
               </div>
               <div
                 class="dropdown-menu dropdown dropdown-menu-right"
                 aria-labelledby="navbarDropdown5"
               >
                 <div class="dropdown-item drop-item">
-                  <a href="data_en.html" class="nav-link submenu">Overview</a>
+                  <a href="data.html" class="nav-link submenu">Visão geral</a>
                 </div>
                 <div
                   class="dropdown-item drop-item dropdown dropright dropdown-submenu"
                 >
                   <a
-                    class="btn dropdown-toggle nav-link submenu"
+                    class="btn dropdown-toggle nav-link submenu active"
                     href="#"
                     data-toggle="dropdown"
                     data-flip="false"
                     style="text-align: left"
                   >
-                    Health</a
+                    Saúde</a
                   >
 
                   <ul class="dropdown-menu sub-drop">
                     <li class="dropdown-item drop-item">
-                      <a href="sg_en.html" class="nav-link submenu">FS</a>
+                      <a href="sg.html" class="nav-link submenu active">SG</a>
                     </li>
                     <li class="dropdown-item drop-item">
-                      <a href="srag_en.html" class="nav-link submenu">SARS</a>
+                      <a href="srag.html" class="nav-link submenu">SRAG</a>
                     </li>
                     <li class="dropdown-item drop-item">
-                      <a href="wcota_en.html" class="nav-link submenu">WCota</a>
+                      <a href="wcota.html" class="nav-link submenu">WCota</a>
                     </li>
                     <li class="dropdown-item drop-item">
-                      <a href="vacina_en.html" class="nav-link submenu"
-                        >Vaccination</a
+                      <a href="vacina.html" class="nav-link submenu"
+                        >Vacinação</a
                       >
                     </li>
                   </ul>
@@ -175,18 +168,16 @@
                     data-flip="false"
                     style="text-align: left"
                   >
-                    Mobility
+                    Mobilidade
                   </a>
 
                   <ul class="dropdown-menu sub-drop">
                     <li class="dropdown-item drop-item">
-                      <a href="mobgoo_en.html" class="nav-link submenu"
-                        >Google</a
-                      >
+                      <a href="mobgoo.html" class="nav-link submenu">Google</a>
                     </li>
                     <li class="dropdown-item drop-item">
-                      <a href="ibge_en.html" class="nav-link submenu"
-                        >Intercity</a
+                      <a href="ibge.html" class="nav-link submenu"
+                        >Intercidade</a
                       >
                     </li>
                   </ul>
@@ -200,12 +191,12 @@
                     data-toggle="dropdown"
                     data-flip="false"
                     style="text-align: left"
-                    >Inequality</a
+                    >Inequalidade</a
                   >
 
                   <ul class="dropdown-menu sub-drop">
                     <li class="dropdown-item drop-item">
-                      <a href="ibp_en.html" class="nav-link submenu">IBP</a>
+                      <a href="ibp.html" class="nav-link submenu">IBP</a>
                     </li>
                   </ul>
                 </div>
@@ -220,20 +211,20 @@
                     style="text-align: left; width: 100%; margin: 0"
                     role="button"
                   >
-                    Non-pharmaceutical measure
+                    Medida não farmacêutica
                   </a>
 
                   <ul class="dropdown-menu sub-drop">
                     <li class="dropdown-item drop-item">
-                      <a href="estringe_en.html" class="nav-link submenu"
-                        >Stringency index</a
+                      <a href="estringe.html" class="nav-link submenu"
+                        >Índice de estringência</a
                       >
                     </li>
                   </ul>
                 </div>
                 <div class="dropdown-item drop-item">
-                  <a href="aggregated_en.html" class="nav-link submenu"
-                    >Aggregated</a
+                  <a href="aggregated.html" class="nav-link submenu"
+                    >Agregados</a
                   >
                 </div>
               </div>
@@ -241,7 +232,7 @@
 
             <li class="navbar-item dropdown">
               <div
-                class="dropdown-item dropdown-toggle active"
+                class="dropdown-item dropdown-toggle"
                 id="navbarDropdown2"
                 role="button"
                 data-toggle="dropdown"
@@ -249,14 +240,14 @@
                 aria-expanded="false"
                 tabindex="0"
               >
-                Visualization
+                Visualização
               </div>
 
               <div
                 class="dropdown-menu dropdown dropdown-menu-right"
                 aria-labelledby="navbarDropdown2"
               >
-                <h6 class="dropdown-header">Description</h6>
+                <h6 class="dropdown-header">Descritiva</h6>
 
                 <div
                   class="dropdown-item drop-item dropdown dropright dropdown-submenu"
@@ -272,85 +263,80 @@
                   >
                   <ul class="dropdown-menu sub-drop">
                     <li class="dropdown-item drop-item">
-                      <a href="panoramaEstado_en.html" class="nav-link submenu"
-                        >States</a
+                      <a href="panoramaEstado.html" class="nav-link submenu"
+                        >Estados</a
                       >
                     </li>
                     <li class="dropdown-item drop-item">
-                      <a href="panoramaMuni_en.html" class="nav-link submenu"
-                        >Cities</a
+                      <a href="panoramaMuni.html" class="nav-link submenu"
+                        >Municipios</a
                       >
                     </li>
                     <li class="dropdown-item drop-item">
-                      <a href="panoramaRegSau_en.html" class="nav-link submenu"
-                        >Regions</a
+                      <a href="panoramaRegSau.html" class="nav-link submenu"
+                        >Regiões de Saúde</a
                       >
                     </li>
                   </ul>
                 </div>
                 <div class="dropdown-item drop-item">
-                  <a href="decree_en.html" class="itemcol nav-link submenu"
-                    >Decrees</a
-                  >
+                  <a href="decree.html" class="itemcol nav-link submenu"
+                    >Decretos
+                  </a>
                 </div>
                 <div class="dropdown-item drop-item">
                   <a href="#" class="itemcol nav-link submenu isDisabled"
-                    >Mobility</a
+                    >Mobilidade</a
                   >
                 </div>
 
-                <h6 class="dropdown-header">Models</h6>
+                <h6 class="dropdown-header">Modelos</h6>
 
                 <div
                   class="dropdown-item drop-item dropdown dropright dropdown-submenu"
                 >
                   <a
-                    class="btn dropdown-toggle nav-link submenu itemcol active"
+                    class="btn dropdown-toggle nav-link submenu itemcol"
                     href="#"
                     data-toggle="dropdown"
                     data-flip="false"
                     style="text-align: left"
                   >
-                    States
+                    Estados
                   </a>
 
                   <ul class="dropdown-menu sub-drop">
                     <li class="dropdown-item drop-item sub-drop">
-                      <a href="curto_en.html" class="nav-link submenu"
-                        >Short term</a
+                      <a href="curto.html" class="nav-link submenu"
+                        >Curto prazo</a
                       >
                     </li>
                     <li class="dropdown-item drop-item sub-drop">
-                      <a href="longo_en.html" class="nav-link submenu active"
-                        >Long term</a
+                      <a href="longo.html" class="nav-link submenu"
+                        >Longo prazo</a
                       >
                     </li>
                     <li class="dropdown-item drop-item sub-drop disabled">
-                      <a
-                        href="compara_en.html"
-                        class="nav-link submenu isDisabled"
-                        >Comparison</a
+                      <a href="compara.html" class="nav-link submenu isDisabled"
+                        >Comparação</a
                       >
                     </li>
                     <li class="dropdown-item drop-item sub-drop disabled">
-                      <a
-                        href="valida_en.html"
-                        class="nav-link submenu isDisabled"
-                        >Validation</a
+                      <a href="valida.html" class="nav-link submenu isDisabled"
+                        >Validação</a
                       >
                     </li>
                   </ul>
                 </div>
                 <div class="dropdown-item drop-item">
-                  <a href="dashboard_en.html" class="itemcol nav-link submenu"
-                    >Simulation</a
+                  <a href="dashboard.html" class="itemcol nav-link submenu"
+                    >Simulação</a
                   >
                 </div>
+
                 <div class="dropdown-item drop-item disabled">
-                  <a
-                    href="tsd_en.html"
-                    class="itemcol nav-link submenu isDisabled"
-                    >Bring your data</a
+                  <a href="#" class="itemcol nav-link submenu isDisabled"
+                    >Traga seus dados</a
                   >
                 </div>
               </div>
@@ -366,44 +352,45 @@
                 aria-expanded="false"
                 tabindex="0"
               >
-                Outreach
+                Divulgação
               </div>
               <div
                 class="dropdown-menu dropdown dropdown-menu-right"
                 aria-labelledby="navbarDropdown1"
               >
                 <div class="dropdown-item drop-item">
-                  <a href="news_en.html#newsletter" class="nav-link submenu">
+                  <a href="news.html#newsletter" class="nav-link submenu">
                     Newsletter</a
                   >
                 </div>
                 <div class="dropdown-item drop-item">
-                  <a href="news_en.html#boletim" class="nav-link submenu"
-                    >Bulletin</a
+                  <a href="news.html#boletim" class="nav-link submenu"
+                    >Boletim</a
                   >
                 </div>
                 <div class="dropdown-item drop-item">
-                  <a href="news_en.html#midia" class="nav-link submenu">News</a>
-                </div>
-                <div class="dropdown-item drop-item">
-                  <a href="news_en.html#artigos" class="nav-link submenu"
-                    >Papers</a
+                  <a href="news.html#midia" class="nav-link submenu"
+                    >Notícias</a
                   >
                 </div>
                 <div class="dropdown-item drop-item">
-                  <a href="contato_en.html#eventos" class="nav-link submenu"
-                    >Events</a
+                  <a href="news.html#artigos" class="nav-link submenu"
+                    >Artigos</a
                   >
                 </div>
                 <div class="dropdown-item drop-item">
-                  <a
-                    href="contato_en.html#galeria-videos"
-                    class="nav-link submenu"
-                    >Video gallery</a
+                  <a href="contato.html#eventos" class="nav-link submenu"
+                    >Eventos</a
+                  >
+                </div>
+                <div class="dropdown-item drop-item">
+                  <a href="contato.html#galeria-videos" class="nav-link submenu"
+                    >Galeria de vídeos</a
                   >
                 </div>
               </div>
             </li>
+
             <li class="navbar-item dropdown">
               <div
                 class="dropdown-item dropdown-toggle"
@@ -430,12 +417,12 @@
                 aria-labelledby="navbarDropdown1"
               >
                 <div class="dropdown-item drop-item">
-                  <a href="../longo.html" class="nav-link submenu">Português</a>
-                </div>
-                <div class="dropdown-item drop-item">
-                  <a href="longo_en.html" class="nav-link active submenu"
-                    >English</a
+                  <a href="sg.html" class="nav-link active submenu"
+                    >Português</a
                   >
+                </div>
+                <div class="dropdown-item drop-item" disabled>
+                  <a href="en/sg_en.html" class="nav-link submenu">English</a>
                 </div>
               </div>
             </li>
@@ -444,23 +431,164 @@
       </div>
     </nav>
 
-    <div class="top-model"><h1>Long term models</h1></div>
-    <div id="myDiv" class="animate-bottom">
-      <div id="iframe-conf" style="margin: 0">
-        <!--Changed here to try to force iframe -->
-        <iframe
-          id="long_time_pred"
-          src="https://pamepi.rondonia.fiocruz.br/shiny/long_pred/"
-          style="
-            border: none;
-            width: 100%;
-            height: 800px;
-            margin-top: 2rem;
-            margin-bottom: -25px;
-          "
-        ></iframe>
+    <section class="top">
+      <div class="row dados-icon">
+        <img src="img/espirros.png" class="dados-img" style="width: 80px" />
+
+        <h1 class="dados-text">Síndrome Gripal (SG)</h1>
       </div>
-    </div>
+
+      <div class="intro" style="padding: 2rem 0rem 5rem">
+        <h2 class="mb-5">Descrição</h2>
+        <p>
+          Com o surgimento da pandemia causada pelo SARS-COV-2, o Ministério da
+          Saúde implantou um sistema de vigilância para registro da Síndrome
+          Gripal (SG, também denominado e-SUS VE) de casos leves a moderados com
+          suspeita de COVID-19.
+        </p>
+        <p>
+          O conjunto de dados é proveniente do sistema e-SUS NOTIFICA, que é
+          preenchido por unidades públicas ou privadas como unidades básicas de
+          saúde, consultórios, clínicas, postos de atendimento, pronto
+          atendimento, entre outros de baixa complexidade.
+        </p>
+        <p>
+          Os dados incluem informações referentes ao local de residência do
+          paciente (campos: estado, município), independentemente de ter sido
+          notificado em outro estado ou município (Campos: Notificação estado,
+          Notificação município), além de questões demográficas e
+          clínico-epidemiológicas, (<a
+            href="https://opendatasus.saude.gov.br/dataset/notificacoes-de-sindrome-gripal-leve-2021"
+            target="_blank"
+            >Ministério da Saúde, 2021</a
+          >), (<a
+            href="https://portal.fiocruz.br/sites/portal.fiocruz.br/files/documentos/nota_tecnica_13.pdf 
+          "
+            target="_blank"
+            >Observatório COVID-19, 2020</a
+          >).
+        </p>
+        <p>
+          Links para publicações que usam os dados do SG ou fornecem outros
+          locais de acesso público dos dados podem ser encontrados em (<a
+            href="https://portal.fiocruz.br/sites/portal.fiocruz.br/files/documentos/nota_tecnica_13.pdf 
+        "
+            target="_blank"
+            >Observatório COVID-19, 2020</a
+          >).
+        </p>
+        <h2 class="mb-5 mt-5 pt-5 pb-2">Informação de acesso a dados</h2>
+
+        <p>
+          Os dados SG são licenciados sob a Creative Commons Attribution License
+          cc-by (versão 4.0), ver (<a
+            href="https://opendatasus.saude.gov.br/dataset/notificacoes-de-sindrome-gripal-leve-2021"
+            target="_blank"
+            >Ministério da Saúde, 2021</a
+          >). Além disso, o conjunto de dados SG está disponível ao público e
+          publicado pelo Ministério da Saúde do Brasil. Portanto, não é
+          necessária a aprovação de um comitê de ética para o uso desses dados,
+          de acordo com as Resoluções 466/2012 e 510/2016 (artigo 1º, incisos
+          III e V) do Conselho Nacional de Saúde (CNS), Brasil.
+        </p>
+
+        <h2 class="mb-5 mt-5 pt-5 pb-2">Métodos de coleta de dados</h2>
+        <p>
+          Um código python está disponível em nosso diretório
+          <a
+            href="https://github.com/PAMepi/PAMepi_scripts_datalake"
+            target="_blank"
+            >Github</a
+          >
+          para baixar os dados SG do OpenDatasus, veja detalhes em
+          <a
+            href="https://github.com/PAMepi/PAMepi_scripts_datalake"
+            target="_blank"
+            >Github</a
+          >. Estamos extraindo os dados SG de 2019 em diante. A base de dados é
+          atualizada semanalmente no nosso projeto, sendo uma versão associada à
+          sua data de atualização.
+        </p>
+
+        <h2 class="mb-5 mt-5 pt-5 pb-2">
+          Informações específicas de dados para SG
+        </h2>
+        <p>
+          O conjunto de dados SG tem um total de 30 colunas e mostrou um total
+          de 48.288.827 registros (linhas) e um tamanho de 14 GB na última
+          atualização de 19 de agosto de 2021. Um código com mais detalhes sobre
+          as variáveis, processamento de dados e métodos de análise é
+          apresentado em nosso diretório
+          <a
+            href="https://github.com/PAMepi/PAMepi_scripts_datalake"
+            target="_blank"
+            >Github</a
+          >
+          .
+        </p>
+        <h2 class="mb-5 mt-5 pt-5 pb-2">Limitações do conjunto de dados SG</h2>
+        <p>
+          Vários casos no conjunto de dados SG não possuem classificação final.
+          Todos os casos do SG terão uma classificação final dada pelas equipes
+          de vigilância epidemiológica da Secretaria de Saúde. Porém, dado o
+          número de pacientes cadastrados, eles podem não ser classificados a
+          tempo (alguns até encerrados e não mais analisados).
+        </p>
+        <p>
+          Para contornar tal dificuldade, nossa equipe aplicará um algoritmo de
+          classificação para dar um pré-diagnóstico dos casos no SG que não
+          possuem classificação final. O algoritmo é aplicado às informações de
+          sintomas disponíveis no conjunto de dados.
+        </p>
+        <h2 class="mb-5 mt-5 pt-5 pb-2">
+          Visão esquemática da base de dados SG e SRAG
+        </h2>
+        <p style="column-span: all">
+          <img src="img/sivep_esquema_pt.jpeg" style="width: 100%" />
+        </p>
+      </div>
+    </section>
+    <hr />
+    <section class="middle-white">
+      <h2 class="data">Dados e recursos</h2>
+      <div class="dado-subitem">
+        <div class="media download">
+          <h3 class="data">Dados e dicionário de variáveis</h3>
+        </div>
+
+        <div class="data-in">
+          <h4 class="data">Explorador de dados</h4>
+          <div class="table-div">
+            <table
+              id="tableExp"
+              cellpadding="2"
+              cellspacing="2"
+              border="1"
+              class="table-data data"
+            ></table>
+          </div>
+
+          <h4 class="data">
+            Dicionário de Dados
+            <a
+              href="files/dic/Dicionarios-Portugues-SG.csv"
+              class="btn btn-info float-right mr-3"
+              target="_blank"
+              >Download</a
+            >
+          </h4>
+          <div class="table-div">
+            <table
+              id="tableDic"
+              cellpadding="2"
+              cellspacing="2"
+              border="1"
+              class="table-data dic"
+            ></table>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <footer class="page-footer font-small footer" id="footer">
       <div class="row justify-content-center align-items-center copyrights">
@@ -493,27 +621,76 @@
       </div>
 
       <div class="copyrights row align-items-center justify-content-center">
-        PAMEpi <img src="../img/no-virus.svg" class="filter-virus" />2022
+        PAMEpi <img src="img/no-virus.svg" class="filter-virus" />2022
       </div>
     </footer>
 
-    <div id="loader"></div>
+    <script>
+      let cell;
+      let nlines = sampleSG.length;
+      let ncols = Object.keys(sampleSG['0']).length;
+      let tableExp = document.getElementById('tableExp');
+      let row;
 
+      function cellValue(lin, col) {
+        if (Object.keys(sampleSG[lin.toString()])[col]) {
+          return `${Object.values(sampleSG[lin.toString()])[col]}`;
+        }
+        return '-';
+      }
+
+      function colValue(col) {
+        if (Object.keys(sampleSG['0'])[col]) {
+          return `<th>${Object.keys(sampleSG['0'])[col]}</th>`;
+        }
+        return '&nbsp;';
+      }
+      // fill
+      row = tableExp.insertRow(0);
+      for (var col = 0; col < ncols; col++) {
+        cell = row.insertCell(col);
+        cell.outerHTML = colValue(col);
+      }
+      // fill table with data
+      for (var lin = 0; lin < nlines; lin++) {
+        row = tableExp.insertRow(lin + 1);
+        for (var col = 0; col < ncols; col++) {
+          cell = row.insertCell(col);
+          cell.innerHTML = cellValue(lin, col);
+        }
+      }
+
+      ncols = dicSG.length;
+
+      tableDic = document.getElementById('tableDic');
+
+      function dicValue(lin, col) {
+        if (Object.keys(dicSG[col.toString()])[lin]) {
+          return `<td >${Object.values(dicSG[col.toString()])[lin]} </td>`;
+        }
+        return '-';
+      }
+
+      let col_name = '';
+      // fill table with data
+      for (let i = 0; i < Object.keys(dicSG[0]).length; i++) {
+        row = tableDic.insertRow(i);
+        cell = row.insertCell(row);
+        cell.outerHTML = `<th class="headcol">${
+          Object.keys(dicSG['0'])[i]
+        }</th>`;
+        ncol = 1;
+        for (let col = 0; col < ncols; col++) {
+          col_name = Object.values(dicSG[col.toString()])[5];
+          cell = row.insertCell(ncol);
+          cell.outerHTML = dicValue(i, col);
+          ncol++;
+        }
+      }
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="../js/scripts.js"></script>
-    <script>
-      var myVar;
-
-      function myFunction() {
-        myVar = setTimeout(showPage, 3000);
-      }
-
-      function showPage() {
-        document.getElementById('loader').style.display = 'none';
-        document.getElementById('myDiv').style.display = 'block';
-      }
-    </script>
+    <script src="js/scripts.js"></script>
   </body>
 </html>

@@ -305,7 +305,7 @@
                   class="dropdown-item drop-item dropdown dropright dropdown-submenu"
                 >
                   <a
-                    class="btn dropdown-toggle nav-link submenu itemcol active"
+                    class="btn dropdown-toggle nav-link submenu itemcol"
                     href="#"
                     data-toggle="dropdown"
                     data-flip="false"
@@ -321,7 +321,7 @@
                       >
                     </li>
                     <li class="dropdown-item drop-item sub-drop">
-                      <a href="longo_en.html" class="nav-link submenu active"
+                      <a href="longo_en.html" class="nav-link submenu"
                         >Long term</a
                       >
                     </li>
@@ -342,7 +342,9 @@
                   </ul>
                 </div>
                 <div class="dropdown-item drop-item">
-                  <a href="dashboard_en.html" class="itemcol nav-link submenu"
+                  <a
+                    href="dashboard_en.html"
+                    class="itemcol active nav-link submenu"
                     >Simulation</a
                   >
                 </div>
@@ -404,10 +406,11 @@
                 </div>
               </div>
             </li>
+
             <li class="navbar-item dropdown">
               <div
                 class="dropdown-item dropdown-toggle"
-                id="navbarDropdown3"
+                id="navbarDropdown1"
                 role="button"
                 data-toggle="dropdown"
                 aria-haspopup="true"
@@ -416,7 +419,7 @@
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
+                  fill="white"
                   class="bi bi-globe icon-language"
                   viewBox="0 0 16 16"
                 >
@@ -430,10 +433,12 @@
                 aria-labelledby="navbarDropdown1"
               >
                 <div class="dropdown-item drop-item">
-                  <a href="../longo.html" class="nav-link submenu">Português</a>
+                  <a href="../dashboard.html" class="nav-link submenu"
+                    >Português</a
+                  >
                 </div>
                 <div class="dropdown-item drop-item">
-                  <a href="longo_en.html" class="nav-link active submenu"
+                  <a href="dashboard_en.html" class="nav-link active submenu"
                     >English</a
                   >
                 </div>
@@ -444,17 +449,16 @@
       </div>
     </nav>
 
-    <div class="top-model"><h1>Long term models</h1></div>
+    <div class="top-model"><h1>Simulation (Only in Portuguese)</h1></div>
     <div id="myDiv" class="animate-bottom">
       <div id="iframe-conf" style="margin: 0">
-        <!--Changed here to try to force iframe -->
         <iframe
-          id="long_time_pred"
-          src="https://pamepi.rondonia.fiocruz.br/shiny/long_pred/"
+          id="short_time_pred"
+          src="https://pamepi.github.io/PAMepi_models_dashboard/"
           style="
             border: none;
             width: 100%;
-            height: 800px;
+            height: 600px;
             margin-top: 2rem;
             margin-bottom: -25px;
           "
@@ -498,7 +502,6 @@
     </footer>
 
     <div id="loader"></div>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

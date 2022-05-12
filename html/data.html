@@ -145,13 +145,13 @@
 
                   <ul class="dropdown-menu sub-drop">
                     <li class="dropdown-item drop-item">
-                      <a href="sivep.html" class="nav-link submenu">SG</a>
+                      <a href="sg.html" class="nav-link submenu">SG</a>
                     </li>
                     <li class="dropdown-item drop-item">
                       <a href="srag.html" class="nav-link submenu">SRAG</a>
                     </li>
                     <li class="dropdown-item drop-item">
-                      <a href="brio.html" class="nav-link submenu">Brasil IO</a>
+                      <a href="wcota.html" class="nav-link submenu">WCota</a>
                     </li>
                     <li class="dropdown-item drop-item">
                       <a href="vacina.html" class="nav-link submenu"
@@ -330,10 +330,8 @@
                     </li>
                   </ul>
                 </div>
-                <div class="dropdown-item drop-item disabled">
-                  <a
-                    href="dashboard.html"
-                    class="itemcol nav-link submenu isDisabled"
+                <div class="dropdown-item drop-item">
+                  <a href="dashboard.html" class="itemcol nav-link submenu"
                     >Simulação</a
                   >
                 </div>
@@ -456,7 +454,7 @@
         </p>
         <p>
           Podemos coletar os dados de plataformas de acesso aberto como Google
-          Mobility, Brasil IO, OpenDatasus, JusBrasil e IPB Cidacs Bahia. Além
+          Mobility, WCota, OpenDatasus, JusBrasil e IPB Cidacs Bahia. Além
           disso, um script em linguagem python foi desenvolvido para automatizar
           o processo de organização, download e atualização de arquivos,
           facilitando o ajuste do período de atualização do datalake conforme o
@@ -472,16 +470,18 @@
         </p>
         <p>
           Os dados de vacinação têm 63 gigabytes, SG tem 14 gigabytes, SRAG tem
-          694 megabytes, Google Mobilidade 593 megabytes, Brasil IO 285
-          megabytes e os setores censitários CIDACS 42 megabytes.
+          694 megabytes, Google Mobilidade 593 megabytes, WCota 285 megabytes e
+          os setores censitários CIDACS 42 megabytes. Esses valores podem se
+          alterar devido às constantes atualizações das fontes originais dos
+          dados.
         </p>
         <p>
           Dessa forma, o banco de dados soma aproximadamente 80 gigabytes para a
           versão atualizada em 4 de agosto de 2021. Todos os arquivos estão
           inicialmente disponíveis no formato .csv, exceto os dados dos setores
-          censitários e Brasil IO, respectivamente em .xlsx (excel 2007) e
-          extensões gzip. No entanto, adicionamos um formulário de conversão e
-          extração para distribuir todos os arquivos na extensão .csv.
+          censitários e WCota, respectivamente em .xlsx (excel 2007) e extensões
+          gzip. No entanto, adicionamos um formulário de conversão e extração
+          para distribuir todos os arquivos na extensão .csv.
         </p>
       </div>
     </section>
@@ -504,7 +504,9 @@
             </p>
           </div>
           <div class="card-footer data-footer">
-            <a class="data-button" href="sivep.html">Acessar</a>
+            <a class="data-button text-decoration-none" href="sg.html"
+              >Acessar</a
+            >
           </div>
         </div>
         <div class="card data-card" id="srag">
@@ -526,29 +528,39 @@
             </p>
           </div>
           <div class="card-footer data-footer">
-            <a class="data-button" href="srag.html">Acessar</a>
+            <a class="data-button text-decoration-none" href="srag.html"
+              >Acessar</a
+            >
           </div>
         </div>
 
-        <div class="card data-card" id="brio">
+        <div class="card data-card" id="wcota">
           <div class="card-header data-header">
-            <h5 class="card-title">Brasil IO</h5>
+            <h5 class="card-title">WCota</h5>
           </div>
           <div class="card-body data-body">
             <p class="card-text truncate">
-              O conjunto de dados Brasil io é extraído de um projeto não
-              governamental chamado Brasil io que realiza trabalho voluntário
-              para coletar informações sobre o número de casos confirmados e
-              óbitos causados por infecções por SARS-COV-2 agregados em nível
-              estadual e municipal (Brasil io, 2020). Os autores reúnem os dados
-              dos relatórios das secretarias estaduais e municipais disponíveis
+              O conjunto de dados WCota é extraído do
+              <a href="https://github.com/wcota/covid19br" target="_blank"
+                >repositório no Github</a
+              >
+              do pesquisador Wesley Cota. O número de casos confirmados e óbitos
+              causados ​​por infecções por SARS-COV-2 agregados em nível
+              estadual e municipal são compilados a partir de dados do
+              <a href="https://covid.saude.gov.br/" target="_blank">
+                Ministério da Saúde</a
+              >
+              e Secretarias Estaduais de Saúde. O autor reune os dados dos
+              relatórios das secretarias estaduais e municipais disponíveis
               publicamente antes do registro no banco de dados do Ministério da
               Saúde do Brasil.
             </p>
           </div>
 
           <div class="card-footer data-footer">
-            <a class="data-button" href="brio.html">Acessar</a>
+            <a class="data-button text-decoration-none" href="wcota.html"
+              >Acessar</a
+            >
           </div>
         </div>
 
@@ -567,30 +579,11 @@
           </div>
 
           <div class="card-footer data-footer">
-            <a class="data-button" href="vacina.html">Acessar</a>
+            <a class="data-button text-decoration-none" href="vacina.html"
+              >Acessar</a
+            >
           </div>
         </div>
-
-        <!-- <div class="card data-card" id="hosp">
-          <div class="card-header data-header">
-            <h5 class="card-title">Ocupação hospitalar</h5>
-          </div>
-          <div class="card-body data-body">
-            <p class="card-text truncate">
-              O Ministério da Saúde, por meio da Secretaria de Atenção
-              Especializada em Saúde (SAES), implementou, devido à pandemia, o
-              registro das internações por meio do Sistema ESUS Notifica-Módulo
-              Internações SUS. Esta página tem como finalidade disponibilizar o
-              banco de dados da ocupação dos leitos, a partir da incorporação do
-              sistema e-SUS Notifica- Módulo internações SUS, em vigor a partir
-              de abril de 2020.
-            </p>
-          </div>
-
-          <div class="card-footer data-footer">
-            <a class="data-button" href="hospital.html">Acessar</a>
-          </div>
-        </div> -->
 
         <div class="card data-card" id="ibp">
           <div class="card-header data-header">
@@ -611,7 +604,9 @@
             </p>
           </div>
           <div class="card-footer data-footer">
-            <a class="data-button" href="ibp.html">Acessar</a>
+            <a class="data-button text-decoration-none" href="ibp.html"
+              >Acessar</a
+            >
           </div>
         </div>
 
@@ -631,7 +626,9 @@
           </div>
 
           <div class="card-footer data-footer">
-            <a class="data-button" href="mobgoo.html">Acessar</a>
+            <a class="data-button text-decoration-none" href="mobgoo.html"
+              >Acessar</a
+            >
           </div>
         </div>
 
@@ -650,7 +647,9 @@
           </div>
 
           <div class="card-footer data-footer">
-            <a class="data-button" href="ibge.html">Acessar</a>
+            <a class="data-button text-decoration-none" href="ibge.html"
+              >Acessar</a
+            >
           </div>
         </div>
 
@@ -676,7 +675,9 @@
           </div>
 
           <div class="card-footer data-footer">
-            <a class="data-button" href="estringe.html">Acessar</a>
+            <a class="data-button text-decoration-none" href="estringe.html"
+              >Acessar</a
+            >
           </div>
         </div>
 
@@ -689,10 +690,10 @@
               A partir do banco de dados original descrito em detalhes em
               <a href="data.html">Visão geral</a>, incluindo
               <a href="vacina.html"> Vacinação</a>,
-              <a href="brio.html"> Brasil IO (Wesley Cota)</a>,
-              <!-- <a href="hospital.html"> Hospitalização</a>, -->
-              <a href="sivep.html"> SG</a> e <a href="srag.html"> SRAG</a>,
-              criamos um único arquivo onde você pode encontrar as principais
+              <a href="wcota.html"> WCota</a>,
+
+              <a href="sg.html"> SG</a> e <a href="srag.html"> SRAG</a>, criamos
+              um único arquivo onde você pode encontrar as principais
               informações de cada banco de dados. A composição facilita o uso
               dos dados, pois já são cruzados entre si e apresentam uma única
               entrada para uma determinada cidade e dia.
@@ -700,7 +701,9 @@
           </div>
 
           <div class="card-footer data-footer">
-            <a class="data-button" href="aggregated.html">Acessar</a>
+            <a class="data-button text-decoration-none" href="aggregated.html"
+              >Acessar</a
+            >
           </div>
         </div>
       </div>
