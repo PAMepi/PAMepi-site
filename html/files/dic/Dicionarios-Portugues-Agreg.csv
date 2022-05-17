@@ -1,4 +1,4 @@
-Nome do campo na base de dados original;Nome do campo depois da harmonização (váriável nomeada pela PAMEpi);Legenda do Campo;Tipo;Categorias;Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi;Descrição
+Nome do campo original;Nome do campo dado pela PAMEpi;Legenda do Campo;Tipo;Categorias originais;Categorias dadas pela PAMEpi;Descrição
 code_full_mun_ibge;code_full_mun_ibge;Código IBGE da cidade completo;Int;sem categoria;sem categoria;Código IBGE da cidade completo com 7 dígitos
 code_mun_ibge;code_mun_ibge;Código IBGE da cidade;Int;sem categoria;sem categoria;Código IBGE da cidade completo com 6 dígitos
 nome_mun;mun_name;Nome da cidade;string;sem categoria;sem categoria;Nome da cidade

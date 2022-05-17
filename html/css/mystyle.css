@@ -532,6 +532,10 @@ ol li::marker {
   /* border: 1px solid black; */
 }
 
+.intro p {
+  margin-y: 0;
+}
+
 #projeto {
   column-count: 3;
 }
@@ -1311,6 +1315,7 @@ svg:hover {
   fill: #892e2c;
 }
 .nota-img {
+  display: block;
   width: 300px;
   float: left;
   margin: 1rem 2rem 1rem 0;

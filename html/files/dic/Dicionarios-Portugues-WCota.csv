@@ -1,4 +1,4 @@
-Nome do campo na base de dados original;Nome do campo depois da harmonização (váriável nomeada pela PAMEpi);Legenda do Campo;Tipo;Categorias;Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi;Descrição
+Nome do campo original;Nome do campo dado pela PAMEpi;Legenda do Campo;Tipo;Categorias originais;Categorias dadas pela PAMEpi;Descrição
 epi_week;sem_ntf;Semana epidemiológica;Number;Sem categoria;Sem categoria;Número da semana epidemiológica.
 date;date;Data;Date YYYY-MM-DD;Sem categoria;Sem categoria;Data de divulgação dos dados no formato YYYY-MM-DD.
 state;uf;UF - Estado;String;Sem categoria;Sem categoria;Sigla da unidade federativa, exemplo: SP, ou “TOTAL” quando se refere a todo o país

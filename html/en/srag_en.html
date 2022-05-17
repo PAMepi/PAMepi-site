@@ -606,8 +606,8 @@
           <h4 class="data">
             Data dictionary
             <a
-              href=""
-              class="btn btn-info float-right mr-3 disabled"
+              href="../files/dic/Dictionary-English-SARS.csv"
+              class="btn btn-info float-right mr-3"
               target="_blank"
               >Download</a
             >
@@ -623,23 +623,6 @@
           </div>
         </div>
       </div>
-
-      <!-- <div class="dado-subitem">
-        <div class="media download">
-          <h3 class="data">Documentação do processo</h3>
-        </div>
-      </div>
-      <div class="dado-subitem">
-        <div class="media download">
-          <h3 class="data">Análise Visual</h3>
-        </div>
-      </div>
-      <div class="dado-subitem">
-        <div class="media download">
-
-            <h3 class="data">Mineração de Dados e Análise Preditiva</h3>
-        
-         </div> -->
     </section>
 
     <footer class="page-footer font-small footer" id="footer">
@@ -723,8 +706,8 @@
         return '-';
       }
       let col_name = '';
-      // fill table with data
-      for (let i = 0; i < Object.keys(dicXXX[0]).length; i++) {
+
+      for (let i = 0; i < Object.keys(dicSRAGEn[0]).length; i++) {
         row = tableDic.insertRow(i);
         cell = row.insertCell(row);
         cell.outerHTML = `<th class="headcol">${
@@ -733,12 +716,10 @@
         ncol = 1;
         for (let col = 0; col < ncols; col++) {
           col_name = Object.values(dicSRAGEn[col.toString()])[5];
-          //only add column if field is in our data
-          if (fields.find(fields => fields === col_name)) {
-            cell = row.insertCell(ncol);
-            cell.outerHTML = dicValue(i, col);
-            ncol++;
-          }
+
+          cell = row.insertCell(ncol);
+          cell.outerHTML = dicValue(i, col);
+          ncol++;
         }
       }
     </script>

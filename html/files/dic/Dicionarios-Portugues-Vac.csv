@@ -1,4 +1,4 @@
-Nome do campo na base de dados original;Nome do campo depois da harmonização (váriável nomeada pela PAMEpi);Legenda do Campo;Tipo;Categorias;Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi;Descrição
+Nome do campo original;Nome do campo dado pela PAMEpi;Legenda do Campo;Tipo;Categorias originais;Categorias dadas pela PAMEpi;Descrição
 document_id;doc_id;Identificador do documento;String;Sem categoria;Sem categoria;Identificador do documento
 paciente_id;id;Identificador do vacinado;String;Sem categoria;Sem categoria;Identificador do vacinado
 paciente_idade;idade;Idade do vacinado;Number;Sem categoria;Sem categoria;Idade do vacinado em anos.

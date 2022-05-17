@@ -1,4 +1,4 @@
-Nome do campo na base de dados original;Nome do campo depoisda harmonização(váriável nomeada pela PAMEpi);Legenda do Campo;Tipo;Categorias;Valores que aparecem dentroda variável com respectiva harmonização dada pela PAMEpi;Descrição
+Nome do campo original;Nome do campo dado pela PAMEpi;Legenda do Campo;Tipo;Categorias originais;Categorias dadas pela PAMEpi;Descrição
 country_region_code;pais_abrev;Código do país ou região;String;Sem categoria;Sem categoria;Código do país ou região
 country_region;pais;Nome do país ou região;String;Sem categoria;Sem categoria;Nome do país ou região
 sub_region_1;nome_uf;Nome da sub-região, no caso do Brasil este é o Estado;String;Sem categoria;Sem categoria;Nome da sub-região, no caso do Brasil este é o Estado

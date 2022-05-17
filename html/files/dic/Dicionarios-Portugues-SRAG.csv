@@ -1,4 +1,4 @@
-Nome do campo na base de dados original;Nome do campo depois da harmonização (váriável nomeada pela PAMEpi);Legenda do Campo;Tipo;Categorias;Valores que aparecem dentro da variável com respectiva harmonização dada pela PAMEpi;Descrição
+Nome do campo original;Nome do campo dado pela PAMEpi;Legenda do Campo;Tipo;Categorias originais;Categorias dadas pela PAMEpi;Descrição
 DT_NOTIFIC;dt_ntf;1-Data de preenchimento da ficha de notificação.;Date DD/MM/AAAA;Sem categoria;Sem categoria;Campo Obrigatório. Data deve ser <= a data da digitação.
 SEM_NOT;sem_ntf;Semana Epidemiológica do preenchimento da ficha de notificação.;String;Sem categoria;Sem categoria;Campo Interno. Calculado a partir da data dos Primeiros Sintomas. (SS)
 DT_SIN_PRI;dt_sin_pri;2-Data de 1º sintomas do caso.;Date DD/MM/AAAA;Sem categoria;Sem categoria;Campo Obrigatório. Data deve ser <= a data da digitação e data do preenchimento da ficha de notificação.

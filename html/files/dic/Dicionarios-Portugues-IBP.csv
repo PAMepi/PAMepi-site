@@ -1,4 +1,4 @@
-Nome do campo na base de dados original;Nome do campo depoisda harmonização(váriável nomeada pela PAMEpi);Legenda do Campo;Tipo;Categorias;Valores que aparecem dentroda variável com respectivaharmonização dada pela PAMEpi;Descrição
+Nome do campo original;Nome do campo dado pela PAMEpi;Legenda do Campo;Tipo;Categorias originais;Valores que aparecem dentroda variável com respectivaharmonização dada pela PAMEpi;Descrição
 ip_cd_d;code_full_mun_ibge;Código da localização, nesse caso é o mesmo do município. ;Number;Sem categoria;Sem categoria;Código da localização, nesse caso é o mesmo do município. 
 ip_cd_m;code_full_mun_ibge;Código do município;Number;Sem categoria;Sem categoria;Código do município
 ip_nm_f;nome_uf;Nome da UF;String;Sem categoria;Sem categoria;Nome da UF
