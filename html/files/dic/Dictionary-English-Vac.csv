@@ -1,0 +1,32 @@
+Original field name;Field name given by PAMEpi;Field label;Type;Original categories;Categories given by PAMEpi;Description
+document_id;doc_id;document identifier;String;Uncategorized;Uncategorized;document identifier
+paciente_id;id;Identifier of the vaccinated;String;Uncategorized;Uncategorized;Identifier of the vaccinated
+paciente_idade;idade;age of the vaccinated;Number;Uncategorized;Uncategorized;Age of the vaccinated in years.
+paciente_dataNascimento;dt_nasc;Date of birth of the vaccinated;Date yyyy-mm-dd;Uncategorized;Uncategorized;Date of birth of the vaccinated
+paciente_enumSexoBiologico;sexo;Gender of the vaccinated;String;M= Masculino (Male)<br>F= Feminino (Female)<br>I=Ignorado (Ignored);M= Masculino<br>F= Feminino<br>I=Ignorado;Gender of the vaccinated
+paciente_racaCor_codigo;racaCor_code;Vaccinated race/color code;Number;1, 2, 3, 4, 99;1= Branca, 2= Preta, 3= Parda, 4= Amarela, 99= Sem informação;Description in column paciente_racaCor_valor
+paciente_racaCor_valor;racaCor;Description of the breed/color of the vaccinated;String;Branca (white)<br>Preta (black)<br>Parda (brown)<br>Amarela (yellow)<br>Sem informação (no information);Branca, Preta, Parda, Amarela, Sem informação;Relative to column paciente_racaCor_codigo
+paciente_endereco_coIbgeMunicipio;mun_res;Brazilian Institute of Geography and Statistics code of the vaccinated's address municipality;Number;Uncategorized;Uncategorized;IBGE (Brazilian Institute of Geography and Statistics) code of the vaccinated's address municipality
+paciente_endereco_coPais;pais_code_res;Country code of address of the vaccinated;Number;Uncategorized;Uncategorized;Country code of address of the vaccinated
+paciente_endereco_nmMunicipio;mun_res;Name of the municipality of address of the vaccinated;String;Uncategorized;Uncategorized;Name of the municipality of address of the vaccinated
+paciente_endereco_nmPais;pais_res;Name of the country of address of the vaccinated;String;Uncategorized;Uncategorized;Name of the country of address of the vaccinated
+paciente_endereco_uf;uf_res;Abbreviation of the state address of the vaccinated;String;Uncategorized;Uncategorized;Abbreviation of the state address of the vaccinated
+paciente_endereco_cep;cep_res;ZIP code;Number;Uncategorized;Uncategorized;Postal Code with 5 digits for anonymized and 7 digits for identified
+paciente_nacionalidade_enumNacionalidade;nacionalidade;Nationality of the vaccinated;String;B=Brasileiro (Brazillian)<br>E=Estrangeiro (Foreign)<br>N=Ignorado (Ignored);B=Brasileiro<br>E=Estrangeiro<br>N=Ignorado;Nationality of the vaccinated
+estabelecimento_valor;cnes;National Register of Health Establishments code of the establishment that carried out the vaccination;Number;Uncategorized;Uncategorized;CNES (National Register of Health Establishments ) code of the establishment that carried out the vaccination
+estabelecimento_razaoSocial;estabelecimento_razaoSocial;Name/Corporate Name of the establishment;String;Uncategorized;Uncategorized;Name/Corporate Name of the establishment
+estabelecimento_noFantasia;uni_ntf;commercial name of the establishment;String;Uncategorized;Uncategorized;commercial name of the establishment
+estabelecimento_municipio_codigo;mun_code_ntf;City code of the establishment;Number;Uncategorized;Uncategorized;City code of the establishment
+estabelecimento_municipio_nome;mun_ntf;Name of the municipality of the establishment;String;Uncategorized;Uncategorized;Name of the municipality of the establishment
+estabelecimento_uf;uf_ntf;State acronym of the establishment;String;Uncategorized;Uncategorized;State acronym of the establishment
+vacina_grupo_atendimento_codigo;vacina_grupo_atendimento_codigo;Code of the care group to which the vaccinated person belongs;Number;Uncategorized;Uncategorized;Description in the column vacina_grupo_atendimento_nome 
+vacina_grupo_atendimento_nome;vacina_grupo_atendimento_nome;Name of the care group to which the vaccinated person belongs;String;Uncategorized;Uncategorized;Relative to the column vacina_grupo_atendimento_codigo 
+vacina_categoria_codigo;vacina_categoria_codigo;Category code;Number;Uncategorized;Uncategorized;Description in the column vacina_categoria_nome 
+vacina_categoria_nome;vacina_categoria_nome;Category Description;String;Uncategorized;Uncategorized;Referring to the column vacina_categoria_codigo
+vacina_lote;vacina_lote;Vaccine batch number;String;Uncategorized;Uncategorized;Vaccine batch number
+vacina_fabricante_nome;vacina_fabricante_nome;Manufacturer/supplier name;String;Uncategorized;Uncategorized;Manufacturer/supplier name
+vacina_fabricante_referencia;vacina_fabricante_referencia;National Register of Legal Entities of the manufacturer/supplier;String;Uncategorized;Uncategorized;CNPJ (National Register of Legal Entities) of the manufacturer/supplier
+vacina_dataAplicacao;data_vac;Vaccine application date;Date yyyy-mm-dd;Uncategorized;Uncategorized;Vaccine application date
+vacina_descricao_dose;dose;Description of the dose;String;1ª Dose (1st dose)<br>Dose Inicial (initial dose)<br>2ª Dose (2nd dose)<br>Reforço (Booster)<br>Dose, Dose Adicional (Additional dose)<br>3ª Dose (3rd dose)<br>2º Reforço (2nd Booster)<br>4ª Dose (4th dose)<br>Única (unique)<br>1º Reforço (1st Booster)<br>2ª Dose Revacinação (2nd Revaccination)<br>1ª Dose Revacinação (1st Revaccination)<br>5ª Dose (5th dose)<br>3ª Dose Revacinação (3rd Revaccination)<br>Revacinação (Revaccination)<br>3º Reforço (3rd Booster)<br>Tratamento com uma dose (One dose treatment)<br>Tratamento com dezessete doses (Treatment with 17 doses)<br>;1- 1ª Dose / Dose Inicial, 2- 2ª Dose / Única<br>3- Reforço / Dose / Dose Adicional / 3ª Dose / 2º Reforço / 4ª Dose / 1º Reforço / 2ª Dose Revacinação / 1ª Dose Revacinação / 5ª Dose / 3ª Dose Revacinação / Revacinação / 3º Reforço / Tratamento com uma dose / Tratamento com dezessete doses, 9 - Ignorado;Description of the dose, Pamepi separates the data into 3 categories: 1st Dose, 2nd Dose and Booster.
+vacina_codigo;vacina_codigo;vaccine code;Number;Uncategorized;Uncategorized;vaccine code
+vacina_nome;vacina_nome;Vaccine/product name;String;Uncategorized;Astrazeneca = 1<br>Coronavac = 2<br>Pfizer = 3<br>Janssen = 4;Regarding the column vacina_codigo 

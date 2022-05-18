@@ -1,0 +1,13 @@
+Original field name;Field name given by PAMEpi;Field label;Type;Original categories;Categories given by PAMEpi;Description
+epi_week;sem_ntf;epidemiological week;Number;Uncategorized;Uncategorized;Epidemiological week number.
+date;date;Date;Date YYYY-MM-DD;Uncategorized;Uncategorized; Data release date in YYYY-MM-DD format.
+state;uf;State;String;Uncategorized;Uncategorized;Abbreviation of the federative unit, example: SP, or 'TOTAL' when referring to the entire country
+city;mun_name;County;String;Uncategorized;Uncategorized;Full name of the municipality in City/State format. It can have the value 'CASO SEM LOCALIZAÇÃO DEFINIDA/UF', referring to those cases in the federative unit that do not have their municipality defined.
+ibgeID;code_full_mun_ibge;code IBGE;Number;Uncategorized;Uncategorized;Unique identification of the municipality provided by the Brazilian Institute of Statistical Research (IBGE)
+newDeaths;newDeaths;deaths in the day;Number;Uncategorized;Uncategorized;Difference between the number of deaths on the corresponding date and the previous one
+deaths;deaths;Accumulated deaths;Number;Uncategorized;Uncategorized;Cumulative number of deaths on that date
+newCases;newCases;Confirmations on the day;Number;Uncategorized;Uncategorized;Difference between the number of cases of the corresponding date and the previous one
+totalCases;totalCases;Confirmed accum.;Number;Uncategorized;Uncategorized;Cumulative number of cases on that date
+deaths_per_100k_inhabitants;deaths_per_100k_inhabitants;Accumulated deaths/100k inhab.;Number;Uncategorized;Uncategorized;Number of deaths per 100,000 inhabitants for that location
+totalCases_per_100k_inhabitants;totalCases_per_100k_inhabitants;Accum./100k inhab.;Number;Uncategorized;Uncategorized;Number of cases per 100,000 inhabitants for that locality
+deaths_by_totalCases;deaths_by_totalCases;deaths/confirmed;Number;Uncategorized;Uncategorized;Ratio between number of deaths and cases (deaths/totalCases)

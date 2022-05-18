@@ -1,4 +1,4 @@
-Field name in the original database; Field name given by PAMEpi; Field label; Type; Categories; Values that appear in the dataset along with the PAMEpi harmonization (for categorical variables); Description
+Field name in the original; Field name given by PAMEpi; Field label; Type; Categories; Values that appear in the dataset along with the PAMEpi harmonization (for categorical variables); Description
 UF;uf;State initials;String;Uncategorized;Uncategorized;uf
 Cod;uf_code;State code;Number;Uncategorized;Uncategorized;uf_code
 Date;date;Date the decree was published;Date;Uncategorized;Uncategorized;date

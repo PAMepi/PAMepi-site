@@ -542,8 +542,8 @@
           <h4 class="data">
             Data dictionary
             <a
-              href=""
-              class="btn btn-info float-right mr-3 disabled"
+              href="../files/dic/Dictionary-English-Vac.csv"
+              class="btn btn-info float-right mr-3"
               target="_blank"
               >Download</a
             >
@@ -648,7 +648,7 @@
       }
       let col_name = '';
       // fill table with data
-      for (let i = 0; i < Object.keys(dicXXX[0]).length; i++) {
+      for (let i = 0; i < Object.keys(dicVacinaEn[0]).length; i++) {
         row = tableDic.insertRow(i);
         cell = row.insertCell(row);
         cell.outerHTML = `<th class="headcol">${
