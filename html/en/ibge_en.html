@@ -640,8 +640,8 @@
           <h4 class="data">
             Data dictionary - Air connections
             <a
-              href=""
-              class="btn btn-info float-right mr-3 disabled"
+              href="../files/dic/Dictionary-English-MobAir.csv"
+              class="btn btn-info float-right mr-3"
               target="_blank"
               >Download</a
             >
@@ -658,8 +658,8 @@
           <h4 class="data">
             Data dictionary - Road and fluvial connections
             <a
-              href=""
-              class="btn btn-info float-right mr-3 disabled"
+              href="../files/dic/Dictionary-English-MobLandWater.csv"
+              class="btn btn-info float-right mr-3"
               target="_blank"
               >Download</a
             >
@@ -786,9 +786,7 @@
 
       // dicionarios
       ncols = dicAirIBGEEn.length;
-
       tableDic = document.getElementById('tableDic');
-
       function dicValue(lin, col) {
         if (Object.keys(dicAirIBGEEn[col.toString()])[lin]) {
           return `<td >${
@@ -799,7 +797,7 @@
       }
       let col_name = '';
       // fill table with data
-      for (let i = 0; i < Object.keys(dicXXX[0]).length; i++) {
+      for (let i = 0; i < Object.keys(dicAirIBGEEn[0]).length; i++) {
         row = tableDic.insertRow(i);
         cell = row.insertCell(row);
         cell.outerHTML = `<th class="headcol">${
@@ -808,19 +806,14 @@
         ncol = 1;
         for (let col = 0; col < ncols; col++) {
           col_name = Object.values(dicAirIBGEEn[col.toString()])[5];
-          //only add column if field is in our data
-
           cell = row.insertCell(ncol);
           cell.outerHTML = dicValue(i, col);
           ncol++;
         }
       }
-
       // rodoviária e fluviais
       ncols = dicRodoFluIBGEEn.length;
-
       tableDic = document.getElementById('tableDic2');
-
       function dicValue2(lin, col) {
         if (Object.keys(dicRodoFluIBGEEn[col.toString()])[lin]) {
           return `<td >${
@@ -831,7 +824,7 @@
       }
       col_name = '';
       // fill table with data
-      for (let i = 0; i < Object.keys(dicXXX[0]).length; i++) {
+      for (let i = 0; i < Object.keys(dicRodoFluIBGEEn[0]).length; i++) {
         row = tableDic.insertRow(i);
         cell = row.insertCell(row);
         cell.outerHTML = `<th class="headcol">${
@@ -840,8 +833,6 @@
         ncol = 1;
         for (let col = 0; col < ncols; col++) {
           col_name = Object.values(dicRodoFluIBGEEn[col.toString()])[5];
-          //only add column if field is in our data
-
           cell = row.insertCell(ncol);
           cell.outerHTML = dicValue2(i, col);
           ncol++;

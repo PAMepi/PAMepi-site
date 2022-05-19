@@ -1447,19 +1447,27 @@ th {
   text-align: left;
   line-height: 1;
 }
-#tableDic th {
+/* #tableDic th {
   white-space: nowrap;
-}
+} */
 #tableDic td {
   min-width: 250px;
   //word-wrap: break-all;
   //word-break: break-word;
   //overflow: hidden;
   //text-overflow: ellipsis;
-  padding: 0rem 1.1rem;
+  padding: 0.5rem 1.1rem;
+}
+#tableDic2 td {
+  min-width: 250px;
+  padding: 0.5rem 1.1rem;
 }
 
 #tableDic td:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#tableDic2 td:nth-child(even) {
   background-color: #f2f2f2;
 }
 

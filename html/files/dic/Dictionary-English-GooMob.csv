@@ -1,0 +1,16 @@
+Original field name;Field name given by PAMEpi;Field label;Type;Original categories;Categories given by PAMEpi;Description
+country_region_code;pais_abrev;Country or region code;String;Uncategorized;Uncategorized;Country or region code
+country_region;pais;Country or region name;String;Uncategorized;Uncategorized;Country or region name
+sub_region_1;nome_uf;Subregion name, in Brazil case this is the State ;String;Uncategorized;Uncategorized;Subregion name, in Brazil case this is the State 
+sub_region_2;nome_mun;Subregion name, in Brazil case this is the City;String;Uncategorized;Uncategorized;Subregion name, in Brazil case this is the City
+iso_3166_2_code;iso_3166_2_code;ISO3133-2 Country Codes;String;Uncategorized;Uncategorized;ISO3133-2 Country Codes
+census_fips_code;census_fips_code;US Census FIPS code;String;Uncategorized;Uncategorized;US Census FIPS code
+date;date;Date in yyyy-mm-dd format;Date;Uncategorized;Uncategorized;Date in yyyy-mm-dd format
+retail_and_recreation_percent_change_from_baseline;retail_and_recreation_percent_change_from_baseline;Rate of change in human mobility;Number;Uncategorized;Uncategorized;Rate of change in human mobility
+grocery_and_pharmacy_percent_change_from_baseline;grocery_and_pharmacy_percent_change_from_baseline;Rate of change in human mobility (grocery and drug stores);Number;Uncategorized;Uncategorized;Rate of change in human mobility (grocery and drug stores)
+parks_percent_change_from_baseline;parks_percent_change_from_baseline;Rate of change in human mobility (parks);Number;Uncategorized;Uncategorized;Rate of change in human mobility (parks)
+transit_stations_percent_change_from_baseline;transit_stations_percent_change_from_baseline;Rate of change in human mobility (transit_stations);Number;Uncategorized;Uncategorized;Rate of change in human mobility (transit_stations)
+workplaces_percent_change_from_baseline;workplaces_percent_change_from_baseline;Rate of change in human mobility (workplace);Number;Uncategorized;Uncategorized;Rate of change in human mobility (workplace)
+residential_percent_change_from_baseline;residential_percent_change_from_baseline;Rate of change in human mobility (residential);Number;Uncategorized;Uncategorized;Rate of change in human mobility (residential)
+metro_area;metro_area;Metropolitan area name;String;Uncategorized;Uncategorized;Metropolitan area name
+place_id;place_id;Place ID ;String;Uncategorized;Uncategorized;Place ID 

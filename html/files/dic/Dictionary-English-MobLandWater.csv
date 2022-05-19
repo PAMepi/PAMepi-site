@@ -1,0 +1,8 @@
+Original field name;Field name given by PAMEpi;Field label;Type;Original categories;Categories given by PAMEpi;Description
+ID;id;unique link identifier;Number;Uncategorized;Uncategorized;unique link identifier
+CODMUNDV_A;code_full_mun_ibge_a;City code A of the linking pair with check digit;Number;Uncategorized;Uncategorized;City code A of the linking pair with check digit
+NOMEMUN_A;mun_name_a;Name of municipality A of the binding pair;String;Uncategorized;Uncategorized;Name of municipality A of the binding pair
+CODMUNDV_B;code_full_mun_ibge_b;City code B of the binding pair with check digit;Number;Uncategorized;Uncategorized;City code B of the binding pair with check digit
+NOMEMUN_B;mun_name_b;Name of municipality B of the binding pair;String;Uncategorized;Uncategorized;Name of municipality B of the binding pair
+VAR05;hidroviarios;Frequency of waterway vehicle departures on the connecting pair;Number;Uncategorized;Uncategorized;Weekly frequency of waterway vehicle departures on the connecting pair. It does not consider the Number of people per vehicle.
+VAR06;rodoviarios;Frequency of departures of road vehicles on the connecting pair;Number;Uncategorized;Uncategorized;Weekly frequency of departures of road vehicles on the connecting pair. It does not consider the Number of people per vehicle.

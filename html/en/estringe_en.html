@@ -554,8 +554,8 @@
           <h4 class="data">
             Data dictionary
             <a
-              href=""
-              class="btn btn-info float-right mr-3 disabled"
+              href="../files/dic/Dictionary-English-String.csv"
+              class="btn btn-info float-right mr-3"
               target="_blank"
               >Download</a
             >
@@ -646,29 +646,29 @@
         }
       }
 
-      ncols = dicIndex.length;
+      ncols = dicIndexEn.length;
 
       tableDic = document.getElementById('tableDic');
 
       function dicValue(lin, col) {
-        if (Object.keys(dicIndex[col.toString()])[lin]) {
+        if (Object.keys(dicIndexEn[col.toString()])[lin]) {
           return `<td  style="white-space: pre-line; ">${
-            Object.values(dicIndex[col.toString()])[lin]
+            Object.values(dicIndexEn[col.toString()])[lin]
           } </td>`;
         }
         return '-';
       }
       let col_name = '';
       // fill table with data
-      for (let i = 0; i < Object.keys(dicXXX[0]).length; i++) {
+      for (let i = 0; i < Object.keys(dicIndexEn[0]).length; i++) {
         row = tableDic.insertRow(i);
         cell = row.insertCell(row);
         cell.outerHTML = `<th class="headcol">${
-          Object.keys(dicIndex['0'])[i]
+          Object.keys(dicIndexEn['0'])[i]
         }</th>`;
         ncol = 1;
         for (let col = 0; col < ncols; col++) {
-          col_name = Object.values(dicIndex[col.toString()])[5];
+          col_name = Object.values(dicIndexEn[col.toString()])[5];
 
           cell = row.insertCell(ncol);
           cell.outerHTML = dicValue(i, col);

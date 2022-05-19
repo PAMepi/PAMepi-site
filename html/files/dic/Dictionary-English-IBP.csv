@@ -1,0 +1,16 @@
+Original field name;Field name given by PAMEpi;Field label;Type;Original categories;Categories given by PAMEpi;Description
+ip_cd_d;code_full_mun_ibge;Localization code, in this case it is the same as the municipality.;Number;Uncategorized;Uncategorized;Localization code, in this case it is the same as the municipality.
+ip_cd_m;code_full_mun_ibge;municipality code;Number;Uncategorized;Uncategorized;municipality code
+ip_nm_f;nome_uf;State name;String;Uncategorized;Uncategorized;State name
+ip_nm_r;regiao;Region name;String;Uncategorized;Uncategorized;Region name
+ip_cd_f;uf;State acronym;String;Uncategorized;Uncategorized;State acronym
+ip_vl_f;uf_code;State code;Number;Uncategorized;Uncategorized;State code
+ip_vl_p;populacao;Population according to IBGE (Brazilian Institute of Geography and Statistics)  2010 census;Number;Uncategorized;Uncategorized;Population according to IBGE (Brazilian Institute of Geography and Statistics)  2010 census
+ip_nm_m;mun_name;municipality name;String;Uncategorized;Uncategorized;municipality name
+ip_vl_n;index_ibp;Value of the deprivation index;Number;Uncategorized;Uncategorized;Value of the deprivation index
+ip_dcl_;decil;Decile of the deprivation index;Number;Uncategorized;Uncategorized;Decile of the deprivation index
+ip_qntl_n;quintil;Quintile of the deprivation index;Number;Uncategorized;Uncategorized;Quintile of the deprivation index
+ip_prcnt_r;pcent_salary;Percentage of people with per capita income below 1/2 minimum wage;Number;Uncategorized;Uncategorized;Percentage of people with per capita income below 1/2 minimum wage
+ip_prcnt_d;pcent_edu;Percentage of illiterate people over 7 years old.;Number;Uncategorized;Uncategorized;Percentage of illiterate people over 7 years old.
+ip_prcnt_m;pcent_home;Percentage of population in inappropriate homes.;Number;Uncategorized;Uncategorized;Percentage of population in inappropriate homes.
+ip_cd_c;ip_cd_c;empty/unknown;;Uncategorized;Uncategorized;empty/unknown
