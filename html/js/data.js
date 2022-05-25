@@ -3317,7 +3317,7 @@ const dicSRAG = [
     'Categorias originais': 'Sem categoria',
     'Categorias dadas pela PAMEpi': 'Sem categoria',
     Descrição:
-      'Campo Interno. Preenchido automaticamente pelo sistema com a data da digitação da ficha. Não é a data de preenchimento da ficha manualmente e sim a data em que é digitado no sistema. Não é atualizada se houver alterações posteriores de dados.',
+      'Campo Interno. Preenchido automaticamente pelo sistema com a data da digitação da ficha. <br>Não é a data de preenchimento da ficha manualmente e sim a data em que é digitado no sistema. <br>Não é atualizada se houver alterações posteriores de dados.',
   },
 ];
 
@@ -7428,12 +7428,12 @@ const dicIBPEn = [
     'Original field name': 'ip_vl_p',
     'Field name given by PAMEpi': 'populacao',
     'Field label':
-      'Population according to IBGE (Brazilian Institute of Geography and Statistics)  2010 census',
+      'Population according to IBGE (Brazilian Institute of Geography and Statistics) 2010 census',
     Type: 'Number',
     'Original categories': 'Uncategorized',
     'Categories given by PAMEpi': 'Uncategorized',
     Description:
-      'Population according to IBGE (Brazilian Institute of Geography and Statistics)  2010 census',
+      'Population according to IBGE (Brazilian Institute of Geography and Statistics) 2010 census',
   },
   {
     'Original field name': 'ip_nm_m',
@@ -9021,7 +9021,7 @@ const dicAgregate = [
     Tipo: 'Date',
     'Categorias originais': 'Sem categoria',
     'Categorias dadas pela PAMEpi': 'Sem categoria',
-    Descrição: 'Date (starting from 01/01/2020)',
+    Descrição: 'Data (começando de 01/01/2020)',
   },
   {
     'Nome do campo original': 'num_dose_reg_VAC',
@@ -9060,7 +9060,7 @@ const dicAgregate = [
     'Categorias originais': 'Sem categoria',
     'Categorias dadas pela PAMEpi': 'Sem categoria',
     Descrição:
-      "Número de doses aplicadas da vacina de tipo 1 (AZD1222/AstraZeneca). <br>A variável pode ser criada usando a coluna 'vacina_nome' na base da vacina.",
+      "Número de doses aplicadas da vacina de tipo 1 AZD1222 Vaxzevria (Astrazeneca/Oxford/Fiocruz). A variável pode ser criada usando a coluna 'vacina_nome' na base da vacina.",
   },
   {
     'Nome do campo original': 'num_vac_type_2_VAC',
@@ -9070,7 +9070,7 @@ const dicAgregate = [
     'Categorias originais': 'Sem categoria',
     'Categorias dadas pela PAMEpi': 'Sem categoria',
     Descrição:
-      "Número de doses aplicadas da vacina de tipo 2 (CoronaVac/Sinovac). <br>A variável pode ser criada usando a coluna 'vacina_nome' na base da vacina.",
+      "Número de doses aplicadas da vacina de tipo 2 COVID-19 Vaccine (Vero Cell), Inactivated/Coronavac (Sinovac/Butantan). A variável pode ser criada usando a coluna 'vacina_nome' na base da vacina.",
   },
   {
     'Nome do campo original': 'num_vac_type_3_VAC',
@@ -9080,7 +9080,7 @@ const dicAgregate = [
     'Categorias originais': 'Sem categoria',
     'Categorias dadas pela PAMEpi': 'Sem categoria',
     Descrição:
-      "Número de doses aplicadas da vacina de tipo 3 (BNT162b2/Pfizer). <br>A variável pode ser criada usando a coluna 'vacina_nome' na base da vacina.",
+      "Número de doses aplicadas da vacina de tipo 3 BNT162b2/COMIRNATY Tozinameran (INN), (Pfizer/BioNTech/Wyeth). A variável pode ser criada usando a coluna 'vacina_nome' na base da vacina.",
   },
   {
     'Nome do campo original': 'num_vac_type_4_VAC',
@@ -9090,7 +9090,7 @@ const dicAgregate = [
     'Categorias originais': 'Sem categoria',
     'Categorias dadas pela PAMEpi': 'Sem categoria',
     Descrição:
-      "Número de doses aplicadas da vacina de tipo 4 (Ad26.COV2.S/Johnson&Johnson). <br>A variável pode ser criada usando a coluna 'vacina_nome' na base da vacina.",
+      "Número de doses aplicadas da vacina de tipo 4 Ad26.COV2.S (Janssen/Johnson & Johnson). A variável pode ser criada usando a coluna 'vacina_nome' na base da vacina.",
   },
   {
     'Nome do campo original': 'num_dose_pri_VAC',
@@ -9100,7 +9100,7 @@ const dicAgregate = [
     'Categorias originais': 'Sem categoria',
     'Categorias dadas pela PAMEpi': 'Sem categoria',
     Descrição:
-      "'A variável foi criada somando as categorias '1ª Dose', 'Dose Inicial' na vacina_descricao_dose",
+      "A variável foi criada somando as categorias '1ª Dose', 'Dose Inicial' na vacina_descricao_dose",
   },
   {
     'Nome do campo original': 'num_dose_sec_uni_VAC',
@@ -9120,7 +9120,7 @@ const dicAgregate = [
     'Categorias originais': 'Sem categoria',
     'Categorias dadas pela PAMEpi': 'Sem categoria',
     Descrição:
-      "A variável foi criada somando as categorias '3ª, 4ª e 5ª Dose', '1º, 2º e 3º Reforço', 'Reforço', 'Dose Adicional', '1ª, 2ª, 3ª Dose Revacinação', 'Revacinação' e 'tratamento com duas doses ou mais da variável vacina_descricao_dose na base da vacinação. <br>Mais informação em: <a href='https://www.cdc.gov/coronavirus/2019-ncov/vaccines/faq.html' target='blank'>CDC</a> e <a href='https://www.gov.br/saude/pt-br/coronavirus/publicacoes-tecnicas/guias-e-planos/plano-nacional-de-operacionalizacao-da-vacinacao-contra-covid-19.pdf target='blank'>Plano nacional de Vacinação</a>",
+      "A variável foi criada somando as categorias '3ª, 4ª e 5ª Dose', '1º, 2º e 3º Reforço', 'Reforço', 'Dose Adicional', '1ª, 2ª, 3ª Dose Revacinação', 'Revacinação' e 'tratamento com duas doses ou mais' da variável vacina_descricao_dose na base da vacinação. Mais informação em: https://www.cdc.gov/coronavirus/2019-ncov/vaccines/faq.html e https://www.gov.br/saude/pt-br/coronavirus/publicacoes-tecnicas/guias-e-planos/plano-nacional-de-operacionalizacao-da-vacinacao-contra-covid-19.pdf",
   },
   {
     'Nome do campo original': 'num_ind_VAC',
@@ -9131,77 +9131,77 @@ const dicAgregate = [
     'Categorias originais': 'Sem categoria',
     'Categorias dadas pela PAMEpi': 'Sem categoria',
     Descrição:
-      'Númerototal de pessoas vacinadas, seja qual for a dose. Variável pode ser criada após pivotagem da base da vacinação para contar o número de pessoas vacinadas.',
+      'Númerototal de pessoas vacinadas, seja qual for a dose. Variável pode ser criada após pivotagem da base da vacinação para contar o Número de pessoas vacinadas.',
   },
   {
     'Nome do campo original': 'num_ind_incom_VAC',
     'Nome do campo dado pela PAMEpi': 'num_ind_incom_VAC',
-    'Legenda do Campo': 'Número de indivídos com ciclo vacinal incompleto',
+    'Legenda do Campo': 'Número de indivíduos com ciclo vacinal incompleto',
     Tipo: 'Integer',
     'Categorias originais': 'Sem categoria',
     'Categorias dadas pela PAMEpi': 'Sem categoria',
     Descrição:
-      'Número de pessoas com ciclo vacinal incompleto, ou seja, que só receberam a 1ª dose.<br>Variável criada após pivotagem da base da vacinação para contar o número de pessoas que só receberam a 1ª dose.',
+      'Número de pessoas com ciclo vacinal incompleto, ou seja, que só receberam a 1ª dose. Variável criada após pivotagem da base da vacinação para contar o Número de pessoas que só receberam a 1ª dose.',
   },
   {
     'Nome do campo original': 'num_ind_com_VAC',
     'Nome do campo dado pela PAMEpi': 'num_ind_com_VAC',
-    'Legenda do Campo': 'Número de indivídos com ciclo vacinal completo',
+    'Legenda do Campo': 'Número de indivíduos com ciclo vacinal completo',
     Tipo: 'Integer',
     'Categorias originais': 'Sem categoria',
     'Categorias dadas pela PAMEpi': 'Sem categoria',
     Descrição:
-      'Número de pessoas com ciclo vacinal completo, ou seja, que receberam 1ª e 2ª dose ou dose única.<br>Variável criada após pivotagem da base da vacinação para contar o número de pessoas que receberam 1ª e 2ª dose ou dose única.',
+      'Número de pessoas com ciclo vacinal completo, ou seja, que receberam 1ª e 2ª dose ou dose única. Variável criada após pivotagem da base da vacinação para contar o Número de pessoas que receberam 1ª e 2ª dose ou dose única.',
   },
   {
     'Nome do campo original': 'num_ind_com_atu_VAC',
     'Nome do campo dado pela PAMEpi': 'num_ind_com_atu_VAC',
     'Legenda do Campo':
-      'Número de indivídos com ciclo vacinal completo e atualizado',
+      'Número de indivíduos com ciclo vacinal completo e atualizado',
     Tipo: 'Integer',
     'Categorias originais': 'Sem categoria',
     'Categorias dadas pela PAMEpi': 'Sem categoria',
     Descrição:
-      'Número de pessoas com ciclo vacinal completo e com reforço.<br>Variável criada após pivotagem da base da vacinação para contar o número de pessoas que receberam 1ª e 2ª dose ou dose única e reforço.',
+      'Número de pessoas com ciclo vacinal completo e com reforço. Variável criada após pivotagem da base da vacinação para contar o Número de pessoas que receberam 1ª e 2ª dose ou dose única e reforço.',
   },
   {
     'Nome do campo original': 'num_ind_incom_delay_less2_VAC',
     'Nome do campo dado pela PAMEpi': 'num_ind_incom_delay_less2_VAC',
     'Legenda do Campo':
-      'Número de indivídos com ciclo vacinal incompleto a menos de 2 meses (<2).',
+      'Número de indivíduos com ciclo vacinal incompleto a menos de 2 meses (<2).',
     Tipo: 'Integer',
     'Categorias originais': 'Sem categoria',
     'Categorias dadas pela PAMEpi': 'Sem categoria',
     Descrição:
-      'Número de indivídos que só receberam a 1ª dose a menos de dois meses (<2).',
+      'Número de indivíduos que só receberam a 1ª dose a menos de dois meses (<2).',
   },
   {
     'Nome do campo original': 'num_ind_incom_delay_2_6_VAC',
     'Nome do campo dado pela PAMEpi': 'num_ind_incom_delay_2_6_VAC',
     'Legenda do Campo':
-      'Número de indivídos com ciclo vacinal incompleto a mais ou igual a 2 ou menos que 6 meses (2<= and <6).',
+      'Número de indivíduos com ciclo vacinal incompleto a mais ou igual a 2 ou menos que 6 meses (2<= and <6).',
     Tipo: 'Integer',
     'Categorias originais': 'Sem categoria',
     'Categorias dadas pela PAMEpi': 'Sem categoria',
     Descrição:
-      'Número de indivídos que só receberam a 1ª dose a mais (>=) de 2 e menos (<) de 6 meses.',
+      'Número de indivíduos que só receberam a 1ª dose a mais (>=) de 2 e menos (<) de 6 meses.',
   },
   {
     'Nome do campo original': 'num_ind_incom_delay_more6_VAC',
     'Nome do campo dado pela PAMEpi': 'num_ind_incom_delay_more6_VAC',
     'Legenda do Campo':
-      'Número de indivídos com ciclo vacinal incompleto a mais ou igual a 6 meses (>= 6).',
+      'Número de indivíduos com ciclo vacinal incompleto a mais ou igual a 6 meses (>= 6).',
     Tipo: 'Integer',
     'Categorias originais': 'Sem categoria',
     'Categorias dadas pela PAMEpi': 'Sem categoria',
     Descrição:
-      'Número de indivídos que só receberam a 1ª dose a mais (>=) de 6 meses.',
+      'Número de indivíduos que só receberam a 1ª dose a mais (>=) de 6 meses.',
   },
   {
     'Nome do campo original': 'num_dose_sec_uni_delay_less2_VAC',
     'Nome do campo dado pela PAMEpi': 'num_dose_sec_uni_delay_less2_VAC',
     'Legenda do Campo':
-      'Número de indivídos com ciclo vacinal completo a menos de 2 meses (<2).',
+      'Número de indivíduos com ciclo vacinal completo a menos de 2 meses (<2).',
     Tipo: 'Integer',
     'Categorias originais': 'Sem categoria',
     'Categorias dadas pela PAMEpi': 'Sem categoria',
@@ -9212,7 +9212,7 @@ const dicAgregate = [
     'Nome do campo original': 'num_dose_sec_uni_delay_2_6_VAC',
     'Nome do campo dado pela PAMEpi': 'num_dose_sec_uni_delay_2_6_VAC',
     'Legenda do Campo':
-      'Número de indivídos com ciclo vacinal completo a mais ou igual a 2 ou menos que 6 meses (2<= and <6).',
+      'Número de indivíduos com ciclo vacinal completo a mais ou igual a 2 ou menos que 6 meses (2<= and <6).',
     Tipo: 'Integer',
     'Categorias originais': 'Sem categoria',
     'Categorias dadas pela PAMEpi': 'Sem categoria',
@@ -9223,7 +9223,7 @@ const dicAgregate = [
     'Nome do campo original': 'num_dose_sec_uni_delay_more6_VAC',
     'Nome do campo dado pela PAMEpi': 'num_dose_sec_uni_delay_more6_VAC',
     'Legenda do Campo':
-      'Número de indivídos com ciclo vacinal completo a mais ou igual a 6 meses (>= 6).',
+      'Número de indivíduos com ciclo vacinal completo a mais ou igual a 6 meses (>= 6).',
     Tipo: 'Integer',
     'Categorias originais': 'Sem categoria',
     'Categorias dadas pela PAMEpi': 'Sem categoria',
@@ -9234,7 +9234,7 @@ const dicAgregate = [
     'Nome do campo original': 'num_ind_com_atu_delay_less2_VAC',
     'Nome do campo dado pela PAMEpi': 'num_ind_com_atu_delay_less2_VAC',
     'Legenda do Campo':
-      'Número de indivídos com ciclo vacinal completo e atualizado a menos de 2 meses (<2).',
+      'Número de indivíduos com ciclo vacinal completo e atualizado a menos de 2 meses (<2).',
     Tipo: 'Integer',
     'Categorias originais': 'Sem categoria',
     'Categorias dadas pela PAMEpi': 'Sem categoria',
@@ -9245,7 +9245,7 @@ const dicAgregate = [
     'Nome do campo original': 'num_ind_com_atu_delay_2_6_VAC',
     'Nome do campo dado pela PAMEpi': 'num_ind_com_atu_delay_2_6_VAC',
     'Legenda do Campo':
-      'Número de indivídos com ciclo vacinal completo e atualizado a mais ou igual a 2 ou menos que 6 meses (2<= and <6).',
+      'Número de indivíduos com ciclo vacinal completo e atualizado a mais ou igual a 2 ou menos que 6 meses (2<= and <6).',
     Tipo: 'Integer',
     'Categorias originais': 'Sem categoria',
     'Categorias dadas pela PAMEpi': 'Sem categoria',
@@ -9256,7 +9256,7 @@ const dicAgregate = [
     'Nome do campo original': 'num_ind_com_atu_delay_more6_VAC',
     'Nome do campo dado pela PAMEpi': 'num_ind_com_atu_delay_more6_VAC',
     'Legenda do Campo':
-      'Número de indivídos com ciclo vacinal completo e atualizadoa mais ou igual a 6 meses (>= 6).',
+      'Número de indivíduos com ciclo vacinal completo e atualizadoa mais ou igual a 6 meses (>= 6).',
     Tipo: 'Integer',
     'Categorias originais': 'Sem categoria',
     'Categorias dadas pela PAMEpi': 'Sem categoria',
@@ -9272,18 +9272,18 @@ const dicAgregate = [
     'Categorias originais': 'Sem categoria',
     'Categorias dadas pela PAMEpi': 'Sem categoria',
     Descrição:
-      "Número de novos casos diários de sindrome gripal confirmados para COVID-19. <br>Para construir a variável deve considerar o municipio de residência (mun_res) e data de primeiro sintomas. <br>A contagem é feita utilizando a variável 'classificacaoFinal' somando as categorias <br>1=Confirmado <br>2=Confirmado Clinico-Epidemiologico <br>3=Confirmado por Critério Clínico <br>4=Confirmado Laboratorial <br>5=Confirmado Clinico-Imagem <br>6=Síndrome Gripal Não Especificada. <br>Observe que, valores nulos na variável 'mun_res' podem serem substituídos por valores não nulos da <br>Variável de municipio de notificação. Da mesma forma,valores nulos ou mal preenchidos na 'ataInicioSintomas'podem serem substituídas por valores válidos da <br>Variável 'dataTeste' ou 'dataNotificação'.",
+      "Número de novos casos diários de sindrome gripal confirmados para COVID-19. Para construir a váriável deve considerar o municipio de residência (mun_res) e data de primeiro sintomas. A contagem é feita utilizando a variável 'classificacaoFinal' somando as categorias 1=Confirmado, 2=Confirmado Clinico-Epidemiologico, 3=Confirmado por Critério Clínico, 4=Confirmado Laboratorial, 5=Confirmado Clinico-Imagem, 6=Síndrome Gripal Não Especificada. Observe que, valores nulos na variável 'mun_res' podem serem substituídos por valores não nulos da variável de municipio de notificação. Da mesma forma, valores nulos ou mal preenchidos na 'DataInicioSintomas' podem serem substituídas por valores válidos da variável 'dataTeste' ou 'dataNotificação'.",
   },
   {
     'Nome do campo original': 'new_des_SG',
     'Nome do campo dado pela PAMEpi': 'new_des_SG',
     'Legenda do Campo':
-      'Número de novos casos diários de sindromegripal descartados (não Covid-19).',
+      'Número de novos casos diários de sindrome gripal descartados (não Covid-19).',
     Tipo: 'Integer',
     'Categorias originais': 'Sem categoria',
     'Categorias dadas pela PAMEpi': 'Sem categoria',
     Descrição:
-      "Número de novos casos diários de sindrome gripal descartados (ou seja, não confirmados de COVID-19).A contagem é feita utilizando a variável 'classificacaoFinal' e categoria 7=Descartado.",
+      "Número de novos casos diários de sindrome gripal descartados (ou seja, não confirmados de COVID-19). A contagem é feita utilizando a variável 'classificacaoFinal' e categoria 7=Descartado.",
   },
   {
     'Nome do campo original': 'new_undefined_SG',
@@ -9365,7 +9365,7 @@ const dicAgregate = [
     'Categorias originais': 'Sem categoria',
     'Categorias dadas pela PAMEpi': 'Sem categoria',
     Descrição:
-      "Para a criação da variável deve-se inicialmente selecionar os casos confirmados de COVID-19 e depois filtrar a categoria 3=Internado em UTI da <br>Variável 'evolucaoCaso'.",
+      "Para a criação da variável deve-se inicialmente selecionar os casos confirmados de COVID-19 e depois filtrar a categoria 3=Internado em UTI da variável 'evolucaoCaso'.",
   },
   {
     'Nome do campo original': 'hosp_uti_des_SG',
@@ -9375,7 +9375,7 @@ const dicAgregate = [
     'Categorias originais': 'Sem categoria',
     'Categorias dadas pela PAMEpi': 'Sem categoria',
     Descrição:
-      "Para a criação da variável deve-se inicialmente selecionar os casos descartados e depois filtrar a categoria 3=Internado em UTI da <br>Variável da variável 'evolucaoCaso'.",
+      "Para a criação da variável deve-se inicialmente selecionar os casos descartados e depois filtrar a categoria 3=Internado em UTI da variável da variável 'evolucaoCaso'.",
   },
   {
     'Nome do campo original': 'hosp_uti_undefined_SG',
@@ -9405,7 +9405,7 @@ const dicAgregate = [
     'Categorias originais': 'Sem categoria',
     'Categorias dadas pela PAMEpi': 'Sem categoria',
     Descrição:
-      "Para a criação da variável deve-se inicialmente selecionar os casos descartados e depois filtrar a categoria 5=Em tratamento domiciliar da <br>Variável da variável 'evolucaoCaso'.",
+      "Para a criação da variável deve-se inicialmente selecionar os casos descartados e depois filtrar a categoria 5=Em tratamento domiciliar da variável da variável 'evolucaoCaso'.",
   },
   {
     'Nome do campo original': 'dom_trat_undefined_SG',
@@ -9416,7 +9416,7 @@ const dicAgregate = [
     'Categorias originais': 'Sem categoria',
     'Categorias dadas pela PAMEpi': 'Sem categoria',
     Descrição:
-      "Para a criação da variável deve-se inicialmente selecionar os casos sem classificação final e depois filtrar a categoria 5=Em tratamento domiciliar da <br>Variável da variável 'evolucaoCaso'.",
+      "Para a criação da variável deve-se inicialmente selecionar os casos sem classificação final e depois filtrar a categoria 5=Em tratamento domiciliar da variável da variável 'evolucaoCaso'.",
   },
   {
     'Nome do campo original': 'hos_clinc_SG',
@@ -9457,60 +9457,60 @@ const dicAgregate = [
     'Categorias originais': 'Sem categoria',
     'Categorias dadas pela PAMEpi': 'Sem categoria',
     Descrição:
-      "Número de novos casos diários de sindrome respiratória aguda grave confirmados para COVID-19. <br>Para construir a variável deve considerar o municipio de residência ('CO_MUN_RES') e data de primeiro sintomas ('DT_SIN_PRI'). <br>A contagem é feita utilizando a variável 'CLASSI_FIN'e a categoria 5-SRAG por covid-19.<br>Observe que, valores nulos na variável 'CO_MUN_RES' podem serem substituídos por valores não nulos da <br>Variável de municipio de notificação ('CO_MUN_NOT').<br>Da mesma forma, valores nulos ou mal preenchidos na 'DT_SIN_PRI' podem serem substituídas por valores válidos da data do teste laboratórial ou data notificação.",
+      "Número de novos casos diários de sindrome respiratória aguda grave confirmados para COVID-19. Para construir a váriável deve considerar o municipio de residência ('CO_MUN_RES') e data de primeiro sintomas ('DT_SIN_PRI'). A contagem é feita utilizando a variável 'CLASSI_FIN' e a categoria 5-SRAG por covid-19. Observe que, valores nulos na variável 'CO_MUN_RES' podem serem substituídos por valores não nulos da variável de municipio de notificação ('CO_MUN_NOT'). Da mesma forma, valores nulos ou mal preenchidos na ''DT_SIN_PRI' podem serem substituídas por valores válidos da data do teste laboratórial ou data notificação.",
   },
   {
     'Nome do campo original': 'new_des_SRAG',
     'Nome do campo dado pela PAMEpi': 'new_des_SRAG',
-    'Legenda do Campo': 'Número de novos casos diários de SRAGnão-COVID-19.',
+    'Legenda do Campo': 'Número de novos casos diários de SRAG não-COVID-19.',
     Tipo: 'Integer',
     'Categorias originais': 'Sem categoria',
     'Categorias dadas pela PAMEpi': 'Sem categoria',
     Descrição:
-      "A contagem é feita utilizando a variável 'CLASSI_FIN'e somando as categorias 1-SRAG por influenza, 2-SRAG por outro vírus respiratório, 3-SRAG por outro agente etiológico .",
+      "A contagem é feita utilizando a variável 'CLASSI_FIN' e somando as categorias 1-SRAG por influenza, 2-SRAG por outro vírus respiratório, 3-SRAG por outro agente etiológico.",
   },
   {
     'Nome do campo original': 'new_undefined_SRAG',
     'Nome do campo dado pela PAMEpi': 'new_undefined_SRAG',
     'Legenda do Campo':
-      'Número de novos casos diários de SRAGnão especificado ou ignorado.',
+      'Número de novos casos diários de SRAG não especificado ou ignorado.',
     Tipo: 'Integer',
     'Categorias originais': 'Sem categoria',
     'Categorias dadas pela PAMEpi': 'Sem categoria',
     Descrição:
-      "A contagem é feita utilizando a variável 'CLASSI_FIN'e as categorias 4-SRAG não especificado e 9-Ignorado.",
+      "A contagem é feita utilizando a variável 'CLASSI_FIN' e as categorias 4-SRAG não especificado e 9-Ignorado.",
   },
   {
     'Nome do campo original': 'newDeath_SRAG',
     'Nome do campo dado pela PAMEpi': 'newDeath_SRAG',
     'Legenda do Campo':
-      'Número de novos óbitos diários de SRAGconfirmados para COVID-19.',
+      'Número de novos óbitos diários de SRAG confirmados para COVID-19.',
     Tipo: 'Integer',
     'Categorias originais': 'Sem categoria',
     'Categorias dadas pela PAMEpi': 'Sem categoria',
     Descrição:
-      "Para a criação da variável deve-se inicialmenteselecionar os casos confirmados de COVID-19 e depois filtrar a categoria '2-Óbito' da variável 'EVOLUCAO'.",
+      "Para a criação da variável deve-se inicialmente selecionar os casos confirmados de COVID-19 e depois filtrar a categoria '2-Óbito' da variável 'EVOLUCAO'.",
   },
   {
     'Nome do campo original': 'newDeath_des_SRAG',
     'Nome do campo dado pela PAMEpi': 'newDeath_des_SRAG',
-    'Legenda do Campo': 'Número de novos óbitos diários de SRAGnão-COVID-19.',
+    'Legenda do Campo': 'Número de novos óbitos diários de SRAG não-COVID-19.',
     Tipo: 'Integer',
     'Categorias originais': 'Sem categoria',
     'Categorias dadas pela PAMEpi': 'Sem categoria',
     Descrição:
-      "Para a criação da variável deve-se inicialmenteselecionar os casos de 1-SRAG por influenza, 2-SRAG por outro vírus respiratório e 3-SRAG por outro agente etiológico e depois filtrar a categoria '2-Óbito' da variável 'EVOLUCAO'.",
+      "Para a criação da variável deve-se inicialmente selecionar os casos de 1-SRAG por influenza, 2-SRAG por outro vírus respiratório e 3-SRAG por outro agente etiológico e depois filtrar a categoria '2-Óbito' da variável 'EVOLUCAO'.",
   },
   {
     'Nome do campo original': 'newDeath_undefined_SRAG',
     'Nome do campo dado pela PAMEpi': 'newDeath_undefined_SRAG',
     'Legenda do Campo':
-      'Número de novos óbitos diários de SRAGnão especificado ou ignorado.',
+      'Número de novos óbitos diários de SRAG não especificado ou ignorado.',
     Tipo: 'Integer',
     'Categorias originais': 'Sem categoria',
     'Categorias dadas pela PAMEpi': 'Sem categoria',
     Descrição:
-      "Para a criação da variável deve-se inicialmenteselecionar os casos de 4-SRAG não especificado e 9-Ignorado e depois filtrar a categoria '2-Óbito' da Variável 'EVOLUCAO'.",
+      "Para a criação da variável deve-se inicialmente selecionar os casos de 4-SRAG não especificado e 9-Ignorado e depois filtrar a categoria '2-Óbito' da variável 'EVOLUCAO'.",
   },
   {
     'Nome do campo original': 'new_recovered_SRAG',
@@ -9531,7 +9531,7 @@ const dicAgregate = [
     'Categorias originais': 'Sem categoria',
     'Categorias dadas pela PAMEpi': 'Sem categoria',
     Descrição:
-      "Para a criação da variável deve-se inicialmente selecionar os casos de 1-SRAG por influenza, 2-SRAG por outro vírus respiratório e 3-SRAG por outro agente etiológico e depois filtrar a categoria 1-Cura da variável 'EVOLUCAO'.",
+      "Para a criação da variável deve-se inicialmente selecionar os casos de 1-SRAG por influenza, 2-SRAG por outro vírus respiratório e 3-SRAG por outro agente etiológico e depois filtrar a categoria '1-Cura da variável 'EVOLUCAO'.",
   },
   {
     'Nome do campo original': 'new_recovered_undefined_SRAG',
@@ -9542,7 +9542,7 @@ const dicAgregate = [
     'Categorias originais': 'Sem categoria',
     'Categorias dadas pela PAMEpi': 'Sem categoria',
     Descrição:
-      "Para a criação da variável deve-se inicialmente selecionar os casos de 4-SRAG não especificado e 9-Ignorado e depois filtrar a categoria '1-Cura ' da <br>Variável 'EVOLUCAO'.",
+      "Para a criação da variável deve-se inicialmente selecionar os casos de 4-SRAG não especificado e 9-Ignorado e depois filtrar a categoria '1-Cura ' da variável 'EVOLUCAO'.",
   },
   {
     'Nome do campo original': 'num_ind_vac_SRAG',
@@ -9564,7 +9564,7 @@ const dicAgregate = [
     'Categorias originais': 'Sem categoria',
     'Categorias dadas pela PAMEpi': 'Sem categoria',
     Descrição:
-      "Número de pessoas com ciclo vacinal incompleto, ou seja, que só receberam a 1ª dose no SRAG. Para criar essa <br>Variável basta primeiro selecionar vacinado e depois valores não nulos em 'DOSE_1_COV', valores nulos da <br>Variável 'DOSE_2_COV' e com tipo de vacina em 'LAB_PR_COV_' não Jassen.",
+      "Número de pessoas com ciclo vacinal incompleto, ou seja, que só receberam a 1ª dose no SRAG. Para criar essa variável basta primeiro selecionar vacinado e depois valores não nulos em 'DOSE_1_COV', valores nulos da variável 'DOSE_2_COV' e com tipo de vacina em 'LAB_PR_COV_' não Jassen.",
   },
   {
     'Nome do campo original': 'num_ind_com_vac_SRAG',
@@ -9575,7 +9575,7 @@ const dicAgregate = [
     'Categorias originais': 'Sem categoria',
     'Categorias dadas pela PAMEpi': 'Sem categoria',
     Descrição:
-      "Número de pessoas com ciclo vacinal completo, ou seja, que receberam 1ª e 2ª dose ou dose única. <br>Para criar essa variável basta primeiro selecionar vacinado e depois valores não nulos em 'DOSE_2_COV' ou a data 'DOSE_1_COV' se for Jassen 'LAB_PR_COV_'.",
+      "Número de pessoas com ciclo vacinal completo, ou seja, que receberam 1ª e 2ª dose ou dose única. Para criar essa variável basta primeiro selecionar vacinado e depois valores não nulos em 'DOSE_2_COV' ou a data 'DOSE_1_COV' se for Jassen 'LAB_PR_COV_'.",
   },
   {
     'Nome do campo original': 'num_ind_incom_delay_less2_vac_SRAG',
@@ -9586,7 +9586,7 @@ const dicAgregate = [
     'Categorias originais': 'Sem categoria',
     'Categorias dadas pela PAMEpi': 'Sem categoria',
     Descrição:
-      'Número de indivídos que só receberam a 1ª dose a menos de dois meses (<2).',
+      'Número de indivíduos que só receberam a 1ª dose a menos de dois meses (<2).',
   },
   {
     'Nome do campo original': 'num_ind_incom_delay_2_6_vac_SRAG',
@@ -9597,7 +9597,7 @@ const dicAgregate = [
     'Categorias originais': 'Sem categoria',
     'Categorias dadas pela PAMEpi': 'Sem categoria',
     Descrição:
-      'Número de indivídos que só receberam a 1ª dose a mais (>=) de 2 e menos (<) de 6 meses.',
+      'Número de indivíduos que só receberam a 1ª dose a mais (>=) de 2 e menos (<) de 6 meses.',
   },
   {
     'Nome do campo original': 'num_ind_incom_delay_more6_vac_SRAG',
@@ -9608,7 +9608,7 @@ const dicAgregate = [
     'Categorias originais': 'Sem categoria',
     'Categorias dadas pela PAMEpi': 'Sem categoria',
     Descrição:
-      'Número de indivídos que só receberam a 1ª dose a mais (>=) de 6 meses.',
+      'Número de indivíduos que só receberam a 1ª dose a mais (>=) de 6 meses.',
   },
   {
     'Nome do campo original': 'num_dose_sec_uni_delay_less2_vac_SRAG',
@@ -9652,7 +9652,7 @@ const dicAgregate = [
     'Categorias originais': 'Sem categoria',
     'Categorias dadas pela PAMEpi': 'Sem categoria',
     Descrição:
-      "Número diário de pessoas confirmado de COVID-19 ocupando um leito UTI.<br> Para criar essa variável deve-se: <br>1- selecionar os casos SRAG confirmados de COVID-19<br>2- Com as variáveis 'DT_ENTUTI' e 'DT_SAIDUTI' dá pra saber os dias que essa pessoa ocupou um leito na UTI. <br>3 - Contar quantas pessoas estão ocupando um leito de UTI em uma data X.",
+      "Número diário de pessoas confirmado de COVID-19 ocupando um leito UTI. Para criar essa variável deve-se: <br>1- selecionar os casos SRAG confirmados de COVID-19, 2- Com as variáveis 'DT_ENTUTI' e 'DT_SAIDUTI' dá pra saber os dias que essa pessoa ocupou um leito na UTI. 3 - Contar quantas pessoas estão ocupando um leito de UTI em uma data X.",
   },
   {
     'Nome do campo original': 'ocup_clinc_SRAG',
@@ -9663,7 +9663,7 @@ const dicAgregate = [
     'Categorias originais': 'Sem categoria',
     'Categorias dadas pela PAMEpi': 'Sem categoria',
     Descrição:
-      "Número diário de pessoas confirmado de COVID-19 ocupando um leito clinico. Para criar essa variável deve-se:<br>1- selecionar os casos SRAG confirmados de COVID-19<br>2- Com as variáveis 'DT_INTERNA', 'DT_ENTUTI' e 'DT_SAIDUTI' dá pra saber os dias que essa pessoa ocupou um leito clinico dado que ela não estava na UTI (caso ela precisou de UTI). <br>3 - Contar quantas pessoas ocupou um leito clinico em uma data X.",
+      "Número diário de pessoas confirmado de COVID-19 ocupando um leito clinico. Para criar essa variável deve-se: <br>1- selecionar os casos SRAG confirmados de COVID-19, 2- Com as variáveis 'DT_INTERNA', 'DT_ENTUTI' e 'DT_SAIDUTI' dá pra saber os dias que essa pessoa ocupou um leito clinico dado que ela não estava na UTI (caso ela precisou de UTI). 3 - Contar quantas pessoas ocupou um leito clinico em uma data X.",
   },
   {
     'Nome do campo original': 'num_ind_clin_SRAG',
@@ -9674,7 +9674,7 @@ const dicAgregate = [
     'Categorias originais': 'Sem categoria',
     'Categorias dadas pela PAMEpi': 'Sem categoria',
     Descrição:
-      "Número diário de pessoas confirmado de COVID-19 que usaram um leito clinico. Para criar essa variável deve-se: <br>1- selecionar os casos SRAG confirmados de COVID-19<br>2 - Usar a variável 'HOSPITAL', categoria 1-Sim, e contar por município de residencia (CO_MUN_RES) e data de internação (DT_INTERNA).",
+      "Número diário de pessoas confirmado de COVID-19 que usaram um leito clinico. Para criar essa variável deve-se: <br>1- selecionar os casos SRAG confirmados de COVID-19, <br>2 - Usar a variável 'HOSPITAL', categoria 1-Sim, e contar por município de residencia (CO_MUN_RES) e data de internação (DT_INTERNA).",
   },
   {
     'Nome do campo original': 'num_ind_UTI_SRAG',
@@ -9685,7 +9685,7 @@ const dicAgregate = [
     'Categorias originais': 'Sem categoria',
     'Categorias dadas pela PAMEpi': 'Sem categoria',
     Descrição:
-      "Número diário de pessoas confirmado de COVID-19 que usaram um leito UTI. Para criar essa variável deve-se: <br>1- selecionar os casos SRAG confirmados de COVID-19<br>2 - Usar a variável 'UTI', categoria 1-Sim, e contar por município de residencia (CO_MUN_RES) e data de entrada na (DT_ENTUTI).",
+      "Número diário de pessoas confirmado de COVID-19 que usaram um leito UTI. Para criar essa variável deve-se: <br>1- selecionar os casos SRAG confirmados de COVID-19, <br>2 - Usar a variável 'UTI', categoria 1-Sim, e contar por município de residencia (CO_MUN_RES) e data de entrada na (DT_ENTUTI).",
   },
   {
     'Nome do campo original': 'newDeath_clinc_SRAG',
@@ -9696,7 +9696,7 @@ const dicAgregate = [
     'Categorias originais': 'Sem categoria',
     'Categorias dadas pela PAMEpi': 'Sem categoria',
     Descrição:
-      "Para criar essa variável deve-se:<br> 1- selecionar os casos SRAG confirmados de COVID-19<br> 2 - Usar a variável 'EVOLUCAO', categoria 2-Óbito, e conferir se a data de evolução (DT_EVOLUCA) coincide com a data da pessoa em leito clinico. <br>A contagem é por município de residencia (CO_MUN_RES) e data de evolução (DT_EVOLUCA).",
+      "Para criar essa variável deve-se: <br> 1- selecionar os casos SRAG confirmados de COVID-19, <br>2 - Usar a variável 'EVOLUCAO', categoria 2-Óbito, e conferir se a data de evolução (DT_EVOLUCA) coincide com a data da pessoa em leito clinico.<br> A contagem é por município de residencia (CO_MUN_RES) e data de evolução (DT_EVOLUCA).",
   },
   {
     'Nome do campo original': 'newDeath_UTI_SRAG',
@@ -9707,7 +9707,7 @@ const dicAgregate = [
     'Categorias originais': 'Sem categoria',
     'Categorias dadas pela PAMEpi': 'Sem categoria',
     Descrição:
-      "Para criar essa variável deve-se:<br> 1- selecionar os casos SRAG confirmados de COVID-19<br> 2 - Usar a variável 'EVOLUCAO', categoria 2-Óbito, e conferir se a data de evolução (DT_EVOLUCA) coincide com a data da pessoa em leito UTI. <br>A contagem é por município de residencia (CO_MUN_RES) e data de evolução (DT_EVOLUCA).",
+      "Para criar essa variável deve-se: <br> 1- selecionar os casos SRAG confirmados de COVID-19, <br>2 - Usar a variável 'EVOLUCAO', categoria 2-Óbito, e conferir se a data de evolução (DT_EVOLUCA) coincide com a data da pessoa em leito UTI. A contagem é por município de residencia (CO_MUN_RES) e data de evolução (DT_EVOLUCA).",
   },
   {
     'Nome do campo original': 'new_recovered_clinc_SRAG',
@@ -9718,7 +9718,7 @@ const dicAgregate = [
     'Categorias originais': 'Sem categoria',
     'Categorias dadas pela PAMEpi': 'Sem categoria',
     Descrição:
-      "Para criar essa variável deve-se:<br> 1- selecionar os casos SRAG confirmados de COVID-19<br> 2 - Usar a variável 'EVOLUCAO', categoria 1-Cura , e conferir se a data de evolução (DT_EVOLUCA) coincide com a data da pessoa em leito clinico. <br>A contagem é por município de residencia (CO_MUN_RES) e data de evolução (DT_EVOLUCA).",
+      "Para criar essa variável deve-se: <br> 1- selecionar os casos SRAG confirmados de COVID-19,  2 - Usar a variável 'EVOLUCAO', categoria 1-Cura , e conferir se a data de evolução (DT_EVOLUCA) coincide com a data da pessoa em leito clinico.<br> A contagem é por município de residencia (CO_MUN_RES) e data de evolução (DT_EVOLUCA).",
   },
   {
     'Nome do campo original': 'new_recovered_UTI_SRAG',
@@ -9729,7 +9729,7 @@ const dicAgregate = [
     'Categorias originais': 'Sem categoria',
     'Categorias dadas pela PAMEpi': 'Sem categoria',
     Descrição:
-      "Para criar essa variável deve-se:<br> 1- selecionar os casos SRAG confirmados de COVID-19<br> 2 - Usar a variável 'EVOLUCAO', categoria 1-Cura , e conferir se a data de evolução (DT_EVOLUCA) coincide com a data da pessoa em leito UTI. <br>A contagem é por município de residencia (CO_MUN_RES) e data de evolução (DT_EVOLUCA).",
+      "Para criar essa variável deve-se: <br> 1- selecionar os casos SRAG confirmados de COVID-19, <br>2 - Usar a variável 'EVOLUCAO', categoria 1-Cura , e conferir se a data de evolução (DT_EVOLUCA) coincide com a data da pessoa em leito UTI. A contagem é por município de residencia (CO_MUN_RES) e data de evolução (DT_EVOLUCA).",
   },
   {
     'Nome do campo original': 'ip_vl_n',
@@ -9868,7 +9868,7 @@ const dicAgregate = [
     'Categorias originais': 'Sem categoria',
     'Categorias dadas pela PAMEpi': 'Sem categoria',
     Descrição:
-      'Diferença entre o número de óbitos da data correspondente e a anterior',
+      'Diferença entre o Número de óbitos da data correspondente e a anterior',
   },
   {
     'Nome do campo original': 'deaths',
@@ -9887,7 +9887,7 @@ const dicAgregate = [
     'Categorias originais': 'Sem categoria',
     'Categorias dadas pela PAMEpi': 'Sem categoria',
     Descrição:
-      'Diferença entre o número de casos da data correspondente e a anterior',
+      'Diferença entre o Número de casos da data correspondente e a anterior',
   },
   {
     'Nome do campo original': 'totalCases',
@@ -9901,11 +9901,11 @@ const dicAgregate = [
   {
     'Nome do campo original': 'indGeneral',
     'Nome do campo dado pela PAMEpi': 'indGeneral',
-    'Legenda do Campo': 'Indice geral',
+    'Legenda do Campo': 'Índice geral',
     Tipo: 'Number',
     'Categorias originais': 'Sem categoria',
     'Categorias dadas pela PAMEpi': 'Sem categoria',
-    Descrição: '(O1 + O2 + O3 + O4 + C1 + C2 ) * 100 / 6',
+    Descrição: '(O1 + O2 + O3 + O4 + C1 + C2) * 100/6',
   },
   {
     'Nome do campo original': 'O1',
@@ -9915,17 +9915,17 @@ const dicAgregate = [
     'Categorias originais': 'Sem categoria',
     'Categorias dadas pela PAMEpi': 'Sem categoria',
     Descrição:
-      'NO0 - Sem medidas <br>NO1 - Proibição de eventos e equipamentos públicos <br>NO2 - Restrições a aglomerações muito grandes (acima de 500 pessoas)<br>NO3 - Restrições a aglomerações entre 100-499 pessoas<br>NO4 - Restrições para aglomerações de 50 a 99 pessoas<br>NO5 - Restrições para aglomerações de 5 a 49 pessoas<br>NO6 - Proibição total de eventos ou atividades lotadas <br>GO0 - Direcionado ou condicional<br>GO1 - Geral',
+      'NO0 - Sem medidas, <br>NO1 - Proibição de eventos públicos e equipamentos públicos, <br>NO2 - Restrições a aglomerações muito grandes (acima de 500 pessoas), <br>NO3 - Restrições de ajuntamentos entre 100-499 pessoas, <br>NO4 - Restrições de ajuntamentos entre 50-99 pessoas, <br>NO5 - Restrições de ajuntamentos entre 5-49 pessoas, <br>NO6 - Proibição total de eventos ou atividades lotadas, <br>GO0 - Direcionado ou condicional, <br>GO1 - Geral',
   },
   {
     'Nome do campo original': 'O2',
     'Nome do campo dado pela PAMEpi': 'O2',
-    'Legenda do Campo': 'Fechamento de escolas/universidades',
+    'Legenda do Campo': 'Encerramento de escolas/universidades',
     Tipo: 'Number',
     'Categorias originais': 'Sem categoria',
     'Categorias dadas pela PAMEpi': 'Sem categoria',
     Descrição:
-      'NO0 - Sem medidas<br>NO1 - Sugere fechamento<br>NO2 - Exige fechamento <br>GO0 - Direcionado ou condicional<br>GO1 - Geral',
+      'NO0 - Sem medidas, <br>NO1 - Sugere fechamento, <br>NO2 - Requer fechamento, <br>GO0 - Direcionado ou condicional, <br>GO1 - Geral',
   },
   {
     'Nome do campo original': 'O3',
@@ -9935,7 +9935,7 @@ const dicAgregate = [
     'Categorias originais': 'Sem categoria',
     'Categorias dadas pela PAMEpi': 'Sem categoria',
     Descrição:
-      'NO0 - Sem medidas<br>NO1 - Home-office para pessoas com sintomas ou de algum grupo de risco<br>NO2 - Home-office opcional<br>NO3 - Agendamento estratégico trabalho<br>NO4 - Home-office obrigatório <br>GO0 - Direcionado ou condicional<br>GO1 - Geral',
+      'NO0 - Sem medidas, <br>NO1 - Home-office para pessoas com sintomas ou de alguns grupos de risco, <br>NO2 - Home-office opcional, <br>NO3 - Trabalho de agendamento estratégico, <br>NO4 - Home-office obrigatório, <br>GO0 - Direcionado ou condicional, <br>GO1 - Geral',
   },
   {
     'Nome do campo original': 'O4',
@@ -9945,29 +9945,1011 @@ const dicAgregate = [
     'Categorias originais': 'Sem categoria',
     'Categorias dadas pela PAMEpi': 'Sem categoria',
     Descrição:
-      'NO0 - Sem medidas<br>NO1 - Isolamento vertical<br>NO2 - Isolamento horizontal <br>GO0 - Direcionado ou condicional<br>GO1 - Geral',
+      'NO0 - Sem medidas, <br>NO1 - Isolamento vertical, <br>NO2 - Isolamento horizontal, <br>GO0 - Direcionado ou condicional, <br>GO1 - Geral',
   },
   {
     'Nome do campo original': 'C1',
     'Nome do campo dado pela PAMEpi': 'C1',
     'Legenda do Campo':
-      'Fechamento de negócios não essenciais e atividades públicas',
+      'Encerramento de negócios não essenciais e atividades públicas',
     Tipo: 'Number',
     'Categorias originais': 'Sem categoria',
     'Categorias dadas pela PAMEpi': 'Sem categoria',
     Descrição:
-      '0 - Sem medidas<br>+1 - Fechamento de shoppings<br>+1 – Suspensão de negócios não essenciais<br>+1 - Suspensão de bares e restaurantes<br>+1 - Proibição de atividades em espaços públicos (praias, parques, etc) <br>+1 - Suspensão de atividades religiosas<br>+1 - Fechamento de locais culturais (teatro, cinema, museu)<br> +1 – Encerramento dos ginásios <br>SGCj – A soma das medidas que foi geral <br>SCj - A soma das restrições aplicadas<br>Ncj - O número de restrições possíveis',
+      '0 - Sem medidas, <br>+1 - Fechamento de shoppings, <br>+1 – Suspensão de negócios não essenciais, <br>+1 - Suspensão de bares e restaurantes, <br>+1 - Proibição de atividades em espaços públicos (praias, parques, etc.), <br>+1 - Suspensão das atividades religiosas, <br>+1 - Encerramento de espaços culturais (teatro, cinema, museu), <br>+1 – Encerramento de ginásios, SGCj – A soma das medidas que foi geral, SCj - A soma das restrições aplicadas, Ncj - O Número de restrições possíveis',
   },
   {
     'Nome do campo original': 'C2',
     'Nome do campo dado pela PAMEpi': 'C2',
     'Legenda do Campo':
-      'Bloqueio de transporte (Considerando apenas transporte rodoviário e fluvial)',
+      'Trava de transporte (Considerando apenas o transporte rodoviário e fluvial)',
     Tipo: 'Number',
     'Categorias originais': 'Sem categoria',
     'Categorias dadas pela PAMEpi': 'Sem categoria',
     Descrição:
-      '0 - Sem medidas<br>+1 - Suspensão em ônibus urbanos <br>+1 - Suspensão em ônibus intermunicipais <br>+ 1 - Suspensão dos ônibus interestaduais<br>+1 - Suspensão total do transporte na cidade <br>+1 - Suspensão total do transporte intermunicipal<br>+1 – Suspensão total do transporte interestadual <br>SGCj – Soma das medidas que foi geral <br>SCj - A soma das restrições aplicadas <br>Ncj - O número de restrições possíveis',
+      '0 - Sem medidas, <br>+1 - Suspensão em ônibus urbanos, <br>+1 - Suspensão em ônibus intermunicipais, <br>+1 - Suspensão em ônibus interestaduais, <br>+1 - Suspensão total do transporte na cidade, <br>+1 - Suspensão total do transporte entre cidades, <br>+1 – Suspensão total do transporte entre estados, SGCj – A soma das medidas que foi geral, SCj - A soma das restrições aplicadas, Ncj - O Número de restrições possíveis',
+  },
+];
+
+const dicAgregEn = [
+  {
+    'Original field name': 'code_full_mun_ibge',
+    'Field name given by PAMEpi': 'code_full_mun_ibge',
+    'Field label': 'Full city IBGE code',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description: 'Full city IBGE code (7 digits)',
+  },
+  {
+    'Original field name': 'code_mun_ibge',
+    'Field name given by PAMEpi': 'code_mun_ibge',
+    'Field label': 'city IBGE code',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description: 'city IBGE code (6digits)',
+  },
+  {
+    'Original field name': 'nome_mun',
+    'Field name given by PAMEpi': 'mun_name',
+    'Field label': 'city name',
+    Type: 'string',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description: 'city name',
+  },
+  {
+    'Original field name': 'uf',
+    'Field name given by PAMEpi': 'uf',
+    'Field label': 'UF acronym',
+    Type: 'string',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description: 'Federative unity (state) acronym',
+  },
+  {
+    'Original field name': 'uf_code',
+    'Field name given by PAMEpi': 'uf_code',
+    'Field label': 'UF IBGE code',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description: 'Federative unity (state) IBGE code',
+  },
+  {
+    'Original field name': 'date',
+    'Field name given by PAMEpi': 'date',
+    'Field label': 'Date',
+    Type: 'date',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description: 'Date (starting from 01/01/2020)',
+  },
+  {
+    'Original field name': 'num_dose_reg_VAC',
+    'Field name given by PAMEpi': 'num_dose_reg_VAC',
+    'Field label': 'Total Number of doses applied and registered',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      "Total Number of doses applied and registered extracted from the national vaccine database (VACdb). <br>The variable is created with the 'vacina_descricao_dose' variable, from the vaccine database, by summing all categories except 'Dose' and 'null'.",
+  },
+  {
+    'Original field name': 'num_dose_non_reg_VAC',
+    'Field name given by PAMEpi': 'num_dose_non_reg_VAC',
+    'Field label': 'Total Number of doses applied and not yet registered',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      "Total Number of doses applied and not yet registered extracted from the national VACdb. <br>The variable is created with the 'vacina_descricao_dose' variable, from the vaccine database, by summing the categories 'Dose' and 'null'.",
+  },
+  {
+    'Original field name': 'total_dose_VAC',
+    'Field name given by PAMEpi': 'total_dose_VAC',
+    'Field label': 'Total Number of doses applied',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      "Sum of 'num_dose_reg_VAC' and 'num_dose_non_reg_VAC' variables.",
+  },
+  {
+    'Original field name': 'num_vac_type_1_VAC',
+    'Field name given by PAMEpi': 'num_vac_type_1_VAC',
+    'Field label': 'Total Number of administered doses of vaccine of type 1',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      "Total Number of administered doses of vaccine of type 1: AZD1222 Vaxzevria (Astrazeneca/Oxford/Fiocruz). <br>The variable can be created using the 'vacina_nome' variable in the VACdb.",
+  },
+  {
+    'Original field name': 'num_vac_type_2_VAC',
+    'Field name given by PAMEpi': 'num_vac_type_2_VAC',
+    'Field label': 'Total Number of administered doses of vaccine of type 2',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      "Total Number of administered doses of vaccine of type 2: COVID-19 Vaccine (Vero Cell), Inactivated/Coronavac (Sinovac/Butantan). <br>The variable can be created using the 'vacina_nome' variable in the VACdb.",
+  },
+  {
+    'Original field name': 'num_vac_type_3_VAC',
+    'Field name given by PAMEpi': 'num_vac_type_3_VAC',
+    'Field label': 'Total Number of administered doses of vaccine of type 3',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      "Total Number of administered doses of vaccine of type 3: BNT162b2/COMIRNATY Tozinameran (INN), (Pfizer/BioNTech/Wyeth).<br> The variable can be created using the 'vacina_nome' variable in the VACdb.",
+  },
+  {
+    'Original field name': 'num_vac_type_4_VAC',
+    'Field name given by PAMEpi': 'num_vac_type_4_VAC',
+    'Field label': 'Total Number of administered doses of vaccine of type 4',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      "Total Number of administered doses of vaccine of type 4: Ad26.COV2.S (Janssen/Johnson & Johnson). <br>The variable can be created using the 'vacina_nome' variable in the VACdb.",
+  },
+  {
+    'Original field name': 'num_dose_pri_VAC',
+    'Field name given by PAMEpi': 'num_dose_pri_VAC',
+    'Field label': 'Total Number of first dose applied',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      "The variable was created by adding the categories '1ª Dose' and 'Dose Inicial' in the 'vacina_descricao_dose' variable.",
+  },
+  {
+    'Original field name': 'num_dose_sec_uni_VAC',
+    'Field name given by PAMEpi': 'num_dose_sec_uni_VAC',
+    'Field label': 'Total Number of second or single dose applied',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      "The variable was created by adding the categories '2ª Dose' and 'Unica' in the 'vacina_descricao_dose' variable.",
+  },
+  {
+    'Original field name': 'num_dose_reinforcment_VAC',
+    'Field name given by PAMEpi': 'num_dose_reinforcment_VAC',
+    'Field label': 'Total Number of booster applied',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      "The variable was created by adding the categories '3ª, 4ª and 5ª Dose', '1º, 2º and 3º Reforço', 'Reforço', 'Dose Adicional', '1ª, 2ª, 3ª Dose Revacinação', 'Revacinação' and 'tratamento com duas doses ou mais' in the 'vacina_descricao_dose' variable.<br>More info at: https://www.cdc.gov/coronavirus/2019-ncov/vaccines/faq.html <br>and <br>https://www.gov.br/saude/pt-br/coronavirus/publicacoes-tecnicas/guias-e-planos/plano-nacional-de-operacionalizacao-da-vacinacao-contra-covid-19.pdf.",
+  },
+  {
+    'Original field name': 'num_ind_VAC',
+    'Field name given by PAMEpi': 'num_ind_VAC',
+    'Field label':
+      'Total Number of people vaccinated (whatever the dose type).',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      'Total number of people vaccinated, whatever the dose type. <br>Variable can be created after normalizing the VACdb to count the Number of people vaccinated.',
+  },
+  {
+    'Original field name': 'num_ind_incom_VAC',
+    'Field name given by PAMEpi': 'num_ind_incom_VAC',
+    'Field label': 'Number of individuals with incomplete vaccine cycle.',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      'Number of people with incomplete vaccination cycle, that is, they only received the 1st dose. <br>Variable created after pivoting the VACdb to count the number of people who only received the 1st dose.',
+  },
+  {
+    'Original field name': 'num_ind_com_VAC',
+    'Field name given by PAMEpi': 'num_ind_com_VAC',
+    'Field label': 'Number of individuals with complete vaccine cycle.',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      'Number of people with complete vaccination cycle, that is, they received the 1st and 2nd or single dose.<br> Variable created after pivoting the VACdb to count the number of people who only received 1st and 2nd or single dose.',
+  },
+  {
+    'Original field name': 'num_ind_com_atu_VAC',
+    'Field name given by PAMEpi': 'num_ind_com_atu_VAC',
+    'Field label':
+      'Number of individuals with complete and updated vaccine cycle.',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      'Number of people with a complete vaccine cycle and with booster.<br> Variable created after pivoting the VACdb to count the number of people which in addition to having complete vaccination cicly, also received booster dose.',
+  },
+  {
+    'Original field name': 'num_ind_incom_delay_less2_VAC',
+    'Field name given by PAMEpi': 'num_ind_incom_delay_less2_VAC',
+    'Field label':
+      'Number of individuals with incomplete vaccine cycle less than two months (<2).',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      'Number of people with incomplete vaccination cycle, that is, that only received the 1st dose for less than 2 months (<2).',
+  },
+  {
+    'Original field name': 'num_ind_incom_delay_2_6_VAC',
+    'Field name given by PAMEpi': 'num_ind_incom_delay_2_6_VAC',
+    'Field label':
+      'Number of individuals with incomplete vaccine cycle more or equal than 2 months and less than 6 months (2<= and <6).',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      'Number of people with incomplete vaccination cycle, that is, that only received the 1st dose more than or equal to (>=) 2 months and less than (<) 6 months.',
+  },
+  {
+    'Original field name': 'num_ind_incom_delay_more6_VAC',
+    'Field name given by PAMEpi': 'num_ind_incom_delay_more6_VAC',
+    'Field label':
+      'Number of individuals with incomplete vaccine cycle more or equal than 6 months (>= 6).',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      'Number of people with incomplete vaccination cycle, that is, that only received the 1st dose for more than or equal (>=) 6 months.',
+  },
+  {
+    'Original field name': 'num_dose_sec_uni_delay_less2_VAC',
+    'Field name given by PAMEpi': 'num_dose_sec_uni_delay_less2_VAC',
+    'Field label':
+      'Number of individuals with complete vaccine cycle less than two months (<2).',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      'Number of people with complete vaccination cycle, that is, they received the 1st and 2nd or single dose in less than 2 months (<2).',
+  },
+  {
+    'Original field name': 'num_dose_sec_uni_delay_2_6_VAC',
+    'Field name given by PAMEpi': 'num_dose_sec_uni_delay_2_6_VAC',
+    'Field label':
+      'Number of individuals with complete vaccine cycle more than or equal to 2 months and less than 6 months (2<= and <6).',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      'Number of people with complete vaccination cycle, that is, they received the 1st and 2nd or single dose more than or equal to (>=) 2 months and less than (<) 6 months.',
+  },
+  {
+    'Original field name': 'num_dose_sec_uni_delay_more6_VAC',
+    'Field name given by PAMEpi': 'num_dose_sec_uni_delay_more6_VAC',
+    'Field label':
+      'Number of individuals with complete vaccine cycle more than or equal to 6 months (>= 6).',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      'Number of people with complete vaccination cycle, that is, they received the 1st and 2nd or single dose for more than or equal to 6 months (>=6).',
+  },
+  {
+    'Original field name': 'num_ind_com_atu_delay_less2_VAC',
+    'Field name given by PAMEpi': 'num_ind_com_atu_delay_less2_VAC',
+    'Field label':
+      'Number of individuals with complete and updated vaccine cycle in less than two months (<2).',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      'Number of people with a complete vaccine cycle and with booster in less than 2 months (<2).',
+  },
+  {
+    'Original field name': 'num_ind_com_atu_delay_2_6_VAC',
+    'Field name given by PAMEpi': 'num_ind_com_atu_delay_2_6_VAC',
+    'Field label':
+      'Number of individuals with complete and updated vaccine cycle more than or equal to 2 months and less than 6 months (2<= and <6).',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      'Number of people with a complete vaccine cycle and with booster more than or equal to (>=) 2 months and less than (<) 6 months.',
+  },
+  {
+    'Original field name': 'num_ind_com_atu_delay_more6_VAC',
+    'Field name given by PAMEpi': 'num_ind_com_atu_delay_more6_VAC',
+    'Field label':
+      'Number of individuals with complete and updated vaccine cycle for more than 6 months (>= 6).',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      'Number of people with a complete vaccine cycle and with booster for more than (>=) 6 months.',
+  },
+  {
+    'Original field name': 'newCases_SG',
+    'Field name given by PAMEpi': 'newCases_SG',
+    'Field label':
+      'Number of new daily confirmed cases of the flu syndrome for COVID-19.',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      "Number of new daily cases of flu syndrome confirmed for COVID-19. <br>To build the variable, you must consider the municipality of residence (mun_res) and date of first symptoms. <br>The count is done using the variable 'classificacaoFinal' adding the categories<br> 1=Confirmed, <br>2=Clinical-Epidemiological Confirmed, <br>3=Confirmed by Clinical Criteria, <br>4=Laboratory confirmed, <br>5=Confirmed Clinical-Image, <br>6=Unspecified Influenza Syndrome. <br>Note that null values ​​in the 'mun_res' variable can be replaced by non-null values ​​of the notification municipality variable.<br> Similarly, null or incorrectly filled values ​​in 'DataInicioSintomas' can be replaced by valid values ​​from the variable 'dataTeste' or 'dataNotification'.",
+  },
+  {
+    'Original field name': 'new_des_SG',
+    'Field name given by PAMEpi': 'new_des_SG',
+    'Field label':
+      'Number of new daily cases of the flu syndrome discarded (not Covid-19).',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      "Number of new daily cases of flu syndrome discarded (i.e. unconfirmed COVID-19). <br>The count is done using the variable 'classificacaoFinal' and category 7=Discarded.",
+  },
+  {
+    'Original field name': 'new_undefined_SG',
+    'Field name given by PAMEpi': 'new_undefined_SG',
+    'Field label': 'Number of daily cases without final classification.',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      "Counts of the null or ignored values ​​of the variable 'classificacaoFinal'.",
+  },
+  {
+    'Original field name': 'newDeath_SG',
+    'Field name given by PAMEpi': 'newDeath_SG',
+    'Field label': 'Daily number of deaths from COVID-19.',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      "To create the variable, you must initially select confirmed cases of COVID-19 and then filter the category '1=Death' of the variable 'evolucaoCaso'.",
+  },
+  {
+    'Original field name': 'newDeath_des_SG',
+    'Field name given by PAMEpi': 'newDeath_des_SG',
+    'Field label': 'Daily number of deaths from non-COVID-19 cases.',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      "To create the variable, you must initially select the discarded cases and then filter the category '1=Death' of the variable 'evolucaoCaso'.",
+  },
+  {
+    'Original field name': 'newDeath_undefined_SG',
+    'Field name given by PAMEpi': 'newDeath_undefined_SG',
+    'Field label':
+      'Daily number of deaths from cases without final classification.',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      "To create the variable, you must initially select the cases without final classification and then filter the category '1=Death' of the variable 'evolucaoCaso'.",
+  },
+  {
+    'Original field name': 'new_recovered_SG',
+    'Field name given by PAMEpi': 'new_recovered_SG',
+    'Field label': 'Daily number of COVID-19 cases recovered.',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      "To create the variable, you must initially select confirmed cases of COVID-19 and then filter category '2=Cure' of the variable 'evolucaoCaso'.",
+  },
+  {
+    'Original field name': 'new_recovered_des_SG',
+    'Field name given by PAMEpi': 'new_recovered_des_SG',
+    'Field label': 'Daily number of non-COVID-19 cases recovered.',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      "To create the variable, you must initially select the discarded cases and then filter category '2=Cure' of the variable 'evolucaoCaso'.",
+  },
+  {
+    'Original field name': 'new_recovered_undefined_SG',
+    'Field name given by PAMEpi': 'new_recovered_undefined_SG',
+    'Field label':
+      'Daily number of recovered cases without final classification.',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      "To create the variable, you must initially select the cases without final classification and then filter the '2=Cure' of the variable 'evolucaoCaso'.",
+  },
+  {
+    'Original field name': 'hosp_uti_SG',
+    'Field name given by PAMEpi': 'hosp_uti_SG',
+    'Field label': 'New cases of COVID-19 in ICU.',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      "To create the variable, you must initially select confirmed cases of COVID-19 and then filter the category '3=Inpatient in the ICU' of the variable 'evolucaoCaso'.",
+  },
+  {
+    'Original field name': 'hosp_uti_des_SG',
+    'Field name given by PAMEpi': 'hosp_uti_des_SG',
+    'Field label': 'New non-COVID-19 cases in ICU.',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      "To create the variable, you must initially select discarded cases and then filter the category '3=Inpatient in the ICU' of the variable 'evolucaoCaso'.",
+  },
+  {
+    'Original field name': 'hosp_uti_undefined_SG',
+    'Field name given by PAMEpi': 'hosp_uti_undefined_SG',
+    'Field label': 'New cases unclassified in ICU.',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      "To create the variable, you must initially select the cases without final classification and then filter the category '3=Inpatient in the ICU' of the variable 'evolucaoCaso'.",
+  },
+  {
+    'Original field name': 'dom_trat_SG',
+    'Field name given by PAMEpi': 'dom_trat_SG',
+    'Field label': 'New cases of COVID-19 at home treatment .',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      "To create the variable, you must initially select confirmed cases of COVID-19 and then filter category '5=In home treatment' of the variable 'evolucaoCaso'.",
+  },
+  {
+    'Original field name': 'dom_trat_des_SG',
+    'Field name given by PAMEpi': 'dom_trat_des_SG',
+    'Field label': 'New non-COVID-19 cases at home treatment .',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      "To create the variable, you must initially select discarded cases and then filter the category '5=In home treatment' of variable of the variable 'evolucaoCaso'.",
+  },
+  {
+    'Original field name': 'dom_trat_undefined_SG',
+    'Field name given by PAMEpi': 'dom_trat_undefined_SG',
+    'Field label': 'New cases without final classification at home treatment.',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      "To create the variable, you must initially select the cases without final classification and then filter category '5=In home treatment' of variable of the variable 'evolucaoCaso'.",
+  },
+  {
+    'Original field name': 'hos_clinc_SG',
+    'Field name given by PAMEpi': 'hos_clinc_SG',
+    'Field label': 'New cases of COVID-19 in infirmary.',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      "To create the variable, you must initially select confirmed cases of COVID-19 and then filter the category '6=hospitalized' of the variable 'evolucaoCaso'.",
+  },
+  {
+    'Original field name': 'hos_clinc_des_SG',
+    'Field name given by PAMEpi': 'hos_clinc_des_SG',
+    'Field label': 'New non-COVID-19 cases in infirmary.',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      "To create the variable, you must initially select discarded cases and then filter the category '6=hospitalized' of the variable of the variable 'evolucaoCaso'.",
+  },
+  {
+    'Original field name': 'hos_clinc_undefined_SG',
+    'Field name given by PAMEpi': 'hos_clinc_undefined_SG',
+    'Field label': 'New cases without final classification in infirmary.',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      "To create the variable, you must initially elect the cases without final classification and then filter category '6=hospitalized' of variable from variable 'evolucaoCaso'.",
+  },
+  {
+    'Original field name': 'newCases_SRAG',
+    'Field name given by PAMEpi': 'newCases_SRAG',
+    'Field label': 'Number of new daily SARS cases confirmed for COVID-19.',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      "Number of new daily cases of severe acute respiratory syndrome confirmed for COVID-19. <br>To build the variable you must consider the municipality of residence ('CO_MUN_RES') and date of first symptoms ('DT_SIN_PRI'). The count is done using the variable 'CLASSI_FIN' and the category 5-SRAG by covid-19. Note that null values ​​in the 'CO_MUN_RES' variable can be replaced by non-null values ​​from the notification municipality variable ('CO_MUN_NOT'). Likewise, null or misspelled values ​​in ''DT_SIN_PRI' can be replaced by valid values ​​from the laboratory test date or notification date.",
+  },
+  {
+    'Original field name': 'new_des_SRAG',
+    'Field name given by PAMEpi': 'new_des_SRAG',
+    'Field label': 'Number of new daily non-COVID-19 SARS cases.',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      "The count is done using the variable 'CLASSI_FIN' and adding the categories 1-SRAG for influenza, 2-SRAG for another respiratory virus, 3-SRAG for another etiologic agent.",
+  },
+  {
+    'Original field name': 'new_undefined_SRAG',
+    'Field name given by PAMEpi': 'new_undefined_SRAG',
+    'Field label': 'Number of new daily SARS cases not specified or ignored.',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      "The count is done using the variable 'CLASSI_FIN' and the categories 4-SRAG Unspecified and 9-Ignored.",
+  },
+  {
+    'Original field name': 'newDeath_SRAG',
+    'Field name given by PAMEpi': 'newDeath_SRAG',
+    'Field label': 'Number of new daily SARS deaths confirmed for COVID-19.',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      "To create the variable, you must initially select the confirmed cases of COVID-19 and then filter the '2-Death' category from the 'EVOLUCAO' variable.",
+  },
+  {
+    'Original field name': 'newDeath_des_SRAG',
+    'Field name given by PAMEpi': 'newDeath_des_SRAG',
+    'Field label': 'Number of new daily deaths from non-COVID-19 SARS.',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      "To create the variable, you must initially select the cases of 1-SRAG by influenza, 2-SRAG by another respiratory virus and 3-SRAG by another etiological agent and then filter the category '2-Death' of the variable 'EVOLUCAO' .",
+  },
+  {
+    'Original field name': 'newDeath_undefined_SRAG',
+    'Field name given by PAMEpi': 'newDeath_undefined_SRAG',
+    'Field label': 'Number of new daily SARS deaths not specified or ignored.',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      "To create the variable, you must initially select the cases of unspecified 4-SRAG and 9-Ignored and then filter the '2-Death' category of the 'EVOLUCAO' variable.",
+  },
+  {
+    'Original field name': 'new_recovered_SRAG',
+    'Field name given by PAMEpi': 'new_recovered_SRAG',
+    'Field label': 'Daily number of SARS COVID-19 cases recovered.',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      "To create the variable, you must initially select the confirmed cases of COVID-19 and then filter the '1-Cure' category from the 'EVOLUCAO' variable.",
+  },
+  {
+    'Original field name': 'new_recovered_des_SRAG',
+    'Field name given by PAMEpi': 'new_recovered_des_SRAG',
+    'Field label': 'Number of new daily non-Covid-19 SARS cases recovered.',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      "To create the variable, you must initially select the cases of 1-SRAG by influenza, 2-SRAG by another respiratory virus and 3-SRAG by another etiological agent and then filter the category '1-Cure' of the variable 'EVOLUCAO'.",
+  },
+  {
+    'Original field name': 'new_recovered_undefined_SRAG',
+    'Field name given by PAMEpi': 'new_recovered_undefined_SRAG',
+    'Field label':
+      'Number of new daily cases of unspecified or ignored SARS recovered.',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      "To create the variable, you must initially select the cases of 4-SRAG unspecified and 9-Ignored and then filter the category '1-Cure ' of the variable 'EVOLUCAO'.",
+  },
+  {
+    'Original field name': 'num_ind_vac_SRAG',
+    'Field name given by PAMEpi': 'num_ind_vac_SRAG',
+    'Field label':
+      'Total number of people vaccinated for COVID-19 (regardless of dose type) in SARS.',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      "Total number of people vaccinated for COVID-19, whatever the dose. Variable can be created with the 'VACINA_COV' variable, category '1-Yes'.",
+  },
+  {
+    'Original field name': 'num_ind_incom_vac_SRAG',
+    'Field name given by PAMEpi': 'num_ind_incom_vac_SRAG',
+    'Field label':
+      'Number of individuals with incomplete COVID-19 vaccine cycle in SARS.',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      "Number of people with incomplete vaccination cycle, that is, who only received the 1st dose in the SARS. To create this variable, it is enough to first select vaccinated and then non-null values ​​in 'DOSE_1_COV', null values ​​of the variable 'DOSE_2_COV' and with type of vaccine in 'LAB_PR_COV_' not Jassen.",
+  },
+  {
+    'Original field name': 'num_ind_com_vac_SRAG',
+    'Field name given by PAMEpi': 'num_ind_com_vac_SRAG',
+    'Field label':
+      'Number of individuals with a complete vaccination cycle in the SARS.',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      "Number of people with a complete vaccination cycle, that is, who received the 1st and 2nd dose or a single dose.<br> To create this variable, simply select vaccinated and then non-null values ​​in 'DOSE_2_COV' or the date 'DOSE_1_COV' if Jassen 'LAB_PR_COV_'.",
+  },
+  {
+    'Original field name': 'num_ind_incom_delay_less2_vac_SRAG',
+    'Field name given by PAMEpi': 'num_ind_incom_delay_less2_vac_SRAG',
+    'Field label':
+      'Number of individuals with incomplete vaccination cycle less than 2 months ago (<2).',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      'Number of subjects who only received the 1st dose less than two months ago (<2).',
+  },
+  {
+    'Original field name': 'num_ind_incom_delay_2_6_vac_SRAG',
+    'Field name given by PAMEpi': 'num_ind_incom_delay_2_6_vac_SRAG',
+    'Field label':
+      'Number of individuals with an incomplete vaccination cycle greater than or equal to 2 or less than 6 months (2<= and <6).',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      'Number of subjects who only received the 1st dose more (>=) than 2 and less (<) than 6 months.',
+  },
+  {
+    'Original field name': 'num_ind_incom_delay_more6_vac_SRAG',
+    'Field name given by PAMEpi': 'num_ind_incom_delay_more6_vac_SRAG',
+    'Field label':
+      'Number of individuals with an incomplete vaccination cycle for more than or equal to 6 months (>= 6).',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      'Number of subjects who only received the 1st dose more (>=) than 6 months.',
+  },
+  {
+    'Original field name': 'num_dose_sec_uni_delay_less2_vac_SRAG',
+    'Field name given by PAMEpi': 'num_dose_sec_uni_delay_less2_vac_SRAG',
+    'Field label':
+      'Number of individuals with a complete vaccination cycle less than 2 months ago (<2).',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      'Number of people with a complete vaccination cycle, that is, who received the 1st and 2nd dose or a single dose less than two months ago (<2).',
+  },
+  {
+    'Original field name': 'num_dose_sec_uni_delay_2_6_vac_SRAG',
+    'Field name given by PAMEpi': 'num_dose_sec_uni_delay_2_6_vac_SRAG',
+    'Field label':
+      'Number of individuals with a complete vaccination cycle greater than or equal to 2 or less than 6 months (2<= and <6).',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      'Number of people with a complete vaccination cycle, that is, who received the 1st and 2nd dose or a single dose more (>=) than 2 and less (<) than 6 months.',
+  },
+  {
+    'Original field name': 'num_dose_sec_uni_delay_more6_vac_SRAG',
+    'Field name given by PAMEpi': 'num_dose_sec_uni_delay_more6_vac_SRAG',
+    'Field label':
+      'Number of individuals with a complete vaccination cycle for more than or equal to 6 months (>= 6).',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      'Number of people with a complete vaccination cycle, that is, who received the 1st and 2nd dose or a single dose over (>=) 6 months.',
+  },
+  {
+    'Original field name': 'ocu_ICU_SRAG',
+    'Field name given by PAMEpi': 'ocu_ICU_SRAG',
+    'Field label':
+      'Daily number of confirmed COVID-19 people occupying an ICU bed.',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      "Daily number of people confirmed to have COVID-19 occupying an ICU bed. <br>To create this variable, you must: <br>1- select the confirmed SARS cases of COVID-19, <br>2- With the variables 'DT_ENTUTI' and 'DT_SAIDUTI' it is possible to know the days that this person occupied a bed in the ICU. <br>3 - Count how many people are occupying an ICU bed on an X date.",
+  },
+  {
+    'Original field name': 'ocup_clinc_SRAG',
+    'Field name given by PAMEpi': 'ocup_clinc_SRAG',
+    'Field label':
+      'Daily number of confirmed COVID-19 people occupying a clinical bed.',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      "Daily number of people confirmed to have COVID-19 occupying a clinical bed. <br>To create this variable, you must: <br>1- select the confirmed SARS cases of COVID-19, <br>2- With the variables 'DT_INTERNA', 'DT_ENTUTI' and 'DT_SAIDUTI', it is possible to know the days that this person occupied a clinical bed given that he was not in the ICU (if he needed the ICU). <br>3 - Count how many people occupied a clinical bed on an X date.",
+  },
+  {
+    'Original field name': 'num_ind_clin_SRAG',
+    'Field name given by PAMEpi': 'num_ind_clin_SRAG',
+    'Field label':
+      'Total number of confirmed COVID-19 people who used clinical bed.',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      "Daily number of confirmed COVID-19 people who get better a clinical bed. <br>To create this variable you must: <br>1- select the confirmed SARS cases of COVID-19, <br>2 - Use the variable 'HOSPITAL', category 1-Yes, and count by municipality of residence (CO_MUN_RES) and date of hospitalization (DT_INTERNA).",
+  },
+  {
+    'Original field name': 'num_ind_UTI_SRAG',
+    'Field name given by PAMEpi': 'num_ind_UTI_SRAG',
+    'Field label':
+      'Total number of confirmed COVID-19 people who used an ICU bed.',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      "Daily number of confirmed COVID-19 people who used an ICU bed. <br>To create this variable you must: <br>1- select the confirmed SARS cases of COVID-19, <br>2 - Use the variable 'UTI', category 1-Yes, and count by municipality of residence (CO_MUN_RES) and date of entry into (DT_ENTUTI).",
+  },
+  {
+    'Original field name': 'newDeath_clinc_SRAG',
+    'Field name given by PAMEpi': 'newDeath_clinc_SRAG',
+    'Field label':
+      'Daily number of confirmed SARS cases of COVID-19 that died in clinical bed.',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      "To create this variable you must: <br>1- select the confirmed SARS cases of COVID-19, <br>2 - Use the variable 'EVOLUTION', category 2-Death, and check if the date of evolution (DT_EVOLUCA) coincides with the date of the person in clinical bed. <br>The count is by municipality of residence (CO_MUN_RES) and evolution date (DT_EVOLUCA).",
+  },
+  {
+    'Original field name': 'newDeath_UTI_SRAG',
+    'Field name given by PAMEpi': 'newDeath_UTI_SRAG',
+    'Field label':
+      'Daily number of confirmed SARS COVID-19 cases that died in an ICU bed.',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      "To create this variable you must: <br>1- select the confirmed SARS cases of COVID-19, <br>2 - Use the variable 'EVOLUCAO', category 2-Death, and check if the date of evolution (DT_EVOLUCA) coincides with the date of the person in the ICU bed. <br>The count is by municipality of residence (CO_MUN_RES) and evolution date (DT_EVOLUCA).",
+  },
+  {
+    'Original field name': 'new_recovered_clinc_SRAG',
+    'Field name given by PAMEpi': 'new_recovered_clinc_SRAG',
+    'Field label':
+      'Daily number of confirmed SARS cases of COVID-19 that recovered in clinical bed.',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      "To create this variable you must: <br>1- select the confirmed SARS cases of COVID-19, <br>2 - Use the variable 'EVOLUCAO', category 1-Cure, and check if the date of evolution (DT_EVOLUCA) coincides with the date of the person in clinical bed. The count is by municipality of residence (CO_MUN_RES) and evolution date (DT_EVOLUCA).",
+  },
+  {
+    'Original field name': 'new_recovered_UTI_SRAG',
+    'Field name given by PAMEpi': 'new_recovered_UTI_SRAG',
+    'Field label':
+      'Daily number of confirmed SARS COVID-19 cases that recovered in an ICU bed.',
+    Type: 'integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      "To create this variable you must: <br>1- select the confirmed SARS cases of COVID-19, <br>2 - Use the variable 'EVOLUCAO', category 1-Cure, and check if the evolution date (DT_EVOLUCA) coincides with the date of the person in the ICU bed. The count is by municipality of residence (CO_MUN_RES) and evolution date (DT_EVOLUCA).",
+  },
+  {
+    'Original field name': 'ip_vl_n',
+    'Field name given by PAMEpi': 'index_ibp',
+    'Field label': 'Value of the deprivation index',
+    Type: 'Number',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description: 'Value of the deprivation index',
+  },
+  {
+    'Original field name': 'ip_dcl_',
+    'Field name given by PAMEpi': 'decil',
+    'Field label': 'Decile of the deprivation index',
+    Type: 'Number',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description: 'Decile of the deprivation index',
+  },
+  {
+    'Original field name': 'ip_qntl_n',
+    'Field name given by PAMEpi': 'quintil',
+    'Field label': 'Quintile of the deprivation index',
+    Type: 'Number',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description: 'Quintile of the deprivation index',
+  },
+  {
+    'Original field name': 'ip_prcnt_r',
+    'Field name given by PAMEpi': 'pcent_salary',
+    'Field label':
+      'Percentage of people with per capita income below 1/2 minimum wage',
+    Type: 'Number',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      'Percentage of people with per capita income below 1/2 minimum wage',
+  },
+  {
+    'Original field name': 'ip_prcnt_d',
+    'Field name given by PAMEpi': 'pcent_edu',
+    'Field label': 'Percentage of illiterate people over 7 years old.',
+    Type: 'Number',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description: 'Percentage of illiterate people over 7 years old.',
+  },
+  {
+    'Original field name': 'ip_prcnt_m',
+    'Field name given by PAMEpi': 'pcent_home',
+    'Field label': 'Percentage of population in inappropriate homes.',
+    Type: 'Number',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description: 'Percentage of population in inappropriate homes.',
+  },
+  {
+    'Original field name': 'retail_and_recreation_percent_change_from_baseline',
+    'Field name given by PAMEpi':
+      'retail_and_recreation_percent_change_from_baseline',
+    'Field label': 'Rate of change in human mobility',
+    Type: 'Número',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description: 'Rate of change in human mobility',
+  },
+  {
+    'Original field name': 'grocery_and_pharmacy_percent_change_from_baseline',
+    'Field name given by PAMEpi':
+      'grocery_and_pharmacy_percent_change_from_baseline',
+    'Field label':
+      'Rate of change in human mobility (grocery stores and drugstores)',
+    Type: 'Número',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      'Rate of change in human mobility (grocery stores and drugstores)',
+  },
+  {
+    'Original field name': 'parks_percent_change_from_baseline',
+    'Field name given by PAMEpi': 'parks_percent_change_from_baseline',
+    'Field label': 'Rate of change in human mobility (parks)',
+    Type: 'Número',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description: 'Rate of change in human mobility (parks)',
+  },
+  {
+    'Original field name': 'transit_stations_percent_change_from_baseline',
+    'Field name given by PAMEpi':
+      'transit_stations_percent_change_from_baseline',
+    'Field label': 'Rate of change in human mobility (transit stations)',
+    Type: 'Número',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description: 'Rate of change in human mobility (transit stations)',
+  },
+  {
+    'Original field name': 'workplaces_percent_change_from_baseline',
+    'Field name given by PAMEpi': 'workplaces_percent_change_from_baseline',
+    'Field label': 'Rate of change in human mobility (workplace)',
+    Type: 'Número',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description: 'Rate of change in human mobility (workplace)',
+  },
+  {
+    'Original field name': 'residential_percent_change_from_baseline',
+    'Field name given by PAMEpi': 'residential_percent_change_from_baseline',
+    'Field label': 'Rate of change in human (residential) mobility',
+    Type: 'Número',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description: 'Rate of change in human (residential) mobility',
+  },
+  {
+    'Original field name': 'pop',
+    'Field name given by PAMEpi': 'pop',
+    'Field label': 'Estimated population for each municipality.',
+    Type: 'Integer',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      'Estimated municipal population for each municipality provided by IBGE for the year 2021.',
+  },
+  {
+    'Original field name': 'newDeaths',
+    'Field name given by PAMEpi': 'newDeaths_WCota',
+    'Field label': 'deaths in the day',
+    Type: 'Number',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      'Difference between the number of deaths on the corresponding date and the previous one',
+  },
+  {
+    'Original field name': 'deaths',
+    'Field name given by PAMEpi': 'deaths_WCota',
+    'Field label': 'Accumulated deaths',
+    Type: 'Number',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description: 'Cumulative number of deaths on that date',
+  },
+  {
+    'Original field name': 'newCases',
+    'Field name given by PAMEpi': 'newCases_WCota',
+    'Field label': 'Confirmations on the day',
+    Type: 'Number',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      'Difference between the number of cases of the corresponding date and the previous one',
+  },
+  {
+    'Original field name': 'totalCases',
+    'Field name given by PAMEpi': 'totalCases_WCota',
+    'Field label': 'Accumulated Confirmed',
+    Type: 'Number',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description: 'Cumulative number of cases on that date',
+  },
+  {
+    'Original field name': 'indGeneral',
+    'Field name given by PAMEpi': '',
+    'Field label': 'General index',
+    Type: 'Number',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description: '( O1 + O2 + O3 + O4 + C1 + C2 ) * 100 / 6',
+  },
+  {
+    'Original field name': 'O1',
+    'Field name given by PAMEpi': 'O1',
+    'Field label': 'Cancel public events',
+    Type: 'Number',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      'NO0 - No measures , <br>NO1 - Ban of public events and public facilities ,<br> NO2 - Restrictions on very large gatherings (above 500 people), <br>NO3 - Restrictions on gatherings between 100-499 people,<br> NO4 - Restrictions on gatherings between 50-99 people, <br>NO5 - Restrictions on gatherings between 5-49 people, <br>NO6 - Total ban on crowded events or activities , <br>GO0 - Targeted or conditional, <br>GO1 - General',
+  },
+  {
+    'Original field name': 'O2',
+    'Field name given by PAMEpi': 'O2',
+    'Field label': 'Closure of schools/universities',
+    Type: 'Number',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      'NO0 - No measures, <br>NO1 - Suggests closure, <br>NO2 - Require closing , <br>GO0 - Targeted or conditional, <br>GO1 - General',
+  },
+  {
+    'Original field name': 'O3',
+    'Field name given by PAMEpi': 'O3',
+    'Field label': 'Home-office for government employees',
+    Type: 'Number',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      'NO0 - No measures, <br>NO1 - Home-office for those with symptoms or from some risk groups, <br>NO2 - Optional home-office, <br>NO3 - Strategic scheduling work, <br>NO4 - Mandatory home-office , <br>GO0 - Targeted or conditional, <br>GO1 - General',
+  },
+  {
+    'Original field name': 'O4',
+    'Field name given by PAMEpi': 'O4',
+    'Field label': 'Isolation',
+    Type: 'Number',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      'NO0 - No measures, <br>NO1 - Vertical isolation, <br>NO2 - Horizontal isolation , <br>GO0 - Targeted or conditional, <br>GO1 - General',
+  },
+  {
+    'Original field name': 'C1',
+    'Field name given by PAMEpi': 'C1',
+    'Field label': 'Closure of non-essential businesses and public activities',
+    Type: 'Number',
+    'Original categories': 'Uncategorized',
+    'Categories given by PAMEpi': 'Uncategorized',
+    Description:
+      '0 - No measures, <br>+1 - Closure of malls, <br>+1 – Suspension of non-essential businesses, <br>+1 - Suspension of bars and restaurants, <br>+1 - Ban of activities in public spaces (beaches, parks, etc) , <br>+1 - Suspension of religious activities, <br>+1 - Closure of cultural places (theater, cinema, museum), <br>+1 – Closure of gyms , <br>SGCj – The sum of the measures that was general , <br>SCj - The sum of the restrictions applied, <br>Ncj - The Number of possible restrictions, C2',
   },
 ];
 

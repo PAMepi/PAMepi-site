@@ -521,8 +521,8 @@
           <h4 class="data">
             Data dictionary
             <a
-              href=""
-              class="btn btn-info float-right mr-3 disabled"
+              href="../files/dic/Dictionary-English-Agreg.csv"
+              class="btn btn-info float-right mr-3"
               target="_blank"
               >Download</a
             >
@@ -610,29 +610,27 @@
         }
       }
 
-      ncols = dicAgregate.length;
+      ncols = dicAgregEn.length;
 
       tableDic = document.getElementById('tableDic');
 
       function dicValue(lin, col) {
-        if (Object.keys(dicAgregate[col.toString()])[lin]) {
-          return `<td >${
-            Object.values(dicAgregate[col.toString()])[lin]
-          } </td>`;
+        if (Object.keys(dicAgregEn[col.toString()])[lin]) {
+          return `<td >${Object.values(dicAgregEn[col.toString()])[lin]} </td>`;
         }
         return '-';
       }
       let col_name = '';
       // fill table with data
-      for (let i = 0; i < Object.keys(dicXXX[0]).length; i++) {
+      for (let i = 0; i < Object.keys(dicAgregEn[0]).length; i++) {
         row = tableDic.insertRow(i);
         cell = row.insertCell(row);
         cell.outerHTML = `<th class="headcol">${
-          Object.keys(dicAgregate['0'])[i]
+          Object.keys(dicAgregEn['0'])[i]
         }</th>`;
         ncol = 1;
         for (let col = 0; col < ncols; col++) {
-          col_name = Object.values(dicAgregate[col.toString()])[5];
+          col_name = Object.values(dicAgregEn[col.toString()])[5];
           //only add column if field is in our data
 
           cell = row.insertCell(ncol);
