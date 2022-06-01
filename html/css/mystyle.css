@@ -190,13 +190,12 @@ h6 {
   position: absolute;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-
   z-index: 1;
   padding: 0px;
   width: auto;
-  top: 2rem;
+  top: 2.8rem;
   margin: 0px;
-  border-radius: 8px;
+  border-radius: 6px;
   background-color: #892e2c;
 }
 
@@ -210,37 +209,23 @@ h6 {
   display: block;
 }
 
-.submenu {
-  font-weight: 500;
-}
-
-.dropdown-item:hover {
-  background-color: #742725;
-  color: #fff;
-  border-radius: 8px;
-}
-
 .dropdown-item {
   text-align: left;
-  background-color: #892e2c;
+  // background-color: #892e2c;
   font-weight: 500;
   font-size: 0.9rem;
   color: #ddd;
-  border-radius: 8px;
-  padding: 0.2rem 1rem;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
 }
 
+.dropdown-item:hover,
 .dropdown-item:active,
 .dropdown-item:focus {
   background-color: #742725;
   color: #fff;
-  border-radius: 8px;
-  border: 2px solid #60201f;
-}
-
-.dropdown:active,
-.dropdown:focus {
-  border: 2px solid #60201f;
+  border-radius: 6px;
+  border: 1px solid #60201f;
 }
 
 nav {
@@ -257,13 +242,6 @@ nav {
   font-weight: 500;
 }
 
-.nav-link:active,
-.nav-link:focus {
-  background-color: #742725;
-  color: #fff;
-  border-radius: 8px;
-}
-
 .nav-link {
   text-transform: none;
   font-family: 'Ruda', sans-serif;
@@ -273,17 +251,20 @@ nav {
   color: #ccc;
   margin: 0;
   text-decoration: none;
+  display: block;
+  padding: 0.5rem 1rem;
+}
+
+.nav-link:hover,
+.nav-link:active,
+.nav-link:focus {
+  color: #fff;
 }
 
 .navbar-item {
   text-transform: uppercase;
   padding: 0;
   margin: 0;
-}
-
-.nav-link:hover {
-  color: #fff;
-  background-color: #742725;
 }
 
 .dropdown-item .active {
@@ -940,6 +921,7 @@ h2 {
   margin: 0;
   padding: 0 0.8rem;
   border-bottom: 1px solid #742725;
+  // border-bottom: 1px solid yellow;
 }
 
 .custom-toggler.navbar-toggler {
@@ -1111,27 +1093,14 @@ a:hover {
   }
 
   .dropdown-item {
-    padding: 0.2rem 0 0.2rem 0.5rem;
+    // padding: 0.2rem 0 0.2rem 0.5rem;
     font-size: 0.8rem;
     font-weight: 700;
   }
 
-  .nav-link {
-    padding: 0.2rem 0 0.2rem 0.5rem;
-    font-size: 0.8rem;
-  }
-
-  .dropdown-submenu:hover {
-    background-color: #892e2c;
-  }
-
   .submenu {
     margin-left: 2rem;
-  }
-
-  .sub-drop {
-    padding: 0;
-    background-color: #892e2c;
+    font-weight: 500;
   }
 
   .dropdown-submenu .dropdown-menu {
@@ -1154,10 +1123,7 @@ a:hover {
     min-width: 240px !important;
     overflow-x: hidden;
   }
-  .dropdown-menu {
-    box-shadow: 0;
-    border: 0;
-  }
+
   .rowmulticol {
     width: 100%;
   }

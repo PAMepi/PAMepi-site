@@ -140,38 +140,32 @@
                 <div class="dropdown-item drop-item">
                   <a href="data.html" class="nav-link submenu">Visão geral</a>
                 </div>
-                <div
-                  class="dropdown-item drop-item dropdown dropright dropdown-submenu"
-                >
+                <div class="dropdown-item drop-item dropright dropdown-submenu">
                   <a
-                    class="btn dropdown-toggle nav-link submenu"
+                    class="btn nav-link submenu"
                     href="#"
                     data-toggle="dropdown"
                     data-flip="false"
                     style="text-align: left"
                   >
-                    Saúde</a
-                  >
+                    Saúde
+                    <span class="dropdown-toggle" style="float: right"></span
+                  ></a>
 
                   <ul class="dropdown-menu sub-drop">
                     <li class="dropdown-item drop-item">
-                      <a href="sivep.html" class="nav-link submenu">SG</a>
+                      <a href="sg.html" class="nav-link submenu">SG</a>
                     </li>
                     <li class="dropdown-item drop-item">
                       <a href="srag.html" class="nav-link submenu">SRAG</a>
                     </li>
                     <li class="dropdown-item drop-item">
-                      <a href="brio.html" class="nav-link submenu">Brasil IO</a>
+                      <a href="wcota.html" class="nav-link submenu">WCota</a>
                     </li>
                     <li class="dropdown-item drop-item">
                       <a href="vacina.html" class="nav-link submenu"
                         >Vacinação</a
                       >
-                    </li>
-                    <li class="dropdown-item drop-item">
-                      <a href="hospital.html" class="nav-link submenu">
-                        Ocupação Hospitalar
-                      </a>
                     </li>
                   </ul>
                 </div>
@@ -179,14 +173,17 @@
                   class="dropdown-item drop-item dropdown dropright dropdown-submenu"
                 >
                   <a
-                    class="btn dropdown-toggle nav-link submenu"
+                    class="btn nav-link submenu"
                     href="#"
                     data-toggle="dropdown"
                     data-flip="false"
                     style="text-align: left"
                   >
-                    Mobilidade
-                  </a>
+                    Mobilidade<span
+                      class="dropdown-toggle"
+                      style="float: right"
+                    ></span
+                  ></a>
 
                   <ul class="dropdown-menu sub-drop">
                     <li class="dropdown-item drop-item">
@@ -203,13 +200,14 @@
                   class="dropdown-item drop-item dropdown dropright dropdown-submenu"
                 >
                   <a
-                    class="btn dropdown-toggle nav-link submenu"
+                    class="btn nav-link submenu"
                     href="#"
                     data-toggle="dropdown"
                     data-flip="false"
                     style="text-align: left"
-                    >Inequalidade</a
-                  >
+                    >Inequalidade
+                    <span class="dropdown-toggle" style="float: right"></span>
+                  </a>
 
                   <ul class="dropdown-menu sub-drop">
                     <li class="dropdown-item drop-item">
@@ -270,14 +268,17 @@
                   class="dropdown-item drop-item dropdown dropright dropdown-submenu"
                 >
                   <a
-                    class="btn dropdown-toggle nav-link submenu itemcol"
+                    class="btn nav-link submenu itemcol"
                     href="#"
                     data-toggle="dropdown"
                     data-flip="false"
                     style="text-align: left"
                   >
-                    Panorama</a
-                  >
+                    Panorama<span
+                      class="dropdown-toggle"
+                      style="float: right"
+                    ></span
+                  ></a>
                   <ul class="dropdown-menu sub-drop">
                     <li class="dropdown-item drop-item">
                       <a href="panoramaEstado.html" class="nav-link submenu"
@@ -298,8 +299,8 @@
                 </div>
                 <div class="dropdown-item drop-item">
                   <a href="decree.html" class="itemcol nav-link submenu active"
-                    >Decretos</a
-                  >
+                    >Decretos
+                  </a>
                 </div>
                 <div class="dropdown-item drop-item">
                   <a href="#" class="itemcol nav-link submenu isDisabled"
@@ -313,13 +314,16 @@
                   class="dropdown-item drop-item dropdown dropright dropdown-submenu"
                 >
                   <a
-                    class="btn dropdown-toggle nav-link submenu itemcol"
+                    class="btn nav-link submenu itemcol"
                     href="#"
                     data-toggle="dropdown"
                     data-flip="false"
                     style="text-align: left"
                   >
-                    Estados
+                    Estados<span
+                      class="dropdown-toggle"
+                      style="float: right"
+                    ></span>
                   </a>
 
                   <ul class="dropdown-menu sub-drop">
@@ -343,29 +347,16 @@
                         >Validação</a
                       >
                     </li>
-                    <li class="dropdown-item drop-item sub-drop disabled">
-                      <a href="simula.html" class="nav-link submenu isDisabled"
-                        >Simulação</a
-                      >
-                    </li>
                   </ul>
                 </div>
-                <div class="dropdown-item drop-item disabled">
-                  <a
-                    href="municipios.html"
-                    class="itemcol nav-link submenu isDisabled"
-                    >Municipios</a
+                <div class="dropdown-item drop-item">
+                  <a href="dashboard.html" class="itemcol nav-link submenu"
+                    >Simulação</a
                   >
                 </div>
+
                 <div class="dropdown-item drop-item disabled">
-                  <a
-                    href="reg_sau.html"
-                    class="itemcol nav-link submenu isDisabled"
-                    >Regiões de saúde</a
-                  >
-                </div>
-                <div class="dropdown-item drop-item disabled">
-                  <a href="tsd.html" class="itemcol nav-link submenu isDisabled"
+                  <a href="#" class="itemcol nav-link submenu isDisabled"
                     >Traga seus dados</a
                   >
                 </div>
@@ -519,6 +510,11 @@
           </h2>
         </div>
       </div>
+      <div class="row justify-content-around align-items-center mt-5 pt-5">
+        <div class="mb-5">
+          <div id="plotStringe" style="width: 100%; height: 100px"></div>
+        </div>
+      </div>
 
       <div class="table-decree">
         <table
@@ -533,7 +529,40 @@
         </table>
       </div>
     </section>
+    <footer class="page-footer font-small footer" id="footer">
+      <div class="row justify-content-center align-items-center copyrights">
+        <div class="icons col-1">
+          <a href="mailto:modeling.taskforce@gmail.com">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              class="bi bi-envelope-fill icons-color"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"
+              /></svg
+          ></a>
+        </div>
+        <div class="icons col-1">
+          <a href="https://github.com/PAMepi" target="_blank"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              class="bi bi-github icons-color"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+              /></svg
+          ></a>
+        </div>
+      </div>
 
+      <div class="copyrights row align-items-center justify-content-center">
+        PAMEpi <img src="../img/no-virus.svg" class="filter-virus" />2022
+      </div>
+    </footer>
     <script>
       var selectUF = document.getElementById('selectState');
       var selectClass = document.getElementById('selectClass');

@@ -141,7 +141,7 @@ $(document).ready(function () {
 
 // keep dropdown open
 $(document).ready(function () {
-  $('.dropdown-menu a.dropdown-toggle').on('click', function (e) {
+  $('.dropdown-menu a.btn').on('click', function (e) {
     if (!$(this).next().hasClass('show')) {
       $(this)
         .parents('.dropdown-menu')
