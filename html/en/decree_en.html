@@ -7,7 +7,11 @@
       type="text/javascript"
       src="https://code.highcharts.com/modules/exporting.js"
     ></script>
-
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="../js/stringency.js"
+    ></script>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <!-- CSS -->
     <link
@@ -32,6 +36,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../css/decree.css" />
     <script type="text/javascript" src="../js/sampleDecree.js"></script>
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="../js/stringency.js"
+    ></script>
   </head>
 
   <body onload="updateTable(mergedDecretos,0),sortTable()">
@@ -507,7 +516,7 @@
 
       <div class="row justify-content-around dashboard">
         <div class="col-md-2 square">
-          <h2>States: <br /><span id="h1Estado">All</span></h2>
+          <h2>States: <br /><span id="h1Estado"></span></h2>
         </div>
         <div class="col-md-2 square">
           <h2>Class: <br /><span id="h1Class"></span></h2>
@@ -530,7 +539,7 @@
       </div>
       <div class="row justify-content-around align-items-center mt-5 pt-5">
         <div class="mb-5">
-          <div id="plotStringe" style="width: 100%; height: 100px"></div>
+          <div id="plotStringe" style="width: 100%; height: 500px"></div>
         </div>
       </div>
 
@@ -582,8 +591,8 @@
       </div>
     </footer>
     <script>
-      var selectUF = document.getElementById('selectState');
-      var selectClass = document.getElementById('selectClass');
+      selectUF = 'All';
+      selectClass = 'All';
       var selectDataI = document.getElementById('selectDataI');
       const today = new Date();
       var selectDataF = document.getElementById('selectDataF');
@@ -595,41 +604,161 @@
       var h1Class = document.getElementById('h1Class');
       var h1DataI = document.getElementById('h1DataI');
       var h1DataF = document.getElementById('h1DataF');
-
+      const average = arr =>
+        (arr.reduce((a, b) => a + b, 0) / arr.length).toFixed(2);
       var indexClass = ['O1', 'O2', 'O3', 'O4', 'C1', 'C2', 'C3'];
+      var ufList = sampleDecrees
+        .map(d => d.UF)
+        .filter((v, i, a) => a.indexOf(v) === i);
+
+      function createStringDataPlot(strincreateStringDataPlotge) {
+        // if the filter is in class should not take indgeneral
+
+        if (selectClass === 'All') {
+          indClass = 'indGeneral';
+          corrector = 1;
+        } else {
+          indClass = selectClass;
+          corrector = 100;
+        }
+        // when is all states dont plot anything
+        if (selectUF === 'All') {
+          return [{ x: null, y: null }];
+        }
+
+        var dateList = stringe
+          .map(d => d.Date)
+          .filter((v, i, a) => a.indexOf(v) === i);
+        data = [];
+        for (i = 0; i < dateList.length; i++) {
+          arr = dateList[i].split('/');
+          resultStr = stringe.filter(
+            x => x.Date === dateList[i] && x[indClass] != 0.0
+          );
+          if (resultStr.length > 0) {
+            dataX = Date.UTC(arr[2], arr[0] - 1, arr[1]);
+            uf = selectUF;
+            statePoint =
+              resultStr.filter(x => x.UF === uf).map(x => x[indClass])[0] ||
+              null;
+            newObj = { x: dataX, y: statePoint };
+
+            data.push(newObj);
+          }
+        }
+        return data;
+      }
+
+      // test plot stringency
+      function plotStringe(dataStr) {
+        Highcharts.chart('plotStringe', {
+          title: {
+            text: `Stringency index <br><br> State: <strong>${selectUF}</strong>, Class: <strong>${selectClass}</strong>`,
+          },
+          yAxis: {
+            title: {
+              text: 'Index (%)',
+            },
+          },
+          chart: {
+            zoomType: 'x',
+          },
+          xAxis: {
+            type: 'datetime',
+
+            title: {
+              enabled: true,
+              text: 'Date',
+            },
+            startOnTick: true,
+            endOnTick: true,
+            showLastLabel: true,
+          },
+
+          legend: {
+            enabled: false,
+          },
+
+          plotOptions: {
+            series: {
+              label: {
+                connectorAllowed: false,
+              },
+              pointStart: 2010,
+            },
+          },
+
+          series: [
+            {
+              // name: 'Installation',
+              data: dataStr,
+              // [                { x: 1, y: 43934 },                { x: 2, y: 52503 },                { x: 3, y: 57177 },                { x: 4, y: 69658 },                { x: 5, y: 97031 },                { x: 6, y: 119931 },                { x: 7, y: 137133 },                { x: 8, y: 154175 },              ],
+            },
+          ],
+
+          responsive: {
+            rules: [
+              {
+                condition: {
+                  maxWidth: 500,
+                },
+                chartOptions: {
+                  legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom',
+                  },
+                },
+              },
+            ],
+          },
+        });
+      }
 
       function createClassDataPlot(data) {
+        // create data to fill class plot
         var dataClass = [];
-        var result = {};
+        var resultClass = {};
         for (i = 0; i < indexClass.length; i++) {
-          result = joinClass(data.filter(x => x.Class === indexClass[i]));
-          if (result.length > 0) {
-            dataClass.push({ name: indexClass[i], y: result.length });
+          filterClass = data.filter(x => x.Class === indexClass[i]);
+          resultClass = filterClass
+            .map(d => d.Decree)
+            .filter((v, i, a) => a.indexOf(v) === i);
+          if (resultClass.length > 0) {
+            dataClass.push({ name: indexClass[i], y: resultClass.length });
           }
         }
         return dataClass;
       }
 
       function createMapDataPlot(data) {
+        // create data to fill Map plot
         var dataMap = [];
-        var result = {};
+        var resultMap = {};
         var ufList = data
           .map(d => d.UF)
           .filter((v, i, a) => a.indexOf(v) === i);
         for (i = 0; i < ufList.length; i++) {
-          result = data.filter(x => x.UF === ufList[i]);
-          if (result.length > 0) {
-            dataMap.push(['br-' + ufList[i].toLowerCase(), result.length]);
+          filterMap = data.filter(x => x.UF === ufList[i]);
+
+          resultMap = filterMap
+            .map(d => d.Decree)
+            .filter((v, i, a) => a.indexOf(v) === i);
+
+          if (resultMap.length > 0) {
+            dataMap.push(['br-' + ufList[i].toLowerCase(), resultMap.length]);
           }
         }
+
         return dataMap;
       }
 
       dataClass = createClassDataPlot(sampleDecrees);
       dataMap = createMapDataPlot(sampleDecrees);
+      dataStr = createStringDataPlot(stringe);
       var chartClass = plotClass(dataClass);
       var chartMap = plotMap(dataMap);
-
+      var chartStringe = plotStringe(dataStr);
       // join decrees duplicated in original table generate array with diferent information
       function joinClass(allDecrees) {
         var mergedDecretos = [];
@@ -682,7 +811,6 @@
         dataMin.getMonth() + 1
       ).padStart(2, '0')}-${String(dataMin.getDate()).padStart(2, '0')}`;
       h1DataI.textContent = selectDataI.value;
-
       function checkDates() {
         dataI = new Date(`${selectDataI.value} 00:00:00 GMT`);
         dataF = new Date(`${selectDataF.value} 00:00:00 GMT`);
@@ -724,37 +852,73 @@
 
       function filterbyClass(data) {
         Classe = selectClass;
-        if (Classe === 'Classe' || Classe === null) {
-          h1Class.textContent = 'All';
+        h1Class.textContent = Classe;
+        if (Classe === 'All' || Classe === null) {
           return data;
         }
-        h1Class.textContent = Classe;
-
         return data.filter(x => x.Class === Classe);
       }
 
       function filterbyState(data) {
         UF = selectUF;
-        if (UF === 'ESTADO' || UF === null) {
-          h1Estado.textContent = 'All';
+        h1Estado.textContent = UF;
+        if (UF === 'All' || UF === null) {
           return data;
         }
-        h1Estado.textContent = UF;
         return data.filter(x => x.UF === UF);
       }
 
+      function filterStr(data) {
+        UF = selectUF;
+        if (UF === 'All' || UF === null) {
+          result = data;
+        } else {
+          result = data.filter(x => x.UF === UF);
+        }
+
+        dataI = new Date(`${selectDataI.value} 00:00:00 GMT`);
+        dataF = new Date(`${selectDataF.value} 00:00:00 GMT`);
+        var resultProductData = result.filter(function (a) {
+          if (a['Date'] !== '') {
+            var dataS = new Date(a['Date']);
+          }
+          return dataF >= dataS && dataI <= dataS;
+        });
+
+        return resultProductData;
+      }
+
       function filterData() {
-        if (checkDates()) {
+        Classe = selectClass;
+        UF = selectUF;
+        if (UF === 'All' && Classe === 'All') {
+          result = sampleDecrees;
+          h1Estado.textContent = UF;
+          h1Class.textContent = Classe;
+        } else if (checkDates()) {
           result = filterbyState(sampleDecrees);
           result = filterbyClass(result);
           result = filterbyDate(result);
-
-          result = joinClass(result);
-
-          nDecretos.textContent = result.length;
-          updateTable(result, 1);
-          sortTable();
         }
+        dataClass = createClassDataPlot(result);
+        dataMap = createMapDataPlot(result);
+
+        result = joinClass(result);
+
+        nDecretos.textContent = result.length;
+        updateTable(result, 1);
+        sortTable();
+
+        // when filter is applyed the plots are also updated with new configuration
+        plotMap(dataMap);
+        plotClass(dataClass);
+
+        // filter stringency data using same filters
+        dataStr = filterStr(stringe);
+
+        dataStr = createStringDataPlot(dataStr);
+
+        plotStringe(dataStr);
       }
 
       function updateTable(data, index) {
@@ -854,34 +1018,6 @@
         return '-';
       }
 
-      // function DoubleScroll(element) {
-      //   var scrollbar = document.createElement('div');
-      //   scrollbar.appendChild(document.createElement('div'));
-      //   scrollbar.style.overflow = 'auto';
-      //   // scrollbar.style.overflowY = 'hidden';
-      //   scrollbar.firstChild.style.width = element.scrollWidth + 'px';
-      //   scrollbar.firstChild.style.paddingTop = '1px';
-      //   scrollbar.firstChild.appendChild(document.createTextNode('\xA0'));
-      //   var running = false;
-      //   scrollbar.onscroll = function () {
-      //     if (running) {
-      //       running = false;
-      //       return;
-      //     }
-      //     running = true;
-      //     element.scrollLeft = scrollbar.scrollLeft;
-      //   };
-      //   element.onscroll = function () {
-      //     if (running) {
-      //       running = false;
-      //       return;
-      //     }
-      //     running = true;
-      //     scrollbar.scrollLeft = element.scrollLeft;
-      //   };
-      //   element.parentNode.insertBefore(scrollbar, element);
-      // }
-
       function sortTable() {
         const getCellValue = (tr, idx) =>
           tr.children[idx].innerText || tr.children[idx].textContent;
@@ -920,21 +1056,26 @@
           },
 
           title: {
-            text: 'Brazil',
+            text: 'Brazilian decrees by State',
+            style: {
+              fontWeight: 'bold',
+              fontSize: 14,
+            },
           },
 
           subtitle: {
-            text: 'States',
+            text: selectUF,
           },
 
           mapNavigation: {
             enabled: false,
           },
-          legend: {
-            enabled: false,
-          },
+
           plotOptions: {
             series: {
+              dataLabels: {
+                allowOverlap: true,
+              },
               point: {
                 events: {
                   click: function () {
@@ -952,19 +1093,65 @@
                 enabled: false,
               },
               customButton: {
-                text: 'Return',
+                text: 'Back',
                 x: 0,
                 align: 'left',
                 cursor: 'pointer',
                 theme: {
                   fill: '#ccc',
-                  text: '#fff',
                 },
                 onclick: function () {
-                  selectUF = 'ESTADO';
+                  selectUF = 'All';
                   filterData();
                   deselectAllPoints(this);
                 },
+              },
+            },
+          },
+          legend: {
+            layout: 'vertical',
+
+            align: 'left',
+            symbolPadding: 0,
+            symbolWidth: 5,
+            x: 0,
+            padding: 0,
+          },
+          mapNavigation: {
+            enableButtons: true,
+            enabled: true,
+            buttons: {
+              zoomIn: {
+                align: 'right',
+                alignTo: 'plotBox',
+                height: 15,
+                onclick: function () {
+                  this.mapZoom(0.5);
+                },
+                padding: 5,
+                style: { fontSize: '15px', fontWeight: 'bold' },
+                text: '+',
+                theme: { 'stroke-width': 1, 'text-align': 'center' },
+                verticalAlign: 'top',
+                width: 15,
+                x: 0,
+                y: 0,
+              },
+              zoomOut: {
+                align: 'right',
+                alignTo: 'plotBox',
+                height: 15,
+                onclick: function () {
+                  this.mapZoom(2);
+                },
+                padding: 5,
+                style: { fontSize: '15px', fontWeight: 'bold' },
+                text: '-',
+                theme: { 'stroke-width': 1, 'text-align': 'center' },
+                verticalAlign: 'top',
+                width: 15,
+                x: 0,
+                y: 28,
               },
             },
           },
@@ -986,7 +1173,15 @@
               allowPointSelect: true,
               dataLabels: {
                 enabled: true,
-                format: '{point.sigla}',
+                formatter: function () {
+                  return this.point.properties['hc-a2'];
+                },
+                verticalAlign: 'top',
+                enabled: true,
+                color: '#000000',
+                connectorWidth: 1,
+                distance: -10,
+                connectorColor: '#000000',
               },
             },
           ],
@@ -1002,6 +1197,17 @@
           },
           title: {
             text: 'Classes',
+            style: {
+              fontWeight: 'bold',
+              fontSize: 14,
+            },
+          },
+          subtitle: {
+            text: selectClass,
+            style: {
+              marginBottom: '10px',
+            },
+            y: 40,
           },
           yAxis: {
             title: {
@@ -1015,7 +1221,7 @@
                 enabled: false,
               },
               customButton: {
-                text: 'Return',
+                text: 'Back',
                 x: 0,
                 align: 'left',
                 cursor: 'pointer',
@@ -1024,17 +1230,17 @@
                   text: '#fff',
                 },
                 onclick: function () {
-                  selectClass = 'Classe';
+                  selectClass = 'All';
                   filterData();
                   // Dado Inicial
-                  deselectAllPoints(this);
+                  // deselectAllPoints(this);
                 },
               },
             },
           },
-
           plotOptions: {
             pie: {
+              size: '80%',
               allowPointSelect: true,
               cursor: 'pointer',
               dataLabels: {
@@ -1052,14 +1258,50 @@
           },
           series: [
             {
-              name: 'Decree',
+              name: 'Decrees',
               colorByPoint: true,
               data: dataClass,
+              type: 'pie',
+
+              dataLabels: {
+                verticalAlign: 'top',
+                enabled: true,
+                color: '#000000',
+                connectorWidth: 1,
+                distance: -30,
+                connectorColor: '#000000',
+                formatter: function () {
+                  return (
+                    this.point.name + '<br>' + Math.round(this.percentage) + '%'
+                  );
+                },
+              },
+            },
+            {
+              dataLabels: {
+                enabled: true,
+                color: '#000000',
+                connectorWidth: 1,
+                distance: 30,
+                connectorColor: '#000000',
+                formatter: function () {
+                  return (
+                    '<b>' +
+                    this.point.name +
+                    '</b>:<br/> ' +
+                    Math.round(this.percentage) +
+                    ' %'
+                  );
+                },
+              },
             },
           ],
           showInLegend: true,
-        });
 
+          credits: {
+            enabled: false,
+          },
+        });
         return chart;
       }
 
