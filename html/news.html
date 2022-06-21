@@ -1705,18 +1705,23 @@
 
       <div id="Notas" class="w3-container city">
         <div class="w3-content">
-          <div class="myNotes ml-3 mr-3 mb-1 " >
+            <div class="myNotes ml-3 mr-3 mb-1 " >
+
               <h2 class="mt-5 mb-0"> <a href="https://www.aridhia.com/blog/gc-icoda-data-science-initiative-3/" target="_blank" 
                 style="text-decoration: none;"">
                 Confira no Blog da Aridhia a notícia sobre os resultados mais recentes da Pamepi: <span style="font-style: italic;"> "Grand Challenges ICODA Data Science Initiative – Blog 3"</span>
               </a>              </h2>
+
             <p class=" mt-3  pt-0" style="text-align: right"> 19 de Maio de 2022</p>
             <div class="border-top my-5"></div>
+
+
             <h2 class="mt-5 mb-0"> <a href="https://cidacs.bahia.fiocruz.br/2022/05/10/casos-e-obitos-da-covid-19-estudo-confirma-que-pessoas-negras-indigenas-e-pobres-foram-maiores-vitimas-da-pandemia/" target="_blank" style="text-decoration: none;">Casos e óbitos da Covid-19: estudo confirma que pessoas negras, indígenas e pobres foram maiores vítimas da pandemia
             </a>              </h2>
           <p class=" mt-3  pt-0" style="text-align: right"> 10 de Maio de 2022</p>
           <div class="border-top my-5"></div>
           </div>
+
           <div class="myNotes ml-3 mr-3 mb-1 " style="overflow: hidden ">
             <a href="#boletim" style="text-decoration: none;">
               <h2 class="mt-5 mb-0"> Explicando a pandemia ao vivo na televisão da Bahia
@@ -2815,7 +2820,7 @@
     function showDivs(n) {
       var i;
       var x = document.getElementsByClassName("mySlides");
-      var dots = document.getElementsByClassName("demo");
+    
       if (n > x.length) {
         slideIndex = 1
       }
@@ -2825,11 +2830,9 @@
       for (i = 0; i < x.length; i++) {
         x[i].style.display = "none";
       }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" w3-blue-grey", "");
-      }
+  
       x[slideIndex - 1].style.display = "block";
-      dots[slideIndex - 1].className += " w3-blue-grey";
+     
     }
 
     // mudar tab das notas
