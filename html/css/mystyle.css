@@ -725,7 +725,7 @@ h2 {
 
 .row-video {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .col-video {
@@ -735,6 +735,16 @@ h2 {
   max-width: 48%;
   margin-bottom: 1rem;
 }
+
+.lin-video{
+width: 100%;
+  padding: 2rem 3rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+
+  margin-bottom: 1rem;
+}
+
 .card-link {
   text-decoration: none;
   color: #000;
@@ -930,7 +940,7 @@ h2 {
   margin: 0;
   padding: 0 0.8rem;
   border-bottom: 1px solid #742725;
-  // border-bottom: 1px solid yellow;
+ 
 }
 
 .custom-toggler.navbar-toggler {
@@ -1010,7 +1020,7 @@ h5 {
 }
 
 .play-btn {
-  width: 20%;
+  width: 70px;
   position: absolute;
   left: 50%;
   top: 50%;
