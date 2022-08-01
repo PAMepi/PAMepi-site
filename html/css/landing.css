@@ -273,7 +273,7 @@ html {
   align-items: center;
 }
 
-#longtxtbanner{
+.longtxtbanner{
   line-height: 1;
   padding: 1rem;
   margin: 1.5rem 0 0 0 ;
