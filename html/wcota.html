@@ -445,169 +445,170 @@
         </div>
       </div>
     </nav>
+    <div class="limiter">
+      <section class="top">
+        <div class="row dados-icon">
+          <img src="img/wcota.png" class="dados-img" style="width: 80px" />
 
-    <section class="top">
-      <div class="row dados-icon">
-        <img src="img/wcota.png" class="dados-img" style="width: 80px" />
-
-        <h1 class="dados-text">WCota</h1>
-      </div>
-
-      <div class="intro" style="padding: 2rem 0rem 5rem">
-        <h2 class="mb-5">Descrição</h2>
-        <p class="card-text">
-          O conjunto de dados WCota é extraído do
-          <a href="https://github.com/wcota/covid19br" target="_blank"
-            >repositório no Github</a
-          >
-          do pesquisador Wesley Cota (<a
-            href="https://doi.org/10.1590/SciELOPreprints.362"
-            target="_blank"
-            >W. Cota, “Monitoring the number of COVID-19 cases and deaths in
-            brazil at municipal and federative units level”,
-            SciELOPreprints:362, 2020</a
-          >). O número de casos confirmados e óbitos causados ​​por infecções
-          por SARS-COV-2 agregados em nível estadual e municipal são compilados
-          a partir de dados do
-          <a href="https://covid.saude.gov.br/" target="_blank">
-            Ministério da Saúde</a
-          >
-          e Secretarias Estaduais de Saúde.
-        </p>
-        <p>
-          O autor reune os dados dos relatórios das secretarias estaduais e
-          municipais disponíveis publicamente antes do registro no banco de
-          dados do Ministério da Saúde do Brasil. Esse processo ajuda a
-          disponibilizar dados sobre o COVID-19 em tempo real, uma vez que
-          demora muito para registrar os casos das secretarias estaduais e
-          municipais no sistema único brasileiro.
-        </p>
-        <p>
-          Além disso, os dados fornecidos pelo Ministério da Saúde têm um
-          processo de atualização raro e lento, o site fica fora do ar com
-          frequência e os dados são desestruturados.
-        </p>
-        <p>
-          Coletamos os dados de 1º de fevereiro de 2020 em diante. Os dados
-          podem ser atualizados diariamente. Links para publicações que usam os
-          dados do WCota ou fornecem outros locais de acesso público dos dados
-          podem ser encontrados em (<a
-            href="https://www.sciencedirect.com/science/article/pii/S1755436521000232?via%3Dihub"
-            target="_blank"
-          >
-            Jorge et al., 2021, 35</a
-          >
-          ).
-        </p>
-        <h2 class="mb-5 mt-5 pt-5 pb-2">Informação de acesso a dados</h2>
-        <p>
-          Os dados coletados, limpos e formatados disponíveis gratuitamente no
-          WCota podem ser acessados e baixados em (<a
-            href="https://github.com/wcota/covid19br"
-            target="_blank"
-            >Wesley Cota, 2020</a
-          >), sob a licença Creative Commons Attribution ShareAlike (CC-BY-SA
-          4.0).
-        </p>
-        <h2 class="mb-5 mt-5 pt-5 pb-2">Métodos de coleta de dados</h2>
-        <p>
-          Um código python está disponível em nosso diretório
-          <a
-            href="https://github.com/PAMepi/PAMepi_scripts_datalake"
-            target="_blank"
-            >Github</a
-          >
-          para baixar dados do projeto WCota, veja detalhes em
-          <a
-            href="https://github.com/wcota/covid19br/blob/master/DESCRIPTION.md"
-            target="_blank"
-            >Github</a
-          >. A Pamepi utiliza os arquivos nomeados como
-          <strong>cases-brazil-cities-time </strong> por conter a série temporal
-          de novos casos e mortes por Covid-19.
-        </p>
-        <h2 class="mb-5 mt-5 pt-5 pb-2">
-          Informações específicas de dados para WCota
-        </h2>
-        <p>
-          O conjunto de dados do WCota (arquivos "cases-brazil-cities-time")
-          possue um total de 12 colunas e um tamanho de 311 MB na última
-          atualização de 11 de Maio de 2022. Um código com mais detalhes sobre
-          as variáveis, processamento de dados e métodos de análise é
-          apresentado em nosso diretório
-          <a
-            href="https://github.com/PAMepi/PAMepi_scripts_datalake"
-            target="_blank"
-            >Github</a
-          >.
-        </p>
-        <h2 class="mb-5 mt-5 pt-5 pb-2">
-          Limitações do conjunto de dados WCota
-        </h2>
-        <p>
-          O conjunto de dados WCota depende da qualidade das informações
-          divulgadas pelas secretarias estaduais e municipais de saúde. Quando
-          os arquivos são fornecidos em pdf ou imagens, isso pode comprometer a
-          tabulação dos dados em tempo real. Além disso, os óbitos e casos de
-          COVID-19 são tabulados de acordo com a data de coleta dos dados.
-        </p>
-        <p>
-          Portanto, a curva epidemiológica construída pode mostrar um atraso de
-          uma a até 7 semanas em relação à data dos primeiros sintomas ou à data
-          do exame laboratorial do caso (<a
-            href="https://portal.fiocruz.br/sites/portal.fiocruz.br/files/documentos/nota_tecnica_13.pdf"
-            target="_blank"
-            >Observatório COVID-19, 2020</a
-          >). Ainda assim, o conjunto de dados é considerado uma excelente fonte
-          para medir o curso da pandemia em tempo real.
-        </p>
-      </div>
-    </section>
-    <hr />
-    <section class="middle-white">
-      <h2 class="data">Dados e recursos</h2>
-      <div class="dado-subitem">
-        <div class="media download">
-          <h3 class="data">Dados e dicionário de variáveis</h3>
+          <h1 class="dados-text">WCota</h1>
         </div>
 
-        <div class="data-in">
-          <h4 class="data">Explorador de dados</h4>
-          <div class="table-div">
-            <table
-              id="tableExp"
-              cellpadding="2"
-              cellspacing="2"
-              border="1"
-              class="table-data data"
-            ></table>
-          </div>
-
-          <h4 class="data">
-            Dicionário de Dados
-            <a
-              href="files/dic/Dicionarios-Portugues-WCota.csv"
-              class="btn btn-info float-right mr-3"
-              target="_blank"
-              >Download</a
+        <div class="intro" style="padding: 2rem 0rem 5rem">
+          <h2 class="mb-5">Descrição</h2>
+          <p class="card-text">
+            O conjunto de dados WCota é extraído do
+            <a href="https://github.com/wcota/covid19br" target="_blank"
+              >repositório no Github</a
             >
-          </h4>
-          <div class="table-div">
-            <table
-              id="tableDic"
-              cellpadding="2"
-              cellspacing="2"
-              border="1"
-              class="table-data dic"
-            ></table>
+            do pesquisador Wesley Cota (<a
+              href="https://doi.org/10.1590/SciELOPreprints.362"
+              target="_blank"
+              >W. Cota, “Monitoring the number of COVID-19 cases and deaths in
+              brazil at municipal and federative units level”,
+              SciELOPreprints:362, 2020</a
+            >). O número de casos confirmados e óbitos causados ​​por infecções
+            por SARS-COV-2 agregados em nível estadual e municipal são
+            compilados a partir de dados do
+            <a href="https://covid.saude.gov.br/" target="_blank">
+              Ministério da Saúde</a
+            >
+            e Secretarias Estaduais de Saúde.
+          </p>
+          <p>
+            O autor reune os dados dos relatórios das secretarias estaduais e
+            municipais disponíveis publicamente antes do registro no banco de
+            dados do Ministério da Saúde do Brasil. Esse processo ajuda a
+            disponibilizar dados sobre o COVID-19 em tempo real, uma vez que
+            demora muito para registrar os casos das secretarias estaduais e
+            municipais no sistema único brasileiro.
+          </p>
+          <p>
+            Além disso, os dados fornecidos pelo Ministério da Saúde têm um
+            processo de atualização raro e lento, o site fica fora do ar com
+            frequência e os dados são desestruturados.
+          </p>
+          <p>
+            Coletamos os dados de 1º de fevereiro de 2020 em diante. Os dados
+            podem ser atualizados diariamente. Links para publicações que usam
+            os dados do WCota ou fornecem outros locais de acesso público dos
+            dados podem ser encontrados em (<a
+              href="https://www.sciencedirect.com/science/article/pii/S1755436521000232?via%3Dihub"
+              target="_blank"
+            >
+              Jorge et al., 2021, 35</a
+            >
+            ).
+          </p>
+          <h2 class="mb-5 mt-5 pt-5 pb-2">Informação de acesso a dados</h2>
+          <p>
+            Os dados coletados, limpos e formatados disponíveis gratuitamente no
+            WCota podem ser acessados e baixados em (<a
+              href="https://github.com/wcota/covid19br"
+              target="_blank"
+              >Wesley Cota, 2020</a
+            >), sob a licença Creative Commons Attribution ShareAlike (CC-BY-SA
+            4.0).
+          </p>
+          <h2 class="mb-5 mt-5 pt-5 pb-2">Métodos de coleta de dados</h2>
+          <p>
+            Um código python está disponível em nosso diretório
+            <a
+              href="https://github.com/PAMepi/PAMepi_scripts_datalake"
+              target="_blank"
+              >Github</a
+            >
+            para baixar dados do projeto WCota, veja detalhes em
+            <a
+              href="https://github.com/wcota/covid19br/blob/master/DESCRIPTION.md"
+              target="_blank"
+              >Github</a
+            >. A Pamepi utiliza os arquivos nomeados como
+            <strong>cases-brazil-cities-time </strong> por conter a série
+            temporal de novos casos e mortes por Covid-19.
+          </p>
+          <h2 class="mb-5 mt-5 pt-5 pb-2">
+            Informações específicas de dados para WCota
+          </h2>
+          <p>
+            O conjunto de dados do WCota (arquivos "cases-brazil-cities-time")
+            possue um total de 12 colunas e um tamanho de 311 MB na última
+            atualização de 11 de Maio de 2022. Um código com mais detalhes sobre
+            as variáveis, processamento de dados e métodos de análise é
+            apresentado em nosso diretório
+            <a
+              href="https://github.com/PAMepi/PAMepi_scripts_datalake"
+              target="_blank"
+              >Github</a
+            >.
+          </p>
+          <h2 class="mb-5 mt-5 pt-5 pb-2">
+            Limitações do conjunto de dados WCota
+          </h2>
+          <p>
+            O conjunto de dados WCota depende da qualidade das informações
+            divulgadas pelas secretarias estaduais e municipais de saúde. Quando
+            os arquivos são fornecidos em pdf ou imagens, isso pode comprometer
+            a tabulação dos dados em tempo real. Além disso, os óbitos e casos
+            de COVID-19 são tabulados de acordo com a data de coleta dos dados.
+          </p>
+          <p>
+            Portanto, a curva epidemiológica construída pode mostrar um atraso
+            de uma a até 7 semanas em relação à data dos primeiros sintomas ou à
+            data do exame laboratorial do caso (<a
+              href="https://portal.fiocruz.br/sites/portal.fiocruz.br/files/documentos/nota_tecnica_13.pdf"
+              target="_blank"
+              >Observatório COVID-19, 2020</a
+            >). Ainda assim, o conjunto de dados é considerado uma excelente
+            fonte para medir o curso da pandemia em tempo real.
+          </p>
+        </div>
+      </section>
+      <hr />
+      <section class="middle-white">
+        <h2 class="data">Dados e recursos</h2>
+        <div class="dado-subitem">
+          <div class="media download">
+            <h3 class="data">Dados e dicionário de variáveis</h3>
+          </div>
+
+          <div class="data-in">
+            <h4 class="data">Explorador de dados</h4>
+            <div class="table-div">
+              <table
+                id="tableExp"
+                cellpadding="2"
+                cellspacing="2"
+                border="1"
+                class="table-data data"
+              ></table>
+            </div>
+
+            <h4 class="data">
+              Dicionário de Dados
+              <a
+                href="files/dic/Dicionarios-Portugues-WCota.csv"
+                class="btn btn-info float-right mr-3"
+                target="_blank"
+                >Download</a
+              >
+            </h4>
+            <div class="table-div">
+              <table
+                id="tableDic"
+                cellpadding="2"
+                cellspacing="2"
+                border="1"
+                class="table-data dic"
+              ></table>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <footer class="page-footer font-small footer" id="footer">
       <div class="row justify-content-center align-items-center copyrights">
-        <div class="icons col-1">
+        <div class="icons">
           <a href="mailto:modeling.taskforce@gmail.com">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -620,7 +621,7 @@
               /></svg
           ></a>
         </div>
-        <div class="icons col-1">
+        <div class="icons">
           <a href="https://github.com/PAMepi" target="_blank"
             ><svg
               xmlns="http://www.w3.org/2000/svg"

@@ -443,286 +443,292 @@
         </div>
       </div>
     </nav>
+    <div class="limiter">
+      <section class="top" id="overview">
+        <h1 style="padding: 2rem 0 2rem">Base de dados</h1>
+        <h2>Visão geral do conjunto de dados</h2>
 
-    <section class="top" id="overview">
-      <h1 style="padding: 2rem 0 2rem">Base de dados</h1>
-      <h2>Visão geral do conjunto de dados</h2>
-
-      <div class="intro" style="padding: 2rem 0rem 5rem">
-        <p>
-          Reunimos dados sobre uma série de status infecciosos individuais
-          relacionados à pandemia de COVID-19, comportamento socioeconômico e
-          humano. Integraremos os dados de determinantes socioeconômicos e de
-          saúde disponíveis para cada uma das 5.570 cidades brasileiras.
-        </p>
-        <p>
-          Além disso, acessaremos em conjunto informações sobre as intervenções
-          implementadas e os padrões de mobilidade social. Os dados harmonizados
-          em nível municipal serão um recurso fundamental para a aplicação /
-          desenvolvimento de análises estatísticas, modelagem matemática não
-          linear, modelagem computacional, visualização de dados e divulgação
-          científica sobre a pandemia COVID-19 no Brasil.
-        </p>
-        <p>
-          Podemos coletar os dados de plataformas de acesso aberto como Google
-          Mobility, WCota, OpenDatasus, JusBrasil e IPB Cidacs Bahia. Além
-          disso, um script em linguagem python foi desenvolvido para automatizar
-          o processo de organização, download e atualização de arquivos,
-          facilitando o ajuste do período de atualização do datalake conforme o
-          sistema da plataforma original recebe suas atualizações.
-        </p>
-        <p>
-          Atualmente, configuramos nosso datalake para atualizar semanalmente em
-          nosso projeto. Observe que os dados do projeto podem ser baixados por
-          meio do código python mencionado acima ou por meio do Google Drive.
-          Vale ressaltar que um aplicativo está sendo desenvolvido para dar aos
-          usuários o poder de gerenciar quais informações eles desejam obter
-          para suas pesquisas.
-        </p>
-        <p>
-          Os dados de vacinação têm 63 gigabytes, SG tem 14 gigabytes, SRAG tem
-          694 megabytes, Google Mobilidade 593 megabytes, WCota 285 megabytes e
-          os setores censitários CIDACS 42 megabytes. Esses valores podem se
-          alterar devido às constantes atualizações das fontes originais dos
-          dados.
-        </p>
-        <p>
-          Dessa forma, o banco de dados soma aproximadamente 80 gigabytes para a
-          versão atualizada em 4 de agosto de 2021. Todos os arquivos estão
-          inicialmente disponíveis no formato .csv, exceto os dados dos setores
-          censitários e WCota, respectivamente em .xlsx (excel 2007) e extensões
-          gzip. No entanto, adicionamos um formulário de conversão e extração
-          para distribuir todos os arquivos na extensão .csv.
-        </p>
-      </div>
-    </section>
-
-    <hr />
-    <section>
-      <div class="middle-white">
-        <h2 style="margin-bottom: 4rem">Nossos arquivos de dados</h2>
-
-        <div class="card data-card" id="sivep">
-          <div class="card-header data-header">
-            <h5 class="card-title">Síndrome Gripal (SG)</h5>
-          </div>
-          <div class="card-body data-body">
-            <p class="card-text truncate">
-              Com o surgimento da pandemia causada pelo SARS-COV-2, o Ministério
-              da Saúde implantou um sistema de vigilância para registro da
-              Síndrome da Gripe (SG, também denominado e-SUS VE) de casos leves
-              a moderados com suspeita de COVID-19.
-            </p>
-          </div>
-          <div class="card-footer data-footer">
-            <a class="data-button text-decoration-none" href="sg.html"
-              >Acessar</a
-            >
-          </div>
+        <div class="intro" style="padding: 2rem 0rem 5rem">
+          <p>
+            Reunimos dados sobre uma série de status infecciosos individuais
+            relacionados à pandemia de COVID-19, comportamento socioeconômico e
+            humano. Integraremos os dados de determinantes socioeconômicos e de
+            saúde disponíveis para cada uma das 5.570 cidades brasileiras.
+          </p>
+          <p>
+            Além disso, acessaremos em conjunto informações sobre as
+            intervenções implementadas e os padrões de mobilidade social. Os
+            dados harmonizados em nível municipal serão um recurso fundamental
+            para a aplicação / desenvolvimento de análises estatísticas,
+            modelagem matemática não linear, modelagem computacional,
+            visualização de dados e divulgação científica sobre a pandemia
+            COVID-19 no Brasil.
+          </p>
+          <p>
+            Podemos coletar os dados de plataformas de acesso aberto como Google
+            Mobility, WCota, OpenDatasus, JusBrasil e IPB Cidacs Bahia. Além
+            disso, um script em linguagem python foi desenvolvido para
+            automatizar o processo de organização, download e atualização de
+            arquivos, facilitando o ajuste do período de atualização do datalake
+            conforme o sistema da plataforma original recebe suas atualizações.
+          </p>
+          <p>
+            Atualmente, configuramos nosso datalake para atualizar semanalmente
+            em nosso projeto. Observe que os dados do projeto podem ser baixados
+            por meio do código python mencionado acima ou por meio do Google
+            Drive. Vale ressaltar que um aplicativo está sendo desenvolvido para
+            dar aos usuários o poder de gerenciar quais informações eles desejam
+            obter para suas pesquisas.
+          </p>
+          <p>
+            Os dados de vacinação têm 63 gigabytes, SG tem 14 gigabytes, SRAG
+            tem 694 megabytes, Google Mobilidade 593 megabytes, WCota 285
+            megabytes e os setores censitários CIDACS 42 megabytes. Esses
+            valores podem se alterar devido às constantes atualizações das
+            fontes originais dos dados.
+          </p>
+          <p>
+            Dessa forma, o banco de dados soma aproximadamente 80 gigabytes para
+            a versão atualizada em 4 de agosto de 2021. Todos os arquivos estão
+            inicialmente disponíveis no formato .csv, exceto os dados dos
+            setores censitários e WCota, respectivamente em .xlsx (excel 2007) e
+            extensões gzip. No entanto, adicionamos um formulário de conversão e
+            extração para distribuir todos os arquivos na extensão .csv.
+          </p>
         </div>
-        <div class="card data-card" id="srag">
-          <div class="card-header data-header">
-            <h5 class="card-title">Síndrome Respiratória Aguda Grave (SRAG)</h5>
-          </div>
+      </section>
 
-          <div class="card-body data-body">
-            <p class="card-text truncate">
-              O conjunto de dados da Síndrome Respiratória Aguda Grave (SRAG) é
-              um conjunto de dados de saúde obtido junto ao Ministério da Saúde
-              do Brasil por meio da Secretaria de Vigilância em Saúde
-              (Ministério da Saúde, 2020). A vigilância SRAG começou com a
-              pandemia de Influenza A (H1N1) em 2009. Desde então, SRAG também é
-              usado para relatar Influenza e outros vírus respiratórios, que
-              anteriormente eram relatados apenas com a vigilância sentinela da
-              síndrome da gripe. Além disso, em 2020, as infecções humanas
-              causadas por SARS-COV-2 foram incorporadas à vigilância SRAG.
-            </p>
-          </div>
-          <div class="card-footer data-footer">
-            <a class="data-button text-decoration-none" href="srag.html"
-              >Acessar</a
-            >
-          </div>
-        </div>
+      <hr />
+      <section>
+        <div class="middle-white">
+          <h2 style="margin-bottom: 4rem">Nossos arquivos de dados</h2>
 
-        <div class="card data-card" id="wcota">
-          <div class="card-header data-header">
-            <h5 class="card-title">WCota</h5>
-          </div>
-          <div class="card-body data-body">
-            <p class="card-text truncate">
-              O conjunto de dados WCota é extraído do
-              <a href="https://github.com/wcota/covid19br" target="_blank"
-                >repositório no Github</a
+          <div class="card data-card" id="sivep">
+            <div class="card-header data-header">
+              <h5 class="card-title">Síndrome Gripal (SG)</h5>
+            </div>
+            <div class="card-body data-body">
+              <p class="card-text truncate">
+                Com o surgimento da pandemia causada pelo SARS-COV-2, o
+                Ministério da Saúde implantou um sistema de vigilância para
+                registro da Síndrome da Gripe (SG, também denominado e-SUS VE)
+                de casos leves a moderados com suspeita de COVID-19.
+              </p>
+            </div>
+            <div class="card-footer data-footer">
+              <a class="data-button text-decoration-none" href="sg.html"
+                >Acessar</a
               >
-              do pesquisador Wesley Cota. O número de casos confirmados e óbitos
-              causados ​​por infecções por SARS-COV-2 agregados em nível
-              estadual e municipal são compilados a partir de dados do
-              <a href="https://covid.saude.gov.br/" target="_blank">
-                Ministério da Saúde</a
+            </div>
+          </div>
+          <div class="card data-card" id="srag">
+            <div class="card-header data-header">
+              <h5 class="card-title">
+                Síndrome Respiratória Aguda Grave (SRAG)
+              </h5>
+            </div>
+
+            <div class="card-body data-body">
+              <p class="card-text truncate">
+                O conjunto de dados da Síndrome Respiratória Aguda Grave (SRAG)
+                é um conjunto de dados de saúde obtido junto ao Ministério da
+                Saúde do Brasil por meio da Secretaria de Vigilância em Saúde
+                (Ministério da Saúde, 2020). A vigilância SRAG começou com a
+                pandemia de Influenza A (H1N1) em 2009. Desde então, SRAG também
+                é usado para relatar Influenza e outros vírus respiratórios, que
+                anteriormente eram relatados apenas com a vigilância sentinela
+                da síndrome da gripe. Além disso, em 2020, as infecções humanas
+                causadas por SARS-COV-2 foram incorporadas à vigilância SRAG.
+              </p>
+            </div>
+            <div class="card-footer data-footer">
+              <a class="data-button text-decoration-none" href="srag.html"
+                >Acessar</a
               >
-              e Secretarias Estaduais de Saúde. O autor reune os dados dos
-              relatórios das secretarias estaduais e municipais disponíveis
-              publicamente antes do registro no banco de dados do Ministério da
-              Saúde do Brasil.
-            </p>
+            </div>
           </div>
 
-          <div class="card-footer data-footer">
-            <a class="data-button text-decoration-none" href="wcota.html"
-              >Acessar</a
-            >
+          <div class="card data-card" id="wcota">
+            <div class="card-header data-header">
+              <h5 class="card-title">WCota</h5>
+            </div>
+            <div class="card-body data-body">
+              <p class="card-text truncate">
+                O conjunto de dados WCota é extraído do
+                <a href="https://github.com/wcota/covid19br" target="_blank"
+                  >repositório no Github</a
+                >
+                do pesquisador Wesley Cota. O número de casos confirmados e
+                óbitos causados ​​por infecções por SARS-COV-2 agregados em
+                nível estadual e municipal são compilados a partir de dados do
+                <a href="https://covid.saude.gov.br/" target="_blank">
+                  Ministério da Saúde</a
+                >
+                e Secretarias Estaduais de Saúde. O autor reune os dados dos
+                relatórios das secretarias estaduais e municipais disponíveis
+                publicamente antes do registro no banco de dados do Ministério
+                da Saúde do Brasil.
+              </p>
+            </div>
+
+            <div class="card-footer data-footer">
+              <a class="data-button text-decoration-none" href="wcota.html"
+                >Acessar</a
+              >
+            </div>
+          </div>
+
+          <div class="card data-card" id="vac">
+            <div class="card-header data-header">
+              <h5 class="card-title">Vacinação</h5>
+            </div>
+            <div class="card-body data-body">
+              <p class="card-text truncate">
+                Os dados de vacinação da Covid-19 estão relacionados à Campanha
+                Nacional de Vacinação contra a Covid-19. O Ministério da Saúde
+                disponibiliza por meio do Sistema de Informações do Programa
+                Nacional de Imunizações (SI-PNI) e está disponível no
+                OpenDatasus para download.
+              </p>
+            </div>
+
+            <div class="card-footer data-footer">
+              <a class="data-button text-decoration-none" href="vacina.html"
+                >Acessar</a
+              >
+            </div>
+          </div>
+
+          <div class="card data-card" id="ibp">
+            <div class="card-header data-header">
+              <h5 class="card-title">Índice de privação brasileiro (IBP)</h5>
+            </div>
+            <div class="card-body data-body">
+              <p class="card-text truncate">
+                O conjunto de dados Índice de privação Brasileiro fornece
+                medidas de privação para cada município brasileiro e setor
+                censitário e é usado para avaliar as desigualdades em saúde em
+                todo o país. O Censo Demográfico Brasileiro de 2010 é a base de
+                cálculo da medida de privação, disponível no
+                <a
+                  href="https://cidacs.bahia.fiocruz.br/ibp/base-de-dados-do-ibp-municipal-esta-disponivel-para-download"
+                  target="_blank"
+                  >CIDACS</a
+                >. Esses dados não precisam ser atualizados.
+              </p>
+            </div>
+            <div class="card-footer data-footer">
+              <a class="data-button text-decoration-none" href="ibp.html"
+                >Acessar</a
+              >
+            </div>
+          </div>
+
+          <div class="card data-card" id="mobgoogle">
+            <div class="card-header data-header">
+              <h5 class="card-title">Mobilidade Google</h5>
+            </div>
+            <div class="card-body data-body">
+              <p class="card-text truncate">
+                O conjunto de dados de mobilidade Google representa a mobilidade
+                humana fornecida pelas tendências do
+                <a
+                  href="https://www.google.com/covid19/mobility/"
+                  target="_blank"
+                  >Google</a
+                >, que relata como a mobilidade humana é afetada pela propagação
+                do COVID-19 desde 15 de fevereiro de 2020.
+              </p>
+            </div>
+
+            <div class="card-footer data-footer">
+              <a class="data-button text-decoration-none" href="mobgoo.html"
+                >Acessar</a
+              >
+            </div>
+          </div>
+
+          <div class="card data-card" id="mobcity">
+            <div class="card-header data-header">
+              <h5 class="card-title">Mobilidade intermunicipal Brasileira</h5>
+            </div>
+            <div class="card-body data-body">
+              <p class="card-text truncate">
+                O conjunto de dados Mobilidade intermunicipal Brasileira são os
+                dados históricos de fluxo médio diário em todo o país usando
+                redes rodoviárias, aéreas e fluviais. Os dados estão disponíveis
+                no Instituto Brasileiro de Geografia e Estatística e medidos
+                pelo Censo Demográfico Brasileiro de 2010.
+              </p>
+            </div>
+
+            <div class="card-footer data-footer">
+              <a class="data-button text-decoration-none" href="ibge.html"
+                >Acessar</a
+              >
+            </div>
+          </div>
+
+          <div class="card data-card" id="jusbr">
+            <div class="card-header data-header">
+              <h5 class="card-title">Índice de estringência</h5>
+            </div>
+            <div class="card-body data-body">
+              <p class="card-text truncate">
+                O conjunto de dados Índice de estringência é uma métrica que
+                resume o nível de medidas governamentais promulgadas pelos
+                estados locais a partir de Março de 2020. O conjunto de dados é
+                dividido em dois arquivos. O primeiro contém informações
+                textuais das medidas aplicadas em ordem cronológica e para cada
+                estado. O segundo arquivo inclui a métrica global de rigor
+                calculada, uma combinação de subíndices de diferentes tipos de
+                fiscalização, como restrições a eventos, fechamento de escolas,
+                etc. Os dados podem ser obtidos pelo
+                <a href="https://www.jusbrasil.com.br/" target="_blank"
+                  >JusBrasil</a
+                >.
+              </p>
+            </div>
+
+            <div class="card-footer data-footer">
+              <a class="data-button text-decoration-none" href="estringe.html"
+                >Acessar</a
+              >
+            </div>
+          </div>
+
+          <div class="card data-card" id="jusbr">
+            <div class="card-header data-header">
+              <h5 class="card-title">Dados agregados</h5>
+            </div>
+            <div class="card-body data-body">
+              <p class="card-text truncate">
+                A partir do banco de dados original descrito em detalhes em
+                <a href="data.html">Visão geral</a>, incluindo
+                <a href="vacina.html"> Vacinação</a>,
+                <a href="wcota.html"> WCota</a>,
+
+                <a href="sg.html"> SG</a> e <a href="srag.html"> SRAG</a>,
+                criamos um único arquivo onde você pode encontrar as principais
+                informações de cada banco de dados. A composição facilita o uso
+                dos dados, pois já são cruzados entre si e apresentam uma única
+                entrada para uma determinada cidade e dia.
+              </p>
+            </div>
+
+            <div class="card-footer data-footer">
+              <a class="data-button text-decoration-none" href="aggregated.html"
+                >Acessar</a
+              >
+            </div>
           </div>
         </div>
-
-        <div class="card data-card" id="vac">
-          <div class="card-header data-header">
-            <h5 class="card-title">Vacinação</h5>
-          </div>
-          <div class="card-body data-body">
-            <p class="card-text truncate">
-              Os dados de vacinação da Covid-19 estão relacionados à Campanha
-              Nacional de Vacinação contra a Covid-19. O Ministério da Saúde
-              disponibiliza por meio do Sistema de Informações do Programa
-              Nacional de Imunizações (SI-PNI) e está disponível no OpenDatasus
-              para download.
-            </p>
-          </div>
-
-          <div class="card-footer data-footer">
-            <a class="data-button text-decoration-none" href="vacina.html"
-              >Acessar</a
-            >
-          </div>
-        </div>
-
-        <div class="card data-card" id="ibp">
-          <div class="card-header data-header">
-            <h5 class="card-title">Índice de privação brasileiro (IBP)</h5>
-          </div>
-          <div class="card-body data-body">
-            <p class="card-text truncate">
-              O conjunto de dados Índice de privação Brasileiro fornece medidas
-              de privação para cada município brasileiro e setor censitário e é
-              usado para avaliar as desigualdades em saúde em todo o país. O
-              Censo Demográfico Brasileiro de 2010 é a base de cálculo da medida
-              de privação, disponível no
-              <a
-                href="https://cidacs.bahia.fiocruz.br/ibp/base-de-dados-do-ibp-municipal-esta-disponivel-para-download"
-                target="_blank"
-                >CIDACS</a
-              >. Esses dados não precisam ser atualizados.
-            </p>
-          </div>
-          <div class="card-footer data-footer">
-            <a class="data-button text-decoration-none" href="ibp.html"
-              >Acessar</a
-            >
-          </div>
-        </div>
-
-        <div class="card data-card" id="mobgoogle">
-          <div class="card-header data-header">
-            <h5 class="card-title">Mobilidade Google</h5>
-          </div>
-          <div class="card-body data-body">
-            <p class="card-text truncate">
-              O conjunto de dados de mobilidade Google representa a mobilidade
-              humana fornecida pelas tendências do
-              <a href="https://www.google.com/covid19/mobility/" target="_blank"
-                >Google</a
-              >, que relata como a mobilidade humana é afetada pela propagação
-              do COVID-19 desde 15 de fevereiro de 2020.
-            </p>
-          </div>
-
-          <div class="card-footer data-footer">
-            <a class="data-button text-decoration-none" href="mobgoo.html"
-              >Acessar</a
-            >
-          </div>
-        </div>
-
-        <div class="card data-card" id="mobcity">
-          <div class="card-header data-header">
-            <h5 class="card-title">Mobilidade intermunicipal Brasileira</h5>
-          </div>
-          <div class="card-body data-body">
-            <p class="card-text truncate">
-              O conjunto de dados Mobilidade intermunicipal Brasileira são os
-              dados históricos de fluxo médio diário em todo o país usando redes
-              rodoviárias, aéreas e fluviais. Os dados estão disponíveis no
-              Instituto Brasileiro de Geografia e Estatística e medidos pelo
-              Censo Demográfico Brasileiro de 2010.
-            </p>
-          </div>
-
-          <div class="card-footer data-footer">
-            <a class="data-button text-decoration-none" href="ibge.html"
-              >Acessar</a
-            >
-          </div>
-        </div>
-
-        <div class="card data-card" id="jusbr">
-          <div class="card-header data-header">
-            <h5 class="card-title">Índice de estringência</h5>
-          </div>
-          <div class="card-body data-body">
-            <p class="card-text truncate">
-              O conjunto de dados Índice de estringência é uma métrica que
-              resume o nível de medidas governamentais promulgadas pelos estados
-              locais a partir de Março de 2020. O conjunto de dados é dividido
-              em dois arquivos. O primeiro contém informações textuais das
-              medidas aplicadas em ordem cronológica e para cada estado. O
-              segundo arquivo inclui a métrica global de rigor calculada, uma
-              combinação de subíndices de diferentes tipos de fiscalização, como
-              restrições a eventos, fechamento de escolas, etc. Os dados podem
-              ser obtidos pelo
-              <a href="https://www.jusbrasil.com.br/" target="_blank"
-                >JusBrasil</a
-              >.
-            </p>
-          </div>
-
-          <div class="card-footer data-footer">
-            <a class="data-button text-decoration-none" href="estringe.html"
-              >Acessar</a
-            >
-          </div>
-        </div>
-
-        <div class="card data-card" id="jusbr">
-          <div class="card-header data-header">
-            <h5 class="card-title">Dados agregados</h5>
-          </div>
-          <div class="card-body data-body">
-            <p class="card-text truncate">
-              A partir do banco de dados original descrito em detalhes em
-              <a href="data.html">Visão geral</a>, incluindo
-              <a href="vacina.html"> Vacinação</a>,
-              <a href="wcota.html"> WCota</a>,
-
-              <a href="sg.html"> SG</a> e <a href="srag.html"> SRAG</a>, criamos
-              um único arquivo onde você pode encontrar as principais
-              informações de cada banco de dados. A composição facilita o uso
-              dos dados, pois já são cruzados entre si e apresentam uma única
-              entrada para uma determinada cidade e dia.
-            </p>
-          </div>
-
-          <div class="card-footer data-footer">
-            <a class="data-button text-decoration-none" href="aggregated.html"
-              >Acessar</a
-            >
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <footer class="page-footer font-small footer" id="footer">
       <div class="row justify-content-center align-items-center copyrights">
-        <div class="icons col-1">
+        <div class="icons">
           <a href="mailto:modeling.taskforce@gmail.com">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -735,7 +741,7 @@
               /></svg
           ></a>
         </div>
-        <div class="icons col-1">
+        <div class="icons">
           <a href="https://github.com/PAMepi" target="_blank"
             ><svg
               xmlns="http://www.w3.org/2000/svg"

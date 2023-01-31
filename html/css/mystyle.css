@@ -1,16 +1,11 @@
-/* 
-filter to get color #900d0d
-  filter: invert(11%) sepia(43%) saturate(6923%) hue-rotate(357deg) brightness(100%) contrast(93%); */
-
-/* #007bff azul #423144 */
-
- #8D240F 
- #F7A621 
- #E74507 
- #FFDB10 #501400 #752D00 #984C09 cidacs 
-
 html {
   scroll-behavior: smooth;
+}
+
+.limiter {
+  max-width: 1280px;
+  margin: 0 auto;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
 /* width */
@@ -109,12 +104,10 @@ html {
 }
 
 #navbar {
-  /* overflow: hidden; */
   transition: 0.4s;
   position: fixed;
   width: 100%;
   top: 0;
-  /* z-index: 99; */
 }
 
 .dropdown {
@@ -220,7 +213,6 @@ h6 {
 
 .dropdown-item {
   text-align: left;
-  // background-color: #892e2c;
   font-weight: 500;
   font-size: 0.9rem;
   color: #ddd;
@@ -277,7 +269,6 @@ nav {
 }
 
 .dropdown-item .active {
-  /* color: #ECEFA4; */
   color: #fff;
   font-weight: 900;
   text-decoration: underline;
@@ -292,7 +283,6 @@ nav {
 }
 
 .dropdown-item.active {
-  /* color: #ECEFA4; */
   color: #fff;
   font-weight: 900;
   background-color: #892e2c;
@@ -379,7 +369,6 @@ nav {
 .img-fiocruz {
   width: 11rem;
   margin: auto;
-  /* border: 1px solid white; */
 }
 
 .img-fiocruz:hover {
@@ -390,7 +379,6 @@ nav {
 .img-cidacs {
   width: 11rem;
   margin: auto;
-  /* border: 1px solid white; */
 }
 
 .img-cidacs:hover {
@@ -418,8 +406,8 @@ nav {
 }
 
 .middle-white {
-  margin: 2rem 0 10rem;
-  padding: 4rem 10rem 0rem;
+  margin: 2rem 0 0rem;
+  padding: 4rem 10rem 5rem;
 }
 
 hr {
@@ -513,21 +501,12 @@ ol li::marker {
 
 .intro {
   padding: 5rem 10rem;
-  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
-  column-count: 2;
-  column-gap: 5rem;
-  column-rule: 1px solid #ccc;
   line-height: 1.5;
   overflow: visible;
-  /* border: 1px solid black; */
 }
 
 .intro p {
   margin-y: 0;
-}
-
-#projeto {
-  column-count: 3;
 }
 
 .img-title {
@@ -553,7 +532,6 @@ h1 {
   margin-bottom: 4rem;
 }
 
-/* #007bff */
 .destaque {
   text-transform: uppercase;
   font-weight: bold;
@@ -736,8 +714,8 @@ h2 {
   margin-bottom: 1rem;
 }
 
-.lin-video{
-width: 100%;
+.lin-video {
+  width: 100%;
   padding: 2rem 3rem;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -940,7 +918,6 @@ width: 100%;
   margin: 0;
   padding: 0 0.8rem;
   border-bottom: 1px solid #742725;
- 
 }
 
 .custom-toggler.navbar-toggler {
@@ -1112,7 +1089,6 @@ a:hover {
   }
 
   .dropdown-item {
-    // padding: 0.2rem 0 0.2rem 0.5rem;
     font-size: 0.8rem;
     font-weight: 700;
   }
@@ -1124,10 +1100,6 @@ a:hover {
 
   .dropdown-submenu .dropdown-menu {
     margin-left: 5rem;
-  }
-
-  #projeto {
-    column-count: 1;
   }
 
   h1 {
@@ -1149,9 +1121,6 @@ a:hover {
   .navbar-header {
     width: 100% !important;
   }
-  .intro {
-    column-count: 1;
-  }
 }
 
 * {
@@ -1159,16 +1128,13 @@ a:hover {
 }
 
 .columns {
-  /* float: left; */
   width: 100%;
   display: inline-block;
   float: none;
-  /* padding: 8px; */
 }
 
 .price {
   list-style-type: none;
-  /* border: 1px solid #eee; */
   margin: 0;
   padding: 0;
   -webkit-transition: 0.3s;
@@ -1198,8 +1164,6 @@ a:hover {
 }
 
 .price li {
-  /* border-bottom: 1px solid #eee; */
-
   text-align: center;
   line-height: 1.5;
   align-items: center;
@@ -1267,7 +1231,8 @@ a:hover {
   margin: 2rem auto 0;
 }
 .icons {
-  padding: 0;
+  padding: 0 0.5rem;
+  margin: 0 1rem;
 }
 
 .icons-color {
@@ -1281,8 +1246,6 @@ a:hover {
   margin: 0 0.5rem;
   color: gray;
   text-align: center;
-  /* filter: invert(99%) sepia(0%) saturate(2850%) hue-rotate(147deg)
-    brightness(116%) contrast(73%); */
 }
 .copyrights {
   font-weight: 300;
@@ -1402,7 +1365,6 @@ table {
   padding: 0;
   font-size: 0.9rem;
   display: block;
-  //overflow-x: auto;
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   border: 0;
@@ -1414,8 +1376,6 @@ table.data {
 }
 
 table.dic {
-  //table-layout: fixed;
-  //width: 100%;
   white-space: normal;
 }
 .table-div {
@@ -1432,15 +1392,9 @@ th {
   text-align: left;
   line-height: 1;
 }
-/* #tableDic th {
-  white-space: nowrap;
-} */
+
 #tableDic td {
   min-width: 250px;
-  //word-wrap: break-all;
-  //word-break: break-word;
-  //overflow: hidden;
-  //text-overflow: ellipsis;
   padding: 0.5rem 1.1rem;
 }
 #tableDic2 td {

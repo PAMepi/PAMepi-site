@@ -144,8 +144,11 @@
                     data-flip="false"
                     style="text-align: left"
                   >
-                    Health<span class="dropdown-toggle" style="float: right"></span></a
-                  >
+                    Health<span
+                      class="dropdown-toggle"
+                      style="float: right"
+                    ></span
+                  ></a>
 
                   <ul class="dropdown-menu sub-drop">
                     <li class="dropdown-item drop-item">
@@ -454,167 +457,171 @@
         </div>
       </div>
     </nav>
+    <div class="limiter">
+      <section class="top">
+        <div class="row dados-icon">
+          <img src="../img/wcota.png" class="dados-img" style="width: 80px" />
 
-    <section class="top">
-      <div class="row dados-icon">
-        <img src="../img/wcota.png" class="dados-img" style="width: 80px" />
-
-        <h1 class="dados-text">WCota</h1>
-      </div>
-      <div class="intro" style="padding: 2rem 0rem 5rem">
-        <h2 class="mb-5">Description</h2>
-        <p class="card-text">
-          The WCota dataset is pulled from the
-          <a href="https://github.com/wcota/covid19br" target="_blank"
-            >Github repository</a
-          >
-          by researcher Wesley Cota (<a
-            href="https://doi.org/10.1590/SciELOPreprints.362"
-            target="_blank"
-            >W. Cota, “Monitoring the number of COVID-19 cases and deaths in
-            brazil at municipal and federative units level”,
-            SciELOPreprints:362, 2020</a
-          >). The number of confirmed cases and deaths caused by SARS-COV-2
-          infections aggregated at the state and municipal levels are compiled
-          from data from the
-          <a href="https://covid.saude.gov.br/" target="_blank">
-            Ministry of Health</a
-          >
-          and State Health Departments.
-        </p>
-        <p>
-          The author gathers data from publicly available state and municipal
-          secretariat reports prior to registration in the Brazilian Ministry of
-          Health database. This process helps to make data on COVID-19 available
-          in real time, as it takes a long time to register cases from state and
-          municipal secretariats in the Brazilian single system.
-        </p>
-        <p>
-          Also, the data provided by the Ministry of Health has an infrequent,
-          slow process of update, the site goes down frequently, and the data is
-          unstructured.
-        </p>
-        <p>
-          We collected the data from February 1st 2020, and onward. The data can
-          be daily updated. Links to publications that use the WCota data or
-          provide other publicaly accessible locations of the data can be found
-          in (<a
-            href="https://www.sciencedirect.com/science/article/pii/S1755436521000232?via%3Dihub"
-            target="_blank"
-          >
-            Jorge et al., 2021, 35</a
-          >
-          ).
-        </p>
-        <h2 class="mb-5 mt-5 pt-5 pb-2">Data access information</h2>
-        <p>
-          The collected, clean and formatted data freely available from WCota
-          can be accessed and downloaded in (<a
-            href="https://github.com/wcota/covid19br"
-            target="_blank"
-            >WCota, 2020</a
-          >), under the Creative Commons Attribution ShareAlike (CC-BY-SA 4.0)
-          licence.
-        </p>
-
-        <h2 class="mb-5 mt-5 pt-5 pb-2">Methods of data collection</h2>
-        <p>
-          A python code is available on our
-          <a
-            href="https://github.com/PAMepi/PAMepi_scripts_datalake"
-            target="_blank"
-          >
-            Github
-          </a>
-          directory to download data from the WCota project, see details in
-          <a
-            href="https://github.com/wcota/covid19br/blob/master/DESCRIPTION.md"
-            target="_blank"
-          >
-            Github</a
-          >. Pamepi uses files named
-          <strong>cases-brazil-cities-time </strong> that contain the time
-          series of new cases and deaths by Covid-19.
-        </p>
-        <h2 class="mb-5 mt-5 pt-5 pb-2">Data-specific information for WCota</h2>
-        <p>
-          The WCota dataset has a total of 12 columns and showed a size of 311
-          MB in the last update of May 11th, 2022. A code with more details
-          about the variables, data processing and analysis methods is presented
-          in our
-          <a
-            href="https://github.com/PAMepi/PAMepi_scripts_datalake"
-            target="_blank"
-          >
-            Github
-          </a>
-          directory.
-        </p>
-        <h2 class="mb-5 mt-5 pt-5 pb-2">Limitations of WCota dataset</h2>
-        <p>
-          WCota dataset depends on the quality of the reported information given
-          by the state and municipal health secretaries. When files are provided
-          in pdf or images, it can compromise the tabulation of the data in
-          real-time. Additionally, the deaths and cases of COVID-19 are
-          tabulated according to the date when the data was collected.
-        </p>
-        <p>
-          Therefore, the epidemiological curve constructed can show a delay of
-          one to up to 7 weeks in relation to the date of the first symptoms or
-          the date of the laboratory test of the case (<a
-            href="https://portal.fiocruz.br/sites/portal.fiocruz.br/files/documentos/nota_tecnica_13.pdf"
-            target="_blank"
-            >Observatório COVID-19, 2020</a
-          >). Still, the dataset is considered an excellent source to measure
-          the course of the pandemic in real-time.
-        </p>
-      </div>
-    </section>
-    <hr />
-    <section class="middle-white">
-      <h2 class="data">Data and Resources</h2>
-      <div class="dado-subitem">
-        <div class="media download">
-          <h3 class="data">Data and variable dictionary</h3>
+          <h1 class="dados-text">WCota</h1>
         </div>
-
-        <div class="data-in">
-          <h4 class="data">Data explorer</h4>
-          <div class="table-div">
-            <table
-              id="tableExp"
-              cellpadding="2"
-              cellspacing="2"
-              border="1"
-              class="table-data data"
-            ></table>
-          </div>
-
-          <h4 class="data">
-            Data dictionary
-            <a
-              href="../files/dic/Dictionary-English-WCota.csv"
-              class="btn btn-info float-right mr-3"
-              target="_blank"
-              >Download</a
+        <div class="intro" style="padding: 2rem 0rem 5rem">
+          <h2 class="mb-5">Description</h2>
+          <p class="card-text">
+            The WCota dataset is pulled from the
+            <a href="https://github.com/wcota/covid19br" target="_blank"
+              >Github repository</a
             >
-          </h4>
-          <div class="table-div">
-            <table
-              id="tableDic"
-              cellpadding="2"
-              cellspacing="2"
-              border="1"
-              class="table-data dic"
-            ></table>
+            by researcher Wesley Cota (<a
+              href="https://doi.org/10.1590/SciELOPreprints.362"
+              target="_blank"
+              >W. Cota, “Monitoring the number of COVID-19 cases and deaths in
+              brazil at municipal and federative units level”,
+              SciELOPreprints:362, 2020</a
+            >). The number of confirmed cases and deaths caused by SARS-COV-2
+            infections aggregated at the state and municipal levels are compiled
+            from data from the
+            <a href="https://covid.saude.gov.br/" target="_blank">
+              Ministry of Health</a
+            >
+            and State Health Departments.
+          </p>
+          <p>
+            The author gathers data from publicly available state and municipal
+            secretariat reports prior to registration in the Brazilian Ministry
+            of Health database. This process helps to make data on COVID-19
+            available in real time, as it takes a long time to register cases
+            from state and municipal secretariats in the Brazilian single
+            system.
+          </p>
+          <p>
+            Also, the data provided by the Ministry of Health has an infrequent,
+            slow process of update, the site goes down frequently, and the data
+            is unstructured.
+          </p>
+          <p>
+            We collected the data from February 1st 2020, and onward. The data
+            can be daily updated. Links to publications that use the WCota data
+            or provide other publicaly accessible locations of the data can be
+            found in (<a
+              href="https://www.sciencedirect.com/science/article/pii/S1755436521000232?via%3Dihub"
+              target="_blank"
+            >
+              Jorge et al., 2021, 35</a
+            >
+            ).
+          </p>
+          <h2 class="mb-5 mt-5 pt-5 pb-2">Data access information</h2>
+          <p>
+            The collected, clean and formatted data freely available from WCota
+            can be accessed and downloaded in (<a
+              href="https://github.com/wcota/covid19br"
+              target="_blank"
+              >WCota, 2020</a
+            >), under the Creative Commons Attribution ShareAlike (CC-BY-SA 4.0)
+            licence.
+          </p>
+
+          <h2 class="mb-5 mt-5 pt-5 pb-2">Methods of data collection</h2>
+          <p>
+            A python code is available on our
+            <a
+              href="https://github.com/PAMepi/PAMepi_scripts_datalake"
+              target="_blank"
+            >
+              Github
+            </a>
+            directory to download data from the WCota project, see details in
+            <a
+              href="https://github.com/wcota/covid19br/blob/master/DESCRIPTION.md"
+              target="_blank"
+            >
+              Github</a
+            >. Pamepi uses files named
+            <strong>cases-brazil-cities-time </strong> that contain the time
+            series of new cases and deaths by Covid-19.
+          </p>
+          <h2 class="mb-5 mt-5 pt-5 pb-2">
+            Data-specific information for WCota
+          </h2>
+          <p>
+            The WCota dataset has a total of 12 columns and showed a size of 311
+            MB in the last update of May 11th, 2022. A code with more details
+            about the variables, data processing and analysis methods is
+            presented in our
+            <a
+              href="https://github.com/PAMepi/PAMepi_scripts_datalake"
+              target="_blank"
+            >
+              Github
+            </a>
+            directory.
+          </p>
+          <h2 class="mb-5 mt-5 pt-5 pb-2">Limitations of WCota dataset</h2>
+          <p>
+            WCota dataset depends on the quality of the reported information
+            given by the state and municipal health secretaries. When files are
+            provided in pdf or images, it can compromise the tabulation of the
+            data in real-time. Additionally, the deaths and cases of COVID-19
+            are tabulated according to the date when the data was collected.
+          </p>
+          <p>
+            Therefore, the epidemiological curve constructed can show a delay of
+            one to up to 7 weeks in relation to the date of the first symptoms
+            or the date of the laboratory test of the case (<a
+              href="https://portal.fiocruz.br/sites/portal.fiocruz.br/files/documentos/nota_tecnica_13.pdf"
+              target="_blank"
+              >Observatório COVID-19, 2020</a
+            >). Still, the dataset is considered an excellent source to measure
+            the course of the pandemic in real-time.
+          </p>
+        </div>
+      </section>
+      <hr />
+      <section class="middle-white">
+        <h2 class="data">Data and Resources</h2>
+        <div class="dado-subitem">
+          <div class="media download">
+            <h3 class="data">Data and variable dictionary</h3>
+          </div>
+
+          <div class="data-in">
+            <h4 class="data">Data explorer</h4>
+            <div class="table-div">
+              <table
+                id="tableExp"
+                cellpadding="2"
+                cellspacing="2"
+                border="1"
+                class="table-data data"
+              ></table>
+            </div>
+
+            <h4 class="data">
+              Data dictionary
+              <a
+                href="../files/dic/Dictionary-English-WCota.csv"
+                class="btn btn-info float-right mr-3"
+                target="_blank"
+                >Download</a
+              >
+            </h4>
+            <div class="table-div">
+              <table
+                id="tableDic"
+                cellpadding="2"
+                cellspacing="2"
+                border="1"
+                class="table-data dic"
+              ></table>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <footer class="page-footer font-small footer" id="footer">
       <div class="row justify-content-center align-items-center copyrights">
-        <div class="icons col-1">
+        <div class="icons">
           <a href="mailto:modeling.taskforce@gmail.com">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -627,7 +634,7 @@
               /></svg
           ></a>
         </div>
-        <div class="icons col-1">
+        <div class="icons">
           <a href="https://github.com/PAMepi" target="_blank"
             ><svg
               xmlns="http://www.w3.org/2000/svg"

@@ -453,159 +453,164 @@
         </div>
       </div>
     </nav>
+    <div class="limiter">
+      <section class="top">
+        <div class="row dados-icon">
+          <img
+            src="../img/IBP_icone.svg"
+            class="dados-img"
+            style="width: 80px"
+          />
 
-    <section class="top">
-      <div class="row dados-icon">
-        <img src="../img/IBP_icone.svg" class="dados-img" style="width: 80px" />
-
-        <h1 class="dados-text">Brazilian deprivation index (IBP)</h1>
-      </div>
-      <div class="intro" style="padding: 2rem 0rem 5rem">
-        <h2 class="mb-5">Description</h2>
-        <p class="card-text">
-          It provides deprivation measures for each Brazilian municipality and
-          census sector and is used to evaluate health inequalities across the
-          country. The 2010 Brazilian Population Census is the basis for
-          calculating the deprivation measure, available from
-          <a href="https://cidacs.bahia.fiocruz.br/ibp/" target="_blank"
-            >CIDACS</a
-          >. The IBP index combines three factors:
-        </p>
-        <ol>
-          <li>
-            the percentage of families with income per capita below half of the
-            minimum wage;
-          </li>
-          <li>the percentage of illiterate people older than 7 years old;</li>
-          <li>
-            the percentage of people without adequate access to drinkable water,
-            sewage, garbage collection, bathroom, or shower;
-          </li>
-        </ol>
-        <p>
-          This data does not need to be updated and the complete documentation
-          about the construction of the index is presented in
-          <a href="http://eprints.gla.ac.uk/215898/1/215898.pdf"
-            >Developing a small-area deprivation measure for Brazil: Technical
-            report</a
-          >. The original data source and visualization can be found in
-          <a
-            href="https://cidacs.bahia.fiocruz.br/ibp/base-de-dados-do-ibp-municipal-esta-disponivel-para-download/"
-            target="_blank"
-            >Cidacs</a
-          >.
-        </p>
-
-        <h2 class="mb-5 mt-5 pt-5 pb-2">Data access information</h2>
-        <p>
-          The data and documentation are available at the
-          <a
-            href="http://dx.doi.org/10.5525/gla.researchdata.980"
-            target="_blank"
-            >University of Glasgow</a
-          >. The data and this report are distributed under the Creative Commons
-          Share-Alike license (CC BY-SA 4.0) and can be freely used by
-          researchers, policymakers, or members of the public.
-        </p>
-
-        <h2 class="mb-5 mt-5 pt-5 pb-2">Methods of data collection</h2>
-        <p>
-          A Python code is available on our
-          <a
-            href="https://github.com/PAMepi/PAMepi_scripts_datalake"
-            target="_blank"
-            >Github</a
-          >
-          directory to download the data from
-          <a
-            href="https://cidacs.bahia.fiocruz.br/ibp/base-de-dados-do-ibp-municipal-esta-disponivel-para-download/"
-            target="_blank"
-            >Cidacs</a
-          >. The database doesn’t need an update. Additional information on data
-          collection methods can be found in
-          <a href="http://eprints.gla.ac.uk/215898/1/215898.pdf"
-            >Developing a small-area deprivation measure for Brazil: Technical
-            report</a
-          >
-          and
-          <a
-            href="https://github.com/PAMepi/PAMepi_scripts_datalake"
-            target="_blank"
-            >Github</a
-          >.
-        </p>
-        <h2 class="mb-5 mt-5 pt-5 pb-2">Data-specific information for IBP</h2>
-        <p>
-          The IBP dataset has a total of 15 columns and shows a total of 5566
-          registries (rows) and a size of 734 KB. A code with more details about
-          the variables, data processing, and analysis methods is presented in
-          our
-          <a
-            href="https://github.com/PAMepi/PAMepi_scripts_datalake"
-            target="_blank"
-            >Github</a
-          >
-          directory.
-        </p>
-        <h2 class="mb-5 mt-5 pt-5 pb-2">Limitations of IBP dataset</h2>
-        <p>
-          The IBP dataset includes only 3 measures of deprivation excluding
-          others like employment, crime, health, education, and access to public
-          services. It is also exclusively related to the year 2010 making
-          comparison along time impracticable. The different population and
-          ethnic groups (eg, indigenous peoples, quilombolas, riverside
-          populations) are also not considered and there are some biases
-          inherent to rural areas.
-        </p>
-      </div>
-    </section>
-    <hr />
-    <section class="middle-white">
-      <h2 class="data">Data and Resources</h2>
-      <div class="dado-subitem">
-        <div class="media download">
-          <h3 class="data">Data and variable dictionary</h3>
+          <h1 class="dados-text">Brazilian deprivation index (IBP)</h1>
         </div>
-
-        <div class="data-in">
-          <h4 class="data">Data explorer</h4>
-          <div class="table-div">
-            <table
-              id="tableExp"
-              cellpadding="2"
-              cellspacing="2"
-              border="1"
-              class="table-data data"
-            ></table>
-          </div>
-
-          <h4 class="data">
-            Data dictionary
+        <div class="intro" style="padding: 2rem 0rem 5rem">
+          <h2 class="mb-5">Description</h2>
+          <p class="card-text">
+            It provides deprivation measures for each Brazilian municipality and
+            census sector and is used to evaluate health inequalities across the
+            country. The 2010 Brazilian Population Census is the basis for
+            calculating the deprivation measure, available from
+            <a href="https://cidacs.bahia.fiocruz.br/ibp/" target="_blank"
+              >CIDACS</a
+            >. The IBP index combines three factors:
+          </p>
+          <ol>
+            <li>
+              the percentage of families with income per capita below half of
+              the minimum wage;
+            </li>
+            <li>the percentage of illiterate people older than 7 years old;</li>
+            <li>
+              the percentage of people without adequate access to drinkable
+              water, sewage, garbage collection, bathroom, or shower;
+            </li>
+          </ol>
+          <p>
+            This data does not need to be updated and the complete documentation
+            about the construction of the index is presented in
+            <a href="http://eprints.gla.ac.uk/215898/1/215898.pdf"
+              >Developing a small-area deprivation measure for Brazil: Technical
+              report</a
+            >. The original data source and visualization can be found in
             <a
-              href="../files/dic/Dictionary-English-IBP.csv"
-              class="btn btn-info float-right mr-3"
+              href="https://cidacs.bahia.fiocruz.br/ibp/base-de-dados-do-ibp-municipal-esta-disponivel-para-download/"
               target="_blank"
-              >Download</a
+              >Cidacs</a
+            >.
+          </p>
+
+          <h2 class="mb-5 mt-5 pt-5 pb-2">Data access information</h2>
+          <p>
+            The data and documentation are available at the
+            <a
+              href="http://dx.doi.org/10.5525/gla.researchdata.980"
+              target="_blank"
+              >University of Glasgow</a
+            >. The data and this report are distributed under the Creative
+            Commons Share-Alike license (CC BY-SA 4.0) and can be freely used by
+            researchers, policymakers, or members of the public.
+          </p>
+
+          <h2 class="mb-5 mt-5 pt-5 pb-2">Methods of data collection</h2>
+          <p>
+            A Python code is available on our
+            <a
+              href="https://github.com/PAMepi/PAMepi_scripts_datalake"
+              target="_blank"
+              >Github</a
             >
-          </h4>
-          <div class="table-div">
-            <table
-              id="tableDic"
-              cellpadding="2"
-              cellspacing="2"
-              border="1"
-              class="table-data dic"
-            ></table>
+            directory to download the data from
+            <a
+              href="https://cidacs.bahia.fiocruz.br/ibp/base-de-dados-do-ibp-municipal-esta-disponivel-para-download/"
+              target="_blank"
+              >Cidacs</a
+            >. The database doesn’t need an update. Additional information on
+            data collection methods can be found in
+            <a href="http://eprints.gla.ac.uk/215898/1/215898.pdf"
+              >Developing a small-area deprivation measure for Brazil: Technical
+              report</a
+            >
+            and
+            <a
+              href="https://github.com/PAMepi/PAMepi_scripts_datalake"
+              target="_blank"
+              >Github</a
+            >.
+          </p>
+          <h2 class="mb-5 mt-5 pt-5 pb-2">Data-specific information for IBP</h2>
+          <p>
+            The IBP dataset has a total of 15 columns and shows a total of 5566
+            registries (rows) and a size of 734 KB. A code with more details
+            about the variables, data processing, and analysis methods is
+            presented in our
+            <a
+              href="https://github.com/PAMepi/PAMepi_scripts_datalake"
+              target="_blank"
+              >Github</a
+            >
+            directory.
+          </p>
+          <h2 class="mb-5 mt-5 pt-5 pb-2">Limitations of IBP dataset</h2>
+          <p>
+            The IBP dataset includes only 3 measures of deprivation excluding
+            others like employment, crime, health, education, and access to
+            public services. It is also exclusively related to the year 2010
+            making comparison along time impracticable. The different population
+            and ethnic groups (eg, indigenous peoples, quilombolas, riverside
+            populations) are also not considered and there are some biases
+            inherent to rural areas.
+          </p>
+        </div>
+      </section>
+      <hr />
+      <section class="middle-white">
+        <h2 class="data">Data and Resources</h2>
+        <div class="dado-subitem">
+          <div class="media download">
+            <h3 class="data">Data and variable dictionary</h3>
+          </div>
+
+          <div class="data-in">
+            <h4 class="data">Data explorer</h4>
+            <div class="table-div">
+              <table
+                id="tableExp"
+                cellpadding="2"
+                cellspacing="2"
+                border="1"
+                class="table-data data"
+              ></table>
+            </div>
+
+            <h4 class="data">
+              Data dictionary
+              <a
+                href="../files/dic/Dictionary-English-IBP.csv"
+                class="btn btn-info float-right mr-3"
+                target="_blank"
+                >Download</a
+              >
+            </h4>
+            <div class="table-div">
+              <table
+                id="tableDic"
+                cellpadding="2"
+                cellspacing="2"
+                border="1"
+                class="table-data dic"
+              ></table>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <footer class="page-footer font-small footer" id="footer">
       <div
         class="row justify-content-center align-items-center mb-4 copyrights"
       >
-        <div class="icons col-1">
+        <div class="icons">
           <a href="mailto:modeling.taskforce@gmail.com">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -618,7 +623,7 @@
               /></svg
           ></a>
         </div>
-        <div class="icons col-1">
+        <div class="icons">
           <a href="https://github.com/PAMepi" target="_blank"
             ><svg
               xmlns="http://www.w3.org/2000/svg"

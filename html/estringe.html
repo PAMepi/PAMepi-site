@@ -443,145 +443,146 @@
         </div>
       </div>
     </nav>
+    <div class="limiter">
+      <section class="top">
+        <div class="row dados-icon">
+          <img src="img/leis.png" class="dados-img" style="width: 80px" />
 
-    <section class="top">
-      <div class="row dados-icon">
-        <img src="img/leis.png" class="dados-img" style="width: 80px" />
-
-        <h1 class="dados-text">Índice de estringência</h1>
-      </div>
-      <div class="intro" style="padding: 2rem 0rem 5rem">
-        <h2 class="mb-5">Descrição</h2>
-        <p>
-          Os dados do índice de estringência é uma métrica que resume o nível de
-          medidas governamentais promulgadas pelos estados locais a partir de
-          março de 2020 (<a
-            href="https://www.sciencedirect.com/science/article/pii/S1755436521000232?via%3Dihub"
-            target="_blank"
-          >
-            Jorge et al., 2021</a
-          >
-          ). O conjunto de dados é dividido em dois tipos. O primeiro contém as
-          informações textuais das medidas aplicadas pelos chefes dos governos
-          estaduais ou municipais. Após a leitura de cada texto, podemos
-          classificar o tipo de medidas que foram aplicadas no estado ou
-          município, identificando também o período de início e término da
-          medida. Com o resultado, podemos calcular uma métrica global de
-          estringência, uma combinação de subíndices de diferentes tipos de
-          fiscalização, como restrições a eventos, fechamento de escolas, etc,
-          conforme apresentado em (<a
-            href="https://www.sciencedirect.com/science/article/pii/S1755436521000232?via%3Dihub"
-            target="_blank"
-          >
-            Jorge et al., 2021</a
-          >
-          ).
-        </p>
-
-        <h2 class="mb-5 mt-5 pt-5 pb-2">Informação de acesso a dados</h2>
-
-        <p>
-          Para ter acesso aos arquivos de texto das medidas aplicadas em cada
-          estado ou município do Brasil, nossa equipe mantém um acordo de
-          colaboração com a
-          <a href="https://www.jusbrasil.com.br" target="_blank"> JusBrasil</a>,
-          startup que disponibiliza em plataforma online os documentos oficiais
-          do foro, como petições, decreto, novas leis, que são criados nos/pelos
-          tribunais e qualquer setor governamental. A coleção de textos não está
-          disponível abertamente, e o acesso direto deve ter acordo com a
-          startup. No entanto, a métrica de estringência que resume o nível de
-          medida aplicada para a pandemia COVID-19 é criada por nossa equipe e
-          fornecida em nosso
-          <a
-            href="https://github.com/PAMepi/PAMepi_scripts_datalake"
-            target="_blank"
-            >Github</a
-          >
-          .
-        </p>
-
-        <h2 class="mb-5 mt-5 pt-5 pb-2">Métodos de coleta de dados</h2>
-        <p>
-          No servidor da
-          <a href="https://www.jusbrasil.com.br" target="_blank"> JusBrasil</a>,
-          temos acesso a todos os documentos textuais disponibilizados pela
-          plataforma
-          <a href="https://www.jusbrasil.com.br" target="_blank"> JusBrasil</a>.
-          Para selecionar os textos que podem conter informações sobre as
-          medidas empregadas para conter a pandemia, buscamos em cada texto
-          disponível as palavras-chave “covid-19” e “decreto”. Os dados
-          coletados resultantes são usados posteriormente para o propósito de
-          nosso trabalho. Um método diferente de coleta de dados no estágio
-          inicial da pandemia no Brasil foi usado antes da colaboração com a
-          <a href="https://www.jusbrasil.com.br" target="_blank"> JusBrasil</a>.
-          O método está descrito em (<a
-            href="https://www.sciencedirect.com/science/article/pii/S1755436521000232?via%3Dihub"
-            target="_blank"
-          >
-            Jorge et al., 2021</a
-          >
-          ) e os dados e sua visualização são mostrados
-          <a
-            href="https://modelingtaskforce.shinyapps.io/transmission_rate_app/"
-            target="_blank"
-          >
-            nesse aplicativo
-          </a>
-          com dados até 22 de Maio de 2020.
-        </p>
-
-        <h2 class="mb-5 mt-5 pt-5 pb-2">Limitações dos dados</h2>
-        <p>
-          Os dados podem faltar todas as portarias para a esfera municipal e
-          apresentar atraso na sua atualização.
-        </p>
-      </div>
-    </section>
-    <hr />
-    <section class="middle-white">
-      <h2 class="data">Dados e recursos</h2>
-      <div class="dado-subitem">
-        <div class="media download">
-          <h3 class="data">Dados e dicionário de variáveis</h3>
+          <h1 class="dados-text">Índice de estringência</h1>
         </div>
-
-        <div class="data-in">
-          <h4 class="data">Explorador de dados</h4>
-          <div class="table-div">
-            <table
-              id="tableExp"
-              cellpadding="2"
-              cellspacing="2"
-              border="1"
-              class="table-data data"
-            ></table>
-          </div>
-
-          <h4 class="data">
-            Dicionário de Dados
-            <a
-              href="files/dic/Dicionarios-Portugues-Estring.csv"
-              class="btn btn-info float-right mr-3"
+        <div class="intro" style="padding: 2rem 0rem 5rem">
+          <h2 class="mb-5">Descrição</h2>
+          <p>
+            Os dados do índice de estringência é uma métrica que resume o nível
+            de medidas governamentais promulgadas pelos estados locais a partir
+            de março de 2020 (<a
+              href="https://www.sciencedirect.com/science/article/pii/S1755436521000232?via%3Dihub"
               target="_blank"
-              >Download</a
             >
-          </h4>
-          <div class="table-div">
-            <table
-              id="tableDic"
-              cellpadding="2"
-              cellspacing="2"
-              border="1"
-              class="table-data dic"
-            ></table>
+              Jorge et al., 2021</a
+            >
+            ). O conjunto de dados é dividido em dois tipos. O primeiro contém
+            as informações textuais das medidas aplicadas pelos chefes dos
+            governos estaduais ou municipais. Após a leitura de cada texto,
+            podemos classificar o tipo de medidas que foram aplicadas no estado
+            ou município, identificando também o período de início e término da
+            medida. Com o resultado, podemos calcular uma métrica global de
+            estringência, uma combinação de subíndices de diferentes tipos de
+            fiscalização, como restrições a eventos, fechamento de escolas, etc,
+            conforme apresentado em (<a
+              href="https://www.sciencedirect.com/science/article/pii/S1755436521000232?via%3Dihub"
+              target="_blank"
+            >
+              Jorge et al., 2021</a
+            >
+            ).
+          </p>
+
+          <h2 class="mb-5 mt-5 pt-5 pb-2">Informação de acesso a dados</h2>
+
+          <p>
+            Para ter acesso aos arquivos de texto das medidas aplicadas em cada
+            estado ou município do Brasil, nossa equipe mantém um acordo de
+            colaboração com a
+            <a href="https://www.jusbrasil.com.br" target="_blank"> JusBrasil</a
+            >, startup que disponibiliza em plataforma online os documentos
+            oficiais do foro, como petições, decreto, novas leis, que são
+            criados nos/pelos tribunais e qualquer setor governamental. A
+            coleção de textos não está disponível abertamente, e o acesso direto
+            deve ter acordo com a startup. No entanto, a métrica de estringência
+            que resume o nível de medida aplicada para a pandemia COVID-19 é
+            criada por nossa equipe e fornecida em nosso
+            <a
+              href="https://github.com/PAMepi/PAMepi_scripts_datalake"
+              target="_blank"
+              >Github</a
+            >
+            .
+          </p>
+
+          <h2 class="mb-5 mt-5 pt-5 pb-2">Métodos de coleta de dados</h2>
+          <p>
+            No servidor da
+            <a href="https://www.jusbrasil.com.br" target="_blank"> JusBrasil</a
+            >, temos acesso a todos os documentos textuais disponibilizados pela
+            plataforma
+            <a href="https://www.jusbrasil.com.br" target="_blank"> JusBrasil</a
+            >. Para selecionar os textos que podem conter informações sobre as
+            medidas empregadas para conter a pandemia, buscamos em cada texto
+            disponível as palavras-chave “covid-19” e “decreto”. Os dados
+            coletados resultantes são usados posteriormente para o propósito de
+            nosso trabalho. Um método diferente de coleta de dados no estágio
+            inicial da pandemia no Brasil foi usado antes da colaboração com a
+            <a href="https://www.jusbrasil.com.br" target="_blank"> JusBrasil</a
+            >. O método está descrito em (<a
+              href="https://www.sciencedirect.com/science/article/pii/S1755436521000232?via%3Dihub"
+              target="_blank"
+            >
+              Jorge et al., 2021</a
+            >
+            ) e os dados e sua visualização são mostrados
+            <a
+              href="https://modelingtaskforce.shinyapps.io/transmission_rate_app/"
+              target="_blank"
+            >
+              nesse aplicativo
+            </a>
+            com dados até 22 de Maio de 2020.
+          </p>
+
+          <h2 class="mb-5 mt-5 pt-5 pb-2">Limitações dos dados</h2>
+          <p>
+            Os dados podem faltar todas as portarias para a esfera municipal e
+            apresentar atraso na sua atualização.
+          </p>
+        </div>
+      </section>
+      <hr />
+      <section class="middle-white">
+        <h2 class="data">Dados e recursos</h2>
+        <div class="dado-subitem">
+          <div class="media download">
+            <h3 class="data">Dados e dicionário de variáveis</h3>
+          </div>
+
+          <div class="data-in">
+            <h4 class="data">Explorador de dados</h4>
+            <div class="table-div">
+              <table
+                id="tableExp"
+                cellpadding="2"
+                cellspacing="2"
+                border="1"
+                class="table-data data"
+              ></table>
+            </div>
+
+            <h4 class="data">
+              Dicionário de Dados
+              <a
+                href="files/dic/Dicionarios-Portugues-Estring.csv"
+                class="btn btn-info float-right mr-3"
+                target="_blank"
+                >Download</a
+              >
+            </h4>
+            <div class="table-div">
+              <table
+                id="tableDic"
+                cellpadding="2"
+                cellspacing="2"
+                border="1"
+                class="table-data dic"
+              ></table>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <footer class="page-footer font-small footer" id="footer">
       <div class="row justify-content-center align-items-center copyrights">
-        <div class="icons col-1">
+        <div class="icons">
           <a href="mailto:modeling.taskforce@gmail.com">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -594,7 +595,7 @@
               /></svg
           ></a>
         </div>
-        <div class="icons col-1">
+        <div class="icons">
           <a href="https://github.com/PAMepi" target="_blank"
             ><svg
               xmlns="http://www.w3.org/2000/svg"

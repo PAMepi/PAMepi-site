@@ -132,7 +132,7 @@
                   class="dropdown-item drop-item dropdown dropright dropdown-submenu"
                 >
                   <a
-                    class="btn  nav-link submenu active"
+                    class="btn nav-link submenu active"
                     href="#"
                     data-toggle="dropdown"
                     data-flip="false"
@@ -441,169 +441,172 @@
         </div>
       </div>
     </nav>
+    <div class="limiter">
+      <section class="top">
+        <div class="row dados-icon">
+          <img src="img/espirros.png" class="dados-img" style="width: 80px" />
 
-    <section class="top">
-      <div class="row dados-icon">
-        <img src="img/espirros.png" class="dados-img" style="width: 80px" />
-
-        <h1 class="dados-text">Síndrome Gripal (SG)</h1>
-      </div>
-
-      <div class="intro" style="padding: 2rem 0rem 5rem">
-        <h2 class="mb-5">Descrição</h2>
-        <p>
-          Com o surgimento da pandemia causada pelo SARS-COV-2, o Ministério da
-          Saúde implantou um sistema de vigilância para registro da Síndrome
-          Gripal (SG, também denominado e-SUS VE) de casos leves a moderados com
-          suspeita de COVID-19.
-        </p>
-        <p>
-          O conjunto de dados é proveniente do sistema e-SUS NOTIFICA, que é
-          preenchido por unidades públicas ou privadas como unidades básicas de
-          saúde, consultórios, clínicas, postos de atendimento, pronto
-          atendimento, entre outros de baixa complexidade.
-        </p>
-        <p>
-          Os dados incluem informações referentes ao local de residência do
-          paciente (campos: estado, município), independentemente de ter sido
-          notificado em outro estado ou município (Campos: Notificação estado,
-          Notificação município), além de questões demográficas e
-          clínico-epidemiológicas, (<a
-            href="https://opendatasus.saude.gov.br/dataset/notificacoes-de-sindrome-gripal-leve-2021"
-            target="_blank"
-            >Ministério da Saúde, 2021</a
-          >), (<a
-            href="https://portal.fiocruz.br/sites/portal.fiocruz.br/files/documentos/nota_tecnica_13.pdf 
-          "
-            target="_blank"
-            >Observatório COVID-19, 2020</a
-          >).
-        </p>
-        <p>
-          Links para publicações que usam os dados do SG ou fornecem outros
-          locais de acesso público dos dados podem ser encontrados em (<a
-            href="https://portal.fiocruz.br/sites/portal.fiocruz.br/files/documentos/nota_tecnica_13.pdf 
-        "
-            target="_blank"
-            >Observatório COVID-19, 2020</a
-          >).
-        </p>
-        <h2 class="mb-5 mt-5 pt-5 pb-2">Informação de acesso a dados</h2>
-
-        <p>
-          Os dados SG são licenciados sob a Creative Commons Attribution License
-          cc-by (versão 4.0), ver (<a
-            href="https://opendatasus.saude.gov.br/dataset/notificacoes-de-sindrome-gripal-leve-2021"
-            target="_blank"
-            >Ministério da Saúde, 2021</a
-          >). Além disso, o conjunto de dados SG está disponível ao público e
-          publicado pelo Ministério da Saúde do Brasil. Portanto, não é
-          necessária a aprovação de um comitê de ética para o uso desses dados,
-          de acordo com as Resoluções 466/2012 e 510/2016 (artigo 1º, incisos
-          III e V) do Conselho Nacional de Saúde (CNS), Brasil.
-        </p>
-
-        <h2 class="mb-5 mt-5 pt-5 pb-2">Métodos de coleta de dados</h2>
-        <p>
-          Um código python está disponível em nosso diretório
-          <a
-            href="https://github.com/PAMepi/PAMepi_scripts_datalake"
-            target="_blank"
-            >Github</a
-          >
-          para baixar os dados SG do OpenDatasus, veja detalhes em
-          <a
-            href="https://github.com/PAMepi/PAMepi_scripts_datalake"
-            target="_blank"
-            >Github</a
-          >. Estamos extraindo os dados SG de 2019 em diante. A base de dados é
-          atualizada semanalmente no nosso projeto, sendo uma versão associada à
-          sua data de atualização.
-        </p>
-
-        <h2 class="mb-5 mt-5 pt-5 pb-2">
-          Informações específicas de dados para SG
-        </h2>
-        <p>
-          O conjunto de dados SG tem um total de 30 colunas e mostrou um total
-          de 48.288.827 registros (linhas) e um tamanho de 14 GB na última
-          atualização de 19 de agosto de 2021. Um código com mais detalhes sobre
-          as variáveis, processamento de dados e métodos de análise é
-          apresentado em nosso diretório
-          <a
-            href="https://github.com/PAMepi/PAMepi_scripts_datalake"
-            target="_blank"
-            >Github</a
-          >
-          .
-        </p>
-        <h2 class="mb-5 mt-5 pt-5 pb-2">Limitações do conjunto de dados SG</h2>
-        <p>
-          Vários casos no conjunto de dados SG não possuem classificação final.
-          Todos os casos do SG terão uma classificação final dada pelas equipes
-          de vigilância epidemiológica da Secretaria de Saúde. Porém, dado o
-          número de pacientes cadastrados, eles podem não ser classificados a
-          tempo (alguns até encerrados e não mais analisados).
-        </p>
-        <p>
-          Para contornar tal dificuldade, nossa equipe aplicará um algoritmo de
-          classificação para dar um pré-diagnóstico dos casos no SG que não
-          possuem classificação final. O algoritmo é aplicado às informações de
-          sintomas disponíveis no conjunto de dados.
-        </p>
-        <h2 class="mb-5 mt-5 pt-5 pb-2">
-          Visão esquemática da base de dados SG e SRAG
-        </h2>
-        <p style="column-span: all">
-          <img src="img/sivep_esquema_pt.jpeg" style="width: 100%" />
-        </p>
-      </div>
-    </section>
-    <hr />
-    <section class="middle-white">
-      <h2 class="data">Dados e recursos</h2>
-      <div class="dado-subitem">
-        <div class="media download">
-          <h3 class="data">Dados e dicionário de variáveis</h3>
+          <h1 class="dados-text">Síndrome Gripal (SG)</h1>
         </div>
 
-        <div class="data-in">
-          <h4 class="data">Explorador de dados</h4>
-          <div class="table-div">
-            <table
-              id="tableExp"
-              cellpadding="2"
-              cellspacing="2"
-              border="1"
-              class="table-data data"
-            ></table>
-          </div>
-
-          <h4 class="data">
-            Dicionário de Dados
-            <a
-              href="files/dic/Dicionarios-Portugues-SG.csv"
-              class="btn btn-info float-right mr-3"
+        <div class="intro" style="padding: 2rem 0rem 5rem">
+          <h2 class="mb-5">Descrição</h2>
+          <p>
+            Com o surgimento da pandemia causada pelo SARS-COV-2, o Ministério
+            da Saúde implantou um sistema de vigilância para registro da
+            Síndrome Gripal (SG, também denominado e-SUS VE) de casos leves a
+            moderados com suspeita de COVID-19.
+          </p>
+          <p>
+            O conjunto de dados é proveniente do sistema e-SUS NOTIFICA, que é
+            preenchido por unidades públicas ou privadas como unidades básicas
+            de saúde, consultórios, clínicas, postos de atendimento, pronto
+            atendimento, entre outros de baixa complexidade.
+          </p>
+          <p>
+            Os dados incluem informações referentes ao local de residência do
+            paciente (campos: estado, município), independentemente de ter sido
+            notificado em outro estado ou município (Campos: Notificação estado,
+            Notificação município), além de questões demográficas e
+            clínico-epidemiológicas, (<a
+              href="https://opendatasus.saude.gov.br/dataset/notificacoes-de-sindrome-gripal-leve-2021"
               target="_blank"
-              >Download</a
+              >Ministério da Saúde, 2021</a
+            >), (<a
+              href="https://portal.fiocruz.br/sites/portal.fiocruz.br/files/documentos/nota_tecnica_13.pdf 
+        "
+              target="_blank"
+              >Observatório COVID-19, 2020</a
+            >).
+          </p>
+          <p>
+            Links para publicações que usam os dados do SG ou fornecem outros
+            locais de acesso público dos dados podem ser encontrados em (<a
+              href="https://portal.fiocruz.br/sites/portal.fiocruz.br/files/documentos/nota_tecnica_13.pdf 
+      "
+              target="_blank"
+              >Observatório COVID-19, 2020</a
+            >).
+          </p>
+          <h2 class="mb-5 mt-5 pt-5 pb-2">Informação de acesso a dados</h2>
+
+          <p>
+            Os dados SG são licenciados sob a Creative Commons Attribution
+            License cc-by (versão 4.0), ver (<a
+              href="https://opendatasus.saude.gov.br/dataset/notificacoes-de-sindrome-gripal-leve-2021"
+              target="_blank"
+              >Ministério da Saúde, 2021</a
+            >). Além disso, o conjunto de dados SG está disponível ao público e
+            publicado pelo Ministério da Saúde do Brasil. Portanto, não é
+            necessária a aprovação de um comitê de ética para o uso desses
+            dados, de acordo com as Resoluções 466/2012 e 510/2016 (artigo 1º,
+            incisos III e V) do Conselho Nacional de Saúde (CNS), Brasil.
+          </p>
+
+          <h2 class="mb-5 mt-5 pt-5 pb-2">Métodos de coleta de dados</h2>
+          <p>
+            Um código python está disponível em nosso diretório
+            <a
+              href="https://github.com/PAMepi/PAMepi_scripts_datalake"
+              target="_blank"
+              >Github</a
             >
-          </h4>
-          <div class="table-div">
-            <table
-              id="tableDic"
-              cellpadding="2"
-              cellspacing="2"
-              border="1"
-              class="table-data dic"
-            ></table>
+            para baixar os dados SG do OpenDatasus, veja detalhes em
+            <a
+              href="https://github.com/PAMepi/PAMepi_scripts_datalake"
+              target="_blank"
+              >Github</a
+            >. Estamos extraindo os dados SG de 2019 em diante. A base de dados
+            é atualizada semanalmente no nosso projeto, sendo uma versão
+            associada à sua data de atualização.
+          </p>
+
+          <h2 class="mb-5 mt-5 pt-5 pb-2">
+            Informações específicas de dados para SG
+          </h2>
+          <p>
+            O conjunto de dados SG tem um total de 30 colunas e mostrou um total
+            de 48.288.827 registros (linhas) e um tamanho de 14 GB na última
+            atualização de 19 de agosto de 2021. Um código com mais detalhes
+            sobre as variáveis, processamento de dados e métodos de análise é
+            apresentado em nosso diretório
+            <a
+              href="https://github.com/PAMepi/PAMepi_scripts_datalake"
+              target="_blank"
+              >Github</a
+            >
+            .
+          </p>
+          <h2 class="mb-5 mt-5 pt-5 pb-2">
+            Limitações do conjunto de dados SG
+          </h2>
+          <p>
+            Vários casos no conjunto de dados SG não possuem classificação
+            final. Todos os casos do SG terão uma classificação final dada pelas
+            equipes de vigilância epidemiológica da Secretaria de Saúde. Porém,
+            dado o número de pacientes cadastrados, eles podem não ser
+            classificados a tempo (alguns até encerrados e não mais analisados).
+          </p>
+          <p>
+            Para contornar tal dificuldade, nossa equipe aplicará um algoritmo
+            de classificação para dar um pré-diagnóstico dos casos no SG que não
+            possuem classificação final. O algoritmo é aplicado às informações
+            de sintomas disponíveis no conjunto de dados.
+          </p>
+          <h2 class="mb-5 mt-5 pt-5 pb-2">
+            Visão esquemática da base de dados SG e SRAG
+          </h2>
+          <p style="column-span: all">
+            <img src="img/sivep_esquema_pt.jpeg" style="width: 100%" />
+          </p>
+        </div>
+      </section>
+      <hr />
+      <section class="middle-white">
+        <h2 class="data">Dados e recursos</h2>
+        <div class="dado-subitem">
+          <div class="media download">
+            <h3 class="data">Dados e dicionário de variáveis</h3>
+          </div>
+
+          <div class="data-in">
+            <h4 class="data">Explorador de dados</h4>
+            <div class="table-div">
+              <table
+                id="tableExp"
+                cellpadding="2"
+                cellspacing="2"
+                border="1"
+                class="table-data data"
+              ></table>
+            </div>
+
+            <h4 class="data">
+              Dicionário de Dados
+              <a
+                href="files/dic/Dicionarios-Portugues-SG.csv"
+                class="btn btn-info float-right mr-3"
+                target="_blank"
+                >Download</a
+              >
+            </h4>
+            <div class="table-div">
+              <table
+                id="tableDic"
+                cellpadding="2"
+                cellspacing="2"
+                border="1"
+                class="table-data dic"
+              ></table>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <footer class="page-footer font-small footer" id="footer">
       <div class="row justify-content-center align-items-center copyrights">
-        <div class="icons col-1">
+        <div class="icons">
           <a href="mailto:modeling.taskforce@gmail.com">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -616,7 +619,7 @@
               /></svg
           ></a>
         </div>
-        <div class="icons col-1">
+        <div class="icons">
           <a href="https://github.com/PAMepi" target="_blank"
             ><svg
               xmlns="http://www.w3.org/2000/svg"

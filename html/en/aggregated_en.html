@@ -457,105 +457,91 @@
         </div>
       </div>
     </nav>
+    <div class="limiter">
+      <section class="top">
+        <div class="row dados-icon">
+          <img src="../img/folder.png" class="dados-img" style="width: 80px" />
 
-    <section class="top">
-      <div class="row dados-icon">
-        <img src="../img/folder.png" class="dados-img" style="width: 80px" />
-
-        <h1 class="dados-text">Aggregated data</h1>
-      </div>
-      <div class="intro" style="padding: 2rem 0rem 5rem">
-        <h2 class="mb-5">Description</h2>
-        <p>
-          From the original database described in detail in the
-          <a href="data_en.html">Overview</a>, including
-          <a href="vacina_en.html"> Vaccination</a>,
-          <a href="brio_en.html"> WCota (Wesley Cota)</a>,
-          <a href="hospital_en.html"> Hospitalization</a>,
-          <a href="sivep_en.html"> SG</a>, and <a href="srag_en.html"> SRAG</a>,
-          we created a single file where you can find the main information from
-          each database. The composition facilitates the use of the data since
-          it is already crossmatched with each other and presents a single entry
-          for a specific city and day. A dictionary was developed to allow
-          understanding of each column since the names were modified from the
-          original source to fit this homogeneous set.
-        </p>
-        <h2 class="mb-5 mt-5 pt-5 pb-2">Data access information</h2>
-        <p>
-          The final data can be obtained using the Python code available in our
-          <a
-            href="https://github.com/PAMepi/PAMepi_scripts_datalake"
-            target="_blank"
-            >Github</a
-          >
-          directory. The code joins all the databases listed in the
-          <a href="data_en.html">Overview</a> to compose a single file with the
-          most important fields necessary to the Covid-19 studies.
-        </p>
-
-        <!-- <h2 class="mb-5 mt-5 pt-5 pb-2">Methods of data collection</h2>
-        <p>
-          A python code is available on our
-          <a
-            href="https://github.com/PAMepi/PAMepi_scripts_datalake"
-            target="_blank"
-            >Github</a
-          >
-          directory to join all the database into a single file .
-        </p> -->
-
-        <!-- <h2 class="mb-5 mt-5 pt-5 pb-2">Limitations</h2>
-        <p>
-          The absense of data in original sources makes the final database with
-          lots of empty fields.
-        </p> -->
-      </div>
-    </section>
-    <hr />
-    <section class="middle-white">
-      <h2 class="data">Data and Resources</h2>
-      <div class="dado-subitem">
-        <div class="media download">
-          <h3 class="data">Data and variable dictionary</h3>
+          <h1 class="dados-text">Aggregated data</h1>
         </div>
-
-        <div class="data-in">
-          <h4 class="data">Data explorer</h4>
-          <div class="table-div">
-            <table
-              id="tableExp"
-              cellpadding="2"
-              cellspacing="2"
-              border="1"
-              class="table-data data"
-            ></table>
-          </div>
-
-          <h4 class="data">
-            Data dictionary
+        <div class="intro" style="padding: 2rem 0rem 5rem">
+          <h2 class="mb-5">Description</h2>
+          <p>
+            From the original database described in detail in the
+            <a href="data_en.html">Overview</a>, including
+            <a href="vacina_en.html"> Vaccination</a>,
+            <a href="brio_en.html"> WCota (Wesley Cota)</a>,
+            <a href="hospital_en.html"> Hospitalization</a>,
+            <a href="sivep_en.html"> SG</a>, and
+            <a href="srag_en.html"> SRAG</a>, we created a single file where you
+            can find the main information from each database. The composition
+            facilitates the use of the data since it is already crossmatched
+            with each other and presents a single entry for a specific city and
+            day. A dictionary was developed to allow understanding of each
+            column since the names were modified from the original source to fit
+            this homogeneous set.
+          </p>
+          <h2 class="mb-5 mt-5 pt-5 pb-2">Data access information</h2>
+          <p>
+            The final data can be obtained using the Python code available in
+            our
             <a
-              href="../files/dic/Dictionary-English-Agreg.csv"
-              class="btn btn-info float-right mr-3"
+              href="https://github.com/PAMepi/PAMepi_scripts_datalake"
               target="_blank"
-              >Download</a
+              >Github</a
             >
-          </h4>
-          <div class="table-div">
-            <table
-              id="tableDic"
-              cellpadding="2"
-              cellspacing="2"
-              border="1"
-              class="table-data dic"
-            ></table>
+            directory. The code joins all the databases listed in the
+            <a href="data_en.html">Overview</a> to compose a single file with
+            the most important fields necessary to the Covid-19 studies.
+          </p>
+        </div>
+      </section>
+      <hr />
+      <section class="middle-white">
+        <h2 class="data">Data and Resources</h2>
+        <div class="dado-subitem">
+          <div class="media download">
+            <h3 class="data">Data and variable dictionary</h3>
+          </div>
+
+          <div class="data-in">
+            <h4 class="data">Data explorer</h4>
+            <div class="table-div">
+              <table
+                id="tableExp"
+                cellpadding="2"
+                cellspacing="2"
+                border="1"
+                class="table-data data"
+              ></table>
+            </div>
+
+            <h4 class="data">
+              Data dictionary
+              <a
+                href="../files/dic/Dictionary-English-Agreg.csv"
+                class="btn btn-info float-right mr-3"
+                target="_blank"
+                >Download</a
+              >
+            </h4>
+            <div class="table-div">
+              <table
+                id="tableDic"
+                cellpadding="2"
+                cellspacing="2"
+                border="1"
+                class="table-data dic"
+              ></table>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <footer class="page-footer font-small footer" id="footer">
       <div class="row justify-content-center align-items-center copyrights">
-        <div class="icons col-1">
+        <div class="icons">
           <a href="mailto:modeling.taskforce@gmail.com">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -568,7 +554,7 @@
               /></svg
           ></a>
         </div>
-        <div class="icons col-1">
+        <div class="icons">
           <a href="https://github.com/PAMepi" target="_blank"
             ><svg
               xmlns="http://www.w3.org/2000/svg"

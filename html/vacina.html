@@ -132,7 +132,7 @@
                   class="dropdown-item drop-item dropdown dropright dropdown-submenu"
                 >
                   <a
-                    class="btn  nav-link submenu active"
+                    class="btn nav-link submenu active"
                     href="#"
                     data-toggle="dropdown"
                     data-flip="false"
@@ -442,133 +442,135 @@
         </div>
       </div>
     </nav>
+    <div class="limiter">
+      <section class="top">
+        <div class="row dados-icon">
+          <img src="img/vacinacao.png" class="dados-img" style="width: 80px" />
 
-    <section class="top">
-      <div class="row dados-icon">
-        <img src="img/vacinacao.png" class="dados-img" style="width: 80px" />
-
-        <h1 class="dados-text">Vacinação Covid-19</h1>
-      </div>
-      <div class="intro" style="padding: 2rem 0rem 5rem">
-        <h2 class="mb-5">Descrição</h2>
-        <p class="card-text">
-          Os dados de vacinação da Covid-19 estão relacionados à Campanha
-          Nacional de Vacinação contra a Covid-19. O Ministério da Saúde
-          disponibiliza por meio do Sistema de Informações do Programa Nacional
-          de Imunizações (SI-PNI) e está disponível no OpenDatasus para
-          download.
-        </p>
-        <p>
-          Os dados são individualizados e desidentificados e incluem informações
-          sobre o número de doses aplicadas nos estados e municípios, o tipo de
-          vacina utilizada e informações sobre sexo e faixa etária do paciente
-          (<a
-            href="https://opendatasus.saude.gov.br/dataset/covid-19-vacinacao"
-            target="_blank"
-            >Ministério da Saúde, 2021b</a
-          >) .
-        </p>
-        <h2 class="mb-5 mt-5 pt-5 pb-2">Informação de acesso a dados</h2>
-
-        <p>
-          Os dados da vacina são licenciados sob uma Licença de Atribuição
-          Creative Commons cc-by (versão 4.0), consulte (<a
-            href="https://opendatasus.saude.gov.br/dataset/covid-19-vacinacao"
-            target="_ blank"
-            >Ministério da Saúde, 2021b</a
-          >). Além disso, o conjunto de dados da vacina está disponível ao
-          público e publicado pelo Ministério da Saúde do Brasil.
-        </p>
-        <p>
-          Portanto, não é necessária a aprovação de um comitê de ética para o
-          uso desses dados, de acordo com as Resoluções 466/2012 e 510/2016
-          (artigo 1º, incisos III e V) do Conselho Nacional de Saúde (CNS),
-          Brasil.
-        </p>
-        <h2 class="mb-5 mt-5 pt-5 pb-2">Métodos de coleta de dados</h2>
-        <p>
-          Um código python está disponível em nosso diretório
-          <a
-            href="https://github.com/PAMepi/PAMepi_scripts_datalake"
-            target="_blank"
-            >Github</a
-          >
-          para baixar os dados da vacina do OpenDatasus, veja os detalhes em (<a
-            href="https://opendatasus.saude.gov.br/dataset/covid-19-vacinacao"
-            target="_ blank"
-            >Ministério da Saúde, 2021b</a
-          >) e
-          <a
-            href="https://github.com/PAMepi/PAMepi_scripts_datalake"
-            target=" _ blank "
-            >Github</a
-          >.
-        </p>
-
-        <h2 class="mb-5 mt-5 pt-5 pb-2">
-          Informações específicas de dados para vacinação
-        </h2>
-        <p>
-          O conjunto de dados da vacina tem um total de 34 colunas e mostrou um
-          total de 159.710.042 registros (linhas) e um tamanho de 79 GB na
-          última atualização de 19 de agosto de 2021. Um código com mais
-          detalhes sobre as variáveis, processamento de dados e métodos de
-          análise é apresentado em nosso diretório
-          <a
-            href="https://github.com/PAMepi/PAMepi_scripts_datalake"
-            target=" _ blank "
-            >Github</a
-          >.
-        </p>
-      </div>
-    </section>
-    <hr />
-    <section class="middle-white">
-      <h2 class="data">Dados e recursos</h2>
-      <div class="dado-subitem">
-        <div class="media download">
-          <h3 class="data">Dados e dicionário de variáveis</h3>
+          <h1 class="dados-text">Vacinação Covid-19</h1>
         </div>
-
-        <div class="data-in">
-          <h4 class="data">Explorador de dados</h4>
-          <div class="table-div">
-            <table
-              id="tableExp"
-              cellpadding="2"
-              cellspacing="2"
-              border="1"
-              class="table-data data"
-            ></table>
-          </div>
-
-          <h4 class="data">
-            Dicionário de Dados
-            <a
-              href="files/dic/Dicionarios-Portugues-Vac.csv"
-              class="btn btn-info float-right mr-3"
+        <div class="intro" style="padding: 2rem 0rem 5rem">
+          <h2 class="mb-5">Descrição</h2>
+          <p class="card-text">
+            Os dados de vacinação da Covid-19 estão relacionados à Campanha
+            Nacional de Vacinação contra a Covid-19. O Ministério da Saúde
+            disponibiliza por meio do Sistema de Informações do Programa
+            Nacional de Imunizações (SI-PNI) e está disponível no OpenDatasus
+            para download.
+          </p>
+          <p>
+            Os dados são individualizados e desidentificados e incluem
+            informações sobre o número de doses aplicadas nos estados e
+            municípios, o tipo de vacina utilizada e informações sobre sexo e
+            faixa etária do paciente (<a
+              href="https://opendatasus.saude.gov.br/dataset/covid-19-vacinacao"
               target="_blank"
-              >Download</a
+              >Ministério da Saúde, 2021b</a
+            >) .
+          </p>
+          <h2 class="mb-5 mt-5 pt-5 pb-2">Informação de acesso a dados</h2>
+
+          <p>
+            Os dados da vacina são licenciados sob uma Licença de Atribuição
+            Creative Commons cc-by (versão 4.0), consulte (<a
+              href="https://opendatasus.saude.gov.br/dataset/covid-19-vacinacao"
+              target="_ blank"
+              >Ministério da Saúde, 2021b</a
+            >). Além disso, o conjunto de dados da vacina está disponível ao
+            público e publicado pelo Ministério da Saúde do Brasil.
+          </p>
+          <p>
+            Portanto, não é necessária a aprovação de um comitê de ética para o
+            uso desses dados, de acordo com as Resoluções 466/2012 e 510/2016
+            (artigo 1º, incisos III e V) do Conselho Nacional de Saúde (CNS),
+            Brasil.
+          </p>
+          <h2 class="mb-5 mt-5 pt-5 pb-2">Métodos de coleta de dados</h2>
+          <p>
+            Um código python está disponível em nosso diretório
+            <a
+              href="https://github.com/PAMepi/PAMepi_scripts_datalake"
+              target="_blank"
+              >Github</a
             >
-          </h4>
-          <div class="table-div">
-            <table
-              id="tableDic"
-              cellpadding="2"
-              cellspacing="2"
-              border="1"
-              class="table-data dic"
-            ></table>
+            para baixar os dados da vacina do OpenDatasus, veja os detalhes em
+            (<a
+              href="https://opendatasus.saude.gov.br/dataset/covid-19-vacinacao"
+              target="_ blank"
+              >Ministério da Saúde, 2021b</a
+            >) e
+            <a
+              href="https://github.com/PAMepi/PAMepi_scripts_datalake"
+              target=" _ blank "
+              >Github</a
+            >.
+          </p>
+
+          <h2 class="mb-5 mt-5 pt-5 pb-2">
+            Informações específicas de dados para vacinação
+          </h2>
+          <p>
+            O conjunto de dados da vacina tem um total de 34 colunas e mostrou
+            um total de 159.710.042 registros (linhas) e um tamanho de 79 GB na
+            última atualização de 19 de agosto de 2021. Um código com mais
+            detalhes sobre as variáveis, processamento de dados e métodos de
+            análise é apresentado em nosso diretório
+            <a
+              href="https://github.com/PAMepi/PAMepi_scripts_datalake"
+              target=" _ blank "
+              >Github</a
+            >.
+          </p>
+        </div>
+      </section>
+      <hr />
+      <section class="middle-white">
+        <h2 class="data">Dados e recursos</h2>
+        <div class="dado-subitem">
+          <div class="media download">
+            <h3 class="data">Dados e dicionário de variáveis</h3>
+          </div>
+
+          <div class="data-in">
+            <h4 class="data">Explorador de dados</h4>
+            <div class="table-div">
+              <table
+                id="tableExp"
+                cellpadding="2"
+                cellspacing="2"
+                border="1"
+                class="table-data data"
+              ></table>
+            </div>
+
+            <h4 class="data">
+              Dicionário de Dados
+              <a
+                href="files/dic/Dicionarios-Portugues-Vac.csv"
+                class="btn btn-info float-right mr-3"
+                target="_blank"
+                >Download</a
+              >
+            </h4>
+            <div class="table-div">
+              <table
+                id="tableDic"
+                cellpadding="2"
+                cellspacing="2"
+                border="1"
+                class="table-data dic"
+              ></table>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <footer class="page-footer font-small footer" id="footer">
       <div
         class="row justify-content-center align-items-center mb-4 copyrights"
       >
-        <div class="icons col-1">
+        <div class="icons">
           <a href="mailto:modeling.taskforce@gmail.com">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -581,7 +583,7 @@
               /></svg
           ></a>
         </div>
-        <div class="icons col-1">
+        <div class="icons">
           <a href="https://github.com/PAMepi" target="_blank"
             ><svg
               xmlns="http://www.w3.org/2000/svg"

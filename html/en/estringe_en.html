@@ -144,8 +144,11 @@
                     data-flip="false"
                     style="text-align: left"
                   >
-                    Health<span class="dropdown-toggle" style="float: right"></span></a
-                  >
+                    Health<span
+                      class="dropdown-toggle"
+                      style="float: right"
+                    ></span
+                  ></a>
 
                   <ul class="dropdown-menu sub-drop">
                     <li class="dropdown-item drop-item">
@@ -455,139 +458,143 @@
         </div>
       </div>
     </nav>
+    <div class="limiter">
+      <section class="top">
+        <div class="row dados-icon">
+          <img src="../img/leis.png" class="dados-img" style="width: 80px" />
 
-    <section class="top">
-      <div class="row dados-icon">
-        <img src="../img/leis.png" class="dados-img" style="width: 80px" />
-
-        <h1 class="dados-text">Stringency index</h1>
-      </div>
-      <div class="intro" style="padding: 2rem 0rem 5rem">
-        <h2 class="mb-5">Description</h2>
-        <p class="card-text">
-          The stringency index data is a metric that summarizes the level of
-          governmental measures enacted by the local states from March of 2020
-          and onward (<a
-            href="https://www.sciencedirect.com/science/article/pii/S1755436521000232?via%3Dihub"
-            target="_blank"
-            >Jorge et al., 2021</a
-          >). The dataset is divided into two types. The first contains the
-          textual information of the measures applied by the head of the state
-          or municipal government. After reading each text, we can classify the
-          type of measures that were applied in the state or city, identifying
-          also the period of the starting and end date of the measure. With the
-          result, we can calculate a global metric of stringency, a combination
-          of sub-indexes of different enforcement types, such as restrictions to
-          events, closure of schools, etc, as presented in
-          <a
-            href="https://www.sciencedirect.com/science/article/pii/S1755436521000232?via%3Dihub"
-            target="_blank"
-            >Jorge et al., 2021</a
-          >
-          .
-        </p>
-
-        <h2 class="mb-5 mt-5 pt-5 pb-2">Data access information</h2>
-        <p>
-          To have access to the text files of measures applied in each state or
-          city in Brazil, our team has a collaboration agreement with
-          <a href="https://www.jusbrasil.com.br" target="_blank"> JusBrasil</a>,
-          a startup that provides in an online platform the official
-          jurisdiction documents, such as petitions, decree, new laws, that are
-          created in/by the courts and any governmental sector. The collection
-          of text is not openly available, and the direct access must have an
-          agreement with the startup. Nevertheless, the stringency metric that
-          summarizes the level of measure applied for the COVID-19 pandemic is
-          created by our team and provided in our
-          <a
-            href="https://github.com/PAMepi/PAMepi_scripts_datalake"
-            target="_blank"
-            >Github</a
-          >
-          directory.
-        </p>
-
-        <h2 class="mb-5 mt-5 pt-5 pb-2">Methods of data collection</h2>
-        <p>
-          In the server of
-          <a href="https://www.jusbrasil.com.br" target="_blank"> JusBrasil</a>,
-          we have access to all textual documents provided by the platform
-          <a href="https://www.jusbrasil.com.br" target="_blank"> JusBrasil</a>.
-          To select the texts that may contain information about the measures
-          employed to contain the pandemic, we search in each text available the
-          keywords “covid-19” and “decreto”. The resulting data collected is
-          used further for the purpose of our work. A different method of data
-          collection in the early stage of the pandemic in Brazil was used prior
-          to the collaboration with
-          <a href="https://www.jusbrasil.com.br" target="_blank"> JusBrasil</a>.
-          The method is described in
-          <a
-            href="https://www.sciencedirect.com/science/article/pii/S1755436521000232?via%3Dihub"
-            target="_blank"
-            >Jorge et al., 2021</a
-          >
-          and the data and its visualization is shown in
-          <a
-            href="https://modelingtaskforce.shinyapps.io/transmission_rate_app/"
-            target="_blank"
-            >their app
-          </a>
-          at up to May 22, 2020.
-        </p>
-        <h2 class="mb-5 mt-5 pt-5 pb-2">Limitations of the stringency data</h2>
-        <p>
-          The data may be lacking all decrees for the municipal level and
-          present a delay on its update.
-        </p>
-      </div>
-    </section>
-    <hr />
-    <section class="middle-white">
-      <h2 class="data">Data and Resources</h2>
-      <div class="dado-subitem">
-        <div class="media download">
-          <h3 class="data">Data and variable dictionary</h3>
+          <h1 class="dados-text">Stringency index</h1>
         </div>
-
-        <div class="data-in">
-          <h4 class="data">Data explorer</h4>
-          <div class="table-div">
-            <table
-              id="tableExp"
-              cellpadding="2"
-              cellspacing="2"
-              border="1"
-              class="table-data data"
-            ></table>
-          </div>
-
-          <h4 class="data">
-            Data dictionary
-            <a
-              href="../files/dic/Dictionary-English-String.csv"
-              class="btn btn-info float-right mr-3"
+        <div class="intro" style="padding: 2rem 0rem 5rem">
+          <h2 class="mb-5">Description</h2>
+          <p class="card-text">
+            The stringency index data is a metric that summarizes the level of
+            governmental measures enacted by the local states from March of 2020
+            and onward (<a
+              href="https://www.sciencedirect.com/science/article/pii/S1755436521000232?via%3Dihub"
               target="_blank"
-              >Download</a
+              >Jorge et al., 2021</a
+            >). The dataset is divided into two types. The first contains the
+            textual information of the measures applied by the head of the state
+            or municipal government. After reading each text, we can classify
+            the type of measures that were applied in the state or city,
+            identifying also the period of the starting and end date of the
+            measure. With the result, we can calculate a global metric of
+            stringency, a combination of sub-indexes of different enforcement
+            types, such as restrictions to events, closure of schools, etc, as
+            presented in
+            <a
+              href="https://www.sciencedirect.com/science/article/pii/S1755436521000232?via%3Dihub"
+              target="_blank"
+              >Jorge et al., 2021</a
             >
-          </h4>
-          <div class="table-div">
-            <table
-              id="tableDic"
-              cellpadding="2"
-              cellspacing="2"
-              border="1"
-              class="table-data dic"
-            ></table>
+            .
+          </p>
+
+          <h2 class="mb-5 mt-5 pt-5 pb-2">Data access information</h2>
+          <p>
+            To have access to the text files of measures applied in each state
+            or city in Brazil, our team has a collaboration agreement with
+            <a href="https://www.jusbrasil.com.br" target="_blank"> JusBrasil</a
+            >, a startup that provides in an online platform the official
+            jurisdiction documents, such as petitions, decree, new laws, that
+            are created in/by the courts and any governmental sector. The
+            collection of text is not openly available, and the direct access
+            must have an agreement with the startup. Nevertheless, the
+            stringency metric that summarizes the level of measure applied for
+            the COVID-19 pandemic is created by our team and provided in our
+            <a
+              href="https://github.com/PAMepi/PAMepi_scripts_datalake"
+              target="_blank"
+              >Github</a
+            >
+            directory.
+          </p>
+
+          <h2 class="mb-5 mt-5 pt-5 pb-2">Methods of data collection</h2>
+          <p>
+            In the server of
+            <a href="https://www.jusbrasil.com.br" target="_blank"> JusBrasil</a
+            >, we have access to all textual documents provided by the platform
+            <a href="https://www.jusbrasil.com.br" target="_blank"> JusBrasil</a
+            >. To select the texts that may contain information about the
+            measures employed to contain the pandemic, we search in each text
+            available the keywords “covid-19” and “decreto”. The resulting data
+            collected is used further for the purpose of our work. A different
+            method of data collection in the early stage of the pandemic in
+            Brazil was used prior to the collaboration with
+            <a href="https://www.jusbrasil.com.br" target="_blank"> JusBrasil</a
+            >. The method is described in
+            <a
+              href="https://www.sciencedirect.com/science/article/pii/S1755436521000232?via%3Dihub"
+              target="_blank"
+              >Jorge et al., 2021</a
+            >
+            and the data and its visualization is shown in
+            <a
+              href="https://modelingtaskforce.shinyapps.io/transmission_rate_app/"
+              target="_blank"
+              >their app
+            </a>
+            at up to May 22, 2020.
+          </p>
+          <h2 class="mb-5 mt-5 pt-5 pb-2">
+            Limitations of the stringency data
+          </h2>
+          <p>
+            The data may be lacking all decrees for the municipal level and
+            present a delay on its update.
+          </p>
+        </div>
+      </section>
+      <hr />
+      <section class="middle-white">
+        <h2 class="data">Data and Resources</h2>
+        <div class="dado-subitem">
+          <div class="media download">
+            <h3 class="data">Data and variable dictionary</h3>
+          </div>
+
+          <div class="data-in">
+            <h4 class="data">Data explorer</h4>
+            <div class="table-div">
+              <table
+                id="tableExp"
+                cellpadding="2"
+                cellspacing="2"
+                border="1"
+                class="table-data data"
+              ></table>
+            </div>
+
+            <h4 class="data">
+              Data dictionary
+              <a
+                href="../files/dic/Dictionary-English-String.csv"
+                class="btn btn-info float-right mr-3"
+                target="_blank"
+                >Download</a
+              >
+            </h4>
+            <div class="table-div">
+              <table
+                id="tableDic"
+                cellpadding="2"
+                cellspacing="2"
+                border="1"
+                class="table-data dic"
+              ></table>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <footer class="page-footer font-small footer" id="footer">
       <div
         class="row justify-content-center align-items-center mb-4 copyrights"
       >
-        <div class="icons col-1">
+        <div class="icons">
           <a href="mailto:modeling.taskforce@gmail.com">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -600,7 +607,7 @@
               /></svg
           ></a>
         </div>
-        <div class="icons col-1">
+        <div class="icons">
           <a href="https://github.com/PAMepi" target="_blank"
             ><svg
               xmlns="http://www.w3.org/2000/svg"

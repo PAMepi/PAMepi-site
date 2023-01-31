@@ -143,8 +143,11 @@
                     data-flip="false"
                     style="text-align: left"
                   >
-                    Health<span class="dropdown-toggle" style="float: right"></span></a
-                  >
+                    Health<span
+                      class="dropdown-toggle"
+                      style="float: right"
+                    ></span
+                  ></a>
 
                   <ul class="dropdown-menu sub-drop">
                     <li class="dropdown-item drop-item">
@@ -453,129 +456,136 @@
         </div>
       </div>
     </nav>
+    <div class="limiter">
+      <section class="top">
+        <div class="row dados-icon">
+          <img
+            src="../img/vacinacao.png"
+            class="dados-img"
+            style="width: 80px"
+          />
 
-    <section class="top">
-      <div class="row dados-icon">
-        <img src="../img/vacinacao.png" class="dados-img" style="width: 80px" />
-
-        <h1 class="dados-text">Covid-19 vaccination</h1>
-      </div>
-      <div class="intro" style="padding: 2rem 0rem 5rem">
-        <h2 class="mb-5">Description</h2>
-        <p class="card-text">
-          The Covid-19 vaccination data is related to the National Vaccination
-          Campaign against Covid-19. The Ministry of Health provides it through
-          the National Immunization Program (SI-PNI) Information System and is
-          available in the OpenDatasus for download. The data is individualized
-          and de-identified and includes information about the number of doses
-          applied in the states and municipalities, the type of vaccine used,
-          and the patient's gender and age group information (<a
-            href="https://opendatasus.saude.gov.br/dataset/covid-19-vacinacao"
-            target="_blank"
-            >Ministério da Saúde, 2021b</a
-          >).
-        </p>
-
-        <h2 class="mb-5 mt-5 pt-5 pb-2">Data access information</h2>
-        <p>
-          The vaccine data is licensed under a Creative Commons Attribution
-          License cc-by (version 4.0), see (<a
-            href="https://opendatasus.saude.gov.br/dataset/covid-19-vacinacao"
-            target="_blank"
-            >Ministério da Saúde, 2021b</a
-          >). Additionally, the vaccine dataset is publicly available and
-          published by the Ministry of Health of Brazil.
-        </p>
-        <p>
-          Therefore, no approval by an ethics committee is required to use this
-          data, according to Resolutions 466/2012 and 510/2016 (article 1,
-          sections III and V) from the National Health Council (CNS), Brazil.
-        </p>
-
-        <h2 class="mb-5 mt-5 pt-5 pb-2">Methods of data collection</h2>
-        <p>
-          A python code is available on our
-          <a
-            href="https://github.com/PAMepi/PAMepi_scripts_datalake"
-            target="_blank"
-            >Github</a
-          >
-          directory to download the vaccine data from the OpenDatasus, see
-          details in (<a
-            href="https://opendatasus.saude.gov.br/dataset/covid-19-vacinacao"
-            target="_ blank"
-            >Ministério da Saúde, 2021b</a
-          >) and
-          <a
-            href="https://github.com/PAMepi/PAMepi_scripts_datalake"
-            target="_blank"
-            >Github</a
-          >.
-        </p>
-        <h2 class="mb-5 mt-5 pt-5 pb-2">
-          Data-specific information for vaccine
-        </h2>
-        <p>
-          The vaccine dataset has a total of 34 columns and showed a total of
-          159,710,042 registries (rows) and a size of 79 GB in the last update
-          of August 19th, 2021. A code with more details about the variables,
-          data processing and analysis methods is presented in our
-          <a
-            href="https://github.com/PAMepi/PAMepi_scripts_datalake"
-            target="_blank"
-            >Github</a
-          >
-          directory.
-        </p>
-      </div>
-    </section>
-    <hr />
-    <section class="middle-white">
-      <h2 class="data">Data and Resources</h2>
-      <div class="dado-subitem">
-        <div class="media download">
-          <h3 class="data">Data and variable dictionary</h3>
+          <h1 class="dados-text">Covid-19 vaccination</h1>
         </div>
-
-        <div class="data-in">
-          <h4 class="data">Data explorer</h4>
-          <div class="table-div">
-            <table
-              id="tableExp"
-              cellpadding="2"
-              cellspacing="2"
-              border="1"
-              class="table-data data"
-            ></table>
-          </div>
-
-          <h4 class="data">
-            Data dictionary
-            <a
-              href="../files/dic/Dictionary-English-Vac.csv"
-              class="btn btn-info float-right mr-3"
+        <div class="intro" style="padding: 2rem 0rem 5rem">
+          <h2 class="mb-5">Description</h2>
+          <p class="card-text">
+            The Covid-19 vaccination data is related to the National Vaccination
+            Campaign against Covid-19. The Ministry of Health provides it
+            through the National Immunization Program (SI-PNI) Information
+            System and is available in the OpenDatasus for download. The data is
+            individualized and de-identified and includes information about the
+            number of doses applied in the states and municipalities, the type
+            of vaccine used, and the patient's gender and age group information
+            (<a
+              href="https://opendatasus.saude.gov.br/dataset/covid-19-vacinacao"
               target="_blank"
-              >Download</a
+              >Ministério da Saúde, 2021b</a
+            >).
+          </p>
+
+          <h2 class="mb-5 mt-5 pt-5 pb-2">Data access information</h2>
+          <p>
+            The vaccine data is licensed under a Creative Commons Attribution
+            License cc-by (version 4.0), see (<a
+              href="https://opendatasus.saude.gov.br/dataset/covid-19-vacinacao"
+              target="_blank"
+              >Ministério da Saúde, 2021b</a
+            >). Additionally, the vaccine dataset is publicly available and
+            published by the Ministry of Health of Brazil.
+          </p>
+          <p>
+            Therefore, no approval by an ethics committee is required to use
+            this data, according to Resolutions 466/2012 and 510/2016 (article
+            1, sections III and V) from the National Health Council (CNS),
+            Brazil.
+          </p>
+
+          <h2 class="mb-5 mt-5 pt-5 pb-2">Methods of data collection</h2>
+          <p>
+            A python code is available on our
+            <a
+              href="https://github.com/PAMepi/PAMepi_scripts_datalake"
+              target="_blank"
+              >Github</a
             >
-          </h4>
-          <div class="table-div">
-            <table
-              id="tableDic"
-              cellpadding="2"
-              cellspacing="2"
-              border="1"
-              class="table-data dic"
-            ></table>
+            directory to download the vaccine data from the OpenDatasus, see
+            details in (<a
+              href="https://opendatasus.saude.gov.br/dataset/covid-19-vacinacao"
+              target="_ blank"
+              >Ministério da Saúde, 2021b</a
+            >) and
+            <a
+              href="https://github.com/PAMepi/PAMepi_scripts_datalake"
+              target="_blank"
+              >Github</a
+            >.
+          </p>
+          <h2 class="mb-5 mt-5 pt-5 pb-2">
+            Data-specific information for vaccine
+          </h2>
+          <p>
+            The vaccine dataset has a total of 34 columns and showed a total of
+            159,710,042 registries (rows) and a size of 79 GB in the last update
+            of August 19th, 2021. A code with more details about the variables,
+            data processing and analysis methods is presented in our
+            <a
+              href="https://github.com/PAMepi/PAMepi_scripts_datalake"
+              target="_blank"
+              >Github</a
+            >
+            directory.
+          </p>
+        </div>
+      </section>
+      <hr />
+      <section class="middle-white">
+        <h2 class="data">Data and Resources</h2>
+        <div class="dado-subitem">
+          <div class="media download">
+            <h3 class="data">Data and variable dictionary</h3>
+          </div>
+
+          <div class="data-in">
+            <h4 class="data">Data explorer</h4>
+            <div class="table-div">
+              <table
+                id="tableExp"
+                cellpadding="2"
+                cellspacing="2"
+                border="1"
+                class="table-data data"
+              ></table>
+            </div>
+
+            <h4 class="data">
+              Data dictionary
+              <a
+                href="../files/dic/Dictionary-English-Vac.csv"
+                class="btn btn-info float-right mr-3"
+                target="_blank"
+                >Download</a
+              >
+            </h4>
+            <div class="table-div">
+              <table
+                id="tableDic"
+                cellpadding="2"
+                cellspacing="2"
+                border="1"
+                class="table-data dic"
+              ></table>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <footer class="page-footer font-small footer" id="footer">
       <div
         class="row justify-content-center align-items-center mb-4 copyrights"
       >
-        <div class="icons col-1">
+        <div class="icons">
           <a href="mailto:modeling.taskforce@gmail.com">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -588,7 +598,7 @@
               /></svg
           ></a>
         </div>
-        <div class="icons col-1">
+        <div class="icons">
           <a href="https://github.com/PAMepi" target="_blank"
             ><svg
               xmlns="http://www.w3.org/2000/svg"

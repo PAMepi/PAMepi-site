@@ -144,8 +144,11 @@
                     data-flip="false"
                     style="text-align: left"
                   >
-                    Health<span class="dropdown-toggle" style="float: right"></span></a
-                  >
+                    Health<span
+                      class="dropdown-toggle"
+                      style="float: right"
+                    ></span
+                  ></a>
 
                   <ul class="dropdown-menu sub-drop">
                     <li class="dropdown-item drop-item">
@@ -453,191 +456,194 @@
         </div>
       </div>
     </nav>
+    <div class="limiter">
+      <section class="top">
+        <div class="row dados-icon">
+          <img src="../img/pulmao.png" class="dados-img" style="width: 80px" />
 
-    <section class="top">
-      <div class="row dados-icon">
-        <img src="../img/pulmao.png" class="dados-img" style="width: 80px" />
-
-        <h1 class="dados-text">Severe Acute Respiratory Syndrome (SARS)</h1>
-      </div>
-
-      <div class="intro" style="padding: 2rem 0rem 5rem">
-        <h2 class="mb-5">Description</h2>
-        <p class="card-text">
-          The Severe Acute Respiratory Syndrome (SARS) dataset is a health data
-          obtained from the Ministry of Health of Brazil through the Secretariat
-          of Health Surveillance, (<a
-            href="https://opendatasus.saude.gov.br/dataset/bd-srag-2021"
-            target="_blank"
-            >Ministério da Saúde, 2021a</a
-          >).
-        </p>
-        <p>
-          The SARS surveillance started with the Influenza A (H1N1) pandemic in
-          2009. Since then, SARS is also used to report Influenza and other
-          respiratory viruses, which previously were reported only with the
-          flu-syndrome sentinel surveillance.
-        </p>
-        <p>
-          Furthermore, in 2020, human infections caused by SARS-COV-2 were
-          incorporated into SARS surveillance. Given the severity of the
-          disease, all individuals in SARS require hospitalisations.
-        </p>
-        <p>
-          The dataset has individual, not identifiable, information such as the
-          residence location (city), age, gender, infectious status when the
-          person requires hospitalisation (clinical beds or ICU) or if it had a
-          deadly outcome, among others, (<a
-            href="https://opendatasus.saude.gov.br/dataset/bd-srag-2021"
-            target="_blank"
-            >Ministério da Saúde, 2021a</a
-          >).
-        </p>
-        <p>
-          Therefore, the data can be aggregated to perform risk analysis and
-          studies of the dynamic evolution of severe cases of COVID-19 at a
-          municipal level and can also be explored for other issues.
-        </p>
-        <p>
-          Furthermore, the dataset contains notifications since January 1st 2020
-          up to date and is weekly updated since then in our project.
-        </p>
-        <p>
-          In addition, the dataset contains notifications from January 1st, 2020
-          to the current date. Data is updated weekly in our project.
-        </p>
-        <h2 class="mb-5 mt-5 pt-5 pb-2">Data access information</h2>
-        <p>
-          The SARS data is licensed under a Creative Commons Attribution License
-          cc-by (version 4.0), see (<a
-            href="https://opendatasus.saude.gov.br/dataset/bd-srag-2021"
-            target="_blank"
-            >Ministério da Saúde, 2021a</a
-          >).
-        </p>
-        <p>
-          Additionally, the SARS dataset is publicly available and published by
-          the Ministry of Health of Brazil. Therefore, no approval by an ethics
-          committee is required to use this data, according to Resolutions
-          466/2012 and 510/2016 (article 1, sections III and V) from the
-          National Health Council (CNS), Brazil.
-        </p>
-        <h2 class="mb-5 mt-5 pt-5 pb-2">Methods of data collection</h2>
-        <p>
-          A python code is available on our
-          <a
-            href="https://github.com/PAMepi/PAMepi_scripts_datalake"
-            target="_blank"
-          >
-            Github
-          </a>
-          directory to download the SARS data from the OpenDatasus , see details
-          in (<a
-            href="https://opendatasus.saude.gov.br/dataset/bd-srag-2021"
-            target="_blank"
-            >Ministério da Saúde, 2021a</a
-          >) and
-          <a
-            href="https://github.com/PAMepi/PAMepi_scripts_datalake"
-            target="_blank"
-          >
-            Github</a
-          >. We are pulling the SARS data from 2019 and on. When running the
-          code, the data is downloaded all again once the OpenDatasus does not
-          have an API token for SARS.
-        </p>
-        <p>
-          The database is updated weekly in our project, being a version
-          associated with its date of update. Additional information on data
-          collection methods can be found in (<a
-            href="https://portal.fiocruz.br/sites/portal.fiocruz.br/files/documentos/nota_tecnica_13.pdf 
-    "
-            target="_blank"
-            >Observatório COVID-19, 2020</a
-          >).
-        </p>
-        <h2 class="mb-5 mt-5 pt-5 pb-2">Data-specific information for SARS</h2>
-        <p>
-          The SARS dataset has a total of 162 columns and showed a total of
-          1,264,480 registries (rows) and a size of 694 MB in the last update of
-          August 19th, 2021.
-        </p>
-        <p>
-          A code with more details about the variables, data processing and
-          analysis methods is presented in our
-          <a
-            href="https://github.com/PAMepi/PAMepi_scripts_datalake"
-            target="_blank"
-            >Github</a
-          >
-          directory .
-        </p>
-        <h2 class="mb-5 mt-5 pt-5 pb-2">Limitations of SARS dataset</h2>
-        <p>
-          Every case in SARS will have a final classification given by the
-          epidemiological surveillance teams of the Secretariat of Health.
-          However, given the number of registered patients, they may not be
-          classified on time (some even closed and not analysed anymore).
-        </p>
-        <p>
-          To overcome such a difficulty, our team will apply a classification
-          algorithm to give a pre-diagnosis of the cases in SARS that have no
-          final classification. The algorithm is applied to the information of
-          symptoms that is available in the dataset.
-        </p>
-        <h2 class="mb-5 mt-5 pt-5 pb-2">
-          Schematic view of the FS and SARS database
-        </h2>
-        <p style="column-span: all">
-          <img src="../img/sivep_esquema_en.jpeg" style="width: 100%" />
-        </p>
-      </div>
-    </section>
-    <hr />
-    <section class="middle-white">
-      <h2 class="data">Data and Resources</h2>
-      <div class="dado-subitem">
-        <div class="media download">
-          <h3 class="data">Data and variable dictionary</h3>
+          <h1 class="dados-text">Severe Acute Respiratory Syndrome (SARS)</h1>
         </div>
 
-        <div class="data-in">
-          <h4 class="data">Data explorer</h4>
-          <div class="table-div">
-            <table
-              id="tableExp"
-              cellpadding="2"
-              cellspacing="2"
-              border="1"
-              class="table-data data"
-            ></table>
-          </div>
-
-          <h4 class="data">
-            Data dictionary
-            <a
-              href="../files/dic/Dictionary-English-SARS.csv"
-              class="btn btn-info float-right mr-3"
+        <div class="intro" style="padding: 2rem 0rem 5rem">
+          <h2 class="mb-5">Description</h2>
+          <p class="card-text">
+            The Severe Acute Respiratory Syndrome (SARS) dataset is a health
+            data obtained from the Ministry of Health of Brazil through the
+            Secretariat of Health Surveillance, (<a
+              href="https://opendatasus.saude.gov.br/dataset/bd-srag-2021"
               target="_blank"
-              >Download</a
+              >Ministério da Saúde, 2021a</a
+            >).
+          </p>
+          <p>
+            The SARS surveillance started with the Influenza A (H1N1) pandemic
+            in 2009. Since then, SARS is also used to report Influenza and other
+            respiratory viruses, which previously were reported only with the
+            flu-syndrome sentinel surveillance.
+          </p>
+          <p>
+            Furthermore, in 2020, human infections caused by SARS-COV-2 were
+            incorporated into SARS surveillance. Given the severity of the
+            disease, all individuals in SARS require hospitalisations.
+          </p>
+          <p>
+            The dataset has individual, not identifiable, information such as
+            the residence location (city), age, gender, infectious status when
+            the person requires hospitalisation (clinical beds or ICU) or if it
+            had a deadly outcome, among others, (<a
+              href="https://opendatasus.saude.gov.br/dataset/bd-srag-2021"
+              target="_blank"
+              >Ministério da Saúde, 2021a</a
+            >).
+          </p>
+          <p>
+            Therefore, the data can be aggregated to perform risk analysis and
+            studies of the dynamic evolution of severe cases of COVID-19 at a
+            municipal level and can also be explored for other issues.
+          </p>
+          <p>
+            Furthermore, the dataset contains notifications since January 1st
+            2020 up to date and is weekly updated since then in our project.
+          </p>
+          <p>
+            In addition, the dataset contains notifications from January 1st,
+            2020 to the current date. Data is updated weekly in our project.
+          </p>
+          <h2 class="mb-5 mt-5 pt-5 pb-2">Data access information</h2>
+          <p>
+            The SARS data is licensed under a Creative Commons Attribution
+            License cc-by (version 4.0), see (<a
+              href="https://opendatasus.saude.gov.br/dataset/bd-srag-2021"
+              target="_blank"
+              >Ministério da Saúde, 2021a</a
+            >).
+          </p>
+          <p>
+            Additionally, the SARS dataset is publicly available and published
+            by the Ministry of Health of Brazil. Therefore, no approval by an
+            ethics committee is required to use this data, according to
+            Resolutions 466/2012 and 510/2016 (article 1, sections III and V)
+            from the National Health Council (CNS), Brazil.
+          </p>
+          <h2 class="mb-5 mt-5 pt-5 pb-2">Methods of data collection</h2>
+          <p>
+            A python code is available on our
+            <a
+              href="https://github.com/PAMepi/PAMepi_scripts_datalake"
+              target="_blank"
             >
-          </h4>
-          <div class="table-div">
-            <table
-              id="tableDic"
-              cellpadding="2"
-              cellspacing="2"
-              border="1"
-              class="table-data dic"
-            ></table>
+              Github
+            </a>
+            directory to download the SARS data from the OpenDatasus , see
+            details in (<a
+              href="https://opendatasus.saude.gov.br/dataset/bd-srag-2021"
+              target="_blank"
+              >Ministério da Saúde, 2021a</a
+            >) and
+            <a
+              href="https://github.com/PAMepi/PAMepi_scripts_datalake"
+              target="_blank"
+            >
+              Github</a
+            >. We are pulling the SARS data from 2019 and on. When running the
+            code, the data is downloaded all again once the OpenDatasus does not
+            have an API token for SARS.
+          </p>
+          <p>
+            The database is updated weekly in our project, being a version
+            associated with its date of update. Additional information on data
+            collection methods can be found in (<a
+              href="https://portal.fiocruz.br/sites/portal.fiocruz.br/files/documentos/nota_tecnica_13.pdf 
+    "
+              target="_blank"
+              >Observatório COVID-19, 2020</a
+            >).
+          </p>
+          <h2 class="mb-5 mt-5 pt-5 pb-2">
+            Data-specific information for SARS
+          </h2>
+          <p>
+            The SARS dataset has a total of 162 columns and showed a total of
+            1,264,480 registries (rows) and a size of 694 MB in the last update
+            of August 19th, 2021.
+          </p>
+          <p>
+            A code with more details about the variables, data processing and
+            analysis methods is presented in our
+            <a
+              href="https://github.com/PAMepi/PAMepi_scripts_datalake"
+              target="_blank"
+              >Github</a
+            >
+            directory .
+          </p>
+          <h2 class="mb-5 mt-5 pt-5 pb-2">Limitations of SARS dataset</h2>
+          <p>
+            Every case in SARS will have a final classification given by the
+            epidemiological surveillance teams of the Secretariat of Health.
+            However, given the number of registered patients, they may not be
+            classified on time (some even closed and not analysed anymore).
+          </p>
+          <p>
+            To overcome such a difficulty, our team will apply a classification
+            algorithm to give a pre-diagnosis of the cases in SARS that have no
+            final classification. The algorithm is applied to the information of
+            symptoms that is available in the dataset.
+          </p>
+          <h2 class="mb-5 mt-5 pt-5 pb-2">
+            Schematic view of the FS and SARS database
+          </h2>
+          <p style="column-span: all">
+            <img src="../img/sivep_esquema_en.jpeg" style="width: 100%" />
+          </p>
+        </div>
+      </section>
+      <hr />
+      <section class="middle-white">
+        <h2 class="data">Data and Resources</h2>
+        <div class="dado-subitem">
+          <div class="media download">
+            <h3 class="data">Data and variable dictionary</h3>
+          </div>
+
+          <div class="data-in">
+            <h4 class="data">Data explorer</h4>
+            <div class="table-div">
+              <table
+                id="tableExp"
+                cellpadding="2"
+                cellspacing="2"
+                border="1"
+                class="table-data data"
+              ></table>
+            </div>
+
+            <h4 class="data">
+              Data dictionary
+              <a
+                href="../files/dic/Dictionary-English-SARS.csv"
+                class="btn btn-info float-right mr-3"
+                target="_blank"
+                >Download</a
+              >
+            </h4>
+            <div class="table-div">
+              <table
+                id="tableDic"
+                cellpadding="2"
+                cellspacing="2"
+                border="1"
+                class="table-data dic"
+              ></table>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <footer class="page-footer font-small footer" id="footer">
       <div class="row justify-content-center align-items-center copyrights">
-        <div class="icons col-1">
+        <div class="icons">
           <a href="mailto:modeling.taskforce@gmail.com">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -650,7 +656,7 @@
               /></svg
           ></a>
         </div>
-        <div class="icons col-1">
+        <div class="icons">
           <a href="https://github.com/PAMepi" target="_blank"
             ><svg
               xmlns="http://www.w3.org/2000/svg"

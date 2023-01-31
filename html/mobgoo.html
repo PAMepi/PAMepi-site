@@ -445,157 +445,158 @@
         </div>
       </div>
     </nav>
+    <div class="limiter">
+      <section class="top">
+        <div class="row dados-icon">
+          <img src="img/google.png" class="dados-img" style="width: 80px" />
 
-    <section class="top">
-      <div class="row dados-icon">
-        <img src="img/google.png" class="dados-img" style="width: 80px" />
-
-        <h1 class="dados-text">Google mobility</h1>
-      </div>
-      <div class="intro" style="padding: 2rem 0rem 5rem">
-        <h2 class="mb-5">Descrição</h2>
-        <p>
-          O banco de dados de mobilidade do Google representa a mobilidade
-          humana fornecida pelas tendências do Google, que relata como a
-          mobilidade humana é afetada pela propagação COVID-19 desde 15 de
-          fevereiro de 2020.
-        </p>
-        <p>
-          Os dados comparam as visitas a lugares, como supermercados e parques,
-          com uma linha de base calculado antes do início da pandemia. É medida
-          a porcentagem de pessoas que visitaram um local em relação ao mesmo
-          dia da semana durante o período de 3 de janeiro a 6 de fevereiro de
-          2020.
-        </p>
-        <p>Os locais considerados no banco de dados são:</p>
-        <ul>
-          <li>
-            Mercearia e farmácia: mercearias, armazéns de alimentos, mercados de
-            fazendeiros, lojas de alimentos especializados, drogarias e
-            farmácias;
-          </li>
-          <li>
-            Parques: parques locais, parques nacionais, praias públicas,
-            marinas, parques para cães, praças e jardins públicos;
-          </li>
-          <li>Estações de trânsito: metrô, ônibus e estações de trem;</li>
-          <li>
-            Varejo e recreação: restaurantes, cafés, shopping centers, parques
-            temáticos, museus, bibliotecas e cinemas;
-          </li>
-          <li>Residencial: locais de residência;</li>
-          <li>Locais de trabalho: locais de trabalho;</li>
-        </ul>
-        <h2 class="mb-5 mt-5 pt-5 pb-2">Informação de acesso a dados</h2>
-
-        <p>
-          Os dados e a documentação estão disponíveis em
-          <a href="https://www.google.com/covid19/mobility/" target="_blank"
-            >Google Mobility</a
-          >.
-        </p>
-
-        <h2 class="mb-5 mt-5 pt-5 pb-2">Métodos de coleta de dados</h2>
-        <p>
-          Um código Python está disponível em nosso diretório
-          <a
-            href="https://github.com/PAMepi/PAMepi_scripts_datalake"
-            target="_blank"
-            >Github</a
-          >
-          para baixar os dados do
-          <a href="https://www.google.com/covid19/mobility/" target="_blank"
-            >Google Mobility</a
-          >. O banco de dados é atualizado todos os dias contendo dados tão
-          recentes quanto 2 dias atrás. Informações adicionais sobre métodos de
-          coleta de dados podem ser encontradas na
-          <a
-            href="https://www.google.com/covid19/mobility/data_documentation.html?hl=en"
-            target="_blank"
-            >Documentação do Google Mobility</a
-          >
-          e
-          <a
-            href="https://github.com/PAMepi/PAMepi_scripts_datalake"
-            target="_blank"
-            >Github</a
-          >.
-        </p>
-
-        <h2 class="mb-5 mt-5 pt-5 pb-2">
-          Informações específicas de dados do Google Mobility
-        </h2>
-        <p>
-          O conjunto de dados do Google Mobility para o Brasil tem um total de
-          15 colunas e mostra um total de 590.690 registros (linhas) e um
-          tamanho de 57Mb, acessado em 19 de outubro de 2021. Um código com mais
-          detalhes sobre as variáveis, processamento de dados e métodos de
-          análise é apresentado em nosso diretório
-          <a
-            href="https://github.com/PAMepi/PAMepi_scripts_datalake"
-            target="_blank"
-            >Github</a
-          >.
-        </p>
-        <h2 class="mb-5 mt-5 pt-5 pb-2">
-          Limitações do conjunto de dados do Google Mobility
-        </h2>
-        <p>
-          Os resultados foram calculados com base em uma amostra de usuários que
-          permitiu ao histórico de localização rastrear sua posição, o que pode
-          criar vieses. As categorias de lugares também podem variar dependendo
-          da localização. Não é recomendado comparar regiões muito diferentes,
-          por exemplo, rural versus urbano. Quando os níveis estatisticamente
-          significativos não são suficientes para um determinado local e data, o
-          campo ficará sem dados.
-        </p>
-      </div>
-    </section>
-    <hr />
-    <section class="middle-white">
-      <h2 class="data">Dados e recursos</h2>
-      <div class="dado-subitem">
-        <div class="media download">
-          <h3 class="data">Dados e dicionário de variáveis</h3>
+          <h1 class="dados-text">Google mobility</h1>
         </div>
+        <div class="intro" style="padding: 2rem 0rem 5rem">
+          <h2 class="mb-5">Descrição</h2>
+          <p>
+            O banco de dados de mobilidade do Google representa a mobilidade
+            humana fornecida pelas tendências do Google, que relata como a
+            mobilidade humana é afetada pela propagação COVID-19 desde 15 de
+            fevereiro de 2020.
+          </p>
+          <p>
+            Os dados comparam as visitas a lugares, como supermercados e
+            parques, com uma linha de base calculado antes do início da
+            pandemia. É medida a porcentagem de pessoas que visitaram um local
+            em relação ao mesmo dia da semana durante o período de 3 de janeiro
+            a 6 de fevereiro de 2020.
+          </p>
+          <p>Os locais considerados no banco de dados são:</p>
+          <ul>
+            <li>
+              Mercearia e farmácia: mercearias, armazéns de alimentos, mercados
+              de fazendeiros, lojas de alimentos especializados, drogarias e
+              farmácias;
+            </li>
+            <li>
+              Parques: parques locais, parques nacionais, praias públicas,
+              marinas, parques para cães, praças e jardins públicos;
+            </li>
+            <li>Estações de trânsito: metrô, ônibus e estações de trem;</li>
+            <li>
+              Varejo e recreação: restaurantes, cafés, shopping centers, parques
+              temáticos, museus, bibliotecas e cinemas;
+            </li>
+            <li>Residencial: locais de residência;</li>
+            <li>Locais de trabalho: locais de trabalho;</li>
+          </ul>
+          <h2 class="mb-5 mt-5 pt-5 pb-2">Informação de acesso a dados</h2>
 
-        <div class="data-in">
-          <h4 class="data">Explorador de dados</h4>
-          <div class="table-div">
-            <table
-              id="tableExp"
-              cellpadding="2"
-              cellspacing="2"
-              border="1"
-              class="table-data data"
-            ></table>
-          </div>
+          <p>
+            Os dados e a documentação estão disponíveis em
+            <a href="https://www.google.com/covid19/mobility/" target="_blank"
+              >Google Mobility</a
+            >.
+          </p>
 
-          <h4 class="data">
-            Dicionário de Dados
+          <h2 class="mb-5 mt-5 pt-5 pb-2">Métodos de coleta de dados</h2>
+          <p>
+            Um código Python está disponível em nosso diretório
             <a
-              href="files/dic/Dicionarios-Portugues-GooMob.csv"
-              class="btn btn-info float-right mr-3"
+              href="https://github.com/PAMepi/PAMepi_scripts_datalake"
               target="_blank"
-              >Download</a
+              >Github</a
             >
-          </h4>
-          <div class="table-div">
-            <table
-              id="tableDic"
-              cellpadding="2"
-              cellspacing="2"
-              border="1"
-              class="table-data dic"
-            ></table>
+            para baixar os dados do
+            <a href="https://www.google.com/covid19/mobility/" target="_blank"
+              >Google Mobility</a
+            >. O banco de dados é atualizado todos os dias contendo dados tão
+            recentes quanto 2 dias atrás. Informações adicionais sobre métodos
+            de coleta de dados podem ser encontradas na
+            <a
+              href="https://www.google.com/covid19/mobility/data_documentation.html?hl=en"
+              target="_blank"
+              >Documentação do Google Mobility</a
+            >
+            e
+            <a
+              href="https://github.com/PAMepi/PAMepi_scripts_datalake"
+              target="_blank"
+              >Github</a
+            >.
+          </p>
+
+          <h2 class="mb-5 mt-5 pt-5 pb-2">
+            Informações específicas de dados do Google Mobility
+          </h2>
+          <p>
+            O conjunto de dados do Google Mobility para o Brasil tem um total de
+            15 colunas e mostra um total de 590.690 registros (linhas) e um
+            tamanho de 57Mb, acessado em 19 de outubro de 2021. Um código com
+            mais detalhes sobre as variáveis, processamento de dados e métodos
+            de análise é apresentado em nosso diretório
+            <a
+              href="https://github.com/PAMepi/PAMepi_scripts_datalake"
+              target="_blank"
+              >Github</a
+            >.
+          </p>
+          <h2 class="mb-5 mt-5 pt-5 pb-2">
+            Limitações do conjunto de dados do Google Mobility
+          </h2>
+          <p>
+            Os resultados foram calculados com base em uma amostra de usuários
+            que permitiu ao histórico de localização rastrear sua posição, o que
+            pode criar vieses. As categorias de lugares também podem variar
+            dependendo da localização. Não é recomendado comparar regiões muito
+            diferentes, por exemplo, rural versus urbano. Quando os níveis
+            estatisticamente significativos não são suficientes para um
+            determinado local e data, o campo ficará sem dados.
+          </p>
+        </div>
+      </section>
+      <hr />
+      <section class="middle-white">
+        <h2 class="data">Dados e recursos</h2>
+        <div class="dado-subitem">
+          <div class="media download">
+            <h3 class="data">Dados e dicionário de variáveis</h3>
+          </div>
+
+          <div class="data-in">
+            <h4 class="data">Explorador de dados</h4>
+            <div class="table-div">
+              <table
+                id="tableExp"
+                cellpadding="2"
+                cellspacing="2"
+                border="1"
+                class="table-data data"
+              ></table>
+            </div>
+
+            <h4 class="data">
+              Dicionário de Dados
+              <a
+                href="files/dic/Dicionarios-Portugues-GooMob.csv"
+                class="btn btn-info float-right mr-3"
+                target="_blank"
+                >Download</a
+              >
+            </h4>
+            <div class="table-div">
+              <table
+                id="tableDic"
+                cellpadding="2"
+                cellspacing="2"
+                border="1"
+                class="table-data dic"
+              ></table>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <footer class="page-footer font-small footer" id="footer">
       <div class="row justify-content-center align-items-center copyrights">
-        <div class="icons col-1">
+        <div class="icons">
           <a href="mailto:modeling.taskforce@gmail.com">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -608,7 +609,7 @@
               /></svg
           ></a>
         </div>
-        <div class="icons col-1">
+        <div class="icons">
           <a href="https://github.com/PAMepi" target="_blank"
             ><svg
               xmlns="http://www.w3.org/2000/svg"

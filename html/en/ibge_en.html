@@ -454,244 +454,247 @@
         </div>
       </div>
     </nav>
+    <div class="limiter">
+      <section class="top">
+        <div class="row dados-icon">
+          <img
+            src="../img/transporte-publico.png"
+            class="dados-img"
+            style="width: 80px"
+          />
 
-    <section class="top">
-      <div class="row dados-icon">
-        <img
-          src="../img/transporte-publico.png"
-          class="dados-img"
-          style="width: 80px"
-        />
-
-        <h1 class="dados-text">Intercity Brazilian mobility</h1>
-      </div>
-      <div class="intro" style="padding: 2rem 0rem 5rem">
-        <h2 class="mb-5">Description</h2>
-        <p class="card-text">
-          It is the historical average flux data throughout the country using
-          road/air/fluvial networks. The data is available in the Brazilian
-          Institute of Geography and Statistics (IBGE) separated into 2
-          different data sources: the first includes only air mobility from the
-          <a
-            target="_blank"
-            href="https://geoftp.ibge.gov.br/organizacao_do_territorio/redes_e_fluxos_geograficos/ligacoes_aereas/ligacoes_aereas_2010.pdf"
-            >2010 air connections report</a
-          >
-          and the second includes roads and fluvial mobility from the
-          <a
-            target="_blank"
-            href="https://biblioteca.ibge.gov.br/visualizacao/livros/liv100602.pdf"
-            >2016 roads and fluvial connections report</a
-          >. Originally the IBGE reports have the goal to analyze the relations
-          and connexions between the Brazilian cities highlighting the principal
-          nodes for material (people, goods, cargo) and immaterial (information,
-          orders, money) exchanges.
-        </p>
-
-        <h3 class="mt-5 pt-5">Air connections</h3>
-        <p>
-          From the 5 565 municipalities in Brazil, only 135 had an airport in
-          2010. The data shows the <strong>number of people </strong> traveling
-          between these 135 airports and it is aggregated by binding city pairs,
-          no matter the direction people are traveling. It also includes cargo
-          information but this is not being considered here. The original data
-          can be downloaded directly on the
-          <a
-            href="http://geoftp.ibge.gov.br/organizacao_do_territorio/redes_e_fluxos_geograficos/ligacoes_aereas/bases_de_dados/"
-            target="_blank"
-            >website in IBGE</a
-          >. Other air connection reports can be found in the
-          <a
-            href="https://www.gov.br/anac/pt-br/assuntos/dados-e-estatisticas/mercado-de-transporte-aereo/anuario-do-transporte-aereo/dados-do-anuario-do-transporte-aereo"
-            target="_blank"
-            >National Civil Aviation Agency (ANAC)</a
-          >. The dictionary provided by the authors presents origin and
-          destination columns but does not mean that this is the direction of
-          movement, the data only provides link pairs.
-        </p>
-        <h3 class="mt-5 pt-5">Road and fluvial connections</h3>
-        <p>
-          The 2016 Road/Fluvial Connections survey only includes information on
-          intercity passenger transport. It is informed of the number of
-          vehicles per pair of locations where the direction of transport can be
-          either from city A to city B or from B to A. Transport frequency
-          information will be relative to the pair of municipalities, never to
-          the municipality alone. The frequency of the data is weekly and
-          doesn’t take into account the number of people per vehicle. For road
-          transportation, the conventional bus may accommodate 50 people seated
-          and the fluvial transportation may vary from 20 to 500 people per
-          vehicle estimation based on
-          <a
-            href="https://www2.mppa.mp.br/sistemas/gcsubsites/upload/41/transportepassageiros.pdf"
-            target="_blank"
-            >Characterization of the Supply and Demand of River Passenger
-            Transport in the Amazon Region</a
-          >. For now, is going to be used only the vehicle information without
-          estimating the number of passengers. The original data can be
-          downloaded on the
-          <a
-            href="http://geoftp.ibge.gov.br/organizacao_do_territorio/redes_e_fluxos_geograficos/ligacoes_rodoviarias_e_hidroviarias/base_de_dados/"
-            target="_blank"
-            >IBGE website</a
-          >.
-        </p>
-
-        <h2 class="mb-5 mt-5 pt-5 pb-2">Data access information</h2>
-        <p>
-          The data is available on the
-          <a
-            href="http://geoftp.ibge.gov.br/organizacao_do_territorio/redes_e_fluxos_geograficos/ligacoes_rodoviarias_e_hidroviarias/base_de_dados/"
-            target="_blank"
-            >IBGE website</a
-          >
-          and documentation is available at the
-          <a
-            target="_blank"
-            href="https://geoftp.ibge.gov.br/organizacao_do_territorio/redes_e_fluxos_geograficos/ligacoes_aereas/ligacoes_aereas_2010.pdf"
-            >2010 air connections report</a
-          >
-          and the
-          <a
-            target="_blank"
-            href="https://biblioteca.ibge.gov.br/visualizacao/livros/liv100602.pdf"
-            >2016 roads and fluvial connections report</a
-          >.
-        </p>
-
-        <h2 class="mb-5 mt-5 pt-5 pb-2">Methods of data collection</h2>
-        <p>
-          A Python code is available on our
-          <a
-            href="https://github.com/PAMepi/PAMepi_scripts_datalake"
-            target="_blank"
-            >Github</a
-          >
-          directory to download the data from the
-          <a
-            href="http://geoftp.ibge.gov.br/organizacao_do_territorio/redes_e_fluxos_geograficos/ligacoes_rodoviarias_e_hidroviarias/base_de_dados/"
-            target="_blank"
-            >IBGE website</a
-          >. This data doesn’t need to be updated unless a newer report is
-          published. Additional information on data collection methods can be
-          found in the
-          <a
-            target="_blank"
-            href="https://geoftp.ibge.gov.br/organizacao_do_territorio/redes_e_fluxos_geograficos/ligacoes_aereas/ligacoes_aereas_2010.pdf"
-            >2010 air connections report</a
-          >, the
-          <a
-            target="_blank"
-            href="https://biblioteca.ibge.gov.br/visualizacao/livros/liv100602.pdf"
-            >2016 roads and fluvial connections report</a
-          >, and
-          <a
-            href="https://github.com/PAMepi/PAMepi_scripts_datalake"
-            target="_blank"
-            >Github</a
-          >.
-        </p>
-        <h2 class="mb-5 mt-5 pt-5 pb-2">Data-specific information</h2>
-        <p>
-          The air mobility dataset has a total of 6 columns and shows a total of
-          227 registries (rows) and size of 13.9kB. The road/fluvial mobility
-          dataset has a total of 7 columns and shows a total of 65 639
-          registries (rows) and size of 2.7Mb. A code with more details about
-          the variables, data processing, and analysis methods is presented in
-          our
-          <a
-            href="https://github.com/PAMepi/PAMepi_scripts_datalake"
-            target="_blank"
-            >Github</a
-          >
-          directory.
-        </p>
-        <h2 class="mb-5 mt-5 pt-5 pb-2">Limitations of dataset</h2>
-        <p>
-          The data doesn’t show the direction of the flux, this means it is not
-          possible to know if the passengers in a flight or the number of
-          vehicles on road/fluvial transport are leaving or arriving in the
-          city. In the case of air mobility is available the total number of
-          passengers per year traveling between two cities, but on road/fluvial
-          mobility is available only the average number of vehicles per week not
-          considering the occupancy of each vehicle.
-        </p>
-      </div>
-    </section>
-    <hr />
-    <section class="middle-white">
-      <h2 class="data">Data and Resources</h2>
-      <div class="dado-subitem">
-        <div class="media download">
-          <h3 class="data">Data and variable dictionary</h3>
+          <h1 class="dados-text">Intercity Brazilian mobility</h1>
         </div>
-
-        <div class="data-in">
-          <h4 class="data">Data explorer - Air connections</h4>
-          <div class="table-div">
-            <table
-              id="tableExp"
-              cellpadding="2"
-              cellspacing="2"
-              border="1"
-              class="table-data data"
-            ></table>
-          </div>
-
-          <h4 class="data">Data explorer - Roads and Fluvial</h4>
-          <div class="table-div">
-            <table
-              id="tableExp2"
-              cellpadding="2"
-              cellspacing="2"
-              border="1"
-              class="table-data data"
-            ></table>
-          </div>
-          <h4 class="data">
-            Data dictionary - Air connections
+        <div class="intro" style="padding: 2rem 0rem 5rem">
+          <h2 class="mb-5">Description</h2>
+          <p class="card-text">
+            It is the historical average flux data throughout the country using
+            road/air/fluvial networks. The data is available in the Brazilian
+            Institute of Geography and Statistics (IBGE) separated into 2
+            different data sources: the first includes only air mobility from
+            the
             <a
-              href="../files/dic/Dictionary-English-MobAir.csv"
-              class="btn btn-info float-right mr-3"
               target="_blank"
-              >Download</a
+              href="https://geoftp.ibge.gov.br/organizacao_do_territorio/redes_e_fluxos_geograficos/ligacoes_aereas/ligacoes_aereas_2010.pdf"
+              >2010 air connections report</a
             >
-          </h4>
-          <div class="table-div">
-            <table
-              id="tableDic"
-              cellpadding="2"
-              cellspacing="2"
-              border="1"
-              class="table-data dic"
-            ></table>
-          </div>
-          <h4 class="data">
-            Data dictionary - Road and fluvial connections
+            and the second includes roads and fluvial mobility from the
             <a
-              href="../files/dic/Dictionary-English-MobLandWater.csv"
-              class="btn btn-info float-right mr-3"
               target="_blank"
-              >Download</a
+              href="https://biblioteca.ibge.gov.br/visualizacao/livros/liv100602.pdf"
+              >2016 roads and fluvial connections report</a
+            >. Originally the IBGE reports have the goal to analyze the
+            relations and connexions between the Brazilian cities highlighting
+            the principal nodes for material (people, goods, cargo) and
+            immaterial (information, orders, money) exchanges.
+          </p>
+
+          <h3 class="mt-5 pt-5">Air connections</h3>
+          <p>
+            From the 5 565 municipalities in Brazil, only 135 had an airport in
+            2010. The data shows the
+            <strong>number of people </strong> traveling between these 135
+            airports and it is aggregated by binding city pairs, no matter the
+            direction people are traveling. It also includes cargo information
+            but this is not being considered here. The original data can be
+            downloaded directly on the
+            <a
+              href="http://geoftp.ibge.gov.br/organizacao_do_territorio/redes_e_fluxos_geograficos/ligacoes_aereas/bases_de_dados/"
+              target="_blank"
+              >website in IBGE</a
+            >. Other air connection reports can be found in the
+            <a
+              href="https://www.gov.br/anac/pt-br/assuntos/dados-e-estatisticas/mercado-de-transporte-aereo/anuario-do-transporte-aereo/dados-do-anuario-do-transporte-aereo"
+              target="_blank"
+              >National Civil Aviation Agency (ANAC)</a
+            >. The dictionary provided by the authors presents origin and
+            destination columns but does not mean that this is the direction of
+            movement, the data only provides link pairs.
+          </p>
+          <h3 class="mt-5 pt-5">Road and fluvial connections</h3>
+          <p>
+            The 2016 Road/Fluvial Connections survey only includes information
+            on intercity passenger transport. It is informed of the number of
+            vehicles per pair of locations where the direction of transport can
+            be either from city A to city B or from B to A. Transport frequency
+            information will be relative to the pair of municipalities, never to
+            the municipality alone. The frequency of the data is weekly and
+            doesn’t take into account the number of people per vehicle. For road
+            transportation, the conventional bus may accommodate 50 people
+            seated and the fluvial transportation may vary from 20 to 500 people
+            per vehicle estimation based on
+            <a
+              href="https://www2.mppa.mp.br/sistemas/gcsubsites/upload/41/transportepassageiros.pdf"
+              target="_blank"
+              >Characterization of the Supply and Demand of River Passenger
+              Transport in the Amazon Region</a
+            >. For now, is going to be used only the vehicle information without
+            estimating the number of passengers. The original data can be
+            downloaded on the
+            <a
+              href="http://geoftp.ibge.gov.br/organizacao_do_territorio/redes_e_fluxos_geograficos/ligacoes_rodoviarias_e_hidroviarias/base_de_dados/"
+              target="_blank"
+              >IBGE website</a
+            >.
+          </p>
+
+          <h2 class="mb-5 mt-5 pt-5 pb-2">Data access information</h2>
+          <p>
+            The data is available on the
+            <a
+              href="http://geoftp.ibge.gov.br/organizacao_do_territorio/redes_e_fluxos_geograficos/ligacoes_rodoviarias_e_hidroviarias/base_de_dados/"
+              target="_blank"
+              >IBGE website</a
             >
-          </h4>
-          <div class="table-div">
-            <table
-              id="tableDic2"
-              cellpadding="2"
-              cellspacing="2"
-              border="1"
-              class="table-data dic"
-            ></table>
+            and documentation is available at the
+            <a
+              target="_blank"
+              href="https://geoftp.ibge.gov.br/organizacao_do_territorio/redes_e_fluxos_geograficos/ligacoes_aereas/ligacoes_aereas_2010.pdf"
+              >2010 air connections report</a
+            >
+            and the
+            <a
+              target="_blank"
+              href="https://biblioteca.ibge.gov.br/visualizacao/livros/liv100602.pdf"
+              >2016 roads and fluvial connections report</a
+            >.
+          </p>
+
+          <h2 class="mb-5 mt-5 pt-5 pb-2">Methods of data collection</h2>
+          <p>
+            A Python code is available on our
+            <a
+              href="https://github.com/PAMepi/PAMepi_scripts_datalake"
+              target="_blank"
+              >Github</a
+            >
+            directory to download the data from the
+            <a
+              href="http://geoftp.ibge.gov.br/organizacao_do_territorio/redes_e_fluxos_geograficos/ligacoes_rodoviarias_e_hidroviarias/base_de_dados/"
+              target="_blank"
+              >IBGE website</a
+            >. This data doesn’t need to be updated unless a newer report is
+            published. Additional information on data collection methods can be
+            found in the
+            <a
+              target="_blank"
+              href="https://geoftp.ibge.gov.br/organizacao_do_territorio/redes_e_fluxos_geograficos/ligacoes_aereas/ligacoes_aereas_2010.pdf"
+              >2010 air connections report</a
+            >, the
+            <a
+              target="_blank"
+              href="https://biblioteca.ibge.gov.br/visualizacao/livros/liv100602.pdf"
+              >2016 roads and fluvial connections report</a
+            >, and
+            <a
+              href="https://github.com/PAMepi/PAMepi_scripts_datalake"
+              target="_blank"
+              >Github</a
+            >.
+          </p>
+          <h2 class="mb-5 mt-5 pt-5 pb-2">Data-specific information</h2>
+          <p>
+            The air mobility dataset has a total of 6 columns and shows a total
+            of 227 registries (rows) and size of 13.9kB. The road/fluvial
+            mobility dataset has a total of 7 columns and shows a total of 65
+            639 registries (rows) and size of 2.7Mb. A code with more details
+            about the variables, data processing, and analysis methods is
+            presented in our
+            <a
+              href="https://github.com/PAMepi/PAMepi_scripts_datalake"
+              target="_blank"
+              >Github</a
+            >
+            directory.
+          </p>
+          <h2 class="mb-5 mt-5 pt-5 pb-2">Limitations of dataset</h2>
+          <p>
+            The data doesn’t show the direction of the flux, this means it is
+            not possible to know if the passengers in a flight or the number of
+            vehicles on road/fluvial transport are leaving or arriving in the
+            city. In the case of air mobility is available the total number of
+            passengers per year traveling between two cities, but on
+            road/fluvial mobility is available only the average number of
+            vehicles per week not considering the occupancy of each vehicle.
+          </p>
+        </div>
+      </section>
+      <hr />
+      <section class="middle-white">
+        <h2 class="data">Data and Resources</h2>
+        <div class="dado-subitem">
+          <div class="media download">
+            <h3 class="data">Data and variable dictionary</h3>
+          </div>
+
+          <div class="data-in">
+            <h4 class="data">Data explorer - Air connections</h4>
+            <div class="table-div">
+              <table
+                id="tableExp"
+                cellpadding="2"
+                cellspacing="2"
+                border="1"
+                class="table-data data"
+              ></table>
+            </div>
+
+            <h4 class="data">Data explorer - Roads and Fluvial</h4>
+            <div class="table-div">
+              <table
+                id="tableExp2"
+                cellpadding="2"
+                cellspacing="2"
+                border="1"
+                class="table-data data"
+              ></table>
+            </div>
+            <h4 class="data">
+              Data dictionary - Air connections
+              <a
+                href="../files/dic/Dictionary-English-MobAir.csv"
+                class="btn btn-info float-right mr-3"
+                target="_blank"
+                >Download</a
+              >
+            </h4>
+            <div class="table-div">
+              <table
+                id="tableDic"
+                cellpadding="2"
+                cellspacing="2"
+                border="1"
+                class="table-data dic"
+              ></table>
+            </div>
+            <h4 class="data">
+              Data dictionary - Road and fluvial connections
+              <a
+                href="../files/dic/Dictionary-English-MobLandWater.csv"
+                class="btn btn-info float-right mr-3"
+                target="_blank"
+                >Download</a
+              >
+            </h4>
+            <div class="table-div">
+              <table
+                id="tableDic2"
+                cellpadding="2"
+                cellspacing="2"
+                border="1"
+                class="table-data dic"
+              ></table>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <footer class="page-footer font-small footer" id="footer">
       <div
         class="row justify-content-center align-items-center mb-4 copyrights"
       >
-        <div class="icons col-1">
+        <div class="icons">
           <a href="mailto:modeling.taskforce@gmail.com">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -704,7 +707,7 @@
               /></svg
           ></a>
         </div>
-        <div class="icons col-1">
+        <div class="icons">
           <a href="https://github.com/PAMepi" target="_blank"
             ><svg
               xmlns="http://www.w3.org/2000/svg"

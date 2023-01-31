@@ -441,157 +441,161 @@
         </div>
       </div>
     </nav>
+    <div class="limiter">
+      <section class="top">
+        <div class="row dados-icon">
+          <img src="img/IBP_icone.svg" class="dados-img" style="width: 80px" />
 
-    <section class="top">
-      <div class="row dados-icon">
-        <img src="img/IBP_icone.svg" class="dados-img" style="width: 80px" />
-
-        <h1 class="dados-text">Índice de privação brasileiro (IBP)</h1>
-      </div>
-      <div class="intro" style="padding: 2rem 0rem 5rem">
-        <h2 class="mb-5">Descrição</h2>
-        <p class="card-text">
-          Ele fornece medidas de privação para cada município brasileiro e setor
-          censitário e é usado para avaliar as desigualdades em saúde em todo o
-          país. O Censo Demográfico Brasileiro de 2010 é a base de cálculo da
-          medida de privação, disponível no
-          <a href="https://cidacs.bahia.fiocruz.br/ibp/" target="_blank"
-            >CIDACS</a
-          >. O índice IBP combina três fatores:
-        </p>
-        <ol>
-          <li>
-            percentual de famílias com renda per capita inferior a meio salário
-            mínimo;
-          </li>
-          <li>percentual de analfabetos maiores de 7 anos;</li>
-          <li>
-            percentual de pessoas sem acesso adequado a água potável, esgoto,
-            coleta de lixo, banheiro ou chuveiro;
-          </li>
-        </ol>
-        <p>
-          Esses dados não precisam ser atualizados e a documentação completa
-          sobre a construção do índice é apresentada em
-          <a href="http://eprints.gla.ac.uk/215898/1/215898.pdf"
-            >Developing a small-area deprivation measure for Brazil: Technical
-            report</a
-          >. A fonte de dados original e a visualização podem ser encontradas em
-          <a
-            href="https://cidacs.bahia.fiocruz.br/ibp/base-de-dados-do-ibp-municipal-esta-disponivel-para-download/"
-            target="_blank"
-            >Cidacs</a
-          >.
-        </p>
-
-        <h2 class="mb-5 mt-5 pt-5 pb-2">Informação de acesso a dados</h2>
-        <p>
-          Os dados e documentação estão disponíveis na
-          <a
-            href="http://dx.doi.org/10.5525/gla.researchdata.980"
-            target="_blank"
-            >Universidade de Glasgow</a
-          >. Os dados e este relatório são distribuídos sob a licença Creative
-          Commons Share-Alike (CC BY-SA 4.0) e podem ser usados livremente por
-          pesquisadores, legisladores ou público.
-        </p>
-        <h2 class="mb-5 mt-5 pt-5 pb-2">Métodos de coleta de dados</h2>
-        <p>
-          Um código Python está disponível em nosso diretório
-          <a
-            href="https://github.com/PAMepi/PAMepi_scripts_datalake"
-            target="_blank"
-            >Github</a
-          >
-          para baixar os dados do
-          <a
-            href="https://cidacs.bahia.fiocruz.br/ibp/base-de-dados-do-ibp-municipal-esta-disponivel-para-download/"
-            target="_blank"
-            >Cidacs</a
-          >. O banco de dados não precisa de atualização. Informações adicionais
-          sobre métodos de coleta de dados podem ser encontradas em
-          <a href="http://eprints.gla.ac.uk/215898/1/215898.pdf"
-            >Developing a small-area deprivation measure for Brazil: Technical
-            report</a
-          >
-          e
-          <a
-            href="https://github.com/PAMepi/PAMepi_scripts_datalake"
-            target="_blank"
-            >Github</a
-          >.
-        </p>
-        <h2 class="mb-5 mt-5 pt-5 pb-2">
-          Informações específicas dos dados IBP
-        </h2>
-        <p>
-          O conjunto de dados IBP tem um total de 15 colunas e mostrou um total
-          de 5566 registros (linhas) e um tamanho de 734Kb. Um código com mais
-          detalhes sobre as variáveis, processamento de dados e métodos de
-          análise é apresentado em nosso diretório
-          <a
-            href="https://github.com/PAMepi/PAMepi_scripts_datalake"
-            target="_blank"
-            >Github</a
-          >.
-        </p>
-        <h2 class="mb-5 mt-5 pt-5 pb-2">Limitações do conjunto de dados IBP</h2>
-        <p>
-          O conjunto de dados IBP inclui apenas 3 medidas de privação, excluindo
-          outras, como por exemplo: emprego, crime, saúde, educação e acesso a
-          serviços públicos. Também está relacionado exclusivamente ao ano de
-          2010, tornando impraticável a comparação ao longo do tempo. As
-          diferentes populações e etnias (por exemplo, povos indígenas,
-          quilombolas, ribeirinhos) também não são consideradas e existem alguns
-          vieses inerentes ao meio rural.
-        </p>
-      </div>
-    </section>
-    <hr />
-    <section class="middle-white">
-      <h2 class="data">Dados e recursos</h2>
-      <div class="dado-subitem">
-        <div class="media download">
-          <h3 class="data">Dados e dicionário de variáveis</h3>
+          <h1 class="dados-text">Índice de privação brasileiro (IBP)</h1>
         </div>
-
-        <div class="data-in">
-          <h4 class="data">Explorador de dados</h4>
-          <div class="table-div">
-            <table
-              id="tableExp"
-              cellpadding="2"
-              cellspacing="2"
-              border="1"
-              class="table-data data"
-            ></table>
-          </div>
-
-          <h4 class="data">
-            Dicionário de Dados
+        <div class="intro" style="padding: 2rem 0rem 5rem">
+          <h2 class="mb-5">Descrição</h2>
+          <p class="card-text">
+            Ele fornece medidas de privação para cada município brasileiro e
+            setor censitário e é usado para avaliar as desigualdades em saúde em
+            todo o país. O Censo Demográfico Brasileiro de 2010 é a base de
+            cálculo da medida de privação, disponível no
+            <a href="https://cidacs.bahia.fiocruz.br/ibp/" target="_blank"
+              >CIDACS</a
+            >. O índice IBP combina três fatores:
+          </p>
+          <ol>
+            <li>
+              percentual de famílias com renda per capita inferior a meio
+              salário mínimo;
+            </li>
+            <li>percentual de analfabetos maiores de 7 anos;</li>
+            <li>
+              percentual de pessoas sem acesso adequado a água potável, esgoto,
+              coleta de lixo, banheiro ou chuveiro;
+            </li>
+          </ol>
+          <p>
+            Esses dados não precisam ser atualizados e a documentação completa
+            sobre a construção do índice é apresentada em
+            <a href="http://eprints.gla.ac.uk/215898/1/215898.pdf"
+              >Developing a small-area deprivation measure for Brazil: Technical
+              report</a
+            >. A fonte de dados original e a visualização podem ser encontradas
+            em
             <a
-              href="files/dic/Dicionarios-Portugues-IBP.csv"
-              class="btn btn-info float-right mr-3"
+              href="https://cidacs.bahia.fiocruz.br/ibp/base-de-dados-do-ibp-municipal-esta-disponivel-para-download/"
               target="_blank"
-              >Download</a
+              >Cidacs</a
+            >.
+          </p>
+
+          <h2 class="mb-5 mt-5 pt-5 pb-2">Informação de acesso a dados</h2>
+          <p>
+            Os dados e documentação estão disponíveis na
+            <a
+              href="http://dx.doi.org/10.5525/gla.researchdata.980"
+              target="_blank"
+              >Universidade de Glasgow</a
+            >. Os dados e este relatório são distribuídos sob a licença Creative
+            Commons Share-Alike (CC BY-SA 4.0) e podem ser usados livremente por
+            pesquisadores, legisladores ou público.
+          </p>
+          <h2 class="mb-5 mt-5 pt-5 pb-2">Métodos de coleta de dados</h2>
+          <p>
+            Um código Python está disponível em nosso diretório
+            <a
+              href="https://github.com/PAMepi/PAMepi_scripts_datalake"
+              target="_blank"
+              >Github</a
             >
-          </h4>
-          <div class="table-div">
-            <table
-              id="tableDic"
-              cellpadding="2"
-              cellspacing="2"
-              border="1"
-              class="table-data dic"
-            ></table>
+            para baixar os dados do
+            <a
+              href="https://cidacs.bahia.fiocruz.br/ibp/base-de-dados-do-ibp-municipal-esta-disponivel-para-download/"
+              target="_blank"
+              >Cidacs</a
+            >. O banco de dados não precisa de atualização. Informações
+            adicionais sobre métodos de coleta de dados podem ser encontradas em
+            <a href="http://eprints.gla.ac.uk/215898/1/215898.pdf"
+              >Developing a small-area deprivation measure for Brazil: Technical
+              report</a
+            >
+            e
+            <a
+              href="https://github.com/PAMepi/PAMepi_scripts_datalake"
+              target="_blank"
+              >Github</a
+            >.
+          </p>
+          <h2 class="mb-5 mt-5 pt-5 pb-2">
+            Informações específicas dos dados IBP
+          </h2>
+          <p>
+            O conjunto de dados IBP tem um total de 15 colunas e mostrou um
+            total de 5566 registros (linhas) e um tamanho de 734Kb. Um código
+            com mais detalhes sobre as variáveis, processamento de dados e
+            métodos de análise é apresentado em nosso diretório
+            <a
+              href="https://github.com/PAMepi/PAMepi_scripts_datalake"
+              target="_blank"
+              >Github</a
+            >.
+          </p>
+          <h2 class="mb-5 mt-5 pt-5 pb-2">
+            Limitações do conjunto de dados IBP
+          </h2>
+          <p>
+            O conjunto de dados IBP inclui apenas 3 medidas de privação,
+            excluindo outras, como por exemplo: emprego, crime, saúde, educação
+            e acesso a serviços públicos. Também está relacionado exclusivamente
+            ao ano de 2010, tornando impraticável a comparação ao longo do
+            tempo. As diferentes populações e etnias (por exemplo, povos
+            indígenas, quilombolas, ribeirinhos) também não são consideradas e
+            existem alguns vieses inerentes ao meio rural.
+          </p>
+        </div>
+      </section>
+      <hr />
+      <section class="middle-white">
+        <h2 class="data">Dados e recursos</h2>
+        <div class="dado-subitem">
+          <div class="media download">
+            <h3 class="data">Dados e dicionário de variáveis</h3>
+          </div>
+
+          <div class="data-in">
+            <h4 class="data">Explorador de dados</h4>
+            <div class="table-div">
+              <table
+                id="tableExp"
+                cellpadding="2"
+                cellspacing="2"
+                border="1"
+                class="table-data data"
+              ></table>
+            </div>
+
+            <h4 class="data">
+              Dicionário de Dados
+              <a
+                href="files/dic/Dicionarios-Portugues-IBP.csv"
+                class="btn btn-info float-right mr-3"
+                target="_blank"
+                >Download</a
+              >
+            </h4>
+            <div class="table-div">
+              <table
+                id="tableDic"
+                cellpadding="2"
+                cellspacing="2"
+                border="1"
+                class="table-data dic"
+              ></table>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <footer class="page-footer font-small footer" id="footer">
       <div class="row justify-content-center align-items-center copyrights">
-        <div class="icons col-1">
+        <div class="icons">
           <a href="mailto:modeling.taskforce@gmail.com">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -604,7 +608,7 @@
               /></svg
           ></a>
         </div>
-        <div class="icons col-1">
+        <div class="icons">
           <a href="https://github.com/PAMepi" target="_blank"
             ><svg
               xmlns="http://www.w3.org/2000/svg"

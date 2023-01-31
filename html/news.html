@@ -322,6 +322,7 @@
       </div>
     </div>
   </nav>
+<div class="limiter">
 
   <div class="top" id="newsletter">
     <h1> Newsletter</h1>
@@ -1792,7 +1793,7 @@
               perguntas cruciais para o segundo ano da pandemia de COVID-19 serão respondidas por cientistas da
               Plataforma Analítica de Modelos para Epidemiologia (PAMEpi).
               <a href="https://www.instagram.com/p/CXeJJtPtZB8/" target="_blank" style="text-decoration: none;"><img
-                  src="img/nota-bletim.jpeg" class="nota-img"></a>
+                  src="img/nota-boletim.jpeg" class="nota-img"></a>
             </p>
             <p>
               Na segunda-feira (20), das 10h às 11h, acontece a apresentação de mais um boletim da PAMEpi com o tema
@@ -2759,10 +2760,10 @@
           </li> -->
         </ol>
       </div> 
-
+</div>
   <footer class="page-footer font-small footer" id="footer">
     <div class="row justify-content-center align-items-center copyrights">
-      <div class="icons col-1">
+      <div class="icons">
         <a href="mailto:modeling.taskforce@gmail.com">
           <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-envelope-fill icons-color"
             viewBox="0 0 16 16">
@@ -2770,7 +2771,7 @@
               d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z" />
           </svg></a>
       </div>
-      <div class="icons col-1">
+      <div class="icons">
         <a href="https://github.com/PAMepi" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
             class="bi bi-github icons-color" viewBox="0 0 16 16">
             <path
@@ -2850,7 +2851,7 @@
     function showNotes(n) {
       var i;
       var x = document.getElementsByClassName("myNotes");
-      var dots = document.getElementsByClassName("demoN");
+     
       if (n > x.length) {
         noteIndex = 1
       }
@@ -2860,11 +2861,9 @@
       for (i = 0; i < x.length; i++) {
         x[i].style.display = "none";
       }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" w3-blue-grey", "");
-      }
+      
       x[noteIndex - 1].style.display = "block";
-      dots[noteIndex - 1].className += " w3-blue-grey";
+      
     }
   </script>
 
