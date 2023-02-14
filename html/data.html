@@ -450,50 +450,108 @@
 
         <div class="intro" style="padding: 2rem 0rem 5rem">
           <p>
-            Reunimos dados sobre uma série de status infecciosos individuais
-            relacionados à pandemia de COVID-19, comportamento socioeconômico e
-            humano. Integraremos os dados de determinantes socioeconômicos e de
-            saúde disponíveis para cada uma das 5.570 cidades brasileiras.
+            Para conduzir estudos relacionados à COVID-19, coletamos bases de
+            dados públicas provenientes de sistemas de informações que suportam
+            a vigilância em saúde, iniciativas da sociedade civil organizada ou
+            de instituições privadas. As bases coletadas, sendo elas
+            individualizadas ou agregadas, notificam casos suspeitos de infecção
+            por vírus respiratório, descrevem características demográficas,
+            sobre desigualdades sócio-econômicas, além do comportamento de
+            mobilidade humana. Devido ao grande impacto causado pela pandemia da
+            COVID-19, foram também coletadas informações sobre as intervenções
+            não-farmacêuticas implementadas pelo governo nas instâncias
+            municipal, estadual e federal, além dos dados de vacinação.
           </p>
           <p>
-            Além disso, acessaremos em conjunto informações sobre as
-            intervenções implementadas e os padrões de mobilidade social. Os
-            dados harmonizados em nível municipal serão um recurso fundamental
-            para a aplicação / desenvolvimento de análises estatísticas,
-            modelagem matemática não linear, modelagem computacional,
-            visualização de dados e divulgação científica sobre a pandemia
-            COVID-19 no Brasil.
+            Os dados são coletados em plataformas de acesso aberto como o
+            <a href="https://opendatasus.saude.gov.br" target="_blank">
+              OpenDatasus</a
+            >
+            do Ministério da Saúde (MS),
+            <a href="https://www.ibge.gov.br" target="_blank">
+              Instituto Brasileiro de Geografia e Estatística</a
+            >
+            (IBGE),
+            <a
+              href="https://www.google.com/covid19/mobility/index.html?hl=pt-BR"
+              target="_blank"
+              >Google Mobility</a
+            >,
+            <a href="https://covid19br.wcota.me" target="_blank"
+              >Sistema de coleta do WCota</a
+            >, e do
+            <a href="https://cidacs.bahia.fiocruz.br/" target="_blank"
+              >Centro de Integração de Dados e Conhecimentos para a Saúde</a
+            >. Decretos relacionados a medidas não-farmacêuticas são obtidos
+            através de um convênio de parceria com o
+            <a href="https://www.jusbrasil.com.br" target="_blank">JusBrasil</a
+            >.
           </p>
           <p>
-            Podemos coletar os dados de plataformas de acesso aberto como Google
-            Mobility, WCota, OpenDatasus, JusBrasil e IPB Cidacs Bahia. Além
-            disso, um script em linguagem python foi desenvolvido para
-            automatizar o processo de organização, download e atualização de
-            arquivos, facilitando o ajuste do período de atualização do datalake
-            conforme o sistema da plataforma original recebe suas atualizações.
+            Devido a complexidade do trabalho com bases de dados oriundas de
+            sistemas de informação diferentes,
+            <span class="strong">
+              esta plataforma tem como objetivo disponibilizar à comunidade
+              científica um processo que integra e agrupa</span
+            >
+            tais<span class="strong"> informações em nível municipal </span>,
+            que é a menor unidade geográfica disponível em portais brasileiros
+            que disponibilizam dados abertos.
+            <span class="strong">O resultado</span> deste trabalho
+            <span class="strong"
+              >facilita a realização de estudos epidemiológicos</span
+            >, bem como a aplicação de
+            <span class="strong">modelagem</span> matemática, estatística e
+            computacional, <span class="strong">visualização</span> de dados
+            <span class="strong">e divulgação científica sobre</span> o cenário
+            da <span class="strong">COVID-19</span> em cada um dos
+            <span class="strong">5.570 municípios brasileiros</span>.
           </p>
           <p>
-            Atualmente, configuramos nosso datalake para atualizar semanalmente
-            em nosso projeto. Observe que os dados do projeto podem ser baixados
-            por meio do código python mencionado acima ou por meio do Google
-            Drive. Vale ressaltar que um aplicativo está sendo desenvolvido para
-            dar aos usuários o poder de gerenciar quais informações eles desejam
-            obter para suas pesquisas.
+            Para automatizar o método de coleta destes dados, disponibilizamos
+            em nossa página
+            <a href="https://github.com/PAMepi" target="_blank">GitHub</a>
+            scripts em linguagem Python para fazer o download e atualização dos
+            dados conforme os sistemas das plataformas originais recebem suas
+            atualizações. Atualmente, os dados crus para processamento são
+            atualizados de acordo com as demandas do projeto e mantido em pastas
+            privadas do Google Drive. Utilizando os códigos disponíveis em nossa
+            página do GitHub, o usuário pode reproduzir o mesmo sistema de dados
+            em sua área local.
           </p>
           <p>
-            Os dados de vacinação têm 63 gigabytes, SG tem 14 gigabytes, SRAG
-            tem 694 megabytes, Google Mobilidade 593 megabytes, WCota 285
-            megabytes e os setores censitários CIDACS 42 megabytes. Esses
-            valores podem se alterar devido às constantes atualizações das
-            fontes originais dos dados.
+            Coletamos dos sistemas de informação três bases de dados com
+            informações a nível de indivíduo, são elas: a base de casos leves a
+            moderados suspeitos por infecção de SARS-CoV-2 (Base da síndrome
+            gripal - SGdb), a base de casos de síndromes respiratória aguda
+            grave (SRAGdb) e a base vacinação (VACdb) que reporta os níveis de
+            imunização da Covid-19 no Brasil. As bases agregadas são formadas
+            pelos dados de mobilidade (Google mobility e Intercidades), casos
+            reportados em boletins epidemiológicos da secretaria de vigilância e
+            coletados vis scrapping (WCota), sócio-econômico (IBP) e de medidas
+            não-farmacêuticas (JusBrasil) .
           </p>
           <p>
-            Dessa forma, o banco de dados soma aproximadamente 80 gigabytes para
-            a versão atualizada em 4 de agosto de 2021. Todos os arquivos estão
-            inicialmente disponíveis no formato .csv, exceto os dados dos
-            setores censitários e WCota, respectivamente em .xlsx (excel 2007) e
-            extensões gzip. No entanto, adicionamos um formulário de conversão e
-            extração para distribuir todos os arquivos na extensão .csv.
+            A soma total dos bancos de dados é de aproximadamente 80 gigabytes
+            para a versão atualizada em 4 de agosto de 2021. Todos os arquivos
+            estão inicialmente disponíveis no formato .csv, exceto os dados dos
+            setores censitário e WCota, respectivamente em .xlsx (excel 2007) e
+            extensões gzip.
+            <span class="strong">
+              Como resultado deste trabalho, disponibilizamos para livre acesso
+              os dados agregados a nível municipal na extensão .csv</span
+            >.
+          </p>
+          <p>
+            É importante salientar que este projeto é mantido com recursos
+            limitados, portanto em alguns períodos as atividades desta
+            plataforma são feitas com a ajuda voluntária dos colaboradores.
+          </p>
+          <p>
+            <span class="strong">
+              Acompanhem nos links abaixo a descrição de cada base de dados,
+              assim como para a base agregada que foi obtida.
+            </span>
           </p>
         </div>
       </section>

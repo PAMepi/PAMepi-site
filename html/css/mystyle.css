@@ -538,6 +538,10 @@ h1 {
   color: #892e2c;
 }
 
+.strong {
+  font-weight: 900;
+}
+
 .img-background {
   margin-bottom: 3rem;
   padding: 5rem 0;

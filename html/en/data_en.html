@@ -465,49 +465,105 @@
 
         <div class="intro" style="padding: 2rem 0rem 5rem">
           <p>
-            We gathered data over a range of individual infectious status
-            related to the COVID-19 pandemic, socio-economic and human
-            behaviour. We will integrate health and social-economic determinants
-            data that are available for each of the 5570 Brazilian cities.
+            In order to conduct studies relevant to COVID-19, we collect public
+            databases from information systems that support health surveillance,
+            organized civil society initiatives or private institutions. The
+            collected databases, whether individualized or aggregated, report
+            suspected cases of respiratory viral infection, describe demographic
+            characteristics, socio-economic inequalities, and human mobility
+            behavior. Due to the major impact of the COVID-19 pandemic,
+            information on non-pharmaceutical government measures at the local,
+            state and federal levels was collected in addition to vaccination
+            data.
           </p>
           <p>
-            Additionally, we will jointly access information about the
-            implemented interventions and social mobility patterns. The
-            harmonised data at the municipal level will be a foundational
-            resource enabling the application/development of statistical
-            analysis, nonlinear mathematical modelling, computational modelling,
-            data visualisation and scientific dissemination about the COVID-19
-            pandemic in Brazil.
+            Data is collected on Open Access platforms such as
+            <a href="https://opendatasus.saude.gov.br" target="_blank"
+              >OpenDatasus</a
+            >
+            of the Ministry of Health (MS), the
+            <a href="https://www.ibge.gov.br" target="_blank"
+              >Brazilian Institute of Geography and Statistics</a
+            >
+            (IBGE),
+            <a
+              href="https://www.google.com/covid19/mobility/index.html?hl=en"
+              target="_blank"
+              >Google Mobility</a
+            >, the
+            <a href="https://covid19br.wcota.me" target="_blank"
+              >WCota collection system</a
+            >
+            and the
+            <a href="https://cidacs.bahia.fiocruz.br/en/" target="_blank"
+              >Center for Data and Knowledge Integration for Health</a
+            >. Decrees related to non-pharmaceutical measures are obtained
+            through a partnership agreement with
+            <a href="https://www.jusbrasil.com.br" target="_blank">JusBrasil</a
+            >.
           </p>
           <p>
-            We can collect the data from open access platforms such as Google
-            Mobility, WCota, OpenDatasus, JusBrasil, and IPB Cidacs Bahia.
-            Furthermore, a script in python language was developed to automate
-            the process of organizing, downloading, and updating files, making
-            it easier to adjust the datalake update period as the original
-            platform's system receives its updates.
+            Due to the complexity of working with databases from different
+            information systems,
+            <span class="strong">
+              platform aims to provide the scientific community with a process
+              that integrates and groups</span
+            >
+            such
+            <span class="strong"> information at the municipal level</span>.
+            This is the smallest geographic unit available in Brazilian portals
+            offering open data access. The result of
+            <span class="strong">this work is a</span> foundational resource
+            enabling <span class="strong">epidemiological studies</span>, as
+            well as the application of mathematical, statistical and
+            computational
+            <span class="strong">modeling, data visualization</span> and
+            <span class="strong">scientific dissemination</span> of the
+            <span class="strong">COVID-19 scenario in each</span> of the 5,570
+            <span class="strong">Brazilian municipalities</span>.
           </p>
           <p>
-            Currently, we set up our datalake to update weekly in our project.
-            Note that the project's data can be downloaded via the python code
-            mentioned above or via Google Drive. It is noteworthy that an
-            application is being developed to give users the power to manage
-            what information they want to pull for their research.
+            To automate the collection of these data, Python scripts are
+            available on our
+            <a href="https://github.com/PAMepi" target="_blank">GitHub</a> page
+            to download and update the data as the original platform systems
+            receive their updates. Currently, the raw databases we process are
+            updated according to project needs and kept in private folders in
+            Google Drive. Using the codes available on our GitHub page, users
+            can reproduce the same data collection in their own environment.
           </p>
           <p>
-            The vaccination data has 63 gigabytes, FS has 14 gigabytes, SARS has
-            694 megabytes, Google mobility 593 megabytes, hospital occupancy 192
-            megabytes, WCota 311 megabytes and the CIDACS census sectors 42
-            megabytes. These values may change due to constant updates from the
-            original data sources.
+            From the above information systems, we have collected three
+            databases of information at an individual level: the database of
+            reported mild to moderate cases with suspected SARS-CoV-2 infection
+            (flu syndrome database - SGdb), the database of reported cases of
+            severe acute respiratory syndromes (SRAGdb) and the vaccination
+            database (VACdb) reporting the level of immunization from Covid-19
+            in Brazil. The aggregated bases are mobility data (Google mobility
+            and Intercidades), cases reported in epidemiological bulletins of
+            the surveillance secretariat and collected via scrapping (WCota),
+            socioeconomic (IBP) and non-pharmaceutical measures (JusBrasil).
           </p>
           <p>
-            Thus, the database has a total sum of approximately 80 gigabytes for
-            the version updated on August 4th, 2021. All files are initially
-            available in .csv format, except for data from census sectors and
-            WCota, respectively in .xlsx (excel 2007) and gzip extensions.
-            However, we added a conversion and extraction form to distribute all
-            files in the .csv extension.
+            The total of the databases is about 80 gigabytes for the version
+            updated on August 4th, 2021. All files are initially in .csv format,
+            with the exception of data from census tracts and WCota, provided in
+            .xlsx and gzip extensions.
+            <span class="strong">
+              As a result of this work, we have made the municipal-level
+              aggregated data freely available in the .csv extension</span
+            >.
+          </p>
+          <p>
+            It is important to note that this project is maintained with limited
+            resources, so the activities on this platform are carried out with
+            the volunteer help of collaborators in some periods.
+          </p>
+          <p>
+            <span class="strong">
+              Follow the links below for the description of each database as
+              well as the aggregate base that was obtained.</span
+            >
           </p>
         </div>
       </section>
